@@ -8,7 +8,7 @@ BRANCH   ?= master
 CATALOG  ?= postgres
 
 .DEFAULT_GOAL := help
-.PHONY: help check check-align stats mo dist fetch-upstream diff show clean
+.PHONY: help check check-align stats mo dist redmine fetch-upstream diff show clean
 
 help:  ## List the available targets
 	@grep -hE '^[a-z-]+:.*?##' $(MAKEFILE_LIST) | awk -F':.*?## ' '{printf "  \033[1m%-16s\033[0m %s\n", $$1, $$2}'
@@ -36,6 +36,9 @@ mo:  ## Compile every catalog to .mo under build/<branch>/zh_CN/LC_MESSAGES/
 
 dist:  ## Build release assets into dist/: six branch zips, a tarball, SHA256SUMS
 	@bash bin/mkdist.sh
+
+redmine:  ## Lay out catalogs as <catalog>-zh_CN.po per branch, for the patch tracker
+	@bash bin/mkredmine.sh
 
 fetch-upstream:  ## Download a fresh zh_CN snapshot from babel into tmp/upstream-<date>/
 	@bash bin/fetch-upstream.sh

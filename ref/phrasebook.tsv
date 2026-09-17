@@ -1,0 +1,96 @@
+id	en_pattern	zh_required	zh_forbidden	scope	status	note
+P01	\bcould not\b	无法	不能|未能|没能	all	decided	尝试后失败：could not → 无法
+P02	\bcannot\b	无法	不能|不可以|不可\b	all	decided	cannot 统一为“无法”；规范性禁止用 must not / not allowed 的译法表达
+P03	\bunable to\b	无法	不能	all	decided	
+P04	\bmust not\b	不得|不能	无法	all	decided	规范性禁止保留“不得/不能”，与 cannot 区分
+P05	\b(?:is |are )?not (?:be )?allowed\b	不允许	不能|无法	all	decided	
+P06	\bnot supported\b|\bunsupported\b	不支持	不被支持|未支持	all	decided	
+P07	\bout of memory\b	内存不足	内存溢出|内存用尽|内存耗尽	all	decided	
+P08	\binvalid\b	无效	非法|不合法	all	decided	invalid → 无效；illegal 才用“非法”
+P09	\bunrecognized\b	无法识别	未识别|不识别|未知	all	decided	unknown 才用“未知”
+P10	\bunknown\b	未知	不认识|无法识别	all	decided	
+P11	\bunexpected\b	意外	非预期|未预期|意料之外|不期望	all	decided	
+P12	\bdoes not exist\b	不存在		all	decided	
+P13	\balready exists\b	已存在	已经存在	all	decided	
+P14	\bpermission denied\b	权限不足	权限不够|权限被拒绝|权限被拒|没有权限|拒绝访问	all	decided	permission denied to X → 权限不足，无法 X
+P15	\btoo many\b	过多	太多	all	decided	
+P16	\btoo few\b	过少	太少	all	decided	
+P17	\bmissing\b	缺少	丢失|缺失|遗漏	all	decided	lost 才用“丢失”
+P18	\bsyntax error\b	语法错误		all	decided	
+P19	\bskipping\b	跳过	忽略|略过	all	decided	
+P20	\bignoring\b	忽略	忽视	all	decided	
+P21	\btime(?:d)? ?out\b	超时		all	decided	
+P22	\bdeprecated\b	已弃用	已废弃|废弃|不推荐|过时	all	decided	
+P23	\brequires?\b(?! that)	需要	要求	all	decided	requires a value → 需要一个值
+P24	\bexpected\b	预期|应为	期望|需要|应该是	all	decided	expected X, got Y → 预期为 X，实际为 Y
+P25	\bterminat(?:e|ed|es|ing)\b	终止	中止	all	decided	terminate → 终止
+P26	\babort(?:ed|ing|s)?\b	中止	终止|放弃|中断	all	decided	abort → 中止（pgdoc：Abort 中止）
+P27	\bcancel(?:ed|led|ing|s)?\b	取消		all	decided	
+P28	\bconnection\b	连接	联接	all	decided	
+P29	\bparser\b	解析器	剖析器|分析器	all	decided	pgdoc：Parser 解析器
+P30	\bplanner\b	规划器	计划器|计划员|优化器	all	decided	pgdoc：Planner 规划器
+P31	\bdefault\b	默认	缺省|预设	all	decided	
+P32	\barchiv(?:e|ed|ing|es)\b	归档	存档	all	decided	pgdoc style：archive → 归档
+P33	\bbuffers?\b	缓冲		all	decided	buffer → 缓冲区/缓冲池；buffer cache → 缓冲区缓存（pgdoc）
+P34	\bcache\b	缓存	高速缓存	all	decided	
+P35	\bsocket\b	套接字	插座	all	decided	
+P36	\bdirectory\b	目录	文件夹	all	decided	
+P37	\brelation\b	关系		all	decided	pgdoc 规则 442：不在全部上下文替换成表
+P38	\btuples?\b	元组	记录	all	decided	
+P39	\bcolumns?\b	列	字段|栏	all	decided	
+P40	\bschema\b	模式	架构|纲要	all	decided	
+P41	\boperator\b	操作符	运算符	all	decided	
+P42	\bcollation\b	排序规则	校对规则|排序序列	all	decided	
+P43	\blocale\b	区域设置	本地化|语言环境|区域(?!设置)	all	decided	
+P44	\bstandby\b	备库	备用|备机|后备	all	decided	pgdoc 规则 522：复制角色 → 备库；hot standby → 热备
+P45	\breplica\b(?! identity)	副本		all	decided	pgdoc：replica 副本；replication → 复制
+P46	\bslot\b	槽	插槽	all	decided	replication slot → 复制槽
+P47	\bshared memory\b	共享内存		all	decided	
+P48	\bfile descriptor\b	文件描述符	文件句柄	all	decided	
+P49	\bcheckpoint\b	检查点		all	decided	
+P50	\bprocedure\b	过程	存储过程|程序	all	decided	
+P51	(?<!file )\bextension\b	扩展	插件	all	decided	extension 指扩展模块；file extension（文件扩展名）另译
+P52	\bprivileges?\b	权限	特权	all	decided	
+P53	\bowner\b	所有者	拥有者|属主	all	decided	
+P54	\bsequence\b(?! of)	序列		all	decided	byte sequence → 字节序列；sequence of events → 顺序
+P55	\bencoding\b	编码		all	decided	
+P56	\bwrite-ahead log\b	预写日志		all	decided	WAL 缩写保留
+P57	\bTry "%s --help" for more information\.	运行 "%s --help" 获取更多信息。	尝试	all	decided	共用字串取一种译法
+P58	\bReport bugs to <%s>\.	请向 <%s> 报告缺陷。		all	decided	
+P59	\bshow this help, then exit\b	显示此帮助，然后退出	显示帮助信息	all	decided	
+P60	\boutput version information, then exit\b	输出版本信息，然后退出		all	decided	
+P61	^Usage:	用法：		all	decided	
+P62	^\n?Options:	选项：		all	decided	
+P63	\bexit(?:ing|s)?\b	退出	结束|离开	all	decided	
+P64	\btry again\b|\bretry\b	重试	再试|再次尝试	all	decided	
+P65	\bshut(?:ting)? ?down\b	关闭	停机|关机	all	decided	
+P66	\bdatabase cluster\b|\bcluster\b(?! index|ed)	集簇	集群|簇(?!集)	all	decided	pgdoc 规则 121：一个服务实例管理的一组数据库 → 数据库集簇（旧集簇/新集簇）；分布式多节点才是集群
+P67	\breplica identity\b	复制标识		all	decided	REPLICA IDENTITY 保留 SQL 原文
+P68	\blatch\b	锁存器	闩锁	all	decided	pgdoc 规则 272：锁存器；Latch/WaitLatch 等名称保留
+P69	\bhome page\b	主页	首页	all	decided	%s home page: <%s> → %s 主页：<%s>
+P70	\bprimary\b(?! key)	主库	主服务器|主节点|主要	all	decided	pgdoc：primary / primary server → 主库；primary key → 主键
+P71	\b(?:background|parallel|apply|tablesync|logical replication|autovacuum) workers?\b	工作进程	工作者|工人|工作线程	all	decided	进程类 worker → 工作进程（后台/并行/应用工作进程）；zstd 等压缩 worker 是线程 → 工作线程
+P72	\bautovacuum\b	自动清理	自动 VACUUM|自动真空	all	decided	pgdoc：autovacuum 自动清理
+P73	\bhint\b	提示		all	decided	HINT 标签译“提示:  ”
+P74	\bfailover\b	故障切换	故障转移|失效转移	all	decided	pgdoc：failover 故障切换；switchover 计划内切换
+P75	\btokens?\b	词元|令牌	标记|记号	all	decided	SQL 词法 → 词元；OAuth bearer token → 令牌
+P76	\bsnapshot\b	快照		all	decided	
+P77	\bdeadlock\b	死锁		all	decided	
+P78	\bcursor\b	游标		all	decided	
+P79	\bsavepoint\b	保存点		all	decided	
+P80	\bforeign server\b	外部服务器	外部服务|远程服务器	all	decided	pgdoc
+P81	\bforeign table\b	外部表	外表	all	decided	pgdoc
+P82	\bforeign[- ]data wrapper\b	外部数据包装器		all	decided	pgdoc；FDW 缩写保留
+P83	\buser mapping\b	用户映射		all	decided	pgdoc
+P84	\bheap\b	堆		all	decided	pgdoc：heap 堆；heap table 堆表
+P85	\bcheckpointer\b	检查点进程		all	decided	pgdoc
+P86	\bbackground writer\b	后台写入器		all	decided	pgdoc
+P87	\bhot standby\b	热备		all	decided	pgdoc
+P88	\blogical decoding\b	逻辑解码		all	decided	pgdoc
+P89	\breplication slot\b	复制槽		all	decided	pgdoc
+P90	\bcrash recovery\b	崩溃恢复		all	decided	pgdoc
+P91	\bstartup process\b	启动进程		all	decided	pgdoc
+P92	\btwo-phase commit\b	两阶段提交		all	decided	pgdoc
+P93	(?<!full )\bvacuum(?:ing|ed|s)?\b	清理	真空|吸尘	all	decided	pgdoc 规则 597：VACUUM 命令原样保留（大写不参与匹配），说明性 vacuum → 清理；指代命令的 full vacuum 可写 VACUUM FULL
+P94	\bmaster\b(?! key)	主库		all	decided	pgdoc 规则 301：仅复制角色；master key → 主密钥
+P95	\bsecondary\b(?! index)	备库		all	decided	pgdoc 规则 475：二级索引不是备库索引

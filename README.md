@@ -17,7 +17,7 @@
 
 **162 files, 67,487 messages, 100% translated, zero fuzzy, zero untranslated** — every file clean under `msgfmt --check --check-format`.
 
-The `zh_CN` catalogs currently in `pgtranslation/messages.git` date from 2019; their headers still read `Project-Id-Version: postgres (PostgreSQL) 12`. Across PostgreSQL 14 – 19 they carry a reviewed translation for 77.1% of messages; of the remaining 15,475, some 11,770 are fuzzy entries that babel matched by similarity and 3,705 are empty. This repository is a complete set rebuilt from the current templates: every message checked by hand against the English original, with terminology held to a single glossary shared across all catalogs and all six branches.
+The `zh_CN` catalogs currently in `pgtranslation/messages.git` date from 2019; their headers still read `Project-Id-Version: postgres (PostgreSQL) 12`. Across PostgreSQL 14 – 19 they carry a reviewed translation for 77.1% of messages; of the remaining 15,475, some 11,770 are fuzzy entries that babel matched by similarity and 3,705 are empty. This repository is a complete set rebuilt from the current templates, with terminology held to a single glossary shared across all catalogs and all six branches, and every message verified against its English original. How that was done is spelled out in [How this was made](#how-this-was-made).
 
 ## Review Workbench
 
@@ -25,14 +25,14 @@ Every message is browsable at **<https://pgsql.cc/nls>** — the English origina
 
 <div align="center">
 
-| Upstream branch | PG | Catalogs | Messages | Upstream | Here | Workbench | Issue |
-|:---|:---:|---:|---:|---:|:---:|:---:|:---:|
-| [`master`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/master) | 19 | 28 | 12,636 | 65.3% | **100%** | [browse](https://pgsql.cc/nls/?v=19) | [#8123](https://redmine.postgresql.org/issues/8123) |
-| [`REL_18_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_18_STABLE) | 18 | 28 | 12,098 | 69.9% | **100%** | [browse](https://pgsql.cc/nls/?v=18) | [#8118](https://redmine.postgresql.org/issues/8118) |
-| [`REL_17_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_17_STABLE) | 17 | 28 | 11,509 | 74.9% | **100%** | [browse](https://pgsql.cc/nls/?v=17) | [#8119](https://redmine.postgresql.org/issues/8119) |
-| [`REL_16_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_16_STABLE) | 16 | 26 | 10,656 | 79.0% | **100%** | [browse](https://pgsql.cc/nls/?v=16) | [#8120](https://redmine.postgresql.org/issues/8120) |
-| [`REL_15_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_15_STABLE) | 15 | 26 | 10,463 | 85.7% | **100%** | [browse](https://pgsql.cc/nls/?v=15) | [#8121](https://redmine.postgresql.org/issues/8121) |
-| [`REL_14_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_14_STABLE) | 14 | 26 | 10,125 | 91.8% | **100%** | [browse](https://pgsql.cc/nls/?v=14) | [#8122](https://redmine.postgresql.org/issues/8122) |
+| Upstream branch | PG | Catalogs | Messages | Upstream | Here | Workbench | Issue | Download |
+|:---|:---:|---:|---:|---:|:---:|:---:|:---:|:---:|
+| [`master`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/master) | 19 | 28 | 12,636 | 65.3% | **100%** | [browse](https://pgsql.cc/nls/?v=19) | [#8123](https://redmine.postgresql.org/issues/8123) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-master-20260917.tar.gz) |
+| [`REL_18_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_18_STABLE) | 18 | 28 | 12,098 | 69.9% | **100%** | [browse](https://pgsql.cc/nls/?v=18) | [#8118](https://redmine.postgresql.org/issues/8118) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-REL_18_STABLE-20260917.tar.gz) |
+| [`REL_17_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_17_STABLE) | 17 | 28 | 11,509 | 74.9% | **100%** | [browse](https://pgsql.cc/nls/?v=17) | [#8119](https://redmine.postgresql.org/issues/8119) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-REL_17_STABLE-20260917.tar.gz) |
+| [`REL_16_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_16_STABLE) | 16 | 26 | 10,656 | 79.0% | **100%** | [browse](https://pgsql.cc/nls/?v=16) | [#8120](https://redmine.postgresql.org/issues/8120) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-REL_16_STABLE-20260917.tar.gz) |
+| [`REL_15_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_15_STABLE) | 15 | 26 | 10,463 | 85.7% | **100%** | [browse](https://pgsql.cc/nls/?v=15) | [#8121](https://redmine.postgresql.org/issues/8121) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-REL_15_STABLE-20260917.tar.gz) |
+| [`REL_14_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_14_STABLE) | 14 | 26 | 10,125 | 91.8% | **100%** | [browse](https://pgsql.cc/nls/?v=14) | [#8122](https://redmine.postgresql.org/issues/8122) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-REL_14_STABLE-20260917.tar.gz) |
 
 </div>
 
@@ -44,10 +44,35 @@ git clone https://git.postgresql.org/git/pgtranslation/messages.git
 
 PostgreSQL 19 lives on `master` there; there is no `REL_19_STABLE`. From PG17 on there are two extra catalogs, `pg_combinebackup` and `pg_walsummary` — of which `pg_combinebackup` is a new file for `zh_CN`.
 
+## Download
+
+Release [`20260917`](https://github.com/pgsty/pgnls/releases/tag/20260917) carries one archive per
+upstream branch plus the whole set. Each unpacks to `zh_CN/<branch>/<catalog>.po`, so a
+branch directory drops straight into `messages.git`.
+
+| Archive | Covers | Catalogs | Messages |
+|:---|:---|---:|---:|
+| [`pg-messages-zh_CN-20260917.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-20260917.tar.gz) | **all six branches** | 162 | 67,487 |
+| [`pg-messages-zh_CN-master-20260917.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-master-20260917.tar.gz) | PostgreSQL 19 | 28 | 12,636 |
+| [`pg-messages-zh_CN-REL_18_STABLE-20260917.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-REL_18_STABLE-20260917.tar.gz) | PostgreSQL 18 | 28 | 12,098 |
+| [`pg-messages-zh_CN-REL_17_STABLE-20260917.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-REL_17_STABLE-20260917.tar.gz) | PostgreSQL 17 | 28 | 11,509 |
+| [`pg-messages-zh_CN-REL_16_STABLE-20260917.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-REL_16_STABLE-20260917.tar.gz) | PostgreSQL 16 | 26 | 10,656 |
+| [`pg-messages-zh_CN-REL_15_STABLE-20260917.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-REL_15_STABLE-20260917.tar.gz) | PostgreSQL 15 | 26 | 10,463 |
+| [`pg-messages-zh_CN-REL_14_STABLE-20260917.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-REL_14_STABLE-20260917.tar.gz) | PostgreSQL 14 | 26 | 10,125 |
+
+```bash
+curl -LO https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-REL_18_STABLE-20260917.tar.gz
+tar -xzf pg-messages-zh_CN-REL_18_STABLE-20260917.tar.gz
+cp zh_CN/REL_18_STABLE/*.po /path/to/messages/zh_CN/
+```
+
+Checksums for every archive are in `SHA256SUMS` on the same release page.
+
 ## Layout
 
 ```
 zh_CN/<branch>/<catalog>.po       162 catalogs, one directory per upstream branch
+ref/                              style guide, phrasebook, glossaries, process, errata
 bin/                              standalone tools; Python 3 and GNU gettext only
 Makefile                          the usual operations
 LICENSE                           the PostgreSQL License, verbatim from postgres.git
@@ -88,7 +113,24 @@ git show <commit>                          # what changed in that catalog
 git diff $(git rev-list --max-parents=0 HEAD) -- zh_CN/master/psql.po
 ```
 
-## Method
+## How this was made
+
+Machine-assisted translation, verified and reviewed by a human — not hand
+translation, which is what the `pgsql-translators` thread was told before any of
+it started.
+
+A glossary and style guide were fixed first. Each message then went through eight
+to ten rounds of translation and cross-review between models (Codex, Astra,
+Fable 5.1), every round held to that baseline and gated on `msgfmt`, placeholder,
+plural and column-alignment checks. A complete human review pass came last,
+message by message against the English, on the workbench.
+
+The baseline is published in [`ref/`](ref/): the style guide (rules R1–R14), the
+phrasebook (95 rules, each with the required and forbidden Chinese), two
+glossaries and the per-term decision log. [`ref/process.md`](ref/process.md) has
+the long version; [`ref/errata.md`](ref/errata.md) has the known defects.
+
+## File handling
 
 - **Templates** — the babel `po-{14..19}-branch` snapshot of 2026-09-17. `make fetch-upstream && make diff` tells you at any time whether `zh_CN/` still matches the current upstream POT entry for entry.
 - **Only what should change** — `msgstr` values, `fuzzy` flags, and `#|` previous-message comments. Source references (`#:`), extracted comments (`#.`), `msgctxt`, other flags, entry order and obsolete `#~` entries are preserved byte for byte, so running `msgmerge` against a newer POT should be a no-op for the entries in common.
