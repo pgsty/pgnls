@@ -1,0 +1,29 @@
+# Only po/, bin/, README.md, LICENSE and the Makefile are tracked; everything
+# else is local working material. Note that .gitignore has no end-of-line
+# comments: a comment must occupy a line of its own.
+
+# Past batches, the review workbench, internal operational notes
+/tmp/
+
+# Frozen babel snapshot used as the comparison baseline; re-fetch with
+# make fetch-upstream
+/upstream/
+
+# Validation output, before/after tables, generation reports
+/reports/
+
+# Redmine issue bodies and pgsql-translators drafts
+/submission/
+
+# Style rules, phrasebook, glossaries
+/terminology/
+
+# Output of make mo and make dist
+/build/
+/dist/
+
+.idea/
+.vscode/
+__pycache__/
+*.pyc
+.DS_Store

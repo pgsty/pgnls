@@ -1,0 +1,257 @@
+# LANGUAGE message translation file for pg_test_fsync
+# Copyright (C) 2019 PostgreSQL Global Development Group
+# This file is distributed under the same license as the pg_test_fsync (PostgreSQL) package.
+# FIRST AUTHOR <zhangjie2@fujitsu.com>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: pg_test_fsync (PostgreSQL) 14\n"
+"Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
+"POT-Creation-Date: 2026-09-17 06:35+0000\n"
+"PO-Revision-Date: 2021-08-15 18:00+0800\n"
+"Last-Translator: Jie Zhang <zhangjie2@fujitsu.com>\n"
+"Language-Team: Chinese (Simplified) <zhangjie2@fujitsu.com>\n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../../src/common/logging.c:276
+#, c-format
+msgid "error: "
+msgstr "错误: "
+
+#: ../../../src/common/logging.c:283
+#, c-format
+msgid "warning: "
+msgstr "警告: "
+
+#: ../../../src/common/logging.c:294
+#, c-format
+msgid "detail: "
+msgstr "详细信息: "
+
+#: ../../../src/common/logging.c:301
+#, c-format
+msgid "hint: "
+msgstr "提示: "
+
+#: ../../common/fe_memutils.c:41 ../../common/fe_memutils.c:81
+#: ../../common/fe_memutils.c:104 ../../common/fe_memutils.c:167
+#, c-format
+msgid "out of memory\n"
+msgstr "内存溢出\n"
+
+#: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:159
+#, c-format
+msgid "cannot duplicate null pointer (internal error)\n"
+msgstr "无法复制空指针 (内部错误)\n"
+
+#: ../../common/fe_memutils.c:209
+#, fuzzy, c-format
+#| msgid "invalid large object write request size: %d"
+msgid "invalid memory allocation request size %zu + %zu\n"
+msgstr "无效的大对象写请求大小: %d"
+
+#: ../../common/fe_memutils.c:228
+#, fuzzy, c-format
+#| msgid "invalid large object write request size: %d"
+msgid "invalid memory allocation request size %zu * %zu\n"
+msgstr "无效的大对象写请求大小: %d"
+
+#. translator: maintain alignment with NA_FORMAT
+#: pg_test_fsync.c:38
+#, c-format
+msgid "%13.3f ops/sec  %6.0f usecs/op\n"
+msgstr "%13.3f ops/sec  %6.0f usecs/op\n"
+
+#: pg_test_fsync.c:56
+#, fuzzy, c-format
+#| msgid "could not create tar header"
+msgid "could not create thread for alarm"
+msgstr "无法创建tar头"
+
+#: pg_test_fsync.c:101
+#, c-format
+msgid "%s: %m"
+msgstr "%s: %m"
+
+#: pg_test_fsync.c:165
+#, c-format
+msgid "Usage: %s [-f FILENAME] [-s SECS-PER-TEST]\n"
+msgstr "用法: %s [-f 文件名] [-s 每次测试的秒数]\n"
+
+#: pg_test_fsync.c:191
+#, c-format
+msgid "invalid argument for option %s"
+msgstr "选项%s的参数无效"
+
+#: pg_test_fsync.c:192 pg_test_fsync.c:204 pg_test_fsync.c:213
+#, c-format
+msgid "Try \"%s --help\" for more information."
+msgstr "请用 \"%s --help\" 获取更多的信息."
+
+#: pg_test_fsync.c:198
+#, fuzzy, c-format
+#| msgid "%s must be in range %d..%d"
+msgid "%s must be in range %u..%u"
+msgstr "%s 必须位于 %d..%d 的范围内"
+
+#: pg_test_fsync.c:211
+#, c-format
+msgid "too many command-line arguments (first is \"%s\")"
+msgstr "命令行参数太多 (第一个是 \"%s\")"
+
+#: pg_test_fsync.c:217
+#, c-format
+msgid "%u second per test\n"
+msgid_plural "%u seconds per test\n"
+msgstr[0] "%u 每次测试的秒数\n"
+msgstr[1] "%u 每次测试的秒数\n"
+
+#: pg_test_fsync.c:222
+#, c-format
+msgid "O_DIRECT supported on this platform for open_datasync and open_sync.\n"
+msgstr "在此平台上，O_DIRECT支持open_datasync和open_sync.\n"
+
+#: pg_test_fsync.c:224
+#, fuzzy, c-format
+#| msgid ""
+#| "O_DIRECT supported on this platform for open_datasync and open_sync.\n"
+msgid "F_NOCACHE supported on this platform for open_datasync and open_sync.\n"
+msgstr "在此平台上，O_DIRECT支持open_datasync和open_sync.\n"
+
+#: pg_test_fsync.c:226
+#, c-format
+msgid "Direct I/O is not supported on this platform.\n"
+msgstr "此平台不支持直接I/O.\n"
+
+#: pg_test_fsync.c:251 pg_test_fsync.c:341 pg_test_fsync.c:363
+#: pg_test_fsync.c:387 pg_test_fsync.c:531 pg_test_fsync.c:543
+#: pg_test_fsync.c:559 pg_test_fsync.c:565 pg_test_fsync.c:587
+msgid "could not open output file"
+msgstr "无法打开输出文件"
+
+#: pg_test_fsync.c:255 pg_test_fsync.c:325 pg_test_fsync.c:350
+#: pg_test_fsync.c:372 pg_test_fsync.c:396 pg_test_fsync.c:435
+#: pg_test_fsync.c:494 pg_test_fsync.c:533 pg_test_fsync.c:561
+#: pg_test_fsync.c:592
+msgid "write failed"
+msgstr "写入失败"
+
+#: pg_test_fsync.c:259 pg_test_fsync.c:374 pg_test_fsync.c:398
+#: pg_test_fsync.c:535 pg_test_fsync.c:567
+msgid "fsync failed"
+msgstr "fsync失败"
+
+#: pg_test_fsync.c:298
+#, c-format
+msgid ""
+"\n"
+"Compare file sync methods using one %dkB write:\n"
+msgstr ""
+"\n"
+"使用一个%dkB写操作比较文件同步方法:\n"
+
+#: pg_test_fsync.c:300
+#, c-format
+msgid ""
+"\n"
+"Compare file sync methods using two %dkB writes:\n"
+msgstr ""
+"\n"
+"使用两个%dkB写操作比较文件同步方法:\n"
+
+#: pg_test_fsync.c:301
+#, fuzzy, c-format
+#| msgid ""
+#| "(in wal_sync_method preference order, except fdatasync is Linux's "
+#| "default)\n"
+msgid ""
+"(in \"wal_sync_method\" preference order, except fdatasync is Linux's "
+"default)\n"
+msgstr "(按照wal_sync_method首选顺序，fdatasync是Linux的默认值除外)\n"
+
+#: pg_test_fsync.c:312 pg_test_fsync.c:415 pg_test_fsync.c:482
+msgid "n/a*"
+msgstr "n/a*"
+
+#: pg_test_fsync.c:331 pg_test_fsync.c:403 pg_test_fsync.c:441
+#: pg_test_fsync.c:500
+msgid "n/a"
+msgstr "n/a"
+
+#: pg_test_fsync.c:446
+#, c-format
+msgid ""
+"* This file system and its mount options do not support direct\n"
+"  I/O, e.g. ext4 in journaled mode.\n"
+msgstr ""
+"* 此文件系统及其安装选项不支持直接I/O\n"
+"  例如. ext4 在 journaled 模式.\n"
+
+#: pg_test_fsync.c:454
+#, c-format
+msgid ""
+"\n"
+"Compare open_sync with different write sizes:\n"
+msgstr ""
+"\n"
+"在不同的写入大小的情况下比较open_sync:\n"
+
+#: pg_test_fsync.c:455
+#, c-format
+msgid ""
+"(This is designed to compare the cost of writing 16kB in different write\n"
+"open_sync sizes.)\n"
+msgstr "这是为了比较在写入不同的open_sync大小的情况下写入16kB的时间花费\n"
+
+#: pg_test_fsync.c:458
+msgid " 1 * 16kB open_sync write"
+msgstr " 1 * 16kB open_sync写入"
+
+#: pg_test_fsync.c:459
+msgid " 2 *  8kB open_sync writes"
+msgstr " 2 *  8kB open_sync写入"
+
+#: pg_test_fsync.c:460
+msgid " 4 *  4kB open_sync writes"
+msgstr " 4 *  4kB open_sync写入"
+
+#: pg_test_fsync.c:461
+msgid " 8 *  2kB open_sync writes"
+msgstr " 8 *  2kB open_sync写入"
+
+#: pg_test_fsync.c:462
+msgid "16 *  1kB open_sync writes"
+msgstr "16 *  1kB open_sync写入"
+
+#: pg_test_fsync.c:516
+#, c-format
+msgid ""
+"\n"
+"Test if fsync on non-write file descriptor is honored:\n"
+msgstr ""
+"\n"
+"测试是否支持非写文件描述符上的fsync:\n"
+
+#: pg_test_fsync.c:517
+#, c-format
+msgid ""
+"(If the times are similar, fsync() can sync data written on a different\n"
+"descriptor.)\n"
+msgstr "(如果时间相似，fsync()可以同步写在不同描述符上的数据.)\n"
+
+#: pg_test_fsync.c:582
+#, c-format
+msgid ""
+"\n"
+"Non-sync'ed %dkB writes:\n"
+msgstr ""
+"\n"
+"不同步的写入 %dkB :\n"
+
+#, c-format
+#~ msgid "Try \"%s --help\" for more information.\n"
+#~ msgstr "请用 \"%s --help\" 获取更多的信息.\n"
