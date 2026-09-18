@@ -7,7 +7,7 @@
 [![Review Workbench](https://img.shields.io/badge/Review_Workbench-pgsql.cc%2Fnls-2f6fa3?style=for-the-badge&logo=postgresql&logoColor=white)](https://pgsql.cc/nls)
 
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14--19-336791?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-[![Messages](https://img.shields.io/badge/messages-67%2C487-informational)](https://pgsql.cc/nls)
+[![Messages](https://img.shields.io/badge/messages-67%2C489-informational)](https://pgsql.cc/nls)
 [![Translated](https://img.shields.io/badge/translated-100%25-brightgreen)](https://pgsql.cc/nls)
 [![Fuzzy](https://img.shields.io/badge/fuzzy-0-brightgreen)](https://pgsql.cc/nls)
 [![msgfmt](https://img.shields.io/badge/msgfmt-clean-brightgreen)](https://www.gnu.org/software/gettext/)
@@ -15,7 +15,7 @@
 
 </div>
 
-**162 files, 67,487 messages, 100% translated, zero fuzzy, zero untranslated** — every file clean under `msgfmt --check --check-format`.
+**162 files, 67,489 messages, 100% translated, zero fuzzy, zero untranslated** — every file clean under `msgfmt --check --check-format`.
 
 The `zh_CN` catalogs currently in `pgtranslation/messages.git` date from 2019; their headers still read `Project-Id-Version: postgres (PostgreSQL) 12`. Across PostgreSQL 14 – 19 they carry a reviewed translation for 77.1% of messages; of the remaining 15,475, some 11,770 are fuzzy entries that babel matched by similarity and 3,705 are empty. This repository is a complete set rebuilt from the current templates, with terminology held to a single glossary shared across all catalogs and all six branches, and every message verified against its English original. How that was done is spelled out in [How this was made](#how-this-was-made).
 
@@ -27,7 +27,7 @@ Every message is browsable at **<https://pgsql.cc/nls>** — the English origina
 
 | Upstream branch | PG | Catalogs | Messages | Upstream | Here | Workbench | Issue | Download |
 |:---|:---:|---:|---:|---:|:---:|:---:|:---:|:---:|
-| [`master`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/master) | 19 | 28 | 12,636 | 65.3% | **100%** | [browse](https://pgsql.cc/nls/?v=19) | [#8123](https://redmine.postgresql.org/issues/8123) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-master-20260917.tar.gz) |
+| [`master`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/master) | 19 | 28 | 12,638 | 65.3% | **100%** | [browse](https://pgsql.cc/nls/?v=19) | [#8123](https://redmine.postgresql.org/issues/8123) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-master-20260917.tar.gz) |
 | [`REL_18_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_18_STABLE) | 18 | 28 | 12,098 | 69.9% | **100%** | [browse](https://pgsql.cc/nls/?v=18) | [#8118](https://redmine.postgresql.org/issues/8118) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-REL_18_STABLE-20260917.tar.gz) |
 | [`REL_17_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_17_STABLE) | 17 | 28 | 11,509 | 74.9% | **100%** | [browse](https://pgsql.cc/nls/?v=17) | [#8119](https://redmine.postgresql.org/issues/8119) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-REL_17_STABLE-20260917.tar.gz) |
 | [`REL_16_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_16_STABLE) | 16 | 26 | 10,656 | 79.0% | **100%** | [browse](https://pgsql.cc/nls/?v=16) | [#8120](https://redmine.postgresql.org/issues/8120) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-REL_16_STABLE-20260917.tar.gz) |

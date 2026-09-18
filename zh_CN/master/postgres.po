@@ -14424,10 +14424,20 @@ msgstr "后台工作进程槽位已耗尽"
 msgid "You might need to increase \"%s\"."
 msgstr "可能需要增大 \"%s\"。"
 
+#: commands/repack.c:3894
+#, c-format
+msgid "REPACK decoding worker failed to start"
+msgstr "REPACK 解码工作进程启动失败"
+
 #: commands/repack.c:3851
 #, c-format
 msgid "postmaster exited during REPACK command"
 msgstr "postmaster 在执行 REPACK 命令期间退出"
+
+#: commands/repack.c:4149
+#, c-format
+msgid "lost connection to REPACK decoding worker"
+msgstr "与 REPACK 解码工作进程的连接已丢失"
 
 #: commands/repack.c:4078 commands/repack.c:4080
 msgid "REPACK decoding worker"
