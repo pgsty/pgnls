@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 12\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-17 06:09+0000\n"
+"POT-Creation-Date: 2026-09-17 18:39+0000\n"
 "PO-Revision-Date: 2019-06-05 18:00+0800\n"
 "Last-Translator: Jie Zhang <zhangjie2@cn.fujitsu.com>\n"
 "Language-Team: Chinese (Simplified) <zhangjie2@cn.fujitsu.com>\n"
@@ -11021,7 +11021,7 @@ msgstr "准备好的语句 \"%s\" 不存在"
 msgid "must be superuser to create custom procedural language"
 msgstr "只有有超级用户权限的用户才能创建过程语言"
 
-#: commands/publicationcmds.c:135 libpq/auth-oauth.c:850
+#: commands/publicationcmds.c:135 libpq/auth-oauth.c:838
 #: postmaster/postmaster.c:1130 postmaster/postmaster.c:1232
 #: replication/logical/logical.c:211 utils/init/miscinit.c:1871
 #, c-format
@@ -17082,14 +17082,14 @@ msgstr ""
 msgid "%s module \"%s\" must provide a %s callback"
 msgstr ""
 
-#: libpq/auth-oauth.c:833
+#: libpq/auth-oauth.c:849
 #, fuzzy, c-format
 #| msgid ""
 #| "authentication option \"%s\" is only valid for authentication methods %s"
 msgid "oauth_validator_libraries must be set for authentication method %s"
 msgstr "认证选项\"%s\"只对认证方法%s有效"
 
-#: libpq/auth-oauth.c:835 libpq/auth-oauth.c:868 libpq/auth-oauth.c:884
+#: libpq/auth-oauth.c:851 libpq/auth-oauth.c:869 libpq/auth-oauth.c:885
 #: libpq/hba.c:331 libpq/hba.c:666 libpq/hba.c:1251 libpq/hba.c:1271
 #: libpq/hba.c:1294 libpq/hba.c:1307 libpq/hba.c:1360 libpq/hba.c:1388
 #: libpq/hba.c:1396 libpq/hba.c:1408 libpq/hba.c:1429 libpq/hba.c:1442
@@ -17108,7 +17108,7 @@ msgstr "认证选项\"%s\"只对认证方法%s有效"
 msgid "line %d of configuration file \"%s\""
 msgstr "配置文件\"%2$s\"的第%1$d行"
 
-#: libpq/auth-oauth.c:867
+#: libpq/auth-oauth.c:868
 #, fuzzy, c-format
 #| msgid ""
 #| "authentication method \"ldap\" requires argument \"ldapbasedn\", "
@@ -17120,7 +17120,7 @@ msgstr ""
 "在认证方法\"ldap\"中需要设置参数 \"ldapbasedn\", \"ldapprefix\"或"
 "\"ldapsuffix\""
 
-#: libpq/auth-oauth.c:882
+#: libpq/auth-oauth.c:883
 #, fuzzy, c-format
 #| msgid "role \"%s\" is not permitted to log in"
 msgid "validator \"%s\" is not permitted by %s"

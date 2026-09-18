@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 12\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-17 05:49+0000\n"
+"POT-Creation-Date: 2026-09-17 21:49+0000\n"
 "PO-Revision-Date: 2019-06-05 18:00+0800\n"
 "Last-Translator: Jie Zhang <zhangjie2@cn.fujitsu.com>\n"
 "Language-Team: Chinese (Simplified) <zhangjie2@cn.fujitsu.com>\n"
@@ -5874,6 +5874,7 @@ msgid "parallel worker failed to initialize"
 msgstr "并行工作进程初始化失败"
 
 #: access/transam/parallel.c:762 access/transam/parallel.c:881
+#: commands/repack.c:3895 commands/repack.c:4150
 #, c-format
 msgid "More details may be available in the server log."
 msgstr "有关详细信息，请参阅服务器日志."
@@ -10360,7 +10361,7 @@ msgstr "分区表尚不支持此功能"
 msgid "This operation is not supported for sequences."
 msgstr "此处不支持序列选项\"%s\""
 
-#: catalog/pg_class.c:35 commands/repack.c:1012
+#: catalog/pg_class.c:35 commands/repack.c:1013
 #, fuzzy, c-format
 #| msgid "This feature is not yet supported on partitioned tables."
 msgid "This operation is not supported for TOAST tables."
@@ -10973,13 +10974,13 @@ msgid ""
 "by the database system"
 msgstr "无法再分配由%s所拥有的对象, 因为数据库系统需要这些对象"
 
-#: catalog/pg_subscription.c:70 commands/repack.c:928
+#: catalog/pg_subscription.c:70 commands/repack.c:929
 #: commands/tablecmds.c:20954 replication/logical/relation.c:252
 #, c-format
 msgid "\"%s\""
 msgstr ""
 
-#: catalog/pg_subscription.c:72 commands/repack.c:930
+#: catalog/pg_subscription.c:72 commands/repack.c:931
 #: commands/tablecmds.c:20956 replication/logical/relation.c:254
 #, c-format
 msgid ", \"%s\""
@@ -12753,7 +12754,7 @@ msgid "some useless files may be left behind in old database directory \"%s\""
 msgstr "在原先的数据库目录\"%s\"可能留下了一些无用的文件"
 
 #: commands/dbcommands.c:2374 commands/explain_state.c:170
-#: commands/explain_state.c:427 commands/indexcmds.c:2890 commands/repack.c:290
+#: commands/explain_state.c:427 commands/indexcmds.c:2890 commands/repack.c:291
 #: commands/vacuum.c:236 commands/vacuum.c:299 postmaster/checkpointer.c:1031
 #, fuzzy, c-format
 #| msgid "unrecognized role option \"%s\""
@@ -14709,7 +14710,7 @@ msgstr "操作符属性 \"%s\" 不能被更改"
 msgid "operator attribute \"%s\" cannot be changed if it has already been set"
 msgstr "操作符属性 \"%s\" 不能被更改"
 
-#: commands/policy.c:86 commands/policy.c:379 commands/repack.c:629
+#: commands/policy.c:86 commands/policy.c:379 commands/repack.c:630
 #: commands/statscmds.c:151 commands/tablecmds.c:1841 commands/tablecmds.c:2444
 #: commands/tablecmds.c:3867 commands/tablecmds.c:6838
 #: commands/tablecmds.c:10157 commands/tablecmds.c:20205
@@ -14812,7 +14813,7 @@ msgstr "准备好的语句 \"%s\" 不存在"
 msgid "must be superuser to create custom procedural language"
 msgstr "只有有超级用户权限的用户才能创建过程语言"
 
-#: commands/publicationcmds.c:134 libpq/auth-oauth.c:887
+#: commands/publicationcmds.c:134 libpq/auth-oauth.c:875
 #: postmaster/postmaster.c:1144 postmaster/postmaster.c:1246
 #: replication/logical/logical.c:219 utils/init/miscinit.c:1820
 #, c-format
@@ -15152,186 +15153,186 @@ msgstr "参数 \"%s\" 的值无效: \"%s\""
 msgid "Valid values are \"%s\" and \"%s\"."
 msgstr "有效值在\"%d\"和\"%d\"之间."
 
-#: commands/repack.c:274
+#: commands/repack.c:275
 #, fuzzy, c-format
 #| msgid "event triggers are not supported for %s"
 msgid "ANALYZE option not supported for %s"
 msgstr "事件触发器在%s中不被支持"
 
-#: commands/repack.c:283
+#: commands/repack.c:284
 #, fuzzy, c-format
 #| msgid "WHERE CURRENT OF is not supported for this table type"
 msgid "CONCURRENTLY option not supported for %s"
 msgstr "这种表类型不能使用WHERE CURRENT OF"
 
-#: commands/repack.c:348
+#: commands/repack.c:349
 #, fuzzy, c-format
 #| msgid "cannot rename column of typed table"
 msgid "cannot execute %s on multiple tables"
 msgstr "无法重新命名已确定类型表(typed table)的列"
 
-#: commands/repack.c:364
+#: commands/repack.c:365
 #, fuzzy, c-format
 #| msgid "This feature is not yet supported on partitioned tables."
 msgid "%s is not supported for partitioned tables"
 msgstr "分区表尚不支持此功能"
 
-#: commands/repack.c:366
+#: commands/repack.c:367
 #, c-format
 msgid "Consider running the command on individual partitions."
 msgstr ""
 
-#: commands/repack.c:371
+#: commands/repack.c:372
 #, fuzzy, c-format
 #| msgid "%s requires a numeric value"
 msgid "%s requires an explicit table name"
 msgstr "%s 需要一个数字值"
 
 #. translator: first %s is name of a SQL command, eg. REPACK
-#: commands/repack.c:579
+#: commands/repack.c:580
 #, fuzzy, c-format
 #| msgid "cannot cluster a shared catalog"
 msgid "cannot execute %s on a shared catalog"
 msgstr "无法在共享目录视图上进行聚簇操作"
 
 #. translator: first %s is name of a SQL command, eg. REPACK
-#: commands/repack.c:596 commands/repack.c:2562
+#: commands/repack.c:597 commands/repack.c:2563
 #, fuzzy, c-format
 #| msgid "cannot cluster temporary tables of other sessions"
 msgid "cannot execute %s on temporary tables of other sessions"
 msgstr "无法为其它会话的临时表建簇"
 
-#: commands/repack.c:631
+#: commands/repack.c:632
 #, c-format
 msgid ""
 "System catalogs can only be clustered by the index they're already clustered "
 "on, if any, unless \"%s\" is enabled."
 msgstr ""
 
-#: commands/repack.c:779 commands/tablecmds.c:19140
+#: commands/repack.c:780 commands/tablecmds.c:19140
 #, c-format
 msgid "\"%s\" is not an index for table \"%s\""
 msgstr "对于表 \"%2$s\" \"%1$s\" 不是一个索引"
 
-#: commands/repack.c:787
+#: commands/repack.c:788
 #, c-format
 msgid ""
 "cannot cluster on index \"%s\" because access method does not support "
 "clustering"
 msgstr "无法在索引\"%s\"进行聚簇操作，因为访问方法不支持进行聚簇操作"
 
-#: commands/repack.c:799
+#: commands/repack.c:800
 #, c-format
 msgid "cannot cluster on partial index \"%s\""
 msgstr "无法在部分索引 \"%s\"上进行聚簇操作"
 
-#: commands/repack.c:813
+#: commands/repack.c:814
 #, c-format
 msgid "cannot cluster on invalid index \"%s\""
 msgstr "无法在无效索引\"%s\"进行聚簇操作"
 
-#: commands/repack.c:940 commands/repack.c:978 commands/repack.c:986
-#: commands/repack.c:999 commands/repack.c:1010 commands/repack.c:1018
-#: commands/repack.c:1026 commands/repack.c:1039 commands/repack.c:1057
-#: commands/repack.c:1065
+#: commands/repack.c:941 commands/repack.c:979 commands/repack.c:987
+#: commands/repack.c:1000 commands/repack.c:1011 commands/repack.c:1019
+#: commands/repack.c:1027 commands/repack.c:1040 commands/repack.c:1058
+#: commands/repack.c:1066
 #, fuzzy, c-format
 #| msgid "cannot lock rows in relation \"%s\""
 msgid "cannot execute %s on relation \"%s\""
 msgstr "无法锁定关系 \"%s\"中的行"
 
-#: commands/repack.c:942
+#: commands/repack.c:943
 #, c-format
 msgid "An invalid index cannot be processed correctly: %s."
 msgid_plural "Some invalid indexes cannot be processed correctly: %s."
 msgstr[0] ""
 
-#: commands/repack.c:946
+#: commands/repack.c:947
 #, fuzzy, c-format
 #| msgid "Use DROP INDEX to remove an index."
 msgid "Use DROP INDEX or REINDEX."
 msgstr "请使用 DROP INDEX 删除一个索引."
 
-#: commands/repack.c:964
+#: commands/repack.c:965
 #, fuzzy, c-format
 #| msgid "cannot execute %s in a read-only transaction"
 msgid "cannot execute %s in this configuration"
 msgstr "不能在一个只读模式的事务中执行%s"
 
-#: commands/repack.c:966
+#: commands/repack.c:967
 #, fuzzy, c-format
 #| msgid "Change wal_level to be replica or higher."
 msgid ""
 "This operation requires \"wal_level\" to be set to \"replica\" or higher."
 msgstr "将wal_level更改为replica或更高级别."
 
-#: commands/repack.c:980
+#: commands/repack.c:981
 #, fuzzy, c-format
 #| msgid "The server (version %s) does not support access methods."
 msgid "This operation is only supported for the \"heap\" access method."
 msgstr "服务器(版本%s) 不支持访问方法."
 
-#: commands/repack.c:988
+#: commands/repack.c:989
 #, fuzzy, c-format
 #| msgid "This feature is not yet supported on partitioned tables."
 msgid "This operation is not supported for system catalogs."
 msgstr "分区表尚不支持此功能"
 
-#: commands/repack.c:1001
+#: commands/repack.c:1002
 #, fuzzy, c-format
 #| msgid "This feature is not yet supported on partitioned tables."
 msgid "This operation is not supported for user catalog tables."
 msgstr "分区表尚不支持此功能"
 
-#: commands/repack.c:1020
+#: commands/repack.c:1021
 #, fuzzy, c-format
 #| msgid "This feature is not yet supported on partitioned tables."
 msgid "This operation is only supported for permanent relations."
 msgstr "分区表尚不支持此功能"
 
-#: commands/repack.c:1041
+#: commands/repack.c:1042
 #, fuzzy, c-format
 #| msgid "The server (version %s) does not support tablespaces."
 msgid "This operation does not support tables with %s."
 msgstr "服务器(版本%s) 不支持使用表空间."
 
-#: commands/repack.c:1060
+#: commands/repack.c:1061
 #, fuzzy, c-format
 #| msgid "The server (version %s) does not support tablespaces."
 msgid "This operation does not support deferrable primary keys."
 msgstr "服务器(版本%s) 不支持使用表空间."
 
-#: commands/repack.c:1061
+#: commands/repack.c:1062
 #, c-format
 msgid ""
 "Use ALTER TABLE ... REPLICA IDENTITY USING INDEX to designate another index "
 "as replica identity."
 msgstr ""
 
-#: commands/repack.c:1067
+#: commands/repack.c:1068
 #, fuzzy, c-format
 #| msgid "relation \"%s\" does not exist"
 msgid "Relation \"%s\" has no identity index."
 msgstr "关系 \"%s\" 不存在"
 
-#: commands/repack.c:1518
+#: commands/repack.c:1519
 #, fuzzy, c-format
 #| msgid "clustering \"%s.%s\" using index scan on \"%s\""
 msgid "repacking \"%s.%s\" using index scan on \"%s\""
 msgstr "簇 \"%s.%s\" 正在 \"%s\"进行索引扫描"
 
-#: commands/repack.c:1524
+#: commands/repack.c:1525
 #, fuzzy, c-format
 #| msgid "clustering \"%s.%s\" using sequential scan and sort"
 msgid "repacking \"%s.%s\" using sequential scan and sort"
 msgstr "簇 \"%s.%s\"正在进行顺序扫描和排序"
 
-#: commands/repack.c:1529
+#: commands/repack.c:1530
 #, fuzzy, c-format
 #| msgid "analyzing \"%s.%s\" inheritance tree"
 msgid "repacking \"%s.%s\" in physical order"
 msgstr "正在分析 \"%s.%s\"继承树"
 
-#: commands/repack.c:1561
+#: commands/repack.c:1562
 #, fuzzy, c-format
 #| msgid ""
 #| "\"%s\": found %.0f removable, %.0f nonremovable row versions in %u pages"
@@ -15340,7 +15341,7 @@ msgid ""
 msgstr ""
 "\"%1$s\": 在%4$u个页中找到%2$.0f个可删除行版本，%3$.0f不可删除的行版本."
 
-#: commands/repack.c:1566
+#: commands/repack.c:1567
 #, c-format
 msgid ""
 "%.0f dead row versions cannot be removed yet.\n"
@@ -15349,48 +15350,48 @@ msgstr ""
 "%.0f 死行版本号仍不能移除.\n"
 "%s."
 
-#: commands/repack.c:2374 commands/repack.c:2642
+#: commands/repack.c:2375 commands/repack.c:2643
 #, c-format
 msgid "there is no previously clustered index for table \"%s\""
 msgstr "在表 \"%s\" 中未找到先前建簇的索引"
 
 #. translator: first %s is name of a SQL command, eg. REPACK
-#: commands/repack.c:2380
+#: commands/repack.c:2381
 #, fuzzy, c-format
 #| msgid "cannot convert partitioned table \"%s\" to a view"
 msgid ""
 "cannot execute %s on partitioned table \"%s\" USING INDEX with no index name"
 msgstr "无法将分区表\"%s\"转换为视图"
 
-#: commands/repack.c:2507
+#: commands/repack.c:2508
 #, fuzzy, c-format
 #| msgid "permission denied to create extension \"%s\""
 msgid "permission denied to execute %s on \"%s\", skipping it"
 msgstr "创建扩展 \"%s\" 权限不够"
 
-#: commands/repack.c:2544 commands/vacuum.c:351
+#: commands/repack.c:2545 commands/vacuum.c:351
 #, c-format
 msgid "ANALYZE option must be specified when a column list is provided"
 msgstr "提供列列表时必须指定ANALYZE选项"
 
-#: commands/repack.c:2652 commands/tablecmds.c:17068 commands/tablecmds.c:19130
+#: commands/repack.c:2653 commands/tablecmds.c:17068 commands/tablecmds.c:19130
 #, c-format
 msgid "index \"%s\" for table \"%s\" does not exist"
 msgstr "表 \"%2$s\" 的 \"%1$s\" 索引不存在"
 
-#: commands/repack.c:2849 commands/repack.c:2887
+#: commands/repack.c:2850 commands/repack.c:2888
 #, fuzzy, c-format
 #| msgid "could not obtain lock on relation \"%s\""
 msgid "could not apply concurrent %s on relation \"%s\""
 msgstr "无法在关系 \"%s\" 上获得锁"
 
-#: commands/repack.c:3798 replication/logical/launcher.c:567
+#: commands/repack.c:3802 replication/logical/launcher.c:567
 #, c-format
 msgid "out of background worker slots"
 msgstr "超出后台工作线程槽"
 
 #. translator: %s is a GUC variable name
-#: commands/repack.c:3799 replication/logical/launcher.c:470
+#: commands/repack.c:3803 replication/logical/launcher.c:470
 #: replication/logical/launcher.c:568 replication/slot.c:1816
 #: replication/slot.c:1836 storage/lmgr/lock.c:1083 storage/lmgr/lock.c:1121
 #: storage/lmgr/lock.c:3041 storage/lmgr/lock.c:4418 storage/lmgr/lock.c:4483
@@ -15401,29 +15402,40 @@ msgstr "超出后台工作线程槽"
 msgid "You might need to increase \"%s\"."
 msgstr "您需要初始化数据库 (initdb)."
 
-#: commands/repack.c:3851
+#: commands/repack.c:3894
+#, c-format
+msgid "REPACK decoding worker failed to start"
+msgstr ""
+
+#: commands/repack.c:3959
 #, fuzzy, c-format
 #| msgid "postmaster exited during a parallel transaction"
 msgid "postmaster exited during REPACK command"
 msgstr "在并行操作期间postmaster退出"
 
-#: commands/repack.c:4078 commands/repack.c:4080
+#: commands/repack.c:4149
+#, fuzzy, c-format
+#| msgid "lost connection to parallel worker"
+msgid "lost connection to REPACK decoding worker"
+msgstr "并行工作者进程的连接丢失"
+
+#: commands/repack.c:4193 commands/repack.c:4195
 msgid "REPACK decoding worker"
 msgstr ""
 
-#: commands/repack_worker.c:418 postmaster/walsummarizer.c:1150
+#: commands/repack_worker.c:440 postmaster/walsummarizer.c:1150
 #, fuzzy, c-format
 #| msgid "could not read WAL record at %X/%X: %s"
 msgid "could not read WAL from timeline %u at %X/%08X: %s"
 msgstr "无法读取%X/%X处的WAL记录：%s"
 
-#: commands/repack_worker.c:435
+#: commands/repack_worker.c:457
 #, fuzzy, c-format
 #| msgid "could not read WAL record at %X/%X"
 msgid "could not read WAL record"
 msgstr "无法读取%X/%X处的WAL记录"
 
-#: commands/repack_worker.c:483
+#: commands/repack_worker.c:505
 #, c-format
 msgid "waiting for WAL failed"
 msgstr ""
@@ -21579,14 +21591,14 @@ msgstr ""
 msgid "OAuth validator module \"%s\" must provide a \"%s\" callback"
 msgstr ""
 
-#: libpq/auth-oauth.c:870
+#: libpq/auth-oauth.c:886
 #, fuzzy, c-format
 #| msgid "parameter \"%s\" must be a list of extension names"
 msgid "parameter \"%s\" must be set for authentication method \"%s\""
 msgstr "参数 \"%s\"必须是一个包含扩展名的列表"
 
-#: libpq/auth-oauth.c:872 libpq/auth-oauth.c:906 libpq/auth-oauth.c:923
-#: libpq/auth-oauth.c:1076 libpq/be-secure-common.c:223
+#: libpq/auth-oauth.c:888 libpq/auth-oauth.c:907 libpq/auth-oauth.c:924
+#: libpq/auth-oauth.c:1077 libpq/be-secure-common.c:223
 #: libpq/be-secure-common.c:238 libpq/be-secure-common.c:248
 #: libpq/be-secure-common.c:262 libpq/be-secure-common.c:272
 #: libpq/be-secure-common.c:289 libpq/be-secure-common.c:306
@@ -21608,7 +21620,7 @@ msgstr "参数 \"%s\"必须是一个包含扩展名的列表"
 msgid "line %d of configuration file \"%s\""
 msgstr "配置文件\"%2$s\"的第%1$d行"
 
-#: libpq/auth-oauth.c:904
+#: libpq/auth-oauth.c:905
 #, fuzzy, c-format
 #| msgid "authentication method \"%s\" requires argument \"%s\" to be set"
 msgid ""
@@ -21616,37 +21628,37 @@ msgid ""
 "\"%s\" contains multiple options"
 msgstr "在认证方法\"%s\"需要设置参数\"%s\" "
 
-#: libpq/auth-oauth.c:921
+#: libpq/auth-oauth.c:922
 #, fuzzy, c-format
 #| msgid "role \"%s\" is not permitted to log in"
 msgid "validator \"%s\" is not permitted by \"%s\""
 msgstr "不允许角色\"%s\" 进行登录"
 
-#: libpq/auth-oauth.c:973
+#: libpq/auth-oauth.c:974
 #, c-format
 msgid "HBA option name \"%s\" is invalid and will be ignored"
 msgstr ""
 
 #. translator: the second %s is a function name
-#: libpq/auth-oauth.c:976
+#: libpq/auth-oauth.c:977
 #, c-format
 msgid "validator module \"%s\", in call to %s"
 msgstr ""
 
-#: libpq/auth-oauth.c:1066 libpq/auth-oauth.c:1070 libpq/hba.c:2322
+#: libpq/auth-oauth.c:1067 libpq/auth-oauth.c:1071 libpq/hba.c:2322
 #, c-format
 msgid "unrecognized authentication option name: \"%s\""
 msgstr "未知认证选项名称:\"%s\""
 
 #. translator: the first %s is the name of the module
-#: libpq/auth-oauth.c:1073
+#: libpq/auth-oauth.c:1074
 #, c-format
 msgid ""
 "The installed validator module (\"%s\") did not define an option named "
 "\"%s\"."
 msgstr ""
 
-#: libpq/auth-oauth.c:1075
+#: libpq/auth-oauth.c:1076
 #, c-format
 msgid ""
 "All OAuth connections matching this line will fail. Correct the option and "
