@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_resetwal (PostgreSQL) 14\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-16 11:49+0000\n"
+"POT-Creation-Date: 2021-08-14 05:47+0000\n"
 "PO-Revision-Date: 2021-08-15 17:30+0800\n"
 "Last-Translator: Jie Zhang <zhangjie2@fujitsu.com>\n"
 "Language-Team: Chinese (Simplified) <zhangjie2@fujitsu.com>\n"
@@ -94,12 +94,10 @@ msgid "transaction ID epoch (-e) must not be -1"
 msgstr "事务ID epoch（-e）不能为-1"
 
 #: pg_resetwal.c:183
-#, c-format
 msgid "oldest transaction ID (-u) must be greater than or equal to %u"
 msgstr "最旧的事务ID(-c)必须大于或等于%u"
 
 #: pg_resetwal.c:198
-#, c-format
 msgid "transaction ID (-x) must be greater than or equal to %u"
 msgstr "事务ID(-x)必须大于或等于%u"
 
@@ -225,9 +223,7 @@ msgstr "数据目录版本错误"
 
 #: pg_resetwal.c:574
 #, c-format
-msgid ""
-"File \"%s\" contains \"%s\", which is not compatible with this program's "
-"version \"%s\"."
+msgid "File \"%s\" contains \"%s\", which is not compatible with this program's version \"%s\"."
 msgstr "文件\"%s\"包含\"%s\",与此程序的版本\"%s\"不兼容."
 
 #: pg_resetwal.c:607
@@ -248,11 +244,8 @@ msgstr "pg_control存在，但具有无效的CRC；请小心继续"
 
 #: pg_resetwal.c:647
 #, c-format
-msgid ""
-"pg_control specifies invalid WAL segment size (%d byte); proceed with caution"
-msgid_plural ""
-"pg_control specifies invalid WAL segment size (%d bytes); proceed with "
-"caution"
+msgid "pg_control specifies invalid WAL segment size (%d byte); proceed with caution"
+msgid_plural "pg_control specifies invalid WAL segment size (%d bytes); proceed with caution"
 msgstr[0] "pg_control指定的WAL段大小(%d 字节)无效; 请小心继续"
 msgstr[1] "pg_control指定的WAL段大小(%d 字节)无效; 请小心继续"
 
@@ -290,7 +283,6 @@ msgid "Catalog version number:               %u\n"
 msgstr "Catalog 版本:                         %u\n"
 
 #: pg_resetwal.c:761
-#, c-format
 msgid "Database system identifier:           %llu\n"
 msgstr "数据库系统标识符:                     %llu\n"
 
@@ -387,7 +379,7 @@ msgstr "大关系的每段块数:                     %u\n"
 msgid "WAL block size:                       %u\n"
 msgstr "WAL的块大小:    %u\n"
 
-#: pg_resetwal.c:799 pg_resetwal.c:889
+#: pg_resetwal.c:799 pg_resetwal.c:885
 #, c-format
 msgid "Bytes per WAL segment:                %u\n"
 msgstr "每一个 WAL 段字节数:                  %u\n"
@@ -486,74 +478,74 @@ msgstr "NextOID:                              %u\n"
 msgid "NextXID:                              %u\n"
 msgstr "NextXID:                              %u\n"
 
-#: pg_resetwal.c:864
+#: pg_resetwal.c:860
 #, c-format
 msgid "OldestXID:                            %u\n"
 msgstr "OldestXID:                            %u\n"
 
-#: pg_resetwal.c:866
+#: pg_resetwal.c:862
 #, c-format
 msgid "OldestXID's DB:                       %u\n"
 msgstr "OldestXID's DB:                       %u\n"
 
-#: pg_resetwal.c:872
+#: pg_resetwal.c:868
 #, c-format
 msgid "NextXID epoch:                        %u\n"
 msgstr "NextXID epoch:                        %u\n"
 
-#: pg_resetwal.c:878
+#: pg_resetwal.c:874
 #, c-format
 msgid "oldestCommitTsXid:                    %u\n"
 msgstr "oldestCommitTsXid:                    %u\n"
 
-#: pg_resetwal.c:883
+#: pg_resetwal.c:879
 #, c-format
 msgid "newestCommitTsXid:                    %u\n"
 msgstr "newestCommitTsXid:                    %u\n"
 
-#: pg_resetwal.c:969 pg_resetwal.c:1037 pg_resetwal.c:1084
+#: pg_resetwal.c:965 pg_resetwal.c:1033 pg_resetwal.c:1080
 #, c-format
 msgid "could not open directory \"%s\": %m"
 msgstr "无法打开目录 \"%s\": %m"
 
-#: pg_resetwal.c:1004 pg_resetwal.c:1057 pg_resetwal.c:1107
+#: pg_resetwal.c:1000 pg_resetwal.c:1053 pg_resetwal.c:1103
 #, c-format
 msgid "could not read directory \"%s\": %m"
 msgstr "无法读取目录 \"%s\": %m"
 
-#: pg_resetwal.c:1010 pg_resetwal.c:1063 pg_resetwal.c:1113
+#: pg_resetwal.c:1006 pg_resetwal.c:1059 pg_resetwal.c:1109
 #, c-format
 msgid "could not close directory \"%s\": %m"
 msgstr "无法关闭目录 \"%s\": %m"
 
-#: pg_resetwal.c:1049 pg_resetwal.c:1099
+#: pg_resetwal.c:1045 pg_resetwal.c:1095
 #, c-format
 msgid "could not delete file \"%s\": %m"
 msgstr "无法删除文件 \"%s\": %m"
 
-#: pg_resetwal.c:1180
+#: pg_resetwal.c:1176
 #, c-format
 msgid "could not open file \"%s\": %m"
 msgstr "无法打开文件 \"%s\": %m"
 
-#: pg_resetwal.c:1190 pg_resetwal.c:1203
+#: pg_resetwal.c:1186 pg_resetwal.c:1199
 #, c-format
 msgid "could not write file \"%s\": %m"
 msgstr "无法写入文件 \"%s\": %m"
 
-#: pg_resetwal.c:1210
+#: pg_resetwal.c:1206
 #, c-format
 msgid "fsync error: %m"
 msgstr "fsync 错误: %m"
 
-#: pg_resetwal.c:1221
+#: pg_resetwal.c:1217
 #, c-format
 msgid ""
 "%s resets the PostgreSQL write-ahead log.\n"
 "\n"
 msgstr "%s 重置一个PostgreSQL数据库集簇的预写式日志.\n"
 
-#: pg_resetwal.c:1222
+#: pg_resetwal.c:1218
 #, c-format
 msgid ""
 "Usage:\n"
@@ -563,95 +555,74 @@ msgstr ""
 "用法:\n"
 "  %s [选项]... 数据目录\n"
 
-#: pg_resetwal.c:1223
+#: pg_resetwal.c:1219
 #, c-format
 msgid "Options:\n"
 msgstr "选项:\n"
 
-#: pg_resetwal.c:1224
-#, c-format
+#: pg_resetwal.c:1220
 msgid ""
 "  -c, --commit-timestamp-ids=XID,XID\n"
-"                                   set oldest and newest transactions "
-"bearing\n"
+"                                   set oldest and newest transactions bearing\n"
 "                                   commit timestamp (zero means no change)\n"
 msgstr ""
 "  -c, --commit-timestamp-ids=XID,XID\n"
-"                                 设置提交时间可以检索到的最老的和最新的事务"
-"ID\n"
+"                                 设置提交时间可以检索到的最老的和最新的事务ID\n"
 "                                 (0意味着没有变化)\n"
 
-#: pg_resetwal.c:1227
-#, c-format
+#: pg_resetwal.c:1223
 msgid " [-D, --pgdata=]DATADIR            data directory\n"
 msgstr " [-D, --pgdata=]DATADIR            数据目录\n"
 
-#: pg_resetwal.c:1228
-#, c-format
+#: pg_resetwal.c:1224
 msgid "  -e, --epoch=XIDEPOCH             set next transaction ID epoch\n"
 msgstr "  -e, --epoch=XIDEPOCH             设置下一个事务ID的epoch\n"
 
-#: pg_resetwal.c:1229
-#, c-format
+#: pg_resetwal.c:1225
 msgid "  -f, --force                      force update to be done\n"
 msgstr "  -f, --force                      强制更新完成\n"
 
-#: pg_resetwal.c:1230
-#, c-format
-msgid ""
-"  -l, --next-wal-file=WALFILE      set minimum starting location for new "
-"WAL\n"
+#: pg_resetwal.c:1226
+msgid "  -l, --next-wal-file=WALFILE      set minimum starting location for new WAL\n"
 msgstr "  -l, --next-wal-file=WALFILE      设置新的WAL最小起始位置\n"
 
-#: pg_resetwal.c:1231
-#, c-format
-msgid ""
-"  -m, --multixact-ids=MXID,MXID    set next and oldest multitransaction ID\n"
+#: pg_resetwal.c:1227
+msgid "  -m, --multixact-ids=MXID,MXID    set next and oldest multitransaction ID\n"
 msgstr "  -m, --multixact-ids=MXID,MXID    设置下一个和最旧的多事务ID\n"
 
-#: pg_resetwal.c:1232
-#, c-format
-msgid ""
-"  -n, --dry-run                    no update, just show what would be done\n"
+#: pg_resetwal.c:1228
+msgid "  -n, --dry-run                    no update, just show what would be done\n"
 msgstr "  -n, --dry-run                    不更新，只显示将要执行的操作\n"
 
-#: pg_resetwal.c:1233
-#, c-format
+#: pg_resetwal.c:1229
 msgid "  -o, --next-oid=OID               set next OID\n"
 msgstr "  -o, --next-oid=OID               设置下一个OID\n"
 
-#: pg_resetwal.c:1234
-#, c-format
+#: pg_resetwal.c:1230
 msgid "  -O, --multixact-offset=OFFSET    set next multitransaction offset\n"
 msgstr "  -O, --multixact-offset=OFFSET    设置下一个多事务偏移量\n"
 
-#: pg_resetwal.c:1235
-#, c-format
+#: pg_resetwal.c:1231
 msgid "  -u, --oldest-transaction-id=XID  set oldest transaction ID\n"
 msgstr "  -u, --oldest-transaction-id=XID  设置最旧的事务ID\n"
 
-#: pg_resetwal.c:1236
-#, c-format
-msgid ""
-"  -V, --version                    output version information, then exit\n"
+#: pg_resetwal.c:1232
+msgid "  -V, --version                    output version information, then exit\n"
 msgstr "  -V, --version                    输出版本信息, 然后退出\n"
 
-#: pg_resetwal.c:1237
-#, c-format
+#: pg_resetwal.c:1233
 msgid "  -x, --next-transaction-id=XID    set next transaction ID\n"
 msgstr "  -x, --next-transaction-id=XID    设置下一个事务ID\n"
 
-#: pg_resetwal.c:1238
-#, c-format
+#: pg_resetwal.c:1234
 msgid "      --wal-segsize=SIZE           size of WAL segments, in megabytes\n"
 msgstr "      --wal-segsize=SIZE           WAL段的大小（兆字节）\n"
 
-#: pg_resetwal.c:1239
-#, c-format
+#: pg_resetwal.c:1235
 msgid "  -?, --help                       show this help, then exit\n"
 msgstr "  -?, --help                       显示此帮助信息, 然后退出\n"
 
-#: pg_resetwal.c:1240
+#: pg_resetwal.c:1236
 #, c-format
 msgid ""
 "\n"
@@ -660,7 +631,8 @@ msgstr ""
 "\n"
 "臭虫报告至<%s>.\n"
 
-#: pg_resetwal.c:1241
+#: pg_resetwal.c:1237
 #, c-format
 msgid "%s home page: <%s>\n"
 msgstr "%s 主页: <%s>\n"
+

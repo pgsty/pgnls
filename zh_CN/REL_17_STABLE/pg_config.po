@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_config (PostgreSQL) 17\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-17 06:29+0000\n"
+"POT-Creation-Date: 2024-09-13 22:51+0000\n"
 "PO-Revision-Date: 2024-09-14 12:07+0800\n"
 "Last-Translator: Dianjin Wang <wangdianjin@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zhangjie2@fujitsu.com>\n"
@@ -67,28 +67,16 @@ msgstr "%s() 失败: %m"
 msgid "out of memory"
 msgstr "内存不足"
 
-#: ../../common/fe_memutils.c:41 ../../common/fe_memutils.c:81
-#: ../../common/fe_memutils.c:104 ../../common/fe_memutils.c:167
+#: ../../common/fe_memutils.c:35 ../../common/fe_memutils.c:75
+#: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:161
 #, c-format
 msgid "out of memory\n"
 msgstr "内存不足\n"
 
-#: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:159
+#: ../../common/fe_memutils.c:92 ../../common/fe_memutils.c:153
 #, c-format
 msgid "cannot duplicate null pointer (internal error)\n"
 msgstr "无法复制空指针 (内部错误)\n"
-
-#: ../../common/fe_memutils.c:209
-#, fuzzy, c-format
-#| msgid "invalid large object write request size: %d"
-msgid "invalid memory allocation request size %zu + %zu\n"
-msgstr "无效的大对象写请求大小: %d"
-
-#: ../../common/fe_memutils.c:228
-#, fuzzy, c-format
-#| msgid "invalid large object write request size: %d"
-msgid "invalid memory allocation request size %zu * %zu\n"
-msgstr "无效的大对象写请求大小: %d"
 
 #: pg_config.c:74
 #, c-format
@@ -151,8 +139,7 @@ msgstr "  --pkgincludedir       显示其它 C 语言头文件所在位置\n"
 
 #: pg_config.c:84
 #, c-format
-msgid ""
-"  --includedir-server   show location of C header files for the server\n"
+msgid "  --includedir-server   show location of C header files for the server\n"
 msgstr "  --includedir-server   显示服务器端 C 语言头文件所在位置\n"
 
 #: pg_config.c:85
@@ -177,15 +164,12 @@ msgstr "  --mandir              显示参考手册所在位置\n"
 
 #: pg_config.c:89
 #, c-format
-msgid ""
-"  --sharedir            show location of architecture-independent support "
-"files\n"
+msgid "  --sharedir            show location of architecture-independent support files\n"
 msgstr "  --sharedir            显示独立架构支持文件所在位置\n"
 
 #: pg_config.c:90
 #, c-format
-msgid ""
-"  --sysconfdir          show location of system-wide configuration files\n"
+msgid "  --sysconfdir          show location of system-wide configuration files\n"
 msgstr "  --sysconfdir          显示系统范围的配置文件所在位置\n"
 
 #: pg_config.c:91
@@ -209,49 +193,37 @@ msgstr "  --cc                  显示在编译 PostgreSQL 时所使用的 CC �
 
 #: pg_config.c:95
 #, c-format
-msgid ""
-"  --cppflags            show CPPFLAGS value used when PostgreSQL was built\n"
+msgid "  --cppflags            show CPPFLAGS value used when PostgreSQL was built\n"
 msgstr "  --cppflags            显示在编译 PostgreSQL 时所使用的 CPPFLAGS 值\n"
 
 #: pg_config.c:96
 #, c-format
-msgid ""
-"  --cflags              show CFLAGS value used when PostgreSQL was built\n"
+msgid "  --cflags              show CFLAGS value used when PostgreSQL was built\n"
 msgstr "  --cflags              显示在编译 PostgreSQL 时所使用的 CFLAGS 值\n"
 
 #: pg_config.c:97
 #, c-format
-msgid ""
-"  --cflags_sl           show CFLAGS_SL value used when PostgreSQL was built\n"
-msgstr ""
-"  --cflags_sl           显示在编译 PostgreSQL 时所使用的 CFLAGS_SL 值\n"
+msgid "  --cflags_sl           show CFLAGS_SL value used when PostgreSQL was built\n"
+msgstr "  --cflags_sl           显示在编译 PostgreSQL 时所使用的 CFLAGS_SL 值\n"
 
 #: pg_config.c:98
 #, c-format
-msgid ""
-"  --ldflags             show LDFLAGS value used when PostgreSQL was built\n"
+msgid "  --ldflags             show LDFLAGS value used when PostgreSQL was built\n"
 msgstr "  --ldflags             显示在编译 PostgreSQL 时所使用的 LDFLAGS 值\n"
 
 #: pg_config.c:99
 #, c-format
-msgid ""
-"  --ldflags_ex          show LDFLAGS_EX value used when PostgreSQL was "
-"built\n"
-msgstr ""
-"  --ldflags_ex          显示在编译 PostgreSQL 时所使用的 LDFLAGS_EX 值\n"
+msgid "  --ldflags_ex          show LDFLAGS_EX value used when PostgreSQL was built\n"
+msgstr "  --ldflags_ex          显示在编译 PostgreSQL 时所使用的 LDFLAGS_EX 值\n"
 
 #: pg_config.c:100
 #, c-format
-msgid ""
-"  --ldflags_sl          show LDFLAGS_SL value used when PostgreSQL was "
-"built\n"
-msgstr ""
-"  --ldflags_sl          显示在编译 PostgreSQL 时所使用的 LDFLAGS_SL 值\n"
+msgid "  --ldflags_sl          show LDFLAGS_SL value used when PostgreSQL was built\n"
+msgstr "  --ldflags_sl          显示在编译 PostgreSQL 时所使用的 LDFLAGS_SL 值\n"
 
 #: pg_config.c:101
 #, c-format
-msgid ""
-"  --libs                show LIBS value used when PostgreSQL was built\n"
+msgid "  --libs                show LIBS value used when PostgreSQL was built\n"
 msgstr "  --libs                显示在编译 PostgreSQL 时所使用的 LIBS 值\n"
 
 #: pg_config.c:102

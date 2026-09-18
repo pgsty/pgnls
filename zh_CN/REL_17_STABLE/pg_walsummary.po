@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_walsummary (PostgreSQL) 17\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-17 06:34+0000\n"
+"POT-Creation-Date: 2024-06-06 01:24+0000\n"
 "PO-Revision-Date: 2024-06-06 18:21+0800\n"
 "Last-Translator: Dianjin Wang <wangdianjin@gmail.com>\n"
 "Language-Team: \n"
@@ -36,97 +36,20 @@ msgstr "详细信息: "
 msgid "hint: "
 msgstr "提示: "
 
-#: ../../common/fe_memutils.c:41 ../../common/fe_memutils.c:81
-#: ../../common/fe_memutils.c:104 ../../common/fe_memutils.c:167
-#, c-format
-msgid "out of memory\n"
-msgstr "内存溢出\n"
-
-#: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:159
-#, c-format
-msgid "cannot duplicate null pointer (internal error)\n"
-msgstr "无法复制空指针 (内部错误)\n"
-
-#: ../../common/fe_memutils.c:209
-#, fuzzy, c-format
-#| msgid "invalid large object write request size: %d"
-msgid "invalid memory allocation request size %zu + %zu\n"
-msgstr "无效的大对象写请求大小: %d"
-
-#: ../../common/fe_memutils.c:228
-#, fuzzy, c-format
-#| msgid "invalid large object write request size: %d"
-msgid "invalid memory allocation request size %zu * %zu\n"
-msgstr "无效的大对象写请求大小: %d"
-
-#: ../../common/file_utils.c:70 ../../common/file_utils.c:347
-#: ../../common/file_utils.c:406 ../../common/file_utils.c:480
-#: pg_walsummary.c:109
-#, c-format
-msgid "could not open file \"%s\": %m"
-msgstr "无法打开文件 \"%s\": %m"
-
-#: ../../common/file_utils.c:76
-#, c-format
-msgid "could not synchronize file system for file \"%s\": %m"
-msgstr "无法为文件 \"%s\" 同步文件系统: %m"
-
-#: ../../common/file_utils.c:120 ../../common/file_utils.c:566
-#, c-format
-msgid "could not stat file \"%s\": %m"
-msgstr "无法取文件 \"%s\" 的状态: %m"
-
-#: ../../common/file_utils.c:130 ../../common/file_utils.c:227
-#: ../../fe_utils/option_utils.c:99
-#, c-format
-msgid "this build does not support sync method \"%s\""
-msgstr "该版本不支持同步方法 \"%s\""
-
-#: ../../common/file_utils.c:151 ../../common/file_utils.c:281
-#, c-format
-msgid "could not open directory \"%s\": %m"
-msgstr "无法打开目录 \"%s\": %m"
-
-#: ../../common/file_utils.c:169 ../../common/file_utils.c:315
-#, c-format
-msgid "could not read directory \"%s\": %m"
-msgstr "无法读取目录 \"%s\": %m"
-
-#: ../../common/file_utils.c:418 ../../common/file_utils.c:488
-#, c-format
-msgid "could not fsync file \"%s\": %m"
-msgstr "无法 fsync 文件 \"%s\": %m"
-
-#: ../../common/file_utils.c:498
-#, c-format
-msgid "could not rename file \"%s\" to \"%s\": %m"
-msgstr "无法把文件 \"%s\" 重命名为 \"%s\": %m"
-
-#: ../../fe_utils/option_utils.c:69
-#, c-format
-msgid "invalid value \"%s\" for option %s"
-msgstr "\"%s\" 是选项 %s 的无效值"
-
-#: ../../fe_utils/option_utils.c:76
-#, c-format
-msgid "%s must be in range %d..%d"
-msgstr "%s 必须位于 %d..%d 的范围内"
-
-#: ../../fe_utils/option_utils.c:106
-#, c-format
-msgid "unrecognized sync method: %s"
-msgstr "无法识别同步方法: %s"
-
 #: pg_walsummary.c:87 pg_walsummary.c:95
 #, c-format
 msgid "Try \"%s --help\" for more information."
 msgstr "请用 \"%s --help\" 获取更多的信息."
 
 #: pg_walsummary.c:94
-#, fuzzy, c-format
-#| msgid "%s: no input files specified"
-msgid "no input files specified"
+#, c-format
+msgid "%s: no input files specified"
 msgstr "%s: 未指定输入文件"
+
+#: pg_walsummary.c:109
+#, c-format
+msgid "could not open file \"%s\": %m"
+msgstr "无法打开文件 \"%s\": %m"
 
 #: pg_walsummary.c:252
 #, c-format
@@ -163,14 +86,12 @@ msgstr ""
 
 #: pg_walsummary.c:271
 #, c-format
-msgid ""
-"  -i, --individual          list block numbers individually, not as ranges\n"
+msgid "  -i, --individual          list block numbers individually, not as ranges\n"
 msgstr ""
 
 #: pg_walsummary.c:272
 #, c-format
-msgid ""
-"  -q, --quiet               don't print anything, just parse the files\n"
+msgid "  -q, --quiet               don't print anything, just parse the files\n"
 msgstr "  -q, --quiet               不输出任何内容, 只解析文件\n"
 
 #: pg_walsummary.c:273

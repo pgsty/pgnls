@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_test_timing (PostgreSQL) 14\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-17 06:13+0000\n"
+"POT-Creation-Date: 2021-08-14 05:47+0000\n"
 "PO-Revision-Date: 2021-06-10 10:50+0800\n"
 "Last-Translator: Jie Zhang <zhangjie2@fujitsu.com>\n"
 "Language-Team: Chinese (Simplified) <zhangjie2@fujitsu.com>\n"
@@ -16,29 +16,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#: ../../common/fe_memutils.c:41 ../../common/fe_memutils.c:81
-#: ../../common/fe_memutils.c:104 ../../common/fe_memutils.c:167
-#, c-format
-msgid "out of memory\n"
-msgstr "内存溢出\n"
-
-#: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:159
-#, c-format
-msgid "cannot duplicate null pointer (internal error)\n"
-msgstr "无法复制空指针 (内部错误)\n"
-
-#: ../../common/fe_memutils.c:209
-#, fuzzy, c-format
-#| msgid "invalid large object write request size: %d"
-msgid "invalid memory allocation request size %zu + %zu\n"
-msgstr "无效的大对象写请求大小: %d"
-
-#: ../../common/fe_memutils.c:228
-#, fuzzy, c-format
-#| msgid "invalid large object write request size: %d"
-msgid "invalid memory allocation request size %zu * %zu\n"
-msgstr "无效的大对象写请求大小: %d"
 
 #: pg_test_timing.c:59
 #, c-format
@@ -78,9 +55,8 @@ msgid "Detected clock going backwards in time.\n"
 msgstr "检测到时钟时间倒转.\n"
 
 #: pg_test_timing.c:152
-#, fuzzy, c-format
-#| msgid "Time warp: %d ms\n"
-msgid "Time warp: %d us\n"
+#, c-format
+msgid "Time warp: %d ms\n"
 msgstr "时间错位: %d 毫秒\n"
 
 #: pg_test_timing.c:175

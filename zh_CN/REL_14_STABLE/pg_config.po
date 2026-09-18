@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_config (PostgreSQL) 14\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-16 11:48+0000\n"
+"POT-Creation-Date: 2021-08-14 05:46+0000\n"
 "PO-Revision-Date: 2021-08-15 17:25+0800\n"
 "Last-Translator: Jie Zhang <zhangjie2@fujitsu.com>\n"
 "Language-Team: Chinese (Simplified) <zhangjie2@fujitsu.com>\n"
@@ -23,42 +23,41 @@ msgstr ""
 msgid "not recorded"
 msgstr "没有被记录"
 
-#: ../../common/exec.c:149 ../../common/exec.c:266 ../../common/exec.c:312
+#: ../../common/exec.c:136 ../../common/exec.c:253 ../../common/exec.c:299
 #, c-format
 msgid "could not identify current directory: %m"
 msgstr "无法确认当前目录: %m"
 
-#: ../../common/exec.c:168
+#: ../../common/exec.c:155
 #, c-format
 msgid "invalid binary \"%s\""
 msgstr "无效的二进制码 \"%s\""
 
-#: ../../common/exec.c:218
+#: ../../common/exec.c:205
 #, c-format
 msgid "could not read binary \"%s\""
 msgstr "无法读取二进制码 \"%s\""
 
-#: ../../common/exec.c:226
+#: ../../common/exec.c:213
 #, c-format
 msgid "could not find a \"%s\" to execute"
 msgstr "未能找到一个 \"%s\" 来执行"
 
-#: ../../common/exec.c:282 ../../common/exec.c:321
+#: ../../common/exec.c:269 ../../common/exec.c:308
 #, c-format
 msgid "could not change directory to \"%s\": %m"
 msgstr "无法跳转到目录 \"%s\" 中: %m"
 
-#: ../../common/exec.c:299
+#: ../../common/exec.c:286
 #, c-format
 msgid "could not read symbolic link \"%s\": %m"
 msgstr "无法读取符号链接 \"%s\": %m"
 
-#: ../../common/exec.c:422
-#, c-format
+#: ../../common/exec.c:409
 msgid "%s() failed: %m"
 msgstr "%s()失败: %m"
 
-#: ../../common/exec.c:560 ../../common/exec.c:605 ../../common/exec.c:697
+#: ../../common/exec.c:522 ../../common/exec.c:567 ../../common/exec.c:659
 msgid "out of memory"
 msgstr "内存不足"
 
@@ -121,8 +120,7 @@ msgstr "  --pkgincludedir       显示其它C语言头文件所在的位置\n"
 
 #: pg_config.c:84
 #, c-format
-msgid ""
-"  --includedir-server   show location of C header files for the server\n"
+msgid "  --includedir-server   show location of C header files for the server\n"
 msgstr "  --includedir-server   显示服务端 C 头文件所在位置\n"
 
 #: pg_config.c:85
@@ -147,15 +145,12 @@ msgstr "  --mandir              显示参考手册所在位置\n"
 
 #: pg_config.c:89
 #, c-format
-msgid ""
-"  --sharedir            show location of architecture-independent support "
-"files\n"
+msgid "  --sharedir            show location of architecture-independent support files\n"
 msgstr "  --sharedir            显示独立架构支持文件所在位置\n"
 
 #: pg_config.c:90
 #, c-format
-msgid ""
-"  --sysconfdir          show location of system-wide configuration files\n"
+msgid "  --sysconfdir          show location of system-wide configuration files\n"
 msgstr "  --sysconfdir          显示系统范围的配置文件的所在位置\n"
 
 #: pg_config.c:91
@@ -179,46 +174,37 @@ msgstr "  --cc                  显示在创建PostgreSQL时所使用的CC值\n"
 
 #: pg_config.c:95
 #, c-format
-msgid ""
-"  --cppflags            show CPPFLAGS value used when PostgreSQL was built\n"
+msgid "  --cppflags            show CPPFLAGS value used when PostgreSQL was built\n"
 msgstr "  --cppflags            当创建PostgreSQL时显示CPPFLAGS的值\n"
 
 #: pg_config.c:96
 #, c-format
-msgid ""
-"  --cflags              show CFLAGS value used when PostgreSQL was built\n"
+msgid "  --cflags              show CFLAGS value used when PostgreSQL was built\n"
 msgstr "  --cflags              显示在创建PostgreSQL时所使用的CFLAG值\n"
 
 #: pg_config.c:97
 #, c-format
-msgid ""
-"  --cflags_sl           show CFLAGS_SL value used when PostgreSQL was built\n"
+msgid "  --cflags_sl           show CFLAGS_SL value used when PostgreSQL was built\n"
 msgstr "  --cflags_sl           当创建PostgreSQL时显示CFLAGS_SL的值\n"
 
 #: pg_config.c:98
 #, c-format
-msgid ""
-"  --ldflags             show LDFLAGS value used when PostgreSQL was built\n"
+msgid "  --ldflags             show LDFLAGS value used when PostgreSQL was built\n"
 msgstr "  --ldflags             显示在创建PostgreSQL时所使用的LDFLAG值\n"
 
 #: pg_config.c:99
 #, c-format
-msgid ""
-"  --ldflags_ex          show LDFLAGS_EX value used when PostgreSQL was "
-"built\n"
+msgid "  --ldflags_ex          show LDFLAGS_EX value used when PostgreSQL was built\n"
 msgstr "  --ldflags_ex          当创建PostgreSQL时显示LDFLAGS_EX的值\n"
 
 #: pg_config.c:100
 #, c-format
-msgid ""
-"  --ldflags_sl          show LDFLAGS_SL value used when PostgreSQL was "
-"built\n"
+msgid "  --ldflags_sl          show LDFLAGS_SL value used when PostgreSQL was built\n"
 msgstr "  --ldflags_sl          当创建PostgreSQL时显示LDFLAGS_SL的值\n"
 
 #: pg_config.c:101
 #, c-format
-msgid ""
-"  --libs                show LIBS value used when PostgreSQL was built\n"
+msgid "  --libs                show LIBS value used when PostgreSQL was built\n"
 msgstr "  --libs                显示在创建PostgreSQL时所使用的LIBS值\n"
 
 #: pg_config.c:102
@@ -266,3 +252,4 @@ msgstr "%s: 无法找到执行文件\n"
 #, c-format
 msgid "%s: invalid argument: %s\n"
 msgstr "%s: 无效参数: %s\n"
+

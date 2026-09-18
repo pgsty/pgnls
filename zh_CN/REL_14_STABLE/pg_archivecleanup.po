@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_archivecleanup (PostgreSQL) 14\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-16 11:51+0000\n"
+"POT-Creation-Date: 2021-08-14 05:48+0000\n"
 "PO-Revision-Date: 2021-08-14 19:40+0800\n"
 "Last-Translator: Jie Zhang <zhangjie2@fujitsu.com>\n"
 "Language-Team: Chinese (Simplified) <zhangjie2@fujitsu.com>\n"
@@ -102,8 +102,7 @@ msgstr "  -d             生成调试输出（详细模式）\n"
 
 #: pg_archivecleanup.c:259
 #, c-format
-msgid ""
-"  -n             dry run, show the names of the files that would be removed\n"
+msgid "  -n             dry run, show the names of the files that would be removed\n"
 msgstr "  -n             dry运行，显示要删除的文件的名称\n"
 
 #: pg_archivecleanup.c:260
@@ -126,8 +125,7 @@ msgstr "  -?, --help     显示帮助信息，然后退出\n"
 msgid ""
 "\n"
 "For use as archive_cleanup_command in postgresql.conf:\n"
-"  archive_cleanup_command = 'pg_archivecleanup [OPTION]... ARCHIVELOCATION "
-"%%r'\n"
+"  archive_cleanup_command = 'pg_archivecleanup [OPTION]... ARCHIVELOCATION %%r'\n"
 "e.g.\n"
 "  archive_cleanup_command = 'pg_archivecleanup /mnt/server/archiverdir %%r'\n"
 msgstr ""
@@ -143,14 +141,12 @@ msgid ""
 "\n"
 "Or for use as a standalone archive cleaner:\n"
 "e.g.\n"
-"  pg_archivecleanup /mnt/server/archiverdir "
-"000000010000000000000010.00000020.backup\n"
+"  pg_archivecleanup /mnt/server/archiverdir 000000010000000000000010.00000020.backup\n"
 msgstr ""
 "\n"
 "或者，用作独立存档清理程序:\n"
 "例.\n"
-"  pg_archivecleanup /mnt/server/archiverdir "
-"000000010000000000000010.00000020.backup\n"
+"  pg_archivecleanup /mnt/server/archiverdir 000000010000000000000010.00000020.backup\n"
 
 #: pg_archivecleanup.c:272
 #, c-format
@@ -180,3 +176,4 @@ msgstr "必须指定最早保存的WAL文件"
 #, c-format
 msgid "too many command-line arguments"
 msgstr "命令行参数太多"
+

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_ctl (PostgreSQL) 14\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-17 06:47+0000\n"
+"POT-Creation-Date: 2023-04-24 03:48+0000\n"
 "PO-Revision-Date: 2023-04-24 09:26+0200\n"
 "Last-Translator: Jie Zhang <zhangjie2@fujitsu.com>\n"
 "Language-Team: Chinese (Simplified)<zhangjie2@fujitsu.com>\n"
@@ -48,29 +48,17 @@ msgstr "%s()失败: %m"
 msgid "out of memory"
 msgstr "内存不足"
 
-#: ../../common/fe_memutils.c:41 ../../common/fe_memutils.c:81
-#: ../../common/fe_memutils.c:104 ../../common/fe_memutils.c:167
-#: ../../port/path.c:847 ../../port/path.c:885 ../../port/path.c:902
+#: ../../common/fe_memutils.c:35 ../../common/fe_memutils.c:75
+#: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:161
+#: ../../port/path.c:753 ../../port/path.c:791 ../../port/path.c:808
 #, c-format
 msgid "out of memory\n"
 msgstr "内存不足\n"
 
-#: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:159
+#: ../../common/fe_memutils.c:92 ../../common/fe_memutils.c:153
 #, c-format
 msgid "cannot duplicate null pointer (internal error)\n"
 msgstr "无法复制空指针 (内部错误)\n"
-
-#: ../../common/fe_memutils.c:209
-#, fuzzy, c-format
-#| msgid "invalid large object write request size: %d"
-msgid "invalid memory allocation request size %zu + %zu\n"
-msgstr "无效的大对象写请求大小: %d"
-
-#: ../../common/fe_memutils.c:228
-#, fuzzy, c-format
-#| msgid "invalid large object write request size: %d"
-msgid "invalid memory allocation request size %zu * %zu\n"
-msgstr "无效的大对象写请求大小: %d"
 
 #: ../../common/wait_error.c:55
 #, c-format
@@ -102,7 +90,7 @@ msgstr "子进程被信号 %d 终止: %s"
 msgid "child process exited with unrecognized status %d"
 msgstr "子进程已退出, 未知状态 %d"
 
-#: ../../port/path.c:869
+#: ../../port/path.c:775
 #, c-format
 msgid "could not get current working directory: %s\n"
 msgstr "无法得到当前工作目录: %s\n"
@@ -184,9 +172,7 @@ msgstr "%s: 无法发送停止信号 (PID: %d): %s\n"
 #| "The program \"%s\" is needed by %s but was not found in the\n"
 #| "same directory as \"%s\".\n"
 #| "Check your installation."
-msgid ""
-"program \"%s\" is needed by %s but was not found in the same directory as "
-"\"%s\"\n"
+msgid "program \"%s\" is needed by %s but was not found in the same directory as \"%s\"\n"
 msgstr ""
 "%2$s需要程序\"%1$s\"\n"
 "但在与\"%3$s\"相同的目录中找不到该程序.\n"
@@ -587,8 +573,7 @@ msgstr "  %s kill       信号名称 进程号\n"
 #, c-format
 msgid ""
 "  %s register   [-D DATADIR] [-N SERVICENAME] [-U USERNAME] [-P PASSWORD]\n"
-"                    [-S START-TYPE] [-e SOURCE] [-W] [-t SECS] [-s] [-o "
-"OPTIONS]\n"
+"                    [-S START-TYPE] [-e SOURCE] [-W] [-t SECS] [-s] [-o OPTIONS]\n"
 msgstr ""
 "  %s register   [-D 数据目录] [-N 服务名称] [-U 用户名] [-P 口令]\n"
 "                    [-S 启动类型] [-e 源] [-W] [-t 秒数] [-s] [-o 选项]\n"
@@ -614,8 +599,7 @@ msgstr "  -D, --pgdata=数据目录  数据库存储区域的位置\n"
 
 #: pg_ctl.c:1988
 #, c-format
-msgid ""
-"  -e SOURCE              event source for logging when running as a service\n"
+msgid "  -e SOURCE              event source for logging when running as a service\n"
 msgstr "  -e SOURCE              当作为一个服务运行时要记录的事件的来源\n"
 
 #: pg_ctl.c:1990
@@ -702,10 +686,8 @@ msgstr ""
 
 #: pg_ctl.c:2009
 #, c-format
-msgid ""
-"  -m, --mode=MODE        MODE can be \"smart\", \"fast\", or \"immediate\"\n"
-msgstr ""
-"  -m, --mode=MODE        可以是 \"smart\", \"fast\", 或者 \"immediate\"\n"
+msgid "  -m, --mode=MODE        MODE can be \"smart\", \"fast\", or \"immediate\"\n"
+msgstr "  -m, --mode=MODE        可以是 \"smart\", \"fast\", 或者 \"immediate\"\n"
 
 #: pg_ctl.c:2011
 #, c-format
@@ -728,9 +710,7 @@ msgstr "  fast        直接退出, 正确的关闭（默认）\n"
 
 #: pg_ctl.c:2014
 #, c-format
-msgid ""
-"  immediate   quit without complete shutdown; will lead to recovery on "
-"restart\n"
+msgid "  immediate   quit without complete shutdown; will lead to recovery on restart\n"
 msgstr "  immediate   不完全的关闭退出; 重启后恢复\n"
 
 #: pg_ctl.c:2016
@@ -753,8 +733,7 @@ msgstr ""
 
 #: pg_ctl.c:2021
 #, c-format
-msgid ""
-"  -N SERVICENAME  service name with which to register PostgreSQL server\n"
+msgid "  -N SERVICENAME  service name with which to register PostgreSQL server\n"
 msgstr "  -N 服务名称     注册到 PostgreSQL 服务器的服务名称\n"
 
 #: pg_ctl.c:2022
@@ -783,8 +762,7 @@ msgstr ""
 
 #: pg_ctl.c:2027
 #, c-format
-msgid ""
-"  auto       start service automatically during system startup (default)\n"
+msgid "  auto       start service automatically during system startup (default)\n"
 msgstr "  auto       在系统启动时自动启动服务(默认选项)\n"
 
 #: pg_ctl.c:2028
@@ -869,8 +847,7 @@ msgstr "%s: 没有指定操作\n"
 
 #: pg_ctl.c:2445
 #, c-format
-msgid ""
-"%s: no database directory specified and environment variable PGDATA unset\n"
+msgid "%s: no database directory specified and environment variable PGDATA unset\n"
 msgstr "%s: 没有指定数据目录, 并且没有设置 PGDATA 环境变量\n"
 
 #, c-format

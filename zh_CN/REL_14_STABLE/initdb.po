@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: initdb (PostgreSQL) 14\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-16 11:49+0000\n"
+"POT-Creation-Date: 2021-08-14 05:47+0000\n"
 "PO-Revision-Date: 2021-08-15 18:00+0800\n"
 "Last-Translator: Jie Zhang <zhangjie2@fujitsu.com>\n"
 "Language-Team: Chinese (Simplified) <zhangjie2@fujitsu.com>\n"
@@ -31,97 +31,84 @@ msgstr "错误: "
 msgid "warning: "
 msgstr "警告: "
 
-#: ../../common/exec.c:149 ../../common/exec.c:266 ../../common/exec.c:312
+#: ../../common/exec.c:136 ../../common/exec.c:253 ../../common/exec.c:299
 #, c-format
 msgid "could not identify current directory: %m"
 msgstr "无法确认当前目录: %m"
 
-#: ../../common/exec.c:168
+#: ../../common/exec.c:155
 #, c-format
 msgid "invalid binary \"%s\""
 msgstr "无效的二进制码 \"%s\""
 
-#: ../../common/exec.c:218
+#: ../../common/exec.c:205
 #, c-format
 msgid "could not read binary \"%s\""
 msgstr "无法读取二进制码 \"%s\""
 
-#: ../../common/exec.c:226
+#: ../../common/exec.c:213
 #, c-format
 msgid "could not find a \"%s\" to execute"
 msgstr "未能找到一个 \"%s\" 来执行"
 
-#: ../../common/exec.c:282 ../../common/exec.c:321
+#: ../../common/exec.c:269 ../../common/exec.c:308
 #, c-format
 msgid "could not change directory to \"%s\": %m"
 msgstr "无法跳转到目录 \"%s\" 中: %m"
 
-#: ../../common/exec.c:299
+#: ../../common/exec.c:286
 #, c-format
 msgid "could not read symbolic link \"%s\": %m"
 msgstr "无法读取符号链接 \"%s\": %m"
 
-#: ../../common/exec.c:422
-#, c-format
+#: ../../common/exec.c:409
 msgid "%s() failed: %m"
 msgstr "%s()失败: %m"
 
-#: ../../common/exec.c:560 ../../common/exec.c:605 ../../common/exec.c:697
+#: ../../common/exec.c:522 ../../common/exec.c:567 ../../common/exec.c:659
 #: initdb.c:331
 #, c-format
 msgid "out of memory"
 msgstr "内存不足"
 
-#: ../../common/fe_memutils.c:41 ../../common/fe_memutils.c:81
-#: ../../common/fe_memutils.c:104 ../../common/fe_memutils.c:168
+#: ../../common/fe_memutils.c:35 ../../common/fe_memutils.c:75
+#: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:162
 #, c-format
 msgid "out of memory\n"
 msgstr "内存不足\n"
 
-#: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:160
+#: ../../common/fe_memutils.c:92 ../../common/fe_memutils.c:154
 #, c-format
 msgid "cannot duplicate null pointer (internal error)\n"
 msgstr "无法复制空指针 (内部错误)\n"
 
-#: ../../common/fe_memutils.c:210
-#, fuzzy, c-format
-#| msgid "invalid large object write request size: %d"
-msgid "invalid memory allocation request size %zu + %zu\n"
-msgstr "无效的大对象写请求大小: %d"
-
-#: ../../common/fe_memutils.c:229
-#, fuzzy, c-format
-#| msgid "invalid large object write request size: %d"
-msgid "invalid memory allocation request size %zu * %zu\n"
-msgstr "无效的大对象写请求大小: %d"
-
-#: ../../common/file_utils.c:86 ../../common/file_utils.c:446
+#: ../../common/file_utils.c:87 ../../common/file_utils.c:451
 #, c-format
 msgid "could not stat file \"%s\": %m"
 msgstr "无法取文件 \"%s\" 的状态: %m"
 
-#: ../../common/file_utils.c:161 ../../common/pgfnames.c:48
+#: ../../common/file_utils.c:166 ../../common/pgfnames.c:48
 #, c-format
 msgid "could not open directory \"%s\": %m"
 msgstr "无法打开目录 \"%s\": %m"
 
-#: ../../common/file_utils.c:195 ../../common/pgfnames.c:69
+#: ../../common/file_utils.c:200 ../../common/pgfnames.c:69
 #, c-format
 msgid "could not read directory \"%s\": %m"
 msgstr "无法读取目录 \"%s\": %m"
 
-#: ../../common/file_utils.c:227 ../../common/file_utils.c:286
-#: ../../common/file_utils.c:360
+#: ../../common/file_utils.c:232 ../../common/file_utils.c:291
+#: ../../common/file_utils.c:365
 #, c-format
 msgid "could not open file \"%s\": %m"
 msgstr "无法打开文件 \"%s\": %m"
 
-#: ../../common/file_utils.c:298 ../../common/file_utils.c:368
+#: ../../common/file_utils.c:303 ../../common/file_utils.c:373
 #, c-format
 msgid "could not fsync file \"%s\": %m"
 msgstr "无法 fsync 文件 \"%s\": %m"
 
-#: ../../common/file_utils.c:378
+#: ../../common/file_utils.c:383
 #, c-format
 msgid "could not rename file \"%s\" to \"%s\": %m"
 msgstr "无法把文件 \"%s\" 重命名为 \"%s\": %m"
@@ -225,12 +212,12 @@ msgstr "子进程被信号 %d 终止: %s"
 msgid "child process exited with unrecognized status %d"
 msgstr "子进程已退出, 未知状态 %d"
 
-#: ../../port/dirmod.c:247
+#: ../../port/dirmod.c:221
 #, c-format
 msgid "could not set junction for \"%s\": %s\n"
 msgstr "无法为 \"%s\"设置连接: %s\n"
 
-#: ../../port/dirmod.c:324
+#: ../../port/dirmod.c:298
 #, c-format
 msgid "could not get junction for \"%s\": %s\n"
 msgstr "无法为\"%s\"得到连接: %s\n"
@@ -364,7 +351,6 @@ msgid "selecting default shared_buffers ... "
 msgstr "选择默认共享缓冲区大小 (shared_buffers) ... "
 
 #: initdb.c:1024
-#, c-format
 msgid "selecting default time zone ... "
 msgstr "选择默认时区 ... "
 
@@ -389,8 +375,7 @@ msgstr "输入文件 \"%s\" 不属于PostgreSQL %s"
 
 #: initdb.c:1374
 #, c-format
-msgid ""
-"Check your installation or specify the correct path using the option -L.\n"
+msgid "Check your installation or specify the correct path using the option -L.\n"
 msgstr "检查你的安装或使用 -L 选项指定正确的路径.\n"
 
 #: initdb.c:1473
@@ -501,23 +486,17 @@ msgstr ""
 
 #: initdb.c:2248
 #, c-format
-msgid ""
-"  -A, --auth=METHOD         default authentication method for local "
-"connections\n"
+msgid "  -A, --auth=METHOD         default authentication method for local connections\n"
 msgstr "  -A, --auth=METHOD         本地连接的默认认证方法\n"
 
 #: initdb.c:2249
 #, c-format
-msgid ""
-"      --auth-host=METHOD    default authentication method for local TCP/IP "
-"connections\n"
+msgid "      --auth-host=METHOD    default authentication method for local TCP/IP connections\n"
 msgstr "      --auth-host=METHOD    本地的TCP/IP连接的默认认证方法\n"
 
 #: initdb.c:2250
 #, c-format
-msgid ""
-"      --auth-local=METHOD   default authentication method for local-socket "
-"connections\n"
+msgid "      --auth-local=METHOD   default authentication method for local-socket connections\n"
 msgstr "      --auth-local=METHOD   本地socket连接的默认认证方法\n"
 
 #: initdb.c:2251
@@ -532,8 +511,7 @@ msgstr "  -E, --encoding=ENCODING   为新数据库设置默认编码\n"
 
 #: initdb.c:2253
 #, c-format
-msgid ""
-"  -g, --allow-group-access  allow group read/execute on data directory\n"
+msgid "  -g, --allow-group-access  allow group read/execute on data directory\n"
 msgstr "  -g, --allow-group-access  允许组对数据目录进行读/执行\n"
 
 #: initdb.c:2254
@@ -551,8 +529,7 @@ msgstr "      --locale=LOCALE       为新数据库设置默认语言环境\n"
 msgid ""
 "      --lc-collate=, --lc-ctype=, --lc-messages=LOCALE\n"
 "      --lc-monetary=, --lc-numeric=, --lc-time=LOCALE\n"
-"                            set default locale in the respective category "
-"for\n"
+"                            set default locale in the respective category for\n"
 "                            new databases (default taken from environment)\n"
 msgstr ""
 "  --lc-collate, --lc-ctype, --lc-messages=LOCALE\n"
@@ -567,8 +544,7 @@ msgstr "      --no-locale           等同于 --locale=C\n"
 
 #: initdb.c:2261
 #, c-format
-msgid ""
-"      --pwfile=FILE         read password for the new superuser from file\n"
+msgid "      --pwfile=FILE         read password for the new superuser from file\n"
 msgstr "      --pwfile=FILE         对于新的超级用户从文件读取口令\n"
 
 #: initdb.c:2262
@@ -587,14 +563,12 @@ msgstr "  -U, --username=NAME       数据库超级用户名\n"
 
 #: initdb.c:2265
 #, c-format
-msgid ""
-"  -W, --pwprompt            prompt for a password for the new superuser\n"
+msgid "  -W, --pwprompt            prompt for a password for the new superuser\n"
 msgstr "  -W, --pwprompt            对于新的超级用户提示输入口令\n"
 
 #: initdb.c:2266
 #, c-format
-msgid ""
-"  -X, --waldir=WALDIR       location for the write-ahead log directory\n"
+msgid "  -X, --waldir=WALDIR       location for the write-ahead log directory\n"
 msgstr "  -X, --waldir=WALDIR       预写日志目录的位置\n"
 
 #: initdb.c:2267
@@ -633,13 +607,10 @@ msgstr "  -n, --no-clean            出错后不清理\n"
 
 #: initdb.c:2273
 #, c-format
-msgid ""
-"  -N, --no-sync             do not wait for changes to be written safely to "
-"disk\n"
+msgid "  -N, --no-sync             do not wait for changes to be written safely to disk\n"
 msgstr "  -N, --no-sync             不用等待变化安全写入磁盘\n"
 
 #: initdb.c:2274
-#, c-format
 msgid "      --no-instructions     do not print instructions for next steps\n"
 msgstr "      --no-instructions     不要打印后续步骤的说明\n"
 
@@ -702,9 +673,7 @@ msgid "invalid authentication method \"%s\" for \"%s\" connections"
 msgstr "无效认证方法 \"%s\" 用于 \"%s\" 连接"
 
 #: initdb.c:2327
-#, c-format
-msgid ""
-"must specify a password for the superuser to enable password authentication"
+msgid "must specify a password for the superuser to enable password authentication"
 msgstr "为了启动密码认证, 你需要为超级用户指定一个口令"
 
 #: initdb.c:2348
@@ -724,7 +693,6 @@ msgstr ""
 "环境变量 PGDATA.\n"
 
 #: initdb.c:2368
-#, c-format
 msgid "could not set environment"
 msgstr "无法设置环境"
 
@@ -823,19 +791,15 @@ msgid "The default database encoding has accordingly been set to \"%s\".\n"
 msgstr "默认的数据库编码已经相应的设置为 \"%s\".\n"
 
 #: initdb.c:2555
-#, c-format
 msgid "could not find suitable text search configuration for locale \"%s\""
 msgstr "无法为本地化语言环境\"%s\"找到合适的文本搜索配置"
 
 #: initdb.c:2566
-#, c-format
 msgid "suitable text search configuration for locale \"%s\" is unknown"
 msgstr "对于本地化语言环境\"%s\"合适的文本搜索配置未知"
 
 #: initdb.c:2571
-#, c-format
-msgid ""
-"specified text search configuration \"%s\" might not match locale \"%s\""
+msgid "specified text search configuration \"%s\" might not match locale \"%s\""
 msgstr "所指定的文本搜索配置\"%s\"可能与本地语言环境\"%s\"不匹配"
 
 #: initdb.c:2576
@@ -908,15 +872,12 @@ msgstr "在这个平台上不支持符号链接"
 
 #: initdb.c:2788
 #, c-format
-msgid ""
-"It contains a dot-prefixed/invisible file, perhaps due to it being a mount "
-"point.\n"
+msgid "It contains a dot-prefixed/invisible file, perhaps due to it being a mount point.\n"
 msgstr "它包含一个不可见的带固定点的文件，可能因为它是一个装载点。\n"
 
 #: initdb.c:2791
 #, c-format
-msgid ""
-"It contains a lost+found directory, perhaps due to it being a mount point.\n"
+msgid "It contains a lost+found directory, perhaps due to it being a mount point.\n"
 msgstr "它包含名为lost+found的目录，可能因为它是一个加载点.\n"
 
 #: initdb.c:2794
@@ -973,8 +934,7 @@ msgstr "--wal-segsize的参数必须是2的幂次方（在1和1024之间）"
 
 #: initdb.c:3195
 #, c-format
-msgid ""
-"superuser name \"%s\" is disallowed; role names cannot begin with \"pg_\""
+msgid "superuser name \"%s\" is disallowed; role names cannot begin with \"pg_\""
 msgstr "超级用户名\"%s\"是不允许的；角色名称不能以\"pg_\"开始"
 
 #: initdb.c:3199
@@ -1041,3 +1001,4 @@ msgstr ""
 "\n"
 "    %s\n"
 "\n"
+

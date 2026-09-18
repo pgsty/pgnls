@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_walsummary (PostgreSQL) 17\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-17 05:57+0000\n"
+"POT-Creation-Date: 2024-06-06 01:24+0000\n"
 "PO-Revision-Date: 2024-06-06 18:21+0800\n"
 "Last-Translator: Dianjin Wang <wangdianjin@gmail.com>\n"
 "Language-Team: \n"
@@ -16,130 +16,47 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.4.4\n"
 
-#: ../../../src/common/logging.c:293 ../../../src/common/logging.c:295
+#: ../../../src/common/logging.c:276
 #, c-format
 msgid "error: "
 msgstr "错误: "
 
-#: ../../../src/common/logging.c:302 ../../../src/common/logging.c:304
+#: ../../../src/common/logging.c:283
 #, c-format
 msgid "warning: "
 msgstr "警告: "
 
-#: ../../../src/common/logging.c:315 ../../../src/common/logging.c:317
+#: ../../../src/common/logging.c:294
 #, c-format
 msgid "detail: "
 msgstr "详细信息: "
 
-#: ../../../src/common/logging.c:324 ../../../src/common/logging.c:326
+#: ../../../src/common/logging.c:301
 #, c-format
 msgid "hint: "
 msgstr "提示: "
 
-#: ../../common/fe_memutils.c:41 ../../common/fe_memutils.c:81
-#: ../../common/fe_memutils.c:104 ../../common/fe_memutils.c:167
-#, c-format
-msgid "out of memory\n"
-msgstr "内存溢出\n"
-
-#: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:159
-#, c-format
-msgid "cannot duplicate null pointer (internal error)\n"
-msgstr "无法复制空指针 (内部错误)\n"
-
-#: ../../common/fe_memutils.c:209
-#, fuzzy, c-format
-#| msgid "invalid large object write request size: %d"
-msgid "invalid memory allocation request size %zu + %zu\n"
-msgstr "无效的大对象写请求大小: %d"
-
-#: ../../common/fe_memutils.c:228
-#, fuzzy, c-format
-#| msgid "invalid large object write request size: %d"
-msgid "invalid memory allocation request size %zu * %zu\n"
-msgstr "无效的大对象写请求大小: %d"
-
-#: ../../common/file_utils.c:69 ../../common/file_utils.c:370
-#: ../../common/file_utils.c:428 ../../common/file_utils.c:502
-#: pg_walsummary.c:108
-#, c-format
-msgid "could not open file \"%s\": %m"
-msgstr "无法打开文件 \"%s\": %m"
-
-#: ../../common/file_utils.c:75
-#, c-format
-msgid "could not synchronize file system for file \"%s\": %m"
-msgstr "无法为文件 \"%s\" 同步文件系统: %m"
-
-#: ../../common/file_utils.c:123 ../../common/file_utils.c:588
-#, c-format
-msgid "could not stat file \"%s\": %m"
-msgstr "无法取文件 \"%s\" 的状态: %m"
-
-#: ../../common/file_utils.c:133 ../../common/file_utils.c:243
-#: ../../fe_utils/option_utils.c:99
-#, c-format
-msgid "this build does not support sync method \"%s\""
-msgstr "该版本不支持同步方法 \"%s\""
-
-#: ../../common/file_utils.c:156 ../../common/file_utils.c:304
-#, c-format
-msgid "could not open directory \"%s\": %m"
-msgstr "无法打开目录 \"%s\": %m"
-
-#: ../../common/file_utils.c:174 ../../common/file_utils.c:338
-#, c-format
-msgid "could not read directory \"%s\": %m"
-msgstr "无法读取目录 \"%s\": %m"
-
-#: ../../common/file_utils.c:440 ../../common/file_utils.c:510
-#, c-format
-msgid "could not fsync file \"%s\": %m"
-msgstr "无法 fsync 文件 \"%s\": %m"
-
-#: ../../common/file_utils.c:520
-#, c-format
-msgid "could not rename file \"%s\" to \"%s\": %m"
-msgstr "无法把文件 \"%s\" 重命名为 \"%s\": %m"
-
-#: ../../fe_utils/option_utils.c:69
-#, c-format
-msgid "invalid value \"%s\" for option %s"
-msgstr "\"%s\" 是选项 %s 的无效值"
-
-#: ../../fe_utils/option_utils.c:76
-#, c-format
-msgid "%s must be in range %d..%d"
-msgstr "%s 必须位于 %d..%d 的范围内"
-
-#: ../../fe_utils/option_utils.c:106
-#, c-format
-msgid "unrecognized sync method: %s"
-msgstr "无法识别同步方法: %s"
-
-#: ../../fe_utils/option_utils.c:139
-#, fuzzy, c-format
-#| msgid "options -d/--dbname and -f/--file cannot be used together"
-msgid "options %s and %s cannot be used together"
-msgstr "选项 -d/--dbname和-f/--file不能同时使用"
-
-#: pg_walsummary.c:86 pg_walsummary.c:94
+#: pg_walsummary.c:87 pg_walsummary.c:95
 #, c-format
 msgid "Try \"%s --help\" for more information."
 msgstr "请用 \"%s --help\" 获取更多的信息."
 
-#: pg_walsummary.c:93
-#, fuzzy, c-format
-#| msgid "%s: no input files specified"
-msgid "no input files specified"
+#: pg_walsummary.c:94
+#, c-format
+msgid "%s: no input files specified"
 msgstr "%s: 未指定输入文件"
 
-#: pg_walsummary.c:251
+#: pg_walsummary.c:109
+#, c-format
+msgid "could not open file \"%s\": %m"
+msgstr "无法打开文件 \"%s\": %m"
+
+#: pg_walsummary.c:252
 #, c-format
 msgid "could not read file \"%s\": %m"
 msgstr "无法读取文件 \"%s\": %m"
 
-#: pg_walsummary.c:266
+#: pg_walsummary.c:267
 #, c-format
 msgid ""
 "%s prints the contents of a WAL summary file.\n"
@@ -148,17 +65,17 @@ msgstr ""
 "%s 打印一份 WAL 总结文件的内容.\n"
 "\n"
 
-#: pg_walsummary.c:267
+#: pg_walsummary.c:268
 #, c-format
 msgid "Usage:\n"
 msgstr "使用方法:\n"
 
-#: pg_walsummary.c:268
+#: pg_walsummary.c:269
 #, c-format
 msgid "  %s [OPTION]... FILE...\n"
 msgstr "  %s [选项]… 文件…\n"
 
-#: pg_walsummary.c:269
+#: pg_walsummary.c:270
 #, c-format
 msgid ""
 "\n"
@@ -167,29 +84,27 @@ msgstr ""
 "\n"
 "选项:\n"
 
-#: pg_walsummary.c:270
-#, c-format
-msgid ""
-"  -i, --individual          list block numbers individually, not as ranges\n"
-msgstr ""
-
 #: pg_walsummary.c:271
 #, c-format
-msgid ""
-"  -q, --quiet               don't print anything, just parse the files\n"
-msgstr "  -q, --quiet               不输出任何内容, 只解析文件\n"
+msgid "  -i, --individual          list block numbers individually, not as ranges\n"
+msgstr ""
 
 #: pg_walsummary.c:272
+#, c-format
+msgid "  -q, --quiet               don't print anything, just parse the files\n"
+msgstr "  -q, --quiet               不输出任何内容, 只解析文件\n"
+
+#: pg_walsummary.c:273
 #, c-format
 msgid "  -V, --version             output version information, then exit\n"
 msgstr "  -V, --version             输出版本信息, 然后退出\n"
 
-#: pg_walsummary.c:273
+#: pg_walsummary.c:274
 #, c-format
 msgid "  -?, --help                show this help, then exit\n"
 msgstr "  -?, --help                显示此帮助, 然后退出\n"
 
-#: pg_walsummary.c:275
+#: pg_walsummary.c:276
 #, c-format
 msgid ""
 "\n"
@@ -198,7 +113,7 @@ msgstr ""
 "\n"
 "报告缺陷: <%s>.\n"
 
-#: pg_walsummary.c:276
+#: pg_walsummary.c:277
 #, c-format
 msgid "%s home page: <%s>\n"
 msgstr "%s 主页: <%s>\n"

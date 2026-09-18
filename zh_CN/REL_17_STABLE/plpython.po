@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plpython (PostgreSQL) 17\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-17 06:19+0000\n"
+"POT-Creation-Date: 2024-09-13 22:40+0000\n"
 "PO-Revision-Date: 2024-09-14 14:12+0800\n"
 "Last-Translator: Dianjin Wang <wangdianjin@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <zhangjie2@fujitsu.com>\n"
@@ -23,55 +23,48 @@ msgstr ""
 msgid "plpy.cursor expected a query or a plan"
 msgstr "plpy.cursor 期望一个查询或一个计划"
 
-#: plpy_cursorobject.c:154
+#: plpy_cursorobject.c:155
 #, c-format
 msgid "plpy.cursor takes a sequence as its second argument"
 msgstr "plpy.cursor 将一个序列作为它的第二个参数"
 
-#: plpy_cursorobject.c:170 plpy_spi.c:209
+#: plpy_cursorobject.c:171 plpy_spi.c:205
 #, c-format
 msgid "could not execute plan"
 msgstr "无法执行计划"
 
-#: plpy_cursorobject.c:173 plpy_spi.c:212
+#: plpy_cursorobject.c:174 plpy_spi.c:208
 #, c-format
 msgid "Expected sequence of %d argument, got %d: %s"
 msgid_plural "Expected sequence of %d arguments, got %d: %s"
 msgstr[0] "期望 %d 参数序列, 但是得到 %d: %s"
 
-#: plpy_cursorobject.c:237 plpy_spi.c:96 plpy_spi.c:263 plpy_typeio.c:1211
-#: plpy_typeio.c:1462
-#, fuzzy, c-format
-#| msgid "could not get client address from socket: %s\n"
-msgid "could not get element %d from sequence"
-msgstr "无法从套接字获取客户端地址: %s\n"
-
-#: plpy_cursorobject.c:322
+#: plpy_cursorobject.c:321
 #, c-format
 msgid "iterating a closed cursor"
 msgstr "遍历一个关闭的游标"
 
-#: plpy_cursorobject.c:330 plpy_cursorobject.c:396
+#: plpy_cursorobject.c:329 plpy_cursorobject.c:395
 #, c-format
 msgid "iterating a cursor in an aborted subtransaction"
 msgstr "在终止的子事务里遍历一个游标"
 
-#: plpy_cursorobject.c:388
+#: plpy_cursorobject.c:387
 #, c-format
 msgid "fetch from a closed cursor"
 msgstr "从关闭的游标里获取结果"
 
-#: plpy_cursorobject.c:431 plpy_spi.c:403
+#: plpy_cursorobject.c:430 plpy_spi.c:401
 #, c-format
 msgid "query result has too many rows to fit in a Python list"
 msgstr "查询结果中的行太多，无法放在一个 Python 列表中"
 
-#: plpy_cursorobject.c:483
+#: plpy_cursorobject.c:482
 #, c-format
 msgid "closing a cursor in an aborted subtransaction"
 msgstr "在终止的子事务里关闭一个游标"
 
-#: plpy_elog.c:127 plpy_elog.c:128 plpy_plpymodule.c:530
+#: plpy_elog.c:122 plpy_elog.c:123 plpy_plpymodule.c:530
 #, c-format
 msgid "%s"
 msgstr "%s"
@@ -83,8 +76,7 @@ msgstr "不支持集合函数返回模式"
 
 #: plpy_exec.c:140
 #, c-format
-msgid ""
-"PL/Python set-returning functions only support returning one value per call."
+msgid "PL/Python set-returning functions only support returning one value per call."
 msgstr "PL/Python 集合返回函数只支持在每次调用时返回一个值."
 
 #: plpy_exec.c:153
@@ -114,8 +106,7 @@ msgstr "返回类型为 \"void\" 的 PL/Python 函数不返回 None"
 
 #: plpy_exec.c:246
 #, c-format
-msgid ""
-"function returning record called in context that cannot accept type record"
+msgid "function returning record called in context that cannot accept type record"
 msgstr "返回值类型是记录的函数在不接受使用记录类型的环境中调用"
 
 #: plpy_exec.c:392 plpy_exec.c:416
@@ -130,8 +121,7 @@ msgstr "期望 None 或一个字符串."
 
 #: plpy_exec.c:406
 #, c-format
-msgid ""
-"PL/Python trigger function returned \"MODIFY\" in a DELETE trigger -- ignored"
+msgid "PL/Python trigger function returned \"MODIFY\" in a DELETE trigger -- ignored"
 msgstr "在 DELETE 触发器中的 PL/Python 触发器函数返回 \"MODIFY\"  -- 忽略"
 
 #: plpy_exec.c:417
@@ -171,9 +161,7 @@ msgstr "在顺序位置 %d 的 TD[\"new\"] 字典键值不是字符串"
 
 #: plpy_exec.c:989
 #, c-format
-msgid ""
-"key \"%s\" found in TD[\"new\"] does not exist as a column in the triggering "
-"row"
+msgid "key \"%s\" found in TD[\"new\"] does not exist as a column in the triggering row"
 msgstr "在 TD[\"new\"] 中找到的键 \"%s\" 在正在触发的记录中不是作为列而存在"
 
 #: plpy_exec.c:994
@@ -315,27 +303,27 @@ msgstr "命令没有产生结果集"
 msgid "second argument of plpy.prepare must be a sequence"
 msgstr "plpy.prepare 的第二个参数必须是一个序列"
 
-#: plpy_spi.c:103
+#: plpy_spi.c:98
 #, c-format
 msgid "plpy.prepare: type name at ordinal position %d is not a string"
 msgstr "plpy.prepare: 在顺序位置 %d 的类型名称不是一个字符串"
 
-#: plpy_spi.c:175
+#: plpy_spi.c:170
 #, c-format
 msgid "plpy.execute expected a query or a plan"
 msgstr "plpy.execute 期望一个查询或一个计划"
 
-#: plpy_spi.c:193
+#: plpy_spi.c:189
 #, c-format
 msgid "plpy.execute takes a sequence as its second argument"
 msgstr "plpy.execute 将一个序列作为它的第二个参数"
 
-#: plpy_spi.c:299
+#: plpy_spi.c:297
 #, c-format
 msgid "SPI_execute_plan failed: %s"
 msgstr "SPI_execute_plan 执行失败: %s"
 
-#: plpy_spi.c:341
+#: plpy_spi.c:339
 #, c-format
 msgid "SPI_execute failed: %s"
 msgstr "SPI_execute 执行失败: %s"
@@ -387,15 +375,12 @@ msgstr "无法创建 Python 对象的字符串表达式"
 
 #: plpy_typeio.c:1060
 #, c-format
-msgid ""
-"could not convert Python object into cstring: Python string representation "
-"appears to contain null bytes"
+msgid "could not convert Python object into cstring: Python string representation appears to contain null bytes"
 msgstr "无法将 Python 对象转换为 cstring: Python 字符串表达式可能包含空字节"
 
 #: plpy_typeio.c:1157
 #, c-format
-msgid ""
-"return value of function with array return type is not a Python sequence"
+msgid "return value of function with array return type is not a Python sequence"
 msgstr "带有数组返回类型的函数返回值不是一个 Python 序列"
 
 #: plpy_typeio.c:1202
@@ -403,65 +388,55 @@ msgstr "带有数组返回类型的函数返回值不是一个 Python 序列"
 msgid "could not determine sequence length for function return value"
 msgstr "无法确定函数返回值的序列长度"
 
-#: plpy_typeio.c:1226 plpy_typeio.c:1241 plpy_typeio.c:1257
+#: plpy_typeio.c:1222 plpy_typeio.c:1237 plpy_typeio.c:1253
 #, c-format
-msgid ""
-"multidimensional arrays must have array expressions with matching dimensions"
+msgid "multidimensional arrays must have array expressions with matching dimensions"
 msgstr "多维数组必须有符合维度的数组表达式"
 
-#: plpy_typeio.c:1231
+#: plpy_typeio.c:1227
 #, c-format
 msgid "number of array dimensions exceeds the maximum allowed (%d)"
 msgstr "数组的维数超过最大允许值 (%d)"
 
-#: plpy_typeio.c:1333
+#: plpy_typeio.c:1329
 #, c-format
 msgid "malformed record literal: \"%s\""
 msgstr "有缺陷的记录常量: \"%s\""
 
-#: plpy_typeio.c:1334
+#: plpy_typeio.c:1330
 #, c-format
 msgid "Missing left parenthesis."
 msgstr "缺少一个左括弧."
 
-#: plpy_typeio.c:1335 plpy_typeio.c:1539
+#: plpy_typeio.c:1331 plpy_typeio.c:1532
 #, c-format
-msgid ""
-"To return a composite type in an array, return the composite type as a "
-"Python tuple, e.g., \"[('foo',)]\"."
-msgstr ""
-"要返回数组中的复合类型，请将复合类型作为 Python 元组返回，例如 \"[('foo',)]"
-"\"."
+msgid "To return a composite type in an array, return the composite type as a Python tuple, e.g., \"[('foo',)]\"."
+msgstr "要返回数组中的复合类型，请将复合类型作为 Python 元组返回，例如 \"[('foo',)]\"."
 
-#: plpy_typeio.c:1382
+#: plpy_typeio.c:1378
 #, c-format
 msgid "key \"%s\" not found in mapping"
 msgstr "在映射中没有找到键 \"%s\""
 
-#: plpy_typeio.c:1383
+#: plpy_typeio.c:1379
 #, c-format
-msgid ""
-"To return null in a column, add the value None to the mapping with the key "
-"named after the column."
+msgid "To return null in a column, add the value None to the mapping with the key named after the column."
 msgstr "为了在一列中返回空值, 需要在列的后面对带有已命名键的映射添加值 None."
 
-#: plpy_typeio.c:1436
+#: plpy_typeio.c:1432
 #, c-format
 msgid "length of returned sequence did not match number of columns in row"
 msgstr "所返回序列的长度与在记录中列的数量不匹配"
 
-#: plpy_typeio.c:1537
+#: plpy_typeio.c:1530
 #, c-format
 msgid "attribute \"%s\" does not exist in Python object"
 msgstr "在 Python 对象中不存在属性 \"%s\""
 
-#: plpy_typeio.c:1540
+#: plpy_typeio.c:1533
 #, c-format
-msgid ""
-"To return null in a column, let the returned object have an attribute named "
-"after column with value None."
-msgstr ""
-"为了在一列中返回空值, 需要让返回的对象在带有值 None 的列后面的带有已命名属性."
+msgid "To return null in a column, let the returned object have an attribute named after column with value None."
+msgstr "为了在一列中返回空值, 需要让返回的对象在带有值 None 的列后面的带有已命名属性."
 
 #: plpy_util.c:31
 #, c-format
@@ -474,9 +449,7 @@ msgid "could not extract bytes from encoded string"
 msgstr "无法从已编码字符串里提取相应字节"
 
 #, c-format
-#~ msgid ""
-#~ "To construct a multidimensional array, the inner sequences must all have "
-#~ "the same length."
+#~ msgid "To construct a multidimensional array, the inner sequences must all have the same length."
 #~ msgstr "要构造多维数组，内部序列的长度必须相同."
 
 #, c-format
