@@ -27,12 +27,12 @@ Every message is browsable at **<https://pgsql.cc/nls>** — the English origina
 
 | Upstream branch | PG | Catalogs | Messages | Upstream | Here | Workbench | Issue | Download |
 |:---|:---:|---:|---:|---:|:---:|:---:|:---:|:---:|
-| [`master`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/master) | 19 | 28 | 12,638 | 65.3% | **100%** | [browse](https://pgsql.cc/nls/?v=19) | [#8123](https://redmine.postgresql.org/issues/8123) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-master-20260917.tar.gz) |
-| [`REL_18_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_18_STABLE) | 18 | 28 | 12,098 | 69.9% | **100%** | [browse](https://pgsql.cc/nls/?v=18) | [#8118](https://redmine.postgresql.org/issues/8118) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-REL_18_STABLE-20260917.tar.gz) |
-| [`REL_17_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_17_STABLE) | 17 | 28 | 11,509 | 74.9% | **100%** | [browse](https://pgsql.cc/nls/?v=17) | [#8119](https://redmine.postgresql.org/issues/8119) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-REL_17_STABLE-20260917.tar.gz) |
-| [`REL_16_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_16_STABLE) | 16 | 26 | 10,656 | 79.0% | **100%** | [browse](https://pgsql.cc/nls/?v=16) | [#8120](https://redmine.postgresql.org/issues/8120) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-REL_16_STABLE-20260917.tar.gz) |
-| [`REL_15_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_15_STABLE) | 15 | 26 | 10,463 | 85.7% | **100%** | [browse](https://pgsql.cc/nls/?v=15) | [#8121](https://redmine.postgresql.org/issues/8121) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-REL_15_STABLE-20260917.tar.gz) |
-| [`REL_14_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_14_STABLE) | 14 | 26 | 10,125 | 91.8% | **100%** | [browse](https://pgsql.cc/nls/?v=14) | [#8122](https://redmine.postgresql.org/issues/8122) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-REL_14_STABLE-20260917.tar.gz) |
+| [`master`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/master) | 19 | 28 | 12,638 | 65.3% | **100%** | [browse](https://pgsql.cc/nls/?v=19) | [#8123](https://redmine.postgresql.org/issues/8123) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260918/pg-messages-zh_CN-master-20260918.tar.gz) |
+| [`REL_18_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_18_STABLE) | 18 | 28 | 12,098 | 69.9% | **100%** | [browse](https://pgsql.cc/nls/?v=18) | [#8118](https://redmine.postgresql.org/issues/8118) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260918/pg-messages-zh_CN-REL_18_STABLE-20260918.tar.gz) |
+| [`REL_17_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_17_STABLE) | 17 | 28 | 11,509 | 74.9% | **100%** | [browse](https://pgsql.cc/nls/?v=17) | [#8119](https://redmine.postgresql.org/issues/8119) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260918/pg-messages-zh_CN-REL_17_STABLE-20260918.tar.gz) |
+| [`REL_16_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_16_STABLE) | 16 | 26 | 10,656 | 79.0% | **100%** | [browse](https://pgsql.cc/nls/?v=16) | [#8120](https://redmine.postgresql.org/issues/8120) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260918/pg-messages-zh_CN-REL_16_STABLE-20260918.tar.gz) |
+| [`REL_15_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_15_STABLE) | 15 | 26 | 10,463 | 85.7% | **100%** | [browse](https://pgsql.cc/nls/?v=15) | [#8121](https://redmine.postgresql.org/issues/8121) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260918/pg-messages-zh_CN-REL_15_STABLE-20260918.tar.gz) |
+| [`REL_14_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_14_STABLE) | 14 | 26 | 10,125 | 91.8% | **100%** | [browse](https://pgsql.cc/nls/?v=14) | [#8122](https://redmine.postgresql.org/issues/8122) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260918/pg-messages-zh_CN-REL_14_STABLE-20260918.tar.gz) |
 
 </div>
 
@@ -46,23 +46,24 @@ PostgreSQL 19 lives on `master` there; there is no `REL_19_STABLE`. From PG17 on
 
 ## Download
 
-Release [`20260917`](https://github.com/pgsty/pgnls/releases/tag/20260917) carries one archive per
+Release [`20260918`](https://github.com/pgsty/pgnls/releases/tag/20260918) carries one archive per
 upstream branch plus the whole set. Each unpacks to `zh_CN/<branch>/<catalog>.po`, so a
-branch directory drops straight into `messages.git`.
+branch directory drops straight into `messages.git`. Since `20260917` only `master` has
+moved — two new REPACK messages in `postgres.po`; the other five branches are byte-identical.
 
 | Archive | Covers | Catalogs | Messages |
 |:---|:---|---:|---:|
-| [`pg-messages-zh_CN-20260917.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-20260917.tar.gz) | **all six branches** | 162 | 67,487 |
-| [`pg-messages-zh_CN-master-20260917.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-master-20260917.tar.gz) | PostgreSQL 19 | 28 | 12,636 |
-| [`pg-messages-zh_CN-REL_18_STABLE-20260917.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-REL_18_STABLE-20260917.tar.gz) | PostgreSQL 18 | 28 | 12,098 |
-| [`pg-messages-zh_CN-REL_17_STABLE-20260917.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-REL_17_STABLE-20260917.tar.gz) | PostgreSQL 17 | 28 | 11,509 |
-| [`pg-messages-zh_CN-REL_16_STABLE-20260917.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-REL_16_STABLE-20260917.tar.gz) | PostgreSQL 16 | 26 | 10,656 |
-| [`pg-messages-zh_CN-REL_15_STABLE-20260917.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-REL_15_STABLE-20260917.tar.gz) | PostgreSQL 15 | 26 | 10,463 |
-| [`pg-messages-zh_CN-REL_14_STABLE-20260917.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-REL_14_STABLE-20260917.tar.gz) | PostgreSQL 14 | 26 | 10,125 |
+| [`pg-messages-zh_CN-20260918.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260918/pg-messages-zh_CN-20260918.tar.gz) | **all six branches** | 162 | 67,489 |
+| [`pg-messages-zh_CN-master-20260918.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260918/pg-messages-zh_CN-master-20260918.tar.gz) | PostgreSQL 19 | 28 | 12,638 |
+| [`pg-messages-zh_CN-REL_18_STABLE-20260918.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260918/pg-messages-zh_CN-REL_18_STABLE-20260918.tar.gz) | PostgreSQL 18 | 28 | 12,098 |
+| [`pg-messages-zh_CN-REL_17_STABLE-20260918.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260918/pg-messages-zh_CN-REL_17_STABLE-20260918.tar.gz) | PostgreSQL 17 | 28 | 11,509 |
+| [`pg-messages-zh_CN-REL_16_STABLE-20260918.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260918/pg-messages-zh_CN-REL_16_STABLE-20260918.tar.gz) | PostgreSQL 16 | 26 | 10,656 |
+| [`pg-messages-zh_CN-REL_15_STABLE-20260918.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260918/pg-messages-zh_CN-REL_15_STABLE-20260918.tar.gz) | PostgreSQL 15 | 26 | 10,463 |
+| [`pg-messages-zh_CN-REL_14_STABLE-20260918.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260918/pg-messages-zh_CN-REL_14_STABLE-20260918.tar.gz) | PostgreSQL 14 | 26 | 10,125 |
 
 ```bash
-curl -LO https://github.com/pgsty/pgnls/releases/download/20260917/pg-messages-zh_CN-REL_18_STABLE-20260917.tar.gz
-tar -xzf pg-messages-zh_CN-REL_18_STABLE-20260917.tar.gz
+curl -LO https://github.com/pgsty/pgnls/releases/download/20260918/pg-messages-zh_CN-REL_18_STABLE-20260918.tar.gz
+tar -xzf pg-messages-zh_CN-REL_18_STABLE-20260918.tar.gz
 cp zh_CN/REL_18_STABLE/*.po /path/to/messages/zh_CN/
 ```
 
