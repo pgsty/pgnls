@@ -1,13 +1,14 @@
 #!/bin/bash
-# Refresh zh_CN/ and zh_TW/ on the upstream branch from pgtranslation/messages.git.
+# Refresh zh_CN/ and zh_TW/ on the message branch from pgtranslation/messages.git.
 #
-# The upstream branch is a plain mirror of what the real repository holds:
-# no babel POT merge, no local edits. Run it on the upstream branch only;
+# The message branch is a plain mirror of what the real repository holds:
+# no babel POT merge, no local edits. Run it on the message branch only;
 # it refuses everywhere else so it can never clobber the curated zh_CN/ on main.
+# The babel branch holds the POT-merged view babel.postgresql.org serves.
 #
 # The clone is kept in tmp/messages so repeat runs are incremental fetches.
 # If git.postgresql.org is slow from your network, export https_proxy first,
-# e.g.  https_proxy=http://127.0.0.1:8118 bin/sync-upstream.sh
+# e.g.  https_proxy=http://127.0.0.1:8118 bin/sync-message.sh
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -15,8 +16,8 @@ REPO=https://git.postgresql.org/git/pgtranslation/messages.git
 CLONE="$ROOT/tmp/messages"
 BRANCHES="master REL_18_STABLE REL_17_STABLE REL_16_STABLE REL_15_STABLE REL_14_STABLE"
 
-[ "$(git -C "$ROOT" rev-parse --abbrev-ref HEAD)" = "upstream" ] || {
-  echo "refusing: switch to the upstream branch first; this overwrites zh_CN/ and zh_TW/" >&2
+[ "$(git -C "$ROOT" rev-parse --abbrev-ref HEAD)" = "message" ] || {
+  echo "refusing: switch to the message branch first; this overwrites zh_CN/ and zh_TW/" >&2
   exit 1
 }
 
