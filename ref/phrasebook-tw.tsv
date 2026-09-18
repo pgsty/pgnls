@@ -1,0 +1,96 @@
+id	en_pattern	zh_required	zh_forbidden	scope	status	note
+P01	\bcould not\b	無法	不能|未能|沒能	all	decided	嘗試後失敗：could not → 無法
+P02	\bcannot\b	無法	不能|不可以|不可\b	all	decided	cannot 統一為“無法”；規範性禁止用 must not / not allowed 的譯法表達
+P03	\bunable to\b	無法	不能	all	decided	
+P04	\bmust not\b	不得|不能	無法	all	decided	規範性禁止保留“不得/不能”，與 cannot 區分
+P05	\b(?:is |are )?not (?:be )?allowed\b	不允許	不能|無法	all	decided	
+P06	\bnot supported\b|\bunsupported\b	不支援	不被支援|未支援	all	decided	
+P07	\bout of memory\b	記憶體不足	記憶體溢位|記憶體用盡|記憶體耗盡	all	decided	
+P08	\binvalid\b	無效	非法|不合法	all	decided	invalid → 無效；illegal 才用“非法”
+P09	\bunrecognized\b	無法識別	未識別|不識別|未知	all	decided	unknown 才用“未知”
+P10	\bunknown\b	未知	不認識|無法識別	all	decided	
+P11	\bunexpected\b	非預期	意外|未預期|意料之外|不期望	all	decided	官方 zh_TW:unexpected section → 非預期;與 zh_CN「意外」相反
+P12	\bdoes not exist\b	不存在		all	decided	
+P13	\balready exists\b	已存在	已經存在	all	decided	
+P14	\bpermission denied\b	權限不足	權限不夠|權限被拒|沒有權限|拒絕存取	all	decided	permission denied to X → 權限不足，無法 X
+P15	\btoo many\b	過多	太多	all	decided	
+P16	\btoo few\b	過少	太少	all	decided	
+P17	\bmissing\b	缺少	丟失|缺失|遺漏	all	decided	lost 才用“丟失”
+P18	\bsyntax error\b	語法錯誤		all	decided	
+P19	\bskipping\b	跳過	忽略|略過	all	decided	
+P20	\bignoring\b	忽略	忽視	all	decided	
+P21	\btime(?:d)? ?out\b	逾時		all	decided	timeout = 逾時;zh_CN 超時
+P22	\bdeprecated\b	已棄用	已廢棄|廢棄|不推薦|過時	all	decided	
+P23	\brequires?\b(?! that)	需要	要求	all	decided	requires a value → 需要一個值
+P24	\bexpected\b	預期|應為	期望|需要|應該是	all	decided	expected X, got Y → 預期為 X，實際為 Y
+P25	\bterminat(?:e|ed|es|ing)\b	終止	中止	all	decided	terminate → 終止
+P26	\babort(?:ed|ing|s)?\b	中止	終止|放棄|中斷	all	decided	abort → 中止;terminate 才是 終止
+P27	\bcancel(?:ed|led|ing|s)?\b	取消		all	decided	
+P28	\bconnection\b	連線	聯結|聯接	all	decided	connection = 連線;join 是 聯結;官方 connection string → 連接字串 為固定例外
+P29	\bparser\b	解析器	剖析器|分析器	all	decided	TW 通行 解析器;MS 作 剖析器,不取
+P30	\bplanner\b	規劃器	計畫器|計劃器|最佳化工具	all	decided	planner = 規劃器;optimizer 才是 最佳化工具
+P31	\bdefault\b	預設	內定|缺省	all	decided	
+P32	\barchiv(?:e|ed|ing|es)\b	封存	歸檔|存檔	all	decided	官方 pg_dump:archive → 封存;歸檔 為 s2t 偽影
+P33	\bbuffers?\b	緩衝		all	decided	buffer → 緩衝區/緩衝集區；buffer cache → 緩衝區快取（pgdoc）
+P34	\bcache\b	快取	高速緩存	all	decided	
+P35	\bsocket\b	socket	套接字|通訊端|插座	all	decided	官方 zh_TW 保留原文:local socket → 本機 socket;套接字 為 s2t 偽影
+P36	\bdirectory\b	目錄	資料夾	all	decided	資料夾 是 TW 一般用語,PG 目錄沿用官方 目錄
+P37	\brelation\b	關係		all	decided	pgdoc 規則 442：不在全部上下文替換成表
+P38	\btuples?\b	元組	記錄	all	decided	
+P39	\bcolumns?\b	欄|欄位	資料行	all	decided	column = 欄/欄位;官方用法;禁 MS 式 資料行
+P40	\bschema\b	schema	模式|綱要|架構	all	decided	官方 zh_TW 保留原文:List of schemas → Schema 清單;模式 僅用於 mode/pattern
+P41	\boperator\b	運算子	操作符|運算符	all	decided	operator = 運算子
+P42	\bcollation\b	定序	排序規則|校對	all	decided	collation = 定序;排序規則 為 s2t 偽影
+P43	\blocale\b	區域	語言環境|本地化	all	decided	官方:Locale Provider → 區域提供者;MS 地區設定 不取
+P44	\bstandby\b	待命伺服器|待命|待機	備用|備機|後備	all	decided	官方:standby servers → 待命伺服器;standby mode → 待機模式
+P45	\breplica\b(?! identity)	複本	副本	all	decided	replica = 複本;副本 為 s2t 偽影
+P46	\bslot\b	槽	插槽	all	decided	replication slot → 複寫槽
+P47	\bshared memory\b	共用記憶體		all	decided	
+P48	\bfile descriptor\b	檔案描述符	檔案描述元|控制代碼	all	decided	Linux zh_TW 慣用 描述符;MS 作 描述元
+P49	\bcheckpoint\b	檢查點		all	decided	
+P50	\bprocedure\b	程序	預存程序|儲存程序	all	decided	官方:程序語言;procedure = 程序(process 是 行程)
+P51	(?<!file )\bextension\b	擴充模組	外掛|套件	all	decided	官方:installed extensions → 已安裝擴充模組;file extension → 副檔名
+P52	\bprivileges?\b	權限	特權	all	decided	
+P53	\bowner\b	擁有者	所有者|屬主	all	decided	所有者 為 s2t 偽影
+P54	\bsequence\b(?! of)	序列		all	decided	byte sequence → 位元組序列；sequence of events → 順序
+P55	\bencoding\b	編碼		all	decided	
+P56	\bwrite-ahead log\b	預寫日誌		all	decided	WAL 縮寫保留
+P57	\bTry "%s --help" for more information\.	執行 "%s --help" 以取得更多資訊。	嘗試	all	decided	共用字串取一種譯法
+P58	\bReport bugs to <%s>\.	請向 <%s> 回報錯誤。		all	decided	bug → 錯誤(MS);回報
+P59	\bshow this help, then exit\b	顯示這份說明，然後結束	顯示說明資訊	all	decided	
+P60	\boutput version information, then exit\b	輸出版本資訊，然後結束		all	decided	
+P61	^Usage:	用法：		all	decided	
+P62	^\n?Options:	選項：		all	decided	
+P63	\bexit(?:ing|s)?\b	結束	退出|離開	all	decided	官方:exit code → 結束碼;退出 為 s2t 偽影
+P64	\btry again\b|\bretry\b	重試	再試|再次嘗試	all	decided	
+P65	\bshut(?:ting)? ?down\b	停止	關機|停機	all	decided	官方 pg_ctl:shutdown → 停止/關停
+P66	\bdatabase cluster\b|\bcluster\b(?! index|ed)	叢集	集群|集簇|簇	all	decided	官方:cluster → 叢集;資料庫叢集;CLUSTER 命令動作為 叢集化;集群/集簇 為 s2t 偽影
+P67	\breplica identity\b	REPLICA IDENTITY		all	decided	官方慣例:SQL 關鍵字保留原文
+P68	\blatch\b	閂鎖器	鎖存器|閂鎖	all	decided	MS:latch = 閂鎖;鎖存器 為 s2t 偽影
+P69	\bhome page\b	首頁	主頁	all	decided	MS:home page = 首頁;主頁 為 s2t 偽影(與 zh_CN 裁定相反)
+P70	\bprimary\b(?! key)	主伺服器	主要|主節點|主資料庫	all	decided	與 待命伺服器 對稱;primary key → 主索引鍵
+P71	\b(?:background|parallel|apply|tablesync|logical replication|autovacuum) workers?\b	工作行程|工作執行緒	工作者	all	decided	行程類 worker → 工作行程;zstd 等壓縮 worker 是執行緒
+P72	\bautovacuum\b	自動清理	自動 VACUUM|自動真空	all	decided	pgdoc：autovacuum 自動清理
+P73	\bhint\b	提示		all	decided	HINT 標籤譯“提示:  ”
+P74	\bfailover\b	容錯移轉	故障轉移|失效轉移	all	decided	MS:failover = 容錯移轉;switchover → 計畫性切換
+P75	\btokens?\b	符記|權杖	標記|記號	all	decided	SQL 詞法 → 符記;OAuth bearer token → 權杖
+P76	\bsnapshot\b	快照		all	decided	
+P77	\bdeadlock\b	死結	死鎖	all	decided	MS:deadlock = 死結;死鎖 為 s2t 偽影
+P78	\bcursor\b	游標	遊標	all	decided	官方 zh_TW:游標;遊標 為 OpenCC 偽影
+P79	\bsavepoint\b	儲存點	保存點	all	decided	MS:savepoint = 儲存點;保存點 為 s2t 偽影
+P80	\bforeign server\b	外部伺服器	外部服務|遠端伺服器	all	decided	pgdoc
+P81	\bforeign table\b	外部資料表	外表|外部表	all	decided	官方:Foreign table → 外部資料表;外部表 為 s2t 偽影
+P82	\bforeign[- ]data wrapper\b	外部資料包裝器		all	decided	pgdoc；FDW 縮寫保留
+P83	\buser mapping\b	使用者映射	使用者對應|使用者對映	all	decided	官方:user mappings → 使用者映射;對應/對映 為轉換偽影
+P84	\bheap\b	堆積	堆	all	decided	MS:heap = 堆積;單用 堆 為 s2t 偽影
+P85	\bcheckpointer\b	檢查點行程		all	decided	pgdoc
+P86	\bbackground writer\b	背景寫入器		all	decided	pgdoc
+P87	\bhot standby\b	熱備援		all	decided	官方:hot standby mode → 熱備援模式
+P88	\blogical decoding\b	邏輯解碼		all	decided	pgdoc
+P89	\breplication slot\b	複寫槽		all	decided	replication = 複寫
+P90	\bcrash recovery\b	崩潰復原		all	decided	crash recovery;MS 當機 不取
+P91	\bstartup process\b	啟動行程		all	decided	pgdoc
+P92	\btwo-phase commit\b	兩階段提交		all	decided	官方:Two-phase commit → 兩階段提交
+P93	(?<!full )\bvacuum(?:ing|ed|s)?\b	清理	真空|吸塵	all	decided	VACUUM 命令原樣保留;說明性 vacuum → 清理;full vacuum 可寫 VACUUM FULL
+P94	\bmaster\b(?! key)	主伺服器		all	decided	僅複製角色;master key → 主金鑰(密碼學語境 key = 金鑰)
+P95	\bsecondary\b(?! index)	待命伺服器		all	decided	secondary index → 次要索引

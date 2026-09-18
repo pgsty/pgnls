@@ -13,6 +13,23 @@ Published so the work can be checked, continued or argued with.
 | [`process.md`](process.md) | How the translations were produced, in detail: the baseline, the cross-model rounds, the machine gates, the human review pass. | — |
 | [`errata.md`](errata.md) | Known defects and documentation drift, open and resolved. | — |
 
+## Traditional Chinese (zh_TW) reference set
+
+Three sibling files re-calibrate the whole system for Traditional Chinese.
+The structural rules (message kinds, punctuation layers, alignment,
+placeholders) carry over from the Simplified guide unchanged; the terminology,
+orthography and word-choice layers are re-decided against the official
+in-tree PostgreSQL `zh_TW` messages (psql, pg_dump, initdb, pg_ctl, libpq —
+the backend `postgres.po` has no official zh_TW yet) and Taiwan-standard
+computing usage. See the intro of [`style-guide-tw.md`](style-guide-tw.md)
+for what diverges and why.
+
+| File | What it is |
+|:---|:---|
+| [`style-guide-tw.md`](style-guide-tw.md) | The zh_TW style guide: rules **R0–R14**. R0 is the TW-only calibration layer — Taiwan orthography, the high-frequency word table, the row/column/筆 rules, the simplified→traditional bootstrap pipeline with its forbidden-artifact list, and the alignment duty towards the five officially translated components. Appendix B lists every decision that differs from the Simplified guide with its evidence. |
+| [`glossary-tw.tsv`](glossary-tw.tsv) | 638 terms, three columns of interest: `English`, `zh_CN`, `zh_TW`, plus an evidence grade: **官方 68** (the decided word-form itself occurs in the official zh_TW messages), **官方推定 121** (component terms officially evidenced, compound derived), **MS 281**, **裁定 48**, **字符 119**. The `zh_CN`→`zh_TW` columns are the complete term mapping — but only for a single-pass longest-first engine with protected spans, never a sequential sed chain (19 target-contains-source chains would corrupt), and single-character rows (表/行/列/位/块/堆/页/锁) are glossary entries, not string replacements. See R0.4 of the TW guide. |
+| [`phrasebook-tw.tsv`](phrasebook-tw.tsv) | The 95 phrase rules re-decided for zh_TW. The forbidden column doubles as the machine-conversion artifact blocklist (運算符、排序規則、死鎖、遊標、保存點、主頁、集群、外部表、使用者對應…). |
+
 ## Reading order
 
 Start with [`process.md`](process.md) for what was done, then
