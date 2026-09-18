@@ -1,0 +1,1097 @@
+# Traditional Chinese message translation file for pg_ctl
+# Copyright (C) 2011 PostgreSQL Global Development Group
+# This file is distributed under the same license as the PostgreSQL package.
+# 2004-12-13 Zhenbang Wei <forth@zbwei.net>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PostgreSQL 9.1\n"
+"Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
+"POT-Creation-Date: 2026-09-17 19:32+0000\n"
+"PO-Revision-Date: 2013-09-03 23:26-0400\n"
+"Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
+"Language-Team: EnterpriseDB translation team <dev-escalations@enterprisedb.com>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../common/exec.c:149 ../../common/exec.c:266 ../../common/exec.c:312
+#, fuzzy, c-format
+#| msgid "could not identify current directory: %s"
+msgid "could not identify current directory: %m"
+msgstr "無法識別目前的目錄: %s"
+
+# command.c:122
+#: ../../common/exec.c:168
+#, c-format
+msgid "invalid binary \"%s\""
+msgstr "無效的 binary \"%s\""
+
+# command.c:1103
+#: ../../common/exec.c:218
+#, c-format
+msgid "could not read binary \"%s\""
+msgstr "無法讀取 binary \"%s\""
+
+#: ../../common/exec.c:226
+#, c-format
+msgid "could not find a \"%s\" to execute"
+msgstr "找不到 \"%s\" 來執行"
+
+# utils/init/postinit.c:292
+#: ../../common/exec.c:282 ../../common/exec.c:321
+#, c-format
+msgid "could not change directory to \"%s\": %m"
+msgstr "無法切換目錄到 \"%s\": %m"
+
+# commands/tablespace.c:355 commands/tablespace.c:984
+#: ../../common/exec.c:299
+#, c-format
+msgid "could not read symbolic link \"%s\": %m"
+msgstr "無法讀取符號連結 \"%s\": %m"
+
+# fe-misc.c:991
+#: ../../common/exec.c:422
+#, fuzzy, c-format
+#| msgid "select() failed: %m"
+msgid "%s() failed: %m"
+msgstr "select() 失敗: %m"
+
+# commands/sequence.c:798 executor/execGrouping.c:328
+# executor/execGrouping.c:388 executor/nodeIndexscan.c:1051 lib/dllist.c:43
+# lib/dllist.c:88 libpq/auth.c:637 postmaster/pgstat.c:1006
+# postmaster/pgstat.c:1023 postmaster/pgstat.c:2452 postmaster/pgstat.c:2527
+# postmaster/pgstat.c:2572 postmaster/pgstat.c:2623
+# postmaster/postmaster.c:755 postmaster/postmaster.c:1625
+# postmaster/postmaster.c:2344 storage/buffer/localbuf.c:139
+# storage/file/fd.c:587 storage/file/fd.c:620 storage/file/fd.c:766
+# storage/ipc/sinval.c:789 storage/lmgr/lock.c:497 storage/smgr/md.c:138
+# storage/smgr/md.c:848 storage/smgr/smgr.c:213 utils/adt/cash.c:297
+# utils/adt/cash.c:312 utils/adt/oracle_compat.c:73
+# utils/adt/oracle_compat.c:124 utils/adt/regexp.c:191
+# utils/adt/ri_triggers.c:3471 utils/cache/relcache.c:164
+# utils/cache/relcache.c:178 utils/cache/relcache.c:1130
+# utils/cache/typcache.c:165 utils/cache/typcache.c:487
+# utils/fmgr/dfmgr.c:127 utils/fmgr/fmgr.c:521 utils/fmgr/fmgr.c:532
+# utils/init/miscinit.c:213 utils/init/miscinit.c:234
+# utils/init/miscinit.c:244 utils/misc/guc.c:1898 utils/misc/guc.c:1911
+# utils/misc/guc.c:1924 utils/mmgr/aset.c:337 utils/mmgr/aset.c:503
+# utils/mmgr/aset.c:700 utils/mmgr/aset.c:893 utils/mmgr/portalmem.c:75
+#: ../../common/exec.c:560 ../../common/exec.c:605 ../../common/exec.c:697
+msgid "out of memory"
+msgstr "記憶體用盡"
+
+# commands/sequence.c:798 executor/execGrouping.c:328
+# executor/execGrouping.c:388 executor/nodeIndexscan.c:1051 lib/dllist.c:43
+# lib/dllist.c:88 libpq/auth.c:637 postmaster/pgstat.c:1006
+# postmaster/pgstat.c:1023 postmaster/pgstat.c:2452 postmaster/pgstat.c:2527
+# postmaster/pgstat.c:2572 postmaster/pgstat.c:2623
+# postmaster/postmaster.c:755 postmaster/postmaster.c:1625
+# postmaster/postmaster.c:2344 storage/buffer/localbuf.c:139
+# storage/file/fd.c:587 storage/file/fd.c:620 storage/file/fd.c:766
+# storage/ipc/sinval.c:789 storage/lmgr/lock.c:497 storage/smgr/md.c:138
+# storage/smgr/md.c:848 storage/smgr/smgr.c:213 utils/adt/cash.c:297
+# utils/adt/cash.c:312 utils/adt/oracle_compat.c:73
+# utils/adt/oracle_compat.c:124 utils/adt/regexp.c:191
+# utils/adt/ri_triggers.c:3471 utils/cache/relcache.c:164
+# utils/cache/relcache.c:178 utils/cache/relcache.c:1130
+# utils/cache/typcache.c:165 utils/cache/typcache.c:487
+# utils/fmgr/dfmgr.c:127 utils/fmgr/fmgr.c:521 utils/fmgr/fmgr.c:532
+# utils/init/miscinit.c:213 utils/init/miscinit.c:234
+# utils/init/miscinit.c:244 utils/misc/guc.c:1898 utils/misc/guc.c:1911
+# utils/misc/guc.c:1924 utils/mmgr/aset.c:337 utils/mmgr/aset.c:503
+# utils/mmgr/aset.c:700 utils/mmgr/aset.c:893 utils/mmgr/portalmem.c:75
+#: ../../common/fe_memutils.c:41 ../../common/fe_memutils.c:81
+#: ../../common/fe_memutils.c:104 ../../common/fe_memutils.c:168
+#: ../../port/path.c:847 ../../port/path.c:885 ../../port/path.c:902
+#, c-format
+msgid "out of memory\n"
+msgstr "記憶體用盡\n"
+
+# common.c:78
+#: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:160
+#, fuzzy, c-format
+#| msgid "pg_strdup: cannot duplicate null pointer (internal error)\n"
+msgid "cannot duplicate null pointer (internal error)\n"
+msgstr "pg_strdup: 無法複製 null 指標(內部錯誤)\n"
+
+#: ../../common/fe_memutils.c:210
+#, c-format
+msgid "invalid memory allocation request size %zu + %zu\n"
+msgstr ""
+
+#: ../../common/fe_memutils.c:229
+#, c-format
+msgid "invalid memory allocation request size %zu * %zu\n"
+msgstr ""
+
+#: ../../common/wait_error.c:45
+#, fuzzy, c-format
+#| msgid "could not execute plan"
+msgid "command not executable"
+msgstr "無法執行計畫"
+
+#: ../../common/wait_error.c:49
+#, fuzzy, c-format
+#| msgid "case not found"
+msgid "command not found"
+msgstr "找不到案例"
+
+#: ../../common/wait_error.c:54
+#, c-format
+msgid "child process exited with exit code %d"
+msgstr "子行程結束，結束碼 %d"
+
+#: ../../common/wait_error.c:62
+#, c-format
+msgid "child process was terminated by exception 0x%X"
+msgstr "子行程被例外 0x%X 結束"
+
+#: ../../common/wait_error.c:66
+#, fuzzy, c-format
+#| msgid "child process was terminated by signal %d"
+msgid "child process was terminated by signal %d: %s"
+msgstr "子行程被信號 %d 結束"
+
+#: ../../common/wait_error.c:72
+#, c-format
+msgid "child process exited with unrecognized status %d"
+msgstr "子行程結束，不明狀態碼 %d"
+
+#: ../../port/path.c:869
+#, fuzzy, c-format
+#| msgid "could not identify current directory: %s"
+msgid "could not get current working directory: %s\n"
+msgstr "無法識別目前的目錄: %s"
+
+# postmaster/postmaster.c:892
+#: pg_ctl.c:260
+#, fuzzy, c-format
+#| msgid "directory \"%s\" does not exist"
+msgid "%s: directory \"%s\" does not exist\n"
+msgstr "目錄 \"%s\" 不存在"
+
+#: pg_ctl.c:263
+#, c-format
+msgid "%s: could not access directory \"%s\": %s\n"
+msgstr "%s: 無法存取目錄 \"%s\": %s\n"
+
+# postmaster/postmaster.c:892
+#: pg_ctl.c:276
+#, fuzzy, c-format
+#| msgid "specified data directory \"%s\" is not a directory"
+msgid "%s: directory \"%s\" is not a database cluster directory\n"
+msgstr "指定的資料目錄 \"%s\" 不是目錄"
+
+#: pg_ctl.c:289
+#, c-format
+msgid "%s: could not open PID file \"%s\": %s\n"
+msgstr "%s: 無法開啟 PID 檔 \"%s\": %s\n"
+
+#: pg_ctl.c:298
+#, fuzzy, c-format
+#| msgid "%s: PID file \"%s\" does not exist\n"
+msgid "%s: the PID file \"%s\" is empty\n"
+msgstr "%s: PID檔 \"%s\" 不存在\n"
+
+# access/transam/xlog.c:5414 access/transam/xlog.c:5535
+# access/transam/xlog.c:5541 access/transam/xlog.c:5572
+# access/transam/xlog.c:5578
+#: pg_ctl.c:301
+#, c-format
+msgid "%s: invalid data in PID file \"%s\"\n"
+msgstr "%s: PID 檔 \"%s\" 中有無效資料\n"
+
+#: pg_ctl.c:464 pg_ctl.c:506
+#, fuzzy, c-format
+#| msgid "could not start server\n"
+msgid "%s: could not start server: %s\n"
+msgstr "無法啟動伺服器\n"
+
+#: pg_ctl.c:484
+#, fuzzy, c-format
+#| msgid "%s: could not start server: exit code was %d\n"
+msgid "%s: could not start server due to setsid() failure: %s\n"
+msgstr "%s: 無法啟動伺服器: 結束碼是 %d\n"
+
+# command.c:1148
+#: pg_ctl.c:554
+#, c-format
+msgid "%s: could not open log file \"%s\": %s\n"
+msgstr "%s: 無法開啟日誌檔 \"%s\": %s\n"
+
+#: pg_ctl.c:571
+#, fuzzy, c-format
+#| msgid "%s: could not start service \"%s\": error code %d\n"
+msgid "%s: could not start server: error code %lu\n"
+msgstr "%s: 無法啟動服務 \"%s\": 錯誤碼 %d\n"
+
+#: pg_ctl.c:788
+#, c-format
+msgid "%s: cannot set core file size limit; disallowed by hard limit\n"
+msgstr "%s: 無法設定核心檔案大小限制，因為固定限制不允許\n"
+
+#: pg_ctl.c:814
+#, c-format
+msgid "%s: could not read file \"%s\"\n"
+msgstr "%s: 無法讀取檔案 \"%s\"\n"
+
+#: pg_ctl.c:819
+#, c-format
+msgid "%s: option file \"%s\" must have exactly one line\n"
+msgstr "%s: 選項檔 \"%s\" 只能有一行內容\n"
+
+#: pg_ctl.c:861 pg_ctl.c:1044 pg_ctl.c:1112
+#, c-format
+msgid "%s: could not send stop signal (PID: %ld): %s\n"
+msgstr "%s: 無法傳送停止信號(PID: %ld): %s\n"
+
+#: pg_ctl.c:889
+#, fuzzy, c-format
+#| msgid ""
+#| "The program \"%s\" is needed by %s but was not found in the\n"
+#| "same directory as \"%s\".\n"
+#| "Check your installation.\n"
+msgid "program \"%s\" is needed by %s but was not found in the same directory as \"%s\"\n"
+msgstr ""
+"%2$s 需要程式 \"%1$s\"，但是在與 \"%3$s\" 相同的目錄中找不到。\n"
+"請檢查你的安裝。\n"
+
+#: pg_ctl.c:892
+#, fuzzy, c-format
+#| msgid ""
+#| "The program \"%s\" was found by \"%s\"\n"
+#| "but was not the same version as %s.\n"
+#| "Check your installation.\n"
+msgid "program \"%s\" was found by \"%s\" but was not the same version as %s\n"
+msgstr ""
+"\"%2$s\"已找到程式 \"%1$s\"，但是與 %3$s 版本不符。\n"
+"請檢查你的安裝。\n"
+
+#: pg_ctl.c:923
+#, c-format
+msgid "%s: database system initialization failed\n"
+msgstr "%s: 資料庫初始化失敗\n"
+
+#: pg_ctl.c:938
+#, c-format
+msgid "%s: another server might be running; trying to start server anyway\n"
+msgstr "%s: 可能有另一個伺服器正在執行，請嘗試強制啟動此伺服器\n"
+
+#: pg_ctl.c:986
+msgid "waiting for server to start..."
+msgstr "等候伺服器啟動..."
+
+#: pg_ctl.c:991 pg_ctl.c:1068 pg_ctl.c:1131 pg_ctl.c:1243
+msgid " done\n"
+msgstr " 完成\n"
+
+#: pg_ctl.c:992
+msgid "server started\n"
+msgstr "伺服器已啟動\n"
+
+#: pg_ctl.c:995 pg_ctl.c:1001 pg_ctl.c:1248
+msgid " stopped waiting\n"
+msgstr " 停止等待\n"
+
+#: pg_ctl.c:996
+#, fuzzy, c-format
+#| msgid "%s: server does not shut down\n"
+msgid "%s: server did not start in time\n"
+msgstr "%s: 伺服器未關閉\n"
+
+#: pg_ctl.c:1002
+#, c-format
+msgid ""
+"%s: could not start server\n"
+"Examine the log output.\n"
+msgstr ""
+"%s: 無法啟動伺服器\n"
+"請檢查紀錄輸出。\n"
+
+#: pg_ctl.c:1010
+msgid "server starting\n"
+msgstr "伺服器啟動中\n"
+
+#: pg_ctl.c:1029 pg_ctl.c:1088 pg_ctl.c:1152 pg_ctl.c:1191 pg_ctl.c:1272
+#, c-format
+msgid "%s: PID file \"%s\" does not exist\n"
+msgstr "%s: PID檔 \"%s\" 不存在\n"
+
+#: pg_ctl.c:1030 pg_ctl.c:1090 pg_ctl.c:1153 pg_ctl.c:1192 pg_ctl.c:1273
+msgid "Is server running?\n"
+msgstr "伺服器是否正在執行?\n"
+
+#: pg_ctl.c:1036
+#, c-format
+msgid "%s: cannot stop server; single-user server is running (PID: %ld)\n"
+msgstr "%s: 無法停止伺服器，單人模式伺服器正在執行 (PID: %ld)\n"
+
+#: pg_ctl.c:1051
+msgid "server shutting down\n"
+msgstr "伺服器正在關閉\n"
+
+#: pg_ctl.c:1056 pg_ctl.c:1117
+msgid "waiting for server to shut down..."
+msgstr "正在等候伺服器關閉..."
+
+#: pg_ctl.c:1060 pg_ctl.c:1122
+msgid " failed\n"
+msgstr " 失敗\n"
+
+#: pg_ctl.c:1062 pg_ctl.c:1124
+#, c-format
+msgid "%s: server does not shut down\n"
+msgstr "%s: 伺服器未關閉\n"
+
+#: pg_ctl.c:1064 pg_ctl.c:1126
+msgid ""
+"HINT: The \"-m fast\" option immediately disconnects sessions rather than\n"
+"waiting for session-initiated disconnection.\n"
+msgstr "提示: \"-m fast\" 選項會立即中斷 session，不等 session 發動斷線。\n"
+
+#: pg_ctl.c:1070 pg_ctl.c:1132
+msgid "server stopped\n"
+msgstr "伺服器已停止\n"
+
+#: pg_ctl.c:1091
+#, fuzzy
+#| msgid "starting server anyway\n"
+msgid "trying to start server anyway\n"
+msgstr "正強制啟動伺服器\n"
+
+#: pg_ctl.c:1100
+#, c-format
+msgid "%s: cannot restart server; single-user server is running (PID: %ld)\n"
+msgstr "%s: 無法重新啟動伺服器，單人模式伺服器正在執行 (PID:%ld)\n"
+
+#: pg_ctl.c:1103 pg_ctl.c:1162
+msgid "Please terminate the single-user server and try again.\n"
+msgstr "請結束單一使用者伺服器，然後再試一次。\n"
+
+#: pg_ctl.c:1136
+#, c-format
+msgid "%s: old server process (PID: %ld) seems to be gone\n"
+msgstr "%s: 舊的伺服器程序 (PID: %ld) 似乎遺漏\n"
+
+#: pg_ctl.c:1138
+msgid "starting server anyway\n"
+msgstr "正強制啟動伺服器\n"
+
+#: pg_ctl.c:1159
+#, c-format
+msgid "%s: cannot reload server; single-user server is running (PID: %ld)\n"
+msgstr "%s: 無法重新載入伺服器，單人模式伺服器正在執行 (PID:%ld)\n"
+
+#: pg_ctl.c:1168
+#, c-format
+msgid "%s: could not send reload signal (PID: %ld): %s\n"
+msgstr "%s: 無法傳送重新載入信號(PID: %ld): %s\n"
+
+#: pg_ctl.c:1173
+msgid "server signaled\n"
+msgstr "已通知伺服器\n"
+
+#: pg_ctl.c:1198
+#, c-format
+msgid "%s: cannot promote server; single-user server is running (PID: %ld)\n"
+msgstr "%s: 無法提升伺服器，單人模式伺服器正在執行 (PID:%ld)\n"
+
+#: pg_ctl.c:1206
+#, c-format
+msgid "%s: cannot promote server; server is not in standby mode\n"
+msgstr "%s: 無法提升伺服器，伺服器不在待命模式\n"
+
+# postmaster/postmaster.c:799
+#: pg_ctl.c:1216
+#, c-format
+msgid "%s: could not create promote signal file \"%s\": %s\n"
+msgstr "%s: 無法建立提升信號檔 \"%s\": %s\n"
+
+# postmaster/postmaster.c:799
+#: pg_ctl.c:1222
+#, c-format
+msgid "%s: could not write promote signal file \"%s\": %s\n"
+msgstr "%s: 無法寫入提升信號檔 \"%s\": %s\n"
+
+#: pg_ctl.c:1230
+#, c-format
+msgid "%s: could not send promote signal (PID: %ld): %s\n"
+msgstr "%s: 無法傳送提升信號(PID: %ld): %s\n"
+
+#: pg_ctl.c:1233
+#, c-format
+msgid "%s: could not remove promote signal file \"%s\": %s\n"
+msgstr "%s: 無法刪除提升信號檔 \"%s\": %s\n"
+
+#: pg_ctl.c:1240
+#, fuzzy
+#| msgid "waiting for server to start..."
+msgid "waiting for server to promote..."
+msgstr "等候伺服器啟動..."
+
+#: pg_ctl.c:1244
+#, fuzzy
+#| msgid "server promoting\n"
+msgid "server promoted\n"
+msgstr "伺服器提升中\n"
+
+#: pg_ctl.c:1249
+#, fuzzy, c-format
+#| msgid "%s: server does not shut down\n"
+msgid "%s: server did not promote in time\n"
+msgstr "%s: 伺服器未關閉\n"
+
+#: pg_ctl.c:1255
+msgid "server promoting\n"
+msgstr "伺服器提升中\n"
+
+#: pg_ctl.c:1279
+#, fuzzy, c-format
+#| msgid "%s: cannot reload server; single-user server is running (PID: %ld)\n"
+msgid "%s: cannot rotate log file; single-user server is running (PID: %ld)\n"
+msgstr "%s: 無法重新載入伺服器，單人模式伺服器正在執行 (PID:%ld)\n"
+
+# postmaster/postmaster.c:799
+#: pg_ctl.c:1289
+#, fuzzy, c-format
+#| msgid "%s: could not create promote signal file \"%s\": %s\n"
+msgid "%s: could not create log rotation signal file \"%s\": %s\n"
+msgstr "%s: 無法建立提升信號檔 \"%s\": %s\n"
+
+# postmaster/postmaster.c:799
+#: pg_ctl.c:1295
+#, fuzzy, c-format
+#| msgid "%s: could not write promote signal file \"%s\": %s\n"
+msgid "%s: could not write log rotation signal file \"%s\": %s\n"
+msgstr "%s: 無法寫入提升信號檔 \"%s\": %s\n"
+
+#: pg_ctl.c:1303
+#, fuzzy, c-format
+#| msgid "%s: could not send reload signal (PID: %ld): %s\n"
+msgid "%s: could not send log rotation signal (PID: %ld): %s\n"
+msgstr "%s: 無法傳送重新載入信號(PID: %ld): %s\n"
+
+#: pg_ctl.c:1306
+#, fuzzy, c-format
+#| msgid "%s: could not remove promote signal file \"%s\": %s\n"
+msgid "%s: could not remove log rotation signal file \"%s\": %s\n"
+msgstr "%s: 無法刪除提升信號檔 \"%s\": %s\n"
+
+# commands/user.c:655
+#: pg_ctl.c:1311
+#, fuzzy
+#| msgid "must be superuser to rotate log files"
+msgid "server signaled to rotate log file\n"
+msgstr "必須是超級用戶才能輪替日誌檔"
+
+#: pg_ctl.c:1358
+#, c-format
+msgid "%s: single-user server is running (PID: %ld)\n"
+msgstr "%s: 單一使用者伺服器正在執行 (PID:%ld)\n"
+
+#: pg_ctl.c:1372
+#, c-format
+msgid "%s: server is running (PID: %ld)\n"
+msgstr "%s: 伺服器正在執行 (PID:%ld)\n"
+
+#: pg_ctl.c:1388
+#, c-format
+msgid "%s: no server running\n"
+msgstr "%s: 沒有伺服器正在執行\n"
+
+#: pg_ctl.c:1405
+#, c-format
+msgid "%s: could not send signal %d (PID: %ld): %s\n"
+msgstr "%s: 無法傳送信號 %d(PID：%ld)：%s\n"
+
+#: pg_ctl.c:1436
+#, c-format
+msgid "%s: could not find own program executable\n"
+msgstr "%s: 找不到程式執行檔\n"
+
+#: pg_ctl.c:1446
+#, c-format
+msgid "%s: could not find postgres program executable\n"
+msgstr "%s: 找不到 postgres 程式的執行檔\n"
+
+#: pg_ctl.c:1516 pg_ctl.c:1550
+#, c-format
+msgid "%s: could not open service manager\n"
+msgstr "%s: 無法開啟服務管理員\n"
+
+#: pg_ctl.c:1522
+#, c-format
+msgid "%s: service \"%s\" already registered\n"
+msgstr "%s: 服務 \"%s\" 已經被註冊\n"
+
+#: pg_ctl.c:1533
+#, fuzzy, c-format
+#| msgid "%s: could not register service \"%s\": error code %d\n"
+msgid "%s: could not register service \"%s\": error code %lu\n"
+msgstr "%s: 無法註冊服務 \"%s\": 錯誤碼%d\n"
+
+#: pg_ctl.c:1556
+#, c-format
+msgid "%s: service \"%s\" not registered\n"
+msgstr "%s: 未註冊服務 \"%s\"\n"
+
+#: pg_ctl.c:1563
+#, fuzzy, c-format
+#| msgid "%s: could not open service \"%s\": error code %d\n"
+msgid "%s: could not open service \"%s\": error code %lu\n"
+msgstr "%s: 無法開啟服務 \"%s\": 錯誤碼 %d\n"
+
+#: pg_ctl.c:1572
+#, fuzzy, c-format
+#| msgid "%s: could not unregister service \"%s\": error code %d\n"
+msgid "%s: could not unregister service \"%s\": error code %lu\n"
+msgstr "%s: 無法移除服務 \"%s\": 錯誤碼 %d\n"
+
+#: pg_ctl.c:1659
+msgid "Waiting for server startup...\n"
+msgstr "等候伺服器啟動...\n"
+
+#: pg_ctl.c:1662
+msgid "Timed out waiting for server startup\n"
+msgstr "等候伺服器啟動逾時\n"
+
+# utils/init/postinit.c:130
+#: pg_ctl.c:1666
+msgid "Server started and accepting connections\n"
+msgstr "伺服器已啟動並接受連線\n"
+
+#: pg_ctl.c:1721
+#, fuzzy, c-format
+#| msgid "%s: could not start service \"%s\": error code %d\n"
+msgid "%s: could not start service \"%s\": error code %lu\n"
+msgstr "%s: 無法啟動服務 \"%s\": 錯誤碼 %d\n"
+
+# commands/tablespace.c:386 commands/tablespace.c:483
+#: pg_ctl.c:1824
+#, fuzzy, c-format
+#| msgid "%s: -S option not supported on this platform\n"
+msgid "%s: WARNING: cannot create restricted tokens on this platform\n"
+msgstr "%s: 此平台不支援 -S 選項\n"
+
+# port/win32/security.c:39
+#: pg_ctl.c:1837
+#, fuzzy, c-format
+#| msgid "could not open process token: error code %d\n"
+msgid "%s: could not open process token: error code %lu\n"
+msgstr "無法開啟行程token: 錯誤碼%d\n"
+
+#: pg_ctl.c:1851
+#, fuzzy, c-format
+#| msgid "%s: could not open service \"%s\": error code %d\n"
+msgid "%s: could not allocate SIDs: error code %lu\n"
+msgstr "%s: 無法開啟服務 \"%s\": 錯誤碼 %d\n"
+
+# port/win32/signal.c:239
+#: pg_ctl.c:1878
+#, fuzzy, c-format
+#| msgid "could not create inherited socket: error code %d\n"
+msgid "%s: could not create restricted token: error code %lu\n"
+msgstr "無法建立inherited socket: 錯誤碼%d\n"
+
+#: pg_ctl.c:1909
+#, c-format
+msgid "%s: WARNING: could not locate all job object functions in system API\n"
+msgstr ""
+
+#: pg_ctl.c:2006
+#, fuzzy, c-format
+#| msgid "%s: could not open service \"%s\": error code %d\n"
+msgid "%s: could not get LUIDs for privileges: error code %lu\n"
+msgstr "%s: 無法開啟服務 \"%s\": 錯誤碼 %d\n"
+
+#: pg_ctl.c:2014 pg_ctl.c:2029
+#, fuzzy, c-format
+#| msgid "%s: could not open service \"%s\": error code %d\n"
+msgid "%s: could not get token information: error code %lu\n"
+msgstr "%s: 無法開啟服務 \"%s\": 錯誤碼 %d\n"
+
+#: pg_ctl.c:2023
+#, c-format
+msgid "%s: out of memory\n"
+msgstr "%s: 記憶體用盡\n"
+
+#: pg_ctl.c:2053
+#, c-format
+msgid "Try \"%s --help\" for more information.\n"
+msgstr "執行 \"%s --help\" 顯示更多資訊。\n"
+
+#: pg_ctl.c:2061
+#, c-format
+msgid ""
+"%s is a utility to initialize, start, stop, or control a PostgreSQL server.\n"
+"\n"
+msgstr ""
+
+#: pg_ctl.c:2062
+#, c-format
+msgid "Usage:\n"
+msgstr "使用方法:\n"
+
+#: pg_ctl.c:2063
+#, fuzzy, c-format
+#| msgid "  %s init[db]               [-D DATADIR] [-s] [-o \"OPTIONS\"]\n"
+msgid "  %s init[db]   [-D DATADIR] [-s] [-o OPTIONS]\n"
+msgstr "  %s init[db]               [-D 資料目錄] [-s] [-o \"選項\"]\n"
+
+#: pg_ctl.c:2064
+#, fuzzy, c-format
+#| msgid ""
+#| "  %s restart [-w] [-t SECS] [-D DATADIR] [-s] [-m SHUTDOWN-MODE]\n"
+#| "                 [-o \"OPTIONS\"]\n"
+msgid ""
+"  %s start      [-D DATADIR] [-l FILENAME] [-W] [-t SECS] [-s]\n"
+"                    [-o OPTIONS] [-p PATH] [-c]\n"
+msgstr ""
+"  %s restart [-w] [-t 秒數] [-D 資料目錄] [-s] [-m 關閉模式]\n"
+"                 [-o \"選項\"]\n"
+
+#: pg_ctl.c:2066
+#, fuzzy, c-format
+#| msgid "  %s stop    [-W] [-t SECS] [-D DATADIR] [-s] [-m SHUTDOWN-MODE]\n"
+msgid "  %s stop       [-D DATADIR] [-m SHUTDOWN-MODE] [-W] [-t SECS] [-s]\n"
+msgstr "  %s stop    [-W] [-t 秒數] [-D 資料目錄] [-s] [-m 關閉模式]\n"
+
+#: pg_ctl.c:2067
+#, fuzzy, c-format
+#| msgid ""
+#| "  %s restart [-w] [-t SECS] [-D DATADIR] [-s] [-m SHUTDOWN-MODE]\n"
+#| "                 [-o \"OPTIONS\"]\n"
+msgid ""
+"  %s restart    [-D DATADIR] [-m SHUTDOWN-MODE] [-W] [-t SECS] [-s]\n"
+"                    [-o OPTIONS] [-c]\n"
+msgstr ""
+"  %s restart [-w] [-t 秒數] [-D 資料目錄] [-s] [-m 關閉模式]\n"
+"                 [-o \"選項\"]\n"
+
+#: pg_ctl.c:2069
+#, fuzzy, c-format
+#| msgid "  %s reload  [-D DATADIR] [-s]\n"
+msgid "  %s reload     [-D DATADIR] [-s]\n"
+msgstr "  %s reload  [-D 資料目錄] [-s]\n"
+
+#: pg_ctl.c:2070
+#, fuzzy, c-format
+#| msgid "  %s status  [-D DATADIR]\n"
+msgid "  %s status     [-D DATADIR]\n"
+msgstr "  %s status  [-D 資料目錄]\n"
+
+#: pg_ctl.c:2071
+#, fuzzy, c-format
+#| msgid "  %s promote [-D DATADIR] [-s]\n"
+msgid "  %s promote    [-D DATADIR] [-W] [-t SECS] [-s]\n"
+msgstr "  %s promote  [-D 資料目錄] [-s]\n"
+
+#: pg_ctl.c:2072
+#, fuzzy, c-format
+#| msgid "  %s reload  [-D DATADIR] [-s]\n"
+msgid "  %s logrotate  [-D DATADIR] [-s]\n"
+msgstr "  %s reload  [-D 資料目錄] [-s]\n"
+
+#: pg_ctl.c:2073
+#, fuzzy, c-format
+#| msgid "  %s kill    SIGNALNAME PID\n"
+msgid "  %s kill       SIGNALNAME PID\n"
+msgstr "  %s kill    信號名稱 PID\n"
+
+#: pg_ctl.c:2075
+#, fuzzy, c-format
+#| msgid ""
+#| "  %s register   [-N SERVICENAME] [-U USERNAME] [-P PASSWORD] [-D DATADIR]\n"
+#| "                    [-S START-TYPE] [-w] [-t SECS] [-o \"OPTIONS\"]\n"
+msgid ""
+"  %s register   [-D DATADIR] [-N SERVICENAME] [-U USERNAME] [-P PASSWORD]\n"
+"                    [-S START-TYPE] [-e SOURCE] [-W] [-t SECS] [-s] [-o OPTIONS]\n"
+msgstr ""
+"  %s register   [-N 服務名稱] [-U 使用者名稱] [-P 密碼] [-D 資料目錄]\n"
+"                    [-S 啟動類型] [-w] [-t 秒數] [-o \"選項\"]\n"
+
+#: pg_ctl.c:2077
+#, c-format
+msgid "  %s unregister [-N SERVICENAME]\n"
+msgstr "  %s unregister [-N 服務名稱]\n"
+
+#: pg_ctl.c:2080
+#, c-format
+msgid ""
+"\n"
+"Common options:\n"
+msgstr ""
+"\n"
+"一般選項：\n"
+
+#: pg_ctl.c:2081
+#, fuzzy, c-format
+#| msgid "  -D, --pgdata DATADIR   location of the database storage area\n"
+msgid "  -D, --pgdata=DATADIR   location of the database storage area\n"
+msgstr "  -D, --pgdata 資料目錄  存放資料庫的目錄\n"
+
+#: pg_ctl.c:2083
+#, c-format
+msgid "  -e SOURCE              event source for logging when running as a service\n"
+msgstr ""
+
+#: pg_ctl.c:2085
+#, c-format
+msgid "  -s, --silent           only print errors, no informational messages\n"
+msgstr "  -s, --silent           只顯示錯誤，不顯示其他訊息\n"
+
+#: pg_ctl.c:2086
+#, fuzzy, c-format
+#| msgid "  -t SECS                seconds to wait when using -w option\n"
+msgid "  -t, --timeout=SECS     seconds to wait when using -w option\n"
+msgstr "  -t 秒數                使用 -w 選項時的等候秒數\n"
+
+#: pg_ctl.c:2087
+#, fuzzy, c-format
+#| msgid "  -V, --version             output version information, then exit\n"
+msgid "  -V, --version          output version information, then exit\n"
+msgstr "  -V, --version             顯示版本資訊然後結束\n"
+
+#: pg_ctl.c:2088
+#, fuzzy, c-format
+#| msgid "  -w                     wait until operation completes\n"
+msgid "  -w, --wait             wait until operation completes (default)\n"
+msgstr "  -w                     等待操作完成\n"
+
+#: pg_ctl.c:2089
+#, fuzzy, c-format
+#| msgid "  -W                     do not wait until operation completes\n"
+msgid "  -W, --no-wait          do not wait until operation completes\n"
+msgstr "  -W                     不等待操作完成\n"
+
+#: pg_ctl.c:2090
+#, fuzzy, c-format
+#| msgid "  -?, --help                show this help, then exit\n"
+msgid "  -?, --help             show this help, then exit\n"
+msgstr "  -?, --help                顯示這份說明然後結束\n"
+
+#: pg_ctl.c:2091
+#, c-format
+msgid "If the -D option is omitted, the environment variable PGDATA is used.\n"
+msgstr "如果沒有使用選項 -D，改用環境變數PGDATA。\n"
+
+#: pg_ctl.c:2093
+#, c-format
+msgid ""
+"\n"
+"Options for start or restart:\n"
+msgstr ""
+"\n"
+"啟動或重新啟動可用選項:\n"
+
+#: pg_ctl.c:2095
+#, c-format
+msgid "  -c, --core-files       allow postgres to produce core files\n"
+msgstr "  -c, --core-files       允許 postgres 產生核心檔\n"
+
+#: pg_ctl.c:2097
+#, c-format
+msgid "  -c, --core-files       not applicable on this platform\n"
+msgstr "  -c, --core-files       此平台不適用\n"
+
+#: pg_ctl.c:2099
+#, fuzzy, c-format
+#| msgid "  -l, --log FILENAME     write (or append) server log to FILENAME\n"
+msgid "  -l, --log=FILENAME     write (or append) server log to FILENAME\n"
+msgstr "  -l, --log 檔名         將伺服器log寫入(或附加至)檔案。\n"
+
+#: pg_ctl.c:2100
+#, fuzzy, c-format
+#| msgid ""
+#| "  -o OPTIONS             command line options to pass to postgres\n"
+#| "                         (PostgreSQL server executable) or initdb\n"
+msgid ""
+"  -o, --options=OPTIONS  command line options to pass to postgres\n"
+"                         (PostgreSQL server executable) or initdb\n"
+msgstr ""
+"  -o 選項                要傳給 postgres(PostgreSQL 伺服器執行檔) \n"
+"                         或 initdb 的命令列選項\n"
+
+#: pg_ctl.c:2102
+#, c-format
+msgid "  -p PATH-TO-POSTGRES    normally not necessary\n"
+msgstr "  -p PATH-TO-POSTGRES    通常不需要\n"
+
+#: pg_ctl.c:2103
+#, c-format
+msgid ""
+"\n"
+"Options for stop or restart:\n"
+msgstr ""
+"\n"
+"停止或重新啟動選項:\n"
+
+#: pg_ctl.c:2104
+#, fuzzy, c-format
+#| msgid "  -m SHUTDOWN-MODE   can be \"smart\", \"fast\", or \"immediate\"\n"
+msgid "  -m, --mode=MODE        MODE can be \"smart\", \"fast\", or \"immediate\"\n"
+msgstr "  -m 關閉模式   可用 \"smart\"、\"fast\" 或 \"immediate\"\n"
+
+#: pg_ctl.c:2106
+#, c-format
+msgid ""
+"\n"
+"Shutdown modes are:\n"
+msgstr ""
+"\n"
+"可用關閉模式：\n"
+
+#: pg_ctl.c:2107
+#, c-format
+msgid "  smart       quit after all clients have disconnected\n"
+msgstr "  smart       在所有用戶端斷線後關閉\n"
+
+#: pg_ctl.c:2108
+#, fuzzy, c-format
+#| msgid "  fast        quit directly, with proper shutdown\n"
+msgid "  fast        quit directly, with proper shutdown (default)\n"
+msgstr "  fast        直接正常關閉\n"
+
+#: pg_ctl.c:2109
+#, c-format
+msgid "  immediate   quit without complete shutdown; will lead to recovery on restart\n"
+msgstr "  immediate   立即結束，會導致下次啟動時需要復原程序\n"
+
+#: pg_ctl.c:2111
+#, c-format
+msgid ""
+"\n"
+"Allowed signal names for kill:\n"
+msgstr ""
+"\n"
+"kill 可以使用的信號名稱：\n"
+
+#: pg_ctl.c:2115
+#, c-format
+msgid ""
+"\n"
+"Options for register and unregister:\n"
+msgstr ""
+"\n"
+"註冊或移除服務選項：\n"
+
+#: pg_ctl.c:2116
+#, c-format
+msgid "  -N SERVICENAME  service name with which to register PostgreSQL server\n"
+msgstr "  -N 服務名稱     用來註冊 PostgreSQL 伺服器的服務名稱\n"
+
+#: pg_ctl.c:2117
+#, c-format
+msgid "  -P PASSWORD     password of account to register PostgreSQL server\n"
+msgstr "  -P 密碼         用來註冊 PostgreSQL 伺服器的密碼\n"
+
+#: pg_ctl.c:2118
+#, c-format
+msgid "  -U USERNAME     user name of account to register PostgreSQL server\n"
+msgstr "  -U 使用者       用來註冊 PostgreSQL 伺服器的帳號\n"
+
+#: pg_ctl.c:2119
+#, c-format
+msgid "  -S START-TYPE   service start type to register PostgreSQL server\n"
+msgstr "  -S 啟動類型     註冊 PostgreSQL 使用的啟動類型\n"
+
+#: pg_ctl.c:2121
+#, c-format
+msgid ""
+"\n"
+"Start types are:\n"
+msgstr ""
+"\n"
+"啟動類型:\n"
+
+#: pg_ctl.c:2122
+#, c-format
+msgid "  auto       start service automatically during system startup (default)\n"
+msgstr "  auto       系統啟動時自動啟動服務(預設)\n"
+
+#: pg_ctl.c:2123
+#, c-format
+msgid "  demand     start service on demand\n"
+msgstr "  demand     手動啟動服務\n"
+
+#: pg_ctl.c:2126
+#, fuzzy, c-format
+#| msgid ""
+#| "\n"
+#| "Report bugs to <pgsql-bugs@postgresql.org>.\n"
+msgid ""
+"\n"
+"Report bugs to <%s>.\n"
+msgstr ""
+"\n"
+"回報錯誤至 <pgsql-bugs@postgresql.org>。\n"
+
+#: pg_ctl.c:2127
+#, c-format
+msgid "%s home page: <%s>\n"
+msgstr ""
+
+#: pg_ctl.c:2152
+#, c-format
+msgid "%s: unrecognized shutdown mode \"%s\"\n"
+msgstr "%s: 無法識別關閉模式 \"%s\"\n"
+
+#: pg_ctl.c:2181
+#, c-format
+msgid "%s: unrecognized signal name \"%s\"\n"
+msgstr "%s: 無法識別信號名稱 \"%s\"\n"
+
+#: pg_ctl.c:2198
+#, c-format
+msgid "%s: unrecognized start type \"%s\"\n"
+msgstr "%s: 無法識別啟動類型 \"%s\"\n"
+
+#: pg_ctl.c:2253
+#, fuzzy, c-format
+#| msgid "%s: could not create directory \"%s\": %s\n"
+msgid "%s: could not determine the data directory using command \"%s\"\n"
+msgstr "%s: 無法建立目錄\"%s\": %s\n"
+
+#: pg_ctl.c:2277
+#, c-format
+msgid "%s: control file appears to be corrupt\n"
+msgstr ""
+
+#: pg_ctl.c:2345
+#, c-format
+msgid ""
+"%s: cannot be run as root\n"
+"Please log in (using, e.g., \"su\") as the (unprivileged) user that will\n"
+"own the server process.\n"
+msgstr ""
+"%s: 無法以 root 身份執行\n"
+"請以將會擁有伺服務行程的(非特權)使用者登入(例如用 \"su\" 命令)。\n"
+
+# commands/tablespace.c:386 commands/tablespace.c:483
+#: pg_ctl.c:2428
+#, c-format
+msgid "%s: -S option not supported on this platform\n"
+msgstr "%s: 此平台不支援 -S 選項\n"
+
+#: pg_ctl.c:2465
+#, c-format
+msgid "%s: too many command-line arguments (first is \"%s\")\n"
+msgstr "%s: 命令列參數過多(第一個是 \"%s\")\n"
+
+#: pg_ctl.c:2491
+#, c-format
+msgid "%s: missing arguments for kill mode\n"
+msgstr "%s: 未指定 kill 模式參數\n"
+
+#: pg_ctl.c:2509
+#, c-format
+msgid "%s: unrecognized operation mode \"%s\"\n"
+msgstr "%s: 無法識別操作模式 \"%s\"\n"
+
+#: pg_ctl.c:2519
+#, c-format
+msgid "%s: no operation specified\n"
+msgstr "%s: 未指定操作方式\n"
+
+#: pg_ctl.c:2540
+#, c-format
+msgid "%s: no database directory specified and environment variable PGDATA unset\n"
+msgstr "%s: 未指定資料目錄和環境變數 PGDATA\n"
+
+#, c-format
+#~ msgid "  %s start   [-w] [-t SECS] [-D DATADIR] [-s] [-l FILENAME] [-o \"OPTIONS\"]\n"
+#~ msgstr "  %s start   [-w] [-t 秒數] [-D 資料目錄] [-s] [-l 檔名] [-o \"選項\"]\n"
+
+#, c-format
+#~ msgid "  --help                 show this help, then exit\n"
+#~ msgstr "  --help                 顯示這份說明然後結束\n"
+
+#, c-format
+#~ msgid "  --version              output version information, then exit\n"
+#~ msgstr "  --version              顯示版本資訊然後結束\n"
+
+#, c-format
+#~ msgid ""
+#~ "%s is a utility to start, stop, restart, promote, reload configuration files,\n"
+#~ "report the status of a PostgreSQL server, or signal a PostgreSQL process.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "%s 可以用來啟動、停止、重新啟動、提升、重新載入設定檔、\n"
+#~ "報告 PostgreSQL 伺服器狀態，或送信號給 PostgreSQL 行程。\n"
+#~ "\n"
+
+#, c-format
+#~ msgid "%s: -w option cannot use a relative socket directory specification\n"
+#~ msgstr "%s: -w 選項不能和相對 socket 目錄一起使用\n"
+
+#, c-format
+#~ msgid "%s: -w option is not supported when starting a pre-9.1 server\n"
+#~ msgstr "%s: 啟動 pre-9.1 伺服器時不支援 -w 選項\n"
+
+#~ msgid "%s: a standalone backend \"postgres\" is running (PID: %ld)\n"
+#~ msgstr "%s：一個獨立後端\"postgres\"正在執行(PID：%ld)\n"
+
+#, c-format
+#~ msgid "%s: could not wait for server because of misconfiguration\n"
+#~ msgstr "%s: 無法等待伺服器，設定錯誤\n"
+
+#~ msgid "%s: invalid option %s\n"
+#~ msgstr "%s：無效的選項 %s\n"
+
+#~ msgid "%s: neither postmaster nor postgres running\n"
+#~ msgstr "%s：postmaster或postgres尚未執行\n"
+
+#, c-format
+#~ msgid "%s: this data directory is running a pre-existing postmaster\n"
+#~ msgstr "%s: 這個資料目錄正在執行以前的 postmaster\n"
+
+#, c-format
+#~ msgid ""
+#~ "(The default is to wait for shutdown, but not for start or restart.)\n"
+#~ "\n"
+#~ msgstr ""
+#~ "(預設是關閉時而非啟動或重新啟動時等待。)\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "The program \"postmaster\" is needed by %s but was not found in the\n"
+#~ "same directory as \"%s\".\n"
+#~ "Check your installation.\n"
+#~ msgstr ""
+#~ "%s 需要\"postmaster\"程式，但是在與\"%s\"相同的目錄中找不到。\n"
+#~ "檢查你的安裝。\n"
+
+#~ msgid ""
+#~ "The program \"postmaster\" was found by \"%s\"\n"
+#~ "but was not the same version as %s.\n"
+#~ "Check your installation.\n"
+#~ msgstr ""
+#~ "\"%s\"已找到程式\"postmaster\"，但是與 %s 版本不符。\n"
+#~ "請檢查你的安裝。\n"
+
+#~ msgid ""
+#~ "WARNING: online backup mode is active\n"
+#~ "Shutdown will not complete until pg_stop_backup() is called.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "警告: 線上備份模式作用中\n"
+#~ "必須呼叫 pg_stop_backup()，關閉作業才能完成。\n"
+#~ "\n"
+
+#, c-format
+#~ msgid "child process was terminated by signal %s"
+#~ msgstr "子行程被信號 %s 結束"
+
+#, c-format
+#~ msgid "could not change directory to \"%s\""
+#~ msgstr "無法切換目錄至 \"%s\""
+
+#, c-format
+#~ msgid "could not read symbolic link \"%s\""
+#~ msgstr "無法讀取符號連結 \"%s\""
+
+#~ msgid "server is still starting up\n"
+#~ msgstr "伺服器仍在啟動中\n"
