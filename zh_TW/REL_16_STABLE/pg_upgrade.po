@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_upgrade (PostgreSQL) 16\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2023-09-08 21:49+0000\n"
+"POT-Creation-Date: 2026-09-17 19:17+0000\n"
 "PO-Revision-Date: 2023-11-06 08:50+0800\n"
 "Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
 "Language-Team: \n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.4.1\n"
 
-#: check.c:69
+#: check.c:73
 #, c-format
 msgid ""
 "Performing Consistency Checks on Old Live Server\n"
@@ -25,7 +25,7 @@ msgstr ""
 "在舊的伺服器上執行一致性檢查\n"
 "------------------------------------------------"
 
-#: check.c:75
+#: check.c:79
 #, c-format
 msgid ""
 "Performing Consistency Checks\n"
@@ -34,7 +34,7 @@ msgstr ""
 "執行一致性檢查\n"
 "-----------------------------"
 
-#: check.c:221
+#: check.c:242
 #, c-format
 msgid ""
 "\n"
@@ -43,7 +43,7 @@ msgstr ""
 "\n"
 "*叢集相容*"
 
-#: check.c:229
+#: check.c:250
 #, c-format
 msgid ""
 "\n"
@@ -54,7 +54,7 @@ msgstr ""
 "如果 pg_upgrade 在這個階段後失敗，您必須執行 initdb 再次\n"
 "建立新叢集才能繼續。"
 
-#: check.c:270
+#: check.c:291
 #, c-format
 msgid ""
 "Optimizer statistics are not transferred by pg_upgrade.\n"
@@ -65,7 +65,7 @@ msgstr ""
 "啟動新伺服器之後請考慮執行:\n"
 "    %s/vacuumdb %s--all --analyze-in-stages"
 
-#: check.c:276
+#: check.c:297
 #, c-format
 msgid ""
 "Running this script will delete the old cluster's data files:\n"
@@ -74,7 +74,7 @@ msgstr ""
 "執行此腳本將刪除舊叢集的資料檔:\n"
 "    %s"
 
-#: check.c:281
+#: check.c:302
 #, c-format
 msgid ""
 "Could not create a script to delete the old cluster's data files\n"
@@ -86,57 +86,57 @@ msgstr ""
 "因為在舊叢集目錄中存在使用者定義的表空間或新叢集的資料目錄。\n"
 "必須手動刪除舊叢集的內容。"
 
-#: check.c:293
+#: check.c:314
 #, c-format
 msgid "Checking cluster versions"
 msgstr "檢查叢集版本"
 
-#: check.c:305
+#: check.c:326
 #, c-format
 msgid "This utility can only upgrade from PostgreSQL version %s and later."
 msgstr "本工具只能從 PostgreSQL 版本 %s 及更新的版本升級。"
 
-#: check.c:310
+#: check.c:331
 #, c-format
 msgid "This utility can only upgrade to PostgreSQL version %s."
 msgstr "本工具只能升級至 PostgreSQL 版本 %s。"
 
-#: check.c:319
+#: check.c:340
 #, c-format
 msgid "This utility cannot be used to downgrade to older major PostgreSQL versions."
 msgstr "本工具無法用於降級至較舊的主要 PostgreSQL 版本。"
 
-#: check.c:324
+#: check.c:345
 #, c-format
 msgid "Old cluster data and binary directories are from different major versions."
 msgstr "舊叢集的資料和執行檔目錄來自不同的主要版本。"
 
-#: check.c:327
+#: check.c:348
 #, c-format
 msgid "New cluster data and binary directories are from different major versions."
 msgstr "新叢集的資料和執行檔目錄來自不同的主要版本。"
 
-#: check.c:342
+#: check.c:363
 #, c-format
 msgid "When checking a live server, the old and new port numbers must be different."
 msgstr "檢查伺服器時，新舊連接埠必須不同。"
 
-#: check.c:362
+#: check.c:383
 #, c-format
 msgid "New cluster database \"%s\" is not empty: found relation \"%s.%s\""
 msgstr "新叢集資料庫 \"%s\" 不是空的: 找到 relation \"%s.%s\""
 
-#: check.c:385
+#: check.c:406
 #, c-format
 msgid "Checking for new cluster tablespace directories"
 msgstr "檢查新叢集的表空間目錄"
 
-#: check.c:396
+#: check.c:417
 #, c-format
 msgid "new cluster tablespace directory already exists: \"%s\""
 msgstr "新叢集的表空間目錄已存在: \"%s\""
 
-#: check.c:429
+#: check.c:450
 #, c-format
 msgid ""
 "\n"
@@ -145,7 +145,7 @@ msgstr ""
 "\n"
 "警告: 新的資料目錄不應該位於舊的資料目錄內，即 %s"
 
-#: check.c:453
+#: check.c:474
 #, c-format
 msgid ""
 "\n"
@@ -154,63 +154,64 @@ msgstr ""
 "\n"
 "警告: 使用者定義的表空間位置不應該位於資料目錄內，即 %s"
 
-#: check.c:463
+#: check.c:484
 #, c-format
 msgid "Creating script to delete old cluster"
 msgstr "建立刪除舊叢集的腳本"
 
 # fe-lobj.c:410
 # fe-lobj.c:495
-#: check.c:466 check.c:639 check.c:755 check.c:850 check.c:979 check.c:1056
-#: check.c:1299 check.c:1373 file.c:339 function.c:163 option.c:476
-#: version.c:116 version.c:292 version.c:426
+#: check.c:487 check.c:660 check.c:776 check.c:871 check.c:1000 check.c:1077
+#: check.c:1155 check.c:1435 check.c:1509 file.c:339 function.c:163
+#: option.c:476 version.c:116 version.c:323 version.c:457
 #, c-format
 msgid "could not open file \"%s\": %s"
 msgstr "無法開啟檔案 \"%s\":%s"
 
-#: check.c:517
+#: check.c:538
 #, c-format
 msgid "could not add execute permission to file \"%s\": %s"
 msgstr "無法將執行權限加到檔案 \"%s\":  %s"
 
-#: check.c:537
+#: check.c:558
 #, c-format
 msgid "Checking database user is the install user"
 msgstr "檢查資料庫使用者是否為安裝使用者"
 
-#: check.c:553
+#: check.c:574
 #, c-format
 msgid "database user \"%s\" is not the install user"
 msgstr "資料庫使用者 \"%s\" 不是安裝使用者"
 
-#: check.c:564
+#: check.c:585
 #, c-format
 msgid "could not determine the number of users"
 msgstr "無法確定使用者數量"
 
-#: check.c:572
+#: check.c:593
 #, c-format
 msgid "Only the install user can be defined in the new cluster."
 msgstr "只有安裝使用者能在新叢集中被定義。"
 
-#: check.c:601
+#: check.c:622
 #, c-format
 msgid "Checking database connection settings"
 msgstr "檢查資料庫連線設定"
 
-#: check.c:627
+#: check.c:648
 #, c-format
 msgid "template0 must not allow connections, i.e. its pg_database.datallowconn must be false"
 msgstr "template0 不允許連線，即其 pg_database.datallowconn 必須為 false"
 
-#: check.c:654 check.c:775 check.c:873 check.c:999 check.c:1076 check.c:1135
-#: check.c:1196 check.c:1224 check.c:1254 check.c:1313 check.c:1394
-#: function.c:185 version.c:192 version.c:232 version.c:378
+#: check.c:675 check.c:796 check.c:894 check.c:1020 check.c:1097 check.c:1175
+#: check.c:1235 check.c:1296 check.c:1325 check.c:1359 check.c:1390
+#: check.c:1449 check.c:1530 function.c:185 version.c:192 version.c:232
+#: version.c:409
 #, c-format
 msgid "fatal"
 msgstr "fatal"
 
-#: check.c:655
+#: check.c:676
 #, c-format
 msgid ""
 "All non-template0 databases must allow connections, i.e. their\n"
@@ -227,27 +228,27 @@ msgstr ""
 "不允許連線的資料庫。異常資料庫的清單在下列檔案中:\n"
 "    %s"
 
-#: check.c:680
+#: check.c:701
 #, c-format
 msgid "Checking for prepared transactions"
 msgstr "檢查已預備的交易"
 
-#: check.c:689
+#: check.c:710
 #, c-format
 msgid "The source cluster contains prepared transactions"
 msgstr "來源叢集包含已預備的交易"
 
-#: check.c:691
+#: check.c:712
 #, c-format
 msgid "The target cluster contains prepared transactions"
 msgstr "目標叢集包含已預備的交易"
 
-#: check.c:716
+#: check.c:737
 #, c-format
 msgid "Checking for contrib/isn with bigint-passing mismatch"
 msgstr "檢查 contrib/isn 傳遞 bigint 方式不一致"
 
-#: check.c:776
+#: check.c:797
 #, c-format
 msgid ""
 "Your installation contains \"contrib/isn\" functions which rely on the\n"
@@ -264,12 +265,12 @@ msgstr ""
 "升級，然後還原它們。問題函數的清單位於以下檔案中:\n"
 "    %s"
 
-#: check.c:798
+#: check.c:819
 #, c-format
 msgid "Checking for user-defined postfix operators"
 msgstr "檢查使用者定義的後綴運算符"
 
-#: check.c:874
+#: check.c:895
 #, c-format
 msgid ""
 "Your installation contains user-defined postfix operators, which are not\n"
@@ -283,12 +284,12 @@ msgstr ""
 "使用者定義後綴運算符的清單位於以下檔案中:\n"
 "    %s"
 
-#: check.c:898
+#: check.c:919
 #, c-format
 msgid "Checking for incompatible polymorphic functions"
 msgstr "檢查不相容的多型函數"
 
-#: check.c:1000
+#: check.c:1021
 #, c-format
 msgid ""
 "Your installation contains user-defined objects that refer to internal\n"
@@ -306,12 +307,12 @@ msgstr ""
 "問題物件的清單位於以下檔案中:\n"
 "    %s"
 
-#: check.c:1024
+#: check.c:1045
 #, c-format
 msgid "Checking for tables WITH OIDS"
 msgstr "檢查資料表 WITH OIDS"
 
-#: check.c:1077
+#: check.c:1098
 #, c-format
 msgid ""
 "Your installation contains tables declared WITH OIDS, which is not\n"
@@ -326,12 +327,29 @@ msgstr ""
 "問題資料表的清單位於以下檔案中:\n"
 "    %s"
 
-#: check.c:1105
+#: check.c:1123
+#, c-format
+msgid "Checking for not-null constraint inconsistencies"
+msgstr ""
+
+#: check.c:1176
+#, c-format
+msgid ""
+"Your installation contains inconsistent NOT NULL constraints.\n"
+"If the parent column(s) are NOT NULL, then the child column must\n"
+"also be marked NOT NULL, or the upgrade will fail.\n"
+"You can fix this by running\n"
+"    ALTER TABLE tablename ALTER column SET NOT NULL;\n"
+"on each column listed in the file:\n"
+"    %s"
+msgstr ""
+
+#: check.c:1205
 #, c-format
 msgid "Checking for system-defined composite types in user tables"
 msgstr "檢查使用者資料表中的系統定義複合型別"
 
-#: check.c:1136
+#: check.c:1236
 #, c-format
 msgid ""
 "Your installation contains system-defined composite types in user tables.\n"
@@ -347,12 +365,12 @@ msgstr ""
 "問題欄位的清單位於以下檔案中:\n"
 "    %s"
 
-#: check.c:1164
+#: check.c:1264
 #, c-format
 msgid "Checking for reg* data types in user tables"
 msgstr "檢查使用者資料表中有無 reg* 資料型別"
 
-#: check.c:1197
+#: check.c:1297
 #, c-format
 msgid ""
 "Your installation contains one of the reg* data types in user tables.\n"
@@ -368,12 +386,13 @@ msgstr ""
 "問題欄位的清單位於以下檔案中:\n"
 "    %s"
 
-#: check.c:1218
-#, c-format
-msgid "Checking for incompatible \"aclitem\" data type in user tables"
+#: check.c:1318
+#, fuzzy, c-format
+#| msgid "Checking for incompatible \"aclitem\" data type in user tables"
+msgid "Checking for incompatible \"%s\" data type in user tables"
 msgstr "檢查使用者資料表中有無不相容的 \"aclitem\" 資料型別"
 
-#: check.c:1225
+#: check.c:1326
 #, c-format
 msgid ""
 "Your installation contains the \"aclitem\" data type in user tables.\n"
@@ -389,12 +408,41 @@ msgstr ""
 "問題欄位的清單位於以下檔案中:\n"
 "    %s"
 
-#: check.c:1246
+#: check.c:1350
+#, fuzzy, c-format
+#| msgid "Checking for reg* data types in user tables"
+msgid "Checking for removed \"%s\" data type in user tables"
+msgstr "檢查使用者資料表中有無 reg* 資料型別"
+
+#: check.c:1360
+#, fuzzy, c-format
+#| msgid ""
+#| "Your installation contains the \"aclitem\" data type in user tables.\n"
+#| "The internal format of \"aclitem\" changed in PostgreSQL version 16\n"
+#| "so this cluster cannot currently be upgraded.  You can drop the\n"
+#| "problem columns and restart the upgrade.  A list of the problem\n"
+#| "columns is in the file:\n"
+#| "    %s"
+msgid ""
+"Your installation contains the \"%s\" data type in user tables.\n"
+"The \"%s\" type has been removed in PostgreSQL version %s,\n"
+"so this cluster cannot currently be upgraded.  You can drop the\n"
+"problem columns, or change them to another data type, and restart\n"
+"the upgrade.  A list of the problem columns is in the file:\n"
+"    %s"
+msgstr ""
+"您的安裝中在使用者資料表中包含了 \"aclitem\" 資料型別。由於\n"
+"PostgreSQL 版本 16 中 \"aclitem\" 的內部格式已更改，因此目前無法\n"
+"升級此叢集。您可以刪除問題欄位，然後重新進行升級。\n"
+"問題欄位的清單位於以下檔案中:\n"
+"    %s"
+
+#: check.c:1382
 #, c-format
 msgid "Checking for incompatible \"jsonb\" data type"
 msgstr "檢查不相容的 \"jsonb\" 資料型別"
 
-#: check.c:1255
+#: check.c:1391
 #, c-format
 msgid ""
 "Your installation contains the \"jsonb\" data type in user tables.\n"
@@ -410,12 +458,12 @@ msgstr ""
 "問題欄位的清單在以下檔案中:\n"
 "    %s"
 
-#: check.c:1282
+#: check.c:1418
 #, c-format
 msgid "Checking for roles starting with \"pg_\""
 msgstr "檢查以 \"pg_\" 開頭的角色"
 
-#: check.c:1314
+#: check.c:1450
 #, c-format
 msgid ""
 "Your installation contains roles starting with \"pg_\".\n"
@@ -429,12 +477,12 @@ msgstr ""
 "以 \"pg_\" 開頭的角色列表位於以下檔案中:\n"
 "    %s"
 
-#: check.c:1334
+#: check.c:1470
 #, c-format
 msgid "Checking for user-defined encoding conversions"
 msgstr "檢查使用者自訂的編碼轉換"
 
-#: check.c:1395
+#: check.c:1531
 #, c-format
 msgid ""
 "Your installation contains user-defined encoding conversions.\n"
@@ -492,7 +540,7 @@ msgstr "目標叢集缺少叢集狀態資訊:"
 
 # commands/vacuum.c:2258 commands/vacuumlazy.c:489 commands/vacuumlazy.c:770
 # nodes/print.c:86 storage/lmgr/deadlock.c:888 tcop/postgres.c:3285
-#: controldata.c:214 dump.c:50 exec.c:119 pg_upgrade.c:517 pg_upgrade.c:554
+#: controldata.c:214 dump.c:54 exec.c:119 pg_upgrade.c:519 pg_upgrade.c:556
 #: relfilenumber.c:231 server.c:34 util.c:337
 #, c-format
 msgid "%s"
@@ -725,7 +773,7 @@ msgstr ""
 msgid "Creating dump of global objects"
 msgstr "建立全域物件的備份"
 
-#: dump.c:32
+#: dump.c:33
 #, c-format
 msgid "Creating dump of database schemas"
 msgstr "建立資料庫 schema 的備份"
@@ -1423,72 +1471,72 @@ msgstr ""
 msgid "Setting locale and encoding for new cluster"
 msgstr "設定新叢集的區域和編碼"
 
-#: pg_upgrade.c:450
+#: pg_upgrade.c:452
 #, c-format
 msgid "Analyzing all rows in the new cluster"
 msgstr "分析新叢集中的所有資料列"
 
-#: pg_upgrade.c:463
+#: pg_upgrade.c:465
 #, c-format
 msgid "Freezing all rows in the new cluster"
 msgstr "凍結新叢集中的所有資料列"
 
-#: pg_upgrade.c:483
+#: pg_upgrade.c:485
 #, c-format
 msgid "Restoring global objects in the new cluster"
 msgstr "還原新叢集中的全域物件"
 
-#: pg_upgrade.c:499
+#: pg_upgrade.c:501
 #, c-format
 msgid "Restoring database schemas in the new cluster"
 msgstr "還原新叢集中的資料庫 schema"
 
-#: pg_upgrade.c:605
+#: pg_upgrade.c:607
 #, c-format
 msgid "Deleting files from new %s"
 msgstr "從新的 %s 刪除檔案"
 
-#: pg_upgrade.c:609
+#: pg_upgrade.c:611
 #, c-format
 msgid "could not delete directory \"%s\""
 msgstr "無法刪除目錄 \"%s\""
 
-#: pg_upgrade.c:628
+#: pg_upgrade.c:630
 #, c-format
 msgid "Copying old %s to new server"
 msgstr "將舊的 %s 複製到新伺服器"
 
-#: pg_upgrade.c:654
+#: pg_upgrade.c:656
 #, c-format
 msgid "Setting oldest XID for new cluster"
 msgstr "為新叢集設定最早的 XID"
 
-#: pg_upgrade.c:662
+#: pg_upgrade.c:664
 #, c-format
 msgid "Setting next transaction ID and epoch for new cluster"
 msgstr "為新叢集設定下一個交易 ID 和 epoch"
 
-#: pg_upgrade.c:692
+#: pg_upgrade.c:694
 #, c-format
 msgid "Setting next multixact ID and offset for new cluster"
 msgstr "為新叢集設定下一個 multixact ID 和 offset"
 
-#: pg_upgrade.c:716
+#: pg_upgrade.c:718
 #, c-format
 msgid "Setting oldest multixact ID in new cluster"
 msgstr "為新叢集設定最早的 multixact ID"
 
-#: pg_upgrade.c:736
+#: pg_upgrade.c:738
 #, c-format
 msgid "Resetting WAL archives"
 msgstr "重設 WAL 封存檔"
 
-#: pg_upgrade.c:779
+#: pg_upgrade.c:781
 #, c-format
 msgid "Setting frozenxid and minmxid counters in new cluster"
 msgstr "在新叢集中設定 frozenxid 和 minmxid 計數器"
 
-#: pg_upgrade.c:781
+#: pg_upgrade.c:783
 #, c-format
 msgid "Setting minmxid counter in new cluster"
 msgstr "在新叢集中設定 minmxid 計數器"
@@ -1538,17 +1586,17 @@ msgstr "複製 \"%s\" 至 \"%s\""
 msgid "linking \"%s\" to \"%s\""
 msgstr "連結 \"%s\" 至 \"%s\""
 
-#: server.c:39 server.c:143 util.c:248 util.c:278
+#: server.c:39 server.c:145 util.c:248 util.c:278
 #, c-format
 msgid "Failure, exiting\n"
 msgstr "失敗，結束\n"
 
-#: server.c:133
+#: server.c:135
 #, c-format
 msgid "executing: %s"
 msgstr "執行: %s"
 
-#: server.c:139
+#: server.c:141
 #, c-format
 msgid ""
 "SQL command failed\n"
@@ -1559,17 +1607,17 @@ msgstr ""
 "%s\n"
 "%s"
 
-#: server.c:169
+#: server.c:171
 #, c-format
 msgid "could not open version file \"%s\": %m"
 msgstr "無法開啟版本檔 \"%s\": %m"
 
-#: server.c:173
+#: server.c:175
 #, c-format
 msgid "could not parse version file \"%s\""
 msgstr "無法解析版本檔 \"%s\""
 
-#: server.c:288
+#: server.c:290
 #, c-format
 msgid ""
 "\n"
@@ -1578,7 +1626,7 @@ msgstr ""
 "\n"
 "%s"
 
-#: server.c:292
+#: server.c:294
 #, c-format
 msgid ""
 "could not connect to source postmaster started with the command:\n"
@@ -1587,7 +1635,7 @@ msgstr ""
 "無法連線到用以下命令啟動的來源 postmaster:\n"
 "%s"
 
-#: server.c:296
+#: server.c:298
 #, c-format
 msgid ""
 "could not connect to target postmaster started with the command:\n"
@@ -1596,12 +1644,12 @@ msgstr ""
 "無法連線到用以下命令啟動的目標 postmaster:\n"
 "%s"
 
-#: server.c:310
+#: server.c:312
 #, c-format
 msgid "pg_ctl failed to start the source server, or connection failed"
 msgstr "pg_ctl 啟動來源伺服器失敗或連線失敗"
 
-#: server.c:312
+#: server.c:314
 #, c-format
 msgid "pg_ctl failed to start the target server, or connection failed"
 msgstr "pg_ctl 啟動目標伺服器失敗或連線失敗"
@@ -1626,12 +1674,12 @@ msgstr "pg_ctl 啟動目標伺服器失敗或連線失敗"
 # utils/init/miscinit.c:244 utils/misc/guc.c:1898 utils/misc/guc.c:1911
 # utils/misc/guc.c:1924 utils/mmgr/aset.c:337 utils/mmgr/aset.c:503
 # utils/mmgr/aset.c:700 utils/mmgr/aset.c:893 utils/mmgr/portalmem.c:75
-#: server.c:357
+#: server.c:359
 #, c-format
 msgid "out of memory"
 msgstr "記憶體用盡"
 
-#: server.c:370
+#: server.c:372
 #, c-format
 msgid "libpq environment variable %s has a non-local server value: %s"
 msgstr "libpq 環境變數 %s 具有非本地伺服器值: %s"
@@ -1716,17 +1764,17 @@ msgstr ""
 "然後重新進行升級。問題欄位的清單位於以下檔案中:\n"
 "    %s"
 
-#: version.c:257
+#: version.c:288
 #, c-format
 msgid "Checking for hash indexes"
 msgstr "檢查雜湊索引"
 
-#: version.c:335
+#: version.c:366
 #, c-format
 msgid "warning"
 msgstr "warning"
 
-#: version.c:337
+#: version.c:368
 #, c-format
 msgid ""
 "\n"
@@ -1740,7 +1788,7 @@ msgstr ""
 "內部格式，因此必須使用 REINDEX 命令重新索引它們。升級完成後，您\n"
 "將收到重新索引的指示。"
 
-#: version.c:343
+#: version.c:374
 #, c-format
 msgid ""
 "\n"
@@ -1758,12 +1806,12 @@ msgstr ""
 "被資料庫超級使用者用 psql 執行時，將重建所有無效的索引。在此之前，\n"
 "這些索引將不會被使用。"
 
-#: version.c:369
+#: version.c:400
 #, c-format
 msgid "Checking for invalid \"sql_identifier\" user columns"
 msgstr "檢查無效的 \"sql_identifier\" 使用者欄位"
 
-#: version.c:379
+#: version.c:410
 #, c-format
 msgid ""
 "Your installation contains the \"sql_identifier\" data type in user tables.\n"
@@ -1778,17 +1826,17 @@ msgstr ""
 "然後重新啟動升級。問題欄位的清單位於檔案中:\n"
 "    %s"
 
-#: version.c:402
+#: version.c:433
 #, c-format
 msgid "Checking for extension updates"
 msgstr "檢查擴充模組更新"
 
-#: version.c:450
+#: version.c:481
 #, c-format
 msgid "notice"
 msgstr "notice"
 
-#: version.c:451
+#: version.c:482
 #, c-format
 msgid ""
 "\n"

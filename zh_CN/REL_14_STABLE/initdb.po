@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: initdb (PostgreSQL) 14\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2021-08-14 05:47+0000\n"
+"POT-Creation-Date: 2026-09-17 19:48+0000\n"
 "PO-Revision-Date: 2021-08-15 18:00+0800\n"
 "Last-Translator: Jie Zhang <zhangjie2@fujitsu.com>\n"
 "Language-Team: Chinese (Simplified) <zhangjie2@fujitsu.com>\n"
@@ -31,84 +31,97 @@ msgstr "错误: "
 msgid "warning: "
 msgstr "警告: "
 
-#: ../../common/exec.c:136 ../../common/exec.c:253 ../../common/exec.c:299
+#: ../../common/exec.c:149 ../../common/exec.c:266 ../../common/exec.c:312
 #, c-format
 msgid "could not identify current directory: %m"
 msgstr "无法确认当前目录: %m"
 
-#: ../../common/exec.c:155
+#: ../../common/exec.c:168
 #, c-format
 msgid "invalid binary \"%s\""
 msgstr "无效的二进制码 \"%s\""
 
-#: ../../common/exec.c:205
+#: ../../common/exec.c:218
 #, c-format
 msgid "could not read binary \"%s\""
 msgstr "无法读取二进制码 \"%s\""
 
-#: ../../common/exec.c:213
+#: ../../common/exec.c:226
 #, c-format
 msgid "could not find a \"%s\" to execute"
 msgstr "未能找到一个 \"%s\" 来执行"
 
-#: ../../common/exec.c:269 ../../common/exec.c:308
+#: ../../common/exec.c:282 ../../common/exec.c:321
 #, c-format
 msgid "could not change directory to \"%s\": %m"
 msgstr "无法跳转到目录 \"%s\" 中: %m"
 
-#: ../../common/exec.c:286
+#: ../../common/exec.c:299
 #, c-format
 msgid "could not read symbolic link \"%s\": %m"
 msgstr "无法读取符号链接 \"%s\": %m"
 
-#: ../../common/exec.c:409
+#: ../../common/exec.c:422
+#, c-format
 msgid "%s() failed: %m"
 msgstr "%s()失败: %m"
 
-#: ../../common/exec.c:522 ../../common/exec.c:567 ../../common/exec.c:659
+#: ../../common/exec.c:560 ../../common/exec.c:605 ../../common/exec.c:697
 #: initdb.c:331
 #, c-format
 msgid "out of memory"
 msgstr "内存不足"
 
-#: ../../common/fe_memutils.c:35 ../../common/fe_memutils.c:75
-#: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:162
+#: ../../common/fe_memutils.c:41 ../../common/fe_memutils.c:81
+#: ../../common/fe_memutils.c:104 ../../common/fe_memutils.c:168
 #, c-format
 msgid "out of memory\n"
 msgstr "内存不足\n"
 
-#: ../../common/fe_memutils.c:92 ../../common/fe_memutils.c:154
+#: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:160
 #, c-format
 msgid "cannot duplicate null pointer (internal error)\n"
 msgstr "无法复制空指针 (内部错误)\n"
 
-#: ../../common/file_utils.c:87 ../../common/file_utils.c:451
+#: ../../common/fe_memutils.c:210
+#, fuzzy, c-format
+#| msgid "invalid large object write request size: %d"
+msgid "invalid memory allocation request size %zu + %zu\n"
+msgstr "无效的大对象写请求大小: %d"
+
+#: ../../common/fe_memutils.c:229
+#, fuzzy, c-format
+#| msgid "invalid large object write request size: %d"
+msgid "invalid memory allocation request size %zu * %zu\n"
+msgstr "无效的大对象写请求大小: %d"
+
+#: ../../common/file_utils.c:86 ../../common/file_utils.c:446
 #, c-format
 msgid "could not stat file \"%s\": %m"
 msgstr "无法取文件 \"%s\" 的状态: %m"
 
-#: ../../common/file_utils.c:166 ../../common/pgfnames.c:48
+#: ../../common/file_utils.c:161 ../../common/pgfnames.c:48
 #, c-format
 msgid "could not open directory \"%s\": %m"
 msgstr "无法打开目录 \"%s\": %m"
 
-#: ../../common/file_utils.c:200 ../../common/pgfnames.c:69
+#: ../../common/file_utils.c:195 ../../common/pgfnames.c:69
 #, c-format
 msgid "could not read directory \"%s\": %m"
 msgstr "无法读取目录 \"%s\": %m"
 
-#: ../../common/file_utils.c:232 ../../common/file_utils.c:291
-#: ../../common/file_utils.c:365
+#: ../../common/file_utils.c:227 ../../common/file_utils.c:286
+#: ../../common/file_utils.c:360
 #, c-format
 msgid "could not open file \"%s\": %m"
 msgstr "无法打开文件 \"%s\": %m"
 
-#: ../../common/file_utils.c:303 ../../common/file_utils.c:373
+#: ../../common/file_utils.c:298 ../../common/file_utils.c:368
 #, c-format
 msgid "could not fsync file \"%s\": %m"
 msgstr "无法 fsync 文件 \"%s\": %m"
 
-#: ../../common/file_utils.c:383
+#: ../../common/file_utils.c:378
 #, c-format
 msgid "could not rename file \"%s\" to \"%s\": %m"
 msgstr "无法把文件 \"%s\" 重命名为 \"%s\": %m"
@@ -212,12 +225,12 @@ msgstr "子进程被信号 %d 终止: %s"
 msgid "child process exited with unrecognized status %d"
 msgstr "子进程已退出, 未知状态 %d"
 
-#: ../../port/dirmod.c:221
+#: ../../port/dirmod.c:247
 #, c-format
 msgid "could not set junction for \"%s\": %s\n"
 msgstr "无法为 \"%s\"设置连接: %s\n"
 
-#: ../../port/dirmod.c:298
+#: ../../port/dirmod.c:324
 #, c-format
 msgid "could not get junction for \"%s\": %s\n"
 msgstr "无法为\"%s\"得到连接: %s\n"
@@ -351,6 +364,7 @@ msgid "selecting default shared_buffers ... "
 msgstr "选择默认共享缓冲区大小 (shared_buffers) ... "
 
 #: initdb.c:1024
+#, c-format
 msgid "selecting default time zone ... "
 msgstr "选择默认时区 ... "
 
@@ -611,6 +625,7 @@ msgid "  -N, --no-sync             do not wait for changes to be written safely 
 msgstr "  -N, --no-sync             不用等待变化安全写入磁盘\n"
 
 #: initdb.c:2274
+#, c-format
 msgid "      --no-instructions     do not print instructions for next steps\n"
 msgstr "      --no-instructions     不要打印后续步骤的说明\n"
 
@@ -673,6 +688,7 @@ msgid "invalid authentication method \"%s\" for \"%s\" connections"
 msgstr "无效认证方法 \"%s\" 用于 \"%s\" 连接"
 
 #: initdb.c:2327
+#, c-format
 msgid "must specify a password for the superuser to enable password authentication"
 msgstr "为了启动密码认证, 你需要为超级用户指定一个口令"
 
@@ -693,6 +709,7 @@ msgstr ""
 "环境变量 PGDATA.\n"
 
 #: initdb.c:2368
+#, c-format
 msgid "could not set environment"
 msgstr "无法设置环境"
 
@@ -791,14 +808,17 @@ msgid "The default database encoding has accordingly been set to \"%s\".\n"
 msgstr "默认的数据库编码已经相应的设置为 \"%s\".\n"
 
 #: initdb.c:2555
+#, c-format
 msgid "could not find suitable text search configuration for locale \"%s\""
 msgstr "无法为本地化语言环境\"%s\"找到合适的文本搜索配置"
 
 #: initdb.c:2566
+#, c-format
 msgid "suitable text search configuration for locale \"%s\" is unknown"
 msgstr "对于本地化语言环境\"%s\"合适的文本搜索配置未知"
 
 #: initdb.c:2571
+#, c-format
 msgid "specified text search configuration \"%s\" might not match locale \"%s\""
 msgstr "所指定的文本搜索配置\"%s\"可能与本地语言环境\"%s\"不匹配"
 
@@ -1001,4 +1021,3 @@ msgstr ""
 "\n"
 "    %s\n"
 "\n"
-

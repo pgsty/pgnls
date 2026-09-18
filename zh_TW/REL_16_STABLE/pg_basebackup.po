@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_basebackup (PostgreSQL) 16\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2023-09-11 20:48+0000\n"
+"POT-Creation-Date: 2026-09-17 19:17+0000\n"
 "PO-Revision-Date: 2023-11-06 08:49+0800\n"
 "Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
 "Language-Team: \n"
@@ -41,8 +41,8 @@ msgstr "提示: "
 
 #: ../../common/compression.c:132 ../../common/compression.c:141
 #: ../../common/compression.c:150 bbstreamer_gzip.c:116 bbstreamer_gzip.c:249
-#: bbstreamer_lz4.c:100 bbstreamer_lz4.c:298 bbstreamer_zstd.c:129
-#: bbstreamer_zstd.c:284
+#: bbstreamer_lz4.c:100 bbstreamer_lz4.c:298 bbstreamer_zstd.c:126
+#: bbstreamer_zstd.c:281
 #, c-format
 msgid "this build does not support compression with %s"
 msgstr "此版本不支援使用 %s 進行壓縮"
@@ -117,22 +117,32 @@ msgstr "壓縮演算法 \"%s\" 不支援長距離模式"
 # utils/init/miscinit.c:244 utils/misc/guc.c:1898 utils/misc/guc.c:1911
 # utils/misc/guc.c:1924 utils/mmgr/aset.c:337 utils/mmgr/aset.c:503
 # utils/mmgr/aset.c:700 utils/mmgr/aset.c:893 utils/mmgr/portalmem.c:75
-#: ../../common/fe_memutils.c:35 ../../common/fe_memutils.c:75
-#: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:161
+#: ../../common/fe_memutils.c:41 ../../common/fe_memutils.c:81
+#: ../../common/fe_memutils.c:104 ../../common/fe_memutils.c:167
 #, c-format
 msgid "out of memory\n"
 msgstr "記憶體不足\n"
 
 # common.c:78
-#: ../../common/fe_memutils.c:92 ../../common/fe_memutils.c:153
+#: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:159
 #, c-format
 msgid "cannot duplicate null pointer (internal error)\n"
 msgstr "無法複製 null 指標(內部錯誤)\n"
 
+#: ../../common/fe_memutils.c:209
+#, c-format
+msgid "invalid memory allocation request size %zu + %zu\n"
+msgstr ""
+
+#: ../../common/fe_memutils.c:228
+#, c-format
+msgid "invalid memory allocation request size %zu * %zu\n"
+msgstr ""
+
 # access/transam/xlog.c:1936 access/transam/xlog.c:2038
 # access/transam/xlog.c:5291
 #: ../../common/file_utils.c:87 ../../common/file_utils.c:447
-#: pg_receivewal.c:319 pg_recvlogical.c:339
+#: pg_receivewal.c:319 pg_recvlogical.c:343
 #, c-format
 msgid "could not stat file \"%s\": %m"
 msgstr "無法取得檔案 \"%s\" 的狀態: %m"
@@ -223,7 +233,7 @@ msgstr "記憶體不足"
 # postmaster/postmaster.c:3430 utils/init/miscinit.c:832
 # utils/init/miscinit.c:841 utils/misc/guc.c:4934 utils/misc/guc.c:4998
 #: ../../fe_utils/recovery_gen.c:124 bbstreamer_file.c:121
-#: bbstreamer_file.c:258 pg_basebackup.c:1407 pg_basebackup.c:1701
+#: bbstreamer_file.c:270 pg_basebackup.c:1407 pg_basebackup.c:1701
 #, c-format
 msgid "could not write to file \"%s\": %m"
 msgstr "無法寫入檔案 \"%s\": %m"
@@ -232,7 +242,7 @@ msgstr "無法寫入檔案 \"%s\": %m"
 # access/transam/xlog.c:1646 access/transam/xlog.c:2911
 # access/transam/xlog.c:5308 access/transam/xlog.c:5426
 # postmaster/postmaster.c:3366
-#: ../../fe_utils/recovery_gen.c:133 bbstreamer_file.c:93 bbstreamer_file.c:360
+#: ../../fe_utils/recovery_gen.c:133 bbstreamer_file.c:93 bbstreamer_file.c:374
 #: pg_basebackup.c:1471 pg_basebackup.c:1680
 #, c-format
 msgid "could not create file \"%s\": %m"
@@ -240,35 +250,46 @@ msgstr "無法建立檔案 \"%s\": %m"
 
 # access/transam/slru.c:680 access/transam/xlog.c:1567
 # access/transam/xlog.c:1691 access/transam/xlog.c:3013
-#: bbstreamer_file.c:138 pg_recvlogical.c:633
+#: bbstreamer_file.c:138 bbstreamer_file.c:279 pg_recvlogical.c:637
 #, c-format
 msgid "could not close file \"%s\": %m"
 msgstr "無法關閉檔案 \"%s\": %m"
 
-#: bbstreamer_file.c:275
+#: bbstreamer_file.c:219 bbstreamer_tar.c:299
+#, fuzzy, c-format
+#| msgid "tar member has empty name"
+msgid "tar member has unsafe path name: \"%s\""
+msgstr "tar 成員的名稱是空的"
+
+#: bbstreamer_file.c:244
+#, c-format
+msgid "link target has unsafe path name: \"%s\""
+msgstr ""
+
+#: bbstreamer_file.c:289
 #, c-format
 msgid "unexpected state while extracting archive"
 msgstr "解壓縮封存檔時出現非預期的狀況"
 
 # commands/tablespace.c:154 commands/tablespace.c:162
 # commands/tablespace.c:168
-#: bbstreamer_file.c:320 pg_basebackup.c:687 pg_basebackup.c:731
+#: bbstreamer_file.c:334 pg_basebackup.c:687 pg_basebackup.c:731
 #, c-format
 msgid "could not create directory \"%s\": %m"
 msgstr "無法建立目錄 \"%s\": %m"
 
 # commands/tablespace.c:325 commands/tablespace.c:969
-#: bbstreamer_file.c:325
+#: bbstreamer_file.c:339
 #, c-format
 msgid "could not set permissions on directory \"%s\": %m"
 msgstr "無法設定目錄 \"%s\" 的權限: %m"
 
-#: bbstreamer_file.c:344
+#: bbstreamer_file.c:358
 #, c-format
 msgid "could not create symbolic link from \"%s\" to \"%s\": %m"
 msgstr "無法建立符號連結 \"%s\" 至 \"%s\"：%m"
 
-#: bbstreamer_file.c:364
+#: bbstreamer_file.c:378
 #, c-format
 msgid "could not set permissions on file \"%s\": %m"
 msgstr "無法設定檔案 \"%s\" 的權限: %m"
@@ -308,7 +329,7 @@ msgstr "無法關閉壓縮檔 \"%s\": %m"
 msgid "could not initialize compression library"
 msgstr "無法初始化壓縮程式庫"
 
-#: bbstreamer_gzip.c:296 bbstreamer_lz4.c:354 bbstreamer_zstd.c:329
+#: bbstreamer_gzip.c:296 bbstreamer_lz4.c:354 bbstreamer_zstd.c:326
 #, c-format
 msgid "could not decompress data: %s"
 msgstr "無法解壓縮資料: %s"
@@ -328,7 +349,7 @@ msgstr "無法建立 lz4 壓縮 context: %s"
 msgid "could not write lz4 header: %s"
 msgstr "無法寫入 lz4 標頭: %s"
 
-#: bbstreamer_lz4.c:189 bbstreamer_zstd.c:181 bbstreamer_zstd.c:223
+#: bbstreamer_lz4.c:189 bbstreamer_zstd.c:178 bbstreamer_zstd.c:220
 #, c-format
 msgid "could not compress data: %s"
 msgstr "無法壓縮資料: %s"
@@ -343,22 +364,22 @@ msgstr "無法完成 lz4 壓縮: %s"
 msgid "could not initialize compression library: %s"
 msgstr "無法初始化壓縮程式庫: %s"
 
-#: bbstreamer_tar.c:244
+#: bbstreamer_tar.c:245
 #, c-format
 msgid "tar file trailer exceeds 2 blocks"
 msgstr "tar 檔的尾部超過 2 個區塊"
 
-#: bbstreamer_tar.c:249
+#: bbstreamer_tar.c:250
 #, c-format
 msgid "unexpected state while parsing tar archive"
 msgstr "解析 tar 封存檔時出現非預期的狀態"
 
-#: bbstreamer_tar.c:296
+#: bbstreamer_tar.c:297
 #, c-format
 msgid "tar member has empty name"
 msgstr "tar 成員的名稱是空的"
 
-#: bbstreamer_tar.c:328
+#: bbstreamer_tar.c:332
 #, c-format
 msgid "COPY stream ended before last file was finished"
 msgstr "COPY 串流在最後一個檔案完成之前結束"
@@ -378,12 +399,12 @@ msgstr "無法設定 zstd 壓縮等級至 %d: %s"
 msgid "could not set compression worker count to %d: %s"
 msgstr "無法設定壓縮工作數量至 %d: %s"
 
-#: bbstreamer_zstd.c:116
+#: bbstreamer_zstd.c:115
 #, c-format
 msgid "could not enable long-distance mode: %s"
 msgstr "無法啟動 long-distance 模式: %s"
 
-#: bbstreamer_zstd.c:275
+#: bbstreamer_zstd.c:272
 #, c-format
 msgid "could not create zstd decompression context"
 msgstr "無法建立 zstd 解壓縮 context"
@@ -848,8 +869,8 @@ msgstr "傳輸速率 \"%s\" 超出範圍"
 msgid "could not get COPY data stream: %s"
 msgstr "無法取得 COPY 資料流: %s"
 
-#: pg_basebackup.c:1013 pg_recvlogical.c:436 pg_recvlogical.c:608
-#: receivelog.c:973
+#: pg_basebackup.c:1013 pg_recvlogical.c:440 pg_recvlogical.c:612
+#: receivelog.c:979
 #, c-format
 msgid "could not read COPY data: %s"
 msgstr "無法讀取 COPY 資料: %s"
@@ -954,9 +975,9 @@ msgstr "正在啟動基本備份，等待檢查點完成"
 msgid "waiting for checkpoint"
 msgstr "等待檢查點"
 
-#: pg_basebackup.c:1902 pg_recvlogical.c:260 receivelog.c:543 receivelog.c:582
-#: streamutil.c:288 streamutil.c:361 streamutil.c:413 streamutil.c:501
-#: streamutil.c:653 streamutil.c:698
+#: pg_basebackup.c:1902 pg_recvlogical.c:264 receivelog.c:542 receivelog.c:588
+#: streamutil.c:288 streamutil.c:361 streamutil.c:413 streamutil.c:502
+#: streamutil.c:658 streamutil.c:703
 #, c-format
 msgid "could not send replication command \"%s\": %s"
 msgstr "無法傳送複寫命令 \"%s\": %s"
@@ -1107,15 +1128,15 @@ msgstr "無效的 wal-method 選項 \"%s\"，必須為 \"fetch\"、\"stream\" �
 #: pg_basebackup.c:2656 pg_basebackup.c:2668 pg_basebackup.c:2679
 #: pg_basebackup.c:2687 pg_receivewal.c:748 pg_receivewal.c:760
 #: pg_receivewal.c:767 pg_receivewal.c:776 pg_receivewal.c:783
-#: pg_receivewal.c:793 pg_recvlogical.c:835 pg_recvlogical.c:847
-#: pg_recvlogical.c:857 pg_recvlogical.c:864 pg_recvlogical.c:871
-#: pg_recvlogical.c:878 pg_recvlogical.c:885 pg_recvlogical.c:892
-#: pg_recvlogical.c:899 pg_recvlogical.c:906
+#: pg_receivewal.c:793 pg_recvlogical.c:839 pg_recvlogical.c:851
+#: pg_recvlogical.c:861 pg_recvlogical.c:868 pg_recvlogical.c:875
+#: pg_recvlogical.c:882 pg_recvlogical.c:889 pg_recvlogical.c:896
+#: pg_recvlogical.c:903 pg_recvlogical.c:910
 #, c-format
 msgid "Try \"%s --help\" for more information."
 msgstr "用 \"%s --help\" 取得更多資訊。"
 
-#: pg_basebackup.c:2468 pg_receivewal.c:758 pg_recvlogical.c:845
+#: pg_basebackup.c:2468 pg_receivewal.c:758 pg_recvlogical.c:849
 #, c-format
 msgid "too many command-line arguments (first is \"%s\")"
 msgstr "命令列參數過多(第一個是 \"%s\")"
@@ -1392,7 +1413,7 @@ msgstr "無法檢查檔案 \"%s\": 此版本不支援 %s 壓縮"
 msgid "starting log streaming at %X/%X (timeline %u)"
 msgstr "開始日誌串流，位置 %X/%X (時間軸 %u)"
 
-#: pg_receivewal.c:693 pg_recvlogical.c:783
+#: pg_receivewal.c:693 pg_recvlogical.c:787
 #, c-format
 msgid "could not parse end position \"%s\""
 msgstr "無法解析結束位置 \"%s\""
@@ -1422,23 +1443,23 @@ msgstr "尚未支援 %s 壓縮"
 msgid "replication connection using slot \"%s\" is unexpectedly database specific"
 msgstr "使用插槽 \"%s\" 的複寫連線意外的只能用於特定資料庫"
 
-#: pg_receivewal.c:878 pg_recvlogical.c:954
+#: pg_receivewal.c:878 pg_recvlogical.c:958
 #, c-format
 msgid "dropping replication slot \"%s\""
 msgstr "刪除複寫插槽 \"%s\""
 
-#: pg_receivewal.c:889 pg_recvlogical.c:964
+#: pg_receivewal.c:889 pg_recvlogical.c:968
 #, c-format
 msgid "creating replication slot \"%s\""
 msgstr "建立複寫插槽 \"%s\""
 
-#: pg_receivewal.c:918 pg_recvlogical.c:988
+#: pg_receivewal.c:918 pg_recvlogical.c:992
 #, c-format
 msgid "disconnected"
 msgstr "連線中斷"
 
 #. translator: check source for value for %d
-#: pg_receivewal.c:922 pg_recvlogical.c:992
+#: pg_receivewal.c:922 pg_recvlogical.c:996
 #, c-format
 msgid "disconnected; waiting %d seconds to try again"
 msgstr "連線中斷，等待 %d 秒後重試"
@@ -1530,112 +1551,112 @@ msgstr "無法傳送反饋封包: %s"
 msgid "starting log streaming at %X/%X (slot %s)"
 msgstr "開始日誌串流，位置 %X/%X (插槽 %s)"
 
-#: pg_recvlogical.c:269
+#: pg_recvlogical.c:273
 #, c-format
 msgid "streaming initiated"
 msgstr "已啟動串流"
 
 # utils/init/miscinit.c:533
-#: pg_recvlogical.c:333
+#: pg_recvlogical.c:337
 #, c-format
 msgid "could not open log file \"%s\": %m"
 msgstr "無法開啟日誌檔 \"%s\": %m"
 
-#: pg_recvlogical.c:362 receivelog.c:882
+#: pg_recvlogical.c:366 receivelog.c:888
 #, c-format
 msgid "invalid socket: %s"
 msgstr "無效的 socket: %s"
 
 # fe-misc.c:991
-#: pg_recvlogical.c:415 receivelog.c:910
+#: pg_recvlogical.c:419 receivelog.c:916
 #, c-format
 msgid "%s() failed: %m"
 msgstr "%s() 失敗: %m"
 
 # fe-misc.c:610
 # fe-misc.c:701
-#: pg_recvlogical.c:422 receivelog.c:959
+#: pg_recvlogical.c:426 receivelog.c:965
 #, c-format
 msgid "could not receive data from WAL stream: %s"
 msgstr "無法從 WAL 串流接收資料: %s"
 
-#: pg_recvlogical.c:464 pg_recvlogical.c:515 receivelog.c:1003
-#: receivelog.c:1066
+#: pg_recvlogical.c:468 pg_recvlogical.c:519 receivelog.c:1009
+#: receivelog.c:1072
 #, c-format
 msgid "streaming header too small: %d"
 msgstr "串流標頭太小: %d"
 
-#: pg_recvlogical.c:499 receivelog.c:843
+#: pg_recvlogical.c:503 receivelog.c:849
 #, c-format
 msgid "unrecognized streaming header: \"%c\""
 msgstr "無法識別的串流標頭: \"%c\""
 
-#: pg_recvlogical.c:553 pg_recvlogical.c:565
+#: pg_recvlogical.c:557 pg_recvlogical.c:569
 #, c-format
 msgid "could not write %d bytes to log file \"%s\": %m"
 msgstr "無法寫入 %d 個位元組至日誌檔 \"%s\": %m"
 
-#: pg_recvlogical.c:619 receivelog.c:642 receivelog.c:679
+#: pg_recvlogical.c:623 receivelog.c:648 receivelog.c:685
 #, c-format
 msgid "unexpected termination of replication stream: %s"
 msgstr "複寫串流意外終止: %s"
 
-#: pg_recvlogical.c:778
+#: pg_recvlogical.c:782
 #, c-format
 msgid "could not parse start position \"%s\""
 msgstr "無法解析開始位罝: \"%s\""
 
-#: pg_recvlogical.c:856
+#: pg_recvlogical.c:860
 #, c-format
 msgid "no slot specified"
 msgstr "未指定插槽"
 
-#: pg_recvlogical.c:863
+#: pg_recvlogical.c:867
 #, c-format
 msgid "no target file specified"
 msgstr "未指定目標檔"
 
-#: pg_recvlogical.c:870
+#: pg_recvlogical.c:874
 #, c-format
 msgid "no database specified"
 msgstr "未指定資料庫"
 
-#: pg_recvlogical.c:877
+#: pg_recvlogical.c:881
 #, c-format
 msgid "at least one action needs to be specified"
 msgstr "至少需要指定一個操作"
 
-#: pg_recvlogical.c:884
+#: pg_recvlogical.c:888
 #, c-format
 msgid "cannot use --create-slot or --start together with --drop-slot"
 msgstr "--create-slot 或 --start 無法和 --drop-slot 一起使用"
 
-#: pg_recvlogical.c:891
+#: pg_recvlogical.c:895
 #, c-format
 msgid "cannot use --create-slot or --drop-slot together with --startpos"
 msgstr "--create-slot 或 --drop-slot 無法和 --startpos 一起使用"
 
-#: pg_recvlogical.c:898
+#: pg_recvlogical.c:902
 #, c-format
 msgid "--endpos may only be specified with --start"
 msgstr "--endpos 只能與 --start 一同使用"
 
-#: pg_recvlogical.c:905
+#: pg_recvlogical.c:909
 #, c-format
 msgid "--two-phase may only be specified with --create-slot"
 msgstr "--two-phase 只能與 --create-slot 一同使用"
 
-#: pg_recvlogical.c:938
+#: pg_recvlogical.c:942
 #, c-format
 msgid "could not establish database-specific replication connection"
 msgstr "無法建立特定資料庫的複寫連線"
 
-#: pg_recvlogical.c:1032
+#: pg_recvlogical.c:1036
 #, c-format
 msgid "end position %X/%X reached by keepalive"
 msgstr ""
 
-#: pg_recvlogical.c:1035
+#: pg_recvlogical.c:1039
 #, c-format
 msgid "end position %X/%X reached by WAL record at %X/%X"
 msgstr ""
@@ -1681,7 +1702,7 @@ msgstr "無法開啟 write-head 日誌檔 \"%s\": %s"
 msgid "not renaming \"%s\", segment is not complete"
 msgstr "未更名 \"%s\"，片段未完成"
 
-#: receivelog.c:227 receivelog.c:317 receivelog.c:688
+#: receivelog.c:227 receivelog.c:317 receivelog.c:694
 #, c-format
 msgid "could not close file \"%s\": %s"
 msgstr "無法關閉檔案 \"%s\": %s"
@@ -1711,67 +1732,67 @@ msgstr "不相容的伺服器版本 %s；客戶端不支援來自舊於 %s 的�
 msgid "incompatible server version %s; client does not support streaming from server versions newer than %s"
 msgstr "不相容的伺服器版本 %s；客戶端不支援來自新於 %s 的伺服器版本的串流"
 
-#: receivelog.c:508
+#: receivelog.c:505
 #, c-format
 msgid "system identifier does not match between base backup and streaming connection"
 msgstr "基本備份和串流連線之間的系統識別碼不一致"
 
-#: receivelog.c:516
+#: receivelog.c:513
 #, c-format
 msgid "starting timeline %u is not present in the server"
 msgstr "伺服器中不存在起始時間軸 %u"
 
-#: receivelog.c:555
+#: receivelog.c:554
 #, c-format
 msgid "unexpected response to TIMELINE_HISTORY command: got %d rows and %d fields, expected %d rows and %d fields"
 msgstr "TIMELINE_HISTORY 命令出現非預回應: 收到 %d 列和 %d 欄，預期 %d 列和 %d 欄"
 
-#: receivelog.c:626
+#: receivelog.c:632
 #, c-format
 msgid "server reported unexpected next timeline %u, following timeline %u"
 msgstr "伺服器回報非預期的下一個時間軸 %u，所跟隨的時間軸 %u"
 
-#: receivelog.c:632
+#: receivelog.c:638
 #, c-format
 msgid "server stopped streaming timeline %u at %X/%X, but reported next timeline %u to begin at %X/%X"
 msgstr "伺服器停止串流時間軸 %u，位置 %X/%X，但是回報下一個時間軸 %u 將從 %X/%X 開始"
 
-#: receivelog.c:672
+#: receivelog.c:678
 #, c-format
 msgid "replication stream was terminated before stop point"
 msgstr "複寫串流在停止點之前被終結"
 
-#: receivelog.c:718
+#: receivelog.c:724
 #, c-format
 msgid "unexpected result set after end-of-timeline: got %d rows and %d fields, expected %d rows and %d fields"
 msgstr "時間軸結束後出現意外的結果集: 收到 %d 列和 %d 欄，預期 %d 列和 %d 欄"
 
-#: receivelog.c:727
+#: receivelog.c:733
 #, c-format
 msgid "could not parse next timeline's starting point \"%s\""
 msgstr "無法解析下一個時間軸的啟始點 \"%s\""
 
-#: receivelog.c:775 receivelog.c:1022 walmethods.c:1201
+#: receivelog.c:781 receivelog.c:1028 walmethods.c:1201
 #, c-format
 msgid "could not fsync file \"%s\": %s"
 msgstr "無法 fsync 檔案 \"%s\": %s"
 
-#: receivelog.c:1083
+#: receivelog.c:1089
 #, c-format
 msgid "received write-ahead log record for offset %u with no file open"
 msgstr "收到 write-ahead 日誌記錄給偏移 %u 但無開啟的檔案"
 
-#: receivelog.c:1093
+#: receivelog.c:1099
 #, c-format
 msgid "got WAL data offset %08x, expected %08x"
 msgstr "收到 WAL 資料偏移 %08x，預期 %08x"
 
-#: receivelog.c:1128
+#: receivelog.c:1134
 #, c-format
 msgid "could not write %d bytes to WAL file \"%s\": %s"
 msgstr "無法將 %d 個位元組寫入 WAL 檔 \"%s\": %s"
 
-#: receivelog.c:1153 receivelog.c:1193 receivelog.c:1222
+#: receivelog.c:1159 receivelog.c:1199 receivelog.c:1228
 #, c-format
 msgid "could not send copy-end packet: %s"
 msgstr "無法傳送 copy-end 封包: %s"
@@ -1831,32 +1852,32 @@ msgstr "無法解析群組存取標誌: %s"
 msgid "could not identify system: got %d rows and %d fields, expected %d rows and %d or more fields"
 msgstr "無法識別系統: 收到 %d 列和 %d 欄，預期 %d 列和 %d 或更多欄"
 
-#: streamutil.c:510
+#: streamutil.c:511
 #, c-format
 msgid "could not read replication slot \"%s\": got %d rows and %d fields, expected %d rows and %d fields"
 msgstr "無法讀取複寫插槽 \"%s\": 收到 %d 列和 %d 欄，預期 %d 列和 %d 欄"
 
-#: streamutil.c:522
+#: streamutil.c:523
 #, c-format
 msgid "replication slot \"%s\" does not exist"
 msgstr "複寫插槽 \"%s\" 不存在"
 
-#: streamutil.c:533
+#: streamutil.c:534
 #, c-format
 msgid "expected a physical replication slot, got type \"%s\" instead"
 msgstr "預期是物理複寫槽位卻得到類型 \"%s\""
 
-#: streamutil.c:547
+#: streamutil.c:548
 #, c-format
 msgid "could not parse restart_lsn \"%s\" for replication slot \"%s\""
 msgstr "無法解析複寫槽位 \"%2$s\" 的 restart_lsn \"%1$s\""
 
-#: streamutil.c:664
+#: streamutil.c:669
 #, c-format
 msgid "could not create replication slot \"%s\": got %d rows and %d fields, expected %d rows and %d fields"
 msgstr "無法建立複寫插槽 \"%s\": 收到 %d 列和 %d 欄，預期 %d 列和 %d 欄"
 
-#: streamutil.c:708
+#: streamutil.c:713
 #, c-format
 msgid "could not drop replication slot \"%s\": got %d rows and %d fields, expected %d rows and %d fields"
 msgstr "無法刪除複寫插槽 \"%s\": 收到 %d 列和 %d 欄，預期 %d 列和 %d 欄"

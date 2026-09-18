@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_rewind (PostgreSQL) 14\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2021-08-14 05:48+0000\n"
+"POT-Creation-Date: 2026-09-17 19:49+0000\n"
 "PO-Revision-Date: 2021-08-15 10:00+0800\n"
 "Last-Translator: Jie Zhang <zhangjie2@fujitsu.com>\n"
 "Language-Team: Chinese (Simplified) <zhangjie2@fujitsu.com>\n"
@@ -33,16 +33,28 @@ msgstr "错误: "
 msgid "warning: "
 msgstr "警告: "
 
-#: ../../common/fe_memutils.c:35 ../../common/fe_memutils.c:75
-#: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:162
+#: ../../common/fe_memutils.c:41 ../../common/fe_memutils.c:81
+#: ../../common/fe_memutils.c:104 ../../common/fe_memutils.c:168
 #, c-format
 msgid "out of memory\n"
 msgstr "内存不足\n"
 
-#: ../../common/fe_memutils.c:92 ../../common/fe_memutils.c:154
+#: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:160
 #, c-format
 msgid "cannot duplicate null pointer (internal error)\n"
 msgstr "无法复制空指针 (内部错误)\n"
+
+#: ../../common/fe_memutils.c:210
+#, fuzzy, c-format
+#| msgid "invalid large object write request size: %d"
+msgid "invalid memory allocation request size %zu + %zu\n"
+msgstr "无效的大对象写请求大小: %d"
+
+#: ../../common/fe_memutils.c:229
+#, fuzzy, c-format
+#| msgid "invalid large object write request size: %d"
+msgid "invalid memory allocation request size %zu * %zu\n"
+msgstr "无效的大对象写请求大小: %d"
 
 #: ../../common/restricted_token.c:64
 #, c-format
@@ -99,7 +111,7 @@ msgstr "\"%s\"的意外文件大小：%lld而不是%lld"
 msgid "could not open file \"%s\" restored from archive: %m"
 msgstr "无法打开从存档还原的文件\"%s\"： %m"
 
-#: ../../fe_utils/archive.c:97 file_ops.c:417
+#: ../../fe_utils/archive.c:97 file_ops.c:353 file_ops.c:440
 #, c-format
 msgid "could not stat file \"%s\": %m"
 msgstr "无法取文件 \"%s\" 的状态: %m"
@@ -116,13 +128,13 @@ msgstr "无法从存档还原文件\"%s\""
 
 #: ../../fe_utils/recovery_gen.c:35 ../../fe_utils/recovery_gen.c:49
 #: ../../fe_utils/recovery_gen.c:77 ../../fe_utils/recovery_gen.c:100
-#: ../../fe_utils/recovery_gen.c:171 parsexlog.c:77 parsexlog.c:135
-#: parsexlog.c:195
+#: ../../fe_utils/recovery_gen.c:171 parsexlog.c:77 parsexlog.c:137
+#: parsexlog.c:199
 #, c-format
 msgid "out of memory"
 msgstr "内存不足"
 
-#: ../../fe_utils/recovery_gen.c:134 parsexlog.c:308
+#: ../../fe_utils/recovery_gen.c:134 parsexlog.c:331
 #, c-format
 msgid "could not open file \"%s\": %m"
 msgstr "无法打开文件 \"%s\": %m"
@@ -137,142 +149,178 @@ msgstr "无法写入文件 \"%s\": %m"
 msgid "could not create file \"%s\": %m"
 msgstr "无法创建文件 \"%s\": %m"
 
-#: file_ops.c:67
+#: file_ops.c:52
+#, c-format
+msgid "target file path is unsafe for open: \"%s\""
+msgstr ""
+
+#: file_ops.c:70
 #, c-format
 msgid "could not open target file \"%s\": %m"
 msgstr "无法打开目标文件\"%s\": %m"
 
-#: file_ops.c:81
+#: file_ops.c:84
 #, c-format
 msgid "could not close target file \"%s\": %m"
 msgstr "无法关闭目标文件\"%s\": %m"
 
-#: file_ops.c:101
+#: file_ops.c:104
 #, c-format
 msgid "could not seek in target file \"%s\": %m"
 msgstr "无法在目标文件\"%s\"中定位（seek）: %m"
 
-#: file_ops.c:117
+#: file_ops.c:120
 #, c-format
 msgid "could not write file \"%s\": %m"
 msgstr "无法写入文件 \"%s\": %m"
 
-#: file_ops.c:150 file_ops.c:177
+#: file_ops.c:153 file_ops.c:180
 #, c-format
 msgid "undefined file type for \"%s\""
 msgstr "不可识别的文件格式 \"%s\""
 
-#: file_ops.c:173
+#: file_ops.c:176
 #, c-format
 msgid "invalid action (CREATE) for regular file"
 msgstr "对常规文件无效的动作（CREATE）"
 
-#: file_ops.c:200
+#: file_ops.c:195
+#, c-format
+msgid "target file path is unsafe for removal: \"%s\""
+msgstr ""
+
+#: file_ops.c:206
 #, c-format
 msgid "could not remove file \"%s\": %m"
 msgstr "无法删除文件 \"%s\": %m"
 
 #: file_ops.c:218
+#, fuzzy, c-format
+#| msgid "could not open file \"%s\" for truncation: %m"
+msgid "target file path is unsafe for truncation: \"%s\""
+msgstr "无法打开文件\"%s\"用于截断：%m"
+
+#: file_ops.c:227
 #, c-format
 msgid "could not open file \"%s\" for truncation: %m"
 msgstr "无法打开文件\"%s\"用于截断：%m"
 
-#: file_ops.c:222
+#: file_ops.c:231
 #, c-format
 msgid "could not truncate file \"%s\" to %u: %m"
 msgstr "无法将文件\"%s\"截断为%u:%m"
 
-#: file_ops.c:238
+#: file_ops.c:243
+#, c-format
+msgid "target directory path is unsafe for directory creation: \"%s\""
+msgstr ""
+
+#: file_ops.c:251
 #, c-format
 msgid "could not create directory \"%s\": %m"
 msgstr "无法创建目录 \"%s\": %m"
 
-#: file_ops.c:252
+#: file_ops.c:261
+#, c-format
+msgid "target directory path is unsafe for directory removal: \"%s\""
+msgstr ""
+
+#: file_ops.c:269
 #, c-format
 msgid "could not remove directory \"%s\": %m"
 msgstr "无法删除目录 \"%s\": %m"
 
-#: file_ops.c:266
+#: file_ops.c:279
+#, c-format
+msgid "target symlink path is unsafe for creation: \"%s\""
+msgstr ""
+
+#: file_ops.c:286
 #, c-format
 msgid "could not create symbolic link at \"%s\": %m"
 msgstr "无法在\"%s\"创建符号链接: %m"
 
-#: file_ops.c:280
+#: file_ops.c:296
+#, c-format
+msgid "target symlink path is unsafe for removal: \"%s\""
+msgstr ""
+
+#: file_ops.c:303
 #, c-format
 msgid "could not remove symbolic link \"%s\": %m"
 msgstr "无法删除符号链接 \"%s\": %m"
 
-#: file_ops.c:326 file_ops.c:330
+#: file_ops.c:349
 #, c-format
 msgid "could not open file \"%s\" for reading: %m"
 msgstr "为了读取, 无法打开文件 \"%s\": %m"
 
-#: file_ops.c:341 local_source.c:107 parsexlog.c:346
+#: file_ops.c:364 local_source.c:107 parsexlog.c:369
 #, c-format
 msgid "could not read file \"%s\": %m"
 msgstr "无法读取文件 \"%s\": %m"
 
-#: file_ops.c:344 parsexlog.c:348
+#: file_ops.c:367 parsexlog.c:371
 #, c-format
 msgid "could not read file \"%s\": read %d of %zu"
 msgstr "无法读取文件\"%1$s\"：读取了%3$zu中的%2$d"
 
-#: file_ops.c:388
+#: file_ops.c:411
 #, c-format
 msgid "could not open directory \"%s\": %m"
 msgstr "无法打开目录 \"%s\": %m"
 
-#: file_ops.c:446
+#: file_ops.c:465
 #, c-format
 msgid "could not read symbolic link \"%s\": %m"
 msgstr "无法读取符号链接 \"%s\": %m"
 
-#: file_ops.c:449
+#: file_ops.c:468
 #, c-format
 msgid "symbolic link \"%s\" target is too long"
 msgstr "符号链接 \"%s\" 目标超长"
 
-#: file_ops.c:464
+#: file_ops.c:483
 #, c-format
 msgid "\"%s\" is a symbolic link, but symbolic links are not supported on this platform"
 msgstr "\"%s\"是一个符号链接，但是这个平台上不支持平台链接"
 
-#: file_ops.c:471
+#: file_ops.c:490
 #, c-format
 msgid "could not read directory \"%s\": %m"
 msgstr "无法读取目录 \"%s\": %m"
 
-#: file_ops.c:475
+#: file_ops.c:494
 #, c-format
 msgid "could not close directory \"%s\": %m"
 msgstr "无法关闭目录 \"%s\": %m"
 
-#: filemap.c:237
+#: filemap.c:299
 #, c-format
 msgid "data file \"%s\" in source is not a regular file"
 msgstr "源头的数据文件\"%s\"不是一个常规文件"
 
-#: filemap.c:242 filemap.c:275
+#: filemap.c:304 filemap.c:337
 #, c-format
 msgid "duplicate source file \"%s\""
 msgstr "复制源文件\"%s\""
 
-#: filemap.c:330
+#: filemap.c:392
 #, c-format
 msgid "unexpected page modification for non-regular file \"%s\""
 msgstr "非常规文件\"%s\"的意外页面修改"
 
-#: filemap.c:680 filemap.c:774
+#: filemap.c:742 filemap.c:844
 #, c-format
 msgid "unknown file type for \"%s\""
 msgstr "\"%s\"的未知文件类型"
 
-#: filemap.c:707
+#: filemap.c:777
 #, c-format
 msgid "file \"%s\" is of different type in source and target"
 msgstr "文件 \"%s\"在源和目标中的类型不同"
 
-#: filemap.c:779
+#: filemap.c:849
 #, c-format
 msgid "could not decide what to do with file \"%s\""
 msgstr "无法决定如何处理文件\"%s\""
@@ -417,32 +465,37 @@ msgstr "读取文件\"%s\"时遇到意料之外的EOF"
 msgid "could not close file \"%s\": %m"
 msgstr "无法关闭文件 \"%s\": %m"
 
-#: parsexlog.c:89 parsexlog.c:142
+#: parsexlog.c:89 parsexlog.c:144
 #, c-format
 msgid "could not read WAL record at %X/%X: %s"
 msgstr "无法读取%X/%X处的WAL记录：%s"
 
-#: parsexlog.c:93 parsexlog.c:145
+#: parsexlog.c:93 parsexlog.c:147
 #, c-format
 msgid "could not read WAL record at %X/%X"
 msgstr "无法读取%X/%X处的WAL记录"
 
-#: parsexlog.c:208
+#: parsexlog.c:106
+#, c-format
+msgid "end pointer %X/%X is not a valid end point; expected %X/%X"
+msgstr ""
+
+#: parsexlog.c:212
 #, c-format
 msgid "could not find previous WAL record at %X/%X: %s"
 msgstr "无法在%X/%X找到前一个WAL记录：%s"
 
-#: parsexlog.c:212
+#: parsexlog.c:216
 #, c-format
 msgid "could not find previous WAL record at %X/%X"
 msgstr "无法在%X/%X找到前一个WAL记录"
 
-#: parsexlog.c:337
+#: parsexlog.c:360
 #, c-format
 msgid "could not seek in file \"%s\": %m"
 msgstr "无法在文件\"%s\"进行查找: %m"
 
-#: parsexlog.c:429
+#: parsexlog.c:452
 #, c-format
 msgid "WAL record modifies a relation, but record type is not recognized: lsn: %X/%X, rmgr: %s, info: %02X"
 msgstr "WAL记录修改了一个关系，但是记录类型无法识别: lsn: %X/%X, rmgr: %s, info: %02X"
@@ -629,124 +682,124 @@ msgstr "服务器在时间线%3$u上的WAL位置%1$X/%2$X处发生了分歧"
 msgid "no rewind required"
 msgstr "不需要倒带（rewind）"
 
-#: pg_rewind.c:403
+#: pg_rewind.c:406
 #, c-format
 msgid "rewinding from last common checkpoint at %X/%X on timeline %u"
 msgstr "从时间线%3$u上%1$X/%2$X处的最后一个普通检查点倒带"
 
-#: pg_rewind.c:413
+#: pg_rewind.c:416
 #, c-format
 msgid "reading source file list"
 msgstr "读取源文件列表"
 
-#: pg_rewind.c:417
+#: pg_rewind.c:420
 #, c-format
 msgid "reading target file list"
 msgstr "读取目标文件列表"
 
-#: pg_rewind.c:426
+#: pg_rewind.c:429
 #, c-format
 msgid "reading WAL in target"
 msgstr "读取目标中的WAL"
 
-#: pg_rewind.c:447
+#: pg_rewind.c:450
 #, c-format
 msgid "need to copy %lu MB (total source directory size is %lu MB)"
 msgstr "需要复制 %lu MB（整个源目录的大小是 %lu MB）"
 
-#: pg_rewind.c:465
+#: pg_rewind.c:468
 #, c-format
 msgid "syncing target data directory"
 msgstr "正在同步目标数据目录"
 
-#: pg_rewind.c:481
+#: pg_rewind.c:484
 #, c-format
 msgid "Done!"
 msgstr "完成！"
 
-#: pg_rewind.c:564
+#: pg_rewind.c:567
 #, c-format
 msgid "no action decided for file \"%s\""
 msgstr "未决定对文件\"%s\"执行任何操作"
 
-#: pg_rewind.c:596
+#: pg_rewind.c:599
 #, c-format
 msgid "source system was modified while pg_rewind was running"
 msgstr "pg_rewind运行时修改了源系统"
 
-#: pg_rewind.c:600
+#: pg_rewind.c:603
 #, c-format
 msgid "creating backup label and updating control file"
 msgstr "正在创建备份标签并且更新控制文件"
 
-#: pg_rewind.c:650
+#: pg_rewind.c:653
 #, c-format
 msgid "source system was in unexpected state at end of rewind"
 msgstr "源系统在rewind结束时处于意外状态"
 
-#: pg_rewind.c:681
+#: pg_rewind.c:684
 #, c-format
 msgid "source and target clusters are from different systems"
 msgstr "源集簇和目标集簇来自不同的系统"
 
-#: pg_rewind.c:689
+#: pg_rewind.c:692
 #, c-format
 msgid "clusters are not compatible with this version of pg_rewind"
 msgstr "集簇与这个pg_rewind的版本不兼容"
 
-#: pg_rewind.c:699
+#: pg_rewind.c:702
 #, c-format
 msgid "target server needs to use either data checksums or \"wal_log_hints = on\""
 msgstr "目标服务器需要使用数据校验和或者让\"wal_log_hints = on\""
 
-#: pg_rewind.c:710
+#: pg_rewind.c:713
 #, c-format
 msgid "target server must be shut down cleanly"
 msgstr "目标服务器必须被干净地关闭"
 
-#: pg_rewind.c:720
+#: pg_rewind.c:723
 #, c-format
 msgid "source data directory must be shut down cleanly"
 msgstr "源数据目录必须被干净地关闭"
 
-#: pg_rewind.c:772
+#: pg_rewind.c:775
 #, c-format
 msgid "%*s/%s kB (%d%%) copied"
 msgstr "已复制%*s/%s kB (%d%%)"
 
-#: pg_rewind.c:835
+#: pg_rewind.c:838
 #, c-format
 msgid "invalid control file"
 msgstr "无效的控制文件"
 
-#: pg_rewind.c:919
+#: pg_rewind.c:920
 #, c-format
 msgid "could not find common ancestor of the source and target cluster's timelines"
 msgstr "无法找到源集簇和目标集簇的时间线的共同祖先"
 
-#: pg_rewind.c:960
+#: pg_rewind.c:961
 #, c-format
 msgid "backup label buffer too small"
 msgstr "备份标签缓冲太小"
 
-#: pg_rewind.c:983
+#: pg_rewind.c:984
 #, c-format
 msgid "unexpected control file CRC"
 msgstr "意料之外的控制文件CRC"
 
-#: pg_rewind.c:995
+#: pg_rewind.c:996
 #, c-format
 msgid "unexpected control file size %d, expected %d"
 msgstr "意料之外的控制文件大小%d，应该是%d"
 
-#: pg_rewind.c:1004
+#: pg_rewind.c:1005
 #, c-format
 msgid "WAL segment size must be a power of two between 1 MB and 1 GB, but the control file specifies %d byte"
 msgid_plural "WAL segment size must be a power of two between 1 MB and 1 GB, but the control file specifies %d bytes"
 msgstr[0] "WAL段大小必须是1 MB到1 GB之间的2的幂，但控制文件指定了%d字节"
 msgstr[1] "WAL段大小必须是1 MB到1 GB之间的2的幂，但控制文件指定了%d字节"
 
-#: pg_rewind.c:1043 pg_rewind.c:1101
+#: pg_rewind.c:1044 pg_rewind.c:1102
 #, c-format
 msgid ""
 "The program \"%s\" is needed by %s but was not found in the\n"
@@ -757,7 +810,7 @@ msgstr ""
 "但在与\"%3$s\"相同的目录中找不到该程序.\n"
 "检查您的安装."
 
-#: pg_rewind.c:1048 pg_rewind.c:1106
+#: pg_rewind.c:1049 pg_rewind.c:1107
 #, c-format
 msgid ""
 "The program \"%s\" was found by \"%s\"\n"
@@ -768,22 +821,22 @@ msgstr ""
 "但与%s的版本不同.\n"
 "检查您的安装."
 
-#: pg_rewind.c:1069
+#: pg_rewind.c:1070
 #, c-format
 msgid "restore_command is not set in the target cluster"
 msgstr "目标群集中未设置restore_command"
 
-#: pg_rewind.c:1112
+#: pg_rewind.c:1113
 #, c-format
 msgid "executing \"%s\" for target server to complete crash recovery"
 msgstr "对目标服务器执行\"%s\"以完成崩溃恢复"
 
-#: pg_rewind.c:1132
+#: pg_rewind.c:1133
 #, c-format
 msgid "postgres single-user mode in target cluster failed"
 msgstr "目标群集中的postgres单用户模式失败"
 
-#: pg_rewind.c:1133
+#: pg_rewind.c:1134
 #, c-format
 msgid "Command was: %s"
 msgstr "命令是: %s"
@@ -823,137 +876,136 @@ msgstr "历史文件中有无效数据"
 msgid "Timeline IDs must be less than child timeline's ID."
 msgstr "Timeline ID 必须小于子 timeline 的 ID."
 
-#: xlogreader.c:349
+#: xlogreader.c:323
 #, c-format
 msgid "invalid record offset at %X/%X"
 msgstr "%X/%X处有无效的记录偏移量"
 
-#: xlogreader.c:357
+#: xlogreader.c:331
 #, c-format
 msgid "contrecord is requested by %X/%X"
 msgstr "%X/%X位置处要求继续记录"
 
-#: xlogreader.c:398 xlogreader.c:695
+#: xlogreader.c:372 xlogreader.c:728
 #, c-format
 msgid "invalid record length at %X/%X: wanted %u, got %u"
 msgstr "%X/%X处有无效记录长度: 应该是%u, 但实际是%u"
 
-#: xlogreader.c:422
-#, c-format
-msgid "record length %u at %X/%X too long"
-msgstr "%2$X/%3$X处的记录长度%1$u太长"
-
-#: xlogreader.c:453
+#: xlogreader.c:443
 #, c-format
 msgid "there is no contrecord flag at %X/%X"
 msgstr "在%X/%X处没有继续记录标志"
 
-#: xlogreader.c:466
+#: xlogreader.c:456
 #, c-format
 msgid "invalid contrecord length %u (expected %lld) at %X/%X"
 msgstr "%3$X/%4$X处有无效的继续记录长度%1$u(应为 %2$lld)"
 
-#: xlogreader.c:703
+#: xlogreader.c:736
 #, c-format
 msgid "invalid resource manager ID %u at %X/%X"
 msgstr "%2$X/%3$X处有无效的资源管理器 ID %1$u"
 
-#: xlogreader.c:716 xlogreader.c:732
+#: xlogreader.c:749 xlogreader.c:765
 #, c-format
 msgid "record with incorrect prev-link %X/%X at %X/%X"
 msgstr "具有不正确向前链接%X/%X的记录出现在%X/%X"
 
-#: xlogreader.c:768
+#: xlogreader.c:803
 #, c-format
 msgid "incorrect resource manager data checksum in record at %X/%X"
 msgstr "在%X/%X处的记录中的资源管理器数据校验和不正确"
 
-#: xlogreader.c:805
+#: xlogreader.c:840
 #, c-format
 msgid "invalid magic number %04X in log segment %s, offset %u"
 msgstr "在日志段%2$s的偏移量%3$u处有无效的magic号%1$04X"
 
-#: xlogreader.c:819 xlogreader.c:860
+#: xlogreader.c:854 xlogreader.c:895
 #, c-format
 msgid "invalid info bits %04X in log segment %s, offset %u"
 msgstr "在日志段%2$s的偏移量%3$u处有无效的info位%1$04X"
 
-#: xlogreader.c:834
+#: xlogreader.c:869
 #, c-format
 msgid "WAL file is from different database system: WAL file database system identifier is %llu, pg_control database system identifier is %llu"
 msgstr "WAL文件来自于不同的数据库系统：WAL文件数据库系统标识符是%llu，pg_control数据库系统标识符是%llu"
 
-#: xlogreader.c:842
+#: xlogreader.c:877
 #, c-format
 msgid "WAL file is from different database system: incorrect segment size in page header"
 msgstr "WAL文件来自于不同的数据库系统：页头部中有不正确的段大小"
 
-#: xlogreader.c:848
+#: xlogreader.c:883
 #, c-format
 msgid "WAL file is from different database system: incorrect XLOG_BLCKSZ in page header"
 msgstr "WAL文件来自于不同的数据库系统：页头部中有不正确的XLOG_BLCKSZ"
 
-#: xlogreader.c:879
+#: xlogreader.c:914
 #, c-format
 msgid "unexpected pageaddr %X/%X in log segment %s, offset %u"
 msgstr "在日志段%3$s的偏移量%4$u处有意料之外的pageaddr %1$X/%2$X"
 
-#: xlogreader.c:904
+#: xlogreader.c:939
 #, c-format
 msgid "out-of-sequence timeline ID %u (after %u) in log segment %s, offset %u"
 msgstr "在日志段%3$s的偏移量%4$u处有失序的时间线 ID %1$u（在%2$u之后）"
 
-#: xlogreader.c:1249
+#: xlogreader.c:1284
 #, c-format
 msgid "out-of-order block_id %u at %X/%X"
 msgstr "在%2$X/%3$X处有无序的block_id %1$u"
 
-#: xlogreader.c:1271
+#: xlogreader.c:1306
 #, c-format
 msgid "BKPBLOCK_HAS_DATA set, but no data included at %X/%X"
 msgstr "BKPBLOCK_HAS_DATA已被设置，但是在%X/%X处没有包括数据"
 
-#: xlogreader.c:1278
+#: xlogreader.c:1313
 #, c-format
 msgid "BKPBLOCK_HAS_DATA not set, but data length is %u at %X/%X"
 msgstr "BKPBLOCK_HAS_DATA没有被设置，但是在%2$X/%3$X处的数据长度为%1$u"
 
-#: xlogreader.c:1314
+#: xlogreader.c:1349
 #, c-format
 msgid "BKPIMAGE_HAS_HOLE set, but hole offset %u length %u block image length %u at %X/%X"
 msgstr "BKPIMAGE_HAS_HOLE已被设置，但是%4$X/%5$X处记录了洞偏移量为%1$u、长度为%2$u、块映像长度为%3$u"
 
-#: xlogreader.c:1330
+#: xlogreader.c:1365
 #, c-format
 msgid "BKPIMAGE_HAS_HOLE not set, but hole offset %u length %u at %X/%X"
 msgstr "BKPIMAGE_HAS_HOLE没有被设置，但是%3$X/%4$X处记录了洞偏移量为%1$u、长度为%2$u"
 
-#: xlogreader.c:1345
+#: xlogreader.c:1380
 #, c-format
 msgid "BKPIMAGE_IS_COMPRESSED set, but block image length %u at %X/%X"
 msgstr "BKPIMAGE_IS_COMPRESSED已被设置，但是%2$X/%3$X处记录的块映像长度为%1$u"
 
-#: xlogreader.c:1360
+#: xlogreader.c:1395
 #, c-format
 msgid "neither BKPIMAGE_HAS_HOLE nor BKPIMAGE_IS_COMPRESSED set, but block image length is %u at %X/%X"
 msgstr "BKPIMAGE_HAS_HOLE和BKPIMAGE_IS_COMPRESSED都没有被设置，但是%2$X/%3$X处记录的块映像长度为%1$u"
 
-#: xlogreader.c:1376
+#: xlogreader.c:1411
 #, c-format
 msgid "BKPBLOCK_SAME_REL set but no previous rel at %X/%X"
 msgstr "设置了BKPBLOCK_SAME_REL，但是在%X/%X位置没有记录先前的关系"
 
-#: xlogreader.c:1388
+#: xlogreader.c:1423
 #, c-format
 msgid "invalid block_id %u at %X/%X"
 msgstr "%2$X/%3$X处的block_id %1$u无效"
 
-#: xlogreader.c:1475
+#: xlogreader.c:1510
 #, c-format
 msgid "record with invalid length at %X/%X"
 msgstr "在%X/%X处的记录的长度无效"
 
-#: xlogreader.c:1564
+#: xlogreader.c:1599
 #, c-format
 msgid "invalid compressed image at %X/%X, block %d"
 msgstr "%X/%X处是块%d的无效压缩映像"
+
+#, c-format
+#~ msgid "record length %u at %X/%X too long"
+#~ msgstr "%2$X/%3$X处的记录长度%1$u太长"

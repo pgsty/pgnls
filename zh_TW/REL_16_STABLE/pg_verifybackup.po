@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_verifybackup (PostgreSQL) 16\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2023-09-11 20:47+0000\n"
+"POT-Creation-Date: 2026-09-17 19:15+0000\n"
 "PO-Revision-Date: 2023-11-06 08:50+0800\n"
 "Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
 "Language-Team: \n"
@@ -58,99 +58,109 @@ msgstr "提示: "
 # utils/init/miscinit.c:244 utils/misc/guc.c:1898 utils/misc/guc.c:1911
 # utils/misc/guc.c:1924 utils/mmgr/aset.c:337 utils/mmgr/aset.c:503
 # utils/mmgr/aset.c:700 utils/mmgr/aset.c:893 utils/mmgr/portalmem.c:75
-#: ../../common/fe_memutils.c:35 ../../common/fe_memutils.c:75
-#: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:161
+#: ../../common/fe_memutils.c:41 ../../common/fe_memutils.c:81
+#: ../../common/fe_memutils.c:104 ../../common/fe_memutils.c:167
 #, c-format
 msgid "out of memory\n"
 msgstr "記憶體用盡\n"
 
 # common.c:78
-#: ../../common/fe_memutils.c:92 ../../common/fe_memutils.c:153
+#: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:159
 #, c-format
 msgid "cannot duplicate null pointer (internal error)\n"
 msgstr "無法複製 null 指標(內部錯誤)\n"
 
-#: ../../common/jsonapi.c:1144
+#: ../../common/fe_memutils.c:209
+#, c-format
+msgid "invalid memory allocation request size %zu + %zu\n"
+msgstr ""
+
+#: ../../common/fe_memutils.c:228
+#, c-format
+msgid "invalid memory allocation request size %zu * %zu\n"
+msgstr ""
+
+#: ../../common/jsonapi.c:1147
 #, c-format
 msgid "Escape sequence \"\\%s\" is invalid."
 msgstr "無效的跳脫序列 \"\\%s\"。"
 
-#: ../../common/jsonapi.c:1147
+#: ../../common/jsonapi.c:1150
 #, c-format
 msgid "Character with value 0x%02x must be escaped."
 msgstr "必須跳脫值為 0x%02x 的字元。"
 
-#: ../../common/jsonapi.c:1150
+#: ../../common/jsonapi.c:1153
 #, c-format
 msgid "Expected end of input, but found \"%s\"."
 msgstr "預期輸入結束，但找到 \"%s\"。"
 
-#: ../../common/jsonapi.c:1153
+#: ../../common/jsonapi.c:1156
 #, c-format
 msgid "Expected array element or \"]\", but found \"%s\"."
 msgstr "預期是陣列元素或 \"]\"，但找到 \"%s\"。"
 
-#: ../../common/jsonapi.c:1156
+#: ../../common/jsonapi.c:1159
 #, c-format
 msgid "Expected \",\" or \"]\", but found \"%s\"."
 msgstr "預期是 \",\" 或 \"]\"，但找到 \"%s\"。"
 
-#: ../../common/jsonapi.c:1159
+#: ../../common/jsonapi.c:1162
 #, c-format
 msgid "Expected \":\", but found \"%s\"."
 msgstr "預期是 \":\"，但找到 \"%s\""
 
-#: ../../common/jsonapi.c:1162
+#: ../../common/jsonapi.c:1165
 #, c-format
 msgid "Expected JSON value, but found \"%s\"."
 msgstr "預期是 JSON 內容，但找到 \"%s\"。"
 
-#: ../../common/jsonapi.c:1165
+#: ../../common/jsonapi.c:1168
 msgid "The input string ended unexpectedly."
 msgstr "輸入字串非預期地結束。"
 
-#: ../../common/jsonapi.c:1167
+#: ../../common/jsonapi.c:1170
 #, c-format
 msgid "Expected string or \"}\", but found \"%s\"."
 msgstr "預期是字串或 \"}\"，但找到 \"%s\"。"
 
-#: ../../common/jsonapi.c:1170
+#: ../../common/jsonapi.c:1173
 #, c-format
 msgid "Expected \",\" or \"}\", but found \"%s\"."
 msgstr "預期是 \",\" 或 \"}\"，但找到 \"%s\"。"
 
-#: ../../common/jsonapi.c:1173
+#: ../../common/jsonapi.c:1176
 #, c-format
 msgid "Expected string, but found \"%s\"."
 msgstr "預期是字串，但找到 \"%s\"。"
 
-#: ../../common/jsonapi.c:1176
+#: ../../common/jsonapi.c:1179
 #, c-format
 msgid "Token \"%s\" is invalid."
 msgstr "Token \"%s\" 是無效的。"
 
-#: ../../common/jsonapi.c:1179
+#: ../../common/jsonapi.c:1182
 msgid "\\u0000 cannot be converted to text."
 msgstr "\\u0000 無法轉成文字。"
 
-#: ../../common/jsonapi.c:1181
+#: ../../common/jsonapi.c:1184
 msgid "\"\\u\" must be followed by four hexadecimal digits."
 msgstr "\"\\u\" 必須後接四個十六進位數字。"
 
-#: ../../common/jsonapi.c:1184
+#: ../../common/jsonapi.c:1187
 msgid "Unicode escape values cannot be used for code point values above 007F when the encoding is not UTF8."
 msgstr "當編碼不是 UTF8 時，無法使用 Unicode 跳脫值來表示大於 007F 的編碼位置。"
 
-#: ../../common/jsonapi.c:1187
+#: ../../common/jsonapi.c:1190
 #, c-format
 msgid "Unicode escape value could not be translated to the server's encoding %s."
 msgstr "Unicode 跳脫值不能被轉成伺服器的編碼 %s。"
 
-#: ../../common/jsonapi.c:1190
+#: ../../common/jsonapi.c:1193
 msgid "Unicode high surrogate must not follow a high surrogate."
 msgstr "Unicode 高位代理不能跟著高位代理。"
 
-#: ../../common/jsonapi.c:1192
+#: ../../common/jsonapi.c:1195
 msgid "Unicode low surrogate must follow a high surrogate."
 msgstr "Unicode 低位代理必須跟著高位代理。"
 

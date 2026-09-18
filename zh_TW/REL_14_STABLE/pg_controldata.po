@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.1\n"
-"Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2011-05-11 20:40+0000\n"
+"Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
+"POT-Creation-Date: 2026-09-17 19:50+0000\n"
 "PO-Revision-Date: 2013-09-03 23:27-0400\n"
 "Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
 "Language-Team: EnterpriseDB translation team <dev-escalations@enterprisedb.com>\n"
@@ -17,7 +17,86 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: pg_controldata.c:33
+# commands/copy.c:1031
+#: ../../common/controldata_utils.c:83
+#, c-format
+msgid "could not open file \"%s\" for reading: %m"
+msgstr "無法開啟檔案\"%s\"以讀取: %m"
+
+# access/transam/xlog.c:1659 access/transam/xlog.c:2942
+# access/transam/xlog.c:5397 access/transam/xlog.c:5448
+# access/transam/xlog.c:5520 access/transam/xlog.c:5545
+# access/transam/xlog.c:5583
+#: ../../common/controldata_utils.c:99
+#, c-format
+msgid "could not read file \"%s\": %m"
+msgstr "無法讀取檔案\"%s\": %m"
+
+# access/transam/xlog.c:1659 access/transam/xlog.c:2942
+# access/transam/xlog.c:5397 access/transam/xlog.c:5448
+# access/transam/xlog.c:5520 access/transam/xlog.c:5545
+# access/transam/xlog.c:5583
+#: ../../common/controldata_utils.c:111
+#, fuzzy, c-format
+#| msgid "could not read file \"%s\": %m"
+msgid "could not read file \"%s\": read %d of %zu"
+msgstr "無法讀取檔案\"%s\": %m"
+
+# access/transam/slru.c:680 access/transam/xlog.c:1567
+# access/transam/xlog.c:1691 access/transam/xlog.c:3013
+#: ../../common/controldata_utils.c:127 ../../common/controldata_utils.c:289
+#, c-format
+msgid "could not close file \"%s\": %m"
+msgstr "無法關閉檔案\"%s\": %m"
+
+#: ../../common/controldata_utils.c:165
+#, fuzzy
+#| msgid "%s: encoding mismatch\n"
+msgid "byte ordering mismatch"
+msgstr "%s: 編碼不符\n"
+
+#: ../../common/controldata_utils.c:167
+#, fuzzy, c-format
+#| msgid ""
+#| "WARNING: possible byte ordering mismatch\n"
+#| "The byte ordering used to store the pg_control file might not match the one\n"
+#| "used by this program.  In that case the results below would be incorrect, and\n"
+#| "the PostgreSQL installation would be incompatible with this data directory.\n"
+msgid ""
+"possible byte ordering mismatch\n"
+"The byte ordering used to store the pg_control file might not match the one\n"
+"used by this program.  In that case the results below would be incorrect, and\n"
+"the PostgreSQL installation would be incompatible with this data directory."
+msgstr ""
+"警告: 可能出現位元組排序方式不相符情況\n"
+"用來儲存 pg_control 檔的位元組排序\n"
+"可能與此程式使用的位元組排序不相符。如此下列結果會不正確，而且\n"
+"PostgreSQL 安裝會與此資料目錄不相容。\n"
+
+# access/transam/slru.c:638 access/transam/xlog.c:1631
+# access/transam/xlog.c:2742 access/transam/xlog.c:2832
+# access/transam/xlog.c:2930 libpq/hba.c:911 libpq/hba.c:935
+# utils/error/elog.c:1118 utils/init/miscinit.c:783 utils/init/miscinit.c:889
+# utils/misc/database.c:68
+#: ../../common/controldata_utils.c:233
+#, c-format
+msgid "could not open file \"%s\": %m"
+msgstr "無法開啟檔案\"%s\": %m"
+
+# access/transam/xlog.c:5319 access/transam/xlog.c:5439
+#: ../../common/controldata_utils.c:254
+#, c-format
+msgid "could not write file \"%s\": %m"
+msgstr "無法寫入檔案 \"%s\": %m"
+
+# access/transam/slru.c:673 access/transam/xlog.c:1562
+# access/transam/xlog.c:1686 access/transam/xlog.c:3008
+#: ../../common/controldata_utils.c:275
+#, c-format
+msgid "could not fsync file \"%s\": %m"
+msgstr "無法fsync檔案 \"%s\": %m"
+
+#: pg_controldata.c:35
 #, c-format
 msgid ""
 "%s displays control information of a PostgreSQL database cluster.\n"
@@ -26,29 +105,50 @@ msgstr ""
 "%s 顯示 PostgreSQL 資料庫 cluster 控制資訊。\n"
 "\n"
 
+#: pg_controldata.c:36
+#, c-format
+msgid "Usage:\n"
+msgstr "使用方法:\n"
+
 #: pg_controldata.c:37
+#, fuzzy, c-format
+#| msgid "  %s [OPTION]... [DATADIR]\n"
+msgid "  %s [OPTION] [DATADIR]\n"
+msgstr "  %s [選項]... [資料目錄]\n"
+
+#: pg_controldata.c:38
 #, c-format
 msgid ""
-"Usage:\n"
-"  %s [OPTION] [DATADIR]\n"
 "\n"
 "Options:\n"
-"  --help         show this help, then exit\n"
-"  --version      output version information, then exit\n"
 msgstr ""
-"用法:\n"
-"  %s [選項] [資料目錄]\n"
 "\n"
 "選項:\n"
-"  --help         顯示說明訊息然後結束\n"
-"  --version      顯示版本資訊然後結束\n"
 
-#: pg_controldata.c:45
+# postmaster/postmaster.c:1024 tcop/postgres.c:2122
+#: pg_controldata.c:39
+#, fuzzy, c-format
+#| msgid "  -D DATADIR      database directory\n"
+msgid " [-D, --pgdata=]DATADIR  data directory\n"
+msgstr "  -D DATADIR      資料庫目錄\n"
+
+#: pg_controldata.c:40
+#, fuzzy, c-format
+#| msgid "  -V, --version             output version information, then exit\n"
+msgid "  -V, --version          output version information, then exit\n"
+msgstr "  -V, --version             顯示版本資訊然後結束\n"
+
+#: pg_controldata.c:41
+#, fuzzy, c-format
+#| msgid "  -?, --help                show this help, then exit\n"
+msgid "  -?, --help             show this help, then exit\n"
+msgstr "  -?, --help                顯示這份說明然後結束\n"
+
+#: pg_controldata.c:42
 #, c-format
 msgid ""
 "\n"
-"If no data directory (DATADIR) is specified, the environment variable "
-"PGDATA\n"
+"If no data directory (DATADIR) is specified, the environment variable PGDATA\n"
 "is used.\n"
 "\n"
 msgstr ""
@@ -56,71 +156,74 @@ msgstr ""
 "如果沒有指定資料目錄就會用環境變數PGDATA。\n"
 "\n"
 
-#: pg_controldata.c:47
-#, c-format
-msgid "Report bugs to <pgsql-bugs@postgresql.org>.\n"
+#: pg_controldata.c:44
+#, fuzzy, c-format
+#| msgid "Report bugs to <pgsql-bugs@postgresql.org>.\n"
+msgid "Report bugs to <%s>.\n"
 msgstr "回報錯誤至 <pgsql-bugs@postgresql.org>。\n"
 
-#: pg_controldata.c:57
+#: pg_controldata.c:45
+#, c-format
+msgid "%s home page: <%s>\n"
+msgstr ""
+
+#: pg_controldata.c:55
 msgid "starting up"
 msgstr "正在啟動"
 
-#: pg_controldata.c:59
+#: pg_controldata.c:57
 msgid "shut down"
 msgstr "關閉"
 
 # access/transam/xlog.c:3596
-#: pg_controldata.c:61
+#: pg_controldata.c:59
 msgid "shut down in recovery"
 msgstr "在復原時關閉"
 
-#: pg_controldata.c:63
+#: pg_controldata.c:61
 msgid "shutting down"
 msgstr "正在關閉"
 
-#: pg_controldata.c:65
+#: pg_controldata.c:63
 msgid "in crash recovery"
 msgstr "損毀復原中"
 
 # access/transam/xlog.c:3596
-#: pg_controldata.c:67
+#: pg_controldata.c:65
 msgid "in archive recovery"
 msgstr "封存復原中"
 
-#: pg_controldata.c:69
+#: pg_controldata.c:67
 msgid "in production"
 msgstr "運作中"
 
-#: pg_controldata.c:71
+#: pg_controldata.c:69
 msgid "unrecognized status code"
 msgstr "無法識別的狀態碼"
 
 # access/transam/xlog.c:3720
-#: pg_controldata.c:86
+#: pg_controldata.c:84
 msgid "unrecognized wal_level"
 msgstr "無法識別的 wal_level"
 
-#: pg_controldata.c:129
-#, c-format
-msgid "%s: no data directory specified\n"
-msgstr "%s: 沒有指定資料目錄\n"
-
-#: pg_controldata.c:130
+#: pg_controldata.c:138 pg_controldata.c:156 pg_controldata.c:164
 #, c-format
 msgid "Try \"%s --help\" for more information.\n"
 msgstr "執行 \"%s --help\" 顯示更多資訊。\n"
 
-#: pg_controldata.c:138
-#, c-format
-msgid "%s: could not open file \"%s\" for reading: %s\n"
-msgstr "%s: 無法開啟檔案 \"%s\" 讀取: %s\n"
+#: pg_controldata.c:154
+#, fuzzy, c-format
+#| msgid "%s: too many command-line arguments (first is \"%s\")\n"
+msgid "too many command-line arguments (first is \"%s\")"
+msgstr "%s: 命令列參數過多(第一個是 \"%s\")\n"
 
-#: pg_controldata.c:145
-#, c-format
-msgid "%s: could not read file \"%s\": %s\n"
-msgstr "%s: 無法讀取檔案 \"%s\": %s\n"
+#: pg_controldata.c:163
+#, fuzzy, c-format
+#| msgid "%s: no data directory specified\n"
+msgid "no data directory specified"
+msgstr "%s: 沒有指定資料目錄\n"
 
-#: pg_controldata.c:159
+#: pg_controldata.c:171
 #, c-format
 msgid ""
 "WARNING: Calculated CRC checksum does not match value stored in file.\n"
@@ -133,205 +236,369 @@ msgstr ""
 "的結果是不可靠的。\n"
 "\n"
 
-#: pg_controldata.c:186
+#: pg_controldata.c:180
+#, fuzzy, c-format
+#| msgid "WARNING: invalid creation date in header\n"
+msgid "WARNING: invalid WAL segment size\n"
+msgstr "警告: header中有非法的建立日期\n"
+
+#: pg_controldata.c:181
+#, c-format
+msgid ""
+"The WAL segment size stored in the file, %d byte, is not a power of two\n"
+"between 1 MB and 1 GB.  The file is corrupt and the results below are\n"
+"untrustworthy.\n"
+"\n"
+msgid_plural ""
+"The WAL segment size stored in the file, %d bytes, is not a power of two\n"
+"between 1 MB and 1 GB.  The file is corrupt and the results below are\n"
+"untrustworthy.\n"
+"\n"
+msgstr[0] ""
+
+#: pg_controldata.c:206 pg_controldata.c:214 pg_controldata.c:233
+#, c-format
+msgid "???"
+msgstr ""
+
+#: pg_controldata.c:239
 #, c-format
 msgid "pg_control version number:            %u\n"
 msgstr "pg_control 版本:                 %u\n"
 
-#: pg_controldata.c:189
-#, c-format
-msgid ""
-"WARNING: possible byte ordering mismatch\n"
-"The byte ordering used to store the pg_control file might not match the one\n"
-"used by this program.  In that case the results below would be incorrect, "
-"and\n"
-"the PostgreSQL installation would be incompatible with this data directory.\n"
-msgstr ""
-"警告: 可能出現位元組排序方式不相符情況\n"
-"用來儲存 pg_control 檔的位元組排序\n"
-"可能與此程式使用的位元組排序不相符。如此下列結果會不正確，而且\n"
-"PostgreSQL 安裝會與此資料目錄不相容。\n"
-
-#: pg_controldata.c:193
+#: pg_controldata.c:241
 #, c-format
 msgid "Catalog version number:               %u\n"
 msgstr "catalog 版本:                    %u\n"
 
-#: pg_controldata.c:195
-#, c-format
-msgid "Database system identifier:           %s\n"
+#: pg_controldata.c:243
+#, fuzzy, c-format
+#| msgid "Database system identifier:           %s\n"
+msgid "Database system identifier:           %llu\n"
 msgstr "資料庫系統識別:                  %s\n"
 
-#: pg_controldata.c:197
+#: pg_controldata.c:245
 #, c-format
 msgid "Database cluster state:               %s\n"
 msgstr "資料庫 cluster 狀態:             %s\n"
 
-#: pg_controldata.c:199
+#: pg_controldata.c:247
 #, c-format
 msgid "pg_control last modified:             %s\n"
 msgstr "pg_control 最後修改時間:         %s\n"
 
-#: pg_controldata.c:201
+#: pg_controldata.c:249
 #, c-format
 msgid "Latest checkpoint location:           %X/%X\n"
 msgstr "最近檢查點位置:                  %X/%X\n"
 
-#: pg_controldata.c:204
-#, c-format
-msgid "Prior checkpoint location:            %X/%X\n"
-msgstr "前次檢查點位置:                  %X/%X\n"
-
-#: pg_controldata.c:207
+#: pg_controldata.c:251
 #, c-format
 msgid "Latest checkpoint's REDO location:    %X/%X\n"
 msgstr "最近檢查點 REDO 位置:            %X/%X\n"
 
-#: pg_controldata.c:210
+#: pg_controldata.c:253
+#, fuzzy, c-format
+#| msgid "Latest checkpoint's REDO location:    %X/%X\n"
+msgid "Latest checkpoint's REDO WAL file:    %s\n"
+msgstr "最近檢查點 REDO 位置:            %X/%X\n"
+
+#: pg_controldata.c:255
 #, c-format
 msgid "Latest checkpoint's TimeLineID:       %u\n"
 msgstr "最近檢查點 TimeLineID:           %u\n"
 
-#: pg_controldata.c:212
-#, c-format
-msgid "Latest checkpoint's NextXID:          %u/%u\n"
+#: pg_controldata.c:257
+#, fuzzy, c-format
+#| msgid "Latest checkpoint's TimeLineID:       %u\n"
+msgid "Latest checkpoint's PrevTimeLineID:   %u\n"
+msgstr "最近檢查點 TimeLineID:           %u\n"
+
+#: pg_controldata.c:259
+#, fuzzy, c-format
+#| msgid "Latest checkpoint's NextMultiXactId:  %u\n"
+msgid "Latest checkpoint's full_page_writes: %s\n"
+msgstr "最近檢查點 NextMultiXactId:      %u\n"
+
+# help.c:48
+#: pg_controldata.c:260 pg_controldata.c:301 pg_controldata.c:313
+msgid "off"
+msgstr "關閉"
+
+# help.c:48
+#: pg_controldata.c:260 pg_controldata.c:301 pg_controldata.c:313
+msgid "on"
+msgstr "開啟"
+
+#: pg_controldata.c:261
+#, fuzzy, c-format
+#| msgid "Latest checkpoint's NextXID:          %u/%u\n"
+msgid "Latest checkpoint's NextXID:          %u:%u\n"
 msgstr "最近檢查點 NextXID:              %u/%u\n"
 
-#: pg_controldata.c:215
+#: pg_controldata.c:264
 #, c-format
 msgid "Latest checkpoint's NextOID:          %u\n"
 msgstr "最近檢查點 NextOID:              %u\n"
 
-#: pg_controldata.c:217
+#: pg_controldata.c:266
 #, c-format
 msgid "Latest checkpoint's NextMultiXactId:  %u\n"
 msgstr "最近檢查點 NextMultiXactId:      %u\n"
 
-#: pg_controldata.c:219
+#: pg_controldata.c:268
 #, c-format
 msgid "Latest checkpoint's NextMultiOffset:  %u\n"
 msgstr "最近檢查點 NextMultiOffset:      %u\n"
 
-#: pg_controldata.c:221
+#: pg_controldata.c:270
 #, c-format
 msgid "Latest checkpoint's oldestXID:        %u\n"
 msgstr "最近檢查點 oldestXID:            %u\n"
 
-#: pg_controldata.c:223
+#: pg_controldata.c:272
 #, c-format
 msgid "Latest checkpoint's oldestXID's DB:   %u\n"
 msgstr "最近檢查點 oldestXID 所在資料庫: %u\n"
 
-#: pg_controldata.c:225
+#: pg_controldata.c:274
 #, c-format
 msgid "Latest checkpoint's oldestActiveXID:  %u\n"
 msgstr "最近檢查點 oldestActiveXID:      %u\n"
 
-#: pg_controldata.c:227
+#: pg_controldata.c:276
+#, fuzzy, c-format
+#| msgid "Latest checkpoint's oldestActiveXID:  %u\n"
+msgid "Latest checkpoint's oldestMultiXid:   %u\n"
+msgstr "最近檢查點 oldestActiveXID:      %u\n"
+
+#: pg_controldata.c:278
+#, fuzzy, c-format
+#| msgid "Latest checkpoint's oldestXID's DB:   %u\n"
+msgid "Latest checkpoint's oldestMulti's DB: %u\n"
+msgstr "最近檢查點 oldestXID 所在資料庫: %u\n"
+
+#: pg_controldata.c:280
+#, fuzzy, c-format
+#| msgid "Latest checkpoint's oldestActiveXID:  %u\n"
+msgid "Latest checkpoint's oldestCommitTsXid:%u\n"
+msgstr "最近檢查點 oldestActiveXID:      %u\n"
+
+#: pg_controldata.c:282
+#, fuzzy, c-format
+#| msgid "Latest checkpoint's NextMultiXactId:  %u\n"
+msgid "Latest checkpoint's newestCommitTsXid:%u\n"
+msgstr "最近檢查點 NextMultiXactId:      %u\n"
+
+#: pg_controldata.c:284
 #, c-format
 msgid "Time of latest checkpoint:            %s\n"
 msgstr "最近檢查點時間:                  %s\n"
 
-#: pg_controldata.c:229
+#: pg_controldata.c:286
+#, c-format
+msgid "Fake LSN counter for unlogged rels:   %X/%X\n"
+msgstr ""
+
+#: pg_controldata.c:288
 #, c-format
 msgid "Minimum recovery ending location:     %X/%X\n"
 msgstr "復原結束位置下限:                %X/%X\n"
 
-#: pg_controldata.c:232
+#: pg_controldata.c:290
+#, fuzzy, c-format
+#| msgid "Minimum recovery ending location:     %X/%X\n"
+msgid "Min recovery ending loc's timeline:   %u\n"
+msgstr "復原結束位置下限:                %X/%X\n"
+
+#: pg_controldata.c:292
 #, c-format
 msgid "Backup start location:                %X/%X\n"
 msgstr "備份開始位置:                    %X/%X\n"
 
-#: pg_controldata.c:235
+#: pg_controldata.c:294
+#, fuzzy, c-format
+#| msgid "Backup start location:                %X/%X\n"
+msgid "Backup end location:                  %X/%X\n"
+msgstr "備份開始位置:                    %X/%X\n"
+
+#: pg_controldata.c:296
 #, c-format
-msgid "Current wal_level setting:            %s\n"
+msgid "End-of-backup record required:        %s\n"
+msgstr ""
+
+# describe.c:1262
+# describe.c:1638
+# describe.c:1692
+#: pg_controldata.c:297
+msgid "no"
+msgstr "否"
+
+# describe.c:1262
+# describe.c:1637
+# describe.c:1694
+#: pg_controldata.c:297
+msgid "yes"
+msgstr "是"
+
+#: pg_controldata.c:298
+#, fuzzy, c-format
+#| msgid "Current wal_level setting:            %s\n"
+msgid "wal_level setting:                    %s\n"
 msgstr "目前的 wal_level 設定:           %s\n"
 
-#: pg_controldata.c:237
-#, c-format
-msgid "Current max_connections setting:      %d\n"
+#: pg_controldata.c:300
+#, fuzzy, c-format
+#| msgid "Current wal_level setting:            %s\n"
+msgid "wal_log_hints setting:                %s\n"
+msgstr "目前的 wal_level 設定:           %s\n"
+
+#: pg_controldata.c:302
+#, fuzzy, c-format
+#| msgid "Current max_connections setting:      %d\n"
+msgid "max_connections setting:              %d\n"
 msgstr "目前的 max_connections 設定:     %d\n"
 
-#: pg_controldata.c:239
-#, c-format
-msgid "Current max_prepared_xacts setting:   %d\n"
+#: pg_controldata.c:304
+#, fuzzy, c-format
+#| msgid "Current max_connections setting:      %d\n"
+msgid "max_worker_processes setting:         %d\n"
+msgstr "目前的 max_connections 設定:     %d\n"
+
+#: pg_controldata.c:306
+#, fuzzy, c-format
+#| msgid "Current wal_level setting:            %s\n"
+msgid "max_wal_senders setting:              %d\n"
+msgstr "目前的 wal_level 設定:           %s\n"
+
+#: pg_controldata.c:308
+#, fuzzy, c-format
+#| msgid "Current max_prepared_xacts setting:   %d\n"
+msgid "max_prepared_xacts setting:           %d\n"
 msgstr "目前的 max_prepared_xacts 設定:  %d\n"
 
-#: pg_controldata.c:241
-#, c-format
-msgid "Current max_locks_per_xact setting:   %d\n"
+#: pg_controldata.c:310
+#, fuzzy, c-format
+#| msgid "Current max_locks_per_xact setting:   %d\n"
+msgid "max_locks_per_xact setting:           %d\n"
 msgstr "目前的 max_locks_per_xact 設定:  %d\n"
 
-#: pg_controldata.c:243
+#: pg_controldata.c:312
+#, fuzzy, c-format
+#| msgid "Current max_connections setting:      %d\n"
+msgid "track_commit_timestamp setting:       %s\n"
+msgstr "目前的 max_connections 設定:     %d\n"
+
+#: pg_controldata.c:314
 #, c-format
 msgid "Maximum data alignment:               %u\n"
 msgstr "資料對齊上限:                    %u\n"
 
-#: pg_controldata.c:246
+#: pg_controldata.c:317
 #, c-format
 msgid "Database block size:                  %u\n"
 msgstr "資料庫區塊大小:                  %u\n"
 
-#: pg_controldata.c:248
+#: pg_controldata.c:319
 #, c-format
 msgid "Blocks per segment of large relation: %u\n"
 msgstr "大型關聯每個區段的區塊數:        %u\n"
 
-#: pg_controldata.c:250
+#: pg_controldata.c:321
 #, c-format
 msgid "WAL block size:                       %u\n"
 msgstr "WAL 區塊大小:                    %u\n"
 
-#: pg_controldata.c:252
+#: pg_controldata.c:323
 #, c-format
 msgid "Bytes per WAL segment:                %u\n"
 msgstr "每個 WAL 區段的位元組數:         %u\n"
 
-#: pg_controldata.c:254
+#: pg_controldata.c:325
 #, c-format
 msgid "Maximum length of identifiers:        %u\n"
 msgstr "識別字的最大長度:                %u\n"
 
-#: pg_controldata.c:256
+#: pg_controldata.c:327
 #, c-format
 msgid "Maximum columns in an index:          %u\n"
 msgstr "索引中資料行上限:                %u\n"
 
-#: pg_controldata.c:258
+#: pg_controldata.c:329
 #, c-format
 msgid "Maximum size of a TOAST chunk:        %u\n"
 msgstr "TOAST 區塊大小上限:              %u\n"
 
-#: pg_controldata.c:260
+#: pg_controldata.c:331
+#, fuzzy, c-format
+#| msgid "Maximum size of a TOAST chunk:        %u\n"
+msgid "Size of a large-object chunk:         %u\n"
+msgstr "TOAST 區塊大小上限:              %u\n"
+
+#: pg_controldata.c:334
 #, c-format
 msgid "Date/time type storage:               %s\n"
 msgstr "日期/時間儲存類型:               %s\n"
 
-#: pg_controldata.c:261
+#: pg_controldata.c:335
 msgid "64-bit integers"
 msgstr "64位元整數"
 
-#: pg_controldata.c:261
-msgid "floating-point numbers"
-msgstr "浮點數"
-
-#: pg_controldata.c:262
-#, c-format
-msgid "Float4 argument passing:              %s\n"
-msgstr "Float4 參數傳遞方式:             %s\n"
-
-#: pg_controldata.c:263 pg_controldata.c:265
-msgid "by value"
-msgstr "傳值"
-
-#: pg_controldata.c:263 pg_controldata.c:265
-msgid "by reference"
-msgstr "傳址"
-
-#: pg_controldata.c:264
+#: pg_controldata.c:336
 #, c-format
 msgid "Float8 argument passing:              %s\n"
 msgstr "Float8 參數傳遞方式:             %s\n"
 
+#: pg_controldata.c:337
+msgid "by reference"
+msgstr "傳址"
+
+#: pg_controldata.c:337
+msgid "by value"
+msgstr "傳值"
+
+#: pg_controldata.c:338
+#, fuzzy, c-format
+#| msgid "Catalog version number:               %u\n"
+msgid "Data page checksum version:           %u\n"
+msgstr "catalog 版本:                    %u\n"
+
+#: pg_controldata.c:340
+#, fuzzy, c-format
+#| msgid "Prior checkpoint location:            %X/%X\n"
+msgid "Mock authentication nonce:            %s\n"
+msgstr "前次檢查點位置:                  %X/%X\n"
+
+#, c-format
+#~ msgid "%s: could not open file \"%s\" for reading: %s\n"
+#~ msgstr "%s: 無法開啟檔案 \"%s\" 讀取: %s\n"
+
+#, c-format
+#~ msgid "%s: could not read file \"%s\": %s\n"
+#~ msgstr "%s: 無法讀取檔案 \"%s\": %s\n"
+
+#, c-format
+#~ msgid "Float4 argument passing:              %s\n"
+#~ msgstr "Float4 參數傳遞方式:             %s\n"
+
 #~ msgid "Maximum number of function arguments: %u\n"
 #~ msgstr "函式參數的最大個數:           %u\n"
+
+#, c-format
+#~ msgid ""
+#~ "Usage:\n"
+#~ "  %s [OPTION] [DATADIR]\n"
+#~ "\n"
+#~ "Options:\n"
+#~ "  --help         show this help, then exit\n"
+#~ "  --version      output version information, then exit\n"
+#~ msgstr ""
+#~ "用法:\n"
+#~ "  %s [選項] [資料目錄]\n"
+#~ "\n"
+#~ "選項:\n"
+#~ "  --help         顯示說明訊息然後結束\n"
+#~ "  --version      顯示版本資訊然後結束\n"
+
+#~ msgid "floating-point numbers"
+#~ msgstr "浮點數"

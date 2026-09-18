@@ -1,0 +1,559 @@
+# LANGUAGE message translation file for pg_verifybackup
+# Copyright (C) 2026 PostgreSQL Global Development Group
+# This file is distributed under the same license as the pg_verifybackup (PostgreSQL) package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: pg_verifybackup (PostgreSQL) 14\n"
+"Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
+"POT-Creation-Date: 2026-09-17 19:45+0000\n"
+"PO-Revision-Date: 2026-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../src/common/logging.c:259
+#, c-format
+msgid "fatal: "
+msgstr ""
+
+#: ../../../src/common/logging.c:266
+#, c-format
+msgid "error: "
+msgstr ""
+
+#: ../../../src/common/logging.c:273
+#, c-format
+msgid "warning: "
+msgstr ""
+
+# commands/sequence.c:798 executor/execGrouping.c:328
+# executor/execGrouping.c:388 executor/nodeIndexscan.c:1051 lib/dllist.c:43
+# lib/dllist.c:88 libpq/auth.c:637 postmaster/pgstat.c:1006
+# postmaster/pgstat.c:1023 postmaster/pgstat.c:2452 postmaster/pgstat.c:2527
+# postmaster/pgstat.c:2572 postmaster/pgstat.c:2623
+# postmaster/postmaster.c:755 postmaster/postmaster.c:1625
+# postmaster/postmaster.c:2344 storage/buffer/localbuf.c:139
+# storage/file/fd.c:587 storage/file/fd.c:620 storage/file/fd.c:766
+# storage/ipc/sinval.c:789 storage/lmgr/lock.c:497 storage/smgr/md.c:138
+# storage/smgr/md.c:848 storage/smgr/smgr.c:213 utils/adt/cash.c:297
+# utils/adt/cash.c:312 utils/adt/oracle_compat.c:73
+# utils/adt/oracle_compat.c:124 utils/adt/regexp.c:191
+# utils/adt/ri_triggers.c:3471 utils/cache/relcache.c:164
+# utils/cache/relcache.c:178 utils/cache/relcache.c:1130
+# utils/cache/typcache.c:165 utils/cache/typcache.c:487
+# utils/fmgr/dfmgr.c:127 utils/fmgr/fmgr.c:521 utils/fmgr/fmgr.c:532
+# utils/init/miscinit.c:213 utils/init/miscinit.c:234
+# utils/init/miscinit.c:244 utils/misc/guc.c:1898 utils/misc/guc.c:1911
+# utils/misc/guc.c:1924 utils/mmgr/aset.c:337 utils/mmgr/aset.c:503
+# utils/mmgr/aset.c:700 utils/mmgr/aset.c:893 utils/mmgr/portalmem.c:75
+#: ../../common/fe_memutils.c:41 ../../common/fe_memutils.c:81
+#: ../../common/fe_memutils.c:104 ../../common/fe_memutils.c:168
+#, c-format
+msgid "out of memory\n"
+msgstr "記憶體用盡\n"
+
+#: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:160
+#, c-format
+msgid "cannot duplicate null pointer (internal error)\n"
+msgstr ""
+
+#: ../../common/fe_memutils.c:210
+#, c-format
+msgid "invalid memory allocation request size %zu + %zu\n"
+msgstr ""
+
+#: ../../common/fe_memutils.c:229
+#, c-format
+msgid "invalid memory allocation request size %zu * %zu\n"
+msgstr ""
+
+#: ../../common/jsonapi.c:1087
+#, c-format
+msgid "Escape sequence \"\\%s\" is invalid."
+msgstr ""
+
+#: ../../common/jsonapi.c:1090
+#, c-format
+msgid "Character with value 0x%02x must be escaped."
+msgstr ""
+
+#: ../../common/jsonapi.c:1093
+#, c-format
+msgid "Expected end of input, but found \"%s\"."
+msgstr ""
+
+#: ../../common/jsonapi.c:1096
+#, c-format
+msgid "Expected array element or \"]\", but found \"%s\"."
+msgstr ""
+
+#: ../../common/jsonapi.c:1099
+#, c-format
+msgid "Expected \",\" or \"]\", but found \"%s\"."
+msgstr ""
+
+#: ../../common/jsonapi.c:1102
+#, c-format
+msgid "Expected \":\", but found \"%s\"."
+msgstr ""
+
+#: ../../common/jsonapi.c:1105
+#, c-format
+msgid "Expected JSON value, but found \"%s\"."
+msgstr ""
+
+#: ../../common/jsonapi.c:1108
+msgid "The input string ended unexpectedly."
+msgstr ""
+
+#: ../../common/jsonapi.c:1110
+#, c-format
+msgid "Expected string or \"}\", but found \"%s\"."
+msgstr ""
+
+#: ../../common/jsonapi.c:1113
+#, c-format
+msgid "Expected \",\" or \"}\", but found \"%s\"."
+msgstr ""
+
+#: ../../common/jsonapi.c:1116
+#, c-format
+msgid "Expected string, but found \"%s\"."
+msgstr ""
+
+#: ../../common/jsonapi.c:1119
+#, c-format
+msgid "Token \"%s\" is invalid."
+msgstr ""
+
+#: ../../common/jsonapi.c:1122
+msgid "\\u0000 cannot be converted to text."
+msgstr ""
+
+#: ../../common/jsonapi.c:1124
+msgid "\"\\u\" must be followed by four hexadecimal digits."
+msgstr ""
+
+#: ../../common/jsonapi.c:1127
+msgid "Unicode escape values cannot be used for code point values above 007F when the encoding is not UTF8."
+msgstr ""
+
+#: ../../common/jsonapi.c:1129
+msgid "Unicode high surrogate must not follow a high surrogate."
+msgstr ""
+
+#: ../../common/jsonapi.c:1131
+msgid "Unicode low surrogate must follow a high surrogate."
+msgstr ""
+
+#: parse_manifest.c:152
+msgid "manifest ended unexpectedly"
+msgstr ""
+
+#: parse_manifest.c:191
+msgid "unexpected object start"
+msgstr ""
+
+#: parse_manifest.c:224
+msgid "unexpected object end"
+msgstr ""
+
+#: parse_manifest.c:251
+msgid "unexpected array start"
+msgstr ""
+
+#: parse_manifest.c:274
+msgid "unexpected array end"
+msgstr ""
+
+#: parse_manifest.c:299
+msgid "expected version indicator"
+msgstr ""
+
+#: parse_manifest.c:328
+msgid "unrecognized top-level field"
+msgstr ""
+
+#: parse_manifest.c:347
+msgid "unexpected file field"
+msgstr ""
+
+#: parse_manifest.c:361
+msgid "unexpected WAL range field"
+msgstr ""
+
+#: parse_manifest.c:367
+msgid "unexpected object field"
+msgstr ""
+
+#: parse_manifest.c:397
+msgid "unexpected manifest version"
+msgstr ""
+
+#: parse_manifest.c:448
+msgid "unexpected scalar"
+msgstr ""
+
+#: parse_manifest.c:472
+msgid "missing path name"
+msgstr ""
+
+#: parse_manifest.c:475
+msgid "both path name and encoded path name"
+msgstr ""
+
+#: parse_manifest.c:477
+msgid "missing size"
+msgstr ""
+
+#: parse_manifest.c:480
+msgid "checksum without algorithm"
+msgstr ""
+
+#: parse_manifest.c:494
+msgid "could not decode file name"
+msgstr ""
+
+#: parse_manifest.c:504
+msgid "file size is not an integer"
+msgstr ""
+
+#: parse_manifest.c:510
+#, c-format
+msgid "unrecognized checksum algorithm: \"%s\""
+msgstr ""
+
+#: parse_manifest.c:529
+#, c-format
+msgid "invalid checksum for file \"%s\": \"%s\""
+msgstr ""
+
+#: parse_manifest.c:572
+msgid "missing timeline"
+msgstr ""
+
+#: parse_manifest.c:574
+msgid "missing start LSN"
+msgstr ""
+
+#: parse_manifest.c:576
+msgid "missing end LSN"
+msgstr ""
+
+#: parse_manifest.c:582
+msgid "timeline is not an integer"
+msgstr ""
+
+#: parse_manifest.c:585
+msgid "could not parse start LSN"
+msgstr ""
+
+#: parse_manifest.c:588
+msgid "could not parse end LSN"
+msgstr ""
+
+#: parse_manifest.c:649
+msgid "expected at least 2 lines"
+msgstr ""
+
+#: parse_manifest.c:652
+msgid "last line not newline-terminated"
+msgstr ""
+
+# commands/sequence.c:798 executor/execGrouping.c:328
+# executor/execGrouping.c:388 executor/nodeIndexscan.c:1051 lib/dllist.c:43
+# lib/dllist.c:88 libpq/auth.c:637 postmaster/pgstat.c:1006
+# postmaster/pgstat.c:1023 postmaster/pgstat.c:2452 postmaster/pgstat.c:2527
+# postmaster/pgstat.c:2572 postmaster/pgstat.c:2623
+# postmaster/postmaster.c:755 postmaster/postmaster.c:1625
+# postmaster/postmaster.c:2344 storage/buffer/localbuf.c:139
+# storage/file/fd.c:587 storage/file/fd.c:620 storage/file/fd.c:766
+# storage/ipc/sinval.c:789 storage/lmgr/lock.c:497 storage/smgr/md.c:138
+# storage/smgr/md.c:848 storage/smgr/smgr.c:213 utils/adt/cash.c:297
+# utils/adt/cash.c:312 utils/adt/oracle_compat.c:73
+# utils/adt/oracle_compat.c:124 utils/adt/regexp.c:191
+# utils/adt/ri_triggers.c:3471 utils/cache/relcache.c:164
+# utils/cache/relcache.c:178 utils/cache/relcache.c:1130
+# utils/cache/typcache.c:165 utils/cache/typcache.c:487
+# utils/fmgr/dfmgr.c:127 utils/fmgr/fmgr.c:521 utils/fmgr/fmgr.c:532
+# utils/init/miscinit.c:213 utils/init/miscinit.c:234
+# utils/init/miscinit.c:244 utils/misc/guc.c:1898 utils/misc/guc.c:1911
+# utils/misc/guc.c:1924 utils/mmgr/aset.c:337 utils/mmgr/aset.c:503
+# utils/mmgr/aset.c:700 utils/mmgr/aset.c:893 utils/mmgr/portalmem.c:75
+#: parse_manifest.c:657
+#, c-format
+msgid "out of memory"
+msgstr "記憶體用盡"
+
+#: parse_manifest.c:659
+#, c-format
+msgid "could not initialize checksum of manifest"
+msgstr ""
+
+#: parse_manifest.c:661
+#, c-format
+msgid "could not update checksum of manifest"
+msgstr ""
+
+#: parse_manifest.c:664
+#, c-format
+msgid "could not finalize checksum of manifest"
+msgstr ""
+
+#: parse_manifest.c:668
+#, c-format
+msgid "manifest has no checksum"
+msgstr ""
+
+#: parse_manifest.c:672
+#, c-format
+msgid "invalid manifest checksum: \"%s\""
+msgstr ""
+
+#: parse_manifest.c:676
+#, c-format
+msgid "manifest checksum mismatch"
+msgstr ""
+
+#: parse_manifest.c:691
+#, c-format
+msgid "could not parse backup manifest: %s"
+msgstr ""
+
+# postmaster/postmaster.c:512 postmaster/postmaster.c:525
+#: pg_verifybackup.c:255 pg_verifybackup.c:265 pg_verifybackup.c:277
+#, c-format
+msgid "Try \"%s --help\" for more information.\n"
+msgstr "執行\"%s --help\"顯示更多資訊。\n"
+
+#: pg_verifybackup.c:264
+#, c-format
+msgid "no backup directory specified"
+msgstr ""
+
+#: pg_verifybackup.c:275
+#, c-format
+msgid "too many command-line arguments (first is \"%s\")"
+msgstr ""
+
+#: pg_verifybackup.c:298
+#, c-format
+msgid ""
+"The program \"%s\" is needed by %s but was not found in the\n"
+"same directory as \"%s\".\n"
+"Check your installation."
+msgstr ""
+
+#: pg_verifybackup.c:303
+#, c-format
+msgid ""
+"The program \"%s\" was found by \"%s\"\n"
+"but was not the same version as %s.\n"
+"Check your installation."
+msgstr ""
+
+#: pg_verifybackup.c:362
+#, c-format
+msgid "backup successfully verified\n"
+msgstr ""
+
+# access/transam/slru.c:638 access/transam/xlog.c:1631
+# access/transam/xlog.c:2742 access/transam/xlog.c:2832
+# access/transam/xlog.c:2930 libpq/hba.c:911 libpq/hba.c:935
+# utils/error/elog.c:1118 utils/init/miscinit.c:783 utils/init/miscinit.c:889
+# utils/misc/database.c:68
+#: pg_verifybackup.c:388 pg_verifybackup.c:724
+#, c-format
+msgid "could not open file \"%s\": %m"
+msgstr "無法開啟檔案\"%s\": %m"
+
+# access/transam/xlog.c:1936 access/transam/xlog.c:2038
+# access/transam/xlog.c:5291
+#: pg_verifybackup.c:392
+#, c-format
+msgid "could not stat file \"%s\": %m"
+msgstr "無法取得檔案狀態\"%s\": %m"
+
+# access/transam/xlog.c:1659 access/transam/xlog.c:2942
+# access/transam/xlog.c:5397 access/transam/xlog.c:5448
+# access/transam/xlog.c:5520 access/transam/xlog.c:5545
+# access/transam/xlog.c:5583
+#: pg_verifybackup.c:412 pg_verifybackup.c:753
+#, c-format
+msgid "could not read file \"%s\": %m"
+msgstr "無法讀取檔案\"%s\": %m"
+
+#: pg_verifybackup.c:415
+#, c-format
+msgid "could not read file \"%s\": read %d of %lld"
+msgstr ""
+
+#: pg_verifybackup.c:475
+#, c-format
+msgid "duplicate path name in backup manifest: \"%s\""
+msgstr ""
+
+# access/transam/slru.c:930 commands/tablespace.c:529
+# commands/tablespace.c:694 utils/adt/misc.c:174
+#: pg_verifybackup.c:538 pg_verifybackup.c:545
+#, c-format
+msgid "could not open directory \"%s\": %m"
+msgstr "無法開啟目錄\"%s\": %m"
+
+#: pg_verifybackup.c:577
+#, c-format
+msgid "could not close directory \"%s\": %m"
+msgstr ""
+
+# access/transam/slru.c:967 commands/tablespace.c:577
+# commands/tablespace.c:721
+#: pg_verifybackup.c:597
+#, c-format
+msgid "could not stat file or directory \"%s\": %m"
+msgstr "無法取得檔案或目錄 \"%s\" 的狀態: %m"
+
+#: pg_verifybackup.c:620
+#, c-format
+msgid "\"%s\" is not a file or directory"
+msgstr ""
+
+#: pg_verifybackup.c:630
+#, c-format
+msgid "\"%s\" is present on disk but not in the manifest"
+msgstr ""
+
+#: pg_verifybackup.c:642
+#, c-format
+msgid "\"%s\" has size %lld on disk but size %zu in the manifest"
+msgstr ""
+
+#: pg_verifybackup.c:669
+#, c-format
+msgid "\"%s\" is present in the manifest but not on disk"
+msgstr ""
+
+#: pg_verifybackup.c:732
+#, c-format
+msgid "could not initialize checksum of file \"%s\""
+msgstr ""
+
+#: pg_verifybackup.c:744
+#, c-format
+msgid "could not update checksum of file \"%s\""
+msgstr ""
+
+# access/transam/slru.c:680 access/transam/xlog.c:1567
+# access/transam/xlog.c:1691 access/transam/xlog.c:3013
+#: pg_verifybackup.c:759
+#, c-format
+msgid "could not close file \"%s\": %m"
+msgstr "無法關閉檔案\"%s\": %m"
+
+#: pg_verifybackup.c:778
+#, c-format
+msgid "file \"%s\" should contain %zu bytes, but read %zu bytes"
+msgstr ""
+
+#: pg_verifybackup.c:788
+#, c-format
+msgid "could not finalize checksum of file \"%s\""
+msgstr ""
+
+#: pg_verifybackup.c:796
+#, c-format
+msgid "file \"%s\" has checksum of length %d, but expected %d"
+msgstr ""
+
+#: pg_verifybackup.c:800
+#, c-format
+msgid "checksum mismatch for file \"%s\""
+msgstr ""
+
+#: pg_verifybackup.c:824
+#, c-format
+msgid "WAL parsing failed for timeline %u"
+msgstr ""
+
+#: pg_verifybackup.c:910
+#, c-format
+msgid ""
+"%s verifies a backup against the backup manifest.\n"
+"\n"
+msgstr ""
+
+#: pg_verifybackup.c:911
+#, c-format
+msgid ""
+"Usage:\n"
+"  %s [OPTION]... BACKUPDIR\n"
+"\n"
+msgstr ""
+
+# postmaster/postmaster.c:1017 tcop/postgres.c:2115
+#: pg_verifybackup.c:912
+#, c-format
+msgid "Options:\n"
+msgstr "選項: \n"
+
+#: pg_verifybackup.c:913
+#, c-format
+msgid "  -e, --exit-on-error         exit immediately on error\n"
+msgstr ""
+
+#: pg_verifybackup.c:914
+#, c-format
+msgid "  -i, --ignore=RELATIVE_PATH  ignore indicated path\n"
+msgstr ""
+
+#: pg_verifybackup.c:915
+#, c-format
+msgid "  -m, --manifest-path=PATH    use specified path for manifest\n"
+msgstr ""
+
+#: pg_verifybackup.c:916
+#, c-format
+msgid "  -n, --no-parse-wal          do not try to parse WAL files\n"
+msgstr ""
+
+#: pg_verifybackup.c:917
+#, c-format
+msgid "  -q, --quiet                 do not print any output, except for errors\n"
+msgstr ""
+
+#: pg_verifybackup.c:918
+#, c-format
+msgid "  -s, --skip-checksums        skip checksum verification\n"
+msgstr ""
+
+#: pg_verifybackup.c:919
+#, c-format
+msgid "  -w, --wal-directory=PATH    use specified path for WAL files\n"
+msgstr ""
+
+#: pg_verifybackup.c:920
+#, c-format
+msgid "  -V, --version               output version information, then exit\n"
+msgstr ""
+
+#: pg_verifybackup.c:921
+#, c-format
+msgid "  -?, --help                  show this help, then exit\n"
+msgstr ""
+
+#: pg_verifybackup.c:922
+#, c-format
+msgid ""
+"\n"
+"Report bugs to <%s>.\n"
+msgstr ""
+
+#: pg_verifybackup.c:923
+#, c-format
+msgid "%s home page: <%s>\n"
+msgstr ""

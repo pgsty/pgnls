@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.1\n"
-"Report-Msgid-Bugs-To: pgsql-bugs@postgresql.org\n"
-"POT-Creation-Date: 2011-05-13 20:39+0000\n"
+"Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
+"POT-Creation-Date: 2026-09-17 19:23+0000\n"
 "PO-Revision-Date: 2013-09-03 23:24-0400\n"
 "Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
 "Language-Team: Traditional Chinese\n"
@@ -16,14 +16,79 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: pltcl.c:467
+#, fuzzy
+#| msgid "Perl initialization code to execute once when plperl is first used."
+msgid "PL/Tcl function to call once when pltcl is first used."
+msgstr "初次使用 plperl 時執行一次 Perl 初始化程式。"
+
+#: pltcl.c:474
+#, fuzzy
+#| msgid "Perl initialization code to execute once when plperlu is first used."
+msgid "PL/TclU function to call once when pltclu is first used."
+msgstr "初次使用 plperlu 時執行一次 Perl 初始化程式。"
+
+# utils/adt/ri_triggers.c:2921
+#: pltcl.c:641
+#, fuzzy, c-format
+#| msgid "function \"%s\" was not called by trigger manager"
+msgid "function \"%s\" is in the wrong language"
+msgstr "觸發程序管理員未呼叫函式 \"%s\""
+
+# utils/adt/ri_triggers.c:2938
+#: pltcl.c:652
+#, fuzzy, c-format
+#| msgid "function \"%s\" must be fired for INSERT"
+msgid "function \"%s\" must not be SECURITY DEFINER"
+msgstr "函式 \"%s\" 必須針對 INSERT 引發"
+
+# utils/adt/acl.c:203
+#. translator: %s is "pltcl.start_proc" or "pltclu.start_proc"
+#: pltcl.c:686
+#, fuzzy, c-format
+#| msgid "missing Synonyms parameter"
+msgid "processing %s parameter"
+msgstr "缺少 Synonyms 參數"
+
+# executor/execQual.c:866 executor/execQual.c:910 executor/execQual.c:1086
+# executor/execQual.c:1211 executor/execQual.c:3445 executor/functions.c:666
+# executor/functions.c:705 utils/fmgr/funcapi.c:39
+#: pltcl.c:839
+#, c-format
+msgid "set-valued function called in context that cannot accept a set"
+msgstr "set-valued 函式於無法接受集合的內容中進行呼叫"
+
+#: pltcl.c:844
+#, c-format
+msgid "materialize mode required, but it is not allowed in this context"
+msgstr "需要具體化模式，但此上下文不允許該模式"
+
+#: pltcl.c:1017
+#, c-format
+msgid "function returning record called in context that cannot accept type record"
+msgstr "在不接受型別 record 的 context 中呼叫回傳 record 的函式"
+
+#: pltcl.c:1036
+#, fuzzy, c-format
+#| msgid "could not set junction for \"%s\": %s"
+msgid "could not parse function return value: %s"
+msgstr "無法為 \"%s\" 設定連接: %s"
+
+# utils/misc/guc.c:5185
+#: pltcl.c:1303
+#, fuzzy, c-format
+#| msgid "could not parse setting for parameter \"%s\""
+msgid "could not parse trigger return value: %s"
+msgstr "無法解讀參數 \"%s\" 的設定"
+
 # commands/vacuum.c:2258 commands/vacuumlazy.c:489 commands/vacuumlazy.c:770
 # nodes/print.c:86 storage/lmgr/deadlock.c:888 tcop/postgres.c:3285
-#: pltcl.c:1149
+#: pltcl.c:1388 pltcl.c:1822
 #, c-format
 msgid "%s"
 msgstr "%s"
 
-#: pltcl.c:1150
+#: pltcl.c:1389
 #, c-format
 msgid ""
 "%s\n"
@@ -32,25 +97,58 @@ msgstr ""
 "%s\n"
 "於 PL/Tcl 函式  \"%s\""
 
-# common.c:123
-#: pltcl.c:1254 pltcl.c:1261
-msgid "out of memory"
-msgstr "記憶體用盡"
-
-#: pltcl.c:1308
+#: pltcl.c:1554
+#, c-format
 msgid "trigger functions can only be called as triggers"
 msgstr "觸發函式只能當做觸發程序呼叫"
 
-#: pltcl.c:1317
+#: pltcl.c:1558
 #, c-format
 msgid "PL/Tcl functions cannot return type %s"
 msgstr "PL/Tcl 函式不能傳回型別 %s"
 
-#: pltcl.c:1329
-msgid "PL/Tcl functions cannot return composite types"
-msgstr "PL/Tcl 函式不能傳回複合型別"
-
-#: pltcl.c:1368
+#: pltcl.c:1596
 #, c-format
 msgid "PL/Tcl functions cannot accept type %s"
 msgstr "PL/Tcl 函式不能接受型別 %s"
+
+# utils/init/miscinit.c:519
+#: pltcl.c:1712
+#, fuzzy, c-format
+#| msgid "could not create locale \"%s\": %m"
+msgid "could not create internal procedure \"%s\": %s"
+msgstr "無法建立 locale \"%s\": %m"
+
+# parser/analyze.c:2210
+#: pltcl.c:3217
+#, fuzzy, c-format
+#| msgid "each %s query must have the same number of columns"
+msgid "column name/value list must have even number of elements"
+msgstr "每個 %s 查詢都必須有相同數目的資料行"
+
+#: pltcl.c:3235
+#, fuzzy, c-format
+#| msgid "Perl hash contains nonexistent column \"%s\""
+msgid "column name/value list contains nonexistent column name \"%s\""
+msgstr "Perl hash 包含不存在欄位 \"%s\""
+
+# commands/tablecmds.c:5425
+#: pltcl.c:3242
+#, fuzzy, c-format
+#| msgid "cannot move system relation \"%s\""
+msgid "cannot set system attribute \"%s\""
+msgstr "無法搬移系統relation \"%s\""
+
+# commands/tablecmds.c:4580
+#: pltcl.c:3248
+#, fuzzy, c-format
+#| msgid "cannot alter inherited column \"%s\""
+msgid "cannot set generated column \"%s\""
+msgstr "無法修改被繼承的欄位\"%s\""
+
+#~ msgid "PL/Tcl functions cannot return composite types"
+#~ msgstr "PL/Tcl 函式不能傳回複合型別"
+
+# common.c:123
+#~ msgid "out of memory"
+#~ msgstr "記憶體用盡"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_verifybackup (PostgreSQL) 14\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2021-08-14 05:45+0000\n"
+"POT-Creation-Date: 2026-09-17 19:45+0000\n"
 "PO-Revision-Date: 2021-08-15 16:00+0800\n"
 "Last-Translator: Jie Zhang <zhangjie2@fujitsu.com>\n"
 "Language-Team: Chinese (Simplified) <zhangjie2@fujitsu.com>\n"
@@ -31,93 +31,105 @@ msgstr "错误: "
 msgid "warning: "
 msgstr "警告: "
 
-#: ../../common/fe_memutils.c:35 ../../common/fe_memutils.c:75
-#: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:162
+#: ../../common/fe_memutils.c:41 ../../common/fe_memutils.c:81
+#: ../../common/fe_memutils.c:104 ../../common/fe_memutils.c:168
 #, c-format
 msgid "out of memory\n"
 msgstr "内存不足\n"
 
-#: ../../common/fe_memutils.c:92 ../../common/fe_memutils.c:154
+#: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:160
 #, c-format
 msgid "cannot duplicate null pointer (internal error)\n"
 msgstr "无法复制空指针 (内部错误)\n"
 
-#: ../../common/jsonapi.c:1066
+#: ../../common/fe_memutils.c:210
+#, fuzzy, c-format
+#| msgid "invalid large object write request size: %d"
+msgid "invalid memory allocation request size %zu + %zu\n"
+msgstr "无效的大对象写请求大小: %d"
+
+#: ../../common/fe_memutils.c:229
+#, fuzzy, c-format
+#| msgid "invalid large object write request size: %d"
+msgid "invalid memory allocation request size %zu * %zu\n"
+msgstr "无效的大对象写请求大小: %d"
+
+#: ../../common/jsonapi.c:1087
 #, c-format
 msgid "Escape sequence \"\\%s\" is invalid."
 msgstr "转义序列 \"\\%s\" 无效."
 
-#: ../../common/jsonapi.c:1069
+#: ../../common/jsonapi.c:1090
 #, c-format
 msgid "Character with value 0x%02x must be escaped."
 msgstr "值为 0x%02x 的字符必须进行转义处理."
 
-#: ../../common/jsonapi.c:1072
+#: ../../common/jsonapi.c:1093
 #, c-format
 msgid "Expected end of input, but found \"%s\"."
 msgstr "期望输入结束，结果发现是\"%s\"."
 
-#: ../../common/jsonapi.c:1075
+#: ../../common/jsonapi.c:1096
 #, c-format
 msgid "Expected array element or \"]\", but found \"%s\"."
 msgstr "期望为数组元素或者\"]\"，但发现结果是\"%s\"."
 
-#: ../../common/jsonapi.c:1078
+#: ../../common/jsonapi.c:1099
 #, c-format
 msgid "Expected \",\" or \"]\", but found \"%s\"."
 msgstr "期望是\",\" 或 \"]\"，但发现结果是\"%s\"."
 
-#: ../../common/jsonapi.c:1081
+#: ../../common/jsonapi.c:1102
 #, c-format
 msgid "Expected \":\", but found \"%s\"."
 msgstr "期望得到 \":\"，但发现结果是\"%s\"."
 
-#: ../../common/jsonapi.c:1084
+#: ../../common/jsonapi.c:1105
 #, c-format
 msgid "Expected JSON value, but found \"%s\"."
 msgstr "期望是JSON值, 但结果发现是\"%s\"."
 
-#: ../../common/jsonapi.c:1087
+#: ../../common/jsonapi.c:1108
 msgid "The input string ended unexpectedly."
 msgstr "输入字符串意外终止."
 
-#: ../../common/jsonapi.c:1089
+#: ../../common/jsonapi.c:1110
 #, c-format
 msgid "Expected string or \"}\", but found \"%s\"."
 msgstr "期望是字符串或\"}\"，但发现结果是\"%s\"."
 
-#: ../../common/jsonapi.c:1092
+#: ../../common/jsonapi.c:1113
 #, c-format
 msgid "Expected \",\" or \"}\", but found \"%s\"."
 msgstr "期望是 \",\" 或 \"}\"，但发现结果是\"%s\"."
 
-#: ../../common/jsonapi.c:1095
+#: ../../common/jsonapi.c:1116
 #, c-format
 msgid "Expected string, but found \"%s\"."
 msgstr "期望是字符串, 但发现结果是\"%s\"."
 
-#: ../../common/jsonapi.c:1098
+#: ../../common/jsonapi.c:1119
 #, c-format
 msgid "Token \"%s\" is invalid."
 msgstr "令牌 \"%s\" 无效."
 
-#: ../../common/jsonapi.c:1101
+#: ../../common/jsonapi.c:1122
 msgid "\\u0000 cannot be converted to text."
 msgstr "\\u0000不能被转换为文本。"
 
-#: ../../common/jsonapi.c:1103
+#: ../../common/jsonapi.c:1124
 msgid "\"\\u\" must be followed by four hexadecimal digits."
 msgstr "\"\\u\" 后必须紧跟有效的十六进制数数字"
 
-#: ../../common/jsonapi.c:1106
+#: ../../common/jsonapi.c:1127
 msgid "Unicode escape values cannot be used for code point values above 007F when the encoding is not UTF8."
 msgstr "当编码不是UTF8时，大于007F的码位值不能使用Unicode转义值."
 
-#: ../../common/jsonapi.c:1108
+#: ../../common/jsonapi.c:1129
 msgid "Unicode high surrogate must not follow a high surrogate."
 msgstr "Unicode 的高位代理项不能紧随另一个高位代理项."
 
-#: ../../common/jsonapi.c:1110
+#: ../../common/jsonapi.c:1131
 msgid "Unicode low surrogate must follow a high surrogate."
 msgstr "Unicode 代位代理项必须紧随一个高位代理项."
 
@@ -241,14 +253,17 @@ msgid "out of memory"
 msgstr "内存不足"
 
 #: parse_manifest.c:659
+#, c-format
 msgid "could not initialize checksum of manifest"
 msgstr "无法初始化清单的校验和"
 
 #: parse_manifest.c:661
+#, c-format
 msgid "could not update checksum of manifest"
 msgstr "无法更新清单的校验和"
 
 #: parse_manifest.c:664
+#, c-format
 msgid "could not finalize checksum of manifest"
 msgstr "无法完成清单的校验和"
 
@@ -330,10 +345,12 @@ msgid "could not read file \"%s\": %m"
 msgstr "无法读取文件 \"%s\": %m"
 
 #: pg_verifybackup.c:415
+#, c-format
 msgid "could not read file \"%s\": read %d of %lld"
 msgstr "无法读取文件\"%1$s\"：读取了%3$lld中的%2$d"
 
 #: pg_verifybackup.c:475
+#, c-format
 msgid "duplicate path name in backup manifest: \"%s\""
 msgstr "备份清单中的路径名重复: \"%s\""
 
@@ -363,6 +380,7 @@ msgid "\"%s\" is present on disk but not in the manifest"
 msgstr "磁盘上有\"%s\"，但清单中没有"
 
 #: pg_verifybackup.c:642
+#, c-format
 msgid "\"%s\" has size %lld on disk but size %zu in the manifest"
 msgstr "\"%s\"在磁盘上有大小%lld，但在清单中有大小%zu"
 
@@ -372,10 +390,12 @@ msgid "\"%s\" is present in the manifest but not on disk"
 msgstr "清单中有\"%s\"，但磁盘上没有"
 
 #: pg_verifybackup.c:732
+#, c-format
 msgid "could not initialize checksum of file \"%s\""
 msgstr "无法初始化文件\"%s\"的校验和"
 
 #: pg_verifybackup.c:744
+#, c-format
 msgid "could not update checksum of file \"%s\""
 msgstr "无法更新文件\"%s\"的校验和"
 
@@ -390,6 +410,7 @@ msgid "file \"%s\" should contain %zu bytes, but read %zu bytes"
 msgstr "文件\"%s\"应包含%zu到字节，但读取到%zu字节"
 
 #: pg_verifybackup.c:788
+#, c-format
 msgid "could not finalize checksum of file \"%s\""
 msgstr "无法完成文件\"%s\"的校验和"
 
@@ -491,4 +512,3 @@ msgstr ""
 #, c-format
 msgid "%s home page: <%s>\n"
 msgstr "%s 主页: <%s>\n"
-

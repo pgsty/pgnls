@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_waldump (PostgreSQL) 16\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2023-09-11 20:48+0000\n"
+"POT-Creation-Date: 2026-09-17 19:16+0000\n"
 "PO-Revision-Date: 2023-11-06 08:50+0800\n"
 "Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
 "Language-Team: \n"
@@ -420,172 +420,170 @@ msgstr "WAL 記錄在 %X/%X 出現錯誤: %s"
 msgid "Try \"%s --help\" for more information."
 msgstr "用 \"%s --help\" 取得更多資訊。"
 
-#: xlogreader.c:626
+#: xlogreader.c:621
 #, c-format
 msgid "invalid record offset at %X/%X: expected at least %u, got %u"
 msgstr "位於 %X/%X 的記錄 offset 無效: 預期至少 %u，實際為 %u"
 
 # access/transam/xlog.c:2443
-#: xlogreader.c:635
+#: xlogreader.c:630
 #, c-format
 msgid "contrecord is requested by %X/%X"
 msgstr "%X/%X 要求 contrecord"
 
-#: xlogreader.c:676 xlogreader.c:1119
+#: xlogreader.c:671 xlogreader.c:1146
 #, c-format
 msgid "invalid record length at %X/%X: expected at least %u, got %u"
 msgstr "位於 %X/%X 的記錄長度無效: 預期至少 %u，實際為 %u"
 
-#: xlogreader.c:705
-#, c-format
-msgid "out of memory while trying to decode a record of length %u"
-msgstr "嘗試解碼長度為 %u 的記錄時耗盡記憶體"
-
-# access/transam/xlog.c:2503
-#: xlogreader.c:727
-#, c-format
-msgid "record length %u at %X/%X too long"
-msgstr "位於 %X/%X 的記錄長度 %u 過長"
-
-#: xlogreader.c:776
+#: xlogreader.c:761
 #, c-format
 msgid "there is no contrecord flag at %X/%X"
 msgstr "位於 %X/%X 沒有 contrecord 標誌"
 
-#: xlogreader.c:789
+#: xlogreader.c:774
 #, c-format
 msgid "invalid contrecord length %u (expected %lld) at %X/%X"
 msgstr "位於 %3$X/%4$X 的 contrecord 長度 %1$u 無效(預期為 %2$lld)"
 
 # access/transam/xlog.c:2465
-#: xlogreader.c:1127
+#: xlogreader.c:1154
 #, c-format
 msgid "invalid resource manager ID %u at %X/%X"
 msgstr "無效的資源管理器 ID %u 於 %X/%X"
 
 # access/transam/xlog.c:2458
-#: xlogreader.c:1140 xlogreader.c:1156
+#: xlogreader.c:1167 xlogreader.c:1183
 #, c-format
 msgid "record with incorrect prev-link %X/%X at %X/%X"
 msgstr "位於 %3$X/%4$X 的記錄有不正確的 prev-link %1$X/%2$X"
 
 # access/transam/xlog.c:2269
-#: xlogreader.c:1192
+#: xlogreader.c:1221
 #, c-format
 msgid "incorrect resource manager data checksum in record at %X/%X"
 msgstr "位於 %X/%X 的記錄中資源管理員資料檢查碼不正確"
 
-#: xlogreader.c:1226
+#: xlogreader.c:1255
 #, c-format
 msgid "invalid magic number %04X in WAL segment %s, LSN %X/%X, offset %u"
 msgstr "WAL 片段 %2$s 中的魔數數字 %1$04X 無效，LSN %3$X/%4$X，位移 %5$u"
 
-#: xlogreader.c:1241 xlogreader.c:1283
+#: xlogreader.c:1270 xlogreader.c:1312
 #, c-format
 msgid "invalid info bits %04X in WAL segment %s, LSN %X/%X, offset %u"
 msgstr "WAL 片段 %2$s 中的資訊位元 %1$04X 無效，LSN %3$X/%4$X，位移 %5$u"
 
-#: xlogreader.c:1257
+#: xlogreader.c:1286
 #, c-format
 msgid "WAL file is from different database system: WAL file database system identifier is %llu, pg_control database system identifier is %llu"
 msgstr "WAL 檔案來自不同的資料庫系統: WAL 檔案的資料庫系統識別碼為 %llu，而 pg_control 的資料庫系統識別碼為 %llu"
 
-#: xlogreader.c:1265
+#: xlogreader.c:1294
 #, c-format
 msgid "WAL file is from different database system: incorrect segment size in page header"
 msgstr "WAL 檔案來自不同的資料庫系統: 資料頁標頭中的片段大小不正確"
 
-#: xlogreader.c:1271
+#: xlogreader.c:1300
 #, c-format
 msgid "WAL file is from different database system: incorrect XLOG_BLCKSZ in page header"
 msgstr "WAL 檔案來自不同的資料庫系統: 資料頁標頭中的 XLOG_BLCKSZ 不正確"
 
-#: xlogreader.c:1303
+#: xlogreader.c:1332
 #, c-format
 msgid "unexpected pageaddr %X/%X in WAL segment %s, LSN %X/%X, offset %u"
 msgstr "非預期的 pageaddr %X/%X 位於 WAL 片段 %s，LSN %X/%X，位移 %u"
 
-#: xlogreader.c:1329
+#: xlogreader.c:1358
 #, c-format
 msgid "out-of-sequence timeline ID %u (after %u) in WAL segment %s, LSN %X/%X, offset %u"
 msgstr "非依序 timeline ID %u(在 %u 之後)位於 WAL 片段 %s，LSN %X/%X，位移 %u"
 
-#: xlogreader.c:1735
+#: xlogreader.c:1764
 #, c-format
 msgid "out-of-order block_id %u at %X/%X"
 msgstr "非循序 block_id %u 位於 %X/%X"
 
-#: xlogreader.c:1759
+#: xlogreader.c:1788
 #, c-format
 msgid "BKPBLOCK_HAS_DATA set, but no data included at %X/%X"
 msgstr "設定了 BKPBLOCK_HAS_DATA，但在 %X/%X 的沒有包含任何資料"
 
-#: xlogreader.c:1766
+#: xlogreader.c:1795
 #, c-format
 msgid "BKPBLOCK_HAS_DATA not set, but data length is %u at %X/%X"
 msgstr "未設定 BKPBLOCK_HAS_DATA，但在 %2$X/%3$X 的資料長度為 %1$u"
 
-#: xlogreader.c:1802
+#: xlogreader.c:1831
 #, c-format
 msgid "BKPIMAGE_HAS_HOLE set, but hole offset %u length %u block image length %u at %X/%X"
 msgstr "設定了 BKPIMAGE_HAS_HOLE，但在 %4$X/%5$X 有 offset %1$u 長度 %2$u 影像長度 %3$u 的空洞"
 
-#: xlogreader.c:1818
+#: xlogreader.c:1847
 #, c-format
 msgid "BKPIMAGE_HAS_HOLE not set, but hole offset %u length %u at %X/%X"
 msgstr "未設定 BKPIMAGE_HAS_HOLE，但在 %3$X/%4$X 有 offset %1$u 長度 %2$u 的空洞"
 
-#: xlogreader.c:1832
+#: xlogreader.c:1861
 #, c-format
 msgid "BKPIMAGE_COMPRESSED set, but block image length %u at %X/%X"
 msgstr "設定了 BKPIMAGE_COMPRESSED，但在 %2$X/%3$X 的區塊影像長度為 %1$u"
 
-#: xlogreader.c:1847
+#: xlogreader.c:1876
 #, c-format
 msgid "neither BKPIMAGE_HAS_HOLE nor BKPIMAGE_COMPRESSED set, but block image length is %u at %X/%X"
 msgstr "未設定 BKPIMAGE_HAS_HOLE 和 BKPIMAGE_COMPRESSED，但在 %2$X/%3$X 的區塊影像長度為 %1$u"
 
-#: xlogreader.c:1863
+#: xlogreader.c:1892
 #, c-format
 msgid "BKPBLOCK_SAME_REL set but no previous rel at %X/%X"
 msgstr "設定了 BKPBLOCK_SAME_REL，但在 %X/%X 沒有先前的 rel"
 
-#: xlogreader.c:1875
+#: xlogreader.c:1904
 #, c-format
 msgid "invalid block_id %u at %X/%X"
 msgstr "位於 %2$X/%3$X 的無效 block_id %1$u"
 
-#: xlogreader.c:1942
+#: xlogreader.c:1971
 #, c-format
 msgid "record with invalid length at %X/%X"
 msgstr "位於 %X/%X 的記錄長度無效"
 
-#: xlogreader.c:1968
+#: xlogreader.c:1997
 #, c-format
 msgid "could not locate backup block with ID %d in WAL record"
 msgstr "在 WAL 記錄中找不到具有 ID %d 的備份區塊"
 
-#: xlogreader.c:2052
+#: xlogreader.c:2081
 #, c-format
 msgid "could not restore image at %X/%X with invalid block %d specified"
 msgstr "無法還原指定了無效區塊 %3$d 的影像，位置 %1$X/%2$X"
 
-#: xlogreader.c:2059
+#: xlogreader.c:2088
 #, c-format
 msgid "could not restore image at %X/%X with invalid state, block %d"
 msgstr "無法還原處於無效狀態的影像，位置 %X/%X，區塊 %d"
 
-#: xlogreader.c:2086 xlogreader.c:2103
+#: xlogreader.c:2115 xlogreader.c:2132
 #, c-format
 msgid "could not restore image at %X/%X compressed with %s not supported by build, block %d"
 msgstr "無法還原用此版本不支援的壓縮方法 %3$s 壓縮的影像，位置 %1$X/%2$X，區塊 %4$d"
 
-#: xlogreader.c:2112
+#: xlogreader.c:2141
 #, c-format
 msgid "could not restore image at %X/%X compressed with unknown method, block %d"
 msgstr "無法還原使用未知方法壓縮的影像，位置 %X/%X，區塊 %d"
 
-#: xlogreader.c:2120
+#: xlogreader.c:2149
 #, c-format
 msgid "could not decompress image at %X/%X, block %d"
 msgstr "無法解壓縮影像，位置 %X/%X，區塊 %d"
+
+#, c-format
+#~ msgid "out of memory while trying to decode a record of length %u"
+#~ msgstr "嘗試解碼長度為 %u 的記錄時耗盡記憶體"
+
+# access/transam/xlog.c:2503
+#, c-format
+#~ msgid "record length %u at %X/%X too long"
+#~ msgstr "位於 %X/%X 的記錄長度 %u 過長"

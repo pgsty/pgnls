@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_basebackup (PostgreSQL) 14\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2021-08-14 05:46+0000\n"
+"POT-Creation-Date: 2026-09-18 04:41+0000\n"
 "PO-Revision-Date: 2024-06-26 19:17+0200\n"
 "Last-Translator: Jie Zhang <zhangjie2@fujitsu.com>\n"
 "Language-Team:  Chinese (Simplified) <zhangjie2@fujitsu.com>\n"
@@ -17,165 +17,541 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../../src/common/logging.c:259
-#, c-format
-msgid "fatal: "
-msgstr "致命的: "
-
-#: ../../../src/common/logging.c:266
+#: ../../../src/common/logging.c:279
 #, c-format
 msgid "error: "
 msgstr "错误: "
 
-#: ../../../src/common/logging.c:273
+#: ../../../src/common/logging.c:286
 #, c-format
 msgid "warning: "
 msgstr "警告: "
 
-#: ../../common/fe_memutils.c:35 ../../common/fe_memutils.c:75
-#: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:162
+#: ../../../src/common/logging.c:297
 #, c-format
-msgid "out of memory\n"
-msgstr "内存不足\n"
+msgid "detail: "
+msgstr "详细信息: "
 
-#: ../../common/fe_memutils.c:92 ../../common/fe_memutils.c:154
+#: ../../../src/common/logging.c:304
 #, c-format
-msgid "cannot duplicate null pointer (internal error)\n"
-msgstr "无法复制空指针 (内部错误)\n"
+msgid "hint: "
+msgstr "提示: "
 
-#: ../../common/file_utils.c:87 ../../common/file_utils.c:451
-#: pg_receivewal.c:266 pg_recvlogical.c:340
+#: ../../common/compression.c:132 ../../common/compression.c:141
+#: ../../common/compression.c:150 ../../fe_utils/astreamer_gzip.c:140
+#: ../../fe_utils/astreamer_gzip.c:273 ../../fe_utils/astreamer_lz4.c:102
+#: ../../fe_utils/astreamer_lz4.c:300 ../../fe_utils/astreamer_zstd.c:130
+#: ../../fe_utils/astreamer_zstd.c:285
+#, fuzzy, c-format
+#| msgid "this build does not support compression"
+msgid "this build does not support compression with %s"
+msgstr "这个编译版本不支持压缩"
+
+#: ../../common/compression.c:205
+msgid "found empty string where a compression option was expected"
+msgstr ""
+
+#: ../../common/compression.c:244
+#, fuzzy, c-format
+#| msgid "unrecognized column option \"%s\""
+msgid "unrecognized compression option: \"%s\""
+msgstr "无法识别的列选项\"%s\""
+
+#: ../../common/compression.c:283
+#, fuzzy, c-format
+#| msgid "-c %s requires a value"
+msgid "compression option \"%s\" requires a value"
+msgstr "-c %s 需要一个值"
+
+#: ../../common/compression.c:292
+#, fuzzy, c-format
+#| msgid "btree comparison functions must return integer"
+msgid "value for compression option \"%s\" must be an integer"
+msgstr "B树比较函数必须返回整数"
+
+#: ../../common/compression.c:331
+#, fuzzy, c-format
+#| msgid "argument to option \"%s\" must be a list of column names"
+msgid "value for compression option \"%s\" must be a Boolean value"
+msgstr "选项 \"%s\"的参数必须是一个包含列名的列表"
+
+#: ../../common/compression.c:379
+#, fuzzy, c-format
+#| msgid "\"%s\" is not a composite type"
+msgid "compression algorithm \"%s\" does not accept a compression level"
+msgstr "\"%s\" 不是组合类型"
+
+#: ../../common/compression.c:386
 #, c-format
-msgid "could not stat file \"%s\": %m"
-msgstr "无法取文件 \"%s\" 的状态: %m"
+msgid "compression algorithm \"%s\" expects a compression level between %d and %d (default at %d)"
+msgstr ""
 
-#: ../../common/file_utils.c:166 pg_receivewal.c:169
+#: ../../common/compression.c:397
+#, fuzzy, c-format
+#| msgid "operator class \"%s\" does not accept data type %s"
+msgid "compression algorithm \"%s\" does not accept a worker count"
+msgstr "操作符表 \"%s\" 不能处理数据类型 %s"
+
+#: ../../common/compression.c:408
+#, fuzzy, c-format
+#| msgid "access method \"%s\" does not support unique indexes"
+msgid "compression algorithm \"%s\" does not support long-distance mode"
+msgstr "存取方法 \"%s\" 不支持唯一索引"
+
+#: ../../common/controldata_utils.c:97
 #, c-format
-msgid "could not open directory \"%s\": %m"
-msgstr "无法打开目录 \"%s\": %m"
+msgid "could not open file \"%s\" for reading: %m"
+msgstr "为了读取, 无法打开文件 \"%s\": %m"
 
-#: ../../common/file_utils.c:200 pg_receivewal.c:337
+#: ../../common/controldata_utils.c:110 pg_basebackup.c:1874
+#: pg_receivewal.c:402
 #, c-format
-msgid "could not read directory \"%s\": %m"
-msgstr "无法读取目录 \"%s\": %m"
+msgid "could not read file \"%s\": %m"
+msgstr "无法读取文件 \"%s\": %m"
 
-#: ../../common/file_utils.c:232 ../../common/file_utils.c:291
-#: ../../common/file_utils.c:365 ../../fe_utils/recovery_gen.c:134
+#: ../../common/controldata_utils.c:119
+#, c-format
+msgid "could not read file \"%s\": read %d of %zu"
+msgstr "无法读取文件\"%1$s\"：读取了%3$zu中的%2$d"
+
+#: ../../common/controldata_utils.c:132 ../../common/controldata_utils.c:280
+#: ../../fe_utils/astreamer_file.c:141 ../../fe_utils/astreamer_file.c:282
+#: pg_recvlogical.c:657
+#, c-format
+msgid "could not close file \"%s\": %m"
+msgstr "无法关闭文件 \"%s\": %m"
+
+#: ../../common/controldata_utils.c:168
+msgid "byte ordering mismatch"
+msgstr "字节排序不匹配"
+
+#: ../../common/controldata_utils.c:170
+#, c-format
+msgid ""
+"possible byte ordering mismatch\n"
+"The byte ordering used to store the pg_control file might not match the one\n"
+"used by this program.  In that case the results below would be incorrect, and\n"
+"the PostgreSQL installation would be incompatible with this data directory."
+msgstr ""
+"可能字节顺序不匹配\n"
+"用于存储文件pg_control的字节顺序可能与程序使用的不匹配\n"
+"在那种情况下结果将会是不正确的,并且所安装的PostgreSQL\n"
+"将会与这个数据目录不兼容"
+
+#: ../../common/controldata_utils.c:230 ../../common/file_utils.c:69
+#: ../../common/file_utils.c:370 ../../common/file_utils.c:428
+#: ../../common/file_utils.c:502 ../../fe_utils/recovery_gen.c:141
+#: pg_basebackup.c:1847 pg_receivewal.c:386
 #, c-format
 msgid "could not open file \"%s\": %m"
 msgstr "无法打开文件 \"%s\": %m"
 
-#: ../../common/file_utils.c:303 ../../common/file_utils.c:373
-#: pg_recvlogical.c:193
+#: ../../common/controldata_utils.c:249
+#, c-format
+msgid "could not write file \"%s\": %m"
+msgstr "无法写入文件 \"%s\": %m"
+
+#: ../../common/controldata_utils.c:268 ../../common/file_utils.c:440
+#: ../../common/file_utils.c:510 pg_recvlogical.c:206
 #, c-format
 msgid "could not fsync file \"%s\": %m"
 msgstr "无法 fsync 文件 \"%s\": %m"
 
-#: ../../common/file_utils.c:383
+#: ../../common/fe_memutils.c:41 ../../common/fe_memutils.c:81
+#: ../../common/fe_memutils.c:104 ../../common/fe_memutils.c:167
+#, c-format
+msgid "out of memory\n"
+msgstr "内存不足\n"
+
+#: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:159
+#, c-format
+msgid "cannot duplicate null pointer (internal error)\n"
+msgstr "无法复制空指针 (内部错误)\n"
+
+#: ../../common/fe_memutils.c:209
+#, fuzzy, c-format
+#| msgid "invalid large object write request size: %d"
+msgid "invalid memory allocation request size %zu + %zu\n"
+msgstr "无效的大对象写请求大小: %d"
+
+#: ../../common/fe_memutils.c:228
+#, fuzzy, c-format
+#| msgid "invalid large object write request size: %d"
+msgid "invalid memory allocation request size %zu * %zu\n"
+msgstr "无效的大对象写请求大小: %d"
+
+#: ../../common/file_utils.c:75
+#, c-format
+msgid "could not synchronize file system for file \"%s\": %m"
+msgstr "无法为文件 \"%s\" 同步文件系统: %m"
+
+#: ../../common/file_utils.c:123 ../../common/file_utils.c:588
+#: pg_receivewal.c:319 pg_recvlogical.c:358
+#, c-format
+msgid "could not stat file \"%s\": %m"
+msgstr "无法取文件 \"%s\" 的状态: %m"
+
+#: ../../common/file_utils.c:133 ../../common/file_utils.c:243
+#: ../../fe_utils/option_utils.c:99
+#, c-format
+msgid "this build does not support sync method \"%s\""
+msgstr "该版本不支持同步方法 \"%s\""
+
+#: ../../common/file_utils.c:156 ../../common/file_utils.c:304
+#: pg_receivewal.c:242
+#, c-format
+msgid "could not open directory \"%s\": %m"
+msgstr "无法打开目录 \"%s\": %m"
+
+#: ../../common/file_utils.c:174 ../../common/file_utils.c:338
+#: pg_receivewal.c:471
+#, c-format
+msgid "could not read directory \"%s\": %m"
+msgstr "无法读取目录 \"%s\": %m"
+
+#: ../../common/file_utils.c:520 pg_basebackup.c:2345 walmethods.c:462
 #, c-format
 msgid "could not rename file \"%s\" to \"%s\": %m"
 msgstr "无法把文件 \"%s\" 重命名为 \"%s\": %m"
 
-#: ../../fe_utils/recovery_gen.c:35 ../../fe_utils/recovery_gen.c:49
-#: ../../fe_utils/recovery_gen.c:77 ../../fe_utils/recovery_gen.c:100
-#: ../../fe_utils/recovery_gen.c:171 pg_basebackup.c:1248
+#: ../../common/restricted_token.c:60
 #, c-format
-msgid "out of memory"
-msgstr "内存不足"
+msgid "could not open process token: error code %lu"
+msgstr "无法打开进程令牌: 错误码 %lu"
 
-#: ../../fe_utils/recovery_gen.c:140 pg_basebackup.c:1021 pg_basebackup.c:1714
-#: pg_basebackup.c:1770
+#: ../../common/restricted_token.c:74
 #, c-format
-msgid "could not write to file \"%s\": %m"
-msgstr "无法写入文件 \"%s\": %m"
+msgid "could not allocate SIDs: error code %lu"
+msgstr "无法分配 SID: 错误码 %lu"
 
-#: ../../fe_utils/recovery_gen.c:152 pg_basebackup.c:1166 pg_basebackup.c:1671
-#: pg_basebackup.c:1747
+#: ../../common/restricted_token.c:94
+#, c-format
+msgid "could not create restricted token: error code %lu"
+msgstr "无法创建受限令牌: 错误码 %lu"
+
+#: ../../common/restricted_token.c:115
+#, c-format
+msgid "could not start process for command \"%s\": error code %lu"
+msgstr "无法为命令 \"%s\" 创建进程: 错误码 %lu"
+
+#: ../../common/restricted_token.c:153
+#, c-format
+msgid "could not re-execute with restricted token: error code %lu"
+msgstr "无法使用受限令牌再次执行: 错误码 %lu"
+
+#: ../../common/restricted_token.c:168
+#, c-format
+msgid "could not get exit code from subprocess: error code %lu"
+msgstr "无法从子进程获取退出码: 错误码 %lu"
+
+#: ../../fe_utils/astreamer_file.c:96 ../../fe_utils/astreamer_file.c:378
+#: ../../fe_utils/recovery_gen.c:153 pg_basebackup.c:1498 pg_basebackup.c:1707
 #, c-format
 msgid "could not create file \"%s\": %m"
 msgstr "无法创建文件 \"%s\": %m"
 
-#: pg_basebackup.c:224
+#: ../../fe_utils/astreamer_file.c:124 ../../fe_utils/astreamer_file.c:273
+#: ../../fe_utils/recovery_gen.c:144 pg_basebackup.c:1434 pg_basebackup.c:1728
+#, c-format
+msgid "could not write to file \"%s\": %m"
+msgstr "无法写入文件 \"%s\": %m"
+
+#: ../../fe_utils/astreamer_file.c:222 ../../fe_utils/astreamer_tar.c:309
+#, c-format
+msgid "tar member has unsafe path name: \"%s\""
+msgstr ""
+
+#: ../../fe_utils/astreamer_file.c:251
+#, c-format
+msgid "link target has unsafe path name: \"%s\""
+msgstr ""
+
+#: ../../fe_utils/astreamer_file.c:292
+#, fuzzy, c-format
+#| msgid "unexpected result set while fetching file list"
+msgid "unexpected state while extracting archive"
+msgstr "在取得文件列表时得到意料之外的结果集"
+
+#: ../../fe_utils/astreamer_file.c:338 pg_basebackup.c:699 pg_basebackup.c:713
+#: pg_basebackup.c:758
+#, c-format
+msgid "could not create directory \"%s\": %m"
+msgstr "无法创建目录 \"%s\": %m"
+
+#: ../../fe_utils/astreamer_file.c:343
+#, c-format
+msgid "could not set permissions on directory \"%s\": %m"
+msgstr "无法为目录 \"%s\" 的设置权限: %m"
+
+#: ../../fe_utils/astreamer_file.c:362
+#, c-format
+msgid "could not create symbolic link from \"%s\" to \"%s\": %m"
+msgstr "无法创建从 \"%s\" 到 \"%s\"的符号链接: %m"
+
+#: ../../fe_utils/astreamer_file.c:382
+#, c-format
+msgid "could not set permissions on file \"%s\": %m"
+msgstr "无法设置文件 \"%s\" 的权限: %m"
+
+#: ../../fe_utils/astreamer_gzip.c:115
+#, fuzzy, c-format
+#| msgid "could not create compressed file \"%s\": %s"
+msgid "could not create compressed file \"%s\": %m"
+msgstr "无法创建压缩文件 \"%s\": %s"
+
+#: ../../fe_utils/astreamer_gzip.c:127
+#, c-format
+msgid "could not duplicate stdout: %m"
+msgstr "无法复制标准输出: %m"
+
+#: ../../fe_utils/astreamer_gzip.c:131
+#, c-format
+msgid "could not open output file: %m"
+msgstr "无法打开输出文件: %m"
+
+#: ../../fe_utils/astreamer_gzip.c:135
+#, c-format
+msgid "could not set compression level %d: %s"
+msgstr "无法设置压缩级别 %d: %s"
+
+#: ../../fe_utils/astreamer_gzip.c:167
+#, c-format
+msgid "could not write to compressed file \"%s\": %s"
+msgstr "无法往压缩文件里写\"%s\": %s"
+
+#: ../../fe_utils/astreamer_gzip.c:191
+#, fuzzy, c-format
+#| msgid "could not close compressed file \"%s\": %s"
+msgid "could not close compressed file \"%s\": %m"
+msgstr "无法关闭压缩文件 \"%s\": %s"
+
+#: ../../fe_utils/astreamer_gzip.c:269 walmethods.c:880
+#, c-format
+msgid "could not initialize compression library"
+msgstr "无法初始化压缩库"
+
+#: ../../fe_utils/astreamer_gzip.c:320 ../../fe_utils/astreamer_lz4.c:356
+#: ../../fe_utils/astreamer_zstd.c:330
+#, fuzzy, c-format
+#| msgid "could not compress data: %s"
+msgid "could not decompress data: %s"
+msgstr "无法压缩数据: %s"
+
+#: ../../fe_utils/astreamer_lz4.c:97
+#, fuzzy, c-format
+#| msgid "could not create SSL context: %s"
+msgid "could not create lz4 compression context: %s"
+msgstr "无法创建 SSL 环境: %s"
+
+#: ../../fe_utils/astreamer_lz4.c:142
+#, fuzzy, c-format
+#| msgid "could not get backup header: %s"
+msgid "could not write lz4 header: %s"
+msgstr "无法得到备份头: %s"
+
+#: ../../fe_utils/astreamer_lz4.c:191 ../../fe_utils/astreamer_zstd.c:182
+#: ../../fe_utils/astreamer_zstd.c:224
+#, c-format
+msgid "could not compress data: %s"
+msgstr "无法压缩数据: %s"
+
+#: ../../fe_utils/astreamer_lz4.c:243
+#, fuzzy, c-format
+#| msgid "could not set compression level %d: %s"
+msgid "could not end lz4 compression: %s"
+msgstr "无法设置压缩级别 %d: %s"
+
+#: ../../fe_utils/astreamer_lz4.c:295
+#, c-format
+msgid "could not initialize compression library: %s"
+msgstr "无法初始化压缩库: %s"
+
+#: ../../fe_utils/astreamer_tar.c:254
+#, fuzzy, c-format
+#| msgid "unrecognized data block type %d while restoring archive"
+msgid "unexpected state while parsing tar archive"
+msgstr "恢复归档时碰到不识别的数据块类型 %d"
+
+#: ../../fe_utils/astreamer_tar.c:300
+#, fuzzy, c-format
+#| msgid "input file does not appear to be a valid archive"
+msgid "input file does not appear to be a valid tar archive"
+msgstr "输入文件看上去不象有效的归档"
+
+#: ../../fe_utils/astreamer_tar.c:307
+#, c-format
+msgid "tar member has empty name"
+msgstr ""
+
+#: ../../fe_utils/astreamer_tar.c:332
+#, fuzzy, c-format
+#| msgid "multidimensional arrays are not supported"
+msgid "pax extensions to tar format are not supported"
+msgstr "不支持多维数组"
+
+#: ../../fe_utils/astreamer_tar.c:361
+#, c-format
+msgid "COPY stream ended before last file was finished"
+msgstr "复制流在最后一个文件结束前终止"
+
+#: ../../fe_utils/astreamer_zstd.c:89
+#, fuzzy, c-format
+#| msgid "could not reset compression stream"
+msgid "could not create zstd compression context"
+msgstr "无法重置压缩流"
+
+#: ../../fe_utils/astreamer_zstd.c:95
+#, fuzzy, c-format
+#| msgid "could not set compression level %d: %s"
+msgid "could not set zstd compression level to %d: %s"
+msgstr "无法设置压缩级别 %d: %s"
+
+#: ../../fe_utils/astreamer_zstd.c:109
+#, fuzzy, c-format
+#| msgid "could not set compression level %d: %s"
+msgid "could not set compression worker count to %d: %s"
+msgstr "无法设置压缩级别 %d: %s"
+
+#: ../../fe_utils/astreamer_zstd.c:119
+#, fuzzy, c-format
+#| msgid "could not fetch file list: %s"
+msgid "could not enable long-distance mode: %s"
+msgstr "无法取得文件列表：%s"
+
+#: ../../fe_utils/astreamer_zstd.c:276
+#, fuzzy, c-format
+#| msgid "could not reset compression stream"
+msgid "could not create zstd decompression context"
+msgstr "无法重置压缩流"
+
+#: ../../fe_utils/option_utils.c:69
+#, c-format
+msgid "invalid value \"%s\" for option %s"
+msgstr "\"%s\" 是选项 %s 的无效值"
+
+#: ../../fe_utils/option_utils.c:76
+#, c-format
+msgid "%s must be in range %d..%d"
+msgstr "%s 必须位于 %d..%d 的范围内"
+
+#: ../../fe_utils/option_utils.c:106
+#, c-format
+msgid "unrecognized sync method: %s"
+msgstr "无法识别同步方法: %s"
+
+#: ../../fe_utils/recovery_gen.c:40 ../../fe_utils/recovery_gen.c:51
+#: ../../fe_utils/recovery_gen.c:90 ../../fe_utils/recovery_gen.c:110
+#: ../../fe_utils/recovery_gen.c:169 ../../fe_utils/recovery_gen.c:230
+#: pg_basebackup.c:1637
+#, c-format
+msgid "out of memory"
+msgstr "内存不足"
+
+#: ../../fe_utils/recovery_gen.c:215 pg_basebackup.c:2249 streamutil.c:89
+#: streamutil.c:204
+#, c-format
+msgid "%s"
+msgstr "%s"
+
+#: ../../fe_utils/string_utils.c:587
+#, fuzzy, c-format
+#| msgid "shell command argument contains a newline or carriage return: \"%s\""
+msgid "shell command argument contains a newline or carriage return: \"%s\"\n"
+msgstr "shell命令参数包含换行符或回车符: \"%s\""
+
+#: ../../fe_utils/string_utils.c:760
+#, fuzzy, c-format
+#| msgid "shell command argument contains a newline or carriage return: \"%s\""
+msgid "database name contains a newline or carriage return: \"%s\"\n"
+msgstr "shell命令参数包含换行符或回车符: \"%s\""
+
+#: astreamer_inject.c:189
+#, fuzzy, c-format
+#| msgid "unexpected result format while fetching remote files"
+msgid "unexpected state while injecting recovery settings"
+msgstr "在取得远程文件时得到意料之外的结果格式"
+
+#: pg_basebackup.c:245
 #, c-format
 msgid "removing data directory \"%s\""
 msgstr "删除数据目录 \"%s\""
 
-#: pg_basebackup.c:226
+#: pg_basebackup.c:247
 #, c-format
 msgid "failed to remove data directory"
 msgstr "删除数据目录失败"
 
-#: pg_basebackup.c:230
+#: pg_basebackup.c:251
 #, c-format
 msgid "removing contents of data directory \"%s\""
 msgstr "删除数据目录 \"%s\" 的内容"
 
-#: pg_basebackup.c:232
+#: pg_basebackup.c:253
 #, c-format
 msgid "failed to remove contents of data directory"
 msgstr "删除数据目录内容失败"
 
-#: pg_basebackup.c:237
+#: pg_basebackup.c:258
 #, c-format
 msgid "removing WAL directory \"%s\""
 msgstr "正在删除WAL目录\"%s\""
 
-#: pg_basebackup.c:239
+#: pg_basebackup.c:260
 #, c-format
 msgid "failed to remove WAL directory"
 msgstr "删除WAL目录失败"
 
-#: pg_basebackup.c:243
+#: pg_basebackup.c:264
 #, c-format
 msgid "removing contents of WAL directory \"%s\""
 msgstr "正在删除WAL目录 \"%s\" 的内容"
 
-#: pg_basebackup.c:245
+#: pg_basebackup.c:266
 #, c-format
 msgid "failed to remove contents of WAL directory"
 msgstr "删除WAL目录内容失败"
 
-#: pg_basebackup.c:251
+#: pg_basebackup.c:272
 #, c-format
 msgid "data directory \"%s\" not removed at user's request"
 msgstr "在用户的要求下数据库目录 \"%s\" 不被删除"
 
-#: pg_basebackup.c:254
+#: pg_basebackup.c:275
 #, c-format
 msgid "WAL directory \"%s\" not removed at user's request"
 msgstr "在用户的要求下WAL目录 \"%s\" 不被删除"
 
-#: pg_basebackup.c:258
+#: pg_basebackup.c:279
 #, c-format
 msgid "changes to tablespace directories will not be undone"
 msgstr "对表空间目录的更改将不会撤消"
 
-#: pg_basebackup.c:299
+#: pg_basebackup.c:331
 #, c-format
 msgid "directory name too long"
 msgstr "字典名太长"
 
-#: pg_basebackup.c:309
+#: pg_basebackup.c:338
 #, c-format
 msgid "multiple \"=\" signs in tablespace mapping"
 msgstr "多个 \"=\" 号出现在表空间的映射中"
 
-#: pg_basebackup.c:321
+#: pg_basebackup.c:347
 #, c-format
 msgid "invalid tablespace mapping format \"%s\", must be \"OLDDIR=NEWDIR\""
 msgstr "无效表空间映射表格式: \"%s\", 有效格式必须为: \"OLDDIR=NEWDIR\""
 
-#: pg_basebackup.c:333
+#: pg_basebackup.c:366
 #, c-format
 msgid "old directory is not an absolute path in tablespace mapping: %s"
 msgstr "在表空间映射表：%s中的旧目录不是一个绝对路径"
 
-#: pg_basebackup.c:340
+#: pg_basebackup.c:370
 #, c-format
 msgid "new directory is not an absolute path in tablespace mapping: %s"
 msgstr "在表空间映射表：%s中的新目录不是一个绝对路径"
 
-#: pg_basebackup.c:379
+#: pg_basebackup.c:392
 #, c-format
 msgid ""
 "%s takes a base backup of a running PostgreSQL server.\n"
@@ -184,17 +560,19 @@ msgstr ""
 "%s 在运行的PostgreSQL服务器上执行基础备份.\n"
 "\n"
 
-#: pg_basebackup.c:381 pg_receivewal.c:79 pg_recvlogical.c:75
+#: pg_basebackup.c:394 pg_createsubscriber.c:245 pg_receivewal.c:79
+#: pg_recvlogical.c:85
 #, c-format
 msgid "Usage:\n"
 msgstr "使用方法:\n"
 
-#: pg_basebackup.c:382 pg_receivewal.c:80 pg_recvlogical.c:76
+#: pg_basebackup.c:395 pg_createsubscriber.c:246 pg_receivewal.c:80
+#: pg_recvlogical.c:86
 #, c-format
 msgid "  %s [OPTION]...\n"
 msgstr "  %s [选项]...\n"
 
-#: pg_basebackup.c:383
+#: pg_basebackup.c:396
 #, c-format
 msgid ""
 "\n"
@@ -203,17 +581,24 @@ msgstr ""
 "\n"
 "控制输出的选项:\n"
 
-#: pg_basebackup.c:384
+#: pg_basebackup.c:397
 #, c-format
 msgid "  -D, --pgdata=DIRECTORY receive base backup into directory\n"
 msgstr "  -D, --pgdata=DIRECTORY 接收基础备份到指定目录\n"
 
-#: pg_basebackup.c:385
+#: pg_basebackup.c:398
 #, c-format
 msgid "  -F, --format=p|t       output format (plain (default), tar)\n"
 msgstr "  -F, --format=p|t       输出格式 (纯文本 (缺省值), tar压缩格式)\n"
 
-#: pg_basebackup.c:386
+#: pg_basebackup.c:399
+#, c-format
+msgid ""
+"  -i, --incremental=OLDMANIFEST\n"
+"                         take incremental backup\n"
+msgstr ""
+
+#: pg_basebackup.c:401
 #, c-format
 msgid ""
 "  -r, --max-rate=RATE    maximum transfer rate to transfer data directory\n"
@@ -222,7 +607,7 @@ msgstr ""
 "  -r, --max-rate=RATE    传输数据目录的最大传输速率\n"
 "                         (单位 kB/s, 也可以使用后缀\"k\" 或 \"M\")\n"
 
-#: pg_basebackup.c:388
+#: pg_basebackup.c:403
 #, c-format
 msgid ""
 "  -R, --write-recovery-conf\n"
@@ -231,7 +616,14 @@ msgstr ""
 "  -R, --write-recovery-conf\n"
 "                         为复制写配置文件\n"
 
-#: pg_basebackup.c:390
+#: pg_basebackup.c:405
+#, c-format
+msgid ""
+"  -t, --target=TARGET[:DETAIL]\n"
+"                         backup target (if other than client)\n"
+msgstr ""
+
+#: pg_basebackup.c:407
 #, c-format
 msgid ""
 "  -T, --tablespace-mapping=OLDDIR=NEWDIR\n"
@@ -240,12 +632,12 @@ msgstr ""
 "  -T, --tablespace-mapping=OLDDIR=NEWDIR\n"
 "                         将表空间由 OLDDIR 重定位到 NEWDIR\n"
 
-#: pg_basebackup.c:392
+#: pg_basebackup.c:409
 #, c-format
 msgid "      --waldir=WALDIR    location for the write-ahead log directory\n"
 msgstr "      --waldir=WALDIR    预写日志目录的位置\n"
 
-#: pg_basebackup.c:393
+#: pg_basebackup.c:410
 #, c-format
 msgid ""
 "  -X, --wal-method=none|fetch|stream\n"
@@ -254,17 +646,30 @@ msgstr ""
 "  -X, --wal-method=none|fetch|stream\n"
 "                         按指定的模式包含必需的WAL日志文件\n"
 
-#: pg_basebackup.c:395
+#: pg_basebackup.c:412
 #, c-format
 msgid "  -z, --gzip             compress tar output\n"
 msgstr "  -z, --gzip             对tar文件进行压缩输出\n"
 
-#: pg_basebackup.c:396
-#, c-format
-msgid "  -Z, --compress=0-9     compress tar output with given compression level\n"
-msgstr "  -Z, --compress=0-9     按给定的压缩级别对tar文件进行压缩输出\n"
+#: pg_basebackup.c:413
+#, fuzzy, c-format
+#| msgid ""
+#| "  -s, --status-interval=INTERVAL\n"
+#| "                         time between status packets sent to server (in seconds)\n"
+msgid ""
+"  -Z, --compress=[{client|server}-]METHOD[:DETAIL]\n"
+"                         compress on client or server as specified\n"
+msgstr ""
+"  -s, --status-interval=INTERVAL\n"
+"                         发往服务器的状态包的时间间隔 (以秒计)\n"
 
-#: pg_basebackup.c:397
+#: pg_basebackup.c:415
+#, fuzzy, c-format
+#| msgid "  -z, --gzip             compress tar output\n"
+msgid "  -Z, --compress=none    do not compress tar output\n"
+msgstr "  -z, --gzip             对tar文件进行压缩输出\n"
+
+#: pg_basebackup.c:416
 #, c-format
 msgid ""
 "\n"
@@ -273,56 +678,60 @@ msgstr ""
 "\n"
 "一般选项:\n"
 
-#: pg_basebackup.c:398
-#, c-format
+#: pg_basebackup.c:417
+#, fuzzy, c-format
+#| msgid ""
+#| "  -c, --checkpoint=fast|spread\n"
+#| "                         set fast or spread checkpointing\n"
 msgid ""
 "  -c, --checkpoint=fast|spread\n"
-"                         set fast or spread checkpointing\n"
+"                         set fast or spread (default) checkpointing\n"
 msgstr ""
 "  -c, --checkpoint=fast|spread\n"
 "                         设置检查点方式(fast或者spread)\n"
 
-#: pg_basebackup.c:400
+#: pg_basebackup.c:419
 #, c-format
 msgid "  -C, --create-slot      create replication slot\n"
 msgstr "  -C, --create-slot      创建复制槽\n"
 
-#: pg_basebackup.c:401
+#: pg_basebackup.c:420
 #, c-format
 msgid "  -l, --label=LABEL      set backup label\n"
 msgstr "  -l, --label=LABEL      设置备份标签\n"
 
-#: pg_basebackup.c:402
+#: pg_basebackup.c:421
 #, c-format
 msgid "  -n, --no-clean         do not clean up after errors\n"
 msgstr "  -n, --no-clean         出错后不清理\n"
 
-#: pg_basebackup.c:403
+#: pg_basebackup.c:422
 #, c-format
 msgid "  -N, --no-sync          do not wait for changes to be written safely to disk\n"
 msgstr "  -N, --no-sync          不用等待变化安全的写入磁盘\n"
 
-#: pg_basebackup.c:404
+#: pg_basebackup.c:423
 #, c-format
 msgid "  -P, --progress         show progress information\n"
 msgstr "  -P, --progress         显示进度信息\n"
 
-#: pg_basebackup.c:405 pg_receivewal.c:89
+#: pg_basebackup.c:424 pg_receivewal.c:89
 #, c-format
 msgid "  -S, --slot=SLOTNAME    replication slot to use\n"
 msgstr "  -S, --slot=SLOTNAME    用于复制的槽名\n"
 
-#: pg_basebackup.c:406 pg_receivewal.c:91 pg_recvlogical.c:96
+#: pg_basebackup.c:425 pg_receivewal.c:91 pg_recvlogical.c:110
 #, c-format
 msgid "  -v, --verbose          output verbose messages\n"
 msgstr "  -v, --verbose          输出详细的消息\n"
 
-#: pg_basebackup.c:407 pg_receivewal.c:92 pg_recvlogical.c:97
+#: pg_basebackup.c:426 pg_receivewal.c:92 pg_recvlogical.c:111
 #, c-format
 msgid "  -V, --version          output version information, then exit\n"
 msgstr "  -V, --version          输出版本信息, 然后退出\n"
 
-#: pg_basebackup.c:408
+#: pg_basebackup.c:427
+#, c-format
 msgid ""
 "      --manifest-checksums=SHA{224,256,384,512}|CRC32C|NONE\n"
 "                         use algorithm for manifest checksums\n"
@@ -330,7 +739,8 @@ msgstr ""
 "      --manifest-checksums=SHA{224,256,384,512}|CRC32C|NONE\n"
 "                         对清单校验和使用算法\n"
 
-#: pg_basebackup.c:410
+#: pg_basebackup.c:429
+#, c-format
 msgid ""
 "      --manifest-force-encode\n"
 "                         hex encode all file names in manifest\n"
@@ -338,21 +748,22 @@ msgstr ""
 "      --manifest-force-encode\n"
 "                         十六进制编码清单中的所有文件名\n"
 
-#: pg_basebackup.c:412
+#: pg_basebackup.c:431
 #, c-format
 msgid "      --no-estimate-size do not estimate backup size in server side\n"
 msgstr ""
 
-#: pg_basebackup.c:413
+#: pg_basebackup.c:432
+#, c-format
 msgid "      --no-manifest      suppress generation of backup manifest\n"
 msgstr "      --no-manifest      禁止生成备份清单\n"
 
-#: pg_basebackup.c:414
+#: pg_basebackup.c:433
 #, c-format
 msgid "      --no-slot          prevent creation of temporary replication slot\n"
 msgstr "      --no-slot          防止创建临时复制槽\n"
 
-#: pg_basebackup.c:415
+#: pg_basebackup.c:434
 #, c-format
 msgid ""
 "      --no-verify-checksums\n"
@@ -361,12 +772,20 @@ msgstr ""
 "      --no-verify-checksums\n"
 "                         不验证校验和\n"
 
-#: pg_basebackup.c:417 pg_receivewal.c:94 pg_recvlogical.c:98
+#: pg_basebackup.c:436
+#, fuzzy, c-format
+#| msgid "      --sync-method=METHOD  set method for syncing files to disk\n"
+msgid ""
+"      --sync-method=METHOD\n"
+"                         set method for syncing files to disk\n"
+msgstr "      --sync-method=METHOD  设置同步文件到磁盘的方法\n"
+
+#: pg_basebackup.c:438 pg_receivewal.c:95 pg_recvlogical.c:112
 #, c-format
 msgid "  -?, --help             show this help, then exit\n"
 msgstr "  -?, --help             显示此帮助, 然后退出\n"
 
-#: pg_basebackup.c:418 pg_receivewal.c:95 pg_recvlogical.c:99
+#: pg_basebackup.c:439 pg_receivewal.c:96 pg_recvlogical.c:113
 #, c-format
 msgid ""
 "\n"
@@ -375,22 +794,22 @@ msgstr ""
 "\n"
 "联接选项:\n"
 
-#: pg_basebackup.c:419 pg_receivewal.c:96
+#: pg_basebackup.c:440 pg_receivewal.c:97
 #, c-format
 msgid "  -d, --dbname=CONNSTR   connection string\n"
 msgstr "  -d, --dbname=CONNSTR   连接串\n"
 
-#: pg_basebackup.c:420 pg_receivewal.c:97 pg_recvlogical.c:101
+#: pg_basebackup.c:441 pg_receivewal.c:98 pg_recvlogical.c:115
 #, c-format
 msgid "  -h, --host=HOSTNAME    database server host or socket directory\n"
 msgstr "  -h, --host=HOSTNAME    数据库服务器主机或者是socket目录\n"
 
-#: pg_basebackup.c:421 pg_receivewal.c:98 pg_recvlogical.c:102
+#: pg_basebackup.c:442 pg_receivewal.c:99 pg_recvlogical.c:116
 #, c-format
 msgid "  -p, --port=PORT        database server port number\n"
 msgstr "  -p, --port=PORT        数据库服务器端口号\n"
 
-#: pg_basebackup.c:422
+#: pg_basebackup.c:443
 #, c-format
 msgid ""
 "  -s, --status-interval=INTERVAL\n"
@@ -399,22 +818,23 @@ msgstr ""
 "  -s, --status-interval=INTERVAL\n"
 "                         发往服务器的状态包的时间间隔 (以秒计)\n"
 
-#: pg_basebackup.c:424 pg_receivewal.c:99 pg_recvlogical.c:103
+#: pg_basebackup.c:445 pg_receivewal.c:100 pg_recvlogical.c:117
 #, c-format
 msgid "  -U, --username=NAME    connect as specified database user\n"
 msgstr "  -U, --username=NAME    指定连接所需的数据库用户名\n"
 
-#: pg_basebackup.c:425 pg_receivewal.c:100 pg_recvlogical.c:104
+#: pg_basebackup.c:446 pg_receivewal.c:101 pg_recvlogical.c:118
 #, c-format
 msgid "  -w, --no-password      never prompt for password\n"
 msgstr "  -w, --no-password      禁用输入密码的提示\n"
 
-#: pg_basebackup.c:426 pg_receivewal.c:101 pg_recvlogical.c:105
+#: pg_basebackup.c:447 pg_receivewal.c:102 pg_recvlogical.c:119
 #, c-format
 msgid "  -W, --password         force password prompt (should happen automatically)\n"
 msgstr "  -W, --password         强制提示输入密码 (应该自动发生)\n"
 
-#: pg_basebackup.c:427 pg_receivewal.c:105 pg_recvlogical.c:106
+#: pg_basebackup.c:448 pg_createsubscriber.c:269 pg_receivewal.c:106
+#: pg_recvlogical.c:120
 #, c-format
 msgid ""
 "\n"
@@ -423,436 +843,1403 @@ msgstr ""
 "\n"
 "臭虫报告至<%s>.\n"
 
-#: pg_basebackup.c:428 pg_receivewal.c:106 pg_recvlogical.c:107
+#: pg_basebackup.c:449 pg_createsubscriber.c:270 pg_receivewal.c:107
+#: pg_recvlogical.c:121
 #, c-format
 msgid "%s home page: <%s>\n"
 msgstr "%s 主页: <%s>\n"
 
-#: pg_basebackup.c:471
+#: pg_basebackup.c:488
 #, c-format
 msgid "could not read from ready pipe: %m"
 msgstr "无法从准备就绪的管道: %m读"
 
-#: pg_basebackup.c:477 pg_basebackup.c:608 pg_basebackup.c:2133
+#: pg_basebackup.c:491 pg_basebackup.c:633 pg_basebackup.c:2259
 #: streamutil.c:450
 #, c-format
 msgid "could not parse write-ahead log location \"%s\""
 msgstr "无法解析来自 \"%s\"的预写日志"
 
-#: pg_basebackup.c:573 pg_receivewal.c:441
+#: pg_basebackup.c:596 pg_receivewal.c:600
 #, c-format
 msgid "could not finish writing WAL files: %m"
 msgstr "无法完成写入WAL文件: %m"
 
-#: pg_basebackup.c:620
+#: pg_basebackup.c:642
 #, c-format
 msgid "could not create pipe for background process: %m"
 msgstr "无法为后台进程: %m创建管道"
 
-#: pg_basebackup.c:655
+#: pg_basebackup.c:677
 #, c-format
 msgid "created temporary replication slot \"%s\""
 msgstr "已创建临时复制槽\"%s\""
 
-#: pg_basebackup.c:658
+#: pg_basebackup.c:680
 #, c-format
 msgid "created replication slot \"%s\""
 msgstr "已创建复制槽\"%s\""
 
-#: pg_basebackup.c:678 pg_basebackup.c:731 pg_basebackup.c:1620
-#, c-format
-msgid "could not create directory \"%s\": %m"
-msgstr "无法创建目录 \"%s\": %m"
-
-#: pg_basebackup.c:696
+#: pg_basebackup.c:729
 #, c-format
 msgid "could not create background process: %m"
 msgstr "无法创建后台进程: %m"
 
-#: pg_basebackup.c:708
+#: pg_basebackup.c:738
 #, c-format
 msgid "could not create background thread: %m"
 msgstr "无法创建后台线程: %m"
 
-#: pg_basebackup.c:752
+#: pg_basebackup.c:777
 #, c-format
 msgid "directory \"%s\" exists but is not empty"
 msgstr "目录\"%s\"已存在，但不是空的"
 
-#: pg_basebackup.c:759
+#: pg_basebackup.c:783 pg_createsubscriber.c:419
 #, c-format
 msgid "could not access directory \"%s\": %m"
 msgstr "无法访问目录 \"%s\": %m"
 
-#: pg_basebackup.c:824
+#: pg_basebackup.c:859
 #, c-format
 msgid "%*s/%s kB (100%%), %d/%d tablespace %*s"
 msgid_plural "%*s/%s kB (100%%), %d/%d tablespaces %*s"
 msgstr[0] "%*s/%s kB (100%%), %d/%d 表空间 %*s"
 msgstr[1] "%*s/%s kB (100%%), %d/%d 多个表空间 %*s"
 
-#: pg_basebackup.c:836
+#: pg_basebackup.c:871
 #, c-format
 msgid "%*s/%s kB (%d%%), %d/%d tablespace (%s%-*.*s)"
 msgid_plural "%*s/%s kB (%d%%), %d/%d tablespaces (%s%-*.*s)"
 msgstr[0] "%*s/%s kB (%d%%), %d/%d 表空间 (%s%-*.*s)"
 msgstr[1] "%*s/%s kB (%d%%), %d/%d 多个表空间 (%s%-*.*s)"
 
-#: pg_basebackup.c:852
+#: pg_basebackup.c:887
 #, c-format
 msgid "%*s/%s kB (%d%%), %d/%d tablespace"
 msgid_plural "%*s/%s kB (%d%%), %d/%d tablespaces"
 msgstr[0] "%*s/%s kB (%d%%), %d/%d 表空间"
 msgstr[1] "%*s/%s kB (%d%%), %d/%d 多个表空间"
 
-#: pg_basebackup.c:877
+#: pg_basebackup.c:911
 #, c-format
 msgid "transfer rate \"%s\" is not a valid value"
 msgstr "传输速率\"%s\"不是一个有效值"
 
-#: pg_basebackup.c:882
+#: pg_basebackup.c:913
 #, c-format
 msgid "invalid transfer rate \"%s\": %m"
 msgstr "无效的传输速率\"%s\": %m"
 
-#: pg_basebackup.c:891
+#: pg_basebackup.c:920
 #, c-format
 msgid "transfer rate must be greater than zero"
 msgstr "传输速率必须大于0"
 
-#: pg_basebackup.c:923
+#: pg_basebackup.c:950
 #, c-format
 msgid "invalid --max-rate unit: \"%s\""
 msgstr "无效的 --max-rate 单位: \"%s\""
 
-#: pg_basebackup.c:930
+#: pg_basebackup.c:954
 #, c-format
 msgid "transfer rate \"%s\" exceeds integer range"
 msgstr "传输速率 \"%s\" 超出了整数范围"
 
-#: pg_basebackup.c:940
+#: pg_basebackup.c:961
 #, c-format
 msgid "transfer rate \"%s\" is out of range"
 msgstr "传输速率 \"%s\" 超出范围"
 
-#: pg_basebackup.c:961
+#: pg_basebackup.c:1023
 #, c-format
 msgid "could not get COPY data stream: %s"
 msgstr "无法得到复制数据流: %s"
 
-#: pg_basebackup.c:981 pg_recvlogical.c:435 pg_recvlogical.c:607
-#: receivelog.c:973
+#: pg_basebackup.c:1040 pg_recvlogical.c:455 pg_recvlogical.c:631
+#: receivelog.c:986
 #, c-format
 msgid "could not read COPY data: %s"
 msgstr "无法读取复制数据: %s"
 
-#: pg_basebackup.c:1007
+#: pg_basebackup.c:1044
+#, fuzzy, c-format
+#| msgid "a worker process died unexpectedly"
+msgid "background process terminated unexpectedly"
+msgstr "一工作者进程意外退出"
+
+#: pg_basebackup.c:1115
+#, fuzzy, c-format
+#| msgid "cannot insert multiple commands into a prepared statement"
+msgid "cannot inject manifest into a compressed tar file"
+msgstr "无法插入多条命令到一个准备好的语句中"
+
+#: pg_basebackup.c:1116
 #, c-format
-msgid "could not write to compressed file \"%s\": %s"
-msgstr "无法往压缩文件里写\"%s\": %s"
+msgid "Use client-side compression, send the output to a directory rather than standard output, or use %s."
+msgstr ""
 
-#: pg_basebackup.c:1071
-msgid "could not duplicate stdout: %m"
-msgstr "无法复制标准输出: %m"
+#: pg_basebackup.c:1132
+#, fuzzy, c-format
+#| msgid "could not parse timeline \"%s\""
+msgid "cannot parse archive \"%s\""
+msgstr "无法解析时间线\"%s\""
 
-#: pg_basebackup.c:1078
+#: pg_basebackup.c:1133
+#, fuzzy, c-format
+#| msgid "only tar mode backups can be compressed"
+msgid "Only tar archives can be parsed."
+msgstr "只有tar模式备份才能进行压缩"
+
+#: pg_basebackup.c:1135
 #, c-format
-msgid "could not open output file: %m"
-msgstr "无法打开输出文件: %m"
+msgid "Plain format requires pg_basebackup to parse the archive."
+msgstr ""
 
-#: pg_basebackup.c:1085 pg_basebackup.c:1106 pg_basebackup.c:1135
+#: pg_basebackup.c:1137
 #, c-format
-msgid "could not set compression level %d: %s"
-msgstr "无法设置压缩级别 %d: %s"
+msgid "Using - as the output directory requires pg_basebackup to parse the archive."
+msgstr ""
 
-#: pg_basebackup.c:1155
+#: pg_basebackup.c:1139
 #, c-format
-msgid "could not create compressed file \"%s\": %s"
-msgstr "无法创建压缩文件 \"%s\": %s"
+msgid "The -R option requires pg_basebackup to parse the archive."
+msgstr ""
 
-#: pg_basebackup.c:1267
+#: pg_basebackup.c:1358
 #, c-format
-msgid "could not close compressed file \"%s\": %s"
-msgstr "无法关闭压缩文件 \"%s\": %s"
+msgid "archives must precede manifest"
+msgstr ""
 
-#: pg_basebackup.c:1279 pg_recvlogical.c:632
-#, c-format
-msgid "could not close file \"%s\": %m"
-msgstr "无法关闭文件 \"%s\": %m"
+#: pg_basebackup.c:1373
+#, fuzzy, c-format
+#| msgid "invalid variable name: \"%s\""
+msgid "invalid archive name: \"%s\""
+msgstr "无效的语言环境名称: \"%s\""
 
-#: pg_basebackup.c:1541
-#, c-format
-msgid "COPY stream ended before last file was finished"
-msgstr "复制流在最后一个文件结束前终止"
+#: pg_basebackup.c:1445
+#, fuzzy, c-format
+#| msgid "unexpected array start"
+msgid "unexpected payload data"
+msgstr "意外的数组开始"
 
-#: pg_basebackup.c:1570
-msgid "invalid tar block header size: %zu"
-msgstr "无效的tar压缩块头大小: %zu"
+#: pg_basebackup.c:1588
+#, fuzzy, c-format
+#| msgid "empty message text"
+msgid "empty COPY message"
+msgstr "消息文本为空"
 
-#: pg_basebackup.c:1627
-#, c-format
-msgid "could not set permissions on directory \"%s\": %m"
-msgstr "无法为目录 \"%s\" 的设置权限: %m"
+#: pg_basebackup.c:1590
+#, fuzzy, c-format
+#| msgid "malformed SCRAM message (length mismatch)\n"
+msgid "malformed COPY message of type %d, length %zu"
+msgstr "错误的SCRAM消息（长度不匹配）\n"
 
-#: pg_basebackup.c:1651
-#, c-format
-msgid "could not create symbolic link from \"%s\" to \"%s\": %m"
-msgstr "无法创建从 \"%s\" 到 \"%s\"的符号链接: %m"
-
-#: pg_basebackup.c:1658
-#, c-format
-msgid "unrecognized link indicator \"%c\""
-msgstr "无法识别的链接标识符 \"%c\""
-
-#: pg_basebackup.c:1677
-#, c-format
-msgid "could not set permissions on file \"%s\": %m"
-msgstr "无法设置文件 \"%s\" 的权限: %m"
-
-#: pg_basebackup.c:1831
+#: pg_basebackup.c:1790
 #, c-format
 msgid "incompatible server version %s"
 msgstr "不兼容的服务器版本号 %s"
 
-#: pg_basebackup.c:1846
-#, c-format
-msgid "HINT: use -X none or -X fetch to disable log streaming"
+#: pg_basebackup.c:1806
+#, fuzzy, c-format
+#| msgid "HINT: use -X none or -X fetch to disable log streaming"
+msgid "Use -X none or -X fetch to disable log streaming."
 msgstr "提示：使用-X none或-X fetch禁用日志流"
 
-#: pg_basebackup.c:1882
-#, c-format
-msgid "initiating base backup, waiting for checkpoint to complete"
-msgstr "开始基础备份，等待检查点完成"
+#: pg_basebackup.c:1842
+#, fuzzy, c-format
+#| msgid "XML does not support infinite timestamp values."
+msgid "server does not support incremental backup"
+msgstr "XML不支持无限时间戳值"
 
-#: pg_basebackup.c:1908 pg_recvlogical.c:262 receivelog.c:489 receivelog.c:538
-#: receivelog.c:577 streamutil.c:297 streamutil.c:370 streamutil.c:422
-#: streamutil.c:533 streamutil.c:578
+#: pg_basebackup.c:1851 pg_basebackup.c:2009 pg_recvlogical.c:278
+#: receivelog.c:541 receivelog.c:587 streamutil.c:296 streamutil.c:370
+#: streamutil.c:422 streamutil.c:511 streamutil.c:672 streamutil.c:717
 #, c-format
 msgid "could not send replication command \"%s\": %s"
 msgstr "无法发送复制命令 \"%s\": %s"
 
-#: pg_basebackup.c:1919
+#: pg_basebackup.c:1857 pg_basebackup.c:1884
+#, fuzzy, c-format
+#| msgid "could not parse backup manifest: %s"
+msgid "could not upload manifest: %s"
+msgstr "清单校验和不匹配: %s"
+
+#: pg_basebackup.c:1860 pg_basebackup.c:1887
+#, fuzzy, c-format
+#| msgid "could not get socket error status: %s\n"
+msgid "could not upload manifest: unexpected status %s"
+msgstr "无法获取套接字错误状态: %s\n"
+
+#: pg_basebackup.c:1868
+#, fuzzy, c-format
+#| msgid "could not read COPY data: %s"
+msgid "could not send COPY data: %s"
+msgstr "无法读取复制数据: %s"
+
+#: pg_basebackup.c:1878
+#, fuzzy, c-format
+#| msgid "could not send query: %s"
+msgid "could not send end-of-COPY: %s"
+msgstr "无法发送查询：%s"
+
+#: pg_basebackup.c:1893
+#, fuzzy, c-format
+#| msgid "unexpected result set while fetching file list"
+msgid "unexpected extra result while sending manifest"
+msgstr "在取得文件列表时得到意料之外的结果集"
+
+#: pg_basebackup.c:1951
+#, fuzzy, c-format
+#| msgid "Exported snapshots are not supported by this server version."
+msgid "backup targets are not supported by this server version"
+msgstr "在这个版本的服务器中不支持导出的快照."
+
+#: pg_basebackup.c:1954
+#, c-format
+msgid "recovery configuration cannot be written when a backup target is used"
+msgstr ""
+
+#: pg_basebackup.c:1981
+#, fuzzy, c-format
+#| msgid "this build does not support compression"
+msgid "server does not support server-side compression"
+msgstr "这个编译版本不支持压缩"
+
+#: pg_basebackup.c:1991
+#, c-format
+msgid "initiating base backup, waiting for checkpoint to complete"
+msgstr "开始基础备份，等待检查点完成"
+
+#: pg_basebackup.c:1995
+#, fuzzy, c-format
+#| msgid "Logs each checkpoint."
+msgid "waiting for checkpoint"
+msgstr "记录每一个检查点事件"
+
+#: pg_basebackup.c:2017
 #, c-format
 msgid "could not initiate base backup: %s"
 msgstr "无法发起基础备份: %s"
 
-#: pg_basebackup.c:1925
+#: pg_basebackup.c:2020
 #, c-format
 msgid "server returned unexpected response to BASE_BACKUP command; got %d rows and %d fields, expected %d rows and %d fields"
 msgstr "服务器对BASE_BACKUP命令返回意外的响应; 得到 %d 行和 %d 列, 期望值为: %d 行和 %d 列"
 
-#: pg_basebackup.c:1933
+#: pg_basebackup.c:2026
 #, c-format
 msgid "checkpoint completed"
 msgstr "已完成检查点"
 
-#: pg_basebackup.c:1948
+#: pg_basebackup.c:2040
 #, c-format
 msgid "write-ahead log start point: %s on timeline %u"
 msgstr "预写日志起始于时间点: %s, 基于时间轴%u"
 
-#: pg_basebackup.c:1957
+#: pg_basebackup.c:2048
 #, c-format
 msgid "could not get backup header: %s"
 msgstr "无法得到备份头: %s"
 
-#: pg_basebackup.c:1963
+#: pg_basebackup.c:2051
 #, c-format
 msgid "no data returned from server"
 msgstr "服务器没有数据返回"
 
-#: pg_basebackup.c:1995
+#: pg_basebackup.c:2094
 #, c-format
 msgid "can only write single tablespace to stdout, database has %d"
 msgstr "只能把表空间写往标准输出, 数据库拥有标准输出: %d"
 
-#: pg_basebackup.c:2007
+#: pg_basebackup.c:2107
 #, c-format
 msgid "starting background WAL receiver"
 msgstr "启动后台 WAL 接收进程"
 
-#: pg_basebackup.c:2046
-#, c-format
-msgid "could not get write-ahead log end position from server: %s"
-msgstr "无法得到来自服务器的预写日志终止位置: %s"
+#: pg_basebackup.c:2190
+#, fuzzy, c-format
+#| msgid "%s failed: %s"
+msgid "backup failed: %s"
+msgstr "%s失败: %s"
 
-#: pg_basebackup.c:2052
+#: pg_basebackup.c:2193
 #, c-format
 msgid "no write-ahead log end position returned from server"
 msgstr "服务器端没有返回预写日志的终止位置"
 
-#: pg_basebackup.c:2057
+#: pg_basebackup.c:2196
 #, c-format
 msgid "write-ahead log end point: %s"
 msgstr "预写日志结束点: %s"
 
-#: pg_basebackup.c:2068
+#: pg_basebackup.c:2207
 #, c-format
 msgid "checksum error occurred"
 msgstr "发生校验和错误"
 
-#: pg_basebackup.c:2073
+#: pg_basebackup.c:2212
 #, c-format
 msgid "final receive failed: %s"
 msgstr "最终接收失败: %s"
 
-#: pg_basebackup.c:2097
+#: pg_basebackup.c:2236
 #, c-format
 msgid "waiting for background process to finish streaming ..."
 msgstr "等待后台进程结束流操作..."
 
-#: pg_basebackup.c:2102
+#: pg_basebackup.c:2240
 #, c-format
 msgid "could not send command to background pipe: %m"
 msgstr "无法发送命令到后台管道: %m"
 
-#: pg_basebackup.c:2110
+#: pg_basebackup.c:2245
 #, c-format
 msgid "could not wait for child process: %m"
 msgstr "无法等待子进程: %m"
 
-#: pg_basebackup.c:2115
+#: pg_basebackup.c:2247
 #, c-format
 msgid "child %d died, expected %d"
 msgstr "子进程 %d 已终止, 期望值为 %d"
 
-#: pg_basebackup.c:2120 streamutil.c:92 streamutil.c:203
-#, c-format
-msgid "%s"
-msgstr "%s"
-
-#: pg_basebackup.c:2145
+#: pg_basebackup.c:2269
 #, c-format
 msgid "could not wait for child thread: %m"
 msgstr "无法等待子线程: %m"
 
-#: pg_basebackup.c:2151
+#: pg_basebackup.c:2274
 #, c-format
 msgid "could not get child thread exit status: %m"
 msgstr "无法得到子线程退出状态: %m"
 
-#: pg_basebackup.c:2156
+#: pg_basebackup.c:2277
 #, c-format
 msgid "child thread exited with error %u"
 msgstr "子线程退出, 错误码为: %u"
 
-#: pg_basebackup.c:2184
+#: pg_basebackup.c:2306
 #, c-format
 msgid "syncing data to disk ..."
 msgstr "同步数据到磁盘..."
 
-#: pg_basebackup.c:2209
+#: pg_basebackup.c:2331
+#, c-format
 msgid "renaming backup_manifest.tmp to backup_manifest"
 msgstr "将backup_manifest.tmp重命名为backup_manifest"
 
-#: pg_basebackup.c:2220
+#: pg_basebackup.c:2351
 #, c-format
 msgid "base backup completed"
 msgstr "基础备份已完成"
 
-#: pg_basebackup.c:2305
-msgid "invalid output format \"%s\", must be \"plain\" or \"tar\""
-msgstr "无效输出格式: \"%s\", 有效值为: \"plain\" 或者 \"tar\""
-
-#: pg_basebackup.c:2349
-#, c-format
-msgid "invalid wal-method option \"%s\", must be \"fetch\", \"stream\", or \"none\""
-msgstr "无效的wal-method 选项: \"%s\", 必须是: \"fetch\" 或者 \"stream\" 或者 \"none\""
-
-#: pg_basebackup.c:2377 pg_receivewal.c:580
-#, c-format
-msgid "invalid compression level \"%s\""
-msgstr "无效的压缩级别值: \"%s\""
-
-#: pg_basebackup.c:2388
+#: pg_basebackup.c:2437
 #, c-format
 msgid "invalid checkpoint argument \"%s\", must be \"fast\" or \"spread\""
 msgstr "无效的检查点参数: \"%s\", 必须是: \"fast\" 或 \"spread\""
 
-#: pg_basebackup.c:2415 pg_receivewal.c:555 pg_recvlogical.c:820
+#: pg_basebackup.c:2455
 #, c-format
-msgid "invalid status interval \"%s\""
-msgstr "无效的状态间隔值: \"%s\""
+msgid "invalid output format \"%s\", must be \"plain\" or \"tar\""
+msgstr "无效输出格式: \"%s\", 有效值为: \"plain\" 或者 \"tar\""
 
-#: pg_basebackup.c:2445 pg_basebackup.c:2458 pg_basebackup.c:2469
-#: pg_basebackup.c:2480 pg_basebackup.c:2488 pg_basebackup.c:2496
-#: pg_basebackup.c:2506 pg_basebackup.c:2519 pg_basebackup.c:2528
-#: pg_basebackup.c:2539 pg_basebackup.c:2549 pg_basebackup.c:2567
-#: pg_basebackup.c:2576 pg_basebackup.c:2585 pg_receivewal.c:605
-#: pg_receivewal.c:618 pg_receivewal.c:626 pg_receivewal.c:636
-#: pg_receivewal.c:644 pg_receivewal.c:655 pg_recvlogical.c:846
-#: pg_recvlogical.c:859 pg_recvlogical.c:870 pg_recvlogical.c:878
-#: pg_recvlogical.c:886 pg_recvlogical.c:894 pg_recvlogical.c:902
-#: pg_recvlogical.c:910 pg_recvlogical.c:918
+#: pg_basebackup.c:2536
 #, c-format
-msgid "Try \"%s --help\" for more information.\n"
-msgstr "请用 \"%s --help\" 获取更多的信息.\n"
+msgid "invalid wal-method option \"%s\", must be \"fetch\", \"stream\", or \"none\""
+msgstr "无效的wal-method 选项: \"%s\", 必须是: \"fetch\" 或者 \"stream\" 或者 \"none\""
 
-#: pg_basebackup.c:2456 pg_receivewal.c:616 pg_recvlogical.c:857
+#: pg_basebackup.c:2575 pg_basebackup.c:2587 pg_basebackup.c:2609
+#: pg_basebackup.c:2621 pg_basebackup.c:2627 pg_basebackup.c:2679
+#: pg_basebackup.c:2690 pg_basebackup.c:2700 pg_basebackup.c:2706
+#: pg_basebackup.c:2713 pg_basebackup.c:2725 pg_basebackup.c:2737
+#: pg_basebackup.c:2745 pg_basebackup.c:2758 pg_basebackup.c:2764
+#: pg_basebackup.c:2773 pg_basebackup.c:2785 pg_basebackup.c:2796
+#: pg_basebackup.c:2804 pg_createsubscriber.c:2237 pg_createsubscriber.c:2260
+#: pg_createsubscriber.c:2270 pg_createsubscriber.c:2278
+#: pg_createsubscriber.c:2306 pg_createsubscriber.c:2349 pg_receivewal.c:748
+#: pg_receivewal.c:760 pg_receivewal.c:767 pg_receivewal.c:776
+#: pg_receivewal.c:783 pg_receivewal.c:793 pg_recvlogical.c:865
+#: pg_recvlogical.c:877 pg_recvlogical.c:887 pg_recvlogical.c:894
+#: pg_recvlogical.c:901 pg_recvlogical.c:908 pg_recvlogical.c:915
+#: pg_recvlogical.c:922 pg_recvlogical.c:929 pg_recvlogical.c:938
+#: pg_recvlogical.c:945
+#, c-format
+msgid "Try \"%s --help\" for more information."
+msgstr "请用 \"%s --help\" 获取更多的信息."
+
+#: pg_basebackup.c:2585 pg_createsubscriber.c:2268 pg_receivewal.c:758
+#: pg_recvlogical.c:875
 #, c-format
 msgid "too many command-line arguments (first is \"%s\")"
 msgstr "命令行参数太多 (第一个是 \"%s\")"
 
-#: pg_basebackup.c:2468 pg_receivewal.c:654
-#, c-format
-msgid "no target directory specified"
-msgstr "没有指定目标目录"
+#: pg_basebackup.c:2608
+#, fuzzy, c-format
+#| msgid "cannot specify both a database name and database patterns"
+msgid "cannot specify both format and backup target"
+msgstr "不能同时指定数据库名称和数据库模式"
 
-#: pg_basebackup.c:2479
+#: pg_basebackup.c:2620
+#, c-format
+msgid "must specify output directory or backup target"
+msgstr ""
+
+#: pg_basebackup.c:2626
+#, c-format
+msgid "cannot specify both output directory and backup target"
+msgstr ""
+
+#: pg_basebackup.c:2656 pg_receivewal.c:802
+#, fuzzy, c-format
+#| msgid "unrecognized checksum algorithm: \"%s\""
+msgid "unrecognized compression algorithm: \"%s\""
+msgstr "无法识别的校验和算法: \"%s\""
+
+#: pg_basebackup.c:2662 pg_receivewal.c:809
+#, fuzzy, c-format
+#| msgid "invalid compression code: %d"
+msgid "invalid compression specification: %s"
+msgstr "无效的压缩码: %d"
+
+#: pg_basebackup.c:2678
+#, c-format
+msgid "client-side compression is not possible when a backup target is specified"
+msgstr ""
+
+#: pg_basebackup.c:2689
 #, c-format
 msgid "only tar mode backups can be compressed"
 msgstr "只有tar模式备份才能进行压缩"
 
-#: pg_basebackup.c:2487
+#: pg_basebackup.c:2699
+#, c-format
+msgid "WAL cannot be streamed when a backup target is specified"
+msgstr ""
+
+#: pg_basebackup.c:2705
 #, c-format
 msgid "cannot stream write-ahead logs in tar mode to stdout"
 msgstr "无法将tar模式下的预写日志流式传输到stdout"
 
-#: pg_basebackup.c:2495
+#: pg_basebackup.c:2712
 #, c-format
 msgid "replication slots can only be used with WAL streaming"
 msgstr "复制槽只能和WAL流复制一起使用"
 
-#: pg_basebackup.c:2505
+#: pg_basebackup.c:2724
 #, c-format
 msgid "--no-slot cannot be used with slot name"
 msgstr "--no-slot 不能与槽名称一起使用"
 
 #. translator: second %s is an option name
-#: pg_basebackup.c:2517 pg_receivewal.c:634
+#: pg_basebackup.c:2735 pg_receivewal.c:774
 #, c-format
 msgid "%s needs a slot to be specified using --slot"
 msgstr "%s需要使用--slot指定一个槽"
 
-#: pg_basebackup.c:2526 pg_basebackup.c:2565 pg_basebackup.c:2574
-#: pg_basebackup.c:2583
+#: pg_basebackup.c:2743 pg_basebackup.c:2783 pg_basebackup.c:2794
+#: pg_basebackup.c:2802
+#, c-format
 msgid "%s and %s are incompatible options"
 msgstr "%s和%s是互不兼容的选项"
 
-#: pg_basebackup.c:2538
+#: pg_basebackup.c:2757
+#, fuzzy, c-format
+#| msgid "WAL directory location can only be specified in plain mode"
+msgid "WAL directory location cannot be specified along with a backup target"
+msgstr "WAL目录的位置只能在简单模式里指定"
+
+#: pg_basebackup.c:2763
 #, c-format
 msgid "WAL directory location can only be specified in plain mode"
 msgstr "WAL目录的位置只能在简单模式里指定"
 
-#: pg_basebackup.c:2548
+#: pg_basebackup.c:2772
 #, c-format
 msgid "WAL directory location must be an absolute path"
 msgstr "WAL目录的位置必须为绝对路径"
 
-#: pg_basebackup.c:2558 pg_receivewal.c:663
-#, c-format
-msgid "this build does not support compression"
-msgstr "这个编译版本不支持压缩"
-
-#: pg_basebackup.c:2643
+#: pg_basebackup.c:2872
 #, c-format
 msgid "could not create symbolic link \"%s\": %m"
 msgstr "无法创建符号链接 \"%s\": %m"
 
-#: pg_basebackup.c:2647
+#: pg_createsubscriber.c:189
+#, fuzzy, c-format
+#| msgid "failed to remove contents of WAL directory"
+msgid "failed after the end of recovery"
+msgstr "删除WAL目录内容失败"
+
+#: pg_createsubscriber.c:190
 #, c-format
-msgid "symlinks are not supported on this platform"
-msgstr "在这个平台上不支持符号链接"
+msgid "The target server cannot be used as a physical replica anymore.  You must recreate the physical replica before continuing."
+msgstr ""
+
+#: pg_createsubscriber.c:220
+#, c-format
+msgid "publication \"%s\" created in database \"%s\" on primary was left behind"
+msgstr ""
+
+#: pg_createsubscriber.c:223
+#, c-format
+msgid "Drop this publication before trying again."
+msgstr ""
+
+#: pg_createsubscriber.c:227
+#, fuzzy, c-format
+#| msgid "replication slot \"%s\" was not created in this database"
+msgid "replication slot \"%s\" created in database \"%s\" on primary was left behind"
+msgstr "复制槽\"%s\"不能用于此数据库"
+
+#: pg_createsubscriber.c:230 pg_createsubscriber.c:1328
+#, c-format
+msgid "Drop this replication slot soon to avoid retention of WAL files."
+msgstr ""
+
+#: pg_createsubscriber.c:243
+#, fuzzy, c-format
+#| msgid ""
+#| "%s creates a new PostgreSQL role.\n"
+#| "\n"
+msgid ""
+"%s creates a new logical replica from a standby server.\n"
+"\n"
+msgstr ""
+"%s 创建一个新的 PostgreSQL 用户.\n"
+"\n"
+
+#: pg_createsubscriber.c:247 pg_receivewal.c:81 pg_recvlogical.c:91
+#, c-format
+msgid ""
+"\n"
+"Options:\n"
+msgstr ""
+"\n"
+"选项:\n"
+
+#: pg_createsubscriber.c:248
+#, c-format
+msgid ""
+"  -a, --all                       create subscriptions for all databases except template\n"
+"                                  databases and databases that don't allow connections\n"
+msgstr ""
+
+#: pg_createsubscriber.c:250
+#, fuzzy, c-format
+#| msgid "  -d, --dbname=DBNAME          database to reindex\n"
+msgid "  -d, --database=DBNAME           database in which to create a subscription\n"
+msgstr "  -d, --dbname=DBNAME          对数据库中的索引进行重建\n"
+
+#: pg_createsubscriber.c:251
+#, fuzzy, c-format
+#| msgid " [-D, --pgdata=]DATADIR            data directory\n"
+msgid "  -D, --pgdata=DATADIR            location for the subscriber data directory\n"
+msgstr " [-D, --pgdata=]DATADIR            数据目录\n"
+
+#: pg_createsubscriber.c:252
+#, fuzzy, c-format
+#| msgid "  -n, --dry-run                    no update, just show what would be done\n"
+msgid "  -n, --dry-run                   dry run, just show what would be done\n"
+msgstr "  -n, --dry-run                    不更新，只显示将要执行的操作\n"
+
+#: pg_createsubscriber.c:253
+#, fuzzy, c-format
+#| msgid "  -p, --old-port=PORT           old cluster port number (default %d)\n"
+msgid "  -p, --subscriber-port=PORT      subscriber port number (default %s)\n"
+msgstr "  -p, --old-port=PORT           旧群集端口号（默认值为%d）\n"
+
+#: pg_createsubscriber.c:254
+#, fuzzy, c-format
+#| msgid "  -d, --dbname=CONNSTR   connection string\n"
+msgid "  -P, --publisher-server=CONNSTR  publisher connection string\n"
+msgstr "  -d, --dbname=CONNSTR   连接串\n"
+
+#: pg_createsubscriber.c:255
+#, fuzzy, c-format
+#| msgid "  -s, --socketdir=DIR           socket directory to use (default current dir.)\n"
+msgid "  -s, --socketdir=DIR             socket directory to use (default current dir.)\n"
+msgstr "  -s, --socketdir=DIR           要使用的套接字目录（默认值为当前路径）\n"
+
+#: pg_createsubscriber.c:256
+#, fuzzy, c-format
+#| msgid "  -t, --timeout=SECS     seconds to wait when using -w option\n"
+msgid "  -t, --recovery-timeout=SECS     seconds to wait for recovery to end\n"
+msgstr "  -t, --timeout=SECS     当使用-w 选项时需要等待的秒数\n"
+
+#: pg_createsubscriber.c:257
+#, fuzzy, c-format
+#| msgid "  --no-subscriptions           do not restore subscriptions\n"
+msgid "  -T, --enable-two-phase          enable two-phase commit for all subscriptions\n"
+msgstr "  --no-subscriptions           不恢复订阅\n"
+
+#: pg_createsubscriber.c:258
+#, fuzzy, c-format
+#| msgid "  -U, --username=USERNAME  user name to connect as\n"
+msgid "  -U, --subscriber-username=NAME  user name for subscriber connection\n"
+msgstr "  -U, --username=USERNAME  连接的用户名\n"
+
+#: pg_createsubscriber.c:259
+#, fuzzy, c-format
+#| msgid "  -v, --verbose            output verbose messages\n"
+msgid "  -v, --verbose                   output verbose messages\n"
+msgstr "  -v, --verbose            输出详细的消息\n"
+
+#: pg_createsubscriber.c:260
+#, c-format
+msgid ""
+"      --clean=OBJECTTYPE          drop all objects of the specified type from specified\n"
+"                                  databases on the subscriber; accepts: \"%s\"\n"
+msgstr ""
+
+#: pg_createsubscriber.c:262
+#, fuzzy, c-format
+#| msgid ""
+#| "  -c, --restore-target-wal       use restore_command in target configuration to\n"
+#| "                                 retrieve WAL files from archives\n"
+msgid ""
+"      --config-file=FILENAME      use specified main server configuration\n"
+"                                  file when running target cluster\n"
+msgstr ""
+"  -c, --restore-target-wal       在目标配置中使用restore_command\n"
+"                                 从存档中检索WAL文件\n"
+
+#: pg_createsubscriber.c:264
+#, fuzzy, c-format
+#| msgid "  --no-publications            do not dump publications\n"
+msgid "      --publication=NAME          publication name\n"
+msgstr "  --no-publications            不转储发布\n"
+
+#: pg_createsubscriber.c:265
+#, fuzzy, c-format
+#| msgid "  -S, --slot=SLOTNAME    replication slot to use\n"
+msgid "      --replication-slot=NAME     replication slot name\n"
+msgstr "  -S, --slot=SLOTNAME    用于复制的槽名\n"
+
+#: pg_createsubscriber.c:266
+#, fuzzy, c-format
+#| msgid "  --no-subscriptions           do not dump subscriptions\n"
+msgid "      --subscription=NAME         subscription name\n"
+msgstr "  --no-subscriptions           不转储订阅\n"
+
+#: pg_createsubscriber.c:267
+#, c-format
+msgid "  -V, --version                   output version information, then exit\n"
+msgstr "  -V, --version                   输出版本信息, 然后退出\n"
+
+#: pg_createsubscriber.c:268
+#, c-format
+msgid "  -?, --help                      show this help, then exit\n"
+msgstr "  -?, --help                      显示此帮助信息, 然后退出\n"
+
+#: pg_createsubscriber.c:311
+#, c-format
+msgid "could not parse connection string: %s"
+msgstr "无法分析连接字符串: %s"
+
+#: pg_createsubscriber.c:388
+#, c-format
+msgid "program \"%s\" is needed by %s but was not found in the same directory as \"%s\""
+msgstr "%2$s 需要程序 \"%1$s\", 但在与 \"%3$s\" 相同的目录中找不到该程序"
+
+#: pg_createsubscriber.c:391
+#, c-format
+msgid "program \"%s\" was found by \"%s\" but was not the same version as %s"
+msgstr "程序 \"%s\" 已由 \"%s\" 找到, 但与 %s 版本不一致"
+
+#: pg_createsubscriber.c:411
+#, fuzzy, c-format
+#| msgid "specified data directory \"%s\" is not a directory"
+msgid "checking if directory \"%s\" is a cluster data directory"
+msgstr "所指定的数据目录 \"%s\"不是一个目录."
+
+#: pg_createsubscriber.c:417
+#, c-format
+msgid "data directory \"%s\" does not exist"
+msgstr "数据目录 \"%s\" 不存在"
+
+#: pg_createsubscriber.c:425
+#, fuzzy, c-format
+#| msgid "%s: directory \"%s\" is not a database cluster directory\n"
+msgid "directory \"%s\" is not a database cluster directory"
+msgstr "%s: 目录 \"%s\"不是一个数据库集群目录\n"
+
+#: pg_createsubscriber.c:543
+#, fuzzy, c-format
+#| msgid "reconnection failed: %s"
+msgid "connection to database failed: %s"
+msgstr "重新连接失败: %s"
+
+#: pg_createsubscriber.c:556 streamutil.c:230
+#, fuzzy, c-format
+#| msgid "could not clear search_path: %s"
+msgid "could not clear \"search_path\": %s"
+msgstr "无法清除search_path: %s"
+
+#: pg_createsubscriber.c:596
+#, c-format
+msgid "getting system identifier from publisher"
+msgstr ""
+
+#: pg_createsubscriber.c:603
+#, fuzzy, c-format
+#| msgid "could not get peer credentials: %s\n"
+msgid "could not get system identifier: %s"
+msgstr "无法获得对等(peer)证书:%s\n"
+
+#: pg_createsubscriber.c:609
+#, fuzzy, c-format
+#| msgid "could not read from control file: read %d bytes, expected %d"
+msgid "could not get system identifier: got %d rows, expected %d row"
+msgstr "无法从控制文件中读取：读取%d字节，应为%d"
+
+#: pg_createsubscriber.c:616
+#, c-format
+msgid "system identifier is %<PRIu64> on publisher"
+msgstr ""
+
+#: pg_createsubscriber.c:636
+#, c-format
+msgid "getting system identifier from subscriber"
+msgstr ""
+
+#: pg_createsubscriber.c:640 pg_createsubscriber.c:669
+#, fuzzy, c-format
+#| msgid "%s: control file appears to be corrupt\n"
+msgid "control file appears to be corrupt"
+msgstr "%s: 控制文件似乎已损坏\n"
+
+#: pg_createsubscriber.c:644 pg_createsubscriber.c:687
+#, c-format
+msgid "system identifier is %<PRIu64> on subscriber"
+msgstr ""
+
+#: pg_createsubscriber.c:665
+#, c-format
+msgid "modifying system identifier of subscriber"
+msgstr ""
+
+#: pg_createsubscriber.c:682
+#, c-format
+msgid "dry-run: would set system identifier to %<PRIu64> on subscriber"
+msgstr ""
+
+#: pg_createsubscriber.c:692
+#, c-format
+msgid "dry-run: would run pg_resetwal on the subscriber"
+msgstr ""
+
+#: pg_createsubscriber.c:694
+#, c-format
+msgid "running pg_resetwal on the subscriber"
+msgstr ""
+
+#: pg_createsubscriber.c:706
+#, c-format
+msgid "successfully reset WAL on the subscriber"
+msgstr ""
+
+#: pg_createsubscriber.c:708
+#, fuzzy, c-format
+#| msgid "could not start WAL streaming: %s"
+msgid "could not reset WAL on subscriber: %s"
+msgstr "无法启动WAL流复制: %s"
+
+#: pg_createsubscriber.c:732
+#, fuzzy, c-format
+#| msgid "could not connect to database \"%s\""
+msgid "could not obtain database OID: %s"
+msgstr "无法与数据库 \"%s\" 联接"
+
+#: pg_createsubscriber.c:739
+#, fuzzy, c-format
+#| msgid "could not drop replication slot \"%s\": got %d rows and %d fields, expected %d rows and %d fields"
+msgid "could not obtain database OID: got %d rows, expected %d row"
+msgstr "无法删除复制槽 \"%s\": 得到%d行%d列, 但期望值为%d行%d列"
+
+#: pg_createsubscriber.c:811
+#, fuzzy, c-format
+#| msgid "created replication slot \"%s\" on publisher"
+msgid "create replication slot \"%s\" on publisher"
+msgstr "在发布服务器上创建复制槽 \"%s\""
+
+#: pg_createsubscriber.c:831
+#, fuzzy, c-format
+#| msgid "could not read WAL record at %X/%X: %s"
+msgid "could not write an additional WAL record: %s"
+msgstr "无法读取%X/%X处的WAL记录：%s"
+
+#: pg_createsubscriber.c:857
+#, fuzzy, c-format
+#| msgid "could not fork WAL receiver process: %m"
+msgid "could not obtain recovery progress: %s"
+msgstr "无法派生WAL接收进程: %m"
+
+#: pg_createsubscriber.c:890
+#, fuzzy, c-format
+#| msgid "created replication slot \"%s\" on publisher"
+msgid "checking settings on publisher"
+msgstr "在发布服务器上创建复制槽 \"%s\""
+
+#: pg_createsubscriber.c:900
+#, fuzzy, c-format
+#| msgid "primary keys cannot be expressions"
+msgid "primary server cannot be in recovery"
+msgstr "主键不能是表达式"
+
+#: pg_createsubscriber.c:926
+#, fuzzy, c-format
+#| msgid "could not connect to the publisher: %s"
+msgid "could not obtain publisher settings: %s"
+msgstr "无法连接到发布服务器：%s"
+
+#: pg_createsubscriber.c:955
+#, fuzzy, c-format
+#| msgid "logical decoding requires wal_level >= logical"
+msgid "publisher requires \"wal_level\" >= \"logical\""
+msgstr "逻辑解码要求wal_level >= logical"
+
+#: pg_createsubscriber.c:961
+#, fuzzy, c-format
+#| msgid "Field requires %d characters, but only %d remain."
+msgid "publisher requires %d replication slots, but only %d remain"
+msgstr "字段要求有%d个字符,但是这里只有%d个"
+
+#: pg_createsubscriber.c:963 pg_createsubscriber.c:972
+#: pg_createsubscriber.c:1082 pg_createsubscriber.c:1091
+#: pg_createsubscriber.c:1100
+#, fuzzy, c-format
+#| msgid "Make sure the configuration parameter \"%s\" is set."
+msgid "Increase the configuration parameter \"%s\" to at least %d."
+msgstr "确保配置参数\"%s\"已经被设置。"
+
+#: pg_createsubscriber.c:970
+#, fuzzy, c-format
+#| msgid "Field requires %d characters, but only %d remain."
+msgid "publisher requires %d WAL sender processes, but only %d remain"
+msgstr "字段要求有%d个字符,但是这里只有%d个"
+
+#: pg_createsubscriber.c:979
+#, c-format
+msgid "two_phase option will not be enabled for replication slots"
+msgstr ""
+
+#: pg_createsubscriber.c:980
+#, c-format
+msgid "Subscriptions will be created with the two_phase option disabled.  Prepared transactions will be replicated at COMMIT PREPARED."
+msgstr ""
+
+#: pg_createsubscriber.c:982
+#, c-format
+msgid "You can use the command-line option --enable-two-phase to enable two_phase."
+msgstr ""
+
+#: pg_createsubscriber.c:992
+#, c-format
+msgid "required WAL could be removed from the publisher"
+msgstr ""
+
+#: pg_createsubscriber.c:993
+#, fuzzy, c-format
+#| msgid "Make sure the configuration parameter \"%s\" is set on the master server."
+msgid "Set the configuration parameter \"%s\" to -1 to ensure that required WAL files are not prematurely removed."
+msgstr "确保在主服务器上配置参数 \"%s\" 已经被设置。"
+
+#: pg_createsubscriber.c:1025
+#, c-format
+msgid "checking settings on subscriber"
+msgstr ""
+
+#: pg_createsubscriber.c:1032
+#, fuzzy, c-format
+#| msgid "target server must be shut down cleanly"
+msgid "target server must be a standby"
+msgstr "目标服务器必须被干净地关闭"
+
+#: pg_createsubscriber.c:1056
+#, fuzzy, c-format
+#| msgid "could not obtain lock on relation \"%s\""
+msgid "could not obtain subscriber settings: %s"
+msgstr "无法在关系 \"%s\" 上获得锁"
+
+#: pg_createsubscriber.c:1080
+#, fuzzy, c-format
+#| msgid "Field requires %d characters, but only %d remain."
+msgid "subscriber requires %d active replication origins, but only %d remain"
+msgstr "字段要求有%d个字符,但是这里只有%d个"
+
+#: pg_createsubscriber.c:1089
+#, fuzzy, c-format
+#| msgid "Field requires %d characters, but only %d remain."
+msgid "subscriber requires %d logical replication workers, but only %d remain"
+msgstr "字段要求有%d个字符,但是这里只有%d个"
+
+#: pg_createsubscriber.c:1098
+#, fuzzy, c-format
+#| msgid "Field requires %d characters, but only %d remain."
+msgid "subscriber requires %d worker processes, but only %d remain"
+msgstr "字段要求有%d个字符,但是这里只有%d个"
+
+#: pg_createsubscriber.c:1139
+#, c-format
+msgid "dry-run: would drop subscription \"%s\" in database \"%s\""
+msgstr ""
+
+#: pg_createsubscriber.c:1143
+#, fuzzy, c-format
+#| msgid "dropping replication slot \"%s\""
+msgid "dropping subscription \"%s\" in database \"%s\""
+msgstr "删除复制槽\"%s\""
+
+#: pg_createsubscriber.c:1150
+#, fuzzy, c-format
+#| msgid "could not set junction for \"%s\": %s"
+msgid "could not drop subscription \"%s\": %s"
+msgstr "无法为\"%s\"设置连接点: %s"
+
+#: pg_createsubscriber.c:1185
+#, fuzzy, c-format
+#| msgid "could not obtain lock on relation \"%s\""
+msgid "could not obtain pre-existing subscriptions: %s"
+msgstr "无法在关系 \"%s\" 上获得锁"
+
+#: pg_createsubscriber.c:1326
+#, fuzzy, c-format
+#| msgid "could not drop the replication slot \"%s\" on publisher"
+msgid "could not drop replication slot \"%s\" on primary"
+msgstr "无法删除发布服务器上的复制槽\"%s\""
+
+#: pg_createsubscriber.c:1360
+#, fuzzy, c-format
+#| msgid "could not obtain lock on row in relation \"%s\""
+msgid "could not obtain failover replication slot information: %s"
+msgstr "无法在关系 \"%s\"中的记录上获得锁"
+
+#: pg_createsubscriber.c:1362 pg_createsubscriber.c:1371
+#, c-format
+msgid "Drop the failover replication slots on subscriber soon to avoid retention of WAL files."
+msgstr ""
+
+#: pg_createsubscriber.c:1370
+#, fuzzy, c-format
+#| msgid "could not copy replication slot \"%s\""
+msgid "could not drop failover replication slot"
+msgstr "无法复制复制槽\"%s\""
+
+#: pg_createsubscriber.c:1393
+#, fuzzy, c-format
+#| msgid "could not drop the replication slot \"%s\" on publisher"
+msgid "dry-run: would create the replication slot \"%s\" in database \"%s\" on publisher"
+msgstr "无法删除发布服务器上的复制槽\"%s\""
+
+#: pg_createsubscriber.c:1396
+#, fuzzy, c-format
+#| msgid "created replication slot \"%s\" on publisher"
+msgid "creating the replication slot \"%s\" in database \"%s\" on publisher"
+msgstr "在发布服务器上创建复制槽 \"%s\""
+
+#: pg_createsubscriber.c:1415
+#, fuzzy, c-format
+#| msgid "could not create replication slot \"%s\": %s"
+msgid "could not create replication slot \"%s\" in database \"%s\": %s"
+msgstr "无法创建复制槽\"%s\": %s"
+
+#: pg_createsubscriber.c:1446
+#, fuzzy, c-format
+#| msgid "could not drop the replication slot \"%s\" on publisher"
+msgid "dry-run: would drop the replication slot \"%s\" in database \"%s\""
+msgstr "无法删除发布服务器上的复制槽\"%s\""
+
+#: pg_createsubscriber.c:1449
+#, fuzzy, c-format
+#| msgid "dropping replication slot \"%s\""
+msgid "dropping the replication slot \"%s\" in database \"%s\""
+msgstr "删除复制槽\"%s\""
+
+#: pg_createsubscriber.c:1465
+#, fuzzy, c-format
+#| msgid "could not drop the replication slot \"%s\" on publisher"
+msgid "could not drop replication slot \"%s\" in database \"%s\": %s"
+msgstr "无法删除发布服务器上的复制槽\"%s\""
+
+#: pg_createsubscriber.c:1485
+#, fuzzy, c-format
+#| msgid "archive command failed with exit code %d"
+msgid "pg_ctl failed with exit code %d"
+msgstr "归档命令执行失败，退出代码为 %d"
+
+#: pg_createsubscriber.c:1490
+#, fuzzy, c-format
+#| msgid "child process was terminated by exception 0x%X"
+msgid "pg_ctl was terminated by exception 0x%X"
+msgstr "子进程被例外(exception) 0x%X 终止"
+
+#: pg_createsubscriber.c:1492
+#, c-format
+msgid "See C include file \"ntstatus.h\" for a description of the hexadecimal value."
+msgstr "关于对16进制值的描述， 参见C语言的引用文件 \"ntstatus.h\" "
+
+#: pg_createsubscriber.c:1494
+#, fuzzy, c-format
+#| msgid "child process was terminated by signal %d: %s"
+msgid "pg_ctl was terminated by signal %d: %s"
+msgstr "子进程被信号 %d 终止: %s"
+
+#: pg_createsubscriber.c:1500
+#, fuzzy, c-format
+#| msgid "child process exited with unrecognized status %d"
+msgid "pg_ctl exited with unrecognized status %d"
+msgstr "子进程已退出, 未知状态 %d"
+
+#: pg_createsubscriber.c:1503
+#, fuzzy, c-format
+#| msgid "The failed archive command was: %s"
+msgid "The failed command was: %s"
+msgstr "执行失败的归档命令是: %s"
+
+#: pg_createsubscriber.c:1553
+#, fuzzy, c-format
+#| msgid "server started\n"
+msgid "server was started"
+msgstr "服务器进程已经启动\n"
+
+#: pg_createsubscriber.c:1568
+#, fuzzy, c-format
+#| msgid "server stopped\n"
+msgid "server was stopped"
+msgstr "服务器进程已经关闭\n"
+
+#: pg_createsubscriber.c:1587
+#, c-format
+msgid "waiting for the target server to reach the consistent state"
+msgstr ""
+
+#: pg_createsubscriber.c:1605
+#, c-format
+msgid "recovery timed out"
+msgstr ""
+
+#: pg_createsubscriber.c:1618
+#, fuzzy, c-format
+#| msgid "server did not promote within %d seconds"
+msgid "server did not end recovery"
+msgstr "服务器在%d秒内未升级"
+
+#: pg_createsubscriber.c:1620
+#, c-format
+msgid "target server reached the consistent state"
+msgstr ""
+
+#: pg_createsubscriber.c:1621
+#, fuzzy, c-format
+#| msgid ""
+#| "\n"
+#| "If pg_upgrade fails after this point, you must re-initdb the\n"
+#| "new cluster before continuing.\n"
+msgid "If pg_createsubscriber fails after this point, you must recreate the physical replica before continuing."
+msgstr ""
+"\n"
+"如果pg_upgrade在这一点之后失败，在继续之前必须重新初始化新集群.\n"
+
+#: pg_createsubscriber.c:1648 pg_createsubscriber.c:1777
+#, fuzzy, c-format
+#| msgid "could not obtain lock on relation \"%s\""
+msgid "could not obtain publication information: %s"
+msgstr "无法在关系 \"%s\" 上获得锁"
+
+#: pg_createsubscriber.c:1662
+#, c-format
+msgid "publication \"%s\" already exists"
+msgstr "发布 \"%s\" 已经存在"
+
+#: pg_createsubscriber.c:1663
+#, c-format
+msgid "Consider renaming this publication before continuing."
+msgstr ""
+
+#: pg_createsubscriber.c:1671
+#, c-format
+msgid "dry-run: would create publication \"%s\" in database \"%s\""
+msgstr ""
+
+#: pg_createsubscriber.c:1674
+#, fuzzy, c-format
+#| msgid "creating replication slot \"%s\""
+msgid "creating publication \"%s\" in database \"%s\""
+msgstr "创建复制槽 \"%s\""
+
+#: pg_createsubscriber.c:1687
+#, fuzzy, c-format
+#| msgid "could not create replication slot \"%s\": %s"
+msgid "could not create publication \"%s\" in database \"%s\": %s"
+msgstr "无法创建复制槽\"%s\": %s"
+
+#: pg_createsubscriber.c:1717
+#, c-format
+msgid "dry-run: would drop publication \"%s\" in database \"%s\""
+msgstr ""
+
+#: pg_createsubscriber.c:1720
+#, fuzzy, c-format
+#| msgid "dropping replication slot \"%s\""
+msgid "dropping publication \"%s\" in database \"%s\""
+msgstr "删除复制槽\"%s\""
+
+#: pg_createsubscriber.c:1734
+#, fuzzy, c-format
+#| msgid "could not find function \"%s\" in file \"%s\""
+msgid "could not drop publication \"%s\" in database \"%s\": %s"
+msgstr "在文件 \"%2$s\" 中无法找到函数 \"%1$s\""
+
+#: pg_createsubscriber.c:1770
+#, fuzzy, c-format
+#| msgid "dropping replication slot \"%s\""
+msgid "dropping all existing publications in database \"%s\""
+msgstr "删除复制槽\"%s\""
+
+#: pg_createsubscriber.c:1827
+#, c-format
+msgid "dry-run: would create subscription \"%s\" in database \"%s\""
+msgstr ""
+
+#: pg_createsubscriber.c:1830
+#, fuzzy, c-format
+#| msgid "connecting to new database \"%s\""
+msgid "creating subscription \"%s\" in database \"%s\""
+msgstr "联接到新数据库 \"%s\""
+
+#: pg_createsubscriber.c:1852
+#, fuzzy, c-format
+#| msgid "could not create replication slot \"%s\": %s"
+msgid "could not create subscription \"%s\" in database \"%s\": %s"
+msgstr "无法创建复制槽\"%s\": %s"
+
+#: pg_createsubscriber.c:1897
+#, fuzzy, c-format
+#| msgid "could not obtain lock on relation \"%s\""
+msgid "could not obtain subscription OID: %s"
+msgstr "无法在关系 \"%s\" 上获得锁"
+
+#: pg_createsubscriber.c:1904
+#, fuzzy, c-format
+#| msgid "could not drop replication slot \"%s\": got %d rows and %d fields, expected %d rows and %d fields"
+msgid "could not obtain subscription OID: got %d rows, expected %d row"
+msgstr "无法删除复制槽 \"%s\": 得到%d行%d列, 但期望值为%d行%d列"
+
+#: pg_createsubscriber.c:1929
+#, c-format
+msgid "dry-run: would set the replication progress (node name \"%s\", LSN %s) in database \"%s\""
+msgstr ""
+
+#: pg_createsubscriber.c:1932
+#, c-format
+msgid "setting the replication progress (node name \"%s\", LSN %s) in database \"%s\""
+msgstr ""
+
+#: pg_createsubscriber.c:1947
+#, fuzzy, c-format
+#| msgid "could not create replication slot \"%s\": %s"
+msgid "could not set replication progress for subscription \"%s\": %s"
+msgstr "无法创建复制槽\"%s\": %s"
+
+#: pg_createsubscriber.c:1979
+#, c-format
+msgid "dry-run: would enable subscription \"%s\" in database \"%s\""
+msgstr ""
+
+#: pg_createsubscriber.c:1982
+#, fuzzy, c-format
+#| msgid "reindexing of index \"%s\" in database \"%s\" failed: %s"
+msgid "enabling subscription \"%s\" in database \"%s\""
+msgstr "在数据库\"%2$s\"中对索引\"%1$s\"重新创建失败: %3$s"
+
+#: pg_createsubscriber.c:1994
+#, fuzzy, c-format
+#| msgid "could not set junction for \"%s\": %s"
+msgid "could not enable subscription \"%s\": %s"
+msgstr "无法为\"%s\"设置连接点: %s"
+
+#: pg_createsubscriber.c:2040
+#, fuzzy, c-format
+#| msgid "could not connect to database \"%s\""
+msgid "could not obtain a list of databases: %s"
+msgstr "无法与数据库 \"%s\" 联接"
+
+#: pg_createsubscriber.c:2144
+#, c-format
+msgid "cannot be executed by \"root\""
+msgstr "不能由\"root\"执行"
+
+#: pg_createsubscriber.c:2145
+#, c-format
+msgid "You must run %s as the PostgreSQL superuser."
+msgstr "您现在作为PostgreSQL超级用户运行%s."
+
+#: pg_createsubscriber.c:2168
+#, fuzzy, c-format
+#| msgid "table name \"%s\" specified more than once"
+msgid "database \"%s\" specified more than once for -d/--database"
+msgstr "表名 \"%s\" 被指定多次"
+
+#: pg_createsubscriber.c:2209
+#, fuzzy, c-format
+#| msgid "publication name \"%s\" used more than once"
+msgid "publication \"%s\" specified more than once for --publication"
+msgstr "发布名称\"%s\"使用了多次"
+
+#: pg_createsubscriber.c:2218
+#, fuzzy, c-format
+#| msgid "replication slots can only be used if max_replication_slots > 0"
+msgid "replication slot \"%s\" specified more than once for --replication-slot"
+msgstr "复制槽只有当 max_replication_slots > 0时才能使用"
+
+#: pg_createsubscriber.c:2227
+#, fuzzy, c-format
+#| msgid "column \"%s\" specified more than once"
+msgid "subscription \"%s\" specified more than once for --subscription"
+msgstr "字段 \"%s\" 被指定多次"
+
+#: pg_createsubscriber.c:2233
+#, fuzzy, c-format
+#| msgid "table name \"%s\" specified more than once"
+msgid "object type \"%s\" specified more than once for --clean"
+msgstr "表名 \"%s\" 被指定多次"
+
+#: pg_createsubscriber.c:2258
+#, fuzzy, c-format
+#| msgid "options -d/--dbname and -f/--file cannot be used together"
+msgid "options %s and %s cannot be used together"
+msgstr "选项 -d/--dbname和-f/--file不能同时使用"
+
+#: pg_createsubscriber.c:2277
+#, fuzzy, c-format
+#| msgid "no data directory specified"
+msgid "no subscriber data directory specified"
+msgstr "没有指定数据目录"
+
+#: pg_createsubscriber.c:2288
+#, fuzzy, c-format
+#| msgid "could not determine current directory\n"
+msgid "could not determine current directory"
+msgstr "无法确定当前目录\n"
+
+#: pg_createsubscriber.c:2305
+#, fuzzy, c-format
+#| msgid "could not parse connection string: %s"
+msgid "no publisher connection string specified"
+msgstr "无法分析连接字符串: %s"
+
+#: pg_createsubscriber.c:2309
+#, fuzzy, c-format
+#| msgid "could not parse connection string: %s"
+msgid "validating publisher connection string"
+msgstr "无法分析连接字符串: %s"
+
+#: pg_createsubscriber.c:2315
+#, fuzzy, c-format
+#| msgid "could not parse connection string: %s"
+msgid "validating subscriber connection string"
+msgstr "无法分析连接字符串: %s"
+
+#: pg_createsubscriber.c:2332
+#, fuzzy, c-format
+#| msgid "no database specified"
+msgid "no database was specified"
+msgstr "没有指定数据库"
+
+#: pg_createsubscriber.c:2343
+#, c-format
+msgid "database name \"%s\" was extracted from the publisher connection string"
+msgstr ""
+
+#: pg_createsubscriber.c:2348
+#, fuzzy, c-format
+#| msgid "no database specified"
+msgid "no database name specified"
+msgstr "没有指定数据库"
+
+#: pg_createsubscriber.c:2358
+#, fuzzy, c-format
+#| msgid "wrong number of columns: %d, expected %d"
+msgid "wrong number of publication names specified"
+msgstr "错误的字段个数: %d, 期望为 %d"
+
+#: pg_createsubscriber.c:2359
+#, c-format
+msgid "The number of specified publication names (%d) must match the number of specified database names (%d)."
+msgstr ""
+
+#: pg_createsubscriber.c:2365
+#, fuzzy, c-format
+#| msgid "wrong number of array subscripts"
+msgid "wrong number of subscription names specified"
+msgstr "错误的数组下标"
+
+#: pg_createsubscriber.c:2366
+#, c-format
+msgid "The number of specified subscription names (%d) must match the number of specified database names (%d)."
+msgstr ""
+
+#: pg_createsubscriber.c:2372
+#, fuzzy, c-format
+#| msgid "wrong number of columns: %d, expected %d"
+msgid "wrong number of replication slot names specified"
+msgstr "错误的字段个数: %d, 期望为 %d"
+
+#: pg_createsubscriber.c:2373
+#, c-format
+msgid "The number of specified replication slot names (%d) must match the number of specified database names (%d)."
+msgstr ""
+
+#: pg_createsubscriber.c:2385
+#, fuzzy, c-format
+#| msgid "invalid output format \"%s\" specified"
+msgid "invalid object type \"%s\" specified for %s"
+msgstr "声明了非法的输出格式 \"%s\""
+
+#: pg_createsubscriber.c:2387
+#, fuzzy, c-format
+#| msgid "invalid %s value: \"%s\"\n"
+msgid "The valid value is: \"%s\""
+msgstr "无效的 %s值: \"%s\"\n"
+
+#: pg_createsubscriber.c:2418
+#, fuzzy, c-format
+#| msgid "Finding the real data directory for the source cluster"
+msgid "subscriber data directory is not a copy of the source database cluster"
+msgstr "正在查找源群集的实际数据目录"
+
+#: pg_createsubscriber.c:2431
+#, fuzzy, c-format
+#| msgid "Is server running?\n"
+msgid "standby server is running"
+msgstr "服务器进程是否正在运行?\n"
+
+#: pg_createsubscriber.c:2432
+#, fuzzy, c-format
+#| msgid "Please terminate the single-user server and try again.\n"
+msgid "Stop the standby server and try again."
+msgstr "请终止单用户模式服务器进程，然后再重试.\n"
+
+#: pg_createsubscriber.c:2441
+#, c-format
+msgid "starting the standby server with command-line options"
+msgstr ""
+
+#: pg_createsubscriber.c:2457 pg_createsubscriber.c:2492
+#, c-format
+msgid "stopping the subscriber"
+msgstr ""
+
+#: pg_createsubscriber.c:2471
+#, fuzzy, c-format
+#| msgid "starting archive recovery"
+msgid "starting the subscriber"
+msgstr "开始归档恢复"
+
+#: pg_createsubscriber.c:2500
+#, c-format
+msgid "Done!"
+msgstr "完成！"
 
 #: pg_receivewal.c:77
 #, c-format
@@ -863,31 +2250,22 @@ msgstr ""
 "%s 接收PostgreSQL的流预写日志.\n"
 "\n"
 
-#: pg_receivewal.c:81 pg_recvlogical.c:81
-#, c-format
-msgid ""
-"\n"
-"Options:\n"
-msgstr ""
-"\n"
-"选项:\n"
-
 #: pg_receivewal.c:82
 #, c-format
 msgid "  -D, --directory=DIR    receive write-ahead log files into this directory\n"
 msgstr "  -D, --directory=DIR    接收预写日志到指定的目录\n"
 
-#: pg_receivewal.c:83 pg_recvlogical.c:82
+#: pg_receivewal.c:83 pg_recvlogical.c:94
 #, c-format
 msgid "  -E, --endpos=LSN       exit after receiving the specified LSN\n"
 msgstr "  -E, --endpos=LSN       收到指定LSN后退出\n"
 
-#: pg_receivewal.c:84 pg_recvlogical.c:86
+#: pg_receivewal.c:84 pg_recvlogical.c:98
 #, c-format
 msgid "      --if-not-exists    do not error if slot already exists when creating a slot\n"
 msgstr "      --if-not-exists    在创建一个槽时如果槽已经存在则不产生错误\n"
 
-#: pg_receivewal.c:85 pg_recvlogical.c:88
+#: pg_receivewal.c:85 pg_recvlogical.c:100
 #, c-format
 msgid "  -n, --no-loop          do not loop on connection lost\n"
 msgstr "  -n, --no-loop          连接丢失时不进行循环处理\n"
@@ -897,7 +2275,7 @@ msgstr "  -n, --no-loop          连接丢失时不进行循环处理\n"
 msgid "      --no-sync          do not wait for changes to be written safely to disk\n"
 msgstr "      --no-sync          不用等待变化安全写入磁盘\n"
 
-#: pg_receivewal.c:87 pg_recvlogical.c:93
+#: pg_receivewal.c:87 pg_recvlogical.c:105
 #, c-format
 msgid ""
 "  -s, --status-interval=SECS\n"
@@ -913,10 +2291,12 @@ msgstr "      --synchronous      在写入后立即刷写预写日志\n"
 
 #: pg_receivewal.c:93
 #, c-format
-msgid "  -Z, --compress=0-9     compress logs with given compression level\n"
-msgstr "  -Z, --compress=0-9     按给定的压缩级别对日志文件进行压缩\n"
+msgid ""
+"  -Z, --compress=METHOD[:DETAIL]\n"
+"                         compress as specified\n"
+msgstr ""
 
-#: pg_receivewal.c:102
+#: pg_receivewal.c:103
 #, c-format
 msgid ""
 "\n"
@@ -925,122 +2305,159 @@ msgstr ""
 "\n"
 "可选动作：\n"
 
-#: pg_receivewal.c:103 pg_recvlogical.c:78
+#: pg_receivewal.c:104 pg_recvlogical.c:88
 #, c-format
 msgid "      --create-slot      create a new replication slot (for the slot's name see --slot)\n"
 msgstr "      --create-slot      创建新的复制槽(槽名请参考选项 --slot)\n"
 
-#: pg_receivewal.c:104 pg_recvlogical.c:79
+#: pg_receivewal.c:105 pg_recvlogical.c:89
 #, c-format
 msgid "      --drop-slot        drop the replication slot (for the slot's name see --slot)\n"
 msgstr "      --drop-slot        删除复制槽 (槽名请参考选项 --slot)\n"
 
-#: pg_receivewal.c:117
+#: pg_receivewal.c:191
 #, c-format
 msgid "finished segment at %X/%X (timeline %u)"
 msgstr "在 %X/%X (时间线 %u)处完成段"
 
-#: pg_receivewal.c:124
+#: pg_receivewal.c:198
 #, c-format
 msgid "stopped log streaming at %X/%X (timeline %u)"
 msgstr "在时间点: %X/%X (时间线%u)停止日志的流操作"
 
-#: pg_receivewal.c:140
+#: pg_receivewal.c:214
 #, c-format
 msgid "switched to timeline %u at %X/%X"
 msgstr "切换到时间表 %u 在 %X/%X"
 
-#: pg_receivewal.c:150
+#: pg_receivewal.c:224 pg_recvlogical.c:1079
 #, c-format
 msgid "received interrupt signal, exiting"
 msgstr "接收到终断信号, 正在退出"
 
-#: pg_receivewal.c:186
+#: pg_receivewal.c:256
 #, c-format
 msgid "could not close directory \"%s\": %m"
 msgstr "无法关闭目录 \"%s\": %m"
 
-#: pg_receivewal.c:272
+#: pg_receivewal.c:323
+#, c-format
 msgid "segment file \"%s\" has incorrect size %lld, skipping"
 msgstr "段文件 \"%s\" 大小值: %lld不正确, 跳过"
 
-#: pg_receivewal.c:290
+#: pg_receivewal.c:340
 #, c-format
 msgid "could not open compressed file \"%s\": %m"
 msgstr "无法打开压缩文件 \"%s\": %m"
 
-#: pg_receivewal.c:296
+#: pg_receivewal.c:343
 #, c-format
 msgid "could not seek in compressed file \"%s\": %m"
 msgstr "无法在压缩文件\"%s\"进行查找: %m"
 
-#: pg_receivewal.c:304
+#: pg_receivewal.c:349
 #, c-format
 msgid "could not read compressed file \"%s\": %m"
 msgstr "无法读取压缩文件\"%s\": %m"
 
-#: pg_receivewal.c:307
+#: pg_receivewal.c:352
 #, c-format
 msgid "could not read compressed file \"%s\": read %d of %zu"
 msgstr "无法读取压缩的文件\"%1$s\"：读取了%3$zu中的%2$d"
 
-#: pg_receivewal.c:318
+#: pg_receivewal.c:362
 #, c-format
 msgid "compressed segment file \"%s\" has incorrect uncompressed size %d, skipping"
 msgstr "压缩的段文件\"%s\"未压缩大小值: %d不正确, 跳过"
 
-#: pg_receivewal.c:422
+#: pg_receivewal.c:390
+#, fuzzy, c-format
+#| msgid "could not create SSL context: %s"
+msgid "could not create LZ4 decompression context: %s"
+msgstr "无法创建 SSL 环境: %s"
+
+#: pg_receivewal.c:420
+#, fuzzy, c-format
+#| msgid "could not close compressed file \"%s\": %s"
+msgid "could not decompress file \"%s\": %s"
+msgstr "无法关闭压缩文件 \"%s\": %s"
+
+#: pg_receivewal.c:443
+#, fuzzy, c-format
+#| msgid "could not close compression stream: %s"
+msgid "could not free LZ4 decompression context: %s"
+msgstr "无法关闭压缩流: %s"
+
+#: pg_receivewal.c:448
+#, fuzzy, c-format
+#| msgid "compressed segment file \"%s\" has incorrect uncompressed size %d, skipping"
+msgid "compressed segment file \"%s\" has incorrect uncompressed size %zu, skipping"
+msgstr "压缩的段文件\"%s\"未压缩大小值: %d不正确, 跳过"
+
+#: pg_receivewal.c:453
+#, fuzzy, c-format
+#| msgid "%s setting %s not supported by this build"
+msgid "cannot check file \"%s\": compression with %s not supported by this build"
+msgstr "这个版本的安装不支持%s设置%s"
+
+#: pg_receivewal.c:578
 #, c-format
 msgid "starting log streaming at %X/%X (timeline %u)"
 msgstr "在时间点: %X/%X (时间线%u)启动日志的流操作"
 
-#: pg_receivewal.c:537 pg_recvlogical.c:762
-#, c-format
-msgid "invalid port number \"%s\""
-msgstr "无效端口号: \"%s\""
-
-#: pg_receivewal.c:565 pg_recvlogical.c:788
+#: pg_receivewal.c:693 pg_recvlogical.c:813
 #, c-format
 msgid "could not parse end position \"%s\""
 msgstr "无法解析结束位置\"%s\""
 
-#: pg_receivewal.c:625
+#: pg_receivewal.c:766
 #, c-format
 msgid "cannot use --create-slot together with --drop-slot"
 msgstr "不能把--create-slot和--drop-slot一起使用"
 
-#: pg_receivewal.c:643
+#: pg_receivewal.c:782
 #, c-format
 msgid "cannot use --synchronous together with --no-sync"
 msgstr "不能把--synchronous和--no-sync一起使用"
 
-#: pg_receivewal.c:719
+#: pg_receivewal.c:792
+#, c-format
+msgid "no target directory specified"
+msgstr "没有指定目标目录"
+
+#: pg_receivewal.c:816
+#, fuzzy, c-format
+#| msgid "conversion between %s and %s is not supported"
+msgid "compression with %s is not yet supported"
+msgstr "不支持 %s 和 %s 之间的编码转换"
+
+#: pg_receivewal.c:859
 #, c-format
 msgid "replication connection using slot \"%s\" is unexpectedly database specific"
 msgstr "使用槽\"%s\"的复制连接意外地不是指定的数据库"
 
-#: pg_receivewal.c:730 pg_recvlogical.c:966
+#: pg_receivewal.c:878 pg_recvlogical.c:997
 #, c-format
 msgid "dropping replication slot \"%s\""
 msgstr "删除复制槽\"%s\""
 
-#: pg_receivewal.c:741 pg_recvlogical.c:976
+#: pg_receivewal.c:889 pg_recvlogical.c:1007
 #, c-format
 msgid "creating replication slot \"%s\""
 msgstr "创建复制槽 \"%s\""
 
-#: pg_receivewal.c:767 pg_recvlogical.c:1001
+#: pg_receivewal.c:918 pg_recvlogical.c:1032
 #, c-format
 msgid "disconnected"
 msgstr "连接已断开"
 
 #. translator: check source for value for %d
-#: pg_receivewal.c:773 pg_recvlogical.c:1007
+#: pg_receivewal.c:922 pg_recvlogical.c:1036
 #, c-format
 msgid "disconnected; waiting %d seconds to try again"
 msgstr "连接已断开, 将于%d 秒后尝试重连"
 
-#: pg_recvlogical.c:73
+#: pg_recvlogical.c:83
 #, c-format
 msgid ""
 "%s controls PostgreSQL logical decoding streams.\n"
@@ -1049,7 +2466,7 @@ msgstr ""
 "%s 控制PostgreSQL逻辑解码流。\n"
 "\n"
 
-#: pg_recvlogical.c:77
+#: pg_recvlogical.c:87
 #, c-format
 msgid ""
 "\n"
@@ -1058,17 +2475,24 @@ msgstr ""
 "\n"
 "即将执行的动作:\n"
 
-#: pg_recvlogical.c:80
+#: pg_recvlogical.c:90
 #, c-format
 msgid "      --start            start streaming in a replication slot (for the slot's name see --slot)\n"
 msgstr "      --start            复制槽中启动流复制(槽名请参考选项 --slot)\n"
 
-#: pg_recvlogical.c:83
+#: pg_recvlogical.c:92
+#, c-format
+msgid ""
+"      --enable-failover  enable replication slot synchronization to standby servers when\n"
+"                         creating a replication slot\n"
+msgstr ""
+
+#: pg_recvlogical.c:95
 #, c-format
 msgid "  -f, --file=FILE        receive log into this file, - for stdout\n"
 msgstr "  -f, --file=FILE        接收日志到这个文件, - 为标准输出\n"
 
-#: pg_recvlogical.c:84
+#: pg_recvlogical.c:96
 #, c-format
 msgid ""
 "  -F  --fsync-interval=SECS\n"
@@ -1077,12 +2501,12 @@ msgstr ""
 "  -F  --fsync-interval=SECS\n"
 "                         写往输出文件的文件同步的时间间隔 (默认值为: %d)\n"
 
-#: pg_recvlogical.c:87
+#: pg_recvlogical.c:99
 #, c-format
 msgid "  -I, --startpos=LSN     where in an existing slot should the streaming start\n"
 msgstr "  -I, --startpos=LSN     在当前槽中流复制启动的起始位置\n"
 
-#: pg_recvlogical.c:89
+#: pg_recvlogical.c:101
 #, c-format
 msgid ""
 "  -o, --option=NAME[=VALUE]\n"
@@ -1093,277 +2517,292 @@ msgstr ""
 "                         选项NAME附带可选值VALUE给\n"
 "                         输出插件\n"
 
-#: pg_recvlogical.c:92
+#: pg_recvlogical.c:104
 #, c-format
 msgid "  -P, --plugin=PLUGIN    use output plugin PLUGIN (default: %s)\n"
 msgstr "  -P, --plugin=PLUGIN    使用输出插件PLUGIN (默认为: %s)\n"
 
-#: pg_recvlogical.c:95
+#: pg_recvlogical.c:107
 #, c-format
 msgid "  -S, --slot=SLOTNAME    name of the logical replication slot\n"
 msgstr "  -S, --slot=SLOTNAME    逻辑复制槽的名字\n"
 
-#: pg_recvlogical.c:100
+#: pg_recvlogical.c:108
+#, c-format
+msgid "  -t, --enable-two-phase enable decoding of prepared transactions when creating a slot\n"
+msgstr ""
+
+#: pg_recvlogical.c:109
+#, c-format
+msgid "      --two-phase        (same as --enable-two-phase, deprecated)\n"
+msgstr ""
+
+#: pg_recvlogical.c:114
 #, c-format
 msgid "  -d, --dbname=DBNAME    database to connect to\n"
 msgstr "  -d, --dbname=DBNAME    要连接的目标数据库\n"
 
-#: pg_recvlogical.c:133
+#: pg_recvlogical.c:147
 #, c-format
 msgid "confirming write up to %X/%X, flush to %X/%X (slot %s)"
 msgstr "确认上写至%X/%X, 并刷写回至 %X/%X (槽 %s)"
 
-#: pg_recvlogical.c:157 receivelog.c:351
+#: pg_recvlogical.c:171 receivelog.c:359
 #, c-format
 msgid "could not send feedback packet: %s"
 msgstr "无法发送回馈包: %s"
 
-#: pg_recvlogical.c:230
+#: pg_recvlogical.c:241
 #, c-format
 msgid "starting log streaming at %X/%X (slot %s)"
 msgstr "在%X/%X (槽 %s)位置启动日志流"
 
-#: pg_recvlogical.c:271
+#: pg_recvlogical.c:287
 #, c-format
 msgid "streaming initiated"
 msgstr "流已初始化"
 
-#: pg_recvlogical.c:335
+#: pg_recvlogical.c:352
 #, c-format
 msgid "could not open log file \"%s\": %m"
 msgstr "无法打开事务日志文件 \"%s\": %m"
 
-#: pg_recvlogical.c:361 receivelog.c:881
+#: pg_recvlogical.c:381 receivelog.c:895
 #, c-format
 msgid "invalid socket: %s"
 msgstr "无效套接字: %s"
 
-#: pg_recvlogical.c:414 receivelog.c:909
+#: pg_recvlogical.c:434 receivelog.c:923
+#, c-format
 msgid "%s() failed: %m"
 msgstr "%s()失败: %m"
 
-#: pg_recvlogical.c:421 receivelog.c:959
+#: pg_recvlogical.c:441 receivelog.c:972
 #, c-format
 msgid "could not receive data from WAL stream: %s"
 msgstr "无法从WAL流中获得数据: %s"
 
-#: pg_recvlogical.c:463 pg_recvlogical.c:514 receivelog.c:1003
-#: receivelog.c:1069
+#: pg_recvlogical.c:483 pg_recvlogical.c:534 receivelog.c:1016
+#: receivelog.c:1079
 #, c-format
 msgid "streaming header too small: %d"
 msgstr "流头大小: %d 值太小"
 
-#: pg_recvlogical.c:498 receivelog.c:841
+#: pg_recvlogical.c:518 receivelog.c:852
 #, c-format
 msgid "unrecognized streaming header: \"%c\""
 msgstr "无法识别的流头: \"%c\""
 
-#: pg_recvlogical.c:552 pg_recvlogical.c:564
-#, c-format
-msgid "could not write %u bytes to log file \"%s\": %m"
+#: pg_recvlogical.c:572 pg_recvlogical.c:584
+#, fuzzy, c-format
+#| msgid "could not write %u bytes to log file \"%s\": %m"
+msgid "could not write %d bytes to log file \"%s\": %m"
 msgstr "无法写入 %u 字节到日志文件 \"%s\": %m"
 
-#: pg_recvlogical.c:618 receivelog.c:637 receivelog.c:674
+#: pg_recvlogical.c:642 receivelog.c:647 receivelog.c:684
 #, c-format
 msgid "unexpected termination of replication stream: %s"
 msgstr "流复制异常终止: %s"
 
-#: pg_recvlogical.c:742
-#, c-format
-msgid "invalid fsync interval \"%s\""
-msgstr "无效的fsync同步时间间隔值: \"%s\""
-
-#: pg_recvlogical.c:780
+#: pg_recvlogical.c:808
 #, c-format
 msgid "could not parse start position \"%s\""
 msgstr "无法解析起始位置\"%s\""
 
-#: pg_recvlogical.c:869
+#: pg_recvlogical.c:886
 #, c-format
 msgid "no slot specified"
 msgstr "没有指定槽"
 
-#: pg_recvlogical.c:877
+#: pg_recvlogical.c:893
 #, c-format
 msgid "no target file specified"
 msgstr "没有指定目标文件"
 
-#: pg_recvlogical.c:885
+#: pg_recvlogical.c:900
 #, c-format
 msgid "no database specified"
 msgstr "没有指定数据库"
 
-#: pg_recvlogical.c:893
+#: pg_recvlogical.c:907
 #, c-format
 msgid "at least one action needs to be specified"
 msgstr "至少要指定一个操作"
 
-#: pg_recvlogical.c:901
+#: pg_recvlogical.c:914
 #, c-format
 msgid "cannot use --create-slot or --start together with --drop-slot"
 msgstr "不能使用 --create-slot 选项或 同时使用--start和--drop-slot两个选项"
 
-#: pg_recvlogical.c:909
+#: pg_recvlogical.c:921
 #, c-format
 msgid "cannot use --create-slot or --drop-slot together with --startpos"
 msgstr "不能使用 --create-slot 选项或 同时使用--drop-slot和--startpos两个选项"
 
-#: pg_recvlogical.c:917
+#: pg_recvlogical.c:928
 #, c-format
 msgid "--endpos may only be specified with --start"
 msgstr "只能用--start选项指定--endpos选项"
 
-#: pg_recvlogical.c:948
+#: pg_recvlogical.c:937 pg_recvlogical.c:944
+#, fuzzy, c-format
+#| msgid "--endpos may only be specified with --start"
+msgid "%s may only be specified with --create-slot"
+msgstr "只能用--start选项指定--endpos选项"
+
+#: pg_recvlogical.c:981
 #, c-format
 msgid "could not establish database-specific replication connection"
 msgstr "无法建立数据库相关的复制连接"
 
-#: pg_recvlogical.c:1047
+#: pg_recvlogical.c:1082
+#, c-format
 msgid "end position %X/%X reached by keepalive"
 msgstr "keepalive已到达结束位置%X/%X"
 
-#: pg_recvlogical.c:1050
+#: pg_recvlogical.c:1087
+#, c-format
 msgid "end position %X/%X reached by WAL record at %X/%X"
 msgstr "记录在%X/%X到达了结束位置%X/%X"
 
-#: receivelog.c:68
+#: receivelog.c:65
 #, c-format
 msgid "could not create archive status file \"%s\": %s"
 msgstr "无法创建归档状态文件 \"%s\": %s"
 
-#: receivelog.c:118
+#: receivelog.c:72
+#, fuzzy, c-format
+#| msgid "could not create archive status file \"%s\": %s"
+msgid "could not close archive status file \"%s\": %s"
+msgstr "无法创建归档状态文件 \"%s\": %s"
+
+#: receivelog.c:121
 #, c-format
 msgid "could not get size of write-ahead log file \"%s\": %s"
 msgstr "无法获得预写日志文件\"%s\"的大小: %s"
 
-#: receivelog.c:129
+#: receivelog.c:132
 #, c-format
 msgid "could not open existing write-ahead log file \"%s\": %s"
 msgstr "无法打开存在的预写日志文件\"%s\": %s"
 
-#: receivelog.c:138
+#: receivelog.c:141
 #, c-format
 msgid "could not fsync existing write-ahead log file \"%s\": %s"
 msgstr "无法同步存在的预写日志文件\"%s\": %s"
 
-#: receivelog.c:153
-#, c-format
-msgid "write-ahead log file \"%s\" has %d byte, should be 0 or %d"
-msgid_plural "write-ahead log file \"%s\" has %d bytes, should be 0 or %d"
+#: receivelog.c:156
+#, fuzzy, c-format
+#| msgid "write-ahead log file \"%s\" has %d byte, should be 0 or %d"
+#| msgid_plural "write-ahead log file \"%s\" has %d bytes, should be 0 or %d"
+msgid "write-ahead log file \"%s\" has %zd byte, should be 0 or %d"
+msgid_plural "write-ahead log file \"%s\" has %zd bytes, should be 0 or %d"
 msgstr[0] "预写日志文件 \"%s\"有%d个字节，应该是0或者 %d"
 msgstr[1] "预写日志文件 \"%s\"有%d个字节，应该是0或者 %d"
 
-#: receivelog.c:169
+#: receivelog.c:174
 #, c-format
 msgid "could not open write-ahead log file \"%s\": %s"
 msgstr "无法打开预写日志文件 \"%s\": %s"
 
-#: receivelog.c:197
-#, c-format
-msgid "could not determine seek position in file \"%s\": %s"
-msgstr "无法确定文件 \"%s\"的当前位置: %s"
-
-#: receivelog.c:211
-#, c-format
-msgid "not renaming \"%s%s\", segment is not complete"
+#: receivelog.c:215
+#, fuzzy, c-format
+#| msgid "not renaming \"%s%s\", segment is not complete"
+msgid "not renaming \"%s\", segment is not complete"
 msgstr "没有重命名 \"%s%s\", 段不完整"
 
-#: receivelog.c:223 receivelog.c:308 receivelog.c:683
+#: receivelog.c:226 receivelog.c:316 receivelog.c:693
 #, c-format
 msgid "could not close file \"%s\": %s"
 msgstr "无法关闭文件\"%s\": %s"
 
-#: receivelog.c:280
+#: receivelog.c:287
 #, c-format
 msgid "server reported unexpected history file name for timeline %u: %s"
 msgstr "服务器为时间表报告生成的意外历史文件名 %u:%s"
 
-#: receivelog.c:288
+#: receivelog.c:296
 #, c-format
 msgid "could not create timeline history file \"%s\": %s"
 msgstr "无法创建时间表历史文件 \"%s\": %s"
 
-#: receivelog.c:295
+#: receivelog.c:303
 #, c-format
 msgid "could not write timeline history file \"%s\": %s"
 msgstr "无法写时间表历史文件 \"%s\": %s"
 
-#: receivelog.c:385
+#: receivelog.c:393
 #, c-format
 msgid "incompatible server version %s; client does not support streaming from server versions older than %s"
 msgstr "不兼容的服务器版本号 %s; 当服务器版本低于%s时客户端不支持流复制"
 
-#: receivelog.c:394
+#: receivelog.c:402
 #, c-format
 msgid "incompatible server version %s; client does not support streaming from server versions newer than %s"
 msgstr "不兼容的服务器版本号 %s; 当服务器版本高于%s时客户端不支持流复制"
 
-#: receivelog.c:496 streamutil.c:430 streamutil.c:467
-#, c-format
-msgid "could not identify system: got %d rows and %d fields, expected %d rows and %d or more fields"
-msgstr "无法识别系统: 得到 %d 行和 %d 列, 期望值为: %d 行和 %d 列"
-
-#: receivelog.c:503
+#: receivelog.c:504
 #, c-format
 msgid "system identifier does not match between base backup and streaming connection"
 msgstr "基础备份和流连接的系统标识符不匹配"
 
-#: receivelog.c:509
+#: receivelog.c:512
 #, c-format
 msgid "starting timeline %u is not present in the server"
 msgstr "服务器上没有起始时间表 %u"
 
-#: receivelog.c:550
+#: receivelog.c:553
 #, c-format
 msgid "unexpected response to TIMELINE_HISTORY command: got %d rows and %d fields, expected %d rows and %d fields"
 msgstr "获得命令TIMELINE_HISTORY的意外响应: 得到 %d 行和 %d 列, 期望值为: %d 行和 %d 列"
 
-#: receivelog.c:621
+#: receivelog.c:631
 #, c-format
 msgid "server reported unexpected next timeline %u, following timeline %u"
 msgstr "服务器报出的下次意外时间表 %u, 紧跟时间表 %u之后"
 
-#: receivelog.c:627
+#: receivelog.c:637
 #, c-format
 msgid "server stopped streaming timeline %u at %X/%X, but reported next timeline %u to begin at %X/%X"
 msgstr "服务器在%2$X/%3$X时停止流操作时间表%1$u, 但是报出将在%5$X/%6$X时开始下一个时间表%4$u"
 
-#: receivelog.c:667
+#: receivelog.c:677
 #, c-format
 msgid "replication stream was terminated before stop point"
 msgstr "流复制在停止点之前异常终止"
 
-#: receivelog.c:713
+#: receivelog.c:723
 #, c-format
 msgid "unexpected result set after end-of-timeline: got %d rows and %d fields, expected %d rows and %d fields"
 msgstr "终点时间表的意外结果集: 得到 %d 行和 %d 列, 期望值为: %d 行和 %d 列"
 
-#: receivelog.c:722
+#: receivelog.c:732
 #, c-format
 msgid "could not parse next timeline's starting point \"%s\""
 msgstr "无法解析下次时间表的起始点\"%s\""
 
-#: receivelog.c:771 receivelog.c:1023
+#: receivelog.c:780 receivelog.c:1035 walmethods.c:1206
 #, c-format
 msgid "could not fsync file \"%s\": %s"
 msgstr "无法 fsync 文件 \"%s\": %s"
 
-#: receivelog.c:1086
+#: receivelog.c:1096
 #, c-format
 msgid "received write-ahead log record for offset %u with no file open"
 msgstr "偏移位置 %u 处接收到的预写日志记录没有打开文件"
 
-#: receivelog.c:1096
+#: receivelog.c:1106
 #, c-format
 msgid "got WAL data offset %08x, expected %08x"
 msgstr "得到WAL数据偏移 %08x, 期望值为 %08x"
 
-#: receivelog.c:1130
-#, c-format
-msgid "could not write %u bytes to WAL file \"%s\": %s"
+#: receivelog.c:1141
+#, fuzzy, c-format
+#| msgid "could not write %u bytes to WAL file \"%s\": %s"
+msgid "could not write %d bytes to WAL file \"%s\": %s"
 msgstr "无法写入 %u 字节到 WAL 文件 \"%s\": %s"
 
-#: receivelog.c:1155 receivelog.c:1195 receivelog.c:1225
+#: receivelog.c:1166 receivelog.c:1206 receivelog.c:1234
 #, c-format
 msgid "could not send copy-end packet: %s"
 msgstr "无法发送副本结束包: %s"
@@ -1372,42 +2811,47 @@ msgstr "无法发送副本结束包: %s"
 msgid "Password: "
 msgstr "口令: "
 
-#: streamutil.c:186
+#: streamutil.c:189
 #, c-format
 msgid "could not connect to server"
 msgstr "无法连接到服务器"
 
-#: streamutil.c:231
-#, c-format
-msgid "could not clear search_path: %s"
-msgstr "无法清除search_path: %s"
-
-#: streamutil.c:247
-#, c-format
-msgid "could not determine server setting for integer_datetimes"
+#: streamutil.c:246
+#, fuzzy, c-format
+#| msgid "could not determine server setting for integer_datetimes"
+msgid "could not determine server setting for \"integer_datetimes\""
 msgstr "无法确定服务器上integer_datetimes的配置"
 
-#: streamutil.c:254
-#, c-format
-msgid "integer_datetimes compile flag does not match server"
+#: streamutil.c:253
+#, fuzzy, c-format
+#| msgid "integer_datetimes compile flag does not match server"
+msgid "\"integer_datetimes\" compile flag does not match server"
 msgstr "integer_datetimes编译开关与服务器端不匹配"
 
-#: streamutil.c:305
+#: streamutil.c:304
 #, c-format
 msgid "could not fetch WAL segment size: got %d rows and %d fields, expected %d rows and %d or more fields"
 msgstr "无法获取WAL段的大小：得到 %d 行和 %d 列, 期望值为: %d 行和 %d 列"
 
-#: streamutil.c:315
+#: streamutil.c:314
 #, c-format
 msgid "WAL segment size could not be parsed"
 msgstr "不能解析WAL段的大小"
 
-#: streamutil.c:333
-#, c-format
-msgid "WAL segment size must be a power of two between 1 MB and 1 GB, but the remote server reported a value of %d byte"
-msgid_plural "WAL segment size must be a power of two between 1 MB and 1 GB, but the remote server reported a value of %d bytes"
-msgstr[0] "WAL段的大小必须是2的幂次方（在1MB和1GB之间），但是远程服务器报告的值是%d字节"
-msgstr[1] " WAL段的大小必须是2的幂次方（在1MB和1GB之间），但是远程服务器报告的值是%d字节"
+#: streamutil.c:332
+#, fuzzy, c-format
+#| msgid "pg_control specifies invalid WAL segment size (%d byte); proceed with caution"
+#| msgid_plural "pg_control specifies invalid WAL segment size (%d bytes); proceed with caution"
+msgid "remote server reported invalid WAL segment size (%d byte)"
+msgid_plural "remote server reported invalid WAL segment size (%d bytes)"
+msgstr[0] "pg_control指定的WAL段大小(%d 字节)无效; 请小心继续"
+msgstr[1] "pg_control指定的WAL段大小(%d 字节)无效; 请小心继续"
+
+#: streamutil.c:336
+#, fuzzy, c-format
+#| msgid "argument of %s must be a power of two between 1 and 1024"
+msgid "The WAL segment size must be a power of two between 1 MB and 1 GB."
+msgstr "%s 的参数必须是 2 的幂次方（在 1 - 1024 之间）"
 
 #: streamutil.c:378
 #, c-format
@@ -1419,45 +2863,125 @@ msgstr "无法获取组访问标志：得到 %d 行和 %d 列，期望值为: %d
 msgid "group access flag could not be parsed: %s"
 msgstr "不能解析组访问标志: %s"
 
-#: streamutil.c:544
+#: streamutil.c:430 streamutil.c:467
+#, c-format
+msgid "could not identify system: got %d rows and %d fields, expected %d rows and %d or more fields"
+msgstr "无法识别系统: 得到 %d 行和 %d 列, 期望值为: %d 行和 %d 列"
+
+#: streamutil.c:520
+#, fuzzy, c-format
+#| msgid "could not create replication slot \"%s\": got %d rows and %d fields, expected %d rows and %d fields"
+msgid "could not read replication slot \"%s\": got %d rows and %d fields, expected %d rows and %d fields"
+msgstr "无法创建复制槽 \"%s\": 得到%d行%d列, 但期望值为%d行%d列"
+
+#: streamutil.c:532
+#, c-format
+msgid "replication slot \"%s\" does not exist"
+msgstr "复制槽名 \"%s\" 不存在"
+
+#: streamutil.c:543
+#, fuzzy, c-format
+#| msgid "cannot use physical replication slot for logical decoding"
+msgid "expected a physical replication slot, got type \"%s\" instead"
+msgstr "逻辑解码不能使用物理复制槽"
+
+#: streamutil.c:557
+#, fuzzy, c-format
+#| msgid "could not parse start WAL location \"%s\""
+msgid "could not parse restart_lsn \"%s\" for replication slot \"%s\""
+msgstr "无法解析WAL起始位置\"%s\""
+
+#: streamutil.c:683
 #, c-format
 msgid "could not create replication slot \"%s\": got %d rows and %d fields, expected %d rows and %d fields"
 msgstr "无法创建复制槽 \"%s\": 得到%d行%d列, 但期望值为%d行%d列"
 
-#: streamutil.c:588
+#: streamutil.c:727
 #, c-format
 msgid "could not drop replication slot \"%s\": got %d rows and %d fields, expected %d rows and %d fields"
 msgstr "无法删除复制槽 \"%s\": 得到%d行%d列, 但期望值为%d行%d列"
 
-#: walmethods.c:467 walmethods.c:980
+#: walmethods.c:726 walmethods.c:1269
 msgid "could not compress data"
 msgstr "无法压缩数据"
 
-#: walmethods.c:499
+#: walmethods.c:755
 msgid "could not reset compression stream"
 msgstr "无法重置压缩流"
 
-#: walmethods.c:608
-msgid "could not initialize compression library"
-msgstr "无法初始化压缩库"
-
-#: walmethods.c:620
+#: walmethods.c:892
 msgid "implementation error: tar files can't have more than one open file"
 msgstr "实现错误：tar文件不能有多个打开的文件"
 
-#: walmethods.c:634
+#: walmethods.c:907
 msgid "could not create tar header"
 msgstr "无法创建tar头"
 
-#: walmethods.c:650 walmethods.c:692 walmethods.c:895 walmethods.c:907
+#: walmethods.c:924 walmethods.c:965 walmethods.c:1171 walmethods.c:1184
 msgid "could not change compression parameters"
 msgstr "无法更改压缩参数"
 
-#: walmethods.c:782
+#: walmethods.c:1056
 msgid "unlink not supported with compression"
 msgstr "压缩不支持取消链接"
 
-#: walmethods.c:1005
+#: walmethods.c:1293
 msgid "could not close compression stream"
 msgstr "无法关闭压缩流"
 
+#, c-format
+#~ msgid "  -Z, --compress=0-9     compress logs with given compression level\n"
+#~ msgstr "  -Z, --compress=0-9     按给定的压缩级别对日志文件进行压缩\n"
+
+#, c-format
+#~ msgid "  -Z, --compress=0-9     compress tar output with given compression level\n"
+#~ msgstr "  -Z, --compress=0-9     按给定的压缩级别对tar文件进行压缩输出\n"
+
+#, c-format
+#~ msgid "Try \"%s --help\" for more information.\n"
+#~ msgstr "请用 \"%s --help\" 获取更多的信息.\n"
+
+#, c-format
+#~ msgid "WAL segment size must be a power of two between 1 MB and 1 GB, but the remote server reported a value of %d byte"
+#~ msgid_plural "WAL segment size must be a power of two between 1 MB and 1 GB, but the remote server reported a value of %d bytes"
+#~ msgstr[0] "WAL段的大小必须是2的幂次方（在1MB和1GB之间），但是远程服务器报告的值是%d字节"
+#~ msgstr[1] " WAL段的大小必须是2的幂次方（在1MB和1GB之间），但是远程服务器报告的值是%d字节"
+
+#, c-format
+#~ msgid "could not determine seek position in file \"%s\": %s"
+#~ msgstr "无法确定文件 \"%s\"的当前位置: %s"
+
+#, c-format
+#~ msgid "could not get write-ahead log end position from server: %s"
+#~ msgstr "无法得到来自服务器的预写日志终止位置: %s"
+
+#, c-format
+#~ msgid "fatal: "
+#~ msgstr "致命的: "
+
+#, c-format
+#~ msgid "invalid compression level \"%s\""
+#~ msgstr "无效的压缩级别值: \"%s\""
+
+#, c-format
+#~ msgid "invalid fsync interval \"%s\""
+#~ msgstr "无效的fsync同步时间间隔值: \"%s\""
+
+#, c-format
+#~ msgid "invalid port number \"%s\""
+#~ msgstr "无效端口号: \"%s\""
+
+#, c-format
+#~ msgid "invalid status interval \"%s\""
+#~ msgstr "无效的状态间隔值: \"%s\""
+
+#~ msgid "invalid tar block header size: %zu"
+#~ msgstr "无效的tar压缩块头大小: %zu"
+
+#, c-format
+#~ msgid "symlinks are not supported on this platform"
+#~ msgstr "在这个平台上不支持符号链接"
+
+#, c-format
+#~ msgid "unrecognized link indicator \"%c\""
+#~ msgstr "无法识别的链接标识符 \"%c\""

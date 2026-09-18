@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_config (PostgreSQL) 14\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2021-08-14 05:46+0000\n"
+"POT-Creation-Date: 2026-09-17 19:16+0000\n"
 "PO-Revision-Date: 2021-08-15 17:25+0800\n"
 "Last-Translator: Jie Zhang <zhangjie2@fujitsu.com>\n"
 "Language-Team: Chinese (Simplified) <zhangjie2@fujitsu.com>\n"
@@ -23,41 +23,35 @@ msgstr ""
 msgid "not recorded"
 msgstr "没有被记录"
 
-#: ../../common/exec.c:136 ../../common/exec.c:253 ../../common/exec.c:299
-#, c-format
-msgid "could not identify current directory: %m"
-msgstr "无法确认当前目录: %m"
-
-#: ../../common/exec.c:155
-#, c-format
-msgid "invalid binary \"%s\""
+#: ../../common/exec.c:172
+#, fuzzy, c-format
+#| msgid "invalid binary \"%s\""
+msgid "invalid binary \"%s\": %m"
 msgstr "无效的二进制码 \"%s\""
 
-#: ../../common/exec.c:205
-#, c-format
-msgid "could not read binary \"%s\""
+#: ../../common/exec.c:215
+#, fuzzy, c-format
+#| msgid "could not read binary \"%s\""
+msgid "could not read binary \"%s\": %m"
 msgstr "无法读取二进制码 \"%s\""
 
-#: ../../common/exec.c:213
+#: ../../common/exec.c:223
 #, c-format
 msgid "could not find a \"%s\" to execute"
 msgstr "未能找到一个 \"%s\" 来执行"
 
-#: ../../common/exec.c:269 ../../common/exec.c:308
-#, c-format
-msgid "could not change directory to \"%s\": %m"
-msgstr "无法跳转到目录 \"%s\" 中: %m"
+#: ../../common/exec.c:250
+#, fuzzy, c-format
+#| msgid "could not reopen file \"%s\" as stderr: %m"
+msgid "could not resolve path \"%s\" to absolute form: %m"
+msgstr "无法作为标准错误重新打开文件 \"%s\": %m"
 
-#: ../../common/exec.c:286
+#: ../../common/exec.c:412
 #, c-format
-msgid "could not read symbolic link \"%s\": %m"
-msgstr "无法读取符号链接 \"%s\": %m"
-
-#: ../../common/exec.c:409
 msgid "%s() failed: %m"
 msgstr "%s()失败: %m"
 
-#: ../../common/exec.c:522 ../../common/exec.c:567 ../../common/exec.c:659
+#: ../../common/exec.c:550 ../../common/exec.c:595 ../../common/exec.c:687
 msgid "out of memory"
 msgstr "内存不足"
 
@@ -253,3 +247,22 @@ msgstr "%s: 无法找到执行文件\n"
 msgid "%s: invalid argument: %s\n"
 msgstr "%s: 无效参数: %s\n"
 
+#, c-format
+#~ msgid "could not change directory to \"%s\": %m"
+#~ msgstr "无法跳转到目录 \"%s\" 中: %m"
+
+#, c-format
+#~ msgid "could not identify current directory: %m"
+#~ msgstr "无法确认当前目录: %m"
+
+#, c-format
+#~ msgid "could not read binary \"%s\""
+#~ msgstr "无法读取二进制码 \"%s\""
+
+#, c-format
+#~ msgid "could not read symbolic link \"%s\": %m"
+#~ msgstr "无法读取符号链接 \"%s\": %m"
+
+#, c-format
+#~ msgid "invalid binary \"%s\""
+#~ msgstr "无效的二进制码 \"%s\""
