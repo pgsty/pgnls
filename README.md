@@ -78,6 +78,22 @@ Makefile                          the usual operations
 LICENSE                           the PostgreSQL License, verbatim from postgres.git
 ```
 
+## Branches
+
+Each view of the catalogs lives on its own branch:
+
+| Branch | Holds | Sync |
+|:---|:---|:---|
+| `main` | this curated set, exported from the review database | manual |
+| `message` | the raw state of [`pgtranslation/messages.git`](https://git.postgresql.org/git/pgtranslation/messages.git), verbatim | `bin/sync-message.sh` on that branch |
+| `babel` | the aligned view `babel.postgresql.org` serves — the raw catalogs merged against each branch's current POT — as dated snapshots | `bin/sync-babel.sh` on that branch |
+
+The two views differ by design: translations on shared msgids are
+byte-identical, but the aligned view carries the day's msgid sets (new strings
+empty, reworded ones fuzzy-matched, dropped ones as `#~`) while the raw one
+keeps each translator's last word. `zh_TW/` lives on `message` and `babel`
+only; it is not curated here yet.
+
 ## Usage
 
 ```
