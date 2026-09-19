@@ -1,164 +1,147 @@
 # Traditional Chinese message translation file for libpq
-# Copyright (C) 2023 PostgreSQL Global Development Group
-# This file is distributed under the same license as the libpq (PostgreSQL) package.
+# This file is distributed under the same license as the PostgreSQL package.
+#
 # 2004-11-11 Zhenbang Wei <znbang@gmail.com>
+# Ruohang Feng <rh@vonng.com>, 2026.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: libpq (PostgreSQL) 16\n"
+"Project-Id-Version: libpq (PostgreSQL) 18\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
 "POT-Creation-Date: 2026-09-18 04:31+0000\n"
-"PO-Revision-Date: 2023-11-06 08:49+0800\n"
-"Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-09-19 12:00+0800\n"
+"Last-Translator: Ruohang Feng <rh@vonng.com>\n"
+"Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4.1\n"
 
 #: ../libpq-oauth/oauth-curl.c:309 ../libpq-oauth/oauth-curl.c:2012
-#, fuzzy, c-format
-#| msgid "%s: language removal failed: %s"
+#, c-format
 msgid "libcurl easy handle removal failed: %s"
-msgstr "%s: 刪除語言失敗: %s"
+msgstr "移除 libcurl easy handle 失敗: %s"
 
 #: ../libpq-oauth/oauth-curl.c:329
 #, c-format
 msgid "libcurl multi handle cleanup failed: %s"
-msgstr ""
+msgstr "清理 libcurl multi 控制代碼失敗: %s"
 
 # fe-secure.c:264
 #: ../libpq-oauth/oauth-curl.c:395 ../libpq-oauth/oauth-curl.c:406
-#, fuzzy, c-format
-#| msgid "could not establish SSL connection: %s"
+#, c-format
 msgid "failed to set %s on OAuth connection: %s"
-msgstr "無法建立 SSL 連線: %s"
+msgstr "無法在 OAuth 連線上設定 %s: %s"
 
 # postmaster/postmaster.c:1320
 #: ../libpq-oauth/oauth-curl.c:417
-#, fuzzy, c-format
-#| msgid "failed to send SSL negotiation response: %m"
+#, c-format
 msgid "failed to get %s from OAuth response: %s"
-msgstr "傳送SSL交談回應失敗: %m"
+msgstr "無法從 OAuth 回應中取得 %s: %s"
 
 # rewrite/rewriteDefine.c:387
 #: ../libpq-oauth/oauth-curl.c:486 fe-auth-oauth.c:209 fe-auth-oauth.c:271
 #: fe-auth-oauth.c:333
-#, fuzzy, c-format
-#| msgid "view rule for \"%s\" must be named \"%s\""
+#, c-format
 msgid "field \"%s\" must be a string"
-msgstr "\"%s\" 的視圖規則必須名為 \"%s\""
+msgstr "欄位 \"%s\" 必須是字串"
 
 # utils/adt/formatting.c:1425
 #: ../libpq-oauth/oauth-curl.c:490
-#, fuzzy, c-format
-#| msgid "\"%s\" is not a number"
+#, c-format
 msgid "field \"%s\" must be a number"
-msgstr "\"%s\"不是數字"
+msgstr "欄位 \"%s\" 必須是數值"
 
 #: ../libpq-oauth/oauth-curl.c:494
 #, c-format
 msgid "field \"%s\" must be an array of strings"
-msgstr ""
+msgstr "欄位 \"%s\" 必須是字串陣列"
 
 # utils/adt/ruleutils.c:1719
 #: ../libpq-oauth/oauth-curl.c:499
-#, fuzzy, c-format
-#| msgid "rule \"%s\" has unsupported event type %d"
+#, c-format
 msgid "field \"%s\" has unexpected type"
-msgstr "規則 \"%s\" 有不支援的事件型別 %d"
+msgstr "欄位 \"%s\" 具有非預期的型別"
 
 #: ../libpq-oauth/oauth-curl.c:523 ../libpq-oauth/oauth-curl.c:633
 #: fe-auth-oauth.c:215 fe-auth-oauth.c:277
 #, c-format
 msgid "JSON is too deeply nested"
-msgstr ""
+msgstr "JSON 巢狀過深"
 
 # commands/user.c:1396
 #: ../libpq-oauth/oauth-curl.c:575 fe-auth-oauth.c:324
-#, fuzzy, c-format
-#| msgid "Key %s is duplicated."
+#, c-format
 msgid "field \"%s\" is duplicated"
-msgstr "鍵值 %s 重複"
+msgstr "欄位 \"%s\" 重複出現"
 
 #: ../libpq-oauth/oauth-curl.c:615 ../libpq-oauth/oauth-curl.c:675
 #: fe-auth-oauth.c:264 fe-auth-oauth.c:298
 #, c-format
 msgid "top-level element must be an object"
-msgstr ""
+msgstr "頂層元素必須是物件"
 
 # access/common/tupdesc.c:655
 #: ../libpq-oauth/oauth-curl.c:778
-#, fuzzy, c-format
-#| msgid "no column alias was provided"
+#, c-format
 msgid "no content type was provided"
-msgstr "沒有指定欄位別名"
+msgstr "未提供內容型別"
 
 # utils/adt/rowtypes.c:178 utils/adt/rowtypes.c:186
 #: ../libpq-oauth/oauth-curl.c:817
-#, fuzzy, c-format
-#| msgid "unexpected empty file \"%s\""
+#, c-format
 msgid "unexpected content type: \"%s\""
-msgstr "非預期的空檔 \"%s\""
+msgstr "非預期的內容型別: \"%s\""
 
 #: ../libpq-oauth/oauth-curl.c:842
-#, fuzzy, c-format
-#| msgid "SSL certificate's name contains embedded null"
+#, c-format
 msgid "response contains embedded NULLs"
-msgstr "SSL 憑證的名稱包含嵌入的空字符"
+msgstr "回應中包含內嵌的空字元"
 
 # access/hash/hashutil.c:127
 #: ../libpq-oauth/oauth-curl.c:852
-#, fuzzy, c-format
-#| msgid "index \"%s\" is not valid"
+#, c-format
 msgid "response is not valid UTF-8"
-msgstr "索引 \"%s\" 不是有效的"
+msgstr "回應不是有效的 UTF-8"
 
 # utils/init/miscinit.c:885
 #: ../libpq-oauth/oauth-curl.c:892
-#, fuzzy, c-format
-#| msgid "File \"%s\" is missing."
+#, c-format
 msgid "field \"%s\" is missing"
-msgstr "遺失檔案 \"%s\"。"
+msgstr "缺少欄位 \"%s\""
 
 # postmaster/postmaster.c:1320
 #: ../libpq-oauth/oauth-curl.c:1098
-#, fuzzy
-#| msgid "failed to send SSL negotiation response: %m"
 msgid "failed to parse token error response"
-msgstr "傳送SSL交談回應失敗: %m"
+msgstr "無法解析權杖錯誤回應"
 
 #: ../libpq-oauth/oauth-curl.c:1126
 #, c-format
 msgid "provider rejected the oauth_client_secret"
-msgstr ""
+msgstr "提供者已拒絕 oauth_client_secret"
 
 #: ../libpq-oauth/oauth-curl.c:1127
 #, c-format
 msgid "provider requires client authentication, and no oauth_client_secret is set"
-msgstr ""
+msgstr "提供者需要客戶端驗證，但未設定 oauth_client_secret"
 
 #: ../libpq-oauth/oauth-curl.c:1560
-#, fuzzy, c-format
-#| msgid "Checking cluster versions"
+#, c-format
 msgid "checking timer expiration: %m"
-msgstr "檢查叢集版本"
+msgstr "檢查計時器是否到期: %m"
 
 # utils/init/miscinit.c:648
 #: ../libpq-oauth/oauth-curl.c:1722
-#, fuzzy, c-format
-#| msgid "failed to restore old locale \"%s\""
+#, c-format
 msgid "failed to create libcurl multi handle"
-msgstr "無法還原舊的區域設定 \"%s\""
+msgstr "無法建立 libcurl multi 控制代碼"
 
 # utils/init/miscinit.c:648
 #: ../libpq-oauth/oauth-curl.c:1742
-#, fuzzy, c-format
-#| msgid "failed to restore old locale \"%s\""
+#, c-format
 msgid "failed to create libcurl handle"
-msgstr "無法還原舊的區域設定 \"%s\""
+msgstr "無法建立 libcurl 控制代碼"
 
 # commands/sequence.c:798 executor/execGrouping.c:328
 # executor/execGrouping.c:388 executor/nodeIndexscan.c:1051 lib/dllist.c:43
@@ -211,80 +194,72 @@ msgstr "記憶體不足"
 
 # storage/freespace/freespace.c:341
 #: ../libpq-oauth/oauth-curl.c:1854
-#, fuzzy, c-format
-#| msgid "max_fsm_pages is too large"
+#, c-format
 msgid "response is too large"
-msgstr "max_fsm_pages太大"
+msgstr "回應過大"
 
 #: ../libpq-oauth/oauth-curl.c:1896
 #, c-format
 msgid "failed to queue HTTP request: %s"
-msgstr ""
+msgstr "無法將 HTTP 請求加入佇列: %s"
 
 # postmaster/bgwriter.c:555
 #: ../libpq-oauth/oauth-curl.c:1913 ../libpq-oauth/oauth-curl.c:1971
-#, fuzzy, c-format
-#| msgid "checkpoint request failed"
+#, c-format
 msgid "asynchronous HTTP request failed: %s"
-msgstr "檢查點請求失敗"
+msgstr "非同步 HTTP 請求失敗: %s"
 
 #: ../libpq-oauth/oauth-curl.c:2023
 #, c-format
 msgid "no result was retrieved for the finished handle"
-msgstr ""
+msgstr "未取得已完成 handle 的結果"
 
 # utils/adt/rowtypes.c:178 utils/adt/rowtypes.c:186
 #: ../libpq-oauth/oauth-curl.c:2156 ../libpq-oauth/oauth-curl.c:2462
 #: ../libpq-oauth/oauth-curl.c:2541
-#, fuzzy, c-format
-#| msgid "unexpected section code %d"
+#, c-format
 msgid "unexpected response code %ld"
-msgstr "非預期的區段碼 %d"
+msgstr "非預期的回應碼 %ld"
 
 #: ../libpq-oauth/oauth-curl.c:2163
 msgid "failed to parse OpenID discovery document"
-msgstr ""
+msgstr "無法解析 OpenID 發現文件"
 
 # fe-secure.c:580
 #: ../libpq-oauth/oauth-curl.c:2228
-#, fuzzy, c-format
-#| msgid "server certificate for \"%s\" does not match host name \"%s\""
+#, c-format
 msgid "the issuer identifier (%s) does not match oauth_issuer (%s)"
-msgstr "伺服器憑證的名稱 \"%s\" 與主機名稱 \"%s\" 不一致"
+msgstr "簽發者識別字（%s）與 oauth_issuer（%s）不匹配"
 
 #: ../libpq-oauth/oauth-curl.c:2255
 #, c-format
 msgid "issuer \"%s\" does not provide a device authorization endpoint"
-msgstr ""
+msgstr "簽發者 \"%s\" 未提供裝置授權端點"
 
 #: ../libpq-oauth/oauth-curl.c:2281
 #, c-format
 msgid "device authorization endpoint \"%s\" must use HTTPS"
-msgstr ""
+msgstr "裝置授權端點 \"%s\" 必須使用 HTTPS"
 
 #: ../libpq-oauth/oauth-curl.c:2290
 #, c-format
 msgid "token endpoint \"%s\" must use HTTPS"
-msgstr ""
+msgstr "權杖端點 \"%s\" 必須使用 HTTPS"
 
 # utils/init/miscinit.c:403
 #: ../libpq-oauth/oauth-curl.c:2431
-#, fuzzy
-#| msgid "permission denied to set session authorization"
 msgid "failed to parse device authorization"
-msgstr "權限被拒，無法設定階段授權"
+msgstr "無法解析裝置授權"
 
 # postmaster/postmaster.c:1320
 #: ../libpq-oauth/oauth-curl.c:2519
-#, fuzzy
-#| msgid "failed to send SSL negotiation response: %m"
 msgid "failed to parse access token response"
-msgstr "傳送SSL交談回應失敗: %m"
+msgstr "無法解析存取權杖回應"
 
 #: ../libpq-oauth/oauth-curl.c:2596
 #, c-format
 msgid "slow_down interval overflow"
-msgstr ""
+msgstr "slow_down 間隔溢位"
 
 #. translator: The first %s is a URL for the user to visit in a
 #. browser, and the second %s is a code to be copy-pasted there.
@@ -292,22 +267,22 @@ msgstr ""
 #: ../libpq-oauth/oauth-curl.c:2632
 #, c-format
 msgid "Visit %s and enter the code: %s\n"
-msgstr ""
+msgstr "存取 %s 並輸入代碼: %s\n"
 
 #: ../libpq-oauth/oauth-curl.c:2637
 #, c-format
 msgid "device prompt failed"
-msgstr ""
+msgstr "裝置授權提示失敗"
 
 #: ../libpq-oauth/oauth-curl.c:2691
 #, c-format
 msgid "curl_global_init previously failed during OAuth setup"
-msgstr ""
+msgstr "curl_global_init 先前已在 OAuth 設定期間失敗"
 
 #: ../libpq-oauth/oauth-curl.c:2710
 #, c-format
 msgid "curl_global_init failed during OAuth setup"
-msgstr ""
+msgstr "curl_global_init 在 OAuth 設定期間失敗"
 
 #: ../libpq-oauth/oauth-curl.c:2732
 #, c-format
@@ -317,167 +292,158 @@ msgid ""
 "\twas compiled, but the currently installed version of\n"
 "\tlibcurl reports that it is not. Recompile libpq against\n"
 "\tthe installed version of libcurl."
-msgstr ""
+msgstr "libcurl 不再是執行緒安全的\n\t編譯 libpq 時，curl 初始化報告為執行緒安全，\n\t但目前安裝的 libcurl 版本報告\n\t其不具備執行緒安全性。針對已安裝的\n\tlibcurl 版本重新編譯 libpq。"
 
 #: ../libpq-oauth/oauth-curl.c:2910
 msgid "failed to fetch OpenID discovery document"
-msgstr ""
+msgstr "無法取得 OpenID 發現文件"
 
 #  translator: %s represents an SQL statement name
 # access/transam/xact.c:2183
 #: ../libpq-oauth/oauth-curl.c:2924
-#, fuzzy
-#| msgid "%s cannot run inside a subtransaction"
 msgid "cannot run OAuth device authorization"
-msgstr "%s 不能在子交易中執行"
+msgstr "無法執行 OAuth 裝置授權"
 
 # utils/init/miscinit.c:403
 #: ../libpq-oauth/oauth-curl.c:2928
-#, fuzzy
-#| msgid "permission denied to set session authorization"
 msgid "failed to obtain device authorization"
-msgstr "權限被拒，無法設定階段授權"
+msgstr "無法取得裝置授權"
 
 #: ../libpq-oauth/oauth-curl.c:2939 ../libpq-oauth/oauth-curl.c:3007
 msgid "failed to obtain access token"
-msgstr ""
+msgstr "無法取得存取權杖"
 
 #: fe-auth-oauth.c:133
 #, c-format
 msgid "internal error: no OAuth token was set for the connection"
-msgstr ""
+msgstr "內部錯誤: 未為連線設定 OAuth 權杖"
 
 #: fe-auth-oauth.c:396
 #, c-format
 msgid "OAuth discovery URI \"%s\" must use HTTPS"
-msgstr ""
+msgstr "OAuth 探索 URI \"%s\" 必須使用 HTTPS"
 
 #: fe-auth-oauth.c:413
 #, c-format
 msgid "OAuth discovery URI \"%s\" must not contain query or fragment components"
-msgstr ""
+msgstr "OAuth 探索 URI \"%s\" 不得包含查詢或片段部分"
 
 #: fe-auth-oauth.c:428
 #, c-format
 msgid "OAuth discovery URI \"%s\" is not a .well-known URI"
-msgstr ""
+msgstr "OAuth 探索 URI \"%s\" 不是 .well-known URI"
 
 #: fe-auth-oauth.c:454
 #, c-format
 msgid "OAuth discovery URI \"%s\" uses an unsupported .well-known suffix"
-msgstr ""
+msgstr "OAuth 探索 URI \"%s\" 使用不支援的 .well-known 字尾"
 
 #: fe-auth-oauth.c:479
 #, c-format
 msgid "OAuth discovery URI \"%s\" uses an invalid format"
-msgstr ""
+msgstr "OAuth 探索 URI \"%s\" 的格式無效"
 
 #: fe-auth-oauth.c:528
 #, c-format
 msgid "server's error message contained an embedded NULL, and was discarded"
-msgstr ""
+msgstr "伺服器錯誤訊息包含內嵌的 NULL 字元，已被丟棄"
 
 #: fe-auth-oauth.c:539
 #, c-format
 msgid "server's error response is not valid UTF-8"
-msgstr ""
+msgstr "伺服器的錯誤回應不是有效的 UTF-8"
 
 #: fe-auth-oauth.c:579
-#, fuzzy, c-format
-#| msgid "could not parse server version \"%s\""
+#, c-format
 msgid "failed to parse server's error response: %s"
-msgstr "無法解析伺服器版本\"%s\""
+msgstr "無法解析伺服器的錯誤回應: %s"
 
 #: fe-auth-oauth.c:610
 #, c-format
 msgid "server's discovery document at %s (issuer \"%s\") is incompatible with oauth_issuer (%s)"
-msgstr ""
+msgstr "伺服器在 %s 處的探索文件 (簽發者為 \"%s\") 與 oauth_issuer (%s) 不相容"
 
 #: fe-auth-oauth.c:631
 #, c-format
 msgid "server's discovery document has moved to %s (previous location was %s)"
-msgstr ""
+msgstr "伺服器的探索文件已移至 %s (先前位置為 %s)"
 
 #: fe-auth-oauth.c:652
 #, c-format
 msgid "server sent error response without a status"
-msgstr ""
+msgstr "伺服器傳送的錯誤回應未包含狀態"
 
 #: fe-auth-oauth.c:663
-#, fuzzy, c-format
-#| msgid "server requested SASL authentication"
+#, c-format
 msgid "server rejected OAuth bearer token: %s"
-msgstr "伺服器要求SASL身份驗證"
+msgstr "伺服器已拒絕 OAuth 持有者權杖: %s"
 
 #: fe-auth-oauth.c:696
 #, c-format
 msgid "user-defined OAuth flow provided neither a token nor an async callback"
-msgstr ""
+msgstr "使用者定義的 OAuth 流程既未提供權杖，也未提供非同步回呼"
 
 #: fe-auth-oauth.c:703 fe-auth-oauth.c:1041
-#, fuzzy, c-format
-#| msgid "reading user-defined operator families"
+#, c-format
 msgid "user-defined OAuth flow failed"
-msgstr "讀取使用者自定操作符族群"
+msgstr "使用者定義的 OAuth 流程失敗"
 
 #: fe-auth-oauth.c:716
 #, c-format
 msgid "user-defined OAuth flow did not provide a token"
-msgstr ""
+msgstr "使用者定義的 OAuth 流程未提供權杖"
 
 #: fe-auth-oauth.c:734
 #, c-format
 msgid "user-defined OAuth flow did not provide a socket for polling"
-msgstr ""
+msgstr "使用者定義的 OAuth 流程未提供用於輪詢的 socket"
 
 #: fe-auth-oauth.c:917
 #, c-format
 msgid "failed to lock mutex (%d)"
-msgstr ""
+msgstr "無法鎖定互斥鎖定（%d）"
 
 #: fe-auth-oauth.c:1046
 #, c-format
 msgid "no OAuth flows are available (try installing the libpq-oauth package)"
-msgstr ""
+msgstr "沒有可用的 OAuth 流程 (嘗試安裝 libpq-oauth 套件)"
 
 #: fe-auth-oauth.c:1095
 #, c-format
 msgid "server requires OAuth authentication, but oauth_issuer and oauth_client_id are not both set"
-msgstr ""
+msgstr "伺服器需要 OAuth 驗證，但 oauth_issuer 和 oauth_client_id 未同時設定"
 
 #: fe-auth-oauth.c:1255
 #, c-format
 msgid "server sent unexpected additional OAuth data"
-msgstr ""
+msgstr "伺服器已傳送非預期的額外 OAuth 資料"
 
 #: fe-auth-oauth.c:1295
 #, c-format
 msgid "server requires OAuth authentication, but no discovery metadata was provided"
-msgstr ""
+msgstr "伺服器需要 OAuth 驗證，但未提供探索中繼資料"
 
 #: fe-auth-oauth.c:1333
 #, c-format
 msgid "internal error: OAuth flow did not set a token"
-msgstr ""
+msgstr "內部錯誤: OAuth 流程未設定權杖"
 
 #: fe-auth-oauth.c:1351
 #, c-format
 msgid "server sent additional OAuth data after error"
-msgstr ""
+msgstr "伺服器在出錯後已傳送額外的 OAuth 資料"
 
 # tcop/postgres.c:3105
 #: fe-auth-oauth.c:1355
-#, fuzzy, c-format
-#| msgid "invalid SCRAM exchange state"
+#, c-format
 msgid "invalid OAuth exchange state"
-msgstr "SCRAM交換狀態無效"
+msgstr "OAuth 交換狀態無效"
 
 # fe-exec.c:859
 #: fe-auth-oauth.c:1368
-#, fuzzy, c-format
-#| msgid "no connection to the server"
+#, c-format
 msgid "retrying connection with new bearer token"
-msgstr "未連接到伺服器"
+msgstr "正在以新的持有者權杖重試連線"
 
 #: fe-auth-scram.c:228
 #, c-format
@@ -637,25 +603,24 @@ msgstr "需要通道綁定，但客戶端不支援"
 #: fe-auth.c:529
 #, c-format
 msgid "server offered SCRAM-SHA-256-PLUS authentication over a non-SSL connection"
-msgstr "伺服器在非SSL連線提供SCRAM-SHA-256-PLUS身份驗證"
+msgstr "伺服器在非SSL連線提供SCRAM-SHA-256-PLUS身分驗證"
 
 # fe-auth.c:608
 #: fe-auth.c:551
 #, c-format
 msgid "none of the server's SASL authentication mechanisms are supported"
-msgstr "沒有支援伺服器的任何SASL身份驗證機制"
+msgstr "沒有支援伺服器的任何SASL身分驗證機制"
 
 # fe-auth.c:655
 #: fe-auth.c:571
-#, fuzzy, c-format
-#| msgid "authentication method requirement \"%s\" failed: %s"
+#, c-format
 msgid "authentication method requirement \"%s\" failed: server requested %s authentication"
-msgstr "身份驗證方法需求\"%s\"失敗: %s"
+msgstr "驗證方法要求 \"%s\" 失敗: 伺服器要求 %s 驗證"
 
 #: fe-auth.c:580
 #, c-format
 msgid "channel binding is required, but server did not offer an authentication method that supports channel binding"
-msgstr "需要通道綁定，但伺服器未提供支援通道綁定的身份驗證方法"
+msgstr "需要通道綁定，但伺服器未提供支援通道綁定的身分驗證方法"
 
 #: fe-auth.c:716
 #, c-format
@@ -666,7 +631,7 @@ msgstr "配置SASL緩衝區時記憶體不足(%d)"
 #: fe-auth.c:758
 #, c-format
 msgid "AuthenticationSASLFinal received from server, but SASL authentication was not completed"
-msgstr "從伺服器收到AuthenticationSASLFinal，但SASL身份驗證未完成"
+msgstr "從伺服器收到AuthenticationSASLFinal，但SASL身分驗證未完成"
 
 #: fe-auth.c:768
 #, c-format
@@ -688,19 +653,19 @@ msgstr "伺服器要求密碼雜湊"
 
 #: fe-auth.c:878
 msgid "server requested GSSAPI authentication"
-msgstr "伺服器要求GSSAPI身份驗證"
+msgstr "伺服器要求GSSAPI身分驗證"
 
 #: fe-auth.c:880
 msgid "server requested SSPI authentication"
-msgstr "伺服器要求SSPI身份驗證"
+msgstr "伺服器要求SSPI身分驗證"
 
 #: fe-auth.c:884
 msgid "server requested SASL authentication"
-msgstr "伺服器要求SASL身份驗證"
+msgstr "伺服器要求SASL身分驗證"
 
 #: fe-auth.c:887
 msgid "server requested an unknown authentication type"
-msgstr "伺服器要求未知的身份驗證類型"
+msgstr "伺服器要求未知的身分驗證型別"
 
 #: fe-auth.c:920
 #, c-format
@@ -714,79 +679,77 @@ msgstr "伺服器接受一個沒有有效SSL憑證的連線"
 
 #: fe-auth.c:979
 msgid "server did not complete authentication"
-msgstr "伺服器未完成身份驗證"
+msgstr "伺服器未完成身分驗證"
 
 # fe-auth.c:655
 #: fe-auth.c:1013
 #, c-format
 msgid "authentication method requirement \"%s\" failed: %s"
-msgstr "身份驗證方法需求\"%s\"失敗: %s"
+msgstr "身分驗證方法需求 \"%s\" 失敗: %s"
 
 #: fe-auth.c:1036
 #, c-format
 msgid "channel binding required, but server authenticated client without channel binding"
-msgstr "需要通道綁定，但伺服器在未進行通道綁定的情況下對客戶端進行了身份驗證"
+msgstr "需要通道綁定，但伺服器在未進行通道綁定的情況下對客戶端進行了身分驗證"
 
 #: fe-auth.c:1041
 #, c-format
 msgid "channel binding required but not supported by server's authentication request"
-msgstr "需要通道綁定，但伺服器的身份驗證請求不支援此功能"
+msgstr "需要通道綁定，但伺服器的身分驗證請求不支援此功能"
 
 # fe-auth.c:608
 #: fe-auth.c:1081
 #, c-format
 msgid "Kerberos 4 authentication not supported"
-msgstr "不支援Kerberos 4身份驗證"
+msgstr "不支援Kerberos 4身分驗證"
 
 # fe-auth.c:627
 #: fe-auth.c:1085
 #, c-format
 msgid "Kerberos 5 authentication not supported"
-msgstr "不支援Kerberos 5身份驗證"
+msgstr "不支援Kerberos 5身分驗證"
 
 # fe-auth.c:608
 #: fe-auth.c:1155
 #, c-format
 msgid "GSSAPI authentication not supported"
-msgstr "不支援GSSAPI身份驗證"
+msgstr "不支援GSSAPI身分驗證"
 
 # fe-auth.c:608
 #: fe-auth.c:1186
 #, c-format
 msgid "SSPI authentication not supported"
-msgstr "不支援SSPI身份驗證"
+msgstr "不支援SSPI身分驗證"
 
 # fe-auth.c:608
 #: fe-auth.c:1193
 #, c-format
 msgid "Crypt authentication not supported"
-msgstr "不支援Crypt身份驗證"
+msgstr "不支援Crypt身分驗證"
 
 # fe-auth.c:655
 #: fe-auth.c:1267
 #, c-format
 msgid "authentication method %u not supported"
-msgstr "不支援身份驗證方法 %u"
+msgstr "不支援身分驗證方法 %u"
 
 # port/win32/security.c:39
 #: fe-auth.c:1307
 #, c-format
 msgid "user name lookup failure: error code %lu"
-msgstr "使用者名稱查找失敗: 錯誤碼 %lu"
+msgstr "使用者名稱尋找失敗: 錯誤碼 %lu"
 
 # utils/fmgr/dfmgr.c:145
 #: fe-auth.c:1315
-#, fuzzy, c-format
-#| msgid "could not look up local user ID %d: %s"
+#, c-format
 msgid "could not look up local user ID %ld: %m"
-msgstr "無法查詢本地使用者ID %d: %s"
+msgstr "無法查詢本機使用者 ID %ld: %m"
 
 # libpq/hba.c:1481 libpq/hba.c:1512 libpq/hba.c:1582
 #: fe-auth.c:1320
-#, fuzzy, c-format
-#| msgid "local user with ID %d does not exist"
+#, c-format
 msgid "local user with ID %ld does not exist"
-msgstr "本地使用者ID %d 不存在"
+msgstr "ID 為 %ld 的本機使用者不存在"
 
 #: fe-auth.c:1439
 #, c-format
@@ -794,10 +757,9 @@ msgid "unexpected shape of result set returned for SHOW"
 msgstr "SHOW 回傳的結果集格式與預期不符"
 
 #: fe-auth.c:1447
-#, fuzzy, c-format
-#| msgid "password_encryption value too long"
+#, c-format
 msgid "\"password_encryption\" value too long"
-msgstr "password_encryption值過長"
+msgstr "\"password_encryption\" 值過長"
 
 # access/transam/xlog.c:3720
 #: fe-auth.c:1497
@@ -807,10 +769,9 @@ msgstr "無法識別的密碼加密演算法 \"%s\""
 
 # fe-connect.c:2897
 #: fe-cancel.c:79
-#, fuzzy, c-format
-#| msgid "connection pointer is NULL\n"
+#, c-format
 msgid "connection pointer is NULL"
-msgstr "連線指標是 NULL\n"
+msgstr "連線指標是 NULL"
 
 # fe-misc.c:544
 # fe-misc.c:748
@@ -822,18 +783,17 @@ msgstr "連線未開啟"
 #: fe-cancel.c:92
 #, c-format
 msgid "no cancellation key received"
-msgstr ""
+msgstr "未收到取消金鑰"
 
 #: fe-cancel.c:212
 #, c-format
 msgid "cancel request is already being sent on this connection"
-msgstr ""
+msgstr "此連線上已有取消請求正在傳送"
 
 #: fe-cancel.c:282
-#, fuzzy, c-format
-#| msgid "unexpected result set from query"
+#, c-format
 msgid "unexpected response from server"
-msgstr "查詢出現非預期的結果集"
+msgstr "來自伺服器的非預期回應"
 
 # fe-connect.c:946
 #: fe-connect.c:1309
@@ -849,12 +809,12 @@ msgstr "無法將 %d 連接埠對應到 %d 主機"
 #: fe-connect.c:1517
 #, c-format
 msgid "negative require_auth method \"%s\" cannot be mixed with non-negative methods"
-msgstr ""
+msgstr "帶否定字首的 require_auth 方法 \"%s\" 無法與不帶否定字首的方法混用"
 
 #: fe-connect.c:1530
 #, c-format
 msgid "require_auth method \"%s\" cannot be mixed with negative methods"
-msgstr ""
+msgstr "不帶否定字首的 require_auth 方法 \"%s\" 無法與帶否定字首的方法混用"
 
 # utils/adt/network.c:105
 #: fe-connect.c:1606 fe-connect.c:1735 fe-connect.c:1777 fe-connect.c:1820
@@ -867,13 +827,13 @@ msgstr "無效的 %s 值: %s"
 #: fe-connect.c:1648
 #, c-format
 msgid "internal error: no space in allowed_sasl_mechs"
-msgstr ""
+msgstr "內部錯誤: allowed_sasl_mechs 中無剩餘空間"
 
 # commands/copy.c:2716 parser/parse_target.c:648 parser/parse_target.c:658
 #: fe-connect.c:1687
 #, c-format
 msgid "require_auth method \"%s\" is specified more than once"
-msgstr "require_auth方式\"%s\"被多次指定"
+msgstr "require_auth方式 \"%s\" 被多次指定"
 
 # fe-connect.c:472
 #: fe-connect.c:1758 fe-connect.c:1797 fe-connect.c:1829 fe-connect.c:1931
@@ -882,22 +842,20 @@ msgid "%s value \"%s\" invalid when SSL support is not compiled in"
 msgstr "編譯未加上SSL支援時，%s 值 \"%s\" 無效"
 
 #: fe-connect.c:1849
-#, fuzzy, c-format
-#| msgid "weak sslmode \"%s\" may not be used with sslrootcert=system (use \"verify-full\")"
+#, c-format
 msgid "weak sslmode \"%s\" may not be used with sslnegotiation=direct (use \"require\", \"verify-ca\", or \"verify-full\")"
-msgstr "弱SSL模式\"%s\"不能與sslrootcert=system一起使用(用\"verify-full\")"
+msgstr "安全性較弱的 sslmode \"%s\" 不得與 sslnegotiation=direct 一起使用 (使用 \"require\"、\"verify-ca\" 或 \"verify-full\")"
 
 #: fe-connect.c:1871
 #, c-format
 msgid "weak sslmode \"%s\" may not be used with sslrootcert=system (use \"verify-full\")"
-msgstr "弱SSL模式\"%s\"不能與sslrootcert=system一起使用(用\"verify-full\")"
+msgstr "弱SSL模式 \"%s\" 不能與sslrootcert=system一起使用(用 \"verify-full\")"
 
 # utils/adt/network.c:105
 #: fe-connect.c:1884 fe-connect.c:1892
-#, fuzzy, c-format
-#| msgid "invalid %s value: \"%s\""
+#, c-format
 msgid "invalid \"%s\" value: \"%s\""
-msgstr "無效的 %s 值: %s"
+msgstr "無效的 \"%s\" 值: \"%s\""
 
 #: fe-connect.c:1909
 #, c-format
@@ -909,48 +867,43 @@ msgstr "SSL協議版本範圍無效"
 #: fe-connect.c:1946
 #, c-format
 msgid "%s value \"%s\" is not supported (check OpenSSL version)"
-msgstr "不支援%s值\"%s\"(請檢查OpenSSL版本)"
+msgstr "不支援%s值 \"%s\"(請檢查OpenSSL版本)"
 
 # fe-connect.c:472
 #: fe-connect.c:1976
 #, c-format
 msgid "gssencmode value \"%s\" invalid when GSSAPI support is not compiled in"
-msgstr "編譯未加上GSSAPI支援時，gssencmode值\"%s\"無效"
+msgstr "編譯未加上GSSAPI支援時，gssencmode值 \"%s\" 無效"
 
 # tcop/postgres.c:3105
 #: fe-connect.c:2030
-#, fuzzy, c-format
-#| msgid "invalid SCRAM exchange state"
+#, c-format
 msgid "invalid SCRAM client key"
-msgstr "SCRAM交換狀態無效"
+msgstr "無效的 SCRAM 客戶端金鑰"
 
 # utils/adt/network.c:319
 #: fe-connect.c:2035
-#, fuzzy, c-format
-#| msgid "invalid mask length: %d"
+#, c-format
 msgid "invalid SCRAM client key length: %d"
-msgstr "無效的mask長度: %d"
+msgstr "SCRAM 客戶端金鑰長度無效: %d"
 
 # tcop/postgres.c:3105
 #: fe-connect.c:2053
-#, fuzzy, c-format
-#| msgid "invalid SCRAM exchange state"
+#, c-format
 msgid "invalid SCRAM server key"
-msgstr "SCRAM交換狀態無效"
+msgstr "無效的 SCRAM 伺服器金鑰"
 
 # utils/adt/network.c:319
 #: fe-connect.c:2058
-#, fuzzy, c-format
-#| msgid "invalid mask length: %d"
+#, c-format
 msgid "invalid SCRAM server key length: %d"
-msgstr "無效的mask長度: %d"
+msgstr "SCRAM 伺服器金鑰長度無效: %d"
 
 # commands/cluster.c:326
 #: fe-connect.c:2145
-#, fuzzy, c-format
-#| msgid "\"%s\" is not an index for table \"%s\""
+#, c-format
 msgid "\"%s\" is greater than \"%s\""
-msgstr "\"%s\"不是資料表\"%s\"的索引"
+msgstr "\"%s\" 大於 \"%s\""
 
 # fe-connect.c:810
 #: fe-connect.c:2357
@@ -1024,7 +977,7 @@ msgstr "無法解析網路位址 \"%s\": %s"
 #: fe-connect.c:3083
 #, c-format
 msgid "Unix-domain socket path \"%s\" is too long (maximum %d bytes)"
-msgstr "Unix-domain socket路徑\"%s\"太長(最多 %d 個位元組)"
+msgstr "Unix-domain socket路徑 \"%s\" 太長(最多 %d 個位元組)"
 
 # fe-connect.c:950
 #: fe-connect.c:3097
@@ -1033,15 +986,14 @@ msgid "could not translate Unix-domain socket path \"%s\" to address: %s"
 msgstr "無法將Unix-domain socket 路徑 \"%s\" 轉譯成位址: %s"
 
 #: fe-connect.c:3263 fe-connect.c:4710
-#, fuzzy, c-format
-#| msgid "GSSAPI encryption required but was impossible (possibly no credential cache, no server support, or using a local socket)"
+#, c-format
 msgid "GSSAPI encryption required but it is not supported over a local socket"
-msgstr "需要GSSAPI加密但無法達成(可能沒有憑證快取、沒有伺服器支援或使用本機socket)"
+msgstr "需要 GSSAPI 加密，但本機 socket 不支援"
 
 #: fe-connect.c:3271 fe-connect.c:4839
 #, c-format
 msgid "GSSAPI encryption required but no credential cache"
-msgstr ""
+msgstr "需要 GSSAPI 加密，但沒有認證快取"
 
 # fe-connect.c:1197
 #: fe-connect.c:3339
@@ -1088,7 +1040,7 @@ msgstr "無法取得對等憑證: %s"
 #: fe-connect.c:3606
 #, c-format
 msgid "requirepeer specifies \"%s\", but actual peer user name is \"%s\""
-msgstr "requirepeer指定為\"%s\"，但實際對等使用者名稱是\"%s\""
+msgstr "requirepeer指定為 \"%s\"，但實際對等使用者名稱是 \"%s\""
 
 # fe-connect.c:1392
 #: fe-connect.c:3644
@@ -1103,10 +1055,9 @@ msgid "could not send SSL negotiation packet: %s"
 msgstr "無法傳送SSL協商封包: %s"
 
 #: fe-connect.c:3709
-#, fuzzy, c-format
-#| msgid "could not send copy-end packet: %s"
+#, c-format
 msgid "could not send cancel packet: %s"
-msgstr "無法傳送 copy-end 封包: %s"
+msgstr "無法傳送取消封包: %s"
 
 # fe-connect.c:1427
 #: fe-connect.c:3739
@@ -1123,7 +1074,7 @@ msgstr "伺服器不支援 SSL，但 SSL 是必要的"
 #: fe-connect.c:3822
 #, c-format
 msgid "server sent an error response during SSL exchange"
-msgstr ""
+msgstr "伺服器在 SSL 交換期間已傳送錯誤回應"
 
 # fe-connect.c:1519
 #: fe-connect.c:3827
@@ -1139,7 +1090,7 @@ msgstr "在SSL回應後收到未加密的資料"
 #: fe-connect.c:3910
 #, c-format
 msgid "server sent an error response during GSS encryption exchange"
-msgstr ""
+msgstr "伺服器在 GSS 加密交換期間已傳送錯誤回應"
 
 # fe-connect.c:1486
 # fe-connect.c:1503
@@ -1163,12 +1114,12 @@ msgstr "在GSSAPI加密回應後收到未加密的資料"
 #: fe-connect.c:4015
 #, c-format
 msgid "expected authentication request from server, but received %c"
-msgstr "預期從伺服器收到身份驗證請求，但收到%c"
+msgstr "預期從伺服器收到身分驗證請求，但收到%c"
 
 #: fe-connect.c:4043 fe-connect.c:4175
 #, c-format
 msgid "received invalid authentication request"
-msgstr "收到無效的身份驗證請求"
+msgstr "收到無效的身分驗證請求"
 
 # fe-connect.c:1519
 #: fe-connect.c:4049
@@ -1184,25 +1135,24 @@ msgstr "收到無效的錯誤訊息"
 
 # fe-connect.c:1519
 #: fe-connect.c:4152
-#, fuzzy, c-format
-#| msgid "received invalid protocol negotiation message"
+#, c-format
 msgid "received duplicate protocol negotiation message"
-msgstr "收到無效的協定協商訊息"
+msgstr "收到重複的協定協商訊息"
 
 #: fe-connect.c:4254
 #, c-format
 msgid "internal error: async authentication has no handler"
-msgstr ""
+msgstr "內部錯誤: 非同步驗證沒有處理器"
 
 #: fe-connect.c:4279
 #, c-format
 msgid "internal error: async cleanup did not release polling socket"
-msgstr ""
+msgstr "內部錯誤: 非同步清理未釋放輪詢 socket"
 
 #: fe-connect.c:4302
 #, c-format
 msgid "internal error: async authentication did not set a socket for polling"
-msgstr ""
+msgstr "內部錯誤: 非同步驗證未設定用於輪詢的 socket"
 
 # fe-connect.c:1844
 #: fe-connect.c:4335
@@ -1235,7 +1185,7 @@ msgstr "伺服器未處於熱備援模式"
 #: fe-connect.c:4608 fe-connect.c:4658
 #, c-format
 msgid "\"%s\" failed"
-msgstr "\"%s\"失敗"
+msgstr "\"%s\" 失敗"
 
 # fe-connect.c:1914
 #: fe-connect.c:4672
@@ -1282,35 +1232,34 @@ msgstr "無法建立LDAP結構"
 #: fe-connect.c:5694
 #, c-format
 msgid "lookup on LDAP server failed: %s"
-msgstr "在LDAP伺服器上查找失敗: %s"
+msgstr "在 LDAP 伺服器上查詢失敗: %s"
 
 #: fe-connect.c:5704
 #, c-format
 msgid "more than one entry found on LDAP lookup"
-msgstr "LDAP 查找時找到多個項目"
+msgstr "LDAP 查詢時找到多個項目"
 
 #: fe-connect.c:5706 fe-connect.c:5717
 #, c-format
 msgid "no entry found on LDAP lookup"
-msgstr "LDAP 查找時找不到項目"
+msgstr "LDAP 查詢時找不到項目"
 
 #: fe-connect.c:5727 fe-connect.c:5739
 #, c-format
 msgid "attribute has no values on LDAP lookup"
-msgstr "LDAP 查找時屬性沒有值"
+msgstr "LDAP 查詢時屬性沒有值"
 
 # access/nbtree/nbtinsert.c:404 access/nbtree/nbtsort.c:499
 #: fe-connect.c:5753
-#, fuzzy, c-format
-#| msgid "array size exceeds the maximum allowed (%d)"
+#, c-format
 msgid "connection info string size exceeds the maximum allowed (%d)"
-msgstr "陣列大小超過允許的最大值 (%d)"
+msgstr "連接資訊字串大小超過允許的最大值 (%d)"
 
 # fe-connect.c:2592
 #: fe-connect.c:5804 fe-connect.c:5823 fe-connect.c:6347
 #, c-format
 msgid "missing \"=\" after \"%s\" in connection info string"
-msgstr "連線字串裡的 \"%s\" 後面缺少 \"=\""
+msgstr "連接字串裡的 \"%s\" 後面缺少 \"=\""
 
 # fe-connect.c:2675
 #: fe-connect.c:5894 fe-connect.c:6530 fe-connect.c:7360
@@ -1401,7 +1350,7 @@ msgstr "百分比編碼值中禁止使用 %%00: \"%s\""
 #: fe-connect.c:7265
 #, c-format
 msgid "unexpected spaces found in \"%s\", use percent-encoded spaces (%%20) instead"
-msgstr ""
+msgstr "在 \"%s\" 中發現非預期空格，改用百分號編碼的空格 (%%20)"
 
 # fe-connect.c:2897
 #: fe-connect.c:7641
@@ -1553,10 +1502,9 @@ msgid "PQexec not allowed during COPY BOTH"
 msgstr "COPY BOTH 過程中不允許 PQexec"
 
 #: fe-exec.c:2647
-#, fuzzy, c-format
-#| msgid "unrecognized privilege type \"%s\""
+#, c-format
 msgid "unrecognized message type \"%c\""
-msgstr "無法辨識的權限型別 \"%s\""
+msgstr "無法識別的訊息型別 \"%c\""
 
 # fe-exec.c:1469
 # fe-exec.c:1534
@@ -1583,17 +1531,17 @@ msgstr "無法進入管道模式，連線未處於閒置狀態"
 #: fe-exec.c:3120 fe-exec.c:3141
 #, c-format
 msgid "cannot exit pipeline mode with uncollected results"
-msgstr "無法退出管道模式，尚有未收集的結果"
+msgstr "無法結束管道模式，尚有未收集的結果"
 
 #: fe-exec.c:3124
 #, c-format
 msgid "cannot exit pipeline mode while busy"
-msgstr "忙碌時無法退出管道模式"
+msgstr "忙碌時無法結束管道模式"
 
 #: fe-exec.c:3135
 #, c-format
 msgid "cannot exit pipeline mode while in COPY"
-msgstr "進行 COPY 時無法退出管道模式"
+msgstr "進行 COPY 時無法結束管道模式"
 
 #: fe-exec.c:3334
 #, c-format
@@ -1637,24 +1585,21 @@ msgstr "不完整的多位元組字元"
 
 # utils/adt/oracle_compat.c:99 utils/adt/oracle_compat.c:138
 #: fe-exec.c:4174 fe-exec.c:4305
-#, fuzzy, c-format
-#| msgid "invalid multibyte character for locale"
+#, c-format
 msgid "invalid multibyte character"
-msgstr "區域的多位元組字元無效"
+msgstr "無效的多位元組字元"
 
 # access/nbtree/nbtinsert.c:404 access/nbtree/nbtsort.c:499
 #: fe-exec.c:4407
-#, fuzzy, c-format
-#| msgid "array size exceeds the maximum allowed (%d)"
+#, c-format
 msgid "escaped string size exceeds the maximum allowed (%zu)"
-msgstr "陣列大小超過允許的最大值 (%d)"
+msgstr "逸出後字串大小超過允許的最大值 (%zu)"
 
 # access/nbtree/nbtinsert.c:404 access/nbtree/nbtsort.c:499
 #: fe-exec.c:4584
-#, fuzzy, c-format
-#| msgid "array size exceeds the maximum allowed (%d)"
+#, c-format
 msgid "escaped bytea size exceeds the maximum allowed (%zu)"
-msgstr "陣列大小超過允許的最大值 (%d)"
+msgstr "逸出後 bytea 大小超過允許的最大值 (%zu)"
 
 #: fe-gssapi-common.c:122
 msgid "GSSAPI name import error"
@@ -1740,7 +1685,7 @@ msgstr ""
 #: fe-misc.c:942
 #, c-format
 msgid "drained only %zd of %zd pending bytes in transport buffer"
-msgstr ""
+msgstr "傳輸緩衝區中待處理的 %2$zd 位元組僅排出 %1$zd 位元組"
 
 # fe-misc.c:544
 # fe-misc.c:748
@@ -1771,7 +1716,7 @@ msgstr "%s() 失敗: %s"
 #: fe-protocol3.c:192
 #, c-format
 msgid "message type 0x%02x arrived from server while idle"
-msgstr "閒置時收到伺服器送來類型為 0x%02x 的訊息"
+msgstr "閒置時收到伺服器送來型別為 0x%02x 的訊息"
 
 # fe-protocol2.c:517
 #: fe-protocol3.c:405
@@ -1790,13 +1735,13 @@ msgstr "非預期的伺服器回應，第一個收到的字元是 \"%c\""
 #: fe-protocol3.c:471
 #, c-format
 msgid "message contents do not agree with length in message type \"%c\""
-msgstr "訊息內容與訊息類型 \"%c\" 中的長度不一致"
+msgstr "訊息內容與訊息型別 \"%c\" 中的長度不一致"
 
 # fe-protocol3.c:386
 #: fe-protocol3.c:506
 #, c-format
 msgid "lost synchronization with server: got message type \"%c\", length %d"
-msgstr "與伺服器失去同步: 收到訊息類型 \"%c\"，長度 %d"
+msgstr "與伺服器失去同步: 收到訊息型別 \"%c\"，長度 %d"
 
 # libpq/pqformat.c:591 libpq/pqformat.c:609 libpq/pqformat.c:630
 # utils/adt/arrayfuncs.c:1277 utils/adt/rowtypes.c:523
@@ -1918,73 +1863,68 @@ msgstr "行 %d: "
 
 # fe-connect.c:1519
 #: fe-protocol3.c:1458
-#, fuzzy, c-format
-#| msgid "received invalid protocol negotiation message"
+#, c-format
 msgid "received invalid protocol negotiation message: server requested downgrade to a higher-numbered version"
-msgstr "收到無效的協定協商訊息"
+msgstr "收到無效的協定協商訊息: 伺服器要求降級至編號更高的版本"
 
 # fe-connect.c:1519
 #: fe-protocol3.c:1464
-#, fuzzy, c-format
-#| msgid "received invalid protocol negotiation message"
+#, c-format
 msgid "received invalid protocol negotiation message: server requested downgrade to pre-3.0 protocol version"
-msgstr "收到無效的協定協商訊息"
+msgstr "收到無效的協定協商訊息: 伺服器要求降級至 3.0 之前的協定版本"
 
 #: fe-protocol3.c:1471
 #, c-format
 msgid "received invalid protocol negotiation message: server requested downgrade to non-existent 3.1 protocol version"
-msgstr ""
+msgstr "收到無效的協定協商訊息: 伺服器要求降級至不存在的協定版本 3.1"
 
 # fe-connect.c:1519
 #: fe-protocol3.c:1477
-#, fuzzy, c-format
-#| msgid "received invalid protocol negotiation message"
+#, c-format
 msgid "received invalid protocol negotiation message: server reported negative number of unsupported parameters"
-msgstr "收到無效的協定協商訊息"
+msgstr "收到無效的協定協商訊息: 伺服器報告的不支援參數數量為負數"
 
 # fe-connect.c:1519
 #: fe-protocol3.c:1483
-#, fuzzy, c-format
-#| msgid "received invalid protocol negotiation message"
+#, c-format
 msgid "received invalid protocol negotiation message: server negotiated but asks for no changes"
-msgstr "收到無效的協定協商訊息"
+msgstr "收到無效的協定協商訊息: 伺服器已進行協商，卻未要求任何變更"
 
 #: fe-protocol3.c:1489
 #, c-format
 msgid "server only supports protocol version %d.%d, but \"%s\" was set to %d.%d"
-msgstr ""
+msgstr "伺服器僅支援協定版本 %d.%d，但 \"%s\" 已設定為 %d.%d"
 
 #: fe-protocol3.c:1514
 #, c-format
 msgid "received invalid protocol negotiation message: server reported unsupported parameter name without a \"%s\" prefix (\"%s\")"
-msgstr ""
+msgstr "收到無效的協定協商訊息: 伺服器報告的不支援參數名沒有 \"%s\" 字首 (\"%s\")"
 
 #: fe-protocol3.c:1517
 #, c-format
 msgid "received invalid protocol negotiation message: server reported an unsupported parameter that was not requested (\"%s\")"
-msgstr ""
+msgstr "收到無效的協定協商訊息: 伺服器報告未曾請求的不支援參數 (\"%s\")"
 
 # fe-connect.c:1519
 #: fe-protocol3.c:1524
-#, fuzzy, c-format
-#| msgid "received invalid protocol negotiation message"
+#, c-format
 msgid "received invalid protocol negotiation message: message too short"
-msgstr "收到無效的協定協商訊息"
+msgstr "收到無效的協定協商訊息: 訊息過短"
 
 #: fe-protocol3.c:1590
 #, c-format
 msgid "received invalid BackendKeyData message: cancel key with length %d not allowed in protocol version 3.0 (must be 4 bytes)"
-msgstr ""
+msgstr "收到無效的 BackendKeyData 訊息: 協定版本 3.0 不允許長度為 %d 的取消金鑰 (必須為 4 位元組)"
 
 #: fe-protocol3.c:1597
 #, c-format
 msgid "received invalid BackendKeyData message: cancel key with length %d is too short (minimum 4 bytes)"
-msgstr ""
+msgstr "收到無效的 BackendKeyData 訊息: 長度為 %d 的取消金鑰過短 (最少為 4 位元組)"
 
 #: fe-protocol3.c:1604
 #, c-format
 msgid "received invalid BackendKeyData message: cancel key with length %d is too long (maximum 256 bytes)"
-msgstr ""
+msgstr "收到無效的 BackendKeyData 訊息: 長度為 %d 的取消金鑰過長 (最多為 256 位元組)"
 
 # fe-protocol3.c:1000
 #: fe-protocol3.c:1975
@@ -1995,7 +1935,7 @@ msgstr "PQgetline: 不執行文字 COPY OUT"
 #: fe-protocol3.c:2306
 #, c-format
 msgid "server returned too much data"
-msgstr ""
+msgstr "伺服器已回傳過多的資料"
 
 #: fe-protocol3.c:2361
 #, c-format
@@ -2013,7 +1953,7 @@ msgstr "通訊協定錯誤: ID=0x%x"
 #: fe-secure-common.c:123
 #, c-format
 msgid "SSL certificate's name contains embedded null"
-msgstr "SSL 憑證的名稱包含嵌入的空字符"
+msgstr "SSL 憑證的名稱包含嵌入的空字元"
 
 #: fe-secure-common.c:228
 #, c-format
@@ -2123,12 +2063,12 @@ msgstr "無法識別的 SSL 錯誤碼: %d"
 #: fe-secure-openssl.c:251
 #, c-format
 msgid "OpenSSL reports negative bytes pending"
-msgstr ""
+msgstr "OpenSSL 報告的待處理位元組數為負數"
 
 #: fe-secure-openssl.c:263
 #, c-format
 msgid "OpenSSL reports INT_MAX bytes pending"
-msgstr ""
+msgstr "OpenSSL 報告的待處理位元組數為 INT_MAX"
 
 # libpq/be-secure.c:659
 #: fe-secure-openssl.c:399
@@ -2145,7 +2085,7 @@ msgstr "找不到 NID %s 的摘要"
 #: fe-secure-openssl.c:428
 #, c-format
 msgid "could not generate peer certificate hash"
-msgstr "無法生成對等憑證的雜湊值"
+msgstr "無法產生對等憑證的雜湊值"
 
 #: fe-secure-openssl.c:511
 #, c-format
@@ -2159,16 +2099,14 @@ msgstr "SSL 憑證缺少位址項目"
 
 # command.c:1148
 #: fe-secure-openssl.c:747
-#, fuzzy, c-format
-#| msgid "%s: could not open log file \"%s\": %s\n"
+#, c-format
 msgid "WARNING: could not open SSL key logging file \"%s\": %m\n"
-msgstr "%s: 無法開啟日誌檔 \"%s\": %s\n"
+msgstr "警告: 無法開啟 SSL 金鑰記錄檔 \"%s\": %m\n"
 
 #: fe-secure-openssl.c:755
-#, fuzzy, c-format
-#| msgid "could not write to log file \"%s\": %m"
+#, c-format
 msgid "WARNING: could not write to SSL key logging file \"%s\": %m\n"
-msgstr "無法寫入記錄檔 \"%s\": %m"
+msgstr "警告: 無法寫入 SSL 金鑰記錄檔 \"%s\": %m\n"
 
 # libpq/be-secure.c:649
 #: fe-secure-openssl.c:808
@@ -2251,12 +2189,12 @@ msgstr "無法建立 SSL 連線: %s"
 #: fe-secure-openssl.c:1090
 #, c-format
 msgid "WARNING: sslkeylogfile support requires OpenSSL\n"
-msgstr ""
+msgstr "警告: sslkeylogfile 支援需要 OpenSSL\n"
 
 #: fe-secure-openssl.c:1092
 #, c-format
 msgid "WARNING: libpq was not built with sslkeylogfile support\n"
-msgstr ""
+msgstr "警告: 建置 libpq 時未啟用 sslkeylogfile 支援\n"
 
 # libpq/be-secure.c:807
 #: fe-secure-openssl.c:1122
@@ -2266,10 +2204,9 @@ msgstr "無法設定 SSL Server Name Indication (SNI): %s"
 
 # libpq/be-secure.c:798
 #: fe-secure-openssl.c:1139
-#, fuzzy, c-format
-#| msgid "could not set SSL socket: %s"
+#, c-format
 msgid "could not set SSL ALPN extension: %s"
-msgstr "無法設定SSL socket: %s"
+msgstr "無法設定 SSL ALPN 延伸: %s"
 
 # fe-lobj.c:410
 # fe-lobj.c:495
@@ -2323,7 +2260,7 @@ msgstr "私鑰檔 \"%s\" 有群組或全域存取權限，如果檔案由目前�
 #: fe-secure-openssl.c:1326
 #, c-format
 msgid "could not load private key file \"%s\": %s"
-msgstr "無法載入私鑰檔\"%s\": %s"
+msgstr "無法載入私鑰檔 \"%s\": %s"
 
 # fe-secure.c:848
 #: fe-secure-openssl.c:1342
@@ -2345,13 +2282,12 @@ msgstr "這可能表示伺服器不支援介於 %s 和 %s 之間的任何 SSL �
 #: fe-secure-openssl.c:1488
 #, c-format
 msgid "direct SSL connection was established without ALPN protocol negotiation extension"
-msgstr ""
+msgstr "已建立直接 SSL 連線，但未使用 ALPN 協定協商延伸"
 
 #: fe-secure-openssl.c:1500
-#, fuzzy, c-format
-#| msgid "SSL connection has been closed unexpectedly"
+#, c-format
 msgid "SSL connection was established with unexpected ALPN protocol"
-msgstr "SSL 連線意外關閉"
+msgstr "建立 SSL 連線時使用了非預期的 ALPN 協定"
 
 # fe-secure.c:1093
 #: fe-secure-openssl.c:1517
@@ -2663,3 +2599,4 @@ msgstr "無法識別的 socket 錯誤: 0x%08X/%d"
 
 #~ msgid "verified SSL connections are only supported when connecting to a host name"
 #~ msgstr "只有在連線到主機名稱時，才支援經驗證的 SSL 連線"
+

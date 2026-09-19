@@ -39,6 +39,25 @@ except ImportError:
 CC = OpenCC("s2twp")
 
 RULES = [
+    # --- 2026-09-19 三方會審裁定（終審同步） ---
+    ("实现", "實作", "MS", "implement"),
+    ("扩展模块", "擴充模組", "官方", "防 扩展+模块 分裂成 擴充模組模組"),
+    ("扩展统计信息", "延伸統計資訊", "裁定", "extended statistics"),
+    ("统计信息", "統計資訊", "裁定", "statistics information=資訊"),
+    ("扩展统计", "延伸統計", "裁定", "extended statistics"),
+    ("扩展显示", "展開顯示", "裁定", "expanded display"),
+    ("扩展输出", "展開輸出", "裁定", "expanded output"),
+    ("扩展模式", "展開模式", "裁定", "expanded mode"),
+    ("关系", "關聯", "官方", "relation;2026-09-19 會審"),
+    ("回滚", "回復", "裁定", "rollback;與 recover=復原 區分"),
+    ("换行符", "換行字元", "MS", "newline"),
+    ("子进程", "子行程", "裁定", "subprocess"),
+    ("偏移量", "位移", "裁定", "offset"),
+    ("普通", "一般", "裁定", "plain/ordinary"),
+    # --- 2026-09-19 PG14-18 回填輪補獲（語料裁決） ---
+    ("所有者", "擁有者", "裁定", "owner;master 端官方新譯均用 擁有者"),
+    ("超级用户", "超級使用者", "裁定", "superuser;master 語料 超級使用者"),
+    ("用户端", "客戶端", "裁定", "client;master 語料 客戶端"),
     # --- 官方证据组(in-tree PostgreSQL zh_TW) ---
     ("数据库集簇", "資料庫叢集", "官方", "官方 zh_TW 用 叢集(cluster);CLUSTER 命令動作為 叢集化"),
     ("集簇", "叢集", "官方", ""),
@@ -189,7 +208,7 @@ RULES = [
     ("只读", "唯讀", "MS", ""),
     ("队列", "佇列", "MS", "queue = 佇列"),
     ("信号量", "號誌", "MS", "semaphore = 號誌"),
-    ("信号", "信號", "官方", "pg_ctl: 升級信號(MS 作 訊號,官方 PG 用 信號)"),
+    ("信号", "訊號", "裁定", "2026-09-19 會審:POSIX signal=訊號;semaphore 由 信号量 規則先配對"),
     ("保存点", "儲存點", "MS", "savepoint = 儲存點;禁 s2t 偽影 保存點"),
     ("保存", "儲存", "MS", "save = 儲存"),
     ("注释", "註解", "MS", "comment = 註解(SQL COMMENT)"),
@@ -251,7 +270,7 @@ RULES = [
     ("脏页", "髒頁", "裁定", "MS 作 中途分頁,不取"),
     ("脏读", "髒讀", "裁定", "MS 作 中途讀取,不取"),
     ("块号", "區塊編號", "MS", "block number"),
-    ("段文件", "區段檔案", "官方", "WAL segment file"),
+    ("段文件", "片段檔案", "官方", "WAL segment file;官方分工:WAL=片段,relation/shared-memory=區段"),
     ("项指针", "項目指標", "MS", "item = 項目;pointer = 指標"),
     ("偏移号", "位移編號", "MS", "offset number;offset = 位移"),
     ("钉住", "釘選", "MS", "pin = 釘選"),
@@ -377,7 +396,7 @@ RULES = [
     ("阶段", "階段", "MS", "stage"),
     ("单用户模式", "單人模式", "官方", "pg_ctl: single-user server → 單人模式伺服器"),
     ("单用户", "單人", "官方", ""),
-    ("发送", "發送", "官方", "pg_ctl: 發送升級信號"),
+    ("发送", "發送", "官方", "pg_ctl: 發送升級訊號"),
     ("监控", "監視", "MS", "monitor = 監視"),
     ("交互", "互動", "MS", "interactive = 互動"),
     ("列表", "清單", "MS", "list = 清單"),
@@ -401,7 +420,7 @@ RULES = [
     ("物理", "實體", "官方", "physical = 實體"),
     ("引用完整性", "參照完整性", "MS", "referential integrity;MS 亦作 參考完整性"),
     ("常规", "一般", "MS", "regular = 一般"),
-    ("关系扩展锁", "關係延伸鎖定", "MS", "relation extension;extend = 延伸(與 擴充模組 區分)"),
+    ("关系扩展锁", "關聯延伸鎖定", "MS", "relation extension;extend = 延伸(與 擴充模組 區分)"),
     ("层级锁", "層級鎖定", "MS", "level locks"),
     ("日志压实", "日誌壓實", "裁定", "compaction;避免與 壓縮(compression)相撞"),
     ("提取-转换-加载", "擷取-轉換-載入", "MS", "ETL;extract = 擷取"),
@@ -495,7 +514,7 @@ RULES = [
     ("重量级锁", "重量級鎖定", "MS", "heavyweight locks"),
     ("轻量级锁", "輕量級鎖定", "MS", "lightweight locks"),
     ("行级锁", "資料列層級鎖定", "MS", "row-level locks"),
-    ("关系级锁", "關係層級鎖定", "MS", "relation-level locks"),
+    ("关系级锁", "關聯層級鎖定", "MS", "relation-level locks"),
     ("页锁", "頁面鎖定", "MS", "page locks"),
     ("行类型", "資料列型別", "MS", "row type"),
     ("表别名", "資料表別名", "MS", "table alias"),
@@ -508,7 +527,7 @@ RULES = [
     ("事务块", "交易區塊", "MS", "transaction block"),
     ("缓冲池", "緩衝集區", "MS", "buffer pool;MS SQL zh-TW 用語"),
     ("多表索引簇表", "多資料表索引叢集資料表", "MS", "multi-table index cluster tables"),
-    ("WAL 段", "WAL 區段", "官方", "segment = 區段"),
+    ("WAL 段", "WAL 片段", "官方", "官方活躍條目:WAL 片段;區段 另用於 relation segment/section"),
     ("版本信息", "版本資訊", "MS", "information 語境 = 資訊;先於 信息→訊息"),
     ("分区表达式", "分割運算式", "MS", "partition expression;守衛:防 分区表 跨詞界誤傷"),
     ("进行类型", "進行型別", "MS", "identity 守衛:進行|類型 跨詞界,防 行类型 誤傷;類型 隨即依 型別 規則"),
@@ -599,6 +618,15 @@ def parse_po(path):
     return entries
 
 
+def _unquote(s):
+    """Strip exactly one leading and one trailing PO quote, preserving inner
+    escapes like \\" — bare .strip('"') would eat a trailing escaped quote."""
+    s = s.strip()
+    if len(s) >= 2 and s[0] == '"' and s[-1] == '"':
+        return s[1:-1]
+    return s
+
+
 def entry_text(entry, key):
     """Concatenated string of msgid / msgid_plural / msgstr / msgstr[0]..."""
     is_header, comments, body = entry
@@ -607,19 +635,22 @@ def entry_text(entry, key):
     for line in body:
         if line.startswith("msgid "):
             grab = (key == "msgid")
-            parts = [line[6:].strip().strip('"')] if grab else parts
+            parts = [_unquote(line[6:])] if grab else parts
         elif line.startswith("msgid_plural "):
             grab = (key == "msgid_plural")
-            parts = [line[13:].strip().strip('"')] if grab else parts
+            parts = [_unquote(line[13:])] if grab else parts
         elif line.startswith("msgstr"):
-            want = (key == "msgstr" and "[" not in line) or \
+            # plural-form lines look like msgstr[0]; text may itself contain
+            # brackets (e.g. [OPTION]), so only the immediate prefix counts
+            is_plural_form = line.startswith("msgstr[")
+            want = (key == "msgstr" and not is_plural_form) or \
                    (key.startswith("msgstr[") and line.startswith(key))
             grab = want
             if want:
-                parts = [line.split(" ", 1)[1].strip().strip('"') if " " in line else ""]
+                parts = [_unquote(line.split(" ", 1)[1]) if " " in line else ""]
         elif line.startswith('"'):
             if grab:
-                parts.append(line.strip().strip('"'))
+                parts.append(_unquote(line))
     return "".join(parts)
 
 

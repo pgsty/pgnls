@@ -188,7 +188,7 @@ foreign key	外键	外來鍵	裁定	外键→外來鍵(MS 作 外部索引鍵;�
 foreign server	外部服务器	外部伺服器	官方	
 Foreign Table	外部表	外部資料表	官方	
 fork	分支	分支	字符	
-fork number	关系分支编号	關係分支編號	字符	
+fork number	关系分支编号	關聯分支編號	官方	2026-09-19 會審同步 relation=關聯
 format code	格式代码	格式代碼	MS	格式代码→格式代碼(format code;code(編號)= 代碼,原始碼才是 程式碼)
 format specifiers	格式说明符	格式規範	MS	格式说明符→格式規範(format specifier)
 free space	空闲空间	可用空間	MS	空闲空间→可用空間(free space = 可用空間)
@@ -440,11 +440,11 @@ refactoring	重构	重構	字符
 referential integrity	引用完整性	參照完整性	MS	引用完整性→參照完整性(referential integrity;MS 亦作 參考完整性)
 Regular Index Scans	常规索引扫描	一般索引掃描	官方推定	常规→一般(regular = 一般)
 regular set	正则集	正規集合	MS	正则集→正規集合(regular set)
-relation	关系	關係	字符	
-Relation Extension Locks	关系扩展锁	關係延伸鎖定	MS	关系扩展锁→關係延伸鎖定(relation extension;extend = 延伸(與 擴充模組 區分))
-Relation-Level Locks	关系级锁	關係層級鎖定	MS	关系级锁→關係層級鎖定(relation-level locks)
-Relations	关系	關係	字符	
-relfilenode	关系文件节点	關係檔案節點	官方推定	文件→檔案(官方 zh_TW: 檔案);节点→節點(node = 節點)
+relation	关系	關聯	官方	官方語料 1242 處用 關聯；2026-09-19 三方會審修正
+Relation Extension Locks	关系扩展锁	關聯延伸鎖定	官方	2026-09-19 會審同步 relation=關聯
+Relation-Level Locks	关系级锁	關聯層級鎖定	官方	2026-09-19 會審同步 relation=關聯
+Relations	关系	關聯	官方	relation 複數；2026-09-19 會審同步
+relfilenode	关系文件节点	關聯檔案節點	官方推定	2026-09-19 會審同步 relation=關聯
 reliability	可靠性	可靠性	字符	
 Repeatable Read	可重复读	可重複讀	MS	可重复读→可重複讀(REPEATABLE READ)
 replay	重放	重放	字符	
@@ -573,7 +573,7 @@ transaction isolation	事务隔离	交易隔離	官方推定	事务→交易(官
 transaction log	事务日志	交易日誌	官方推定	事务→交易(官方 zh_TW: commit the current transaction → 提交目前的交易)
 transaction snapshot	事务快照	交易快照	官方推定	事务→交易(官方 zh_TW: commit the current transaction → 提交目前的交易)
 Transformation	转换	轉換	字符	
-transition relations	过渡关系	轉換關係	MS	过渡→轉換(transition tables/relations)
+transition relations	过渡关系	轉換關聯	官方	2026-09-19 會審同步 relation=關聯
 transition tables	过渡表	轉換表	MS	过渡→轉換(transition tables/relations)
 trusted	受信任的	受信任的	MS	受信任→受信任(trusted)
 trigger	触发器	觸發器	官方	触发器→觸發器(psql: 觸發器)
@@ -613,8 +613,8 @@ WAL Buffer	WAL 缓冲区	WAL 緩衝區	MS	缓冲区→緩衝區(buffer)
 wal data	WAL 数据	WAL 資料	官方	
 WAL Levels	WAL 级别	WAL 層級	MS	级别→層級(level;isolation level 亦可 隔離等級)
 WAL Modes	WAL 模式	WAL 模式	字符	
-WAL Segment	WAL 段	WAL 區段	官方	
-WAL segment file	WAL 段文件	WAL 區段檔案	官方推定	WAL 段→WAL 區段(segment = 區段);文件→檔案(官方 zh_TW: 檔案)
+WAL Segment	WAL 段	WAL 片段	官方	官方 zh_TW 活躍條目實測:WAL 片段(postgres/pg_controldata/initdb/pg_basebackup/pg_resetwal);區段 保留給 relation segment/archive section/shared memory segment(官方語義分工,2026-09-18 修正)
+WAL segment file	WAL 段文件	WAL 片段檔案	官方推定	WAL 段→WAL 片段(官方分工,2026-09-18 修正);文件→檔案(官方 zh_TW: 檔案)
 WAL Setup	WAL 设置	WAL 設定	官方	设置→設定(set = 設定;config 名詞 = 組態)
 WAL Structure	WAL 结构	WAL 結構	字符	
 walreceiver	WAL 接收进程	WAL 接收行程	官方推定	接收进程→接收行程(walreceiver)
@@ -636,3 +636,8 @@ column	列	欄位|欄	官方	column:psql: 欄/欄位;禁 MS 式 資料行
 attribute	属性	屬性	字符	
 subscript	下标	下標	字符	
 lock	锁	鎖定	官方	lock:lock 名詞/動詞 = 鎖定;自旋鎖(spin lock)例外
+signal	信号	訊號	裁定	POSIX signal；2026-09-19 會審（MS zh-TW 先例；舊語料 信號 為轉換殘留）
+semaphore	信号量	號誌	裁定	延續既有裁定；2026-09-19 會審入庫
+rollback	回滚	回復	裁定	2026-09-19 會審；與 recover=復原 區分
+return	返回	傳回	MS	2026-09-19 會審；函數結果語境
+newline	换行符	換行字元	MS	2026-09-19 會審

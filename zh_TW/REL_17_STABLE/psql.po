@@ -1,22 +1,22 @@
 # Traditional Chinese message translation file for psql
-# Copyright (C) 2023 PostgreSQL Global Development Group
-# This file is distributed under the same license as the psql (PostgreSQL) package.
+# This file is distributed under the same license as the PostgreSQL package.
+#
 # 2004-12-13 Zhenbang Wei <znbang@gmail.com>
+# Ruohang Feng <rh@vonng.com>, 2026.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: psql (PostgreSQL) 16\n"
+"Project-Id-Version: psql (PostgreSQL) 17\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
 "POT-Creation-Date: 2026-09-18 04:58+0000\n"
-"PO-Revision-Date: 2023-11-06 08:50+0800\n"
-"Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-09-19 12:00+0800\n"
+"Last-Translator: Ruohang Feng <rh@vonng.com>\n"
+"Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4.1\n"
 
 # libpq/be-secure.c:294 libpq/be-secure.c:387
 #: ../../../src/common/logging.c:276
@@ -69,16 +69,14 @@ msgstr "無法執行命令 \"%s\": %m"
 
 # utils/init/miscinit.c:792 utils/misc/guc.c:5074
 #: ../../common/exec.c:394
-#, fuzzy, c-format
-#| msgid "could not read from file \"%s\": %m"
+#, c-format
 msgid "could not read from command \"%s\": %m"
-msgstr "無法讀取鎖定檔\"%s\": %m"
+msgstr "無法讀取命令 \"%s\" 的輸出: %m"
 
 #: ../../common/exec.c:397
-#, fuzzy, c-format
-#| msgid "no data returned from server"
+#, c-format
 msgid "no data was returned by command \"%s\""
-msgstr "未從伺服器回傳任何資料"
+msgstr "命令 \"%s\" 未回傳任何資料"
 
 # fe-misc.c:991
 #: ../../common/exec.c:424
@@ -113,12 +111,12 @@ msgstr "無法複製 null 指標(內部錯誤)\n"
 #: ../../common/fe_memutils.c:209
 #, c-format
 msgid "invalid memory allocation request size %zu + %zu\n"
-msgstr ""
+msgstr "無效的記憶體配置請求大小 %zu + %zu\n"
 
 #: ../../common/fe_memutils.c:228
 #, c-format
 msgid "invalid memory allocation request size %zu * %zu\n"
-msgstr ""
+msgstr "無效的記憶體配置請求大小 %zu * %zu\n"
 
 # libpq/be-secure.c:689
 #: ../../common/username.c:43
@@ -157,17 +155,17 @@ msgstr "子行程結束，結束碼 %d"
 #: ../../common/wait_error.c:72
 #, c-format
 msgid "child process was terminated by exception 0x%X"
-msgstr "子進程被例外 0x%X 終止"
+msgstr "子行程被例外 0x%X 終止"
 
 #: ../../common/wait_error.c:76
 #, c-format
 msgid "child process was terminated by signal %d: %s"
-msgstr "子進程被信號 %d 終止: %s"
+msgstr "子行程被訊號 %d 終止: %s"
 
 #: ../../common/wait_error.c:82
 #, c-format
 msgid "child process exited with unrecognized status %d"
-msgstr "子進程結束，不明狀態代碼 %d"
+msgstr "子行程結束，不明狀態代碼 %d"
 
 #: ../../fe_utils/cancel.c:186 ../../fe_utils/cancel.c:235
 msgid "Cancel request sent\n"
@@ -193,7 +191,7 @@ msgstr "已中斷\n"
 #: ../../fe_utils/print.c:3189
 #, c-format
 msgid "Cannot print table contents: number of cells %lld is equal to or exceeds maximum %lld.\n"
-msgstr ""
+msgstr "不能列印表格內容: 單元格數 %lld 達到或超過上限 %lld。\n"
 
 #: ../../fe_utils/print.c:3230
 #, c-format
@@ -201,10 +199,9 @@ msgid "Cannot add header to table content: column count of %d exceeded.\n"
 msgstr "無法將標題新增至表格內容: 欄位數已超過 %d。\n"
 
 #: ../../fe_utils/print.c:3273
-#, fuzzy, c-format
-#| msgid "Cannot add cell to table content: total cell count of %d exceeded.\n"
+#, c-format
 msgid "Cannot add cell to table content: total cell count of %lld exceeded.\n"
-msgstr "無法將儲存格新增至表格內容: 總儲存格數已超過 %d。\n"
+msgstr "不能向表格內容新增單元格: 已超出單元格總數 %lld。\n"
 
 #: ../../fe_utils/print.c:3531
 #, c-format
@@ -219,34 +216,32 @@ msgstr "略過遞迴展開變數 \"%s\""
 
 # commands/copy.c:828
 #: ../../fe_utils/string_utils.c:587
-#, fuzzy, c-format
-#| msgid "shell command argument contains a newline or carriage return: \"%s\""
+#, c-format
 msgid "shell command argument contains a newline or carriage return: \"%s\"\n"
-msgstr "shell 命令的參數包含換行或歸位符號: \"%s\""
+msgstr "shell 命令的參數包含換行或歸位符號: \"%s\"\n"
 
 # commands/copy.c:828
 #: ../../fe_utils/string_utils.c:760
-#, fuzzy, c-format
-#| msgid "shell command argument contains a newline or carriage return: \"%s\""
+#, c-format
 msgid "database name contains a newline or carriage return: \"%s\"\n"
-msgstr "shell 命令的參數包含換行或歸位符號: \"%s\""
+msgstr "資料庫名稱包含換行或歸位符號: \"%s\"\n"
 
 # utils/fmgr/dfmgr.c:145
 #: ../../port/user.c:43 ../../port/user.c:79
 #, c-format
 msgid "could not look up local user ID %d: %s"
-msgstr "無法查詢本地使用者ID %d: %s"
+msgstr "無法查詢本機使用者 ID %d: %s"
 
 # libpq/hba.c:1481 libpq/hba.c:1512 libpq/hba.c:1582
 #: ../../port/user.c:48 ../../port/user.c:84
 #, c-format
 msgid "local user with ID %d does not exist"
-msgstr "本地使用者ID %d 不存在"
+msgstr "本機使用者 ID %d 的使用者並不存在"
 
 #: command.c:246
 #, c-format
 msgid "backslash commands are restricted; only \\unrestrict is allowed"
-msgstr ""
+msgstr "反斜線命令已受限；只允許使用 \\unrestrict"
 
 # command.c:122
 #: command.c:254
@@ -268,7 +263,7 @@ msgstr "\\%s: 忽略額外的參數 \"%s\""
 #: command.c:326
 #, c-format
 msgid "\\%s command ignored; use \\endif or Ctrl-C to exit current \\if block"
-msgstr "\\%s 命令被忽略；請使用 \\endif 或 Ctrl-C 退出當前的 \\if 區塊"
+msgstr "\\%s 命令被忽略；請使用 \\endif 或 Ctrl-C 結束當前的 \\if 區塊"
 
 # command.c:240
 #: command.c:637
@@ -302,7 +297,7 @@ msgstr "已連線至資料庫 \"%s\"，使用者 \"%s\"，socket \"%s\"，連接
 #: command.c:699
 #, c-format
 msgid "You are connected to database \"%s\" as user \"%s\" on host \"%s\" (address \"%s\") at port \"%s\".\n"
-msgstr "已連線至資料庫 \"%s\"，使用者 \"%s\"，主機 \"%s” (位址 \"%s\")，連接埠 \"%s\"。\n"
+msgstr "已連線至資料庫 \"%s\"，使用者 \"%s\"，主機 \"%s\" (位址 \"%s\")，連接埠 \"%s\"。\n"
 
 #: command.c:702
 #, c-format
@@ -367,7 +362,7 @@ msgstr "\\%s: 缺少右括號"
 #: command.c:2787
 #, c-format
 msgid "\\%s: missing required argument"
-msgstr "\\%s: 缺少必要的參數"
+msgstr "\\%s 命令被忽略；請使用 \\endif 或 Ctrl-C 結束當前的 \\if 區塊"
 
 #: command.c:1846
 #, c-format
@@ -464,12 +459,12 @@ msgstr "計時功能已停止。"
 #: command.c:2708
 #, c-format
 msgid "\\%s: not currently in restricted mode"
-msgstr ""
+msgstr "\\%s: 目前不在限制模式中"
 
 #: command.c:2720
 #, c-format
 msgid "\\%s: wrong key"
-msgstr ""
+msgstr "\\%s: 金鑰錯誤"
 
 # command.c:788
 # command.c:808
@@ -534,16 +529,14 @@ msgstr "\\watch: 錯誤的迭代次數 \"%s"
 
 # commands/copy.c:2716 parser/parse_target.c:648 parser/parse_target.c:658
 #: command.c:2946
-#, fuzzy, c-format
-#| msgid "\\watch: iteration count is specified more than once"
+#, c-format
 msgid "\\watch: minimum row count specified more than once"
-msgstr "\\watch: 迭代次數被指定多次"
+msgstr "\\watch: 最小資料列數指定多次"
 
 #: command.c:2956
-#, fuzzy, c-format
-#| msgid "\\watch: incorrect iteration count \"%s\""
+#, c-format
 msgid "\\watch: incorrect minimum row count \"%s\""
-msgstr "\\watch: 錯誤的迭代次數 \"%s"
+msgstr "\\watch: 最小資料列數 \"%s\" 不正確"
 
 # access/transam/xlog.c:3720
 #: command.c:2963
@@ -636,10 +629,9 @@ msgstr ""
 
 # startup.c:652
 #: command.c:3998
-#, fuzzy, c-format
-#| msgid "SSL connection (protocol: %s, cipher: %s, compression: %s)\n"
+#, c-format
 msgid "SSL connection (protocol: %s, cipher: %s, compression: %s, ALPN: %s)\n"
-msgstr "SSL 連線(協議: %s，加密方式: %s，壓縮: %s)\n"
+msgstr "SSL 連線 (協定: %s，加密套件: %s，壓縮: %s，ALPN: %s)\n"
 
 # utils/error/elog.c:1350 utils/error/elog.c:1360
 #: command.c:3999 command.c:4000
@@ -658,7 +650,7 @@ msgstr "on"
 
 #: command.c:4002
 msgid "none"
-msgstr ""
+msgstr "無"
 
 #: command.c:4016
 #, c-format
@@ -671,10 +663,7 @@ msgid ""
 "WARNING: Console code page (%u) differs from Windows code page (%u)\n"
 "         8-bit characters might not work correctly. See psql reference\n"
 "         page \"Notes for Windows users\" for details.\n"
-msgstr ""
-"警告: console 字碼頁(%u)與 Windows 字碼頁(%u)不同\n"
-"         8 位元字符可能無法正確運作。詳細資訊請參閱\n"
-"         psql 手冊 \"Windows 使用者注意事項\"。\n"
+msgstr "警告: console 字碼頁(%u)與 Windows 字碼頁(%u)不同\n         8 位元字元可能無法正確運作。詳細資訊請參閱\n         psql 手冊 \"Windows 使用者注意事項 \"。\n"
 
 #: command.c:4143
 #, c-format
@@ -751,7 +740,7 @@ msgstr "\\pset: csv_fieldsep 必須是一位元組的字元"
 #: command.c:4746
 #, c-format
 msgid "\\pset: csv_fieldsep cannot be a double quote, a newline, or a carriage return"
-msgstr "\\pset: csv_fieldsep 不能是雙引號、換行符號或歸位符號"
+msgstr "\\pset: csv_fieldsep 不能是雙引號、換行字元或歸位符號"
 
 # command.c:1493
 #: command.c:4884 command.c:5085
@@ -780,31 +769,31 @@ msgstr "目標寬度是 %d。\n"
 #: command.c:4919
 #, c-format
 msgid "Expanded display is on.\n"
-msgstr "擴展顯示已啟動。\n"
+msgstr "展開顯示已開啟。\n"
 
 # command.c:1364
 #: command.c:4921
 #, c-format
 msgid "Expanded display is used automatically.\n"
-msgstr "自動使用擴展顯示。\n"
+msgstr "自動使用展開顯示。\n"
 
 # command.c:1365
 #: command.c:4923
 #, c-format
 msgid "Expanded display is off.\n"
-msgstr "擴展顯示已關閉。\n"
+msgstr "展開顯示已關閉。\n"
 
 # command.c:1364
 #: command.c:4930 command.c:4932 command.c:4934
 #, c-format
 msgid "Expanded header width is \"%s\".\n"
-msgstr "擴展標頭寬度為 \"%s\"。\n"
+msgstr "展開標頭寬度為 \"%s\"。\n"
 
 # command.c:1364
 #: command.c:4936
 #, c-format
 msgid "Expanded header width is %d.\n"
-msgstr "擴展標頭寬度為 %d。\n"
+msgstr "展開標頭寬度為 %d。\n"
 
 # command.c:1389
 #: command.c:4942
@@ -975,7 +964,7 @@ msgstr "\\watch 不能與空查詢一起使用"
 #: command.c:5398
 #, c-format
 msgid "could not set timer: %m"
-msgstr "無法設置計時器: %m"
+msgstr "無法設定計時器: %m"
 
 #: command.c:5467
 #, c-format
@@ -991,25 +980,16 @@ msgstr "%s (每 %gs)\n"
 #: command.c:5534
 #, c-format
 msgid "could not wait for signals: %m"
-msgstr "無法等待信號: %m"
+msgstr "無法等待訊號: %m"
 
 #: command.c:5590 command.c:5597 common.c:634 common.c:641 common.c:1131
-#, fuzzy, c-format
-#| msgid ""
-#| "********* QUERY **********\n"
-#| "%s\n"
-#| "**************************\n"
-#| "\n"
+#, c-format
 msgid ""
 "/******** QUERY *********/\n"
 "%s\n"
 "/************************/\n"
 "\n"
-msgstr ""
-"********* 查詢 **********\n"
-"%s\n"
-"**************************\n"
-"\n"
+msgstr "/******** 查詢 *********/\n%s\n/************************/\n\n"
 
 # commands/comment.c:348 commands/view.c:113 tcop/utility.c:88
 #: command.c:5776
@@ -1130,20 +1110,12 @@ msgstr "嘗試將資料用 \\gset 存入特殊變數 \"%s\" 的操作已被忽�
 
 # common.c:879
 #: common.c:1111
-#, fuzzy, c-format
-#| msgid ""
-#| "***(Single step mode: verify command)*******************************************\n"
-#| "%s\n"
-#| "***(press return to proceed or enter x and return to cancel)********************\n"
+#, c-format
 msgid ""
 "/**(Single step mode: verify command)******************************************/\n"
 "%s\n"
 "/**(press return to proceed or enter x and return to cancel)*******************/\n"
-msgstr ""
-"***(單步模式: 驗證命令)*******************************************\n"
-"%s\n"
-"***(按 Enter 鍵繼續或輸入 x 然後按 Enter 鍵取消)********************\n"
-"\n"
+msgstr "/**(單步模式: 核對命令)******************************************/\n%s\n/**(按 Enter 繼續，或輸入 x 後按 Enter 取消)*******************/\n"
 
 # utils/error/elog.c:1555
 #: common.c:1192
@@ -1182,16 +1154,15 @@ msgstr "命令沒有結果，或結果沒有欄位。\n"
 #: common.c:1517
 #, c-format
 msgid "fetching results in chunked mode failed"
-msgstr ""
+msgstr "以分塊模式取得結果失敗"
 
 # commands/copy.c:403 commands/copy.c:421 commands/copy.c:425
 # commands/copy.c:486 commands/copy.c:535 tcop/fastpath.c:291
 # tcop/postgres.c:284 tcop/postgres.c:307
 #: common.c:1706
-#, fuzzy, c-format
-#| msgid "unexpected EOF on standby connection"
+#, c-format
 msgid "unexpected COPY_IN result, aborting connection"
-msgstr "standby 連線出現非預期 EOF"
+msgstr "收到非預期的 COPY_IN 結果，正在中止連線"
 
 # copy.c:122
 #: copy.c:98
@@ -1250,9 +1221,7 @@ msgstr "已被使用者取消"
 msgid ""
 "Enter data to be copied followed by a newline.\n"
 "End with a backslash and a period on a line by itself, or an EOF signal."
-msgstr ""
-"請輸入要複製的資料，然後加上換行符號。\n"
-"以反斜線和一個獨立的句點結束，或者使用 EOF 信號。"
+msgstr "請輸入要複製的資料，然後加上換行字元。\n以反斜線和一個獨立的句點結束，或者使用 EOF 訊號。"
 
 #: copy.c:688
 msgid "aborted because of read failure"
@@ -1260,12 +1229,12 @@ msgstr "因讀取失敗而中止"
 
 #: copy.c:726
 msgid "trying to exit copy mode"
-msgstr "試圖退出複製模式"
+msgstr "試圖結束複製模式"
 
 #: crosstabview.c:124
 #, c-format
 msgid "\\crosstabview: statement did not return a result set"
-msgstr "\\crosstabview: 敘述未回傳結果集"
+msgstr "試圖結束複製模式"
 
 # parser/parse_expr.c:492
 #: crosstabview.c:130
@@ -1565,7 +1534,7 @@ msgstr "右參數型別"
 # describe.c:322
 #: describe.c:806
 msgid "Result type"
-msgstr "結果類型"
+msgstr "結果型別"
 
 # describe.c:1691
 #: describe.c:811 describe.c:4657 describe.c:4821 describe.c:5320
@@ -1576,7 +1545,7 @@ msgstr "函數"
 # describe.c:336
 #: describe.c:891
 msgid "List of operators"
-msgstr "運算符清單"
+msgstr "運算子清單"
 
 # describe.c:365
 #: describe.c:926
@@ -1603,10 +1572,8 @@ msgstr "Ctype"
 # help.c:127
 #: describe.c:943 describe.c:947 describe.c:951 describe.c:4946 describe.c:4950
 #: describe.c:4954
-#, fuzzy
-#| msgid "locale"
 msgid "Locale"
-msgstr "locale"
+msgstr "區域"
 
 # describe.c:983
 # describe.c:1204
@@ -1976,11 +1943,11 @@ msgstr "primary key, "
 # describe.c:927
 #: describe.c:2321
 msgid "unique"
-msgstr "unique"
+msgstr "唯一"
 
 #: describe.c:2323
 msgid " nulls not distinct"
-msgstr " nulls not distinct"
+msgstr " 且 NULL 值視為相同"
 
 # fe-protocol3.c:691
 #: describe.c:2324
@@ -1991,7 +1958,7 @@ msgstr ", "
 #: describe.c:2331
 #, c-format
 msgid "for table \"%s.%s\""
-msgstr "for table \"%s.%s\""
+msgstr "給資料表 \"%s.%s\""
 
 # describe.c:937
 #: describe.c:2335
@@ -2158,12 +2125,12 @@ msgstr "分割"
 #: describe.c:3474
 #, c-format
 msgid "Typed table of type: %s"
-msgstr ""
+msgstr "型別為 %s 的型別化資料表"
 
 # describe.c:1636
 #: describe.c:3490
 msgid "Replica Identity"
-msgstr ""
+msgstr "REPLICA IDENTITY"
 
 # describe.c:1259
 #: describe.c:3503
@@ -2206,7 +2173,7 @@ msgstr "屬性"
 # describe.c:1377
 #: describe.c:3688
 msgid "Superuser"
-msgstr "超級用戶"
+msgstr "超級使用者"
 
 #: describe.c:3691
 msgid "No inheritance"
@@ -2292,12 +2259,12 @@ msgstr "成員屬於"
 
 #: describe.c:3862
 msgid "Grantor"
-msgstr ""
+msgstr "授權者"
 
 # describe.c:1431
 #: describe.c:3888
 msgid "List of role grants"
-msgstr ""
+msgstr "角色授權清單"
 
 # describe.c:543
 # describe.c:1477
@@ -2367,7 +2334,7 @@ msgstr "所屬名稱"
 
 #: describe.c:4192
 msgid "Leaf partition size"
-msgstr ""
+msgstr "葉分割大小"
 
 #: describe.c:4195 describe.c:4201
 msgid "Total size"
@@ -2384,7 +2351,7 @@ msgstr "內部語言"
 
 #: describe.c:4335
 msgid "Call handler"
-msgstr ""
+msgstr "呼叫處理器"
 
 #: describe.c:4336 describe.c:5747
 msgid "Validator"
@@ -2392,7 +2359,7 @@ msgstr "驗證程式"
 
 #: describe.c:4337
 msgid "Inline handler"
-msgstr ""
+msgstr "內嵌處理器"
 
 # describe.c:1431
 #: describe.c:4371
@@ -2441,7 +2408,7 @@ msgstr "值"
 
 #: describe.c:4569
 msgid "Context"
-msgstr ""
+msgstr "上下文"
 
 # sql_help.h:366
 #: describe.c:4601
@@ -2469,30 +2436,30 @@ msgstr "事件"
 # describe.c:1477
 #: describe.c:4652
 msgid "enabled"
-msgstr ""
+msgstr "啟用"
 
 # describe.c:1636
 #: describe.c:4653
 msgid "replica"
-msgstr ""
+msgstr "replica"
 
 #: describe.c:4654
 msgid "always"
-msgstr ""
+msgstr "一律"
 
 # describe.c:415
 # describe.c:543
 # describe.c:1477
 #: describe.c:4655
 msgid "disabled"
-msgstr ""
+msgstr "停用"
 
 # describe.c:415
 # describe.c:543
 # describe.c:1477
 #: describe.c:4656 describe.c:6557
 msgid "Enabled"
-msgstr ""
+msgstr "已啟用"
 
 #: describe.c:4658
 msgid "Tags"
@@ -2507,39 +2474,39 @@ msgstr "事件觸發器清單"
 #: describe.c:4708
 #, c-format
 msgid "The server (version %s) does not support extended statistics."
-msgstr "伺服器(版本 %s)不支援擴展統計資料。"
+msgstr "伺服器(版本 %s)不支援延伸統計資料。"
 
 #: describe.c:4745
 msgid "Ndistinct"
-msgstr ""
+msgstr "相異值數量"
 
 #: describe.c:4746
 msgid "Dependencies"
-msgstr ""
+msgstr "相依性"
 
 #: describe.c:4756
 msgid "MCV"
-msgstr ""
+msgstr "MCV"
 
 # describe.c:1549
 #: describe.c:4779
 msgid "List of extended statistics"
-msgstr "擴展統計資料清單"
+msgstr "延伸統計資料清單"
 
 # describe.c:1688
 #: describe.c:4806
 msgid "Source type"
-msgstr "來源類型"
+msgstr "來源型別"
 
 # describe.c:1689
 #: describe.c:4807
 msgid "Target type"
-msgstr "目標類型"
+msgstr "目標型別"
 
 # describe.c:1693
 #: describe.c:4831
 msgid "in assignment"
-msgstr ""
+msgstr "指派時"
 
 # describe.c:1695
 #: describe.c:4833
@@ -2608,7 +2575,7 @@ msgstr "取得標題"
 
 #: describe.c:5329
 msgid "Get token types"
-msgstr "取得 token 類型"
+msgstr "取得 token 型別"
 
 #: describe.c:5339
 #, c-format
@@ -2628,12 +2595,12 @@ msgstr "Token 名稱"
 #: describe.c:5374
 #, c-format
 msgid "Token types for parser \"%s.%s\""
-msgstr "解析器 \"%s.%s\" 的 token 類型"
+msgstr "解析器 \"%s.%s\" 的 token 型別"
 
 #: describe.c:5377
 #, c-format
 msgid "Token types for parser \"%s\""
-msgstr "解析器 \"%s\" 的 token 類型"
+msgstr "解析器 \"%s\" 的 token 型別"
 
 #: describe.c:5421
 msgid "Template"
@@ -2656,7 +2623,7 @@ msgstr "初始化"
 # describe.c:257
 #: describe.c:5482
 msgid "Lexize"
-msgstr ""
+msgstr "詞彙規範化"
 
 # describe.c:1753
 #: describe.c:5513
@@ -2856,7 +2823,7 @@ msgstr "資料表:"
 # describe.c:1753
 #: describe.c:6497
 msgid "Tables from schemas:"
-msgstr ""
+msgstr "來自以下 schema 的資料表:"
 
 # describe.c:117
 #: describe.c:6542
@@ -2871,7 +2838,7 @@ msgstr "發布"
 
 #: describe.c:6567
 msgid "Binary"
-msgstr ""
+msgstr "二進位"
 
 #: describe.c:6576 describe.c:6580
 msgid "Streaming"
@@ -2887,7 +2854,7 @@ msgstr "錯誤時停用"
 
 #: describe.c:6596
 msgid "Origin"
-msgstr ""
+msgstr "來源"
 
 # command.c:915
 # command.c:939
@@ -2903,10 +2870,8 @@ msgstr "以擁有者身分執行？"
 
 # common.c:307
 #: describe.c:6603
-#, fuzzy
-#| msgid "Failed.\n"
 msgid "Failover"
-msgstr "失敗。\n"
+msgstr "容錯移轉"
 
 #: describe.c:6608
 msgid "Synchronous commit"
@@ -2915,7 +2880,7 @@ msgstr "同步提交"
 # help.c:123
 #: describe.c:6609
 msgid "Conninfo"
-msgstr ""
+msgstr "連線資訊"
 
 #: describe.c:6615
 msgid "Skip LSN"
@@ -2928,21 +2893,21 @@ msgstr "訂閱清單"
 
 #: describe.c:6670
 msgid "(none)"
-msgstr ""
+msgstr "(無)"
 
 #: describe.c:6710 describe.c:6805 describe.c:6897 describe.c:6991
 msgid "AM"
-msgstr ""
+msgstr "AM"
 
 # describe.c:322
 #: describe.c:6711
 msgid "Input type"
-msgstr "輸入類型"
+msgstr "輸入型別"
 
 # describe.c:1635
 #: describe.c:6712
 msgid "Storage type"
-msgstr "儲存類型"
+msgstr "儲存型別"
 
 # catalog/dependency.c:1592
 #: describe.c:6713
@@ -2961,7 +2926,7 @@ msgstr "操作符類別清單"
 
 #: describe.c:6807
 msgid "Applicable types"
-msgstr "適用類型"
+msgstr "適用型別"
 
 # describe.c:336
 #: describe.c:6848
@@ -3058,10 +3023,8 @@ msgid "  -c, --command=COMMAND    run only single command (SQL or internal) and 
 msgstr "  -c, --command=COMMAND    執行單一命令(SQL 或內部命令)後結束\n"
 
 #: help.c:69
-#, fuzzy
-#| msgid "  -d, --dbname=DBNAME    database to connect to\n"
 msgid "  -d, --dbname=DBNAME      database name to connect to\n"
-msgstr "  -d, --dbname=DBNAME    要連線的資料庫\n"
+msgstr "  -d, --dbname=DBNAME      要連線的資料庫名稱\n"
 
 # help.c:95
 #: help.c:70
@@ -3079,10 +3042,7 @@ msgid ""
 "  -v, --set=, --variable=NAME=VALUE\n"
 "                           set psql variable NAME to VALUE\n"
 "                           (e.g., -v ON_ERROR_STOP=1)\n"
-msgstr ""
-"  -v, --set=, --variable=NAME=VALUE\n"
-"                           設定 psql 變數 NAME 為 VALUE\n"
-"                           (例如 -v ON_ERROR_STOP=1)\n"
+msgstr "  -v, --set=, --variable=NAME\n                           設定 psql 變數 NAME 為 VALUE\n                           (例如 -v ON_ERROR_STOP=1)\n"
 
 #: help.c:75
 msgid "  -V, --version            output version information, then exit\n"
@@ -3210,7 +3170,7 @@ msgstr "  -H, --html               HTML 表格輸出模式\n"
 # help.c:118
 #: help.c:102
 msgid "  -P, --pset=VAR[=ARG]     set printing option VAR to ARG (see \\pset command)\n"
-msgstr "  -P, --pset=VAR[=ARG]     將顯示選項 VAR 設為 ARG(參閱 \\pset 命令)\n"
+msgstr "  -P, --pset=VAR     將顯示選項 VAR 設為 ARG(參閱 \\pset 命令)\n"
 
 # help.c:121
 #: help.c:103
@@ -3234,7 +3194,7 @@ msgstr "  -T, --table-attr=TEXT    設定 HTML 表格標籤屬性 (例如: width
 # help.c:117
 #: help.c:107
 msgid "  -x, --expanded           turn on expanded table output\n"
-msgstr "  -x, --expanded           啟動擴展表格輸出模式\n"
+msgstr "  -x, --expanded           開啟展開表格輸出模式\n"
 
 # help.c:119
 #: help.c:108
@@ -3267,16 +3227,12 @@ msgid "  -h, --host=HOSTNAME      database server host or socket directory\n"
 msgstr "  -h, --host=HOSTNAME      資料庫伺服器主機或socket目錄\n"
 
 #: help.c:115
-#, fuzzy
-#| msgid "  -p, --port=PORT           database server port\n"
 msgid "  -p, --port=PORT          database server port\n"
-msgstr "  -p, --port=連接埠         資料庫伺服器連接埠\n"
+msgstr "  -p, --port=PORT          資料庫伺服器連接埠\n"
 
 #: help.c:116
-#, fuzzy
-#| msgid "  -U, --username=NAME       database superuser name\n"
 msgid "  -U, --username=USERNAME  database user name\n"
-msgstr "  -U, --username=NAME       資料庫超級使用者名稱\n"
+msgstr "  -U, --username=USERNAME  資料庫使用者名稱\n"
 
 #: help.c:117
 msgid "  -w, --no-password        never prompt for password\n"
@@ -3356,7 +3312,7 @@ msgstr "  \\gset [PREFIX]         執行查詢並將結果存儲在 psql 變數�
 
 #: help.c:176
 msgid "  \\gx [(OPTIONS)] [FILE] as \\g, but forces expanded output mode\n"
-msgstr "  \\gx [(OPTIONS)] [FILE] 與 \\g 相同，但強制使用擴展輸出模式\n"
+msgstr "  \\gx [(OPTIONS)] [FILE] 與 \\g 相同，但強制使用展開輸出模式\n"
 
 # help.c:183
 #: help.c:177
@@ -3367,25 +3323,25 @@ msgstr "  \\q                     結束 psql\n"
 msgid ""
 "  \\restrict RESTRICT_KEY\n"
 "                         enter restricted mode with provided key\n"
-msgstr ""
+msgstr "  \\restrict RESTRICT_KEY\n                         使用提供的金鑰進入限制模式\n"
 
 #: help.c:180
 msgid ""
 "  \\unrestrict RESTRICT_KEY\n"
 "                         exit restricted mode if key matches\n"
-msgstr ""
+msgstr "  \\unrestrict RESTRICT_KEY\n                         金鑰相符時結束限制模式\n"
 
 #: help.c:182
 msgid ""
 "  \\watch [[i=]SEC] [c=N] [m=MIN]\n"
 "                         execute query every SEC seconds, up to N times,\n"
 "                         stop if less than MIN rows are returned\n"
-msgstr ""
+msgstr "  \\watch [[i=]SEC] [c=N] [m=MIN]\n                         每 SEC 秒執行一次查詢，最多執行 N 次，\n                         回傳資料列少於 MIN 時停止\n"
 
 #: help.c:185 help.c:193 help.c:205 help.c:215 help.c:222 help.c:279 help.c:287
 #: help.c:307 help.c:320 help.c:329
 msgid "\n"
-msgstr ""
+msgstr "\n"
 
 #: help.c:187
 msgid "Help\n"
@@ -3456,7 +3412,7 @@ msgstr "輸入/輸出\n"
 # help.c:251
 #: help.c:208
 msgid "  \\copy ...              perform SQL COPY with data stream to the client host\n"
-msgstr "  \\copy ...              用 SQL 的 COPY 並將資料流傳送至用戶端\n"
+msgstr "  \\copy ...              用 SQL 的 COPY 並將資料流傳送至客戶端\n"
 
 # help.c:204
 #: help.c:209
@@ -3533,7 +3489,7 @@ msgstr "  \\d[S+]  NAME           描述資料表、檢視表、序列、索引\
 # help.c:215
 #: help.c:228
 msgid "  \\da[S]  [PATTERN]      list aggregates\n"
-msgstr "  \\da[S]  [PATTERN]      列出聚合函數\n"
+msgstr "  \\da[S]  [PATTERN]      列出聚合函式\n"
 
 # help.c:228
 #: help.c:229
@@ -3543,21 +3499,21 @@ msgstr "  \\dA[+]  [PATTERN]      列出存取方式\n"
 # help.c:224
 #: help.c:230
 msgid "  \\dAc[+] [AMPTRN [TYPEPTRN]]  list operator classes\n"
-msgstr "  \\dAc[+] [AMPTRN [TYPEPTRN]]  列出運算符類別\n"
+msgstr "  \\dAc[+] [AMPTRN [TYPEPTRN]]  列出運算子類別\n"
 
 # help.c:224
 #: help.c:231
 msgid "  \\dAf[+] [AMPTRN [TYPEPTRN]]  list operator families\n"
-msgstr "  \\dAf[+] [AMPTRN [TYPEPTRN]]  列出運算符族群\n"
+msgstr "  \\dAf[+] [AMPTRN [TYPEPTRN]]  列出運算子族群\n"
 
 # help.c:224
 #: help.c:232
 msgid "  \\dAo[+] [AMPTRN [OPFPTRN]]   list operators of operator families\n"
-msgstr "  \\dAo[+] [AMPTRN [OPFPTRN]]   列出運算符族群的運算符\n"
+msgstr "  \\dAo[+] [AMPTRN [OPFPTRN]]   列出運算子族群的運算子\n"
 
 #: help.c:233
 msgid "  \\dAp[+] [AMPTRN [OPFPTRN]]   list support functions of operator families\n"
-msgstr "  \\dAp[+] [AMPTRN [OPFPTRN]]   列出運算符族群的支援函數\n"
+msgstr "  \\dAp[+] [AMPTRN [OPFPTRN]]   列出運算子族群的支援函式\n"
 
 # help.c:228
 #: help.c:234
@@ -3624,9 +3580,7 @@ msgstr "  \\dew[+] [PATTERN]      列出外部資料封裝程式\n"
 msgid ""
 "  \\df[anptw][S+] [FUNCPTRN [TYPEPTRN ...]]\n"
 "                         list [only agg/normal/procedure/trigger/window] functions\n"
-msgstr ""
-"  \\df[anptw][S+] [FUNCPTRN [TYPEPTRN ...]]\n"
-"                         列出[僅聚合函數/一般函數/程序/觸發器/視窗]函数\n"
+msgstr "  \\df[anptw][S+] [FUNCPTRN [TYPEPTRN ...]]\n                         列出[僅聚合函數/一般函數/程序/觸發器/視窗]函數\n"
 
 # help.c:221
 #: help.c:248
@@ -3646,7 +3600,7 @@ msgstr "  \\dFp[+] [PATTERN]      列出文字搜尋解析器\n"
 # help.c:228
 #: help.c:251
 msgid "  \\dFt[+] [PATTERN]      list text search templates\n"
-msgstr "  \\dFt[+] [PATTERN]      列出文字搜尋範本\n"
+msgstr "  \\dFt[+] [PATTERN]      列出文字搜尋樣板\n"
 
 # help.c:222
 #: help.c:252
@@ -3683,9 +3637,7 @@ msgstr "  \\dn[S+] [PATTERN]      列出 schema\n"
 msgid ""
 "  \\do[S+] [OPPTRN [TYPEPTRN [TYPEPTRN]]]\n"
 "                         list operators\n"
-msgstr ""
-"  \\do[S+] [OPPTRN [TYPEPTRN [TYPEPTRN]]]\n"
-"                         列出運算符\n"
+msgstr "  \\do[S+] [OPPTRN [TYPEPTRN [TYPEPTRN]]]\n                         列出運算子\n"
 
 # help.c:220
 #: help.c:260
@@ -3754,7 +3706,7 @@ msgstr "  \\dx[+]  [PATTERN]      列出擴充模組\n"
 # help.c:218
 #: help.c:273
 msgid "  \\dX     [PATTERN]      list extended statistics\n"
-msgstr "  \\dX     [PATTERN]      列出擴展統計資料\n"
+msgstr "  \\dX     [PATTERN]      列出延伸統計資訊\n"
 
 # help.c:222
 #: help.c:274
@@ -3769,7 +3721,7 @@ msgstr "  \\l[+]   [PATTERN]      列出資料庫\n"
 # help.c:193
 #: help.c:276
 msgid "  \\sf[+]  FUNCNAME       show a function's definition\n"
-msgstr "  \\sf[+]  FUNCNAME       顯示函數的定義\n"
+msgstr "  \\sf[+]  FUNCNAME       顯示函式的定義\n"
 
 # help.c:193
 #: help.c:277
@@ -3834,15 +3786,6 @@ msgid "  \\H                     toggle HTML output mode (currently %s)\n"
 msgstr "  \\H                     切換 HTML 輸出模式(目前是 %s)\n"
 
 #: help.c:295
-#, fuzzy
-#| msgid ""
-#| "  \\pset [NAME [VALUE]]   set table output option\n"
-#| "                         (border|columns|csv_fieldsep|expanded|fieldsep|\n"
-#| "                         fieldsep_zero|footer|format|linestyle|null|\n"
-#| "                         numericlocale|pager|pager_min_lines|recordsep|\n"
-#| "                         recordsep_zero|tableattr|title|tuples_only|\n"
-#| "                         unicode_border_linestyle|unicode_column_linestyle|\n"
-#| "                         unicode_header_linestyle)\n"
 msgid ""
 "  \\pset [NAME [VALUE]]   set table output option\n"
 "                         (border|columns|csv_fieldsep|expanded|fieldsep|\n"
@@ -3851,14 +3794,7 @@ msgid ""
 "                         recordsep_zero|tableattr|title|tuples_only|\n"
 "                         unicode_border_linestyle|unicode_column_linestyle|\n"
 "                         unicode_header_linestyle|xheader_width)\n"
-msgstr ""
-"  \\pset [NAME [VALUE]]   設定表格輸出選項\n"
-"                         (border|columns|csv_fieldsep|expanded|fieldsep|\n"
-"                         fieldsep_zero|footer|format|linestyle|null|\n"
-"                         numericlocale|pager|pager_min_lines|recordsep|\n"
-"                         recordsep_zero|tableattr|title|tuples_only|\n"
-"                         unicode_border_linestyle|unicode_column_linestyle|\n"
-"                         unicode_header_linestyle)\n"
+msgstr "  \\pset [NAME [VALUE]]   設定表格輸出選項\n                         (border|columns|csv_fieldsep|expanded|fieldsep|\n                         fieldsep_zero|footer|format|linestyle|null|\n                         numericlocale|pager|pager_min_lines|recordsep|\n                         recordsep_zero|tableattr|title|tuples_only|\n                         unicode_border_linestyle|unicode_column_linestyle|\n                         unicode_header_linestyle|xheader_width)\n"
 
 # help.c:243
 #: help.c:302
@@ -3875,7 +3811,7 @@ msgstr "  \\T [STRING]            設定 HTML <table> 標籤屬性，若無則�
 #: help.c:305
 #, c-format
 msgid "  \\x [on|off|auto]       toggle expanded output (currently %s)\n"
-msgstr "  \\x [on|off|auto]       切換擴展輸出模式(目前是 %s)\n"
+msgstr "  \\x [on|off|auto]       切換展開輸出模式(目前是 %s)\n"
 
 #: help.c:306
 msgid "auto"
@@ -3912,7 +3848,7 @@ msgstr "  \\conninfo              顯示目前連線資訊\n"
 # help.c:180
 #: help.c:318
 msgid "  \\encoding [ENCODING]   show or set client encoding\n"
-msgstr "  \\encoding [ENCODING]   顯示或設定用戶端編碼\n"
+msgstr "  \\encoding [ENCODING]   顯示或設定客戶端編碼\n"
 
 #: help.c:319
 msgid "  \\password [USERNAME]   securely change the password for a user\n"
@@ -3984,10 +3920,7 @@ msgid ""
 "  psql --set=NAME=VALUE\n"
 "  or \\set NAME VALUE inside psql\n"
 "\n"
-msgstr ""
-"  psql --set=NAME=VALUE\n"
-"  或在 pgsql 中 \\set NAME VALUE\n"
-"\n"
+msgstr "  psql --set=NAME\n  或在 pgsql 中 \\set NAME VALUE\n\n"
 
 #: help.c:379
 msgid ""
@@ -4080,25 +4013,19 @@ msgstr ""
 msgid ""
 "  HISTCONTROL\n"
 "    controls command history [ignorespace, ignoredups, ignoreboth]\n"
-msgstr ""
-"  HISTCONTROL\n"
-"    控制指令歷史紀錄 [ignorespace, ignoredups, ignoreboth]\n"
+msgstr "  HISTCONTROL\n    控制指令歷史記錄 [ignorespace, ignoredups, ignoreboth]\n"
 
 #: help.c:404
 msgid ""
 "  HISTFILE\n"
 "    file name used to store the command history\n"
-msgstr ""
-"  HISTFILE\n"
-"    用於儲存指令歷史紀錄的檔案名稱\n"
+msgstr "  HISTFILE\n    用於儲存指令歷史記錄的檔案名稱\n"
 
 #: help.c:406
 msgid ""
 "  HISTSIZE\n"
 "    maximum number of commands to store in the command history\n"
-msgstr ""
-"  HISTSIZE\n"
-"    儲存在指令歷史紀錄中的最大指令數量\n"
+msgstr "  HISTSIZE\n    儲存在指令歷史記錄中的最大指令數量\n"
 
 # common.c:636
 # common.c:871
@@ -4140,17 +4067,13 @@ msgstr ""
 msgid ""
 "  ON_ERROR_ROLLBACK\n"
 "    if set, an error doesn't stop a transaction (uses implicit savepoints)\n"
-msgstr ""
-"  ON_ERROR_ROLLBACK\n"
-"    若設定，錯誤不會停止交易(使用隱式保存點)\n"
+msgstr "  ON_ERROR_ROLLBACK\n    若設定，錯誤不會停止交易(使用隱式儲存點)\n"
 
 #: help.c:419
 msgid ""
 "  ON_ERROR_STOP\n"
 "    stop batch execution after error\n"
-msgstr ""
-"  ON_ERROR_STOP\n"
-"    在錯誤發生後停止批次執行\n"
+msgstr "  ON_ERROR_ROLLBACK\n    若設定，錯誤不會停止交易(使用隱式儲存點)\n"
 
 #: help.c:421
 msgid ""
@@ -4310,10 +4233,7 @@ msgid ""
 "  psql --pset=NAME[=VALUE]\n"
 "  or \\pset NAME [VALUE] inside psql\n"
 "\n"
-msgstr ""
-"  psql --pset=NAME[=VALUE]\n"
-"  或在 psql 中 \\pset NAME [VALUE]\n"
-"\n"
+msgstr "  psql --pset=NAME\n  或在 psql 中 \\pset NAME [VALUE]\n\n"
 
 #: help.c:463
 msgid ""
@@ -4327,21 +4247,14 @@ msgstr ""
 msgid ""
 "  columns\n"
 "    target width for the wrapped format\n"
-msgstr ""
-"  columns\n"
-"    封裝格式的目標寬度是 %d。\n"
+msgstr "  columns\n    封裝格式的目標寬度\n"
 
 #: help.c:467
-#, fuzzy, c-format
-#| msgid ""
-#| "  fieldsep\n"
-#| "    field separator for unaligned output (default \"%s\")\n"
+#, c-format
 msgid ""
 "  csv_fieldsep\n"
 "    field separator for CSV output format (default \"%c\")\n"
-msgstr ""
-"  fieldsep\n"
-"    用於非對齊輸出的欄位分隔符(預設值 \"%s\")\n"
+msgstr "  csv_fieldsep\n    CSV 輸出格式的欄位分隔符號 (預設 \"%c\")\n"
 
 #: help.c:470
 msgid ""
@@ -4406,9 +4319,7 @@ msgstr ""
 msgid ""
 "  numericlocale\n"
 "    enable display of a locale-specific character to separate groups of digits\n"
-msgstr ""
-"  numericlocale\n"
-"    啟動顯示區域特定的字符來分隔數字群組\n"
+msgstr "  numericlocale\n    啟動顯示區域特定的字元來分隔數字群組\n"
 
 #: help.c:487
 msgid ""
@@ -4478,7 +4389,7 @@ msgid ""
 "  xheader_width\n"
 "    set the maximum width of the header for expanded output\n"
 "    [full, column, page, integer value]\n"
-msgstr ""
+msgstr "  xheader_width\n    設定展開輸出標頭的最大寬度\n    [full, column, page, 整數值]\n"
 
 #: help.c:508
 msgid ""
@@ -4712,7 +4623,7 @@ msgstr "%s: 未知的交易狀態"
 #: mainloop.c:133
 #, c-format
 msgid "\\if: escaped"
-msgstr ""
+msgstr "\\if: 已離開條件區塊"
 
 # mainloop.c:172
 #: mainloop.c:192
@@ -4738,7 +4649,7 @@ msgstr "用 \\? 取得說明。"
 
 #: mainloop.c:301
 msgid "You are using psql, the command-line interface to PostgreSQL."
-msgstr "您正在使用 psql，這是 PostgreSQL 的命令列界面"
+msgstr "您正在使用 psql，這是 PostgreSQL 的命令列介面"
 
 # startup.c:292
 #: mainloop.c:302
@@ -4771,12 +4682,12 @@ msgstr "用 Control-C 結束。"
 #: mainloop.c:462 mainloop.c:621
 #, c-format
 msgid "query ignored; use \\endif or Ctrl-C to exit current \\if block"
-msgstr "查詢被忽略；使用 \\endif 或按 Ctrl-C 以退出當前的 \\if 區塊"
+msgstr "查詢被忽略；使用 \\endif 或按 Ctrl-C 以結束當前的 \\if 區塊"
 
 #: mainloop.c:639
 #, c-format
 msgid "reached EOF without finding closing \\endif(s)"
-msgstr "已達到 EOF，但找不到結尾的 \\endif"
+msgstr "查詢被忽略；使用 \\endif 或按 Ctrl-C 以結束當前的 \\if 區塊"
 
 # scan.l:407
 #: psqlscanslash.l:664
@@ -5074,10 +4985,8 @@ msgstr "new_constraint_name"
 
 # describe.c:1174
 #: sql_help.c:263 sql_help.c:2276
-#, fuzzy
-#| msgid "where column_constraint is:"
 msgid "where domain_constraint is:"
-msgstr "其中 column_constraint 是:"
+msgstr "其中 domain_constraint 是:"
 
 #: sql_help.c:330 sql_help.c:1129
 msgid "new_version"
@@ -5466,10 +5375,8 @@ msgstr "publication_object"
 
 # describe.c:1636
 #: sql_help.c:926
-#, fuzzy
-#| msgid "publication_object"
 msgid "publication_drop_object"
-msgstr "publication_object"
+msgstr "publication_drop_object"
 
 # sql_help.h:366
 #: sql_help.c:928 sql_help.c:2672
@@ -5486,10 +5393,8 @@ msgid "table_and_columns"
 msgstr "table_and_columns"
 
 #: sql_help.c:937
-#, fuzzy
-#| msgid "where publication_object is one of:"
 msgid "and publication_drop_object is one of:"
-msgstr "其中 publication_object 可以是:"
+msgstr "且 publication_drop_object 可以是:"
 
 # catalog/dependency.c:1511
 #: sql_help.c:940 sql_help.c:1759 sql_help.c:2677 sql_help.c:5042
@@ -5885,10 +5790,8 @@ msgstr "escape_character"
 
 # describe.c:498
 #: sql_help.c:2021
-#, fuzzy
-#| msgid "action"
 msgid "error_action"
-msgstr "action"
+msgstr "error_action"
 
 # utils/mb/encnames.c:445
 #: sql_help.c:2022
@@ -5897,7 +5800,7 @@ msgstr "encoding_name"
 
 #: sql_help.c:2023
 msgid "verbosity"
-msgstr ""
+msgstr "verbosity"
 
 #: sql_help.c:2034
 msgid "access_method_type"
@@ -6047,10 +5950,8 @@ msgstr "strategy"
 
 # help.c:127
 #: sql_help.c:2246
-#, fuzzy
-#| msgid "icu_locale"
 msgid "builtin_locale"
-msgstr "icu_locale"
+msgstr "builtin_locale"
 
 # help.c:127
 #: sql_help.c:2247
@@ -6648,10 +6549,8 @@ msgid "select"
 msgstr "select"
 
 #: sql_help.c:4628 sql_help.c:4886 sql_help.c:5131
-#, fuzzy
-#| msgid "by reference"
 msgid "from_reference"
-msgstr "傳址"
+msgstr "from_reference"
 
 #: sql_help.c:4629 sql_help.c:4887 sql_help.c:5132
 msgid "where from_item can be one of:"
@@ -6726,7 +6625,7 @@ msgstr "delete"
 
 #: sql_help.c:4685 sql_help.c:4943 sql_help.c:5188
 msgid "merge"
-msgstr ""
+msgstr "merge"
 
 #: sql_help.c:4687 sql_help.c:4945 sql_help.c:5190
 msgid "search_seq_col_name"
@@ -6807,7 +6706,7 @@ msgstr "變更事件觸發器的定義"
 # sql_help.h:33
 #: sql_help.c:5250
 msgid "change the definition of an extension"
-msgstr "變更擴充功能的定義"
+msgstr "變更擴充模組的定義"
 
 # sql_help.h:85
 #: sql_help.c:5256
@@ -6851,22 +6750,22 @@ msgstr "變更實體化檢視表的定義"
 # sql_help.h:65
 #: sql_help.c:5304
 msgid "change the definition of an operator"
-msgstr "變更運算符的定義"
+msgstr "變更運算子的定義"
 
 # sql_help.h:61
 #: sql_help.c:5310
 msgid "change the definition of an operator class"
-msgstr "變更運算符類別的定義"
+msgstr "變更運算子類別的定義"
 
 # sql_help.h:65
 #: sql_help.c:5316
 msgid "change the definition of an operator family"
-msgstr "變更運算符族群的定義"
+msgstr "變更運算子族群的定義"
 
 # sql_help.h:33
 #: sql_help.c:5322
 msgid "change the definition of a row-level security policy"
-msgstr "變更列層級安全政策的定義"
+msgstr "變更運算子族群的定義"
 
 # sql_help.h:57
 #: sql_help.c:5328
@@ -6911,7 +6810,7 @@ msgstr "變更外部伺服器的定義"
 # sql_help.h:33
 #: sql_help.c:5376
 msgid "change the definition of an extended statistics object"
-msgstr "變更擴展統計物件的定義"
+msgstr "變更延伸統計物件的定義"
 
 # sql_help.h:45
 #: sql_help.c:5382
@@ -7106,21 +7005,21 @@ msgstr "建立實體化檢視表"
 # sql_help.h:173
 #: sql_help.c:5616
 msgid "define a new operator"
-msgstr "建立運算符"
+msgstr "建立運算子"
 
 # sql_help.h:169
 #: sql_help.c:5622
 msgid "define a new operator class"
-msgstr "建立運算符類別"
+msgstr "建立運算子類別"
 
 # sql_help.h:173
 #: sql_help.c:5628
 msgid "define a new operator family"
-msgstr "建立運算符族群"
+msgstr "建立運算子族群"
 
 #: sql_help.c:5634
 msgid "define a new row-level security policy for a table"
-msgstr "為資料表建立列層級安全政策"
+msgstr "建立運算子族群"
 
 # sql_help.h:165
 #: sql_help.c:5640
@@ -7155,7 +7054,7 @@ msgstr "建立外部伺服器"
 # sql_help.h:133
 #: sql_help.c:5682
 msgid "define extended statistics"
-msgstr "建立擴展統計"
+msgstr "建立延伸統計"
 
 # sql_help.h:153
 #: sql_help.c:5688
@@ -7328,21 +7227,21 @@ msgstr "刪除實體化檢視表"
 # sql_help.h:269
 #: sql_help.c:5898
 msgid "remove an operator"
-msgstr "刪除運算符"
+msgstr "刪除運算子"
 
 # sql_help.h:265
 #: sql_help.c:5904
 msgid "remove an operator class"
-msgstr "刪除運算符類別"
+msgstr "刪除運算子類別"
 
 # sql_help.h:269
 #: sql_help.c:5910
 msgid "remove an operator family"
-msgstr "刪除運算符族群"
+msgstr "刪除運算子族群"
 
 #: sql_help.c:5916
 msgid "remove database objects owned by a database role"
-msgstr "刪除資料庫角色擁有的資料庫物件"
+msgstr "刪除運算子族群"
 
 #: sql_help.c:5922
 msgid "remove a row-level security policy from a table"
@@ -7386,7 +7285,7 @@ msgstr "刪除外部伺服器描述符"
 # sql_help.h:237
 #: sql_help.c:5976
 msgid "remove extended statistics"
-msgstr "刪除擴展統計"
+msgstr "刪除延伸統計"
 
 # sql_help.h:249
 #: sql_help.c:5982
@@ -7455,7 +7354,7 @@ msgstr "執行已編譯陳述式"
 # sql_help.h:317
 #: sql_help.c:6072
 msgid "show the execution plan of a statement"
-msgstr "顯示陳述式的執行計劃"
+msgstr "顯示陳述式的執行計畫"
 
 # sql_help.h:321
 #: sql_help.c:6078
@@ -8040,3 +7939,4 @@ msgstr ""
 
 #~ msgid "where direction can be empty or one of:"
 #~ msgstr "其中 direction 可以是空的或是:"
+

@@ -1,16 +1,17 @@
 # Traditional Chinese message translation file for pg_config
-# Copyright (C) 2011 PostgreSQL Global Development Group
 # This file is distributed under the same license as the PostgreSQL package.
+#
 # 2004-12-13 Zhenbang Wei <forth@zbwei.net>
+# Ruohang Feng <rh@vonng.com>, 2026.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PostgreSQL 9.1\n"
+"Project-Id-Version: pg_config (PostgreSQL) 14\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
 "POT-Creation-Date: 2026-09-17 19:46+0000\n"
-"PO-Revision-Date: 2013-09-03 23:27-0400\n"
-"Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
-"Language-Team: EnterpriseDB translation team <dev-escalations@enterprisedb.com>\n"
+"PO-Revision-Date: 2026-09-19 12:00+0800\n"
+"Last-Translator: Ruohang Feng <rh@vonng.com>\n"
+"Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,16 +22,13 @@ msgstr ""
 #: ../../common/config_info.c:150 ../../common/config_info.c:158
 #: ../../common/config_info.c:166 ../../common/config_info.c:174
 #: ../../common/config_info.c:182 ../../common/config_info.c:190
-#, fuzzy
-#| msgid "not recorded\n"
 msgid "not recorded"
-msgstr "沒有紀錄\n"
+msgstr "未記錄"
 
 #: ../../common/exec.c:149 ../../common/exec.c:266 ../../common/exec.c:312
-#, fuzzy, c-format
-#| msgid "could not identify current directory: %s"
+#, c-format
 msgid "could not identify current directory: %m"
-msgstr "無法識別目前的目錄: %s"
+msgstr "無法確認目前目錄: %m"
 
 # command.c:122
 #: ../../common/exec.c:168
@@ -47,7 +45,7 @@ msgstr "無法讀取 binary \"%s\""
 #: ../../common/exec.c:226
 #, c-format
 msgid "could not find a \"%s\" to execute"
-msgstr "找不到 \"%s\" 執行"
+msgstr "找不到可執行的 \"%s\""
 
 # utils/init/postinit.c:292
 #: ../../common/exec.c:282 ../../common/exec.c:321
@@ -63,10 +61,9 @@ msgstr "無法讀取符號連結 \"%s\": %m"
 
 # fe-misc.c:991
 #: ../../common/exec.c:422
-#, fuzzy, c-format
-#| msgid "select() failed: %m"
+#, c-format
 msgid "%s() failed: %m"
-msgstr "select() 失敗: %m"
+msgstr "%s() 失敗: %m"
 
 # commands/sequence.c:798 executor/execGrouping.c:328
 # executor/execGrouping.c:388 executor/nodeIndexscan.c:1051 lib/dllist.c:43
@@ -90,7 +87,7 @@ msgstr "select() 失敗: %m"
 # utils/mmgr/aset.c:700 utils/mmgr/aset.c:893 utils/mmgr/portalmem.c:75
 #: ../../common/exec.c:560 ../../common/exec.c:605 ../../common/exec.c:697
 msgid "out of memory"
-msgstr "記憶體用盡"
+msgstr "記憶體不足"
 
 #: pg_config.c:74
 #, c-format
@@ -98,24 +95,19 @@ msgid ""
 "\n"
 "%s provides information about the installed version of PostgreSQL.\n"
 "\n"
-msgstr ""
-"\n"
-"%s 顯示已安裝 PostgreSQL 資訊。\n"
-"\n"
+msgstr "\n%s 提供關於已安裝 PostgreSQL 版本的資訊。\n\n"
 
 #: pg_config.c:75
 #, c-format
 msgid "Usage:\n"
-msgstr "使用方法:\n"
+msgstr "用法:\n"
 
 #: pg_config.c:76
 #, c-format
 msgid ""
 "  %s [OPTION]...\n"
 "\n"
-msgstr ""
-"  %s [選項]...\n"
-"\n"
+msgstr "  %s [OPTION]...\n\n"
 
 #: pg_config.c:77
 #, c-format
@@ -125,78 +117,76 @@ msgstr "選項:\n"
 #: pg_config.c:78
 #, c-format
 msgid "  --bindir              show location of user executables\n"
-msgstr "  --bindir              顯示執行檔位置\n"
+msgstr "  --bindir              顯示使用者可執行檔的位置\n"
 
 #: pg_config.c:79
 #, c-format
 msgid "  --docdir              show location of documentation files\n"
-msgstr "  --docdir              顯示文件檔位置\n"
+msgstr "  --docdir              顯示文件檔的位置\n"
 
 #: pg_config.c:80
 #, c-format
 msgid "  --htmldir             show location of HTML documentation files\n"
-msgstr "  --htmldir             顯示 HTML 文件檔位置\n"
+msgstr "  --htmldir             顯示 HTML 文件檔的位置\n"
 
 #: pg_config.c:81
 #, c-format
 msgid ""
 "  --includedir          show location of C header files of the client\n"
 "                        interfaces\n"
-msgstr "  --includedir          顯使用戶端介面 C 標頭檔位置\n"
+msgstr "  --includedir          顯示客戶端介面 C 標頭檔的位置\n"
 
 #: pg_config.c:83
 #, c-format
 msgid "  --pkgincludedir       show location of other C header files\n"
-msgstr "  --pkgincludedir       顯示其他 C 標頭檔位置\n"
+msgstr "  --pkgincludedir       顯示其他 C 標頭檔的位置\n"
 
 #: pg_config.c:84
 #, c-format
 msgid "  --includedir-server   show location of C header files for the server\n"
-msgstr "  --includedir-server   顯示伺服器 C 標頭檔位置\n"
+msgstr "  --includedir-server   顯示伺服器 C 標頭檔的位置\n"
 
 #: pg_config.c:85
 #, c-format
 msgid "  --libdir              show location of object code libraries\n"
-msgstr "  --libdir              顯示程式庫位置\n"
+msgstr "  --libdir              顯示目的碼程式庫的位置\n"
 
 #: pg_config.c:86
 #, c-format
 msgid "  --pkglibdir           show location of dynamically loadable modules\n"
-msgstr "  --pkglibdir           顯示可動態載入模組位置\n"
+msgstr "  --pkglibdir           顯示動態載入模組的位置\n"
 
 #: pg_config.c:87
 #, c-format
 msgid "  --localedir           show location of locale support files\n"
-msgstr "  --localedir           顯示區域支援檔位置\n"
+msgstr "  --localedir           顯示區域支援檔的位置\n"
 
 #: pg_config.c:88
 #, c-format
 msgid "  --mandir              show location of manual pages\n"
-msgstr "  --mandir              顯示使用說明位置\n"
+msgstr "  --mandir              顯示使用手冊的位置\n"
 
 #: pg_config.c:89
 #, c-format
 msgid "  --sharedir            show location of architecture-independent support files\n"
-msgstr "  --sharedir            顯示與架構無關的支援檔位置\n"
+msgstr "  --sharedir            顯示與架構無關的支援檔的位置\n"
 
 #: pg_config.c:90
 #, c-format
 msgid "  --sysconfdir          show location of system-wide configuration files\n"
-msgstr "  --sysconfdir          顯示系統層級設定檔位置\n"
+msgstr "  --sysconfdir          顯示系統全域組態檔的位置\n"
 
 #: pg_config.c:91
 #, c-format
 msgid "  --pgxs                show location of extension makefile\n"
-msgstr "  --pgxs                顯示外部程式 makefile 位置\n"
+msgstr "  --pgxs                顯示擴充模組 makefile 位置\n"
 
 #: pg_config.c:92
 #, c-format
 msgid ""
 "  --configure           show options given to \"configure\" script when\n"
 "                        PostgreSQL was built\n"
-msgstr ""
-"  --configure           顯示建立 PostgreSQL 時 \"configure\" 命令搞\n"
-"                        所使用的參數\n"
+msgstr "  --configure           顯示建立 PostgreSQL 時給 \"configure\" 腳本的參數\n"
 
 #: pg_config.c:94
 #, c-format
@@ -241,13 +231,12 @@ msgstr "  --libs                顯示建立 PostgreSQL 時使用的 LIBS 值\n"
 #: pg_config.c:102
 #, c-format
 msgid "  --version             show the PostgreSQL version\n"
-msgstr "  --version             顯示 PostgreSQL 版本\n"
+msgstr "  --version             顯示 PostgreSQL 的版本\n"
 
 #: pg_config.c:103
-#, fuzzy, c-format
-#| msgid "  -?, --help                show this help, then exit\n"
+#, c-format
 msgid "  -?, --help            show this help, then exit\n"
-msgstr "  -?, --help                顯示這份說明然後結束\n"
+msgstr "  -?, --help                顯示說明，然後結束\n"
 
 #: pg_config.c:104
 #, c-format
@@ -255,32 +244,28 @@ msgid ""
 "\n"
 "With no arguments, all known items are shown.\n"
 "\n"
-msgstr ""
-"\n"
-"沒有參數，已顯示所有已知項目。\n"
-"\n"
+msgstr "\n沒有參數時顯示所有已知項目。\n\n"
 
 #: pg_config.c:105
-#, fuzzy, c-format
-#| msgid "Report bugs to <pgsql-bugs@postgresql.org>.\n"
+#, c-format
 msgid "Report bugs to <%s>.\n"
-msgstr "回報錯誤至 <pgsql-bugs@postgresql.org>。\n"
+msgstr "回報錯誤至 <%s>。\n"
 
 #: pg_config.c:106
 #, c-format
 msgid "%s home page: <%s>\n"
-msgstr ""
+msgstr "%s 首頁: <%s>\n"
 
 # postmaster/postmaster.c:512 postmaster/postmaster.c:525
 #: pg_config.c:112
 #, c-format
 msgid "Try \"%s --help\" for more information.\n"
-msgstr "執行 \"%s --help\" 顯示更多資訊。\n"
+msgstr "用 \"%s --help\" 取得更多資訊。\n"
 
 #: pg_config.c:154
 #, c-format
 msgid "%s: could not find own program executable\n"
-msgstr "%s: 找不到程式執行檔\n"
+msgstr "%s: 找不到自身的程式執行檔\n"
 
 #: pg_config.c:181
 #, c-format
@@ -338,3 +323,4 @@ msgstr "%s: 無效的參數: %s\n"
 #, c-format
 #~ msgid "could not read symbolic link \"%s\""
 #~ msgstr "無法讀取符號連結 \"%s\""
+

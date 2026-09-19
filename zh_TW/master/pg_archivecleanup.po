@@ -1,20 +1,21 @@
 # Traditional Chinese message translation file for pg_archivecleanup
-# Copyright (C) 2023 PostgreSQL Global Development Group
-# This file is distributed under the same license as the pg_archivecleanup (PostgreSQL) package.
+# This file is distributed under the same license as the PostgreSQL package.
+#
+# Ruohang Feng <rh@vonng.com>, 2026.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pg_archivecleanup (PostgreSQL) 16\n"
+"Project-Id-Version: pg_archivecleanup (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
 "POT-Creation-Date: 2026-09-18 04:25+0000\n"
-"PO-Revision-Date: 2023-11-06 08:49+0800\n"
-"Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-09-19 12:00+0800\n"
+"Last-Translator: Ruohang Feng <rh@vonng.com>\n"
+"Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 # libpq/be-secure.c:294 libpq/be-secure.c:387
 #: ../../../src/common/logging.c:293 ../../../src/common/logging.c:295
@@ -72,12 +73,12 @@ msgstr "無法複製 null 指標(內部錯誤)\n"
 #: ../../common/fe_memutils.c:209
 #, c-format
 msgid "invalid memory allocation request size %zu + %zu\n"
-msgstr ""
+msgstr "無效的記憶體配置請求大小 %zu + %zu\n"
 
 #: ../../common/fe_memutils.c:228
 #, c-format
 msgid "invalid memory allocation request size %zu * %zu\n"
-msgstr ""
+msgstr "無效的記憶體配置請求大小 %zu * %zu\n"
 
 #: pg_archivecleanup.c:69
 #, c-format
@@ -147,21 +148,19 @@ msgstr ""
 #: pg_archivecleanup.c:264
 #, c-format
 msgid "  -b, --clean-backup-history  clean up files including backup history files\n"
-msgstr ""
+msgstr "  -b, --clean-backup-history  清理包含備份歷史檔案在內的檔案\n"
 
 #: pg_archivecleanup.c:265
-#, fuzzy, c-format
-#| msgid "  -d             generate debug output (verbose mode)\n"
+#, c-format
 msgid "  -d, --debug                 generate debug output (verbose mode)\n"
-msgstr "  -d             產生除錯輸出(詳細模式)\n"
+msgstr "  -d, --debug                 產生除錯輸出(詳細模式)\n"
 
 #: pg_archivecleanup.c:266
-#, fuzzy, c-format
-#| msgid "  -n             dry run, show the names of the files that would be removed\n"
+#, c-format
 msgid ""
 "  -n, --dry-run               dry run, show the names of the files that would be\n"
 "                              removed\n"
-msgstr "  -n             模擬執行，顯示將被移除的檔案名稱\n"
+msgstr "  -n, --dry-run               模擬執行，顯示將被移除的檔案名稱\n"
 
 #: pg_archivecleanup.c:268
 #, c-format
@@ -169,14 +168,11 @@ msgid "  -V, --version               output version information, then exit\n"
 msgstr "  -V, --version               顯示版本，然後結束\n"
 
 #: pg_archivecleanup.c:269
-#, fuzzy, c-format
-#| msgid ""
-#| "  -L, --use-list=FILENAME      use table of contents from this file for\n"
-#| "                               selecting/ordering output\n"
+#, c-format
 msgid ""
 "  -x, --strip-extension=EXT   strip this extension before identifying files for\n"
 "                              clean up\n"
-msgstr "  -L, --use-list=FILENAME  用檔案中的目錄表來選擇/排序輸出\n"
+msgstr "  -x, --strip-extension=EXT   識別待清理檔案前，去掉此副檔名\n"
 
 #: pg_archivecleanup.c:271
 #, c-format
@@ -184,25 +180,14 @@ msgid "  -?, --help                  show this help, then exit\n"
 msgstr "  -?, --help                  顯示說明，然後結束\n"
 
 #: pg_archivecleanup.c:272
-#, fuzzy, c-format
-#| msgid ""
-#| "\n"
-#| "For use as archive_cleanup_command in postgresql.conf:\n"
-#| "  archive_cleanup_command = 'pg_archivecleanup [OPTION]... ARCHIVELOCATION %%r'\n"
-#| "e.g.\n"
-#| "  archive_cleanup_command = 'pg_archivecleanup /mnt/server/archiverdir %%r'\n"
+#, c-format
 msgid ""
 "\n"
 "For use as \"archive_cleanup_command\" in postgresql.conf:\n"
 "  archive_cleanup_command = 'pg_archivecleanup [OPTION]... ARCHIVELOCATION %%r'\n"
 "e.g.\n"
 "  archive_cleanup_command = 'pg_archivecleanup /mnt/server/archiverdir %%r'\n"
-msgstr ""
-"\n"
-"用於 postgresql.conf 中的 archive_cleanup_command:\n"
-"  archive_cleanup_command = 'pg_archivecleanup [OPTION]... ARCHIVELOCATION %%r'\n"
-"例如:\n"
-"  archive_cleanup_command = 'pg_archivecleanup /mnt/server/archiverdir %%r'\n"
+msgstr "\n用於 postgresql.conf 中的 \"archive_cleanup_command\":\n  archive_cleanup_command = 'pg_archivecleanup [OPTION]... ARCHIVELOCATION %%r'\n例如\n  archive_cleanup_command = 'pg_archivecleanup /mnt/server/archiverdir %%r'\n"
 
 #: pg_archivecleanup.c:277
 #, c-format
@@ -247,16 +232,14 @@ msgid "too many command-line arguments"
 msgstr "命令列參數過多"
 
 #: pg_archivecleanup.c:380
-#, fuzzy, c-format
-#| msgid "Running in debug mode.\n"
+#, c-format
 msgid "executing in dry-run mode"
-msgstr "以除錯模式執行。\n"
+msgstr "正在以模擬執行模式執行"
 
 #: pg_archivecleanup.c:381
-#, fuzzy, c-format
-#| msgid "sockets will be created"
+#, c-format
 msgid "No files will be removed."
-msgstr "將建立 socket"
+msgstr "不會移除任何檔案。"
 
 #, c-format
 #~ msgid "  -?, --help     show this help, then exit\n"
@@ -269,3 +252,4 @@ msgstr "將建立 socket"
 #, c-format
 #~ msgid "  -x EXT         clean up files if they have this extension\n"
 #~ msgstr "  -x EXT         清除有此副檔名的檔案\n"
+

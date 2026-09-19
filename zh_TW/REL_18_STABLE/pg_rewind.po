@@ -1,22 +1,22 @@
 # Traditional Chinese message translation file for pg_rewind
-# Copyright (C) 2023 PostgreSQL Global Development Group
-# This file is distributed under the same license as the pg_rewind (PostgreSQL) package.
+# This file is distributed under the same license as the PostgreSQL package.
+#
 # Zhenbang Wei <znbang@gmail.com>, 2023.
+# Ruohang Feng <rh@vonng.com>, 2026.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pg_rewind (PostgreSQL) 16\n"
+"Project-Id-Version: pg_rewind (PostgreSQL) 18\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
 "POT-Creation-Date: 2026-09-18 04:45+0000\n"
-"PO-Revision-Date: 2023-11-06 08:49+0800\n"
-"Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-09-19 12:00+0800\n"
+"Last-Translator: Ruohang Feng <rh@vonng.com>\n"
+"Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4.1\n"
 
 # libpq/be-secure.c:294 libpq/be-secure.c:387
 #: ../../../src/common/logging.c:279
@@ -147,19 +147,18 @@ msgstr "無法複製 null 指標(內部錯誤)\n"
 #: ../../common/fe_memutils.c:209
 #, c-format
 msgid "invalid memory allocation request size %zu + %zu\n"
-msgstr ""
+msgstr "無效的記憶體配置請求大小 %zu + %zu\n"
 
 #: ../../common/fe_memutils.c:228
 #, c-format
 msgid "invalid memory allocation request size %zu * %zu\n"
-msgstr ""
+msgstr "無效的記憶體配置請求大小 %zu * %zu\n"
 
 # libpq/be-fsstubs.c:484
 #: ../../common/file_utils.c:75
-#, fuzzy, c-format
-#| msgid "could not create server file \"%s\": %m"
+#, c-format
 msgid "could not synchronize file system for file \"%s\": %m"
-msgstr "無法建立伺服器檔案\"%s\": %m"
+msgstr "無法同步檔案 \"%s\" 所在的檔案系統: %m"
 
 # access/transam/xlog.c:1936 access/transam/xlog.c:2038
 # access/transam/xlog.c:5291
@@ -171,10 +170,9 @@ msgstr "無法取得檔案 \"%s\" 的狀態: %m"
 
 #: ../../common/file_utils.c:133 ../../common/file_utils.c:243
 #: ../../fe_utils/option_utils.c:99
-#, fuzzy, c-format
-#| msgid "this build does not support compression with %s"
+#, c-format
 msgid "this build does not support sync method \"%s\""
-msgstr "此版本不支援使用 %s 進行壓縮"
+msgstr "此版本不支援同步方法 \"%s\""
 
 # access/transam/slru.c:930 commands/tablespace.c:529
 # commands/tablespace.c:694 utils/adt/misc.c:174
@@ -188,7 +186,7 @@ msgstr "無法開啟目錄 \"%s\": %m"
 #: ../../common/file_utils.c:174 ../../common/file_utils.c:338 file_ops.c:485
 #, c-format
 msgid "could not read directory \"%s\": %m"
-msgstr "無法讀取目錄\"%s\": %m"
+msgstr "無法讀取目錄 \"%s\": %m"
 
 # access/transam/xlog.c:3037 access/transam/xlog.c:3819
 # access/transam/xlog.c:3862 commands/user.c:282 commands/user.c:412
@@ -196,18 +194,18 @@ msgstr "無法讀取目錄\"%s\": %m"
 #: ../../common/file_utils.c:520
 #, c-format
 msgid "could not rename file \"%s\" to \"%s\": %m"
-msgstr "無法將檔案\"%s\"重新命名為\"%s\": %m"
+msgstr "無法將檔案 \"%s\" 重新命名為 \"%s\": %m"
 
 # utils/misc/guc.c:3792
 #: ../../common/percentrepl.c:79 ../../common/percentrepl.c:118
 #, c-format
 msgid "invalid value for parameter \"%s\": \"%s\""
-msgstr "給參數\"%s\"的值不合法: \"%s\""
+msgstr "給參數 \"%s\" 的值不合法: \"%s\""
 
 #: ../../common/percentrepl.c:80
 #, c-format
 msgid "String ends unexpectedly after escape character \"%%\"."
-msgstr "字串在轉義字元 \"%%\" 後意外結束。"
+msgstr "字串在逸出字元 \"%%\" 後意外結束。"
 
 #: ../../common/percentrepl.c:119
 #, c-format
@@ -259,10 +257,9 @@ msgid "could not open file \"%s\" restored from archive: %m"
 msgstr "無法開啟從封存檔還原的檔案 \"%s\": %m"
 
 #: ../../fe_utils/archive.c:98
-#, fuzzy, c-format
-#| msgid "restore_command failed: %s"
+#, c-format
 msgid "\"restore_command\" failed: %s"
-msgstr "restore_command 失敗: %s"
+msgstr "\"restore_command\" 失敗: %s"
 
 #: ../../fe_utils/archive.c:105
 #, c-format
@@ -282,10 +279,9 @@ msgstr "%s 必須在範圍 %d..%d 內"
 
 # utils/adt/acl.c:197
 #: ../../fe_utils/option_utils.c:106
-#, fuzzy, c-format
-#| msgid "unrecognized key word: \"%s\""
+#, c-format
 msgid "unrecognized sync method: %s"
-msgstr "無法辨識的關鍵字:\"%s\""
+msgstr "無法識別的同步方法: %s"
 
 # commands/sequence.c:798 executor/execGrouping.c:328
 # executor/execGrouping.c:388 executor/nodeIndexscan.c:1051 lib/dllist.c:43
@@ -342,22 +338,20 @@ msgstr "%s"
 
 # commands/copy.c:828
 #: ../../fe_utils/string_utils.c:587
-#, fuzzy, c-format
-#| msgid "shell command argument contains a newline or carriage return: \"%s\""
+#, c-format
 msgid "shell command argument contains a newline or carriage return: \"%s\"\n"
-msgstr "shell 命令的參數包含換行或歸位符號: \"%s\""
+msgstr "shell 命令的參數包含換行或歸位符號: \"%s\"\n"
 
 # commands/copy.c:828
 #: ../../fe_utils/string_utils.c:760
-#, fuzzy, c-format
-#| msgid "shell command argument contains a newline or carriage return: \"%s\""
+#, c-format
 msgid "database name contains a newline or carriage return: \"%s\"\n"
-msgstr "shell 命令的參數包含換行或歸位符號: \"%s\""
+msgstr "資料庫名稱包含換行或歸位符號: \"%s\"\n"
 
 #: file_ops.c:52
 #, c-format
 msgid "target file path is unsafe for open: \"%s\""
-msgstr ""
+msgstr "目標檔案路徑不安全，無法開啟: \"%s\""
 
 #: file_ops.c:70
 #, c-format
@@ -387,7 +381,7 @@ msgstr "對於一般檔案無效的動作(CREATE)"
 #: file_ops.c:195
 #, c-format
 msgid "target file path is unsafe for removal: \"%s\""
-msgstr ""
+msgstr "目標檔案路徑不安全，無法刪除: \"%s\""
 
 # access/transam/xlog.c:1944 access/transam/xlog.c:5453
 # access/transam/xlog.c:5607 postmaster/postmaster.c:3504
@@ -397,10 +391,9 @@ msgid "could not remove file \"%s\": %m"
 msgstr "無法刪除檔案 \"%s\": %m"
 
 #: file_ops.c:218
-#, fuzzy, c-format
-#| msgid "could not open file \"%s\" for truncation: %m"
+#, c-format
 msgid "target file path is unsafe for truncation: \"%s\""
-msgstr "無法開啟檔案 \"%s\" 進行縮短: %m"
+msgstr "目標檔案路徑不安全，無法截斷: \"%s\""
 
 #: file_ops.c:227
 #, c-format
@@ -415,7 +408,7 @@ msgstr "無法將檔案 \"%s\" 縮短到 %u: %m"
 #: file_ops.c:243
 #, c-format
 msgid "target directory path is unsafe for directory creation: \"%s\""
-msgstr ""
+msgstr "目標目錄路徑不安全，無法建立目錄: \"%s\""
 
 # commands/tablespace.c:154 commands/tablespace.c:162
 # commands/tablespace.c:168
@@ -427,7 +420,7 @@ msgstr "無法建立目錄 \"%s\": %m"
 #: file_ops.c:261
 #, c-format
 msgid "target directory path is unsafe for directory removal: \"%s\""
-msgstr ""
+msgstr "目標目錄路徑不安全，無法刪除目錄: \"%s\""
 
 # commands/tablespace.c:610
 #: file_ops.c:269
@@ -438,7 +431,7 @@ msgstr "無法刪除目錄 \"%s\": %m"
 #: file_ops.c:279
 #, c-format
 msgid "target symlink path is unsafe for creation: \"%s\""
-msgstr ""
+msgstr "目標符號連結路徑不安全，無法建立: \"%s\""
 
 #: file_ops.c:286
 #, c-format
@@ -448,7 +441,7 @@ msgstr "無法在 \"%s\" 建立符號連結: %m"
 #: file_ops.c:296
 #, c-format
 msgid "target symlink path is unsafe for removal: \"%s\""
-msgstr ""
+msgstr "目標符號連結路徑不安全，無法刪除: \"%s\""
 
 # commands/tablespace.c:355 commands/tablespace.c:984
 #: file_ops.c:303
@@ -497,7 +490,7 @@ msgstr "\"%s\" 的檔案類型未知"
 #: filemap.c:779
 #, c-format
 msgid "file \"%s\" is of different type in source and target"
-msgstr "檔案 \"%s\" 在來源和目標中的類型不同"
+msgstr "檔案 \"%s\" 在來源和目標中的型別不同"
 
 #: filemap.c:851
 #, c-format
@@ -505,16 +498,14 @@ msgid "could not decide what to do with file \"%s\""
 msgstr "無法決定如何處理檔案 \"%s\""
 
 #: libpq_source.c:130
-#, fuzzy, c-format
-#| msgid "could not clear search_path: %s"
+#, c-format
 msgid "could not clear \"search_path\": %s"
-msgstr "無法清除 search_path: %s"
+msgstr "無法清除 \"search_path\": %s"
 
 #: libpq_source.c:141
-#, fuzzy, c-format
-#| msgid "full_page_writes must be enabled in the source server"
+#, c-format
 msgid "\"full_page_writes\" must be enabled in the source server"
-msgstr "來源伺服器必須啟動 full_page_writes"
+msgstr "來源伺服器必須啟用 \"full_page_writes\""
 
 #: libpq_source.c:152
 #, c-format
@@ -569,7 +560,7 @@ msgstr "擷取遠端檔案時出現非預期的結果: %s"
 #: libpq_source.c:514
 #, c-format
 msgid "received more data chunks than requested"
-msgstr "收到比請求更多的資料塊"
+msgstr "收到比請求更多的資料區塊"
 
 #: libpq_source.c:518
 #, c-format
@@ -602,10 +593,9 @@ msgid "received data for file \"%s\", when requested for \"%s\""
 msgstr "收到檔案 \"%s\" 的資料，但請求的是 \"%s\" 的資料"
 
 #: libpq_source.c:579
-#, fuzzy, c-format
-#| msgid "received data at offset %lld of file \"%s\", when requested for offset %lld"
+#, c-format
 msgid "received data at offset %<PRId64> of file \"%s\", when requested for offset %lld"
-msgstr "收到檔案 \"%2$s\" 位移 %1$lld 處的資料，但請求的是位移 %3$lld 的資料"
+msgstr "收到檔案 \"%2$s\" 位移 %1$<PRId64> 處的資料，但請求的是位移 %3$lld 的資料"
 
 #: libpq_source.c:591
 #, c-format
@@ -615,7 +605,7 @@ msgstr "收到的資料超過對檔案 \"%s\" 的請求"
 #: libpq_source.c:604
 #, c-format
 msgid "unexpected number of data chunks received"
-msgstr "收到非預期數量的資料塊"
+msgstr "收到非預期數量的資料區塊"
 
 #: libpq_source.c:647
 #, c-format
@@ -655,12 +645,12 @@ msgstr "配置 WAL 讀取處理器時耗盡記憶體"
 #: parsexlog.c:92 parsexlog.c:146
 #, c-format
 msgid "could not read WAL record at %X/%X: %s"
-msgstr "無法讀取先前的 WAL 紀錄，位置 %X/%X: %s"
+msgstr "無法讀取先前的 WAL 記錄，位置 %X/%X: %s"
 
 #: parsexlog.c:96 parsexlog.c:149
 #, c-format
 msgid "could not read WAL record at %X/%X"
-msgstr "無法讀取先前的 WAL 紀錄，位置 %X/%X"
+msgstr "無法讀取先前的 WAL 記錄，位置 %X/%X"
 
 #: parsexlog.c:108
 #, c-format
@@ -670,12 +660,12 @@ msgstr "結束指標 %X/%X 不是有效的結束點，預期是 %X/%X"
 #: parsexlog.c:214
 #, c-format
 msgid "could not find previous WAL record at %X/%X: %s"
-msgstr "無法找到先前的 WAL 紀錄，位置 %X/%X: %s"
+msgstr "無法找到先前的 WAL 記錄，位置 %X/%X: %s"
 
 #: parsexlog.c:218
 #, c-format
 msgid "could not find previous WAL record at %X/%X"
-msgstr "無法找到先前的 WAL 紀錄，位置 %X/%X"
+msgstr "無法找到先前的 WAL 記錄，位置 %X/%X"
 
 # access/transam/slru.c:638 access/transam/xlog.c:1631
 # access/transam/xlog.c:2742 access/transam/xlog.c:2832
@@ -690,7 +680,7 @@ msgstr "無法 seek 檔案 \"%s\": %m"
 #: parsexlog.c:461
 #, c-format
 msgid "WAL record modifies a relation, but record type is not recognized: lsn: %X/%X, rmid: %d, rmgr: %s, info: %02X"
-msgstr "WAL 紀錄修改了關聯，但無法識別記錄類型: lsn: %X/%X, rmid: %d, rmgr: %s, info: %02X"
+msgstr "WAL 記錄修改了關聯，但無法識別記錄型別: lsn: %X/%X, rmid: %d, rmgr: %s, info: %02X"
 
 #: pg_rewind.c:94
 #, c-format
@@ -720,16 +710,11 @@ msgid "Options:\n"
 msgstr "選項: \n"
 
 #: pg_rewind.c:97
-#, fuzzy, c-format
-#| msgid ""
-#| "  -c, --restore-target-wal       use restore_command in target configuration to\n"
-#| "                                 retrieve WAL files from archives\n"
+#, c-format
 msgid ""
 "  -c, --restore-target-wal       use \"restore_command\" in target configuration to\n"
 "                                 retrieve WAL files from archives\n"
-msgstr ""
-"  -c, --restore-target-wal       使用目標設定中的 restore_command 來擷取\n"
-"                                 封存檔中的 WAL 檔\n"
+msgstr "  -c, --restore-target-wal       使用目標組態中的 \"restore_command\" 來擷取\n                                 封存檔中的 WAL 檔\n"
 
 #: pg_rewind.c:99
 #, c-format
@@ -761,7 +746,7 @@ msgstr "  -N, --no-sync                  不等待變更安全寫入磁碟\n"
 #: pg_rewind.c:105
 #, c-format
 msgid "  -P, --progress                 write progress messages\n"
-msgstr "  -P, --progress                 顯示進度資訊\n"
+msgstr "  -P, --progress                 顯示進度訊息\n"
 
 #: pg_rewind.c:106
 #, c-format
@@ -790,7 +775,7 @@ msgstr "      --no-ensure-shutdown       不自動修復不正常停止\n"
 #: pg_rewind.c:112
 #, c-format
 msgid "      --sync-method=METHOD       set method for syncing files to disk\n"
-msgstr ""
+msgstr "      --sync-method=METHOD       設定將檔案同步到磁碟的方法\n"
 
 #: pg_rewind.c:113
 #, c-format
@@ -862,7 +847,7 @@ msgstr "您必須以 PostgreSQL 超級使用者身分執行 %s。"
 #: pg_rewind.c:293
 #, c-format
 msgid "could not read permissions of directory \"%s\": %m"
-msgstr "無法讀取目錄\"%s\"的權限: %m"
+msgstr "無法讀取目錄 \"%s\" 的權限: %m"
 
 #: pg_rewind.c:314
 #, c-format
@@ -877,7 +862,7 @@ msgstr "來源和目標叢集在相同的時間軸上"
 #: pg_rewind.c:396
 #, c-format
 msgid "servers diverged at WAL location %X/%X on timeline %u"
-msgstr "伺服器分岐，WAL 位置 %X/%X，時間軸 %u"
+msgstr "伺服器分歧，WAL 位置 %X/%X，時間軸 %u"
 
 #: pg_rewind.c:451
 #, c-format
@@ -991,17 +976,15 @@ msgstr "非預期的控制檔大小 %d，預期為 %d"
 
 # access/transam/xlog.c:4532
 #: pg_rewind.c:1039
-#, fuzzy, c-format
-#| msgid "invalid secondary checkpoint link in control file"
+#, c-format
 msgid "invalid WAL segment size in control file (%d byte)"
 msgid_plural "invalid WAL segment size in control file (%d bytes)"
-msgstr[0] "控制檔中有無效的次要檢查點連結"
+msgstr[0] "控制檔中的 WAL 片段大小無效 (%d 位元組)"
 
 #: pg_rewind.c:1043
-#, fuzzy, c-format
-#| msgid "argument of --wal-segsize must be a power of two between 1 and 1024"
+#, c-format
 msgid "The WAL segment size must be a power of two between 1 MB and 1 GB."
-msgstr "--wal-segsize 的參數必須是1和1024之間的二的次方數"
+msgstr "WAL 片段大小必須是 1 MB 到 1 GB 之間的 2 的冪。"
 
 #: pg_rewind.c:1080 pg_rewind.c:1148
 #, c-format
@@ -1014,16 +997,14 @@ msgid "program \"%s\" was found by \"%s\" but was not the same version as %s"
 msgstr "\"%2$s\" 找到程式 \"%1$s\"，但版本不是 %3$s"
 
 #: pg_rewind.c:1112
-#, fuzzy, c-format
-#| msgid "restore_command is not set in the target cluster"
+#, c-format
 msgid "could not read \"restore_command\" from target cluster"
-msgstr "目標叢集中未設定 restore_command"
+msgstr "無法從目標叢集讀取 \"restore_command\""
 
 #: pg_rewind.c:1117
-#, fuzzy, c-format
-#| msgid "restore_command is not set in the target cluster"
+#, c-format
 msgid "\"restore_command\" is not set in the target cluster"
-msgstr "目標叢集中未設定 restore_command"
+msgstr "目標叢集中未設定 \"restore_command\""
 
 #: pg_rewind.c:1155
 #, c-format
@@ -1110,7 +1091,7 @@ msgstr "位於 %3$X/%4$X 的 contrecord 長度 %1$u 無效(預期為 %2$lld)"
 #: xlogreader.c:1153
 #, c-format
 msgid "invalid resource manager ID %u at %X/%X"
-msgstr "位於 %2$X/%3$X 的無效 block_id %1$u"
+msgstr "位於 %2$X/%3$X 的無效資源管理員 ID %1$u"
 
 # access/transam/xlog.c:2458
 #: xlogreader.c:1166 xlogreader.c:1182
@@ -1135,10 +1116,9 @@ msgid "invalid info bits %04X in WAL segment %s, LSN %X/%X, offset %u"
 msgstr "WAL 片段 %2$s 中的資訊位元 %1$04X 無效，LSN %3$X/%4$X，位移 %5$u"
 
 #: xlogreader.c:1285
-#, fuzzy, c-format
-#| msgid "WAL file is from different database system: WAL file database system identifier is %llu, pg_control database system identifier is %llu"
+#, c-format
 msgid "WAL file is from different database system: WAL file database system identifier is %<PRIu64>, pg_control database system identifier is %<PRIu64>"
-msgstr "WAL 檔案來自不同的資料庫系統: WAL 檔案的資料庫系統識別碼為 %llu，而 pg_control 的資料庫系統識別碼為 %llu"
+msgstr "WAL 檔案來自不同的資料庫系統: WAL 檔案的資料庫系統識別碼為 %<PRIu64>，而 pg_control 的資料庫系統識別碼為 %<PRIu64>"
 
 #: xlogreader.c:1293
 #, c-format
@@ -1183,7 +1163,7 @@ msgstr "設定了 BKPIMAGE_HAS_HOLE，但在 %4$X/%5$X 有 offset %1$u 長度 %2
 #: xlogreader.c:1854
 #, c-format
 msgid "BKPIMAGE_HAS_HOLE not set, but hole offset %u length %u at %X/%X"
-msgstr "未設定 BKPIMAGE_HAS_HOLE，但在 %3$X/%4$X 有 offset %1$u 長度 %2$u 的空洞"
+msgstr "未設定 BKPIMAGE_HAS_HOLE，但 %3$X/%4$X 處的空洞位移為 %1$u，長度為 %2$u"
 
 #: xlogreader.c:1868
 #, c-format
@@ -1253,3 +1233,4 @@ msgstr "無法解壓縮影像，位置 %X/%X，區塊 %d"
 #, c-format
 #~ msgid "record length %u at %X/%X too long"
 #~ msgstr "位於 %X/%X 的記錄長度 %u 過長"
+

@@ -1,21 +1,21 @@
-# LANGUAGE message translation file for pg_combinebackup
-# Copyright (C) 2026 PostgreSQL Global Development Group
-# This file is distributed under the same license as the pg_combinebackup (PostgreSQL) package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+# Traditional Chinese message translation file for pg_combinebackup
+# This file is distributed under the same license as the PostgreSQL package.
 #
-#, fuzzy
+# Ruohang Feng <rh@vonng.com>, 2026.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: pg_combinebackup (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
 "POT-Creation-Date: 2026-09-18 04:25+0000\n"
-"PO-Revision-Date: 2026-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2026-09-19 12:00+0800\n"
+"Last-Translator: Ruohang Feng <rh@vonng.com>\n"
+"Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 # libpq/be-secure.c:294 libpq/be-secure.c:387
 #: ../../../src/common/logging.c:293 ../../../src/common/logging.c:295
@@ -42,7 +42,7 @@ msgstr "提示: "
 #: ../../common/controldata_utils.c:98
 #, c-format
 msgid "could not open file \"%s\" for reading: %m"
-msgstr "無法開啟檔案\"%s\"以讀取: %m"
+msgstr "無法開啟檔案 \"%s\" 以讀取: %m"
 
 # access/transam/xlog.c:1659 access/transam/xlog.c:2942
 # access/transam/xlog.c:5397 access/transam/xlog.c:5448
@@ -52,7 +52,7 @@ msgstr "無法開啟檔案\"%s\"以讀取: %m"
 #: load_manifest.c:199 pg_combinebackup.c:1369 reconstruct.c:542
 #, c-format
 msgid "could not read file \"%s\": %m"
-msgstr "無法讀取檔案\"%s\": %m"
+msgstr "無法讀取檔案 \"%s\": %m"
 
 # access/transam/xlog.c:1659 access/transam/xlog.c:2942
 # access/transam/xlog.c:5397 access/transam/xlog.c:5448
@@ -70,7 +70,7 @@ msgstr "無法讀取檔案 \"%s\": 已讀取 %d / %zu"
 #: reconstruct.c:745 write_manifest.c:187
 #, c-format
 msgid "could not close file \"%s\": %m"
-msgstr "無法關閉檔案\"%s\": %m"
+msgstr "無法關閉檔案 \"%s\": %m"
 
 #: ../../common/controldata_utils.c:169
 msgid "byte ordering mismatch"
@@ -102,7 +102,7 @@ msgstr ""
 #: reconstruct.c:640 write_manifest.c:250
 #, c-format
 msgid "could not open file \"%s\": %m"
-msgstr "無法開啟檔案\"%s\": %m"
+msgstr "無法開啟檔案 \"%s\": %m"
 
 # access/transam/xlog.c:5319 access/transam/xlog.c:5439
 #: ../../common/controldata_utils.c:250 backup_label.c:160 reconstruct.c:764
@@ -149,15 +149,15 @@ msgstr "記憶體用盡"
 #: ../../common/cryptohash.c:266 ../../common/cryptohash.c:272
 #: ../../common/cryptohash_openssl.c:368 ../../common/cryptohash_openssl.c:376
 msgid "success"
-msgstr ""
+msgstr "成功"
 
 #: ../../common/cryptohash.c:268 ../../common/cryptohash_openssl.c:370
 msgid "destination buffer too small"
-msgstr ""
+msgstr "目標緩衝區過小"
 
 #: ../../common/cryptohash_openssl.c:372
 msgid "OpenSSL failure"
-msgstr ""
+msgstr "OpenSSL 失敗"
 
 # commands/sequence.c:798 executor/execGrouping.c:328
 # executor/execGrouping.c:388 executor/nodeIndexscan.c:1051 lib/dllist.c:43
@@ -194,17 +194,17 @@ msgstr "無法複製 null 指標(內部錯誤)\n"
 #: ../../common/fe_memutils.c:209
 #, c-format
 msgid "invalid memory allocation request size %zu + %zu\n"
-msgstr ""
+msgstr "無效的記憶體配置請求大小 %zu + %zu\n"
 
 #: ../../common/fe_memutils.c:228
 #, c-format
 msgid "invalid memory allocation request size %zu * %zu\n"
-msgstr ""
+msgstr "無效的記憶體配置請求大小 %zu * %zu\n"
 
 #: ../../common/file_utils.c:75
 #, c-format
 msgid "could not synchronize file system for file \"%s\": %m"
-msgstr ""
+msgstr "無法同步檔案 \"%s\" 所在的檔案系統: %m"
 
 # access/transam/xlog.c:1936 access/transam/xlog.c:2038
 # access/transam/xlog.c:5291
@@ -214,13 +214,13 @@ msgstr ""
 #: reconstruct.c:204 reconstruct.c:422
 #, c-format
 msgid "could not stat file \"%s\": %m"
-msgstr "無法取得檔案狀態\"%s\": %m"
+msgstr "無法取得檔案狀態 \"%s\": %m"
 
 #: ../../common/file_utils.c:133 ../../common/file_utils.c:243
 #: ../../fe_utils/option_utils.c:99
 #, c-format
 msgid "this build does not support sync method \"%s\""
-msgstr ""
+msgstr "此版本不支援同步方法 \"%s\""
 
 # access/transam/slru.c:930 commands/tablespace.c:529
 # commands/tablespace.c:694 utils/adt/misc.c:174
@@ -228,14 +228,14 @@ msgstr ""
 #: pg_combinebackup.c:955 pg_combinebackup.c:1225
 #, c-format
 msgid "could not open directory \"%s\": %m"
-msgstr "無法開啟目錄\"%s\": %m"
+msgstr "無法開啟目錄 \"%s\": %m"
 
 # access/transam/slru.c:967 commands/tablespace.c:577
 # commands/tablespace.c:721
 #: ../../common/file_utils.c:174 ../../common/file_utils.c:338
 #, c-format
 msgid "could not read directory \"%s\": %m"
-msgstr "無法讀取目錄\"%s\": %m"
+msgstr "無法讀取目錄 \"%s\": %m"
 
 # access/transam/xlog.c:3037 access/transam/xlog.c:3819
 # access/transam/xlog.c:3862 commands/user.c:282 commands/user.c:412
@@ -243,24 +243,24 @@ msgstr "無法讀取目錄\"%s\": %m"
 #: ../../common/file_utils.c:520
 #, c-format
 msgid "could not rename file \"%s\" to \"%s\": %m"
-msgstr "無法將檔案\"%s\"重新命名為\"%s\": %m"
+msgstr "無法將檔案 \"%s\" 重新命名為 \"%s\": %m"
 
 #: ../../common/jsonapi.c:2484
 msgid "Recursive descent parser cannot use incremental lexer."
-msgstr ""
+msgstr "遞迴下降解析器無法使用增量詞法分析器。"
 
 #: ../../common/jsonapi.c:2486
 msgid "Incremental parser requires incremental lexer."
-msgstr ""
+msgstr "增量解析器需要增量詞法分析器。"
 
 #: ../../common/jsonapi.c:2488
 msgid "JSON nested too deep, maximum permitted depth is 6400."
-msgstr ""
+msgstr "JSON 巢狀過深，允許的最大深度為 6400。"
 
 #: ../../common/jsonapi.c:2490
 #, c-format
 msgid "Escape sequence \"\\%.*s\" is invalid."
-msgstr ""
+msgstr "逸出序列 \"\\%.*s\" 無效。"
 
 #: ../../common/jsonapi.c:2494
 #, c-format
@@ -270,27 +270,27 @@ msgstr "必須跳脫值為 0x%02x 的字元。"
 #: ../../common/jsonapi.c:2498
 #, c-format
 msgid "Expected end of input, but found \"%.*s\"."
-msgstr ""
+msgstr "預期為輸入結束，實際為 \"%.*s\"。"
 
 #: ../../common/jsonapi.c:2501
 #, c-format
 msgid "Expected array element or \"]\", but found \"%.*s\"."
-msgstr ""
+msgstr "預期為陣列元素或 \"]\"，實際為 \"%.*s\"。"
 
 #: ../../common/jsonapi.c:2504
 #, c-format
 msgid "Expected \",\" or \"]\", but found \"%.*s\"."
-msgstr ""
+msgstr "預期為 \",\" 或 \"]\"，實際為 \"%.*s\"。"
 
 #: ../../common/jsonapi.c:2507
 #, c-format
 msgid "Expected \":\", but found \"%.*s\"."
-msgstr ""
+msgstr "預期為 \":\"，實際為 \"%.*s\"。"
 
 #: ../../common/jsonapi.c:2510
 #, c-format
 msgid "Expected JSON value, but found \"%.*s\"."
-msgstr ""
+msgstr "預期為 JSON 值，實際為 \"%.*s\"。"
 
 #: ../../common/jsonapi.c:2513
 msgid "The input string ended unexpectedly."
@@ -299,22 +299,22 @@ msgstr "輸入字串非預期地結束。"
 #: ../../common/jsonapi.c:2515
 #, c-format
 msgid "Expected string or \"}\", but found \"%.*s\"."
-msgstr ""
+msgstr "預期為字串或 \"}\"，實際為 \"%.*s\"。"
 
 #: ../../common/jsonapi.c:2518
 #, c-format
 msgid "Expected \",\" or \"}\", but found \"%.*s\"."
-msgstr ""
+msgstr "預期為 \",\" 或 \"}\"，實際為 \"%.*s\"。"
 
 #: ../../common/jsonapi.c:2521
 #, c-format
 msgid "Expected string, but found \"%.*s\"."
-msgstr ""
+msgstr "預期為字串，實際為 \"%.*s\"。"
 
 #: ../../common/jsonapi.c:2524
 #, c-format
 msgid "Token \"%.*s\" is invalid."
-msgstr ""
+msgstr "符記 \"%.*s\" 無效。"
 
 #: ../../common/jsonapi.c:2530
 msgid "\\u0000 cannot be converted to text."
@@ -343,7 +343,7 @@ msgstr "Unicode 低位代理必須跟著高位代理。"
 
 #: ../../common/jsonapi.c:2575
 msgid "out of memory while constructing error description"
-msgstr ""
+msgstr "建構錯誤描述時記憶體不足"
 
 #: ../../common/parse_manifest.c:159 ../../common/parse_manifest.c:854
 #, c-format
@@ -401,7 +401,7 @@ msgstr "非預期的純量值"
 
 #: ../../common/parse_manifest.c:608
 msgid "manifest version not an integer"
-msgstr ""
+msgstr "清單版本不是整數"
 
 #: ../../common/parse_manifest.c:612
 msgid "unexpected manifest version"
@@ -409,7 +409,7 @@ msgstr "非預期的清單版本"
 
 #: ../../common/parse_manifest.c:636
 msgid "system identifier in manifest not an integer"
-msgstr ""
+msgstr "清單中的系統識別碼不是整數"
 
 #: ../../common/parse_manifest.c:661
 msgid "missing path name"
@@ -475,7 +475,7 @@ msgstr "預期至少有 2 行"
 
 #: ../../common/parse_manifest.c:845
 msgid "last line not newline-terminated"
-msgstr "最後一行未以換行符號結束"
+msgstr "最後一行未以換行字元結束"
 
 #: ../../common/parse_manifest.c:864
 #, c-format
@@ -516,12 +516,12 @@ msgstr "%s 必須在範圍 %d..%d 內"
 #: ../../fe_utils/option_utils.c:106
 #, c-format
 msgid "unrecognized sync method: %s"
-msgstr ""
+msgstr "無法識別的同步方法: %s"
 
 #: ../../fe_utils/option_utils.c:139
 #, c-format
 msgid "options %s and %s cannot be used together"
-msgstr ""
+msgstr "不能同時使用 %s 和 %s 選項"
 
 #: ../../fe_utils/version.c:57
 #, c-format
@@ -531,7 +531,7 @@ msgstr "無法開啟版本檔 \"%s\": %m"
 #: ../../fe_utils/version.c:62 pg_combinebackup.c:1354
 #, c-format
 msgid "file \"%s\" is too large"
-msgstr ""
+msgstr "檔案 \"%s\" 過大"
 
 #: ../../fe_utils/version.c:66
 #, c-format
@@ -541,37 +541,37 @@ msgstr "無法解析版本檔 \"%s\""
 #: backup_label.c:66 backup_label.c:85 backup_label.c:95
 #, c-format
 msgid "%s: could not parse %s"
-msgstr ""
+msgstr "%s: 無法解析 %s"
 
 #: backup_label.c:69 backup_label.c:88
 #, c-format
 msgid "%s: improper terminator for %s"
-msgstr ""
+msgstr "%s: %s 的終止符不正確"
 
 #: backup_label.c:76
 #, c-format
 msgid "%s: could not parse TLI for %s"
-msgstr ""
+msgstr "%s: 無法解析 %s 的 TLI"
 
 #: backup_label.c:79 backup_label.c:98
 #, c-format
 msgid "%s: invalid TLI"
-msgstr ""
+msgstr "%s: 無效的 TLI"
 
 #: backup_label.c:106 backup_label.c:108
 #, c-format
 msgid "%s: could not find %s"
-msgstr ""
+msgstr "%s: 找不到 %s"
 
 #: backup_label.c:110 backup_label.c:113
 #, c-format
 msgid "%s: %s requires %s"
-msgstr ""
+msgstr "%s: %s 需要 %s"
 
 #: backup_label.c:162 reconstruct.c:766
 #, c-format
 msgid "could not write file \"%s\": wrote %d of %d"
-msgstr ""
+msgstr "無法寫入檔案 \"%1$s\": 應寫入 %3$d，實際寫入 %2$d"
 
 #: backup_label.c:166 copy_file.c:160 copy_file.c:207 reconstruct.c:726
 #: reconstruct.c:772 write_manifest.c:270
@@ -587,23 +587,23 @@ msgstr "無法更新檔案 \"%s\" 的檢查碼"
 #: copy_file.c:200
 #, c-format
 msgid "could not write to file \"%s\": %m"
-msgstr "無法寫入檔案\"%s\": %m"
+msgstr "無法寫入檔案 \"%s\": %m"
 
 #: copy_file.c:202
 #, c-format
 msgid "could not write to file \"%s\", offset %u: wrote %d of %d"
-msgstr ""
+msgstr "無法在檔案 \"%1$s\" 位移 %2$u 處寫入: 應寫入 %4$d，實際寫入 %3$d"
 
 # utils/init/miscinit.c:792 utils/misc/guc.c:5074
 #: copy_file.c:213 reconstruct.c:789
 #, c-format
 msgid "could not read from file \"%s\": %m"
-msgstr "無法讀取鎖定檔\"%s\": %m"
+msgstr "無法讀取鎖定檔 \"%s\": %m"
 
 #: copy_file.c:232
 #, c-format
 msgid "error while cloning file \"%s\" to \"%s\": %m"
-msgstr ""
+msgstr "將檔案 \"%s\" clone 至 \"%s\" 時出錯: %m"
 
 # access/transam/slru.c:645 access/transam/xlog.c:1526
 # access/transam/xlog.c:1646 access/transam/xlog.c:2911
@@ -612,12 +612,12 @@ msgstr ""
 #: copy_file.c:243 copy_file.c:286
 #, c-format
 msgid "could not create file \"%s\": %m"
-msgstr "無法建立檔案\"%s\": %m"
+msgstr "無法建立檔案 \"%s\": %m"
 
 #: copy_file.c:251
 #, c-format
 msgid "error while cloning file \"%s\" to \"%s\": %s"
-msgstr ""
+msgstr "將檔案 \"%s\" clone 至 \"%s\" 時出錯: %s"
 
 #: copy_file.c:259 pg_combinebackup.c:263
 #, c-format
@@ -627,22 +627,22 @@ msgstr "此平臺不支援 clone 檔案"
 #: copy_file.c:292 reconstruct.c:706
 #, c-format
 msgid "error while copying file range from \"%s\" to \"%s\": %m"
-msgstr ""
+msgstr "將檔案範圍從 \"%s\" 複製到 \"%s\" 時出錯: %m"
 
 #: copy_file.c:299 pg_combinebackup.c:276 reconstruct.c:729
 #, c-format
 msgid "copy_file_range not supported on this platform"
-msgstr ""
+msgstr "此平台不支援 copy_file_range"
 
 #: copy_file.c:314
 #, c-format
 msgid "could not copy file \"%s\" to \"%s\": %m"
-msgstr ""
+msgstr "無法將檔案 \"%s\" 複製到 \"%s\": %m"
 
 #: copy_file.c:333
 #, c-format
 msgid "could not create link from \"%s\" to \"%s\": %m"
-msgstr ""
+msgstr "無法建立從 \"%s\" 到 \"%s\" 的連結: %m"
 
 # commands/comment.c:582
 #: load_manifest.c:125
@@ -658,12 +658,12 @@ msgstr "無法讀取檔案 \"%s\": 已讀取 %d / %lld"
 #: load_manifest.c:201
 #, c-format
 msgid "could not read file \"%s\": read %lld of %lld"
-msgstr ""
+msgstr "無法讀取檔案 \"%1$s\": 應讀取 %3$lld，實際讀取 %2$lld"
 
 #: load_manifest.c:248
 #, c-format
 msgid "backup manifest version 1 does not support incremental backup"
-msgstr ""
+msgstr "備份清單版本 1 不支援增量備份"
 
 #: load_manifest.c:280
 #, c-format
@@ -674,12 +674,12 @@ msgstr "備份清單中有重複的路徑名稱: \"%s\""
 #: pg_combinebackup.c:226 pg_combinebackup.c:234
 #, c-format
 msgid "Try \"%s --help\" for more information."
-msgstr "執行\"%s --help\"顯示更多資訊。"
+msgstr "執行 \"%s --help\" 顯示更多資訊。"
 
 #: pg_combinebackup.c:233
 #, c-format
 msgid "no input directories specified"
-msgstr ""
+msgstr "未指定輸入目錄"
 
 #: pg_combinebackup.c:239
 #, c-format
@@ -689,27 +689,27 @@ msgstr "未指定輸出目錄"
 #: pg_combinebackup.c:247
 #, c-format
 msgid "executing in dry-run mode"
-msgstr ""
+msgstr "正在以模擬執行模式執行"
 
 #: pg_combinebackup.c:248
 #, c-format
 msgid "The target directory will not be modified."
-msgstr ""
+msgstr "不會修改目標目錄。"
 
 #: pg_combinebackup.c:284
 #, c-format
 msgid "server version too old"
-msgstr ""
+msgstr "伺服器版本過舊"
 
 #: pg_combinebackup.c:318
 #, c-format
 msgid "%s: manifest system identifier is %<PRIu64>, but control file has %<PRIu64>"
-msgstr ""
+msgstr "%s: 清單中的系統識別碼為 %<PRIu64>，但控制檔中為 %<PRIu64>"
 
 #: pg_combinebackup.c:357
 #, c-format
 msgid "cannot generate a manifest because no manifest is available for the final input backup"
-msgstr ""
+msgstr "無法產生清單，因為最後一個輸入備份沒有可用的清單"
 
 #: pg_combinebackup.c:404
 #, c-format
@@ -721,12 +721,12 @@ msgstr "無法建立符號連結 \"%s\" 至 \"%s\"：%m"
 #: pg_combinebackup.c:416 pg_combinebackup.c:751 pg_combinebackup.c:949
 #, c-format
 msgid "could not create directory \"%s\": %m"
-msgstr "無法建立目錄\"%s\": %m"
+msgstr "無法建立目錄 \"%s\": %m"
 
 #: pg_combinebackup.c:446
 #, c-format
 msgid "--link mode was used; any modifications to the output directory might destructively modify input directories"
-msgstr ""
+msgstr "已使用 --link 模式；對輸出目錄的任何修改都可能對輸入目錄造成破壞性修改"
 
 #: pg_combinebackup.c:476
 #, c-format
@@ -756,67 +756,67 @@ msgstr "表空間映射中的新目錄不是絕對路徑: %s"
 #: pg_combinebackup.c:575
 #, c-format
 msgid "backup at \"%s\" is a full backup, but only the first backup should be a full backup"
-msgstr ""
+msgstr "\"%s\" 處的備份是完整備份，但只有第一個備份應為完整備份"
 
 #: pg_combinebackup.c:578
 #, c-format
 msgid "backup at \"%s\" is an incremental backup, but the first backup should be a full backup"
-msgstr ""
+msgstr "\"%s\" 處的備份是增量備份，但第一個備份應為完整備份"
 
 #: pg_combinebackup.c:581
 #, c-format
 msgid "backup at \"%s\" starts on timeline %u, but expected %u"
-msgstr ""
+msgstr "\"%s\" 處的備份起始於時間軸 %u，但預期為 %u"
 
 #: pg_combinebackup.c:584
 #, c-format
 msgid "backup at \"%s\" starts at LSN %X/%08X, but expected %X/%08X"
-msgstr ""
+msgstr "\"%s\" 處的備份起始於 LSN %X/%08X，但預期為 %X/%08X"
 
 #: pg_combinebackup.c:636
 #, c-format
 msgid "%s: CRC is incorrect"
-msgstr ""
+msgstr "%s: CRC 不正確"
 
 #: pg_combinebackup.c:640
 #, c-format
 msgid "%s: unexpected control file version"
-msgstr ""
+msgstr "%s: 非預期的控制檔版本"
 
 #: pg_combinebackup.c:647
 #, c-format
 msgid "%s: expected system identifier %<PRIu64>, but found %<PRIu64>"
-msgstr ""
+msgstr "%s: 預期系統識別碼為 %<PRIu64>，但實際為 %<PRIu64>"
 
 #: pg_combinebackup.c:678
 #, c-format
 msgid "only some backups have checksums enabled"
-msgstr ""
+msgstr "只有部分備份已啟用檢查碼"
 
 #: pg_combinebackup.c:679
 #, c-format
 msgid "Disable, and optionally reenable, checksums on the output directory to avoid failures."
-msgstr ""
+msgstr "停用輸出目錄上的檢查碼，並可選擇重新啟用，以免發生失敗。"
 
 #: pg_combinebackup.c:714
 #, c-format
 msgid "removing output directory \"%s\""
-msgstr ""
+msgstr "正在刪除輸出目錄 \"%s\""
 
 #: pg_combinebackup.c:716
 #, c-format
 msgid "failed to remove output directory"
-msgstr ""
+msgstr "刪除輸出目錄失敗"
 
 #: pg_combinebackup.c:720
 #, c-format
 msgid "removing contents of output directory \"%s\""
-msgstr ""
+msgstr "正在刪除輸出目錄 \"%s\" 的內容"
 
 #: pg_combinebackup.c:723
 #, c-format
 msgid "failed to remove contents of output directory"
-msgstr ""
+msgstr "刪除輸出目錄內容失敗"
 
 # commands/tablespace.c:334
 #: pg_combinebackup.c:763
@@ -835,7 +835,7 @@ msgstr "無法存取目錄 \"%s\": %m"
 msgid ""
 "%s reconstructs full backups from incrementals.\n"
 "\n"
-msgstr ""
+msgstr "%s 根據增量備份重建完整備份。\n\n"
 
 #: pg_combinebackup.c:781
 #, c-format
@@ -845,7 +845,7 @@ msgstr "用法:\n"
 #: pg_combinebackup.c:782
 #, c-format
 msgid "  %s [OPTION]... DIRECTORY...\n"
-msgstr ""
+msgstr "  %s [OPTION]... DIRECTORY...\n"
 
 #: pg_combinebackup.c:783
 #, c-format
@@ -864,12 +864,12 @@ msgstr "  -d, --debug               產生大量的除錯訊息\n"
 #: pg_combinebackup.c:785
 #, c-format
 msgid "  -k, --link                link files instead of copying\n"
-msgstr ""
+msgstr "  -k, --link                連結檔案而非複製\n"
 
 #: pg_combinebackup.c:786
 #, c-format
 msgid "  -n, --dry-run             do not actually do anything\n"
-msgstr ""
+msgstr "  -n, --dry-run             實際不執行任何操作\n"
 
 #: pg_combinebackup.c:787
 #, c-format
@@ -879,46 +879,46 @@ msgstr "  -N, --no-sync             不等待將被安全地寫入磁碟的資�
 #: pg_combinebackup.c:788
 #, c-format
 msgid "  -o, --output=DIRECTORY    output directory\n"
-msgstr ""
+msgstr "  -o, --output=DIRECTORY    輸出目錄\n"
 
 #: pg_combinebackup.c:789
 #, c-format
 msgid ""
 "  -T, --tablespace-mapping=OLDDIR=NEWDIR\n"
 "                            relocate tablespace in OLDDIR to NEWDIR\n"
-msgstr ""
+msgstr "  -T, --tablespace-mapping=OLDDIR\n                            將 OLDDIR 中的表空間重新定位到 NEWDIR\n"
 
 #: pg_combinebackup.c:791
 #, c-format
 msgid "      --clone               clone (reflink) files instead of copying\n"
-msgstr ""
+msgstr "      --clone               clone (reflink) 檔案而非複製\n"
 
 #: pg_combinebackup.c:792
 #, c-format
 msgid "      --copy                copy files (default)\n"
-msgstr ""
+msgstr "      --copy                複製檔案 (預設)\n"
 
 #: pg_combinebackup.c:793
 #, c-format
 msgid "      --copy-file-range     copy using copy_file_range() system call\n"
-msgstr ""
+msgstr "      --copy-file-range     使用 copy_file_range() 系統呼叫複製\n"
 
 #: pg_combinebackup.c:794
 #, c-format
 msgid ""
 "      --manifest-checksums=SHA{224,256,384,512}|CRC32C|NONE\n"
 "                            use algorithm for manifest checksums\n"
-msgstr ""
+msgstr "      --manifest-checksums=SHA\n                            使用指定演算法計算清單檢查碼\n"
 
 #: pg_combinebackup.c:796
 #, c-format
 msgid "      --no-manifest         suppress generation of backup manifest\n"
-msgstr ""
+msgstr "      --no-manifest         不產生備份清單\n"
 
 #: pg_combinebackup.c:797
 #, c-format
 msgid "      --sync-method=METHOD  set method for syncing files to disk\n"
-msgstr ""
+msgstr "      --sync-method=METHOD  設定將檔案同步到磁碟的方法\n"
 
 #: pg_combinebackup.c:798
 #, c-format
@@ -947,7 +947,7 @@ msgstr "%s 網站: <%s>\n"
 #: pg_combinebackup.c:1017
 #, c-format
 msgid "skipping symbolic link \"%s\""
-msgstr ""
+msgstr "正在跳過符號連結 \"%s\""
 
 # access/transam/xlog.c:2163
 #: pg_combinebackup.c:1019
@@ -958,7 +958,7 @@ msgstr "略過特殊檔案 \"%s\""
 #: pg_combinebackup.c:1095 reconstruct.c:305
 #, c-format
 msgid "manifest file \"%s\" contains no entry for file \"%s\""
-msgstr ""
+msgstr "清單檔案 \"%s\" 中沒有檔案 \"%s\" 的項目"
 
 # commands/tablespace.c:355 commands/tablespace.c:984
 #: pg_combinebackup.c:1278
@@ -969,22 +969,22 @@ msgstr "無法讀取符號連結 \"%s\": %m"
 #: pg_combinebackup.c:1281
 #, c-format
 msgid "target of symbolic link \"%s\" is too long"
-msgstr ""
+msgstr "符號連結 \"%s\" 的目標過長"
 
 #: pg_combinebackup.c:1284
 #, c-format
 msgid "target of symbolic link \"%s\" is relative"
-msgstr ""
+msgstr "符號連結 \"%s\" 的目標是相對路徑"
 
 #: pg_combinebackup.c:1306
 #, c-format
 msgid "tablespace at \"%s\" has no tablespace mapping"
-msgstr ""
+msgstr "位於 \"%s\" 的表空間沒有表空間映射"
 
 #: pg_combinebackup.c:1324
 #, c-format
 msgid "tablespaces with OIDs %u and %u both point at directory \"%s\""
-msgstr ""
+msgstr "OID 為 %u 和 %u 的表空間都指向目錄 \"%s\""
 
 # access/transam/slru.c:930 commands/tablespace.c:529
 # commands/tablespace.c:694 utils/adt/misc.c:174
@@ -996,49 +996,50 @@ msgstr "無法關閉目錄 \"%s\": %m"
 #: pg_combinebackup.c:1371
 #, c-format
 msgid "could not read file \"%s\": read %zd of %lld"
-msgstr ""
+msgstr "無法讀取檔案 \"%1$s\": 應讀取 %3$lld，實際讀取 %2$zd"
 
 #: reconstruct.c:339
 #, c-format
 msgid "full backup contains unexpected incremental file \"%s\""
-msgstr ""
+msgstr "完整備份包含非預期的增量檔案 \"%s\""
 
 #: reconstruct.c:424
 #, c-format
 msgid "file \"%s\" is too short: expected %llu, found %llu"
-msgstr ""
+msgstr "檔案 \"%s\" 過短: 預期為 %llu，實際為 %llu"
 
 #: reconstruct.c:466
 #, c-format
 msgid "file \"%s\" has bad incremental magic number (0x%x, expected 0x%x)"
-msgstr ""
+msgstr "檔案 \"%s\" 的增量魔數不正確 (0x%x，預期為 0x%x)"
 
 #: reconstruct.c:472
 #, c-format
 msgid "file \"%s\" has block count %u in excess of segment size %u"
-msgstr ""
+msgstr "檔案 \"%s\" 的區塊數 %u 超過區段大小 %u"
 
 #: reconstruct.c:479
 #, c-format
 msgid "file \"%s\" has truncation block length %u in excess of segment size %u"
-msgstr ""
+msgstr "檔案 \"%s\" 的截斷長度為 %u 個區塊，超過區段大小 %u"
 
 #: reconstruct.c:544
 #, c-format
 msgid "could not read file \"%s\": read %d of %u"
-msgstr ""
+msgstr "無法讀取檔案 \"%1$s\": 應讀取 %3$u，實際讀取 %2$d"
 
 #: reconstruct.c:709
 #, c-format
 msgid "unexpected end of file while copying file range from \"%s\" to \"%s\""
-msgstr ""
+msgstr "將檔案範圍從 \"%s\" 複製到 \"%s\" 時非預期地到達檔案結尾"
 
 #: reconstruct.c:791
 #, c-format
 msgid "could not read from file \"%s\", offset %llu: read %d of %d"
-msgstr ""
+msgstr "無法讀取檔案 \"%1$s\" 位移 %2$llu 處的資料: 應讀取 %4$d，實際讀取 %3$d"
 
 #: write_manifest.c:262
 #, c-format
 msgid "could not write file \"%s\": wrote %zd of %d"
-msgstr ""
+msgstr "無法寫入檔案 \"%1$s\": 應寫入 %3$d，實際寫入 %2$zd"
+

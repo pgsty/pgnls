@@ -1,21 +1,22 @@
 # Traditional Chinese message translation file for initdb
-# Copyright (C) 2023 PostgreSQL Global Development Group
-# This file is distributed under the same license as the initdb (PostgreSQL) package.
+# This file is distributed under the same license as the PostgreSQL package.
+#
 # 2004-12-13 Zhenbang Wei <znbang@gmail.com>
+# Ruohang Feng <rh@vonng.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: initdb (PostgreSQL) 16\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
 "POT-Creation-Date: 2026-09-17 19:18+0000\n"
-"PO-Revision-Date: 2023-11-06 08:49+0800\n"
-"Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-09-19 12:00+0800\n"
+"Last-Translator: Ruohang Feng <rh@vonng.com>\n"
+"Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 # libpq/be-secure.c:294 libpq/be-secure.c:387
 #: ../../../src/common/logging.c:276
@@ -108,12 +109,12 @@ msgstr "無法複製 null 指標(內部錯誤)\n"
 #: ../../common/fe_memutils.c:209
 #, c-format
 msgid "invalid memory allocation request size %zu + %zu\n"
-msgstr ""
+msgstr "無效的記憶體配置請求大小 %zu + %zu\n"
 
 #: ../../common/fe_memutils.c:228
 #, c-format
 msgid "invalid memory allocation request size %zu * %zu\n"
-msgstr ""
+msgstr "無效的記憶體配置請求大小 %zu * %zu\n"
 
 # access/transam/xlog.c:1936 access/transam/xlog.c:2038
 # access/transam/xlog.c:5291
@@ -260,7 +261,7 @@ msgstr "子行程因異常 0x%X 而停止"
 #: ../../common/wait_error.c:76
 #, c-format
 msgid "child process was terminated by signal %d: %s"
-msgstr "子行程因信號 %d 而停止: %s"
+msgstr "子行程因訊號 %d 而停止: %s"
 
 #: ../../common/wait_error.c:82
 #, c-format
@@ -270,7 +271,7 @@ msgstr "子行程因不明狀態 %d 而停止"
 #: ../../port/dirmod.c:287
 #, c-format
 msgid "could not set junction for \"%s\": %s\n"
-msgstr "無法設置 junction 至 \"%s\": %s\n"
+msgstr "無法設定 junction 至 \"%s\": %s\n"
 
 #: ../../port/dirmod.c:367
 #, c-format
@@ -279,10 +280,9 @@ msgstr "無法取得 \"%s\" 的 junction: %s\n"
 
 # fe-misc.c:991
 #: initdb.c:365
-#, fuzzy, c-format
-#| msgid "setlocale() failed"
+#, c-format
 msgid "_wsetlocale() failed"
-msgstr "setlocale() 失敗"
+msgstr "_wsetlocale() 失敗"
 
 # fe-misc.c:991
 #: initdb.c:372
@@ -292,10 +292,9 @@ msgstr "setlocale() 失敗"
 
 # utils/init/miscinit.c:648
 #: initdb.c:386
-#, fuzzy, c-format
-#| msgid "failed to restore old locale \"%s\""
+#, c-format
 msgid "failed to restore old locale"
-msgstr "無法還原舊的區域設定 \"%s\""
+msgstr "無法還原舊的區域"
 
 # utils/init/miscinit.c:648
 #: initdb.c:389
@@ -495,7 +494,7 @@ msgstr "密碼檔 \"%s\" 是空的"
 #: initdb.c:2086
 #, c-format
 msgid "caught signal\n"
-msgstr "捕捉到信號\n"
+msgstr "捕捉到訊號\n"
 
 #: initdb.c:2092
 #, c-format
@@ -505,13 +504,12 @@ msgstr "無法寫入至子行程: %s\n"
 #: initdb.c:2100
 #, c-format
 msgid "ok\n"
-msgstr ""
+msgstr "成功\n"
 
 #: initdb.c:2182 initdb.c:2228
-#, fuzzy, c-format
-#| msgid "%s: locale name has non-ASCII characters, skipped: %s\n"
+#, c-format
 msgid "locale name \"%s\" contains non-ASCII characters"
-msgstr "%s: 區域名稱有非ASCII字元，忽略: %s\n"
+msgstr "區域名稱 \"%s\" 包含非 ASCII 字元"
 
 #: initdb.c:2208
 #, c-format
@@ -638,7 +636,7 @@ msgstr "  -E, --encoding=ENCODING   設定新資料庫的預設編碼\n"
 #: initdb.c:2486
 #, c-format
 msgid "  -g, --allow-group-access  allow group read/execute on data directory\n"
-msgstr "  -g, --allow-group-access  允許群組對數據目錄進行讀取和執行操作\n"
+msgstr "  -g, --allow-group-access  允許群組對資料目錄進行讀取和執行操作\n"
 
 #: initdb.c:2487
 #, c-format
@@ -648,7 +646,7 @@ msgstr "      --icu-locale=LOCALE   設定新資料庫的 ICU 區域識別碼\n"
 #: initdb.c:2488
 #, c-format
 msgid "      --icu-rules=RULES     set additional ICU collation rules for new databases\n"
-msgstr "      --icu-rules=RULES     設定新資料庫的額外 ICU 排序規則\n"
+msgstr "      --icu-rules=RULES     設定新資料庫的額外 ICU 定序\n"
 
 #: initdb.c:2489
 #, c-format
@@ -658,7 +656,7 @@ msgstr "  -k, --data-checksums      使用資料頁檢查\n"
 #: initdb.c:2490
 #, c-format
 msgid "      --locale=LOCALE       set default locale for new databases\n"
-msgstr "      --locale=LOCALE       定新資料庫的預設區域\n"
+msgstr "      --locale=LOCALE       設定新資料庫的預設區域\n"
 
 #: initdb.c:2491
 #, c-format
@@ -696,9 +694,7 @@ msgstr "      --pwfile=FILE         從檔案中讀取新超級使用者的密�
 msgid ""
 "  -T, --text-search-config=CFG\n"
 "                            default text search configuration\n"
-msgstr ""
-"  -T, --text-search-config=CFG\n"
-"                            預設文字搜尋配置\n"
+msgstr "  -T, --text-search-config=CFG\n                            預設文字搜尋組態\n"
 
 #: initdb.c:2501
 #, c-format
@@ -821,7 +817,7 @@ msgstr "%s 網站: <%s>\n"
 #: initdb.c:2549
 #, c-format
 msgid "invalid authentication method \"%s\" for \"%s\" connections"
-msgstr "無效的身份驗證方法 \"%s\" 用於 \"%s\" 連線"
+msgstr "無效的身分驗證方法 \"%s\" 用於 \"%s\" 連線"
 
 #: initdb.c:2563
 #, c-format
@@ -938,28 +934,28 @@ msgstr "以不同的區域重新執行 %s。"
 #: initdb.c:2722
 #, c-format
 msgid "The default database encoding has accordingly been set to \"%s\".\n"
-msgstr "預設資料庫編碼已被設為 \"%s\"。\n"
+msgstr "預設資料庫編碼已設為 \"%s\"。\n"
 
 #: initdb.c:2791
 #, c-format
 msgid "could not find suitable text search configuration for locale \"%s\""
-msgstr "無法找到適用於區域 \"%s\" 的文字搜尋配置"
+msgstr "無法找到適用於區域 \"%s\" 的文字搜尋組態"
 
 # utils/misc/guc.c:2507
 #: initdb.c:2802
 #, c-format
 msgid "suitable text search configuration for locale \"%s\" is unknown"
-msgstr "無法確定適用於區域 \"%s\" 的文字搜尋配置"
+msgstr "無法確定適用於區域 \"%s\" 的文字搜尋組態"
 
 #: initdb.c:2807
 #, c-format
 msgid "specified text search configuration \"%s\" might not match locale \"%s\""
-msgstr "指定的文字搜尋配置 \"%s\" 可能與區域 \"%s\" 不相符"
+msgstr "指定的文字搜尋組態 \"%s\" 可能與區域 \"%s\" 不相符"
 
 #: initdb.c:2812
 #, c-format
 msgid "The default text search configuration will be set to \"%s\".\n"
-msgstr "預設文字搜尋配置將被設為 \"%s\"。\n"
+msgstr "預設文字搜尋組態將被設為 \"%s\"。\n"
 
 #: initdb.c:2855 initdb.c:2926
 #, c-format
@@ -1135,7 +1131,7 @@ msgstr ""
 #: initdb.c:3465
 #, c-format
 msgid "enabling \"trust\" authentication for local connections"
-msgstr "啟動本機連線的 \"trust\" 身份驗證"
+msgstr "啟動本機連線的 \"trust\" 身分驗證"
 
 #: initdb.c:3466
 #, c-format
@@ -1393,3 +1389,4 @@ msgstr ""
 
 #~ msgid "vacuuming database template1 ... "
 #~ msgstr "重整資料庫template1 ..."
+

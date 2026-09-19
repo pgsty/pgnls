@@ -1,27 +1,27 @@
 # Traditional Chinese message translation file for plpython
-# Copyright (C) 2023 PostgreSQL Global Development Group
-# This file is distributed under the same license as the plpython (PostgreSQL) package.
+# This file is distributed under the same license as the PostgreSQL package.
+#
 # Zhenbang Wei <znbang@gmail.com>, 2011.
+# Ruohang Feng <rh@vonng.com>, 2026.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: plpython (PostgreSQL) 16\n"
+"Project-Id-Version: plpython (PostgreSQL) 17\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
 "POT-Creation-Date: 2026-09-18 04:49+0000\n"
-"PO-Revision-Date: 2023-11-06 08:50+0800\n"
-"Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-09-19 12:00+0800\n"
+"Last-Translator: Ruohang Feng <rh@vonng.com>\n"
+"Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4.1\n"
 
 #: plpy_cursorobject.c:72
 #, c-format
 msgid "plpy.cursor expected a query or a plan"
-msgstr "plpy.cursor 預期查詢或計劃"
+msgstr "plpy.cursor 預期查詢或計畫"
 
 #: plpy_cursorobject.c:154
 #, c-format
@@ -42,10 +42,9 @@ msgstr[0] "預期 %d 個參數序列，收到 %d 個: %s"
 # fe-connect.c:1347
 #: plpy_cursorobject.c:237 plpy_spi.c:96 plpy_spi.c:263 plpy_typeio.c:1211
 #: plpy_typeio.c:1462
-#, fuzzy, c-format
-#| msgid "could not get client address from socket: %s"
+#, c-format
 msgid "could not get element %d from sequence"
-msgstr "無法從socket取得客戶端位址: %s"
+msgstr "無法從序列取得索引為 %d 的元素"
 
 # sql_help.h:345
 #: plpy_cursorobject.c:322
@@ -121,7 +120,7 @@ msgstr "PL/Python 函數的回傳型別為 \"void\" 但未回傳 None"
 #: plpy_exec.c:246
 #, c-format
 msgid "function returning record called in context that cannot accept type record"
-msgstr "在不接受紀錄型別的 context 中呼叫回傳紀錄的函數"
+msgstr "在不接受記錄型別的 context 中呼叫回傳記錄的函數"
 
 #: plpy_exec.c:392 plpy_exec.c:416
 #, c-format
@@ -198,7 +197,7 @@ msgstr "在修改觸發資料列時"
 #: plpy_exec.c:1115
 #, c-format
 msgid "forcibly aborting a subtransaction that has not been exited"
-msgstr "強制中止尚未退出的子交易"
+msgstr "強制中止尚未結束的子交易"
 
 #: plpy_main.c:109
 #, c-format
@@ -502,3 +501,4 @@ msgstr "無法從編碼字串中提取位元組"
 
 #~ msgid "unrecognized error in PLy_spi_execute_fetch_result"
 #~ msgstr "PLy_spi_execute_fetch_result 有非預期錯誤"
+

@@ -1,18 +1,19 @@
 # Traditional Chinese message translation file for plpgsql
-# Copyright (C) 2011 PostgreSQL Global Development Group
 # This file is distributed under the same license as the PostgreSQL package.
+#
+# Ruohang Feng <rh@vonng.com>, 2026.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PostgreSQL 9.1\n"
+"Project-Id-Version: plpgsql (PostgreSQL) 17\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
 "POT-Creation-Date: 2026-09-18 04:49+0000\n"
-"PO-Revision-Date: 2013-09-03 23:25-0400\n"
-"Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
-"Language-Team: EnterpriseDB translation team <dev-escalations@enterprisedb.com>\n"
+"PO-Revision-Date: 2026-09-19 12:00+0800\n"
+"Last-Translator: Ruohang Feng <rh@vonng.com>\n"
+"Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
@@ -47,10 +48,9 @@ msgid "The arguments of the trigger can be accessed through TG_NARGS and TG_ARGV
 msgstr "觸發程序的參數可以改透過 TG_NARGS 和 TG_ARGV 存取。"
 
 #: pl_comp.c:734
-#, fuzzy, c-format
-#| msgid "trigger functions cannot have declared arguments"
+#, c-format
 msgid "event trigger functions cannot have declared arguments"
-msgstr "觸發函式不能有宣告過的參數"
+msgstr "事件觸發器函式不能宣告參數"
 
 #: pl_comp.c:998
 #, c-format
@@ -67,7 +67,7 @@ msgstr "多次使用參數名稱 \"%s\""
 #: pl_comp.c:1135
 #, c-format
 msgid "column reference \"%s\" is ambiguous"
-msgstr "資料行參考 \"%s\" 模稜兩可"
+msgstr "欄位參考 \"%s\" 模稜兩可"
 
 #: pl_comp.c:1137
 #, c-format
@@ -78,7 +78,7 @@ msgstr "可能參考到 PL/pgSQL 變數或資料表欄位。"
 #: pl_exec.c:6626
 #, c-format
 msgid "record \"%s\" has no field \"%s\""
-msgstr "紀錄 \"%s\" 沒有欄位 \"%s\""
+msgstr "記錄 \"%s\" 沒有欄位 \"%s\""
 
 # tcop/utility.c:77
 #: pl_comp.c:1633 pl_gram.y:645 pl_gram.y:660 pl_gram.y:686
@@ -96,21 +96,20 @@ msgstr "變數 \"%s\" 不存在"
 #: pl_comp.c:1722
 #, c-format
 msgid "column \"%s\" of relation \"%s\" does not exist"
-msgstr "欄位\"%s\"於relation \"%s\"不存在"
+msgstr "欄位 \"%s\" 於relation \"%s\" 不存在"
 
 # catalog/namespace.c:200 utils/adt/regproc.c:837
 #: pl_comp.c:1775
 #, c-format
 msgid "relation \"%s\" does not exist"
-msgstr "關聯 \"%s\"不存在"
+msgstr "關聯 \"%s\" 不存在"
 
 # access/heap/heapam.c:628 access/heap/heapam.c:663 access/heap/heapam.c:698
 # catalog/aclchk.c:293
 #: pl_comp.c:1782 pl_comp.c:1820
-#, fuzzy, c-format
-#| msgid "\"%s\" is not a composite type"
+#, c-format
 msgid "relation \"%s\" does not have a composite type"
-msgstr "\"%s\" 不是複合型別"
+msgstr "關聯 \"%s\" 沒有複合型別"
 
 #: pl_comp.c:1886
 #, c-format
@@ -210,32 +209,28 @@ msgstr "傳回的資料列結構與觸發的資料表結構不相符"
 #. local variable initialization"
 #.
 #: pl_exec.c:1263
-#, fuzzy, c-format
-#| msgid "PL/pgSQL function \"%s\" line %d %s"
+#, c-format
 msgid "PL/pgSQL function %s line %d %s"
-msgstr "PL/pgSQL 函式 \"%s\"，位於行 %d %s"
+msgstr "PL/pgSQL 函式 %s 第 %d 行 %s"
 
 #. translator: last %s is a phrase such as "while storing call
 #. arguments into local variables"
 #.
 #: pl_exec.c:1274
-#, fuzzy, c-format
-#| msgid "PL/pgSQL function \"%s\" %s"
+#, c-format
 msgid "PL/pgSQL function %s %s"
-msgstr "PL/pgSQL 函式 \"%s\" %s"
+msgstr "PL/pgSQL 函式 %s %s"
 
 #. translator: last %s is a plpgsql statement type name
 #: pl_exec.c:1282
-#, fuzzy, c-format
-#| msgid "PL/pgSQL function \"%s\" line %d at %s"
+#, c-format
 msgid "PL/pgSQL function %s line %d at %s"
-msgstr "PL/pgSQL 函式 \"%s\"，行 %d，位於 %s"
+msgstr "PL/pgSQL 函式 %s 第 %d 行於 %s"
 
 #: pl_exec.c:1288
-#, fuzzy, c-format
-#| msgid "PL/pgSQL function \"%s\""
+#, c-format
 msgid "PL/pgSQL function %s"
-msgstr "PL/pgSQL 函式 \"%s\""
+msgstr "PL/pgSQL 函式 %s"
 
 #: pl_exec.c:1659
 msgid "during statement block local variable initialization"
@@ -256,18 +251,17 @@ msgstr "在例外清除期間"
 #: pl_exec.c:2370
 #, c-format
 msgid "procedure parameter \"%s\" is an output parameter but corresponding argument is not writable"
-msgstr ""
+msgstr "程序參數 \"%s\" 是輸出參數，但對應的實參不可寫"
 
 #: pl_exec.c:2375
 #, c-format
 msgid "procedure parameter %d is an output parameter but corresponding argument is not writable"
-msgstr ""
+msgstr "程序參數 %d 是輸出參數，但對應的實參不可寫"
 
 #: pl_exec.c:2411
-#, fuzzy, c-format
-#| msgid "RAISE without parameters cannot be used outside an exception handler"
+#, c-format
 msgid "GET STACKED DIAGNOSTICS cannot be used outside an exception handler"
-msgstr "沒有參數的 RAISE 不能在例外處理常式之外使用"
+msgstr "GET STACKED DIAGNOSTICS 不能用於例外處理器之外"
 
 #: pl_exec.c:2617
 #, c-format
@@ -316,8 +310,7 @@ msgstr "指標所需的參數"
 
 # catalog/heap.c:1797
 #: pl_exec.c:3018
-#, fuzzy, c-format
-#| msgid "FOREACH expression must not be NULL"
+#, c-format
 msgid "FOREACH expression must not be null"
 msgstr "FOREACH 運算式不能是 NULL"
 
@@ -344,10 +337,9 @@ msgid "FOREACH loop variable must not be of an array type"
 msgstr "FOREACH 迴圈變數不能是陣列型別"
 
 #: pl_exec.c:3243 pl_exec.c:3286 pl_exec.c:3461
-#, fuzzy, c-format
-#| msgid "while casting return value to function's return type"
+#, c-format
 msgid "cannot return non-composite value from function returning composite type"
-msgstr "將傳回值轉換成函式的傳回值時"
+msgstr "傳回複合型別的函式不能傳回非複合值"
 
 #: pl_exec.c:3325 pl_gram.y:3375
 #, c-format
@@ -406,21 +398,19 @@ msgid "%s"
 msgstr "%s"
 
 #: pl_exec.c:3956
-#, fuzzy, c-format
-#| msgid "Password encryption failed.\n"
+#, c-format
 msgid "assertion failed"
-msgstr "密碼加密失敗。\n"
+msgstr "斷言失敗"
 
 #: pl_exec.c:4328 pl_exec.c:4518
 #, c-format
 msgid "cannot COPY to/from client in PL/pgSQL"
-msgstr "無法在 PL/pgSQL 中與用戶端進行 COPY"
+msgstr "無法在 PL/pgSQL 中與客戶端進行 COPY"
 
 #: pl_exec.c:4334
-#, fuzzy, c-format
-#| msgid "cannot begin/end transactions in PL/pgSQL"
+#, c-format
 msgid "unsupported transaction command in PL/pgSQL"
-msgstr "無法在 PL/pgSQL 中開始/結束交易"
+msgstr "PL/pgSQL 中不支援的交易命令"
 
 #: pl_exec.c:4357 pl_exec.c:4547
 #, c-format
@@ -440,7 +430,7 @@ msgstr "查詢傳回多個資料列"
 #: pl_exec.c:4404
 #, c-format
 msgid "Make sure the query returns a single row, or use LIMIT 1."
-msgstr ""
+msgstr "確保查詢傳回單一資料列，或使用 LIMIT 1。"
 
 #: pl_exec.c:4420
 #, c-format
@@ -463,10 +453,9 @@ msgid "You might want to use EXECUTE ... INTO or EXECUTE CREATE TABLE ... AS ins
 msgstr "你可能想改用  EXECUTE ... INTO or EXECUTE CREATE TABLE ... AS。"
 
 #: pl_exec.c:4524
-#, fuzzy, c-format
-#| msgid "EXECUTE of SELECT ... INTO is not implemented"
+#, c-format
 msgid "EXECUTE of transaction commands is not implemented"
-msgstr "SELECT ...INTO 的 EXECUTE 尚未實作"
+msgstr "尚未實作透過 EXECUTE 執行交易命令"
 
 #: pl_exec.c:4834 pl_exec.c:4922
 #, c-format
@@ -477,7 +466,7 @@ msgstr "指標變數 \"%s\" 為 null"
 #: pl_exec.c:4845 pl_exec.c:4933
 #, c-format
 msgid "cursor \"%s\" does not exist"
-msgstr "cursor \"%s\"不存在"
+msgstr "cursor \"%s\" 不存在"
 
 #: pl_exec.c:4858
 #, c-format
@@ -503,61 +492,55 @@ msgstr "不可將非複合值指派給記錄變數"
 #: pl_exec.c:5255
 #, c-format
 msgid "cannot assign to system column \"%s\""
-msgstr "無法指派給系統資料行 \"%s\""
+msgstr "無法指派給系統欄位 \"%s\""
 
 #: pl_exec.c:5704
-#, fuzzy, c-format
-#| msgid "query \"%s\" did not return data"
+#, c-format
 msgid "query did not return data"
-msgstr "查詢 \"%s\" 未傳回資料"
+msgstr "查詢未傳回資料"
 
 #: pl_exec.c:5705 pl_exec.c:5717 pl_exec.c:5742 pl_exec.c:5822 pl_exec.c:5827
-#, fuzzy, c-format
-#| msgid "query was: %s\n"
+#, c-format
 msgid "query: %s"
-msgstr "查詢是: %s\n"
+msgstr "查詢: %s"
 
 #: pl_exec.c:5713
-#, fuzzy, c-format
-#| msgid "query \"%s\" returned %d column"
-#| msgid_plural "query \"%s\" returned %d columns"
+#, c-format
 msgid "query returned %d column"
 msgid_plural "query returned %d columns"
-msgstr[0] "查詢 \"%s\" 傳回 %d 個欄位"
+msgstr[0] "查詢傳回了 %d 個欄位"
 
 #: pl_exec.c:5821
 #, c-format
 msgid "query is SELECT INTO, but it should be plain SELECT"
-msgstr ""
+msgstr "查詢是 SELECT INTO，但應為一般 SELECT"
 
 #: pl_exec.c:5826
-#, fuzzy, c-format
-#| msgid "query \"%s\" is not a SELECT"
+#, c-format
 msgid "query is not a SELECT"
-msgstr "查詢 \"%s\" 不是 SELECT"
+msgstr "查詢不是 SELECT"
 
 #: pl_exec.c:6640 pl_exec.c:6680 pl_exec.c:6720
 #, c-format
 msgid "type of parameter %d (%s) does not match that when preparing the plan (%s)"
-msgstr ""
+msgstr "參數 %d 的型別 (%s) 與準備計畫時的型別 (%s) 不相符"
 
 #: pl_exec.c:7131 pl_exec.c:7165 pl_exec.c:7239 pl_exec.c:7265
 #, c-format
 msgid "number of source and target fields in assignment does not match"
-msgstr ""
+msgstr "指派時來源欄位與目標欄位的數量不相符"
 
 #. translator: %s represents a name of an extra check
 #: pl_exec.c:7133 pl_exec.c:7167 pl_exec.c:7241 pl_exec.c:7267
 #, c-format
 msgid "%s check of %s is active."
-msgstr ""
+msgstr "%2$s 的 %1$s 檢查已啟用。"
 
 # executor/functions.c:946
 #: pl_exec.c:7137 pl_exec.c:7171 pl_exec.c:7245 pl_exec.c:7271
-#, fuzzy, c-format
-#| msgid "Final statement must return exactly one column."
+#, c-format
 msgid "Make sure the query returns the exact list of columns."
-msgstr "最終陳述式只能傳回一個資料行。"
+msgstr "確保查詢傳回確切的欄位清單。"
 
 #: pl_exec.c:7658
 #, c-format
@@ -578,10 +561,9 @@ msgid "cannot cast type %s to %s"
 msgstr "無法將型別 %s 轉換成 %s"
 
 #: pl_exec.c:8357 pl_gram.y:3498
-#, fuzzy, c-format
-#| msgid "\"%s\" is declared CONSTANT"
+#, c-format
 msgid "variable \"%s\" is declared CONSTANT"
-msgstr "\"%s\" 宣告為 CONSTANT"
+msgstr "變數 \"%s\" 已宣告為 CONSTANT"
 
 #: pl_funcs.c:237
 msgid "statement block"
@@ -597,7 +579,7 @@ msgstr "具有整數迴圈變數的 FOR"
 
 #: pl_funcs.c:251
 msgid "FOR over SELECT rows"
-msgstr "FOR 用於 SELECT 資料行"
+msgstr "FOR 用於 SELECT 資料列"
 
 #: pl_funcs.c:253
 msgid "FOR over cursor"
@@ -627,30 +609,28 @@ msgid "collations are not supported by type %s"
 msgstr "定序不被型別 %s 支援"
 
 #: pl_gram.y:524
-#, fuzzy, c-format
-#| msgid "variable \"%s\" must have a numeric type"
+#, c-format
 msgid "variable \"%s\" must have a default value, since it's declared NOT NULL"
-msgstr "變數 \"%s\" 必須具有數值類型"
+msgstr "變數 \"%s\" 必須有預設值，因為它已宣告為 NOT NULL"
 
 #: pl_gram.y:704 pl_gram.y:732
 msgid "duplicate declaration"
 msgstr "重複的宣告"
 
 #: pl_gram.y:715 pl_gram.y:743
-#, fuzzy, c-format
-#| msgid "variable \"%s\" is hidden by a local variable"
+#, c-format
 msgid "variable \"%s\" shadows a previously defined variable"
-msgstr "變數 \"%s\" 被區域變數遮蔽"
+msgstr "變數 \"%s\" 遮蔽了先前定義的變數"
 
 #: pl_gram.y:1017
 #, c-format
 msgid "diagnostics item %s is not allowed in GET STACKED DIAGNOSTICS"
-msgstr ""
+msgstr "GET STACKED DIAGNOSTICS 中不允許使用診斷項目 %s"
 
 #: pl_gram.y:1035
 #, c-format
 msgid "diagnostics item %s is not allowed in GET CURRENT DIAGNOSTICS"
-msgstr ""
+msgstr "GET CURRENT DIAGNOSTICS 中不允許使用診斷項目 %s"
 
 #: pl_gram.y:1133
 msgid "unrecognized GET DIAGNOSTICS item"
@@ -662,10 +642,9 @@ msgid "\"%s\" is not a scalar variable"
 msgstr "\"%s\" 不是純量變數"
 
 #: pl_gram.y:1379 pl_gram.y:1572
-#, fuzzy, c-format
-#| msgid "loop variable of loop over rows must be a record or row variable or list of scalar variables"
+#, c-format
 msgid "loop variable of loop over rows must be a record variable or list of scalar variables"
-msgstr "資料列迴圈的迴圈變數必須是記錄或資料列變數，或是純量變數清單"
+msgstr "資料列迴圈的迴圈變數必須是記錄變數或純量變數清單"
 
 #: pl_gram.y:1414
 #, c-format
@@ -695,20 +674,18 @@ msgstr "FOREACH 的迴圈變數必須是已知變數或變數清單"
 #: pl_gram.y:1717
 #, c-format
 msgid "there is no label \"%s\" attached to any block or loop enclosing this statement"
-msgstr ""
+msgstr "包圍此敘述的區塊或迴圈均沒有標籤 \"%s\""
 
 # commands/portalcmds.c:337 tcop/pquery.c:523 tcop/pquery.c:1096
 #: pl_gram.y:1725
-#, fuzzy, c-format
-#| msgid "portal \"%s\" cannot be run"
+#, c-format
 msgid "block label \"%s\" cannot be used in CONTINUE"
-msgstr "入口 \"%s\" 無法執行"
+msgstr "區塊標籤 \"%s\" 不能用在 CONTINUE 中"
 
 #: pl_gram.y:1740
-#, fuzzy, c-format
-#| msgid "CONTINUE cannot be used outside a loop"
+#, c-format
 msgid "EXIT cannot be used outside a loop, unless it has a label"
-msgstr "CONTINUE 不能在迴圈之外使用"
+msgstr "EXIT 不能用在迴圈之外，除非它有標籤"
 
 #: pl_gram.y:1741
 #, c-format
@@ -778,10 +755,8 @@ msgid "missing SQL statement"
 msgstr "缺少 SQL 陳述式"
 
 #: pl_gram.y:2889
-#, fuzzy
-#| msgid "syntax error, expected \"=\""
 msgid "syntax error, expected \"]\""
-msgstr "語法錯誤，預期 \"=\""
+msgstr "語法錯誤，預期為 \"]\""
 
 #: pl_gram.y:2913
 msgid "incomplete data type declaration"
@@ -810,10 +785,9 @@ msgid "Use RETURN NEXT or RETURN QUERY."
 msgstr "用 RETURN NEXT 或 RETURN QUERY。"
 
 #: pl_gram.y:3313
-#, fuzzy, c-format
-#| msgid "RETURN cannot have a parameter in function returning set"
+#, c-format
 msgid "RETURN cannot have a parameter in a procedure"
-msgstr "RETURN 在傳回 set 的函式中不能有參數"
+msgstr "程序中的 RETURN 不能有參數"
 
 #: pl_gram.y:3318
 #, c-format
@@ -831,10 +805,9 @@ msgid "RETURN NEXT cannot have a parameter in function with OUT parameters"
 msgstr "RETURN NEXT 在具有 OUT 參數的函式中不能有參數"
 
 #: pl_gram.y:3556
-#, fuzzy, c-format
-#| msgid "record or row variable cannot be part of multiple-item INTO list"
+#, c-format
 msgid "record variable cannot be part of multiple-item INTO list"
-msgstr "紀錄或資料行變數不能用在多項目 INTO 清單"
+msgstr "記錄變數不能是多項目 INTO 清單的一部分"
 
 #: pl_gram.y:3602
 #, c-format
@@ -842,8 +815,7 @@ msgid "too many INTO variables specified"
 msgstr "指定太多的 INTO 變數"
 
 #: pl_gram.y:3810
-#, fuzzy, c-format
-#| msgid "end label \"%s\" specified for unlabelled block"
+#, c-format
 msgid "end label \"%s\" specified for unlabeled block"
 msgstr "為未標籤區塊指定結束標籤 \"%s\""
 
@@ -863,30 +835,26 @@ msgid "cursor \"%s\" has arguments"
 msgstr "指標 \"%s\" 有參數"
 
 #: pl_gram.y:3907
-#, fuzzy, c-format
-#| msgid "cursor \"%s\" has no arguments"
+#, c-format
 msgid "cursor \"%s\" has no argument named \"%s\""
-msgstr "指標 \"%s\" 沒有參數"
+msgstr "游標 \"%s\" 沒有名為 \"%s\" 的參數"
 
 # commands/copy.c:2716 parser/parse_target.c:648 parser/parse_target.c:658
 #: pl_gram.y:3927
-#, fuzzy, c-format
-#| msgid "parameter \"%s\" specified more than once"
+#, c-format
 msgid "value for parameter \"%s\" of cursor \"%s\" specified more than once"
-msgstr "參數 \"%s\" 指定一次以上"
+msgstr "多次指定游標 \"%2$s\" 的參數 \"%1$s\" 的值"
 
 # commands/define.c:279
 #: pl_gram.y:3948
-#, fuzzy, c-format
-#| msgid "invalid argument for %s: \"%s\""
+#, c-format
 msgid "not enough arguments for cursor \"%s\""
-msgstr "給 %s 的引數不合法: \"%s\""
+msgstr "游標 \"%s\" 的參數不足"
 
 #: pl_gram.y:3955
-#, fuzzy, c-format
-#| msgid "too many arguments on line %d"
+#, c-format
 msgid "too many arguments for cursor \"%s\""
-msgstr "第 %d 行參數過多"
+msgstr "游標 \"%s\" 的參數過多"
 
 #: pl_gram.y:4041
 msgid "unrecognized RAISE statement option"
@@ -912,19 +880,19 @@ msgstr "PL/pgSQL 變數名稱和資料表欄位名稱衝突處理。"
 
 #: pl_handler.c:165
 msgid "Print information about parameters in the DETAIL part of the error messages generated on INTO ... STRICT failures."
-msgstr ""
+msgstr "在 INTO ... STRICT 失敗所產生錯誤訊息的 DETAIL 部分輸出參數資訊。"
 
 #: pl_handler.c:173
 msgid "Perform checks given in ASSERT statements."
-msgstr ""
+msgstr "執行 ASSERT 敘述中給定的檢查。"
 
 #: pl_handler.c:181
 msgid "List of programming constructs that should produce a warning."
-msgstr ""
+msgstr "應產生警告的程式設計結構清單。"
 
 #: pl_handler.c:191
 msgid "List of programming constructs that should produce an error."
-msgstr ""
+msgstr "應產生錯誤的程式設計結構清單。"
 
 #  translator: %s is typically "syntax error"
 # scan.l:621
@@ -1070,3 +1038,4 @@ msgstr "\"%2$s\" 附近發生 %1$s"
 
 #~ msgid "variable \"%s\" does not exist in the current block"
 #~ msgstr "變數 \"%s\" 不在目前區塊中"
+

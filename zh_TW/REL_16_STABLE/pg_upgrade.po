@@ -1,20 +1,21 @@
 # Traditional Chinese message translation file for pg_upgrade
-# Copyright (C) 2023 PostgreSQL Global Development Group
-# This file is distributed under the same license as the pg_upgrade (PostgreSQL) package.
+# This file is distributed under the same license as the PostgreSQL package.
+#
+# Ruohang Feng <rh@vonng.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: pg_upgrade (PostgreSQL) 16\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
 "POT-Creation-Date: 2026-09-17 19:17+0000\n"
-"PO-Revision-Date: 2023-11-06 08:50+0800\n"
-"Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-09-19 12:00+0800\n"
+"Last-Translator: Ruohang Feng <rh@vonng.com>\n"
+"Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: check.c:73
 #, c-format
@@ -60,10 +61,7 @@ msgid ""
 "Optimizer statistics are not transferred by pg_upgrade.\n"
 "Once you start the new server, consider running:\n"
 "    %s/vacuumdb %s--all --analyze-in-stages"
-msgstr ""
-"pg_upgrade 不會轉移優化器統計資料。\n"
-"啟動新伺服器之後請考慮執行:\n"
-"    %s/vacuumdb %s--all --analyze-in-stages"
+msgstr "pg_upgrade 不會轉移最佳化器統計資料。\n啟動新伺服器之後請考慮執行:\n    %s/vacuumdb %s--all --analyze-in-stages"
 
 #: check.c:297
 #, c-format
@@ -191,7 +189,7 @@ msgstr "無法確定使用者數量"
 #: check.c:593
 #, c-format
 msgid "Only the install user can be defined in the new cluster."
-msgstr "只有安裝使用者能在新叢集中被定義。"
+msgstr "新叢集中只能定義安裝使用者。"
 
 #: check.c:622
 #, c-format
@@ -268,7 +266,7 @@ msgstr ""
 #: check.c:819
 #, c-format
 msgid "Checking for user-defined postfix operators"
-msgstr "檢查使用者定義的後綴運算符"
+msgstr "檢查使用者定義的後綴運算子"
 
 #: check.c:895
 #, c-format
@@ -278,11 +276,7 @@ msgid ""
 "them with prefix operators or function calls.\n"
 "A list of user-defined postfix operators is in the file:\n"
 "    %s"
-msgstr ""
-"您的安裝包含不再支援的使用者定義後綴運算符，請考慮刪除後綴運算符\n"
-"並替換為前綴運算符或函數呼叫。\n"
-"使用者定義後綴運算符的清單位於以下檔案中:\n"
-"    %s"
+msgstr "您的安裝包含不再支援的使用者定義後綴運算子，請考慮刪除後綴運算子\n並替換為前綴運算子或函式呼叫。\n使用者定義後綴運算子的清單位於以下檔案中:\n    %s"
 
 #: check.c:919
 #, c-format
@@ -299,13 +293,7 @@ msgid ""
 "arguments of type \"anycompatiblearray\" and \"anycompatible\".\n"
 "A list of the problematic objects is in the file:\n"
 "    %s"
-msgstr ""
-"您的安裝包含參考內部多型函數的使用者定義物件，其引數類型為\n"
-"\"anyarray\" 或 \"anyelement\"。這些使用者定義物件必須在升級之前\n"
-"刪除，升級之後再還原，並將它們改為參考新的對應函數，其引數類\n"
-"型為 \"anycompatiblearray\" 和 \"anycompatible\"。\n"
-"問題物件的清單位於以下檔案中:\n"
-"    %s"
+msgstr "您的安裝包含參考內部多型函數的使用者定義物件，其引數型別為\n\"anyarray\" 或 \"anyelement\"。這些使用者定義物件必須在升級之前\n刪除，升級之後再還原，並將它們改為參考新的對應函數，其引數類\n型為 \"anycompatiblearray\" 和 \"anycompatible\"。\n問題物件的清單位於以下檔案中:\n    %s"
 
 #: check.c:1045
 #, c-format
@@ -330,7 +318,7 @@ msgstr ""
 #: check.c:1123
 #, c-format
 msgid "Checking for not-null constraint inconsistencies"
-msgstr ""
+msgstr "正在檢查非空條件約束的不一致"
 
 #: check.c:1176
 #, c-format
@@ -342,7 +330,7 @@ msgid ""
 "    ALTER TABLE tablename ALTER column SET NOT NULL;\n"
 "on each column listed in the file:\n"
 "    %s"
-msgstr ""
+msgstr "您的安裝中存在不一致的 NOT NULL 條件約束。\n如果父資料表的欄位為 NOT NULL，子資料表的對應欄位\n也必須標記為 NOT NULL，否則升級將失敗。\n可以執行以下命令來修復:\n    ALTER TABLE tablename ALTER column SET NOT NULL;\n對以下檔案中列出的每一個欄位都執行此操作:\n    %s"
 
 #: check.c:1205
 #, c-format
@@ -387,10 +375,9 @@ msgstr ""
 "    %s"
 
 #: check.c:1318
-#, fuzzy, c-format
-#| msgid "Checking for incompatible \"aclitem\" data type in user tables"
+#, c-format
 msgid "Checking for incompatible \"%s\" data type in user tables"
-msgstr "檢查使用者資料表中有無不相容的 \"aclitem\" 資料型別"
+msgstr "正在檢查使用者表中不相容的 \"%s\" 資料型別"
 
 #: check.c:1326
 #, c-format
@@ -409,20 +396,12 @@ msgstr ""
 "    %s"
 
 #: check.c:1350
-#, fuzzy, c-format
-#| msgid "Checking for reg* data types in user tables"
+#, c-format
 msgid "Checking for removed \"%s\" data type in user tables"
-msgstr "檢查使用者資料表中有無 reg* 資料型別"
+msgstr "正在檢查使用者表中已移除的 \"%s\" 資料型別"
 
 #: check.c:1360
-#, fuzzy, c-format
-#| msgid ""
-#| "Your installation contains the \"aclitem\" data type in user tables.\n"
-#| "The internal format of \"aclitem\" changed in PostgreSQL version 16\n"
-#| "so this cluster cannot currently be upgraded.  You can drop the\n"
-#| "problem columns and restart the upgrade.  A list of the problem\n"
-#| "columns is in the file:\n"
-#| "    %s"
+#, c-format
 msgid ""
 "Your installation contains the \"%s\" data type in user tables.\n"
 "The \"%s\" type has been removed in PostgreSQL version %s,\n"
@@ -430,17 +409,12 @@ msgid ""
 "problem columns, or change them to another data type, and restart\n"
 "the upgrade.  A list of the problem columns is in the file:\n"
 "    %s"
-msgstr ""
-"您的安裝中在使用者資料表中包含了 \"aclitem\" 資料型別。由於\n"
-"PostgreSQL 版本 16 中 \"aclitem\" 的內部格式已更改，因此目前無法\n"
-"升級此叢集。您可以刪除問題欄位，然後重新進行升級。\n"
-"問題欄位的清單位於以下檔案中:\n"
-"    %s"
+msgstr "您的安裝在使用者表中包含 \"%1$s\" 資料型別。\nPostgreSQL %3$s 已移除 \"%2$s\" 型別，因此目前不能升級此叢集。\n可以刪除有問題的列，或將其改為其他資料型別，然後重新開始升級。\n有問題的列的清單位於檔案:\n    %4$s"
 
 #: check.c:1382
 #, c-format
 msgid "Checking for incompatible \"jsonb\" data type"
-msgstr "檢查不相容的 \"jsonb\" 資料型別"
+msgstr "正在檢查不相容的 \"jsonb\" 資料型別"
 
 #: check.c:1391
 #, c-format
@@ -511,12 +485,12 @@ msgstr "%d: 資料庫叢集狀態問題"
 #: controldata.c:158
 #, c-format
 msgid "The source cluster was shut down while in recovery mode.  To upgrade, use \"rsync\" as documented or shut it down as a primary."
-msgstr "來源叢集在復原模式下被關閉。若要進行升級，請依照文件使用 \"rsync\"，或者將其作為主要模式關閉。"
+msgstr "來源叢集是在復原模式下關閉的。若要進行升級，請依照文件使用 \"rsync\"，或者將其作為主要模式關閉。"
 
 #: controldata.c:160
 #, c-format
 msgid "The target cluster was shut down while in recovery mode.  To upgrade, use \"rsync\" as documented or shut it down as a primary."
-msgstr "目標叢集在復原模式下被關閉。若要進行升級，請依照文件使用 \"rsync\"，或者將其作為主要模式關閉。"
+msgstr "目標叢集是在復原模式下關閉的。若要進行升級，請依照文件使用 \"rsync\"，或者將其作為主要模式關閉。"
 
 #: controldata.c:165
 #, c-format
@@ -650,12 +624,12 @@ msgstr " 最大索引欄位數"
 #: controldata.c:631
 #, c-format
 msgid "  maximum TOAST chunk size"
-msgstr " TOAST 塊大小上限"
+msgstr " TOAST 區塊大小上限"
 
 #: controldata.c:635
 #, c-format
 msgid "  large-object chunk size"
-msgstr " 大物件塊大小"
+msgstr " 大物件區塊大小"
 
 #: controldata.c:638
 #, c-format
@@ -670,7 +644,7 @@ msgstr " 資料檢查碼版本"
 #: controldata.c:644
 #, c-format
 msgid "Cannot continue without required control information, terminating"
-msgstr "因必要的控制信息不足而無法繼續，終止中"
+msgstr "因必要的控制資訊不足而無法繼續，終止中"
 
 #: controldata.c:659
 #, c-format
@@ -714,17 +688,17 @@ msgstr "新舊 pg_controldata 最大索引欄位數無效或不一致"
 #: controldata.c:681
 #, c-format
 msgid "old and new pg_controldata maximum TOAST chunk sizes are invalid or do not match"
-msgstr "新舊 pg_controldata 最大 TOAST 塊大小無效或不一致"
+msgstr "新舊 pg_controldata 最大 TOAST 區塊大小無效或不一致"
 
 #: controldata.c:686
 #, c-format
 msgid "old and new pg_controldata large-object chunk sizes are invalid or do not match"
-msgstr "新舊 pg_controldata 大物件塊大小無效或不一致"
+msgstr "新舊 pg_controldata 大物件區塊大小無效或不一致"
 
 #: controldata.c:689
 #, c-format
 msgid "old and new pg_controldata date/time storage types do not match"
-msgstr "新舊 pg_controldata 日期/時間儲存類型不一致"
+msgstr "新舊 pg_controldata 日期/時間儲存型別不一致"
 
 #: controldata.c:702
 #, c-format
@@ -752,7 +726,7 @@ msgstr "將 \".old\" 後綴加到 global/pg_control"
 #: controldata.c:723
 #, c-format
 msgid "could not rename file \"%s\" to \"%s\": %m"
-msgstr "無法將檔案\"%s\"重新命名為\"%s\": %m"
+msgstr "無法將檔案 \"%s\" 重新命名為 \"%s\": %m"
 
 #: controldata.c:727
 #, c-format
@@ -959,7 +933,7 @@ msgstr "檢查必要程式庫是否存在"
 #: function.c:165
 #, c-format
 msgid "could not load library \"%s\": %s"
-msgstr "無法載入程式庫\"%s\": %s"
+msgstr "無法載入程式庫 \"%s\": %s"
 
 #: function.c:176
 #, c-format
@@ -1025,9 +999,7 @@ msgstr "無法在新叢集中為 OID 為 %u 的舊關聯找到對應，資料庫
 msgid ""
 "\n"
 "source databases:"
-msgstr ""
-"\n"
-"來源資料庫:"
+msgstr "\n來源資料庫:"
 
 #: info.c:291
 #, c-format
@@ -1056,7 +1028,7 @@ msgstr "relname: %s.%s: reloid: %u reltblspace: %s"
 #: option.c:101
 #, c-format
 msgid "%s: cannot be run as root"
-msgstr "%s: 不能以 root 身份執行"
+msgstr "%s: 不能以 root 身分執行"
 
 #: option.c:168
 #, c-format
@@ -1441,7 +1413,7 @@ msgstr "新叢集的目錄路徑太長"
 #: pg_upgrade.c:272 pg_upgrade.c:274 pg_upgrade.c:276 pg_upgrade.c:278
 #, c-format
 msgid "could not create directory \"%s\": %m"
-msgstr "無法建立目錄\"%s\": %m"
+msgstr "無法建立目錄 \"%s\": %m"
 
 #: pg_upgrade.c:327
 #, c-format
@@ -1782,11 +1754,7 @@ msgid ""
 "internal formats between your old and new clusters, so they must be\n"
 "reindexed with the REINDEX command.  After upgrading, you will be given\n"
 "REINDEX instructions."
-msgstr ""
-"\n"
-"您的安裝包含雜湊索引。這些索引在您的舊叢集和新叢集之間具有不同的\n"
-"內部格式，因此必須使用 REINDEX 命令重新索引它們。升級完成後，您\n"
-"將收到重新索引的指示。"
+msgstr "\n您的安裝包含雜湊索引。這些索引在您的舊叢集和新叢集之間具有不同的\n內部格式，因此必須使用 REINDEX 命令重建其索引。升級完成後，您\n將收到重建索引的指示。"
 
 #: version.c:374
 #, c-format
@@ -1798,13 +1766,7 @@ msgid ""
 "    %s\n"
 "when executed by psql by the database superuser will recreate all invalid\n"
 "indexes; until then, none of these indexes will be used."
-msgstr ""
-"\n"
-"您的安裝包含雜湊索引。這些索引在您的舊叢集和新叢集之間具有不同的\n"
-"內部格式，因此必須使用 REINDEX 命令重新索引它們。當檔案\n"
-"    %s\n"
-"被資料庫超級使用者用 psql 執行時，將重建所有無效的索引。在此之前，\n"
-"這些索引將不會被使用。"
+msgstr "\n您的安裝包含雜湊索引。這些索引在您的舊叢集和新叢集之間具有不同的\n內部格式，因此必須使用 REINDEX 命令重建其索引。當檔案\n    %s\n被資料庫超級使用者用 psql 執行時，將重建所有無效的索引。在此之前，\n這些索引將不會被使用。"
 
 #: version.c:400
 #, c-format
@@ -1851,3 +1813,4 @@ msgstr ""
 "當檔案\n"
 "    %s\n"
 "被資料庫超級使用者用 psql 執行時，會更新這些擴充模組。"
+

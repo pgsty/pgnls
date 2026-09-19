@@ -1,26 +1,26 @@
 # Traditional Chinese message translation file for ecpg
-# Copyright (C) 2023 PostgreSQL Global Development Group
-# This file is distributed under the same license as the ecpg (PostgreSQL) package.
+# This file is distributed under the same license as the PostgreSQL package.
+#
+# Ruohang Feng <rh@vonng.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ecpg (PostgreSQL) 16\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
 "POT-Creation-Date: 2026-09-17 19:08+0000\n"
-"PO-Revision-Date: 2023-09-11 08:36+0800\n"
-"Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-09-19 12:00+0800\n"
+"Last-Translator: Ruohang Feng <rh@vonng.com>\n"
+"Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.3.2\n"
 
 #: descriptor.c:64
 #, c-format
 msgid "variable \"%s\" must have a numeric type"
-msgstr "變數 \"%s\" 必須具有數值類型"
+msgstr "變數 \"%s\" 必須具有數值型別"
 
 #: descriptor.c:124 descriptor.c:155
 #, c-format
@@ -88,9 +88,7 @@ msgstr "選項: \n"
 msgid ""
 "  -c             automatically generate C code from embedded SQL code;\n"
 "                 this affects EXEC SQL TYPE\n"
-msgstr ""
-"  -c             自動從嵌入式 SQL 碼生成 C 程式碼；\n"
-"                 這會影響 EXEC SQL TYPE\n"
+msgstr "  -c             自動從嵌入式 SQL 碼產生 C 程式碼；\n                 這會影響 EXEC SQL TYPE\n"
 
 #: ecpg.c:44
 #, c-format
@@ -230,7 +228,7 @@ msgstr "%s: 未指定輸入檔\n"
 #: ecpg.c:491
 #, c-format
 msgid "cursor \"%s\" has been declared but not opened"
-msgstr "指標 \"%s\" 已經被宣告但尚未開啟"
+msgstr "指標 \"%s\" 已宣告但尚未開啟"
 
 #: ecpg.c:504 preproc.y:130
 #, c-format
@@ -297,12 +295,12 @@ msgstr "未結束的引號識別字"
 #: pgc.l:960
 #, c-format
 msgid "trailing junk after parameter"
-msgstr "參數後有多餘的垃圾字符"
+msgstr "參數後有多餘的垃圾字元"
 
 #: pgc.l:1012 pgc.l:1015 pgc.l:1018
 #, c-format
 msgid "trailing junk after numeric literal"
-msgstr "數字文字後有多餘的垃圾字符"
+msgstr "數字文字後有多餘的垃圾字元"
 
 # scan.l:312
 #: pgc.l:1141
@@ -405,12 +403,12 @@ msgstr "型別名稱 \"string\" 在 Informix 模式是保留字"
 #: preproc.y:552 preproc.y:18393
 #, c-format
 msgid "type \"%s\" is already defined"
-msgstr "型別 \"%s\" 已被定義"
+msgstr "型別 \"%s\" 已定義"
 
 #: preproc.y:577 preproc.y:19020 preproc.y:19342 variable.c:624
 #, c-format
 msgid "multidimensional arrays for simple data types are not supported"
-msgstr "不支援簡單資料類型的多維陣列"
+msgstr "不支援簡單資料型別的多維陣列"
 
 #: preproc.y:599
 #, c-format
@@ -481,7 +479,7 @@ msgstr "不支援在不同的 DECLARE 陳述式中使用變數 \"%s\""
 #: preproc.y:10313 preproc.y:17902
 #, c-format
 msgid "cursor \"%s\" is already defined"
-msgstr "指標 \"%s\" 已被定義"
+msgstr "指標 \"%s\" 已定義"
 
 #: preproc.y:10787
 #, c-format
@@ -501,7 +499,7 @@ msgstr "預期是 \"@\"，但發現 \"%s\""
 #: preproc.y:17637
 #, c-format
 msgid "only protocols \"tcp\" and \"unix\" and database type \"postgresql\" are supported"
-msgstr "僅支援協議 \"tcp\"、\"unix\" 和資料庫類型 \"postgresql\""
+msgstr "僅支援協議 \"tcp\"、\"unix\" 和資料庫型別 \"postgresql\""
 
 #: preproc.y:17640
 #, c-format
@@ -521,7 +519,7 @@ msgstr "預期是 \"postgresql\"，但發現 \"%s\""
 #: preproc.y:17674
 #, c-format
 msgid "invalid connection type: %s"
-msgstr "無效的連線類型: %s"
+msgstr "無效的連線型別: %s"
 
 #: preproc.y:17683
 #, c-format
@@ -531,7 +529,7 @@ msgstr "預期是 \"@\" 或 \"://\"，但發現 \"%s\""
 #: preproc.y:17758 preproc.y:17776
 #, c-format
 msgid "invalid data type"
-msgstr "無效的資料類型"
+msgstr "無效的資料型別"
 
 #: preproc.y:17787 preproc.y:17804
 #, c-format
@@ -546,12 +544,12 @@ msgstr "無法識別的 token \"%s\""
 #: preproc.y:17852
 #, c-format
 msgid "name \"%s\" is already declared"
-msgstr "名稱 \"%s\" 已被宣告"
+msgstr "名稱 \"%s\" 已宣告"
 
 #: preproc.y:18141
 #, c-format
 msgid "only data types numeric and decimal have precision/scale argument"
-msgstr "只有數值和小數資料類型具有精確度/小數位數參數"
+msgstr "只有數值和小數資料型別具有精確度/小數位數參數"
 
 #: preproc.y:18212
 #, c-format
@@ -619,7 +617,7 @@ msgstr "記憶體不足"
 #: type.c:214 type.c:685
 #, c-format
 msgid "unrecognized variable type code %d"
-msgstr "無法識別的變數類型碼 %d"
+msgstr "無法識別的變數型別碼 %d"
 
 #: type.c:263
 #, c-format
@@ -659,7 +657,7 @@ msgstr "結構體的指示器必須是一個結構體"
 #: type.c:353 type.c:374 type.c:394
 #, c-format
 msgid "indicator for simple data type has to be simple"
-msgstr "簡單資料類型的指示器必須是簡單的"
+msgstr "簡單資料型別的指示器必須是簡單的"
 
 #: type.c:625
 #, c-format
@@ -714,7 +712,7 @@ msgstr "指標變數必須是整數型別"
 #: variable.c:509
 #, c-format
 msgid "unrecognized data type name \"%s\""
-msgstr "無法辨識的資料類型名稱 \"%s\""
+msgstr "無法辨識的資料型別名稱 \"%s\""
 
 #: variable.c:520 variable.c:528 variable.c:545 variable.c:548
 #, c-format
@@ -761,3 +759,4 @@ msgstr "不支援結構的多維陣列"
 
 #~ msgid "using unsupported DESCRIBE statement"
 #~ msgstr "使用不支援的 DESCRIBE 陳述式"
+

@@ -1,21 +1,22 @@
 # Traditional Chinese message translation file for pltcl
-# Copyright (C) 2023 PostgreSQL Global Development Group
-# This file is distributed under the same license as the pltcl (PostgreSQL) package.
+# This file is distributed under the same license as the PostgreSQL package.
+#
 # Zhenbang Wei <znbang@gmail.com>, 2011.
+# Ruohang Feng <rh@vonng.com>, 2026.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pltcl (PostgreSQL) 16\n"
+"Project-Id-Version: pltcl (PostgreSQL) 18\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
 "POT-Creation-Date: 2026-09-18 04:29+0000\n"
-"PO-Revision-Date: 2023-11-06 08:50+0800\n"
-"Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-09-19 12:00+0800\n"
+"Last-Translator: Ruohang Feng <rh@vonng.com>\n"
+"Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.4.1\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 #: pltcl.c:470
 msgid "PL/Tcl function to call once when pltcl is first used."
@@ -62,16 +63,14 @@ msgid "function returning record called in context that cannot accept type recor
 msgstr "在不接受記錄型別的清況下呼叫回傳記錄的函數"
 
 #: pltcl.c:1038
-#, fuzzy, c-format
-#| msgid "could not set junction for \"%s\": %s"
+#, c-format
 msgid "could not parse function return value: %s"
-msgstr "無法為 \"%s\" 設定連接: %s"
+msgstr "無法解析函式回傳值: %s"
 
 #: pltcl.c:1304
-#, fuzzy, c-format
-#| msgid "could not parse server version \"%s\""
+#, c-format
 msgid "could not parse trigger return value: %s"
-msgstr "無法解析伺服器版本\"%s\""
+msgstr "無法解析觸發器回傳值: %s"
 
 # commands/vacuum.c:2258 commands/vacuumlazy.c:489 commands/vacuumlazy.c:770
 # nodes/print.c:86 storage/lmgr/deadlock.c:888 tcop/postgres.c:3285
@@ -81,16 +80,11 @@ msgid "%s"
 msgstr "%s"
 
 #: pltcl.c:1405
-#, fuzzy, c-format
-#| msgid ""
-#| "%s\n"
-#| "in PL/Tcl function \"%s\""
+#, c-format
 msgid ""
 "%s\n"
 "in PL/Tcl function %s"
-msgstr ""
-"%s\n"
-"於 PL/Tcl 函數  \"%s\""
+msgstr "%s\n於 PL/Tcl 函式 %s 中"
 
 #: pltcl.c:1634
 #, c-format
@@ -147,3 +141,4 @@ msgstr "無法設定被產生的欄位 \"%s\""
 # common.c:123
 #~ msgid "out of memory"
 #~ msgstr "記憶體用盡"
+

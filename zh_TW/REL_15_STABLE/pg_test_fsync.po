@@ -1,17 +1,16 @@
-# LANGUAGE message translation file for pg_test_fsync
-# Copyright (C) 2026 PostgreSQL Global Development Group
-# This file is distributed under the same license as the pg_test_fsync (PostgreSQL) package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+# Traditional Chinese message translation file for pg_test_fsync
+# This file is distributed under the same license as the PostgreSQL package.
 #
-#, fuzzy
+# Ruohang Feng <rh@vonng.com>, 2026.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: pg_test_fsync (PostgreSQL) 15\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
 "POT-Creation-Date: 2026-09-17 19:36+0000\n"
-"PO-Revision-Date: 2026-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2026-09-19 12:00+0800\n"
+"Last-Translator: Ruohang Feng <rh@vonng.com>\n"
+"Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,191 +20,191 @@ msgstr ""
 #: ../../../src/common/logging.c:276
 #, c-format
 msgid "error: "
-msgstr ""
+msgstr "錯誤: "
 
 #: ../../../src/common/logging.c:283
 #, c-format
 msgid "warning: "
-msgstr ""
+msgstr "警告: "
 
 #: ../../../src/common/logging.c:294
 #, c-format
 msgid "detail: "
-msgstr ""
+msgstr "詳細內容: "
 
 #: ../../../src/common/logging.c:301
 #, c-format
 msgid "hint: "
-msgstr ""
+msgstr "提示: "
 
 #. translator: maintain alignment with NA_FORMAT
 #: pg_test_fsync.c:32
 #, c-format
 msgid "%13.3f ops/sec  %6.0f usecs/op\n"
-msgstr ""
+msgstr "%13.3f ops/sec  %6.0f usecs/op\n"
 
 #: pg_test_fsync.c:50
 #, c-format
 msgid "could not create thread for alarm"
-msgstr ""
+msgstr "無法為警報建立執行緒"
 
 #: pg_test_fsync.c:95
 #, c-format
 msgid "%s: %m"
-msgstr ""
+msgstr "%s: %m"
 
 #: pg_test_fsync.c:159
 #, c-format
 msgid "Usage: %s [-f FILENAME] [-s SECS-PER-TEST]\n"
-msgstr ""
+msgstr "用法: %s [-f FILENAME] [-s SECS-PER-TEST]\n"
 
 #: pg_test_fsync.c:185
 #, c-format
 msgid "invalid argument for option %s"
-msgstr ""
+msgstr "選項 %s 的參數無效"
 
 # tcop/postgres.c:2636 tcop/postgres.c:2652
 #: pg_test_fsync.c:186 pg_test_fsync.c:198 pg_test_fsync.c:207
 #, c-format
 msgid "Try \"%s --help\" for more information."
-msgstr "執行\"%s --help\"顯示更多資訊。"
+msgstr "用 \"%s --help\" 取得更多資訊。"
 
 #: pg_test_fsync.c:192
 #, c-format
 msgid "%s must be in range %u..%u"
-msgstr ""
+msgstr "%s 必須在範圍 %u..%u 內"
 
 #: pg_test_fsync.c:205
 #, c-format
 msgid "too many command-line arguments (first is \"%s\")"
-msgstr ""
+msgstr "命令列參數過多(第一個是 \"%s\")"
 
 #: pg_test_fsync.c:211
 #, c-format
 msgid "%u second per test\n"
 msgid_plural "%u seconds per test\n"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "每個測試 %u 秒\n"
 
 #: pg_test_fsync.c:216
 #, c-format
 msgid "O_DIRECT supported on this platform for open_datasync and open_sync.\n"
-msgstr ""
+msgstr "此平臺的 open_datasync 和 open_sync 支援 O_DIRECT。\n"
 
 #: pg_test_fsync.c:218
 #, c-format
 msgid "F_NOCACHE supported on this platform for open_datasync and open_sync.\n"
-msgstr ""
+msgstr "此平臺的 open_datasync 和 open_sync 支援 F_NOCACHE。\n"
 
 #: pg_test_fsync.c:220
 #, c-format
 msgid "Direct I/O is not supported on this platform.\n"
-msgstr ""
+msgstr "此平臺不支援直接 I/O。\n"
 
 #: pg_test_fsync.c:245 pg_test_fsync.c:336 pg_test_fsync.c:361
 #: pg_test_fsync.c:385 pg_test_fsync.c:529 pg_test_fsync.c:541
 #: pg_test_fsync.c:557 pg_test_fsync.c:563 pg_test_fsync.c:585
 msgid "could not open output file"
-msgstr ""
+msgstr "無法開啟輸出檔"
 
 #: pg_test_fsync.c:249 pg_test_fsync.c:319 pg_test_fsync.c:345
 #: pg_test_fsync.c:370 pg_test_fsync.c:394 pg_test_fsync.c:433
 #: pg_test_fsync.c:492 pg_test_fsync.c:531 pg_test_fsync.c:559
 #: pg_test_fsync.c:590
 msgid "write failed"
-msgstr ""
+msgstr "寫入失敗"
 
 #: pg_test_fsync.c:253 pg_test_fsync.c:372 pg_test_fsync.c:396
 #: pg_test_fsync.c:533 pg_test_fsync.c:565
 msgid "fsync failed"
-msgstr ""
+msgstr "fsync 失敗"
 
 #: pg_test_fsync.c:292
 #, c-format
 msgid ""
 "\n"
 "Compare file sync methods using one %dkB write:\n"
-msgstr ""
+msgstr "\n比較使用一個 %dkB 寫入的檔案同步方式:\n"
 
 #: pg_test_fsync.c:294
 #, c-format
 msgid ""
 "\n"
 "Compare file sync methods using two %dkB writes:\n"
-msgstr ""
+msgstr "\n比較使用兩個 %dkB 寫入的檔案同步方式:\n"
 
 #: pg_test_fsync.c:295
 #, c-format
 msgid "(in wal_sync_method preference order, except fdatasync is Linux's default)\n"
-msgstr ""
+msgstr "(按 wal_sync_method 的優先順序排列，但 Linux 預設使用 fdatasync)\n"
 
 #: pg_test_fsync.c:306 pg_test_fsync.c:413 pg_test_fsync.c:480
 msgid "n/a*"
-msgstr ""
+msgstr "n/a*"
 
 #: pg_test_fsync.c:325 pg_test_fsync.c:351 pg_test_fsync.c:401
 #: pg_test_fsync.c:439 pg_test_fsync.c:498
 msgid "n/a"
-msgstr ""
+msgstr "n/a"
 
 #: pg_test_fsync.c:444
 #, c-format
 msgid ""
 "* This file system and its mount options do not support direct\n"
 "  I/O, e.g. ext4 in journaled mode.\n"
-msgstr ""
+msgstr "* 這個檔案系統及其掛載選項不支援直接 I/O，例如 ext4 的日誌模式。\n"
 
 #: pg_test_fsync.c:452
 #, c-format
 msgid ""
 "\n"
 "Compare open_sync with different write sizes:\n"
-msgstr ""
+msgstr "\n比較使用不同寫入大小的 open_sync:\n"
 
 #: pg_test_fsync.c:453
 #, c-format
 msgid ""
 "(This is designed to compare the cost of writing 16kB in different write\n"
 "open_sync sizes.)\n"
-msgstr ""
+msgstr "(這是為了比較在不同的 open_sync 寫入大小下寫入 16kB 的成本而設計的。)\n"
 
 #: pg_test_fsync.c:456
 msgid " 1 * 16kB open_sync write"
-msgstr ""
+msgstr " 1 * 16kB open_sync 寫入"
 
 #: pg_test_fsync.c:457
 msgid " 2 *  8kB open_sync writes"
-msgstr ""
+msgstr " 2 *  8kB open_sync 寫入"
 
 #: pg_test_fsync.c:458
 msgid " 4 *  4kB open_sync writes"
-msgstr ""
+msgstr " 4 *  4kB open_sync 寫入"
 
 #: pg_test_fsync.c:459
 msgid " 8 *  2kB open_sync writes"
-msgstr ""
+msgstr " 8 *  2kB open_sync 寫入"
 
 #: pg_test_fsync.c:460
 msgid "16 *  1kB open_sync writes"
-msgstr ""
+msgstr "16 *  1kB open_sync 寫入"
 
 #: pg_test_fsync.c:514
 #, c-format
 msgid ""
 "\n"
 "Test if fsync on non-write file descriptor is honored:\n"
-msgstr ""
+msgstr "\n測試 fsync 非寫入檔案描述符是否被尊重:\n"
 
 #: pg_test_fsync.c:515
 #, c-format
 msgid ""
 "(If the times are similar, fsync() can sync data written on a different\n"
 "descriptor.)\n"
-msgstr ""
+msgstr "(如果時間相近，fsync() 可以同步被寫入不同描述符的資料。)\n"
 
 #: pg_test_fsync.c:580
 #, c-format
 msgid ""
 "\n"
 "Non-sync'ed %dkB writes:\n"
-msgstr ""
+msgstr "\n不使用同步的 %dkB 寫入:\n"
+

@@ -1,21 +1,21 @@
-# LANGUAGE message translation file for pg_walsummary
-# Copyright (C) 2026 PostgreSQL Global Development Group
-# This file is distributed under the same license as the pg_walsummary (PostgreSQL) package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+# Traditional Chinese message translation file for pg_walsummary
+# This file is distributed under the same license as the PostgreSQL package.
 #
-#, fuzzy
+# Ruohang Feng <rh@vonng.com>, 2026.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: pg_walsummary (PostgreSQL) 18\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
 "POT-Creation-Date: 2026-09-18 04:45+0000\n"
-"PO-Revision-Date: 2026-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2026-09-19 12:00+0800\n"
+"Last-Translator: Ruohang Feng <rh@vonng.com>\n"
+"Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 
 # libpq/be-secure.c:294 libpq/be-secure.c:387
 #: ../../../src/common/logging.c:279
@@ -73,12 +73,12 @@ msgstr "無法複製 null 指標(內部錯誤)\n"
 #: ../../common/fe_memutils.c:209
 #, c-format
 msgid "invalid memory allocation request size %zu + %zu\n"
-msgstr ""
+msgstr "無效的記憶體配置請求大小 %zu + %zu\n"
 
 #: ../../common/fe_memutils.c:228
 #, c-format
 msgid "invalid memory allocation request size %zu * %zu\n"
-msgstr ""
+msgstr "無效的記憶體配置請求大小 %zu * %zu\n"
 
 # access/transam/slru.c:638 access/transam/xlog.c:1631
 # access/transam/xlog.c:2742 access/transam/xlog.c:2832
@@ -90,39 +90,39 @@ msgstr ""
 #: pg_walsummary.c:108
 #, c-format
 msgid "could not open file \"%s\": %m"
-msgstr "無法開啟檔案\"%s\": %m"
+msgstr "無法開啟檔案 \"%s\": %m"
 
 #: ../../common/file_utils.c:75
 #, c-format
 msgid "could not synchronize file system for file \"%s\": %m"
-msgstr ""
+msgstr "無法同步檔案 \"%s\" 所在的檔案系統: %m"
 
 # access/transam/xlog.c:1936 access/transam/xlog.c:2038
 # access/transam/xlog.c:5291
 #: ../../common/file_utils.c:123 ../../common/file_utils.c:588
 #, c-format
 msgid "could not stat file \"%s\": %m"
-msgstr "無法取得檔案狀態\"%s\": %m"
+msgstr "無法取得檔案狀態 \"%s\": %m"
 
 #: ../../common/file_utils.c:133 ../../common/file_utils.c:243
 #: ../../fe_utils/option_utils.c:99
 #, c-format
 msgid "this build does not support sync method \"%s\""
-msgstr ""
+msgstr "此版本不支援同步方法 \"%s\""
 
 # access/transam/slru.c:930 commands/tablespace.c:529
 # commands/tablespace.c:694 utils/adt/misc.c:174
 #: ../../common/file_utils.c:156 ../../common/file_utils.c:304
 #, c-format
 msgid "could not open directory \"%s\": %m"
-msgstr "無法開啟目錄\"%s\": %m"
+msgstr "無法開啟目錄 \"%s\": %m"
 
 # access/transam/slru.c:967 commands/tablespace.c:577
 # commands/tablespace.c:721
 #: ../../common/file_utils.c:174 ../../common/file_utils.c:338
 #, c-format
 msgid "could not read directory \"%s\": %m"
-msgstr "無法讀取目錄\"%s\": %m"
+msgstr "無法讀取目錄 \"%s\": %m"
 
 # access/transam/slru.c:673 access/transam/xlog.c:1562
 # access/transam/xlog.c:1686 access/transam/xlog.c:3008
@@ -137,7 +137,7 @@ msgstr "無法fsync檔案 \"%s\": %m"
 #: ../../common/file_utils.c:520
 #, c-format
 msgid "could not rename file \"%s\" to \"%s\": %m"
-msgstr "無法將檔案\"%s\"重新命名為\"%s\": %m"
+msgstr "無法將檔案 \"%s\" 重新命名為 \"%s\": %m"
 
 # utils/adt/formatting.c:2044
 #: ../../fe_utils/option_utils.c:69
@@ -153,18 +153,18 @@ msgstr "%s 必須在範圍 %d..%d 內"
 #: ../../fe_utils/option_utils.c:106
 #, c-format
 msgid "unrecognized sync method: %s"
-msgstr ""
+msgstr "無法識別的同步方法: %s"
 
 # tcop/postgres.c:2636 tcop/postgres.c:2652
 #: pg_walsummary.c:86 pg_walsummary.c:94
 #, c-format
 msgid "Try \"%s --help\" for more information."
-msgstr "執行\"%s --help\"顯示更多資訊。"
+msgstr "執行 \"%s --help\" 顯示更多資訊。"
 
 #: pg_walsummary.c:93
 #, c-format
 msgid "no input files specified"
-msgstr ""
+msgstr "未指定輸入檔案"
 
 # access/transam/xlog.c:1659 access/transam/xlog.c:2942
 # access/transam/xlog.c:5397 access/transam/xlog.c:5448
@@ -173,14 +173,14 @@ msgstr ""
 #: pg_walsummary.c:251
 #, c-format
 msgid "could not read file \"%s\": %m"
-msgstr "無法讀取檔案\"%s\": %m"
+msgstr "無法讀取檔案 \"%s\": %m"
 
 #: pg_walsummary.c:266
 #, c-format
 msgid ""
 "%s prints the contents of a WAL summary file.\n"
 "\n"
-msgstr ""
+msgstr "%s 列印 WAL 摘要檔案的內容。\n\n"
 
 #: pg_walsummary.c:267
 #, c-format
@@ -190,7 +190,7 @@ msgstr "用法:\n"
 #: pg_walsummary.c:268
 #, c-format
 msgid "  %s [OPTION]... FILE...\n"
-msgstr ""
+msgstr "  %s [OPTION]... FILE...\n"
 
 #: pg_walsummary.c:269
 #, c-format
@@ -204,12 +204,12 @@ msgstr ""
 #: pg_walsummary.c:270
 #, c-format
 msgid "  -i, --individual          list block numbers individually, not as ranges\n"
-msgstr ""
+msgstr "  -i, --individual          逐個列出區塊編號，而非顯示為範圍\n"
 
 #: pg_walsummary.c:271
 #, c-format
 msgid "  -q, --quiet               don't print anything, just parse the files\n"
-msgstr ""
+msgstr "  -q, --quiet               不輸出任何內容，只解析檔案\n"
 
 #: pg_walsummary.c:272
 #, c-format
@@ -234,3 +234,4 @@ msgstr ""
 #, c-format
 msgid "%s home page: <%s>\n"
 msgstr "%s 網站: <%s>\n"
+

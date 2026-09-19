@@ -1,22 +1,22 @@
 # Traditional Chinese message translation file for pg_basebackup
-# Copyright (C) 2023 PostgreSQL Global Development Group
-# This file is distributed under the same license as the pg_basebackup (PostgreSQL) package.
+# This file is distributed under the same license as the PostgreSQL package.
+#
 # Zhenbang Wei <znbang@gmail.com>, 2023.
+# Ruohang Feng <rh@vonng.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: pg_basebackup (PostgreSQL) 16\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
 "POT-Creation-Date: 2026-09-17 19:17+0000\n"
-"PO-Revision-Date: 2023-11-06 08:49+0800\n"
-"Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-09-19 12:00+0800\n"
+"Last-Translator: Ruohang Feng <rh@vonng.com>\n"
+"Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4.1\n"
 
 # libpq/be-secure.c:294 libpq/be-secure.c:387
 #: ../../../src/common/logging.c:276
@@ -132,12 +132,12 @@ msgstr "無法複製 null 指標(內部錯誤)\n"
 #: ../../common/fe_memutils.c:209
 #, c-format
 msgid "invalid memory allocation request size %zu + %zu\n"
-msgstr ""
+msgstr "無效的記憶體配置請求大小 %zu + %zu\n"
 
 #: ../../common/fe_memutils.c:228
 #, c-format
 msgid "invalid memory allocation request size %zu * %zu\n"
-msgstr ""
+msgstr "無效的記憶體配置請求大小 %zu * %zu\n"
 
 # access/transam/xlog.c:1936 access/transam/xlog.c:2038
 # access/transam/xlog.c:5291
@@ -256,15 +256,14 @@ msgid "could not close file \"%s\": %m"
 msgstr "無法關閉檔案 \"%s\": %m"
 
 #: bbstreamer_file.c:219 bbstreamer_tar.c:299
-#, fuzzy, c-format
-#| msgid "tar member has empty name"
+#, c-format
 msgid "tar member has unsafe path name: \"%s\""
-msgstr "tar 成員的名稱是空的"
+msgstr "tar 成員的路徑名稱不安全: \"%s\""
 
 #: bbstreamer_file.c:244
 #, c-format
 msgid "link target has unsafe path name: \"%s\""
-msgstr ""
+msgstr "連結目標的路徑名稱不安全: \"%s\""
 
 #: bbstreamer_file.c:289
 #, c-format
@@ -494,9 +493,7 @@ msgstr "表空間映射中的新目錄不是絕對路徑: %s"
 msgid ""
 "%s takes a base backup of a running PostgreSQL server.\n"
 "\n"
-msgstr ""
-"%s 對正在運行的 PostgreSQL 伺服器進行基本備份。\n"
-"\n"
+msgstr "%s 對執行中的 PostgreSQL 伺服器進行基本備份。\n\n"
 
 #: pg_basebackup.c:387 pg_receivewal.c:79 pg_recvlogical.c:76
 #, c-format
@@ -550,18 +547,14 @@ msgstr ""
 msgid ""
 "  -t, --target=TARGET[:DETAIL]\n"
 "                         backup target (if other than client)\n"
-msgstr ""
-"  -t, --target=TARGET[:DETAIL]\n"
-"                         備份目標(如果不同於客戶端)\n"
+msgstr "  -t, --target=TARGET\n                         備份目標(如果不同於客戶端)\n"
 
 #: pg_basebackup.c:398
 #, c-format
 msgid ""
 "  -T, --tablespace-mapping=OLDDIR=NEWDIR\n"
 "                         relocate tablespace in OLDDIR to NEWDIR\n"
-msgstr ""
-"  -T, --tablespace-mapping=OLDDIR=NEWDIR\n"
-"                         將 OLDDIR 中的表空間搬到 NEWDIR\n"
+msgstr "  -T, --tablespace-mapping=OLDDIR\n                         將 OLDDIR 中的表空間搬到 NEWDIR\n"
 
 #: pg_basebackup.c:400
 #, c-format
@@ -610,14 +603,12 @@ msgstr ""
 msgid ""
 "  -c, --checkpoint=fast|spread\n"
 "                         set fast or spread checkpointing\n"
-msgstr ""
-"  -c, --checkpoint=fast|spread\n"
-"                         設定 fast 或 spread 檢查點\n"
+msgstr "  -c, --checkpoint=fast|spread\n                         設定 fast 或 spread 的檢查點方式\n"
 
 #: pg_basebackup.c:410
 #, c-format
 msgid "  -C, --create-slot      create replication slot\n"
-msgstr "  -C, --create-slot      建立複寫插槽\n"
+msgstr "  -C, --create-slot      建立複寫槽\n"
 
 #: pg_basebackup.c:411
 #, c-format
@@ -642,7 +633,7 @@ msgstr "  -P, --progress         顯示進度資訊\n"
 #: pg_basebackup.c:415 pg_receivewal.c:89
 #, c-format
 msgid "  -S, --slot=SLOTNAME    replication slot to use\n"
-msgstr "  -S, --slot=SLOTNAME    複寫插槽名稱\n"
+msgstr "  -S, --slot=SLOTNAME    複寫槽名稱\n"
 
 #: pg_basebackup.c:416 pg_receivewal.c:91 pg_recvlogical.c:98
 #, c-format
@@ -659,9 +650,7 @@ msgstr "  -V, --version          顯示版本，然後結束\n"
 msgid ""
 "      --manifest-checksums=SHA{224,256,384,512}|CRC32C|NONE\n"
 "                         use algorithm for manifest checksums\n"
-msgstr ""
-"      --manifest-checksums=SHA{224,256,384,512}|CRC32C|NONE\n"
-"                         使用指定算法驗證清單檢查碼\n"
+msgstr "      --manifest-checksums=SHA\n                         使用指定算法驗證清單檢查碼\n"
 
 #: pg_basebackup.c:420
 #, c-format
@@ -685,7 +674,7 @@ msgstr "      --no-manifest      禁止產生備份清單\n"
 #: pg_basebackup.c:424
 #, c-format
 msgid "      --no-slot          prevent creation of temporary replication slot\n"
-msgstr "      --no-slot          阻止建立臨時複寫插槽\n"
+msgstr "      --no-slot          阻止建立臨時複寫槽\n"
 
 #: pg_basebackup.c:425
 #, c-format
@@ -713,7 +702,7 @@ msgstr ""
 #: pg_basebackup.c:429 pg_receivewal.c:97
 #, c-format
 msgid "  -d, --dbname=CONNSTR   connection string\n"
-msgstr "  -d, --dbname=CONNSTR   連線字串\n"
+msgstr "  -d, --dbname=CONNSTR   連接字串\n"
 
 #: pg_basebackup.c:430 pg_receivewal.c:98 pg_recvlogical.c:103
 #, c-format
@@ -787,12 +776,12 @@ msgstr "無法為背景行程建立管道: %m"
 #: pg_basebackup.c:665
 #, c-format
 msgid "created temporary replication slot \"%s\""
-msgstr "已建立臨時複寫插槽 \"%s\""
+msgstr "已建立臨時複寫槽 \"%s\""
 
 #: pg_basebackup.c:668
 #, c-format
 msgid "created replication slot \"%s\""
-msgstr "已建立複寫插槽 \"%s\""
+msgstr "已建立複寫槽 \"%s\""
 
 #: pg_basebackup.c:702
 #, c-format
@@ -938,7 +927,7 @@ msgstr "空的 COPY 訊息"
 #: pg_basebackup.c:1563
 #, c-format
 msgid "malformed COPY message of type %d, length %zu"
-msgstr "COPY 訊息格式錯誤，類型 %d，長度 %zu"
+msgstr "COPY 訊息格式錯誤，型別 %d，長度 %zu"
 
 #: pg_basebackup.c:1761
 #, c-format
@@ -1030,7 +1019,7 @@ msgstr "備份失敗: %s"
 #: pg_basebackup.c:2086
 #, c-format
 msgid "no write-ahead log end position returned from server"
-msgstr "伺服器未返回 write-ahead 日誌結束位置"
+msgstr "伺服器未傳回 write-ahead 日誌結束位置"
 
 #: pg_basebackup.c:2089
 #, c-format
@@ -1060,7 +1049,7 @@ msgstr "無法向背景管道傳送指令: %m"
 #: pg_basebackup.c:2138
 #, c-format
 msgid "could not wait for child process: %m"
-msgstr "無法等待子進程: %m"
+msgstr "無法等待子行程: %m"
 
 #: pg_basebackup.c:2140
 #, c-format
@@ -1191,18 +1180,18 @@ msgstr "無法將 tar 模式下的 write-ahead 日誌串流至標準輸出"
 #: pg_basebackup.c:2595
 #, c-format
 msgid "replication slots can only be used with WAL streaming"
-msgstr "複寫插槽僅可與 WAL 串流一同使用"
+msgstr "複寫槽僅可與 WAL 串流一同使用"
 
 #: pg_basebackup.c:2607
 #, c-format
 msgid "--no-slot cannot be used with slot name"
-msgstr "--no-slot 不能與插槽名稱一同使用"
+msgstr "--no-slot 不能與槽名稱一同使用"
 
 #. translator: second %s is an option name
 #: pg_basebackup.c:2618 pg_receivewal.c:774
 #, c-format
 msgid "%s needs a slot to be specified using --slot"
-msgstr "%s 需要使用 --slot 指定一個插槽"
+msgstr "%s 需要使用 --slot 指定一個槽"
 
 #: pg_basebackup.c:2626 pg_basebackup.c:2666 pg_basebackup.c:2677
 #: pg_basebackup.c:2685
@@ -1262,7 +1251,7 @@ msgstr "  -E, --endpos=LSN       收到指定的 LSN 後結束\n"
 #: pg_receivewal.c:84 pg_recvlogical.c:87
 #, c-format
 msgid "      --if-not-exists    do not error if slot already exists when creating a slot\n"
-msgstr "      --if-not-exists    建立插槽時如果插槽已存在則不產生錯誤\n"
+msgstr "      --if-not-exists    建立槽時如果槽已存在則不產生錯誤\n"
 
 #: pg_receivewal.c:85 pg_recvlogical.c:89
 #, c-format
@@ -1293,9 +1282,7 @@ msgstr "      --synchronous      寫入 write-ahead 日誌後立即 flush\n"
 msgid ""
 "  -Z, --compress=METHOD[:DETAIL]\n"
 "                         compress as specified\n"
-msgstr ""
-"  -Z, --compress=METHOD[:DETAIL]\n"
-"                         指定壓縮方式\n"
+msgstr "  -Z, --compress=METHOD\n                         指定壓縮方式\n"
 
 #: pg_receivewal.c:103
 #, c-format
@@ -1309,17 +1296,17 @@ msgstr ""
 #: pg_receivewal.c:104 pg_recvlogical.c:79
 #, c-format
 msgid "      --create-slot      create a new replication slot (for the slot's name see --slot)\n"
-msgstr "      --create-slot      建立新的複寫插槽(插槽名稱請參見 --slot)\n"
+msgstr "      --create-slot      建立新的複寫槽(槽名稱請參見 --slot)\n"
 
 #: pg_receivewal.c:105 pg_recvlogical.c:80
 #, c-format
 msgid "      --drop-slot        drop the replication slot (for the slot's name see --slot)\n"
-msgstr "      --drop-slot        刪除複寫插槽(插槽名稱請參見 --slot)\n"
+msgstr "      --drop-slot        刪除複寫槽(槽名稱請參見 --slot)\n"
 
 #: pg_receivewal.c:191
 #, c-format
 msgid "finished segment at %X/%X (timeline %u)"
-msgstr "完成片斷，位置 %X/%X (時間軸 %u)"
+msgstr "完成片段，位置 %X/%X (時間軸 %u)"
 
 #: pg_receivewal.c:198
 #, c-format
@@ -1334,7 +1321,7 @@ msgstr "切換至時間軸 %u，位置 %X/%X"
 #: pg_receivewal.c:224
 #, c-format
 msgid "received interrupt signal, exiting"
-msgstr "收到中斷信號，結束"
+msgstr "收到中斷訊號，結束"
 
 # access/transam/slru.c:930 commands/tablespace.c:529
 # commands/tablespace.c:694 utils/adt/misc.c:174
@@ -1441,17 +1428,17 @@ msgstr "尚未支援 %s 壓縮"
 #: pg_receivewal.c:859
 #, c-format
 msgid "replication connection using slot \"%s\" is unexpectedly database specific"
-msgstr "使用插槽 \"%s\" 的複寫連線意外的只能用於特定資料庫"
+msgstr "使用槽 \"%s\" 的複寫連線意外的只能用於特定資料庫"
 
 #: pg_receivewal.c:878 pg_recvlogical.c:958
 #, c-format
 msgid "dropping replication slot \"%s\""
-msgstr "刪除複寫插槽 \"%s\""
+msgstr "刪除複寫槽 \"%s\""
 
 #: pg_receivewal.c:889 pg_recvlogical.c:968
 #, c-format
 msgid "creating replication slot \"%s\""
-msgstr "建立複寫插槽 \"%s\""
+msgstr "建立複寫槽 \"%s\""
 
 #: pg_receivewal.c:918 pg_recvlogical.c:992
 #, c-format
@@ -1485,7 +1472,7 @@ msgstr ""
 #: pg_recvlogical.c:81
 #, c-format
 msgid "      --start            start streaming in a replication slot (for the slot's name see --slot)\n"
-msgstr "      --start            開始在複寫插槽的串流(插槽位名稱請參見 --slot)\n"
+msgstr "      --start            開始在複寫槽的串流(槽名稱請參見 --slot)\n"
 
 #: pg_recvlogical.c:84
 #, c-format
@@ -1504,7 +1491,7 @@ msgstr ""
 #: pg_recvlogical.c:88
 #, c-format
 msgid "  -I, --startpos=LSN     where in an existing slot should the streaming start\n"
-msgstr "  -I, --startpos=LSN     現有插槽中串流開始位置\n"
+msgstr "  -I, --startpos=LSN     現有槽中串流開始位置\n"
 
 #: pg_recvlogical.c:90
 #, c-format
@@ -1512,9 +1499,7 @@ msgid ""
 "  -o, --option=NAME[=VALUE]\n"
 "                         pass option NAME with optional value VALUE to the\n"
 "                         output plugin\n"
-msgstr ""
-"  -o, --option=NAME[=VALUE]\n"
-"                         將選項 NAME 和選擇性的值 VALUE 傳給輸出外掛程式\n"
+msgstr "  -o, --option=NAME\n                         將選項 NAME 和選擇性的值 VALUE 傳給輸出外掛程式\n"
 
 #: pg_recvlogical.c:93
 #, c-format
@@ -1524,12 +1509,12 @@ msgstr "  -P, --plugin=PLUGIN    使用輸出外掛程式 PLUGIN(預設: %s)\n"
 #: pg_recvlogical.c:96
 #, c-format
 msgid "  -S, --slot=SLOTNAME    name of the logical replication slot\n"
-msgstr "  -S, --slot=SLOTNAME    邏輯複寫插槽的名稱\n"
+msgstr "  -S, --slot=SLOTNAME    邏輯複寫槽的名稱\n"
 
 #: pg_recvlogical.c:97
 #, c-format
 msgid "  -t, --two-phase        enable decoding of prepared transactions when creating a slot\n"
-msgstr "  -t, --two-phase        建立插槽時啟動已準備交易解碼\n"
+msgstr "  -t, --two-phase        建立槽時啟動已準備交易解碼\n"
 
 #: pg_recvlogical.c:102
 #, c-format
@@ -1539,17 +1524,17 @@ msgstr "  -d, --dbname=DBNAME    要連線的資料庫\n"
 #: pg_recvlogical.c:135
 #, c-format
 msgid "confirming write up to %X/%X, flush to %X/%X (slot %s)"
-msgstr "確認寫入至 %X/%X，flush 至 %X/%X (插槽 %s)"
+msgstr "確認寫入至 %X/%X，flush 至 %X/%X (槽 %s)"
 
 #: pg_recvlogical.c:159 receivelog.c:360
 #, c-format
 msgid "could not send feedback packet: %s"
-msgstr "無法傳送反饋封包: %s"
+msgstr "無法傳送回饋封包: %s"
 
 #: pg_recvlogical.c:227
 #, c-format
 msgid "starting log streaming at %X/%X (slot %s)"
-msgstr "開始日誌串流，位置 %X/%X (插槽 %s)"
+msgstr "開始日誌串流，位置 %X/%X (槽 %s)"
 
 #: pg_recvlogical.c:273
 #, c-format
@@ -1609,7 +1594,7 @@ msgstr "無法解析開始位罝: \"%s\""
 #: pg_recvlogical.c:860
 #, c-format
 msgid "no slot specified"
-msgstr "未指定插槽"
+msgstr "未指定槽"
 
 #: pg_recvlogical.c:867
 #, c-format
@@ -1654,12 +1639,12 @@ msgstr "無法建立特定資料庫的複寫連線"
 #: pg_recvlogical.c:1036
 #, c-format
 msgid "end position %X/%X reached by keepalive"
-msgstr ""
+msgstr "根據保活訊息確認已到達結束位置 %X/%X"
 
 #: pg_recvlogical.c:1039
 #, c-format
 msgid "end position %X/%X reached by WAL record at %X/%X"
-msgstr ""
+msgstr "位於 %3$X/%4$X 的 WAL 記錄已達到結束位置 %1$X/%2$X"
 
 #: receivelog.c:66
 #, c-format
@@ -1819,7 +1804,7 @@ msgstr "無法確定伺服器的 integer_datetimes 設定"
 #: streamutil.c:245
 #, c-format
 msgid "integer_datetimes compile flag does not match server"
-msgstr "integer_datetimes 的編譯旗標與伺服器不一致"
+msgstr "integer_datetimes 編譯旗標與伺服器不匹配"
 
 #: streamutil.c:296
 #, c-format
@@ -1835,7 +1820,7 @@ msgstr "無法解析 WAL 片段大小"
 #, c-format
 msgid "WAL segment size must be a power of two between 1 MB and 1 GB, but the remote server reported a value of %d byte"
 msgid_plural "WAL segment size must be a power of two between 1 MB and 1 GB, but the remote server reported a value of %d bytes"
-msgstr[0] "WAL 片段大小必須是介於 1MB 到 1GB 之間的二的次方，但遠端伺服器報告的值為 %d 位元組"
+msgstr[0] "WAL 片段大小必須是 1 MB 到 1 GB 之間的二的冪，但遠端伺服器報告的值為 %d 位元組"
 
 #: streamutil.c:369
 #, c-format
@@ -1855,32 +1840,32 @@ msgstr "無法識別系統: 收到 %d 列和 %d 欄，預期 %d 列和 %d 或更
 #: streamutil.c:511
 #, c-format
 msgid "could not read replication slot \"%s\": got %d rows and %d fields, expected %d rows and %d fields"
-msgstr "無法讀取複寫插槽 \"%s\": 收到 %d 列和 %d 欄，預期 %d 列和 %d 欄"
+msgstr "無法讀取複寫槽 \"%s\": 收到 %d 列和 %d 欄，預期 %d 列和 %d 欄"
 
 #: streamutil.c:523
 #, c-format
 msgid "replication slot \"%s\" does not exist"
-msgstr "複寫插槽 \"%s\" 不存在"
+msgstr "複寫槽 \"%s\" 不存在"
 
 #: streamutil.c:534
 #, c-format
 msgid "expected a physical replication slot, got type \"%s\" instead"
-msgstr "預期是物理複寫槽位卻得到類型 \"%s\""
+msgstr "預期是實體複寫槽卻得到型別 \"%s\""
 
 #: streamutil.c:548
 #, c-format
 msgid "could not parse restart_lsn \"%s\" for replication slot \"%s\""
-msgstr "無法解析複寫槽位 \"%2$s\" 的 restart_lsn \"%1$s\""
+msgstr "無法解析複寫槽 \"%2$s\" 的 restart_lsn \"%1$s\""
 
 #: streamutil.c:669
 #, c-format
 msgid "could not create replication slot \"%s\": got %d rows and %d fields, expected %d rows and %d fields"
-msgstr "無法建立複寫插槽 \"%s\": 收到 %d 列和 %d 欄，預期 %d 列和 %d 欄"
+msgstr "無法建立複寫槽 \"%s\": 收到 %d 列和 %d 欄，預期 %d 列和 %d 欄"
 
 #: streamutil.c:713
 #, c-format
 msgid "could not drop replication slot \"%s\": got %d rows and %d fields, expected %d rows and %d fields"
-msgstr "無法刪除複寫插槽 \"%s\": 收到 %d 列和 %d 欄，預期 %d 列和 %d 欄"
+msgstr "無法刪除複寫槽 \"%s\": 收到 %d 列和 %d 欄，預期 %d 列和 %d 欄"
 
 #: walmethods.c:721 walmethods.c:1264
 msgid "could not compress data"
@@ -1909,3 +1894,4 @@ msgstr "壓縮模式不支援 unlink"
 #: walmethods.c:1288
 msgid "could not close compression stream"
 msgstr "無法關閉壓縮串流: %s"
+

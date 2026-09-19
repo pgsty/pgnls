@@ -1,22 +1,22 @@
 # Traditional Chinese message translation file for pg_resetwal
-# Copyright (C) 2023 PostgreSQL Global Development Group
-# This file is distributed under the same license as the pg_resetwal (PostgreSQL) package.
+# This file is distributed under the same license as the PostgreSQL package.
+#
 # 2004-07-30 Zhenbang Wei <forth@zbwei.net>
+# Ruohang Feng <rh@vonng.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: pg_resetwal (PostgreSQL) 16\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
 "POT-Creation-Date: 2026-09-17 19:18+0000\n"
-"PO-Revision-Date: 2023-11-06 08:49+0800\n"
-"Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-09-19 12:00+0800\n"
+"Last-Translator: Ruohang Feng <rh@vonng.com>\n"
+"Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4.1\n"
 
 # libpq/be-secure.c:294 libpq/be-secure.c:387
 #: ../../../src/common/logging.c:276
@@ -109,7 +109,7 @@ msgstr "交易 ID(-x) 必須大於或等於 %u"
 #: pg_resetwal.c:219 pg_resetwal.c:223
 #, c-format
 msgid "transaction ID (-c) must be either 0 or greater than or equal to 2"
-msgstr "交易 ID(-c) 必須為 0 或大於等於 2"
+msgstr "交易 ID（-c）必須為 0，或者大於或等於 2"
 
 #: pg_resetwal.c:236
 #, c-format
@@ -122,10 +122,9 @@ msgid "oldest multitransaction ID (-m) must not be 0"
 msgstr "最舊的 multitransaction ID(-m) 不可為 0"
 
 #: pg_resetwal.c:276
-#, fuzzy, c-format
-#| msgid "multitransaction offset (-O) must not be -1"
+#, c-format
 msgid "multitransaction offset (-O) must be between 0 and %u"
-msgstr "multitransaction offset(-O) 不可為 -1"
+msgstr "多重交易位移（-O）必須在 0 和 %u 之間"
 
 # commands/define.c:197
 #: pg_resetwal.c:301
@@ -165,7 +164,7 @@ msgstr "您必須以 PostgreSQL 超級使用者身分執行 %s。"
 #: pg_resetwal.c:352
 #, c-format
 msgid "could not read permissions of directory \"%s\": %m"
-msgstr "無法讀取目錄\"%s\"的權限: %m"
+msgstr "無法讀取目錄 \"%s\" 的權限: %m"
 
 # utils/init/postinit.c:292
 #: pg_resetwal.c:358
@@ -177,7 +176,7 @@ msgstr "無法變更目錄到 \"%s\": %m"
 #: pg_resetwal.c:371 pg_resetwal.c:523 pg_resetwal.c:571
 #, c-format
 msgid "could not open file \"%s\" for reading: %m"
-msgstr "無法開啟檔案\"%s\"進行讀取: %m"
+msgstr "無法開啟檔案 \"%s\" 進行讀取: %m"
 
 # utils/init/miscinit.c:589
 #: pg_resetwal.c:376
@@ -195,9 +194,7 @@ msgstr "伺服器是否正在執行？如果沒有，請刪除鎖定檔然後重
 msgid ""
 "\n"
 "If these values seem acceptable, use -f to force reset.\n"
-msgstr ""
-"\n"
-"如果這些值看起來可以接受，請用 -f 強制重設。\n"
+msgstr "\n如果可以接受這些值，請用 -f 強制重設。\n"
 
 #: pg_resetwal.c:484
 #, c-format
@@ -205,10 +202,7 @@ msgid ""
 "The database server was not shut down cleanly.\n"
 "Resetting the write-ahead log might cause data to be lost.\n"
 "If you want to proceed anyway, use -f to force reset.\n"
-msgstr ""
-"資料庫伺服器未正常關閉。\n"
-"重設交易日誌可能會導致資料遺失。\n"
-"如果你仍要繼續，請用 -f 強制重設。\n"
+msgstr "資料庫伺服器未正常停止。\n重設預寫日誌可能導致資料遺失。\n如果仍要繼續，使用 -f 強制重設。\n"
 
 # utils/misc/guc.c:255
 #: pg_resetwal.c:498
@@ -416,7 +410,7 @@ msgstr "最大索引欄位數:                  %u\n"
 #: pg_resetwal.c:769
 #, c-format
 msgid "Maximum size of a TOAST chunk:        %u\n"
-msgstr "TOAST 塊大小上限:              %u\n"
+msgstr "TOAST 區塊大小上限:              %u\n"
 
 #: pg_resetwal.c:771
 #, c-format
@@ -471,57 +465,57 @@ msgstr "重設後的第一個日誌片段:          %s\n"
 #: pg_resetwal.c:800
 #, c-format
 msgid "NextMultiXactId:                      %u\n"
-msgstr ""
+msgstr "NextMultiXactId:                      %u\n"
 
 #: pg_resetwal.c:802
 #, c-format
 msgid "OldestMultiXid:                       %u\n"
-msgstr ""
+msgstr "OldestMultiXid:                       %u\n"
 
 #: pg_resetwal.c:804
 #, c-format
 msgid "OldestMulti's DB:                     %u\n"
-msgstr ""
+msgstr "OldestMulti 的資料庫:                 %u\n"
 
 #: pg_resetwal.c:810
 #, c-format
 msgid "NextMultiOffset:                      %u\n"
-msgstr ""
+msgstr "NextMultiOffset:                            %u\n"
 
 #: pg_resetwal.c:816
 #, c-format
 msgid "NextOID:                              %u\n"
-msgstr ""
+msgstr "NextOID:                              %u\n"
 
 #: pg_resetwal.c:822
 #, c-format
 msgid "NextXID:                              %u\n"
-msgstr ""
+msgstr "NextXID:                              %u\n"
 
 #: pg_resetwal.c:828
 #, c-format
 msgid "OldestXID:                            %u\n"
-msgstr ""
+msgstr "OldestXID:                            %u\n"
 
 #: pg_resetwal.c:830
 #, c-format
 msgid "OldestXID's DB:                       %u\n"
-msgstr ""
+msgstr "OldestXID 的資料庫:                   %u\n"
 
 #: pg_resetwal.c:836
 #, c-format
 msgid "NextXID epoch:                        %u\n"
-msgstr ""
+msgstr "NextXID 紀元:                         %u\n"
 
 #: pg_resetwal.c:842
 #, c-format
 msgid "oldestCommitTsXid:                    %u\n"
-msgstr ""
+msgstr "oldestCommitTsXid:                    %u\n"
 
 #: pg_resetwal.c:847
 #, c-format
 msgid "newestCommitTsXid:                    %u\n"
-msgstr ""
+msgstr "newestCommitTsXid:                    %u\n"
 
 # access/transam/slru.c:930 commands/tablespace.c:529
 # commands/tablespace.c:694 utils/adt/misc.c:174
@@ -605,10 +599,7 @@ msgid ""
 "  -c, --commit-timestamp-ids=XID,XID\n"
 "                                   set oldest and newest transactions bearing\n"
 "                                   commit timestamp (zero means no change)\n"
-msgstr ""
-"  -c, --commit-timestamp-ids=XID,XID\n"
-"                                   設定具有提交時間戳記的最舊和最新交易\n"
-"                                   (0 表示不修改)\n"
+msgstr "  -c, --commit-timestamp-ids=XID\n                                   設定具有提交時間戳記的最舊和最新交易\n                                   (0 表示不修改)\n"
 
 # postmaster/postmaster.c:1024 tcop/postgres.c:2122
 #: pg_resetwal.c:1142
@@ -634,12 +625,12 @@ msgstr "  -l, --next-wal-file=WALFILE      設定新 WAL 的最小起始位置\n
 #: pg_resetwal.c:1146
 #, c-format
 msgid "  -m, --multixact-ids=MXID,MXID    set next and oldest multitransaction ID\n"
-msgstr "  -m, --multixact-ids=MXID,MXID    設定下一個和最舊的 multitransaction ID\n"
+msgstr "  -m, --multixact-ids=MXID    設定下一個和最舊的 multitransaction ID\n"
 
 #: pg_resetwal.c:1147
 #, c-format
 msgid "  -n, --dry-run                    no update, just show what would be done\n"
-msgstr "  -n, --dry-run                    不執行更新，只顯示預計執行的操作\n"
+msgstr "  -n, --dry-run                    不更新，只顯示將要執行的操作\n"
 
 #: pg_resetwal.c:1148
 #, c-format
@@ -659,7 +650,7 @@ msgstr "  -u, --oldest-transaction-id=XID  設定最舊的交易 ID\n"
 #: pg_resetwal.c:1151
 #, c-format
 msgid "  -V, --version                    output version information, then exit\n"
-msgstr "  -V, --version                    顯示版本，然後結束\n"
+msgstr "  -V, --version                    輸出版本資訊，然後結束\n"
 
 #: pg_resetwal.c:1152
 #, c-format
@@ -674,7 +665,7 @@ msgstr "      --wal-segsize=SIZE           WAL 片段的大小，單位是 MB\n"
 #: pg_resetwal.c:1154
 #, c-format
 msgid "  -?, --help                       show this help, then exit\n"
-msgstr "  -?, --help                       顯示說明，然後結束\n"
+msgstr "  -?, --help                       顯示此說明，然後結束\n"
 
 #: pg_resetwal.c:1155
 #, c-format
@@ -794,3 +785,4 @@ msgstr "%s 網頁: <%s>\n"
 #, c-format
 #~ msgid "multitransaction ID (-m) must not be 0"
 #~ msgstr "multitransaction ID(-m) 不可為 0"
+

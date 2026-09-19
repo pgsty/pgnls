@@ -1,22 +1,22 @@
 # Traditional Chinese message translation file for pg_controldata
-# Copyright (C) 2023 PostgreSQL Global Development Group
-# This file is distributed under the same license as the pg_controldata (PostgreSQL) package.
+# This file is distributed under the same license as the PostgreSQL package.
+#
 # 2004-11-01 Zhenbang Wei <forth@zbwei.net>
+# Ruohang Feng <rh@vonng.com>, 2026.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: pg_controldata (PostgreSQL) 16\n"
+"Project-Id-Version: pg_controldata (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
 "POT-Creation-Date: 2026-09-18 04:26+0000\n"
-"PO-Revision-Date: 2024-06-26 08:37+0200\n"
-"Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-09-19 12:00+0800\n"
+"Last-Translator: Ruohang Feng <rh@vonng.com>\n"
+"Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4.1\n"
 
 # commands/copy.c:1031
 #: ../../common/controldata_utils.c:98
@@ -124,12 +124,12 @@ msgstr "無法複製 null 指標(內部錯誤)\n"
 #: ../../common/fe_memutils.c:209
 #, c-format
 msgid "invalid memory allocation request size %zu + %zu\n"
-msgstr ""
+msgstr "無效的記憶體配置請求大小 %zu + %zu\n"
 
 #: ../../common/fe_memutils.c:228
 #, c-format
 msgid "invalid memory allocation request size %zu * %zu\n"
-msgstr ""
+msgstr "無效的記憶體配置請求大小 %zu * %zu\n"
 
 #: pg_controldata.c:35
 #, c-format
@@ -233,10 +233,8 @@ msgstr "無法識別的狀態碼"
 
 # access/transam/xlog.c:3720
 #: pg_controldata.c:84
-#, fuzzy
-#| msgid "unrecognized wal_level"
 msgid "unrecognized \"wal_level\""
-msgstr "無法識別的 wal_level"
+msgstr "無法識別的 \"wal_level\""
 
 # tcop/postgres.c:2636 tcop/postgres.c:2652
 #: pg_controldata.c:139 pg_controldata.c:157 pg_controldata.c:164
@@ -257,50 +255,39 @@ msgstr "未指定資料目錄"
 #: pg_controldata.c:172
 #, c-format
 msgid "control file version (%u) does not match the version understood by this program (%u)"
-msgstr ""
+msgstr "控制檔版本 (%u) 與此程式支援的版本 (%u) 不相符"
 
 #: pg_controldata.c:174
 #, c-format
 msgid "Either the control file has been created with a different version of PostgreSQL, or it is corrupt.  The results below are untrustworthy."
-msgstr ""
+msgstr "控制檔可能由不同版本的 PostgreSQL 建立，也可能已損毀。以下的結果不可信。"
 
 #: pg_controldata.c:179
 #, c-format
 msgid "calculated CRC checksum does not match value stored in control file"
-msgstr ""
+msgstr "計算得到的 CRC 檢查碼與控制檔中儲存的值不相符"
 
 #: pg_controldata.c:180
-#, fuzzy, c-format
-#| msgid ""
-#| "WARNING: Calculated CRC checksum does not match value stored in file.\n"
-#| "Either the file is corrupt, or it has a different layout than this program\n"
-#| "is expecting.  The results below are untrustworthy.\n"
-#| "\n"
+#, c-format
 msgid "Either the control file is corrupt, or it has a different layout than this program is expecting.  The results below are untrustworthy."
-msgstr ""
-"警告: 計算獲得的 CRC 檢查碼和存在檔案中的值不一致。\n"
-"可能是檔案損壞，或是檔案結構與程式所預期的不同。\n"
-"以下的結果不可信。\n"
-"\n"
+msgstr "控制檔可能已損毀，或是其佈局與此程式預期的不同。以下的結果不可信。"
 
 # access/transam/xlog.c:4532
 #: pg_controldata.c:189
-#, fuzzy, c-format
-#| msgid "invalid secondary checkpoint link in control file"
+#, c-format
 msgid "invalid WAL segment size in control file (%d byte)"
 msgid_plural "invalid WAL segment size in control file (%d bytes)"
-msgstr[0] "控制檔中有無效的次要檢查點連結"
+msgstr[0] "控制檔中的 WAL 片段大小無效 (%d 位元組)"
 
 #: pg_controldata.c:193
-#, fuzzy, c-format
-#| msgid "argument of --wal-segsize must be a power of two between 1 and 1024"
+#, c-format
 msgid "The WAL segment size must be a power of two between 1 MB and 1 GB."
-msgstr "--wal-segsize 的參數必須是1和1024之間的二的次方數"
+msgstr "WAL 片段大小必須是 1 MB 到 1 GB 之間的 2 的冪。"
 
 #: pg_controldata.c:194
 #, c-format
 msgid "The file is corrupt and the results below are untrustworthy."
-msgstr ""
+msgstr "檔案已損毀，以下的結果不可信。"
 
 #: pg_controldata.c:212 pg_controldata.c:220 pg_controldata.c:239
 #, c-format
@@ -318,10 +305,9 @@ msgid "Catalog version number:               %u\n"
 msgstr "Catalog 版本號碼:                %u\n"
 
 #: pg_controldata.c:249
-#, fuzzy, c-format
-#| msgid "Database system identifier:           %llu\n"
+#, c-format
 msgid "Database system identifier:           %<PRIu64>\n"
-msgstr "資料庫系統識別碼:                %llu\n"
+msgstr "資料庫系統識別碼:                %<PRIu64>\n"
 
 #: pg_controldata.c:251
 #, c-format
@@ -334,16 +320,14 @@ msgid "pg_control last modified:             %s\n"
 msgstr "pg_control 最後修改時間:         %s\n"
 
 #: pg_controldata.c:255
-#, fuzzy, c-format
-#| msgid "Latest checkpoint location:           %X/%X\n"
+#, c-format
 msgid "Latest checkpoint location:           %X/%08X\n"
-msgstr "最新檢查點位置:                  %X/%X\n"
+msgstr "最新檢查點位置:                  %X/%08X\n"
 
 #: pg_controldata.c:257
-#, fuzzy, c-format
-#| msgid "Latest checkpoint's REDO location:    %X/%X\n"
+#, c-format
 msgid "Latest checkpoint's REDO location:    %X/%08X\n"
-msgstr "最新檢查點 REDO 位置:            %X/%X\n"
+msgstr "最新檢查點 REDO 位置:            %X/%08X\n"
 
 #: pg_controldata.c:259
 #, c-format
@@ -378,10 +362,9 @@ msgid "on"
 msgstr "on"
 
 #: pg_controldata.c:267
-#, fuzzy, c-format
-#| msgid "Latest checkpoint's oldestActiveXID:  %u\n"
+#, c-format
 msgid "Latest checkpoint's logical decoding: %s\n"
-msgstr "最新檢查點 oldestActiveXID:      %u\n"
+msgstr "最新檢查點的邏輯解碼狀態:        %s\n"
 
 #: pg_controldata.c:269
 #, c-format
@@ -399,10 +382,9 @@ msgid "Latest checkpoint's NextMultiXactId:  %u\n"
 msgstr "最新檢查點 NextMultiXactId:      %u\n"
 
 #: pg_controldata.c:276
-#, fuzzy, c-format
-#| msgid "Latest checkpoint's NextMultiOffset:  %u\n"
+#, c-format
 msgid "Latest checkpoint's NextMultiOffset:  %<PRIu64>\n"
-msgstr "最新檢查點 NextMultiOffset:      %u\n"
+msgstr "最新檢查點的 NextMultiOffset:    %<PRIu64>\n"
 
 #: pg_controldata.c:278
 #, c-format
@@ -445,16 +427,14 @@ msgid "Time of latest checkpoint:            %s\n"
 msgstr "最新檢查點的時間:                %s\n"
 
 #: pg_controldata.c:294
-#, fuzzy, c-format
-#| msgid "Fake LSN counter for unlogged rels:   %X/%X\n"
+#, c-format
 msgid "Fake LSN counter for unlogged rels:   %X/%08X\n"
-msgstr "無日誌關聯的虛擬 LSN 計數:       %X/%X\n"
+msgstr "無日誌關聯的虛擬 LSN 計數:       %X/%08X\n"
 
 #: pg_controldata.c:296
-#, fuzzy, c-format
-#| msgid "Minimum recovery ending location:     %X/%X\n"
+#, c-format
 msgid "Minimum recovery ending location:     %X/%08X\n"
-msgstr "最小還原結束位置:                %X/%X\n"
+msgstr "最小還原結束位置:                %X/%08X\n"
 
 #: pg_controldata.c:298
 #, c-format
@@ -462,16 +442,14 @@ msgid "Min recovery ending loc's timeline:   %u\n"
 msgstr "最小還原結束位置的時間軸:        %u\n"
 
 #: pg_controldata.c:300
-#, fuzzy, c-format
-#| msgid "Backup start location:                %X/%X\n"
+#, c-format
 msgid "Backup start location:                %X/%08X\n"
-msgstr "備份開始位置:                    %X/%X\n"
+msgstr "備份開始位置:                    %X/%08X\n"
 
 #: pg_controldata.c:302
-#, fuzzy, c-format
-#| msgid "Backup end location:                  %X/%X\n"
+#, c-format
 msgid "Backup end location:                  %X/%08X\n"
-msgstr "備份結束位置:                    %X/%X\n"
+msgstr "備份結束位置:                    %X/%08X\n"
 
 #: pg_controldata.c:304
 #, c-format
@@ -548,10 +526,9 @@ msgid "Blocks per segment of large relation: %u\n"
 msgstr "大型關聯每個片段的區塊數:        %u\n"
 
 #: pg_controldata.c:329
-#, fuzzy, c-format
-#| msgid "Bytes per WAL segment:                %u\n"
+#, c-format
 msgid "Pages per SLRU segment:               %u\n"
-msgstr "每個 WAL 片段的位元組數:         %u\n"
+msgstr "每個 SLRU 區段的頁數:            %u\n"
 
 #: pg_controldata.c:331
 #, c-format
@@ -586,7 +563,7 @@ msgstr "大物件區塊的大小:                %u\n"
 #: pg_controldata.c:344
 #, c-format
 msgid "Date/time type storage:               %s\n"
-msgstr "日期/時間類型的儲存方式:         %s\n"
+msgstr "日期/時間型別的儲存方式:         %s\n"
 
 #: pg_controldata.c:345
 msgid "64-bit integers"
@@ -611,18 +588,17 @@ msgid "Data page checksum version:           %u\n"
 msgstr "資料頁檢查碼版本:                %u\n"
 
 #: pg_controldata.c:350
-#, fuzzy, c-format
-#| msgid "Maximum data alignment:               %u\n"
+#, c-format
 msgid "Default char data signedness:         %s\n"
-msgstr "資料對齊上限:                    %u\n"
+msgstr "char 資料的預設符號屬性:         %s\n"
 
 #: pg_controldata.c:351
 msgid "signed"
-msgstr ""
+msgstr "帶正負號"
 
 #: pg_controldata.c:351
 msgid "unsigned"
-msgstr ""
+msgstr "不帶正負號"
 
 #: pg_controldata.c:352
 #, c-format
@@ -686,3 +662,4 @@ msgstr "模擬的驗證 nonce:                %s\n"
 
 #~ msgid "floating-point numbers"
 #~ msgstr "浮點數"
+
