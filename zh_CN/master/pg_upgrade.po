@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_upgrade (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-17 05:53+0000\n"
-"PO-Revision-Date: 2026-09-17 16:00+0800\n"
+"POT-Creation-Date: 2026-09-19 14:51+0000\n"
+"PO-Revision-Date: 2026-09-20 12:27+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
 "Language: zh_CN\n"
@@ -876,6 +876,21 @@ msgstr ""
 "重命名这些对象以修复此问题。\n"
 "所有名称无效的对象列在以下文件中:\n"
 "    %s"
+
+#: check.c:2761
+#, c-format
+msgid "Checking oldestXID and oldestMultiXid consistency"
+msgstr "正在检查 oldestXID 和 oldestMultiXid 的一致性"
+
+#: check.c:2782
+#, c-format
+msgid "oldestXID (%u) in the control file is newer than the datfrozenxid (%u) of database \"%s\""
+msgstr "控制文件中的 oldestXID（%1$u）晚于数据库 \"%3$s\" 的 datfrozenxid（%2$u）"
+
+#: check.c:2787
+#, c-format
+msgid "oldestMultiXid (%u) in control file is newer than the datminmxid (%u) of database \"%s\""
+msgstr "控制文件中的 oldestMultiXid（%1$u）晚于数据库 \"%3$s\" 的 datminmxid（%2$u）"
 
 #: controldata.c:133 controldata.c:203
 #, c-format

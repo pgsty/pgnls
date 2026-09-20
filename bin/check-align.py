@@ -20,11 +20,12 @@ What this checks, per catalog:
   3. Continuation lines stay under their description. Where an English help
      entry wraps and the continuation is indented to the description column, the
      Chinese continuation must be indented to the Chinese description column.
-  4. Metavariables are left alone. --option=DBNAME keeps DBNAME, so the option
-     column keeps its width.
+  4. Option syntax and metavariables are left alone. --option=DBNAME keeps
+     DBNAME, and NAME(args), MXID,MXID and VAR[=ARG] remain complete.
 
 Exits 1 if anything fails. No database, no network; stdlib plus poio.
 """
+import argparse
 import collections
 import re
 import sys
@@ -37,6 +38,8 @@ import poio
 
 # "label:" followed by padding and a value, as pg_controldata and friends print.
 LABEL = re.compile(r'^(?:[^\s%][^%\n]*?:) {2,}(?=%)')
+# A one-space companion can share a column with a padded label in a message.
+SINGLE_LABEL = re.compile(r'^(?:[^\s%][^%\n]*?:) (?=%)')
 # "  -x, --xxx=ARG   description", as --help prints.
 OPTION = re.compile(r'^(?:\s+-{1,2}[\w?][^\s]*(?:, --[^\s]+)?(?:[ =][A-Z][A-Z_]*)?) {2,}(?=\S)')
 INDENT = re.compile(r'^( {4,})(?=\S)')
@@ -62,6 +65,10 @@ def forms(entry):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--language', choices=('zh_CN', 'zh_TW'), default='zh_CN')
+    language = parser.parse_args().language
+    print(language)
     problems = []
     # (branch, catalog, kind, english column) -> {chinese column: [rows]}
     groups = collections.defaultdict(lambda: collections.defaultdict(list))
@@ -69,7 +76,7 @@ def main():
     padded = collections.defaultdict(bool)
     checked = continuations = 0
 
-    for path in sorted((ROOT / 'zh_CN').rglob('*.po')):
+    for path in sorted((ROOT / language).rglob('*.po')):
         branch, catalog = path.parts[-2], path.stem
         rel = path.relative_to(ROOT)
         for entry in poio.read_po(path).active:
@@ -87,10 +94,16 @@ def main():
                 continue          # a width-wrapped sentence joined into one line
 
             description_en = description_zh = None
+            label_columns = {width(hit.group(0)) for line in english.split('\n')
+                             if (hit := LABEL.match(line))}
             for en_line, zh_line in zip(english.split('\n'), chinese.split('\n')):
                 matched = False
                 for kind, pattern in KINDS:
                     hit_en = pattern.match(en_line)
+                    if not hit_en and kind == 'label':
+                        companion = SINGLE_LABEL.match(en_line)
+                        if companion and width(companion.group(0)) in label_columns:
+                            hit_en = companion
                     if not hit_en:
                         continue
                     matched = True
@@ -100,6 +113,10 @@ def main():
                         problems.append('%s:%d column separator lost: %r'
                                         % (rel, entry.line, zh_line[:60]))
                         break
+                    if kind == 'option' and hit_en.group(0).rstrip() != hit_zh.group(0).rstrip():
+                        problems.append('%s:%d option syntax changed: %r -> %r'
+                                        % (rel, entry.line, hit_en.group(0).rstrip(),
+                                           hit_zh.group(0).rstrip()))
                     column_en = width(en_line[:hit_en.end()])
                     column_zh = width(zh_line[:hit_zh.end()])
                     gap = len(en_line[:hit_en.end()]) - len(en_line[:hit_en.end()].rstrip())

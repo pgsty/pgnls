@@ -1,6 +1,6 @@
-# PostgreSQL Simplified Chinese message catalogs.
-# Every target works from zh_CN/ alone and needs nothing but Python 3 and GNU
-# gettext. The only target that touches the network is fetch-upstream.
+# PostgreSQL Chinese message catalogs.
+# Checks cover zh_CN/ and zh_TW/; packaging targets use zh_CN/.
+# Python 3 and GNU gettext suffice; only fetch-upstream touches the network.
 
 BRANCHES := master REL_18_STABLE REL_17_STABLE REL_16_STABLE REL_15_STABLE REL_14_STABLE
 SNAPSHOT ?= $(lastword $(sort $(wildcard tmp/upstream-*)))
@@ -15,12 +15,15 @@ help:  ## List the available targets
 	@echo
 	@echo "  Variables: BRANCH=$(BRANCH)  CATALOG=$(CATALOG)  SNAPSHOT=$(if $(SNAPSHOT),$(SNAPSHOT),<none yet; run make fetch-upstream>)"
 
-check:  ## Validate all 162 catalogs: msgfmt, completeness, headers, alignment
+check:  ## Validate all 324 catalogs: msgfmt, completeness, headers, alignment
 	@python3 bin/check.py
+	@python3 bin/check.py --language zh_TW
 	@python3 bin/check-align.py
+	@python3 bin/check-align.py --language zh_TW
 
 check-align:  ## Check terminal column alignment by East Asian display width
 	@python3 bin/check-align.py
+	@python3 bin/check-align.py --language zh_TW
 
 stats:  ## Show message counts per catalog per branch
 	@python3 bin/stats.py

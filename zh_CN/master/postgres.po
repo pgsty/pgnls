@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-17 05:49+0000\n"
-"PO-Revision-Date: 2026-09-17 16:00+0800\n"
+"POT-Creation-Date: 2026-09-19 14:48+0000\n"
+"PO-Revision-Date: 2026-09-20 12:27+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
 "Language: zh_CN\n"
@@ -18516,17 +18516,15 @@ msgstr "无效的超时值: \"%s\""
 msgid "timeout cannot be negative"
 msgstr "超时值不能为负数"
 
-#: commands/wait.c:158
-#, c-format
-msgid "WAIT must be called without an active or registered snapshot"
-msgstr "必须在没有活动快照或已注册快照时调用 WAIT"
-
 #: commands/wait.c:159
 #, c-format
-msgid ""
-"WAIT cannot be executed within a transaction with an isolation level higher "
-"than READ COMMITTED."
-msgstr "不能在隔离级别高于 READ COMMITTED 的事务中执行 WAIT。"
+msgid "WAIT cannot be executed while the current transaction holds a snapshot"
+msgstr "当前事务持有快照时不能执行 WAIT"
+
+#: commands/wait.c:161
+#, c-format
+msgid "This transaction runs at an isolation level higher than READ COMMITTED, so it holds a snapshot from its first query until it ends."
+msgstr "当前事务以高于 READ COMMITTED 的隔离级别运行，因此从第一次查询开始持有快照，直到事务结束。"
 
 #: commands/wait.c:177
 #, c-format
@@ -18549,10 +18547,10 @@ msgstr ""
 "当前会话持有 %s 上的锁，可能导致恢复过程等待当前会话，而当前会话又在等待恢复"
 "过程。"
 
-#: commands/wait.c:230
+#: commands/wait.c:232
 #, c-format
-msgid "Release the locks, or execute WAIT FOR before acquiring them."
-msgstr "请释放这些锁，或在获取锁之前执行 WAIT FOR。"
+msgid "Release the locks, or execute WAIT before acquiring them."
+msgstr "请释放这些锁，或在获取锁之前执行 WAIT。"
 
 #: commands/wait.c:257
 #, c-format
@@ -22480,10 +22478,11 @@ msgstr "唯一索引推断条件中不支持整行引用"
 msgid "constraint in ON CONFLICT clause has no associated index"
 msgstr "ON CONFLICT 子句中的约束没有关联的索引"
 
-#: optimizer/util/plancat.c:1022
+#. translator: %s is an ON CONFLICT clause
+#: optimizer/util/plancat.c:1008
 #, c-format
-msgid "ON CONFLICT DO %s not supported with exclusion constraints"
-msgstr "ON CONFLICT DO %s 不支持排他约束"
+msgid "%s not supported with exclusion constraints"
+msgstr "%s 不支持排他约束"
 
 #: optimizer/util/plancat.c:1190
 #, c-format
@@ -30363,6 +30362,16 @@ msgstr "共享内存结构 \"%s\" 创建时的大小不同: 现有大小为 %zu�
 msgid "out of shared memory (%zu bytes requested)"
 msgstr "共享内存不足（请求 %zu 字节）"
 
+#: storage/ipc/shmem.c:1041
+#, c-format
+msgid "cannot attach to shared memory struct \"%s\" because it does not exist"
+msgstr "不能附接到共享内存结构 \"%s\"，因为它不存在"
+
+#: storage/ipc/shmem.c:1043
+#, c-format
+msgid "SHMEM_ATTACH_UNKNOWN_SIZE can only be used to attach to an existing shared memory structure."
+msgstr "SHMEM_ATTACH_UNKNOWN_SIZE 只能用于附接到现有的共享内存结构。"
+
 #: storage/ipc/signalfuncs.c:75
 #, c-format
 msgid "PID %d is not a PostgreSQL backend process"
@@ -37441,6 +37450,24 @@ msgstr "非只读可串行化事务不能导入来自只读事务的快照"
 #, c-format
 msgid "cannot import a snapshot from a different database"
 msgstr "不能导入来自不同数据库的快照"
+
+#, c-format
+#~ msgid "WAIT must be called without an active or registered snapshot"
+#~ msgstr "必须在没有活动快照或已注册快照时调用 WAIT"
+
+#, c-format
+#~ msgid ""
+#~ "WAIT cannot be executed within a transaction with an isolation level higher "
+#~ "than READ COMMITTED."
+#~ msgstr "不能在隔离级别高于 READ COMMITTED 的事务中执行 WAIT。"
+
+#, c-format
+#~ msgid "Release the locks, or execute WAIT FOR before acquiring them."
+#~ msgstr "请释放这些锁，或在获取锁之前执行 WAIT FOR。"
+
+#, c-format
+#~ msgid "ON CONFLICT DO %s not supported with exclusion constraints"
+#~ msgstr "ON CONFLICT DO %s 不支持排他约束"
 
 #, c-format
 #~ msgid ""

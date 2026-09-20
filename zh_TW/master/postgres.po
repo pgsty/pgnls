@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-18 04:20+0000\n"
-"PO-Revision-Date: 2026-09-19 12:00+0800\n"
+"POT-Creation-Date: 2026-09-19 14:49+0000\n"
+"PO-Revision-Date: 2026-09-20 12:27+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
@@ -19892,15 +19892,15 @@ msgstr "無效的逾時值: \"%s\""
 msgid "timeout cannot be negative"
 msgstr "逾時值不能為負數"
 
-#: commands/wait.c:158
-#, c-format
-msgid "WAIT must be called without an active or registered snapshot"
-msgstr "必須在沒有作用中快照或已註冊快照時呼叫 WAIT"
-
 #: commands/wait.c:159
 #, c-format
-msgid "WAIT cannot be executed within a transaction with an isolation level higher than READ COMMITTED."
-msgstr "不能在隔離層級高於 READ COMMITTED 的交易中執行 WAIT。"
+msgid "WAIT cannot be executed while the current transaction holds a snapshot"
+msgstr "目前交易持有快照時不能執行 WAIT"
+
+#: commands/wait.c:161
+#, c-format
+msgid "This transaction runs at an isolation level higher than READ COMMITTED, so it holds a snapshot from its first query until it ends."
+msgstr "目前交易以高於 READ COMMITTED 的隔離層級執行，因此從第一次查詢開始持有快照，直到交易結束。"
 
 #: commands/wait.c:177
 #, c-format
@@ -19917,10 +19917,10 @@ msgstr "持有鎖定時不能等待待命伺服器 LSN"
 msgid "This session holds a lock on %s, which could make recovery wait for this session while this session waits for recovery."
 msgstr "目前工作階段持有 %s 上的鎖定，可能導致復原過程等待目前工作階段，而目前工作階段又在等待復原過程。"
 
-#: commands/wait.c:230
+#: commands/wait.c:232
 #, c-format
-msgid "Release the locks, or execute WAIT FOR before acquiring them."
-msgstr "請釋放這些鎖定，或在取得鎖定之前執行 WAIT FOR。"
+msgid "Release the locks, or execute WAIT before acquiring them."
+msgstr "請釋放這些鎖定，或在取得鎖定之前執行 WAIT。"
 
 #: commands/wait.c:257
 #, c-format
@@ -24164,10 +24164,11 @@ msgid "constraint in ON CONFLICT clause has no associated index"
 msgstr "ON CONFLICT 子句中的條件約束沒有關聯的索引"
 
 # commands/indexcmds.c:229
-#: optimizer/util/plancat.c:1022
+#. translator: %s is an ON CONFLICT clause
+#: optimizer/util/plancat.c:1008
 #, c-format
-msgid "ON CONFLICT DO %s not supported with exclusion constraints"
-msgstr "ON CONFLICT DO %s 不支援排他條件約束"
+msgid "%s not supported with exclusion constraints"
+msgstr "%s 不支援排他條件約束"
 
 # commands/tablecmds.c:4160
 #: optimizer/util/plancat.c:1190
@@ -32159,6 +32160,16 @@ msgstr "共享記憶體結構 \"%s\" 建立時的大小不同: 現有大小為 %
 msgid "out of shared memory (%zu bytes requested)"
 msgstr "共享記憶體不足 (請求 %zu 位元組)"
 
+#: storage/ipc/shmem.c:1041
+#, c-format
+msgid "cannot attach to shared memory struct \"%s\" because it does not exist"
+msgstr "不能附接到共享記憶體結構 \"%s\"，因為它不存在"
+
+#: storage/ipc/shmem.c:1043
+#, c-format
+msgid "SHMEM_ATTACH_UNKNOWN_SIZE can only be used to attach to an existing shared memory structure."
+msgstr "SHMEM_ATTACH_UNKNOWN_SIZE 只能用於附接到現有的共享記憶體結構。"
+
 # utils/adt/misc.c:90
 #: storage/ipc/signalfuncs.c:75
 #, c-format
@@ -38589,13 +38600,13 @@ msgstr "上下文:"
 #: utils/error/elog.c:3745
 #, c-format
 msgid "LOCATION:  %s, %s:%d\n"
-msgstr "位置:%s, %s:%d\n"
+msgstr "位置:  %s, %s:%d\n"
 
 # utils/error/elog.c:1542
 #: utils/error/elog.c:3752
 #, c-format
 msgid "LOCATION:  %s:%d\n"
-msgstr "位置:%s:%d\n"
+msgstr "位置:  %s:%d\n"
 
 #: utils/error/elog.c:3759
 msgid "BACKTRACE:  "
@@ -40186,6 +40197,23 @@ msgstr "非唯讀可序列化交易不能匯入來自唯讀交易的快照"
 #, c-format
 msgid "cannot import a snapshot from a different database"
 msgstr "不能匯入來自不同資料庫的快照"
+
+#, c-format
+#~ msgid "WAIT must be called without an active or registered snapshot"
+#~ msgstr "必須在沒有作用中快照或已註冊快照時呼叫 WAIT"
+
+#, c-format
+#~ msgid "WAIT cannot be executed within a transaction with an isolation level higher than READ COMMITTED."
+#~ msgstr "不能在隔離層級高於 READ COMMITTED 的交易中執行 WAIT。"
+
+#, c-format
+#~ msgid "Release the locks, or execute WAIT FOR before acquiring them."
+#~ msgstr "請釋放這些鎖定，或在取得鎖定之前執行 WAIT FOR。"
+
+# commands/indexcmds.c:229
+#, c-format
+#~ msgid "ON CONFLICT DO %s not supported with exclusion constraints"
+#~ msgstr "ON CONFLICT DO %s 不支援排他條件約束"
 
 #, fuzzy
 #~ msgid ""

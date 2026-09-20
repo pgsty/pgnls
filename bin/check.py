@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Validate every catalog under zh_CN/ — no database, no network, stdlib + GNU msgfmt.
+"""Validate one language's catalogs — no database, no network, stdlib + GNU msgfmt.
 
 Per file: it parses losslessly, compiles under `msgfmt --check --check-format`,
 is 100% translated with no fuzzy flag, no empty form, no surviving msgstr[1] and
 no leftover '#|' previous-message comment, and carries the header fields this
 repository commits to. Exits 1 on the first category of problem found.
 """
+import argparse
 import re
 import subprocess
 import sys
@@ -17,21 +18,26 @@ import poio
 
 BRANCHES = [('master', 19), ('REL_18_STABLE', 18), ('REL_17_STABLE', 17),
             ('REL_16_STABLE', 16), ('REL_15_STABLE', 15), ('REL_14_STABLE', 14)]
-EXPECTED = {'master': (28, 12638), 'REL_18_STABLE': (28, 12098), 'REL_17_STABLE': (28, 11509),
+EXPECTED = {'master': (28, 12643), 'REL_18_STABLE': (28, 12098), 'REL_17_STABLE': (28, 11509),
             'REL_16_STABLE': (26, 10656), 'REL_15_STABLE': (26, 10463), 'REL_14_STABLE': (26, 10125)}
 HEADER = {
     'Report-Msgid-Bugs-To': 'pgsql-bugs@lists.postgresql.org',
-    'Language': 'zh_CN',
     'MIME-Version': '1.0',
     'Content-Type': 'text/plain; charset=UTF-8',
     'Content-Transfer-Encoding': '8bit',
     'Plural-Forms': 'nplurals=1; plural=0;',
-    'Language-Team': 'Chinese (Simplified) <pgsql-translators@postgresql.org>',
     'Last-Translator': 'Ruohang Feng <rh@vonng.com>',
 }
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--language', choices=('zh_CN', 'zh_TW'), default='zh_CN')
+    language = parser.parse_args().language
+    header = dict(HEADER, Language=language)
+    variant = 'Simplified' if language == 'zh_CN' else 'Traditional'
+    header['Language-Team'] = 'Chinese (%s) <pgsql-translators@postgresql.org>' % variant
+    print(language)
     problems = []
     grand_files = grand_msgs = 0
     rows = []
@@ -40,9 +46,9 @@ def main():
         problems.append('msgfmt not found on PATH; install GNU gettext for the strict check')
 
     for branch, major in BRANCHES:
-        directory = ROOT / 'zh_CN' / branch
+        directory = ROOT / language / branch
         if not directory.is_dir():
-            problems.append('missing directory: zh_CN/%s' % branch)
+            problems.append('missing directory: %s/%s' % (language, branch))
             continue
         files = sorted(directory.glob('*.po'))
         msgs = 0
@@ -75,7 +81,7 @@ def main():
                     problems.append('%s:%d empty translation' % (rel, entry.line))
 
             meta = po.metadata
-            for key, want in HEADER.items():
+            for key, want in header.items():
                 if meta.get(key) != want:
                     problems.append('%s: header %s is %r, expected %r' % (rel, key, meta.get(key), want))
             want_version = '%s (PostgreSQL) %d' % (path.stem, major)
@@ -92,8 +98,8 @@ def main():
         flag = '' if (len(files), msgs) == (want_files, want_msgs) else \
                '   != expected %d/%d' % (want_files, want_msgs)
         if flag:
-            problems.append('zh_CN/%s: %d catalogs / %d messages, expected %d / %d'
-                            % (branch, len(files), msgs, want_files, want_msgs))
+            problems.append('%s/%s: %d catalogs / %d messages, expected %d / %d'
+                            % (language, branch, len(files), msgs, want_files, want_msgs))
         rows.append('  %-16s PG%-3d %2d catalogs %7s messages%s'
                     % (branch, major, len(files), '{:,}'.format(msgs), flag))
         grand_files += len(files)
