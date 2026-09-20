@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-18 04:39+0000\n"
+"POT-Creation-Date: 2026-09-19 15:08+0000\n"
 "PO-Revision-Date: 2013-09-03 23:24-0400\n"
 "Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
 "Language-Team: EnterpriseDB translation team <dev-escalations@enterprisedb.com>\n"
@@ -21639,45 +21639,45 @@ msgstr "SELECT FOR UPDATE/SHARE 無法套用至外部聯結的可為 Null 端"
 
 # optimizer/plan/planner.c:698
 #. translator: %s is a SQL row locking clause such as FOR UPDATE
-#: optimizer/plan/planner.c:1720 parser/analyze.c:1823 parser/analyze.c:2082
+#: optimizer/plan/planner.c:1732 parser/analyze.c:1823 parser/analyze.c:2082
 #: parser/analyze.c:3412
 #, fuzzy, c-format
 #| msgid "SELECT FOR UPDATE/SHARE is not allowed with UNION/INTERSECT/EXCEPT"
 msgid "%s is not allowed with UNION/INTERSECT/EXCEPT"
 msgstr "UNION/INTERSECT/EXCEPT 不允許 SELECT FOR UPDATE/SHARE"
 
-#: optimizer/plan/planner.c:2466 optimizer/plan/planner.c:4352
+#: optimizer/plan/planner.c:2478 optimizer/plan/planner.c:4364
 #, c-format
 msgid "could not implement GROUP BY"
 msgstr "無法實作 GROUP BY"
 
-#: optimizer/plan/planner.c:2467 optimizer/plan/planner.c:4353
-#: optimizer/plan/planner.c:5034 optimizer/prep/prepunion.c:1073
+#: optimizer/plan/planner.c:2479 optimizer/plan/planner.c:4365
+#: optimizer/plan/planner.c:5046 optimizer/prep/prepunion.c:1073
 #, c-format
 msgid "Some of the datatypes only support hashing, while others only support sorting."
 msgstr "有些資料型別只支援雜湊，有些資料型別只支援排序。"
 
-#: optimizer/plan/planner.c:5033
+#: optimizer/plan/planner.c:5045
 #, c-format
 msgid "could not implement DISTINCT"
 msgstr "無法實作 DISTINCT"
 
-#: optimizer/plan/planner.c:6530
+#: optimizer/plan/planner.c:6542
 #, c-format
 msgid "could not implement window PARTITION BY"
 msgstr "無法實作視窗 PARTITION BY"
 
-#: optimizer/plan/planner.c:6531
+#: optimizer/plan/planner.c:6543
 #, c-format
 msgid "Window partitioning columns must be of sortable datatypes."
 msgstr "視窗分割資料行必須屬於可排序的資料型別。"
 
-#: optimizer/plan/planner.c:6535
+#: optimizer/plan/planner.c:6547
 #, c-format
 msgid "could not implement window ORDER BY"
 msgstr "無法實作視窗 ORDER BY"
 
-#: optimizer/plan/planner.c:6536
+#: optimizer/plan/planner.c:6548
 #, c-format
 msgid "Window ordering columns must be of sortable datatypes."
 msgstr "視窗排序資料行必須屬於可排序的資料型別。"
@@ -24894,7 +24894,7 @@ msgstr "具有 WHERE 條件的規則只能有 SELECT、INSERT、UPDATE 或 DELET
 # parser/analyze.c:1687 parser/analyze.c:1759 rewrite/rewriteHandler.c:177
 # rewrite/rewriteManip.c:749 rewrite/rewriteManip.c:805
 #: parser/parse_utilcmd.c:3407 parser/parse_utilcmd.c:3508
-#: rewrite/rewriteHandler.c:545 rewrite/rewriteManip.c:1243
+#: rewrite/rewriteHandler.c:545 rewrite/rewriteManip.c:1244
 #, c-format
 msgid "conditional UNION/INTERSECT/EXCEPT statements are not implemented"
 msgstr "條件式 UNION/INTERSECT/EXCEPT 陳述式未實作"
@@ -28856,12 +28856,12 @@ msgid "WITH cannot be used in a query that is rewritten by rules into multiple q
 msgstr ""
 
 # rewrite/rewriteManip.c:737 rewrite/rewriteManip.c:793
-#: rewrite/rewriteManip.c:1231
+#: rewrite/rewriteManip.c:1232
 #, c-format
 msgid "conditional utility statements are not implemented"
 msgstr "條件式公用程式陳述式未實作"
 
-#: rewrite/rewriteManip.c:1960
+#: rewrite/rewriteManip.c:1961
 #, c-format
 msgid "NEW variables in ON UPDATE rules cannot reference columns that are part of a multiple assignment in the subject UPDATE command"
 msgstr ""
@@ -33977,30 +33977,30 @@ msgstr "建立或變更物件的安全性標籤"
 
 #  translator: first %s is name of a SQL construct, eg CASE
 # parser/parse_coerce.c:933
-#: utils/adt/jsonpath_exec.c:3111
+#: utils/adt/jsonpath_exec.c:3115
 #, fuzzy, c-format
 #| msgid "%s could not convert type %s to %s"
 msgid "could not convert value of type %s to jsonpath"
 msgstr "%s 無法將型別 %s 轉換成 %s"
 
 # startup.c:502
-#: utils/adt/jsonpath_exec.c:3145
+#: utils/adt/jsonpath_exec.c:3149
 #, fuzzy, c-format
 #| msgid "%s: could not set variable \"%s\"\n"
 msgid "could not find jsonpath variable \"%s\""
 msgstr "%s: 無法設定變數 \"%s\"\n"
 
-#: utils/adt/jsonpath_exec.c:3198
+#: utils/adt/jsonpath_exec.c:3202
 #, c-format
 msgid "\"vars\" argument is not an object"
 msgstr ""
 
-#: utils/adt/jsonpath_exec.c:3199
+#: utils/adt/jsonpath_exec.c:3203
 #, c-format
 msgid "Jsonpath parameters should be encoded as key-value pairs of \"vars\" object."
 msgstr ""
 
-#: utils/adt/jsonpath_exec.c:3462
+#: utils/adt/jsonpath_exec.c:3466
 #, c-format
 msgid "jsonpath array subscript is not a single numeric value"
 msgstr ""
@@ -34011,43 +34011,43 @@ msgstr ""
 # utils/adt/int8.c:751 utils/adt/int8.c:776 utils/adt/int8.c:796
 # utils/adt/int8.c:816 utils/adt/int8.c:842 utils/adt/int8.c:1010
 # utils/adt/int8.c:1049 utils/adt/numeric.c:1838 utils/adt/varbit.c:1313
-#: utils/adt/jsonpath_exec.c:3474
+#: utils/adt/jsonpath_exec.c:3478
 #, fuzzy, c-format
 #| msgid "array subscript out of range"
 msgid "jsonpath array subscript is out of integer range"
 msgstr "陣列下標超出範圍"
 
-#: utils/adt/jsonpath_exec.c:3658
+#: utils/adt/jsonpath_exec.c:3662
 #, c-format
 msgid "cannot convert value from %s to %s without time zone usage"
 msgstr ""
 
-#: utils/adt/jsonpath_exec.c:3660
+#: utils/adt/jsonpath_exec.c:3664
 #, c-format
 msgid "Use *_tz() function for time zone support."
 msgstr ""
 
-#: utils/adt/jsonpath_exec.c:3968
+#: utils/adt/jsonpath_exec.c:3972
 #, c-format
 msgid "JSON path expression for column \"%s\" must return single item when no wrapper is requested"
 msgstr ""
 
-#: utils/adt/jsonpath_exec.c:3970 utils/adt/jsonpath_exec.c:3975
+#: utils/adt/jsonpath_exec.c:3974 utils/adt/jsonpath_exec.c:3979
 #, c-format
 msgid "Use the WITH WRAPPER clause to wrap SQL/JSON items into an array."
 msgstr ""
 
-#: utils/adt/jsonpath_exec.c:3974
+#: utils/adt/jsonpath_exec.c:3978
 #, c-format
 msgid "JSON path expression in JSON_QUERY must return single item when no wrapper is requested"
 msgstr ""
 
-#: utils/adt/jsonpath_exec.c:4032 utils/adt/jsonpath_exec.c:4056
+#: utils/adt/jsonpath_exec.c:4036 utils/adt/jsonpath_exec.c:4060
 #, c-format
 msgid "JSON path expression for column \"%s\" must return single scalar item"
 msgstr ""
 
-#: utils/adt/jsonpath_exec.c:4037 utils/adt/jsonpath_exec.c:4061
+#: utils/adt/jsonpath_exec.c:4041 utils/adt/jsonpath_exec.c:4065
 #, c-format
 msgid "JSON path expression in JSON_VALUE must return single scalar item"
 msgstr ""

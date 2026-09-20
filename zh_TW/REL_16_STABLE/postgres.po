@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-17 19:15+0000\n"
+"POT-Creation-Date: 2026-09-19 14:12+0000\n"
 "PO-Revision-Date: 2013-09-03 23:24-0400\n"
 "Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
 "Language-Team: EnterpriseDB translation team <dev-escalations@enterprisedb.com>\n"
@@ -20382,45 +20382,45 @@ msgstr "SELECT FOR UPDATE/SHARE 無法套用至外部聯結的可為 Null 端"
 
 # optimizer/plan/planner.c:698
 #. translator: %s is a SQL row locking clause such as FOR UPDATE
-#: optimizer/plan/planner.c:1469 parser/analyze.c:1772 parser/analyze.c:2029
+#: optimizer/plan/planner.c:1481 parser/analyze.c:1772 parser/analyze.c:2029
 #: parser/analyze.c:3243
 #, fuzzy, c-format
 #| msgid "SELECT FOR UPDATE/SHARE is not allowed with UNION/INTERSECT/EXCEPT"
 msgid "%s is not allowed with UNION/INTERSECT/EXCEPT"
 msgstr "UNION/INTERSECT/EXCEPT 不允許 SELECT FOR UPDATE/SHARE"
 
-#: optimizer/plan/planner.c:2184 optimizer/plan/planner.c:4187
+#: optimizer/plan/planner.c:2196 optimizer/plan/planner.c:4199
 #, c-format
 msgid "could not implement GROUP BY"
 msgstr "無法實作 GROUP BY"
 
-#: optimizer/plan/planner.c:2185 optimizer/plan/planner.c:4188
-#: optimizer/plan/planner.c:4828 optimizer/prep/prepunion.c:1052
+#: optimizer/plan/planner.c:2197 optimizer/plan/planner.c:4200
+#: optimizer/plan/planner.c:4840 optimizer/prep/prepunion.c:1052
 #, c-format
 msgid "Some of the datatypes only support hashing, while others only support sorting."
 msgstr "有些資料型別只支援雜湊，有些資料型別只支援排序。"
 
-#: optimizer/plan/planner.c:4827
+#: optimizer/plan/planner.c:4839
 #, c-format
 msgid "could not implement DISTINCT"
 msgstr "無法實作 DISTINCT"
 
-#: optimizer/plan/planner.c:6201
+#: optimizer/plan/planner.c:6213
 #, c-format
 msgid "could not implement window PARTITION BY"
 msgstr "無法實作視窗 PARTITION BY"
 
-#: optimizer/plan/planner.c:6202
+#: optimizer/plan/planner.c:6214
 #, c-format
 msgid "Window partitioning columns must be of sortable datatypes."
 msgstr "視窗分割資料行必須屬於可排序的資料型別。"
 
-#: optimizer/plan/planner.c:6206
+#: optimizer/plan/planner.c:6218
 #, c-format
 msgid "could not implement window ORDER BY"
 msgstr "無法實作視窗 ORDER BY"
 
-#: optimizer/plan/planner.c:6207
+#: optimizer/plan/planner.c:6219
 #, c-format
 msgid "Window ordering columns must be of sortable datatypes."
 msgstr "視窗排序資料行必須屬於可排序的資料型別。"
@@ -23454,7 +23454,7 @@ msgstr "具有 WHERE 條件的規則只能有 SELECT、INSERT、UPDATE 或 DELET
 # parser/analyze.c:1687 parser/analyze.c:1759 rewrite/rewriteHandler.c:177
 # rewrite/rewriteManip.c:749 rewrite/rewriteManip.c:805
 #: parser/parse_utilcmd.c:3188 parser/parse_utilcmd.c:3289
-#: rewrite/rewriteHandler.c:547 rewrite/rewriteManip.c:1132
+#: rewrite/rewriteHandler.c:547 rewrite/rewriteManip.c:1133
 #, c-format
 msgid "conditional UNION/INTERSECT/EXCEPT statements are not implemented"
 msgstr "條件式 UNION/INTERSECT/EXCEPT 陳述式未實作"
@@ -26950,18 +26950,18 @@ msgid "WITH cannot be used in a query that is rewritten by rules into multiple q
 msgstr ""
 
 # rewrite/rewriteManip.c:737 rewrite/rewriteManip.c:793
-#: rewrite/rewriteManip.c:1120
+#: rewrite/rewriteManip.c:1121
 #, c-format
 msgid "conditional utility statements are not implemented"
 msgstr "條件式公用程式陳述式未實作"
 
 # optimizer/plan/initsplan.c:282 optimizer/prep/prepjointree.c:366
-#: rewrite/rewriteManip.c:1467
+#: rewrite/rewriteManip.c:1468
 #, c-format
 msgid "WHERE CURRENT OF on a view is not implemented"
 msgstr "視圖的 WHERE CURRENT OF 未實作"
 
-#: rewrite/rewriteManip.c:1803
+#: rewrite/rewriteManip.c:1804
 #, c-format
 msgid "NEW variables in ON UPDATE rules cannot reference columns that are part of a multiple assignment in the subject UPDATE command"
 msgstr ""
