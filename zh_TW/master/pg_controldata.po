@@ -40,7 +40,7 @@ msgstr "無法讀取檔案 \"%s\": %m"
 #: ../../common/controldata_utils.c:120
 #, c-format
 msgid "could not read file \"%s\": read %d of %zu"
-msgstr "無法讀取檔案 \"%s\": 已讀取 %d / %zu"
+msgstr "無法讀取檔案 \"%1$s\": 應讀取 %3$zu，實際讀取 %2$d"
 
 # access/transam/slru.c:680 access/transam/xlog.c:1567
 # access/transam/xlog.c:1691 access/transam/xlog.c:3013
@@ -113,13 +113,13 @@ msgstr "無法 fsync 檔案 \"%s\": %m"
 #: ../../common/fe_memutils.c:104 ../../common/fe_memutils.c:167
 #, c-format
 msgid "out of memory\n"
-msgstr "記憶體用盡\n"
+msgstr "記憶體不足\n"
 
 # common.c:78
 #: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:159
 #, c-format
 msgid "cannot duplicate null pointer (internal error)\n"
-msgstr "無法複製 null 指標(內部錯誤)\n"
+msgstr "不能複製空指標(內部錯誤)\n"
 
 #: ../../common/fe_memutils.c:209
 #, c-format
@@ -136,9 +136,7 @@ msgstr "無效的記憶體配置請求大小 %zu * %zu\n"
 msgid ""
 "%s displays control information of a PostgreSQL database cluster.\n"
 "\n"
-msgstr ""
-"%s 顯示 PostgreSQL 資料庫叢集的控制資訊\n"
-"\n"
+msgstr "%s 顯示 PostgreSQL 資料庫叢集的控制資訊。\n\n"
 
 #: pg_controldata.c:36
 #, c-format
@@ -148,7 +146,7 @@ msgstr "用法:\n"
 #: pg_controldata.c:37
 #, c-format
 msgid "  %s [OPTION] [DATADIR]\n"
-msgstr "  %s [OPTION] [DATADIR]\n"
+msgstr "  %s [選項] [資料目錄]\n"
 
 #: pg_controldata.c:38
 #, c-format
@@ -203,12 +201,12 @@ msgstr "啟動中"
 
 #: pg_controldata.c:57
 msgid "shut down"
-msgstr "關閉"
+msgstr "已關閉"
 
 # access/transam/xlog.c:3596
 #: pg_controldata.c:59
 msgid "shut down in recovery"
-msgstr "復原關閉中"
+msgstr "在復原期間已關閉"
 
 #: pg_controldata.c:61
 msgid "shutting down"
@@ -216,7 +214,7 @@ msgstr "關閉中"
 
 #: pg_controldata.c:63
 msgid "in crash recovery"
-msgstr "損毀復原中"
+msgstr "崩潰復原中"
 
 # access/transam/xlog.c:3596
 #: pg_controldata.c:65
@@ -245,7 +243,7 @@ msgstr "用 \"%s --help\" 取得更多資訊。"
 #: pg_controldata.c:155
 #, c-format
 msgid "too many command-line arguments (first is \"%s\")"
-msgstr "命令列參數過多(第一個是 \"%s\")"
+msgstr "命令列參數過多(第一個多餘參數是 \"%s\")"
 
 #: pg_controldata.c:163
 #, c-format
@@ -282,7 +280,7 @@ msgstr[0] "控制檔中的 WAL 片段大小無效 (%d 位元組)"
 #: pg_controldata.c:193
 #, c-format
 msgid "The WAL segment size must be a power of two between 1 MB and 1 GB."
-msgstr "WAL 片段大小必須是 1 MB 到 1 GB 之間的 2 的冪。"
+msgstr "WAL 片段大小必須是 1 MB 到 1 GB 之間的二的冪。"
 
 #: pg_controldata.c:194
 #, c-format
@@ -302,7 +300,7 @@ msgstr "pg_control 版本號碼:             %u\n"
 #: pg_controldata.c:247
 #, c-format
 msgid "Catalog version number:               %u\n"
-msgstr "Catalog 版本號碼:                %u\n"
+msgstr "系統目錄版本號碼:                %u\n"
 
 #: pg_controldata.c:249
 #, c-format
@@ -429,17 +427,17 @@ msgstr "最新檢查點的時間:                %s\n"
 #: pg_controldata.c:294
 #, c-format
 msgid "Fake LSN counter for unlogged rels:   %X/%08X\n"
-msgstr "無日誌關聯的虛擬 LSN 計數:       %X/%08X\n"
+msgstr "不記錄 WAL 的關聯偽 LSN 計數器:  %X/%08X\n"
 
 #: pg_controldata.c:296
 #, c-format
 msgid "Minimum recovery ending location:     %X/%08X\n"
-msgstr "最小還原結束位置:                %X/%08X\n"
+msgstr "復原必須到達的最小位置:          %X/%08X\n"
 
 #: pg_controldata.c:298
 #, c-format
 msgid "Min recovery ending loc's timeline:   %u\n"
-msgstr "最小還原結束位置的時間軸:        %u\n"
+msgstr "最小復原位置的時間軸:            %u\n"
 
 #: pg_controldata.c:300
 #, c-format
@@ -461,14 +459,14 @@ msgstr "需要備份結束記錄:                %s\n"
 # describe.c:1692
 #: pg_controldata.c:305
 msgid "no"
-msgstr "no"
+msgstr "否"
 
 # describe.c:1262
 # describe.c:1637
 # describe.c:1694
 #: pg_controldata.c:305
 msgid "yes"
-msgstr "yes"
+msgstr "是"
 
 #: pg_controldata.c:306
 #, c-format
@@ -523,7 +521,7 @@ msgstr "資料庫區塊大小:                  %u\n"
 #: pg_controldata.c:327
 #, c-format
 msgid "Blocks per segment of large relation: %u\n"
-msgstr "大型關聯每個片段的區塊數:        %u\n"
+msgstr "大型關聯每個區段的區塊數:        %u\n"
 
 #: pg_controldata.c:329
 #, c-format
@@ -567,7 +565,7 @@ msgstr "日期/時間型別的儲存方式:         %s\n"
 
 #: pg_controldata.c:345
 msgid "64-bit integers"
-msgstr "64位元整數"
+msgstr "64 位元整數"
 
 #: pg_controldata.c:346
 #, c-format

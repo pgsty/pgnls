@@ -61,7 +61,7 @@ msgstr "無法讀取檔案 \"%s\": %m"
 #: ../../common/controldata_utils.c:120
 #, c-format
 msgid "could not read file \"%s\": read %d of %zu"
-msgstr "無法讀取檔案 \"%s\": 已讀取 %d / %zu"
+msgstr "無法讀取檔案 \"%1$s\": 應讀取 %3$zu，實際讀取 %2$d"
 
 # access/transam/slru.c:680 access/transam/xlog.c:1567
 # access/transam/xlog.c:1691 access/transam/xlog.c:3013
@@ -111,7 +111,7 @@ msgstr "無法寫入檔案 \"%s\": %m"
 #: ../../common/file_utils.c:510
 #, c-format
 msgid "could not fsync file \"%s\": %m"
-msgstr "無法fsync檔案 \"%s\": %m"
+msgstr "無法對檔案 \"%s\" 執行 fsync: %m"
 
 # commands/sequence.c:798 executor/execGrouping.c:328
 # executor/execGrouping.c:388 executor/nodeIndexscan.c:1051 lib/dllist.c:43
@@ -137,13 +137,13 @@ msgstr "無法fsync檔案 \"%s\": %m"
 #: ../../common/fe_memutils.c:104 ../../common/fe_memutils.c:167
 #, c-format
 msgid "out of memory\n"
-msgstr "記憶體用盡\n"
+msgstr "記憶體不足\n"
 
 # common.c:78
 #: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:159
 #, c-format
 msgid "cannot duplicate null pointer (internal error)\n"
-msgstr "無法複製 null 指標(內部錯誤)\n"
+msgstr "不能複製空指標(內部錯誤)\n"
 
 #: ../../common/fe_memutils.c:209
 #, c-format
@@ -167,13 +167,13 @@ msgstr "無法同步檔案 \"%s\" 所在的檔案系統: %m"
 #: ../../fe_utils/version.c:60
 #, c-format
 msgid "could not stat file \"%s\": %m"
-msgstr "無法取得檔案狀態 \"%s\": %m"
+msgstr "無法取得檔案 \"%s\" 的狀態: %m"
 
 #: ../../common/file_utils.c:133 ../../common/file_utils.c:243
 #: ../../fe_utils/option_utils.c:99
 #, c-format
 msgid "this build does not support sync method \"%s\""
-msgstr "此版本不支援同步方法 \"%s\""
+msgstr "此建置版本不支援同步方法 \"%s\""
 
 # access/transam/slru.c:930 commands/tablespace.c:529
 # commands/tablespace.c:694 utils/adt/misc.c:174
@@ -203,7 +203,7 @@ msgstr "無法將檔案 \"%s\" 重新命名為 \"%s\": %m"
 #: ../../common/restricted_token.c:60
 #, c-format
 msgid "could not open process token: error code %lu"
-msgstr "無法開啟行程 token: 錯誤碼 %lu"
+msgstr "無法開啟行程權杖: 錯誤碼 %lu"
 
 # port/pg_sema.c:117 port/sysv_sema.c:117
 #: ../../common/restricted_token.c:74
@@ -215,18 +215,18 @@ msgstr "無法配置 SID: 錯誤碼 %lu"
 #: ../../common/restricted_token.c:94
 #, c-format
 msgid "could not create restricted token: error code %lu"
-msgstr "無法建立受限制的 token: 錯誤碼 %lu"
+msgstr "無法建立受限制的權杖: 錯誤碼 %lu"
 
 #: ../../common/restricted_token.c:115
 #, c-format
 msgid "could not start process for command \"%s\": error code %lu"
-msgstr "無法啟動命令的行程 \"%s\": 錯誤碼 %lu"
+msgstr "無法為命令 \"%s\" 啟動行程: 錯誤碼 %lu"
 
 # port/win32/signal.c:239
 #: ../../common/restricted_token.c:153
 #, c-format
 msgid "could not re-execute with restricted token: error code %lu"
-msgstr "無法用受限制的 token 重新執行: 錯誤碼 %lu"
+msgstr "無法用受限制的權杖重新執行: 錯誤碼 %lu"
 
 #: ../../common/restricted_token.c:168
 #, c-format
@@ -237,7 +237,7 @@ msgstr "無法取得子行程的結束碼: 錯誤碼 %lu"
 #: ../../fe_utils/option_utils.c:69
 #, c-format
 msgid "invalid value \"%s\" for option %s"
-msgstr "值 \"%s\" 對於 \"%s\" 是無效的"
+msgstr "選項 %2$s 的值 \"%1$s\" 無效"
 
 #: ../../fe_utils/option_utils.c:76
 #, c-format
@@ -316,7 +316,7 @@ msgstr "下一個多重交易 ID(-m) 不得為 0"
 #: pg_resetwal.c:293
 #, c-format
 msgid "oldest multitransaction ID (-m) must not be 0"
-msgstr "最舊的 multitransaction ID(-m) 不可為 0"
+msgstr "最舊的多重交易 ID(-m) 不可為 0"
 
 #: pg_resetwal.c:309
 #, c-format
@@ -326,12 +326,12 @@ msgstr "下一個多重交易位移(-O) 不得為 0"
 #: pg_resetwal.c:336
 #, c-format
 msgid "argument of %s must be a power of two between 1 and 1024"
-msgstr "%s 的參數必須是 1 到 1024 之間的 2 的冪"
+msgstr "%s 的參數必須是 1 到 1024 之間的二的冪"
 
 #: pg_resetwal.c:372
 #, c-format
 msgid "too many command-line arguments (first is \"%s\")"
-msgstr "命令列參數過多(第一個是 \"%s\")"
+msgstr "命令列參數過多(第一個多餘參數是 \"%s\")"
 
 #: pg_resetwal.c:380
 #, c-format
@@ -343,7 +343,7 @@ msgstr "未指定資料目錄"
 #: pg_resetwal.c:394
 #, c-format
 msgid "cannot be executed by \"root\""
-msgstr "無法用 \"root\" 執行"
+msgstr "不能由 \"root\" 執行"
 
 # postmaster/postmaster.c:1015
 #: pg_resetwal.c:395
@@ -403,7 +403,7 @@ msgstr "如果仍要繼續，使用 -f 強制重設。"
 #: pg_resetwal.c:558
 #, c-format
 msgid "Write-ahead log reset\n"
-msgstr "Write-ahead 日誌重設\n"
+msgstr "預寫式日誌已重設\n"
 
 # postmaster/postmaster.c:912
 #: pg_resetwal.c:583
@@ -415,7 +415,7 @@ msgstr "資料目錄版本錯誤"
 #: pg_resetwal.c:584
 #, c-format
 msgid "File \"%s\" contains \"%s\", which is not compatible with this program's version \"%s\"."
-msgstr "檔案 %s 包含 %s，與本程式的版本 %s 不相容"
+msgstr "檔案 \"%s\" 包含 \"%s\"，與本程式的版本 \"%s\" 不相容。"
 
 #: pg_resetwal.c:617
 #, c-format
@@ -431,7 +431,7 @@ msgstr ""
 #: pg_resetwal.c:645
 #, c-format
 msgid "pg_control exists but has invalid CRC; proceed with caution"
-msgstr "pg_control 存在但 CRC 無效，請謹慎操作。"
+msgstr "pg_control 存在但 CRC 無效，請謹慎操作"
 
 #: pg_resetwal.c:654
 #, c-format
@@ -442,7 +442,7 @@ msgstr[0] "pg_control 指定無效的 WAL 片段大小(%d 位元組)，請謹慎
 #: pg_resetwal.c:665
 #, c-format
 msgid "pg_control exists but is broken or wrong version; ignoring it"
-msgstr "pg_control 存在但已損壞或版本不正確，忽略它"
+msgstr "pg_control 存在但已損壞或版本不正確，正在忽略它"
 
 #: pg_resetwal.c:761
 #, c-format
@@ -470,7 +470,7 @@ msgstr "pg_control 版本號碼:             %u\n"
 #: pg_resetwal.c:767
 #, c-format
 msgid "Catalog version number:               %u\n"
-msgstr "Catalog 版本號碼:                %u\n"
+msgstr "系統目錄版本號碼:                %u\n"
 
 #: pg_resetwal.c:769
 #, c-format
@@ -565,7 +565,7 @@ msgstr "資料庫區塊大小:                  %u\n"
 #: pg_resetwal.c:803
 #, c-format
 msgid "Blocks per segment of large relation: %u\n"
-msgstr "大型關聯每個片段的區塊數:  %u\n"
+msgstr "大型關聯每個區段的區塊數:        %u\n"
 
 #: pg_resetwal.c:805
 #, c-format
@@ -600,16 +600,16 @@ msgstr "TOAST 區塊大小上限:              %u\n"
 #: pg_resetwal.c:817
 #, c-format
 msgid "Size of a large-object chunk:         %u\n"
-msgstr "大物件塊的大小:                  %u\n"
+msgstr "大物件區塊的大小:                %u\n"
 
 #: pg_resetwal.c:820
 #, c-format
 msgid "Date/time type storage:               %s\n"
-msgstr "日期/時間的儲存方式:             %s\n"
+msgstr "日期/時間型別的儲存方式:         %s\n"
 
 #: pg_resetwal.c:821
 msgid "64-bit integers"
-msgstr "64位元整數"
+msgstr "64 位元整數"
 
 #: pg_resetwal.c:822
 #, c-format
@@ -741,9 +741,7 @@ msgstr "fsync 錯誤: %m"
 msgid ""
 "%s resets the PostgreSQL write-ahead log.\n"
 "\n"
-msgstr ""
-"%s 重設 PostgreSQL 的 write-ahead 日誌。\n"
-"\n"
+msgstr "%s 重設 PostgreSQL 的預寫式日誌。\n\n"
 
 #: pg_resetwal.c:1221
 #, c-format
@@ -753,7 +751,7 @@ msgstr "用法:\n"
 #: pg_resetwal.c:1222
 #, c-format
 msgid "  %s [OPTION]... DATADIR\n"
-msgstr "  %s [OPTION]... DATADIR\n"
+msgstr "  %s [選項]... 資料目錄\n"
 
 #: pg_resetwal.c:1224
 #, c-format
@@ -805,12 +803,12 @@ msgid ""
 "  -c, --commit-timestamp-ids=XID,XID\n"
 "                                   set oldest and newest transactions bearing\n"
 "                                   commit timestamp (zero means no change)\n"
-msgstr "  -c, --commit-timestamp-ids=XID\n                                   設定具有提交時間戳記的最舊和最新交易\n                                   (0 表示不修改)\n"
+msgstr "  -c, --commit-timestamp-ids=XID,XID\n                                   設定具有提交時間戳記的最舊和最新交易\n                                   (零表示不修改)\n"
 
 #: pg_resetwal.c:1236
 #, c-format
 msgid "  -e, --epoch=XIDEPOCH             set next transaction ID epoch\n"
-msgstr "  -e, --epoch=XIDEPOCH             設定下一個交易 ID 的 epoch\n"
+msgstr "  -e, --epoch=XIDEPOCH             設定下一個交易 ID 的紀元\n"
 
 #: pg_resetwal.c:1237
 #, c-format
@@ -820,7 +818,7 @@ msgstr "  -l, --next-wal-file=WALFILE      設定新 WAL 的最小起始位置\n
 #: pg_resetwal.c:1238
 #, c-format
 msgid "  -m, --multixact-ids=MXID,MXID    set next and oldest multitransaction ID\n"
-msgstr "  -m, --multixact-ids=MXID,MXID    設定下一個和最舊的 multitransaction ID\n"
+msgstr "  -m, --multixact-ids=MXID,MXID    設定下一個和最舊的多重交易 ID\n"
 
 #: pg_resetwal.c:1239
 #, c-format
@@ -830,7 +828,7 @@ msgstr "  -o, --next-oid=OID               設定下一個 OID\n"
 #: pg_resetwal.c:1240
 #, c-format
 msgid "  -O, --multixact-offset=OFFSET    set next multitransaction offset\n"
-msgstr "  -O, --multixact-offset=OFFSET    設定下一個 multitransaction offset\n"
+msgstr "  -O, --multixact-offset=OFFSET    設定下一個多重交易位移\n"
 
 #: pg_resetwal.c:1241
 #, c-format
@@ -864,7 +862,7 @@ msgstr ""
 #: pg_resetwal.c:1247
 #, c-format
 msgid "%s home page: <%s>\n"
-msgstr "%s 網頁: <%s>\n"
+msgstr "%s 首頁: <%s>\n"
 
 #, c-format
 #~ msgid "  --help          show this help, then exit\n"

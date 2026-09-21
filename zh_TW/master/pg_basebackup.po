@@ -46,7 +46,7 @@ msgstr "提示: "
 #: ../../fe_utils/astreamer_zstd.c:285
 #, c-format
 msgid "this build does not support compression with %s"
-msgstr "此版本不支援使用 %s 進行壓縮"
+msgstr "此建置版本不支援使用 %s 進行壓縮"
 
 #: ../../common/compression.c:249
 msgid "found empty string where a compression option was expected"
@@ -55,7 +55,7 @@ msgstr "在預期壓縮選項的地方發現空字串"
 #: ../../common/compression.c:288
 #, c-format
 msgid "unrecognized compression option: \"%s\""
-msgstr "無法辨識的壓縮選項: %s"
+msgstr "無法辨識的壓縮選項: \"%s\""
 
 # bootstrap/bootstrap.c:304 postmaster/postmaster.c:500 tcop/postgres.c:2507
 #: ../../common/compression.c:327
@@ -73,7 +73,7 @@ msgstr "壓縮選項 \"%s\" 的數值必須是整數"
 #: ../../common/compression.c:375
 #, c-format
 msgid "value for compression option \"%s\" must be a Boolean value"
-msgstr "壓縮選項 \"%s\" 的數值必須是布林值"
+msgstr "壓縮選項 \"%s\" 的值必須是布林值"
 
 # commands/indexcmds.c:623
 #: ../../common/compression.c:423
@@ -121,7 +121,7 @@ msgstr "無法讀取檔案 \"%s\": %m"
 #: ../../common/controldata_utils.c:120
 #, c-format
 msgid "could not read file \"%s\": read %d of %zu"
-msgstr "無法讀取檔案 \"%s\": 已讀取 %d / %zu"
+msgstr "無法讀取檔案 \"%1$s\": 應讀取 %3$zu，實際讀取 %2$d"
 
 # access/transam/slru.c:680 access/transam/xlog.c:1567
 # access/transam/xlog.c:1691 access/transam/xlog.c:3013
@@ -206,7 +206,7 @@ msgstr "記憶體不足\n"
 #: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:159
 #, c-format
 msgid "cannot duplicate null pointer (internal error)\n"
-msgstr "無法複製 null 指標(內部錯誤)\n"
+msgstr "不能複製空指標(內部錯誤)\n"
 
 #: ../../common/fe_memutils.c:209
 #, c-format
@@ -236,7 +236,7 @@ msgstr "無法取得檔案 \"%s\" 的狀態: %m"
 #: ../../fe_utils/option_utils.c:99
 #, c-format
 msgid "this build does not support sync method \"%s\""
-msgstr "此版本不支援同步方法 \"%s\""
+msgstr "此建置版本不支援同步方法 \"%s\""
 
 # access/transam/slru.c:930 commands/tablespace.c:529
 # commands/tablespace.c:694 utils/adt/misc.c:174
@@ -266,7 +266,7 @@ msgstr "無法將檔案 \"%s\" 更名為 \"%s\": %m"
 #: ../../common/restricted_token.c:60
 #, c-format
 msgid "could not open process token: error code %lu"
-msgstr "無法開啟行程 token: 錯誤碼 %lu"
+msgstr "無法開啟行程權杖: 錯誤碼 %lu"
 
 # port/pg_sema.c:117 port/sysv_sema.c:117
 #: ../../common/restricted_token.c:74
@@ -278,7 +278,7 @@ msgstr "無法配置 SID: 錯誤碼 %lu"
 #: ../../common/restricted_token.c:94
 #, c-format
 msgid "could not create restricted token: error code %lu"
-msgstr "無法建立受限 token: 錯誤碼 %lu"
+msgstr "無法建立受限權杖: 錯誤碼 %lu"
 
 #: ../../common/restricted_token.c:115
 #, c-format
@@ -289,7 +289,7 @@ msgstr "無法為指令 \"%s\" 啟動行程: 錯誤碼 %lu"
 #: ../../common/restricted_token.c:153
 #, c-format
 msgid "could not re-execute with restricted token: error code %lu"
-msgstr "無法使用受限 token 重新執行: 錯誤碼 %lu"
+msgstr "無法使用受限權杖重新執行: 錯誤碼 %lu"
 
 #: ../../common/restricted_token.c:168
 #, c-format
@@ -331,7 +331,7 @@ msgstr "連結目標的路徑名稱不安全: \"%s\""
 #: ../../fe_utils/astreamer_file.c:292
 #, c-format
 msgid "unexpected state while extracting archive"
-msgstr "解壓縮封存檔時出現非預期的狀況"
+msgstr "擷取封存檔時出現非預期的狀況"
 
 # commands/tablespace.c:154 commands/tablespace.c:162
 # commands/tablespace.c:168
@@ -350,7 +350,7 @@ msgstr "無法設定目錄 \"%s\" 的權限: %m"
 #: ../../fe_utils/astreamer_file.c:362
 #, c-format
 msgid "could not create symbolic link from \"%s\" to \"%s\": %m"
-msgstr "無法建立符號連結 \"%s\" 至 \"%s\"：%m"
+msgstr "無法建立符號連結 \"%s\" 至 \"%s\": %m"
 
 #: ../../fe_utils/astreamer_file.c:382
 #, c-format
@@ -401,7 +401,7 @@ msgstr "無法解壓縮資料: %s"
 #: ../../fe_utils/astreamer_lz4.c:97
 #, c-format
 msgid "could not create lz4 compression context: %s"
-msgstr "無法建立 lz4 壓縮 context: %s"
+msgstr "無法建立 lz4 壓縮上下文: %s"
 
 #: ../../fe_utils/astreamer_lz4.c:142
 #, c-format
@@ -452,7 +452,7 @@ msgstr "COPY 串流在最後一個檔案完成之前結束"
 #: ../../fe_utils/astreamer_zstd.c:89
 #, c-format
 msgid "could not create zstd compression context"
-msgstr "無法建立 zstd 壓縮 context"
+msgstr "無法建立 zstd 壓縮上下文"
 
 #: ../../fe_utils/astreamer_zstd.c:95
 #, c-format
@@ -462,17 +462,17 @@ msgstr "無法設定 zstd 壓縮等級至 %d: %s"
 #: ../../fe_utils/astreamer_zstd.c:109
 #, c-format
 msgid "could not set compression worker count to %d: %s"
-msgstr "無法設定壓縮工作數量至 %d: %s"
+msgstr "無法將壓縮工作執行緒數設定為 %d: %s"
 
 #: ../../fe_utils/astreamer_zstd.c:119
 #, c-format
 msgid "could not enable long-distance mode: %s"
-msgstr "無法啟動 long-distance 模式: %s"
+msgstr "無法啟動長距離模式: %s"
 
 #: ../../fe_utils/astreamer_zstd.c:276
 #, c-format
 msgid "could not create zstd decompression context"
-msgstr "無法建立 zstd 解壓縮 context"
+msgstr "無法建立 zstd 解壓縮上下文"
 
 # utils/adt/formatting.c:2044
 #: ../../fe_utils/option_utils.c:69
@@ -562,7 +562,7 @@ msgstr "無法解析版本檔 \"%s\""
 #: astreamer_inject.c:189
 #, c-format
 msgid "unexpected state while injecting recovery settings"
-msgstr "注入還原設定時出現非預期的狀態"
+msgstr "注入復原設定時出現非預期的狀態"
 
 #: pg_basebackup.c:246
 #, c-format
@@ -617,7 +617,7 @@ msgstr "使用者要求不刪除 WAL 目錄 \"%s\""
 #: pg_basebackup.c:280
 #, c-format
 msgid "changes to tablespace directories will not be undone"
-msgstr "對表空間目錄的變更將無法撤銷"
+msgstr "對表空間目錄的變更將不會撤銷"
 
 #: pg_basebackup.c:332
 #, c-format
@@ -661,7 +661,7 @@ msgstr "用法:\n"
 #: pg_recvlogical.c:87
 #, c-format
 msgid "  %s [OPTION]...\n"
-msgstr "  %s [OPTION]...\n"
+msgstr "  %s [選項]...\n"
 
 #: pg_basebackup.c:397
 #, c-format
@@ -680,7 +680,7 @@ msgstr "  -D, --pgdata=DIRECTORY 將基本備份接收到目錄中\n"
 #: pg_basebackup.c:399
 #, c-format
 msgid "  -F, --format=p|t       output format (plain (default), tar)\n"
-msgstr "  -F, --format=p|t       輸出格式(純文字(預設)、tar)\n"
+msgstr "  -F, --format=p|t       輸出格式(plain(預設), tar)\n"
 
 #: pg_basebackup.c:400
 #, c-format
@@ -703,28 +703,26 @@ msgstr ""
 msgid ""
 "  -R, --write-recovery-conf\n"
 "                         write configuration for replication\n"
-msgstr ""
-"  -R, --write-recovery-conf\n"
-"                         複寫的寫入組態\n"
+msgstr "  -R, --write-recovery-conf\n                         寫入複寫所需的組態\n"
 
 #: pg_basebackup.c:406
 #, c-format
 msgid ""
 "  -t, --target=TARGET[:DETAIL]\n"
 "                         backup target (if other than client)\n"
-msgstr "  -t, --target=TARGET\n                         備份目標(如果不同於客戶端)\n"
+msgstr "  -t, --target=TARGET[:DETAIL]\n                         備份目標(如果不同於客戶端)\n"
 
 #: pg_basebackup.c:408
 #, c-format
 msgid ""
 "  -T, --tablespace-mapping=OLDDIR=NEWDIR\n"
 "                         relocate tablespace in OLDDIR to NEWDIR\n"
-msgstr "  -T, --tablespace-mapping=OLDDIR\n                         將 OLDDIR 中的表空間搬到 NEWDIR\n"
+msgstr "  -T, --tablespace-mapping=OLDDIR=NEWDIR\n                         將 OLDDIR 中的表空間搬到 NEWDIR\n"
 
 #: pg_basebackup.c:410
 #, c-format
 msgid "      --waldir=WALDIR    location for the write-ahead log directory\n"
-msgstr "      --waldir=WALDIR    write-ahead 日誌目錄的位置\n"
+msgstr "      --waldir=WALDIR    預寫式日誌目錄的位置\n"
 
 #: pg_basebackup.c:411
 #, c-format
@@ -815,7 +813,7 @@ msgstr "  -V, --version          顯示版本，然後結束\n"
 msgid ""
 "      --manifest-checksums=SHA{224,256,384,512}|CRC32C|NONE\n"
 "                         use algorithm for manifest checksums\n"
-msgstr "      --manifest-checksums=SHA\n                         使用指定算法驗證清單檢查碼\n"
+msgstr "      --manifest-checksums=SHA{224,256,384,512}|CRC32C|NONE\n                         使用指定演算法計算清單檢查碼\n"
 
 #: pg_basebackup.c:430
 #, c-format
@@ -879,7 +877,7 @@ msgstr "  -d, --dbname=CONNSTR   連接字串\n"
 #: pg_basebackup.c:442 pg_receivewal.c:98 pg_recvlogical.c:116
 #, c-format
 msgid "  -h, --host=HOSTNAME    database server host or socket directory\n"
-msgstr "  -h, --host=HOSTNAME    資料庫伺服器主機或socket目錄\n"
+msgstr "  -h, --host=HOSTNAME    資料庫伺服器主機或 socket 目錄\n"
 
 #: pg_basebackup.c:443 pg_receivewal.c:99 pg_recvlogical.c:117
 #, c-format
@@ -908,7 +906,7 @@ msgstr "  -w, --no-password      不詢問密碼\n"
 #: pg_basebackup.c:448 pg_receivewal.c:102 pg_recvlogical.c:120
 #, c-format
 msgid "  -W, --password         force password prompt (should happen automatically)\n"
-msgstr "  -W, --password         要求輸入密碼(應該是自動的)\n"
+msgstr "  -W, --password         強制提示輸入密碼(應自動提示)\n"
 
 #: pg_basebackup.c:449 pg_createsubscriber.c:312 pg_receivewal.c:106
 #: pg_recvlogical.c:121
@@ -924,7 +922,7 @@ msgstr ""
 #: pg_recvlogical.c:122
 #, c-format
 msgid "%s home page: <%s>\n"
-msgstr "%s 網站: <%s>\n"
+msgstr "%s 首頁: <%s>\n"
 
 #: pg_basebackup.c:489
 #, c-format
@@ -935,7 +933,7 @@ msgstr "無法從就緒的管道讀取: %m"
 #: streamutil.c:450
 #, c-format
 msgid "could not parse write-ahead log location \"%s\""
-msgstr "無法解析 write-ahead 日誌位置 \"%s\""
+msgstr "無法解析預寫式日誌位置 \"%s\""
 
 #: pg_basebackup.c:597 pg_receivewal.c:600
 #, c-format
@@ -1046,27 +1044,27 @@ msgstr "背景行程意外終止"
 #: pg_basebackup.c:1102
 #, c-format
 msgid "cannot inject manifest into a compressed tar file"
-msgstr "無法將清單注入到壓縮的 tar 檔案中"
+msgstr "不能將清單注入到壓縮的 tar 檔案中"
 
 #: pg_basebackup.c:1103
 #, c-format
 msgid "Use client-side compression, send the output to a directory rather than standard output, or use %s."
-msgstr "使用客戶端壓縮，將輸出送至目錄而非標準輸出，或使用 %s。"
+msgstr "使用客戶端壓縮，或將輸出送至目錄而非標準輸出，或使用 %s。"
 
 #: pg_basebackup.c:1119
 #, c-format
 msgid "cannot parse archive \"%s\""
-msgstr "無法解析封存檔 \"%s\""
+msgstr "不能解析封存檔 \"%s\""
 
 #: pg_basebackup.c:1120
 #, c-format
 msgid "Only tar archives can be parsed."
-msgstr "只能解析 tar 封存檔"
+msgstr "只能解析 tar 封存檔。"
 
 #: pg_basebackup.c:1122
 #, c-format
 msgid "Plain format requires pg_basebackup to parse the archive."
-msgstr "純文字格式需要 pg_basebackup 來解析封存檔。"
+msgstr "plain 格式需要 pg_basebackup 來解析封存檔。"
 
 #: pg_basebackup.c:1124
 #, c-format
@@ -1101,7 +1099,7 @@ msgstr "空的 COPY 訊息"
 #: pg_basebackup.c:1577
 #, c-format
 msgid "malformed COPY message of type %d, length %zu"
-msgstr "COPY 訊息格式錯誤，型別 %d，長度 %zu"
+msgstr "COPY 訊息格式錯誤, 型別 %d, 長度 %zu"
 
 #: pg_basebackup.c:1777
 #, c-format
@@ -1159,7 +1157,7 @@ msgstr "此伺服器版本不支援備份目標"
 #: pg_basebackup.c:1941
 #, c-format
 msgid "recovery configuration cannot be written when a backup target is used"
-msgstr "使用備份目標時無法寫入復原組態"
+msgstr "使用備份目標時不能寫入復原組態"
 
 #: pg_basebackup.c:1968
 #, c-format
@@ -1184,7 +1182,7 @@ msgstr "無法啟動基本備份: %s"
 #: pg_basebackup.c:2007
 #, c-format
 msgid "server returned unexpected response to BASE_BACKUP command; got %d rows and %d fields, expected %d rows and %d fields"
-msgstr "伺服器回傳非預期回應給 BASE_BACKUP 命令，收到 %d 列和 %d 欄，預期 %d 列和 %d 欄"
+msgstr "伺服器傳回非預期回應給 BASE_BACKUP 命令，收到 %d 列和 %d 欄，預期 %d 列和 %d 欄"
 
 #: pg_basebackup.c:2013
 #, c-format
@@ -1194,7 +1192,7 @@ msgstr "檢查點完成"
 #: pg_basebackup.c:2027
 #, c-format
 msgid "write-ahead log start point: %s on timeline %u"
-msgstr "write-ahead 日誌起始點：%s，時間線 %u"
+msgstr "預寫式日誌起始點: %s，時間線 %u"
 
 #: pg_basebackup.c:2035
 #, c-format
@@ -1204,7 +1202,7 @@ msgstr "無法取得備份標頭: %s"
 #: pg_basebackup.c:2038
 #, c-format
 msgid "no data returned from server"
-msgstr "未從伺服器回傳任何資料"
+msgstr "未從伺服器傳回任何資料"
 
 #: pg_basebackup.c:2081
 #, c-format
@@ -1214,7 +1212,7 @@ msgstr "只能將單一表空間寫入標準輸出，資料庫有 %d 個"
 #: pg_basebackup.c:2094
 #, c-format
 msgid "starting background WAL receiver"
-msgstr "啟動背景 WAL 接收程序"
+msgstr "啟動背景 WAL 接收器"
 
 #: pg_basebackup.c:2177
 #, c-format
@@ -1224,12 +1222,12 @@ msgstr "備份失敗: %s"
 #: pg_basebackup.c:2180
 #, c-format
 msgid "no write-ahead log end position returned from server"
-msgstr "伺服器未傳回 write-ahead 日誌結束位置"
+msgstr "伺服器未傳回預寫式日誌結束位置"
 
 #: pg_basebackup.c:2183
 #, c-format
 msgid "write-ahead log end point: %s"
-msgstr "write-ahead 日誌結束點: %s"
+msgstr "預寫式日誌結束點: %s"
 
 #: pg_basebackup.c:2194
 #, c-format
@@ -1244,7 +1242,7 @@ msgstr "最終接收失敗: %s"
 #: pg_basebackup.c:2223
 #, c-format
 msgid "waiting for background process to finish streaming ..."
-msgstr "等待背景行程完成串流..."
+msgstr "等待背景行程完成串流 ..."
 
 #: pg_basebackup.c:2227
 #, c-format
@@ -1274,12 +1272,12 @@ msgstr "無法取得子執行緒結束碼: %m"
 #: pg_basebackup.c:2264
 #, c-format
 msgid "child thread exited with error %u"
-msgstr "子執行緒結束發生錯誤 %u"
+msgstr "子執行緒結束，錯誤碼 %u"
 
 #: pg_basebackup.c:2293
 #, c-format
 msgid "syncing data to disk ..."
-msgstr "同步資料到磁碟…"
+msgstr "同步資料到磁碟 ..."
 
 #: pg_basebackup.c:2318
 #, c-format
@@ -1304,7 +1302,7 @@ msgstr "無效的輸出格式 \"%s\"，必須為 \"plain\" 或 \"tar\""
 #: pg_basebackup.c:2523
 #, c-format
 msgid "invalid wal-method option \"%s\", must be \"fetch\", \"stream\", or \"none\""
-msgstr "無效的 wal-method 選項 \"%s\"，必須為 \"fetch\"、\"stream\" 或 \"none\""
+msgstr "無效的 wal-method 選項 \"%s\"，必須為 \"fetch\", \"stream\" 或 \"none\""
 
 # tcop/postgres.c:2636 tcop/postgres.c:2652
 #: pg_basebackup.c:2562 pg_basebackup.c:2574 pg_basebackup.c:2596
@@ -1330,12 +1328,12 @@ msgstr "用 \"%s --help\" 取得更多資訊。"
 #: pg_recvlogical.c:873
 #, c-format
 msgid "too many command-line arguments (first is \"%s\")"
-msgstr "命令列參數過多(第一個是 \"%s\")"
+msgstr "命令列參數過多(第一個多餘參數是 \"%s\")"
 
 #: pg_basebackup.c:2595
 #, c-format
 msgid "cannot specify both format and backup target"
-msgstr "無法同時指定格式和備份目標"
+msgstr "不能同時指定格式和備份目標"
 
 #: pg_basebackup.c:2607
 #, c-format
@@ -1345,24 +1343,24 @@ msgstr "必須指定輸出目錄或備份目標"
 #: pg_basebackup.c:2613
 #, c-format
 msgid "cannot specify both output directory and backup target"
-msgstr "無法同時指定輸出目錄和備份目標"
+msgstr "不能同時指定輸出目錄和備份目標"
 
 # access/transam/xlog.c:3720
 #: pg_basebackup.c:2643 pg_receivewal.c:802
 #, c-format
 msgid "unrecognized compression algorithm: \"%s\""
-msgstr "無法識別的壓縮演算法: \" %s \""
+msgstr "無法識別的壓縮演算法: \"%s\""
 
 # fe-connect.c:2675
 #: pg_basebackup.c:2649 pg_receivewal.c:809
 #, c-format
 msgid "invalid compression specification: %s"
-msgstr "無效的壓縮規格: %s"
+msgstr "無效的壓縮設定: %s"
 
 #: pg_basebackup.c:2665
 #, c-format
 msgid "client-side compression is not possible when a backup target is specified"
-msgstr "指定備份目標時無法進行客戶端端壓縮"
+msgstr "指定備份目標時不能進行客戶端壓縮"
 
 #: pg_basebackup.c:2676
 #, c-format
@@ -1372,12 +1370,12 @@ msgstr "只有 tar 模式的備份可以進行壓縮"
 #: pg_basebackup.c:2686
 #, c-format
 msgid "WAL cannot be streamed when a backup target is specified"
-msgstr "指定備份目標時無法串流 WAL"
+msgstr "指定備份目標時不能串流 WAL"
 
 #: pg_basebackup.c:2692
 #, c-format
 msgid "cannot stream write-ahead logs in tar mode to stdout"
-msgstr "無法將 tar 模式下的 write-ahead 日誌串流至標準輸出"
+msgstr "不能將 tar 模式下的預寫式日誌串流至標準輸出"
 
 #: pg_basebackup.c:2699
 #, c-format
@@ -1393,7 +1391,7 @@ msgstr "--no-slot 不能與槽名稱一同使用"
 #: pg_basebackup.c:2722 pg_receivewal.c:774
 #, c-format
 msgid "%s needs a slot to be specified using --slot"
-msgstr "%s 需要使用 --slot 指定一個槽"
+msgstr "%s 需要使用 --slot 指定槽"
 
 #: pg_basebackup.c:2730 pg_basebackup.c:2770 pg_basebackup.c:2781
 #: pg_basebackup.c:2789
@@ -1404,12 +1402,12 @@ msgstr "%s 和 %s 是不相容的選項"
 #: pg_basebackup.c:2744
 #, c-format
 msgid "WAL directory location cannot be specified along with a backup target"
-msgstr "無法在指定備份目標時指定 WAL 目錄位置"
+msgstr "不能在指定備份目標時指定 WAL 目錄位置"
 
 #: pg_basebackup.c:2750
 #, c-format
 msgid "WAL directory location can only be specified in plain mode"
-msgstr "WAL 目錄位置只能在純文字模式下指定"
+msgstr "WAL 目錄位置只能在 plain 模式下指定"
 
 #: pg_basebackup.c:2759
 #, c-format
@@ -1541,14 +1539,14 @@ msgstr "  -v, --verbose                   輸出詳細訊息\n"
 msgid ""
 "      --clean=OBJECTTYPE          drop all objects of the specified type from specified\n"
 "                                  databases on the subscriber; accepts: \"%s\"\n"
-msgstr "      --clean=OBJECTTYPE          從訂閱伺服器指定的資料庫中刪除指定\n                                  型別的所有物件；接受的型別: \"%s\"\n"
+msgstr "      --clean=OBJECTTYPE          從訂閱伺服器上的指定資料庫中刪除指定\n                                  型別的所有物件；接受的型別: \"%s\"\n"
 
 #: pg_createsubscriber.c:305
 #, c-format
 msgid ""
 "      --config-file=FILENAME      use specified main server configuration\n"
 "                                  file when running target cluster\n"
-msgstr "      --config-file=FILENAME      執行目標叢集時使用指定的主伺服器\n                                  組態檔\n"
+msgstr "      --config-file=FILENAME      執行目標叢集時使用指定的伺服器\n                                  主要組態檔\n"
 
 #: pg_createsubscriber.c:307
 #, c-format
@@ -1583,7 +1581,7 @@ msgstr "無法解析連接字串: %s"
 #: pg_createsubscriber.c:431
 #, c-format
 msgid "program \"%s\" is needed by %s but was not found in the same directory as \"%s\""
-msgstr "程式 \"%s\" 為 %s 所需，但未在同一目錄中找到 \"%s\""
+msgstr "%2$s 需要程式 \"%1$s\"，但在與 \"%3$s\" 相同的目錄中找不到該程式"
 
 #: pg_createsubscriber.c:434
 #, c-format
@@ -1612,7 +1610,7 @@ msgstr "資料目錄版本錯誤"
 #: pg_createsubscriber.c:475
 #, c-format
 msgid "File \"%s\" contains \"%s\", which is not compatible with this program's version \"%s\"."
-msgstr "檔案 %s 包含 %s，與本程式的版本 %s 不相容"
+msgstr "檔案 \"%s\" 包含 \"%s\"，與本程式的版本 \"%s\" 不相容。"
 
 #: pg_createsubscriber.c:594
 #, c-format
@@ -1904,7 +1902,7 @@ msgstr "pg_ctl 被例外 0x%X 終止"
 #: pg_createsubscriber.c:1656
 #, c-format
 msgid "See C include file \"ntstatus.h\" for a description of the hexadecimal value."
-msgstr "請參閱 C Include 檔案 \"ntstatus.h\"，以取得十六進位值的描述。"
+msgstr "請參閱 C 標頭檔 \"ntstatus.h\"，以取得十六進位值的描述。"
 
 #: pg_createsubscriber.c:1658
 #, c-format
@@ -2049,12 +2047,12 @@ msgstr "無法取得訂閱 OID: 實際為 %d 列，預期為 %d 列"
 #: pg_createsubscriber.c:2104
 #, c-format
 msgid "dry-run: would set the replication progress (node name \"%s\", LSN %s) in database \"%s\""
-msgstr "模擬執行: 會在資料庫 \"%3$s\" 中設定複寫進度 (節點名稱 \"%1$s\"，LSN %2$s)"
+msgstr "模擬執行: 會在資料庫 \"%3$s\" 中設定複寫進度 (節點名稱 \"%1$s\", LSN %2$s)"
 
 #: pg_createsubscriber.c:2107
 #, c-format
 msgid "setting the replication progress (node name \"%s\", LSN %s) in database \"%s\""
-msgstr "正在資料庫 \"%3$s\" 中設定複寫進度 (節點名稱 \"%1$s\"，LSN %2$s)"
+msgstr "正在資料庫 \"%3$s\" 中設定複寫進度 (節點名稱 \"%1$s\", LSN %2$s)"
 
 #: pg_createsubscriber.c:2122
 #, c-format
@@ -2086,7 +2084,7 @@ msgstr "無法取得資料庫清單: %s"
 #: pg_createsubscriber.c:2321
 #, c-format
 msgid "cannot be executed by \"root\""
-msgstr "無法用 \"root\" 執行"
+msgstr "不能以 \"root\" 身分執行"
 
 # postmaster/postmaster.c:1015
 #: pg_createsubscriber.c:2322
@@ -2167,7 +2165,7 @@ msgstr "未指定資料庫"
 #: pg_createsubscriber.c:2556
 #, c-format
 msgid "database name \"%s\" was extracted from the publisher connection string"
-msgstr "已從發布伺服器連接字串中提取資料庫名稱 \"%s\""
+msgstr "已從發布伺服器連接字串中擷取資料庫名稱 \"%s\""
 
 #: pg_createsubscriber.c:2561
 #, c-format
@@ -2259,14 +2257,12 @@ msgstr "完成!"
 msgid ""
 "%s receives PostgreSQL streaming write-ahead logs.\n"
 "\n"
-msgstr ""
-"%s 接收 PostgreSQL 的串流 write-ahead 日誌\n"
-"\n"
+msgstr "%s 接收 PostgreSQL 的串流預寫式日誌。\n\n"
 
 #: pg_receivewal.c:82
 #, c-format
 msgid "  -D, --directory=DIR    receive write-ahead log files into this directory\n"
-msgstr "  -D, --directory=DIR    接收 write-ahead 日誌檔到此目錄\n"
+msgstr "  -D, --directory=DIR    接收預寫式日誌檔到此目錄\n"
 
 #: pg_receivewal.c:83 pg_recvlogical.c:95
 #, c-format
@@ -2281,7 +2277,7 @@ msgstr "      --if-not-exists    建立槽時如果槽已存在則不產生錯�
 #: pg_receivewal.c:85 pg_recvlogical.c:101
 #, c-format
 msgid "  -n, --no-loop          do not loop on connection lost\n"
-msgstr "  -n, --no-loop          連線中斷時不循環\n"
+msgstr "  -n, --no-loop          連線中斷時不循環重試\n"
 
 #: pg_receivewal.c:86
 #, c-format
@@ -2300,14 +2296,14 @@ msgstr ""
 #: pg_receivewal.c:90
 #, c-format
 msgid "      --synchronous      flush write-ahead log immediately after writing\n"
-msgstr "      --synchronous      寫入 write-ahead 日誌後立即 flush\n"
+msgstr "      --synchronous      寫入預寫式日誌後立即排清\n"
 
 #: pg_receivewal.c:93
 #, c-format
 msgid ""
 "  -Z, --compress=METHOD[:DETAIL]\n"
 "                         compress as specified\n"
-msgstr "  -Z, --compress=METHOD\n                         指定壓縮方式\n"
+msgstr "  -Z, --compress=METHOD[:DETAIL]\n                         指定壓縮方式\n"
 
 #: pg_receivewal.c:103
 #, c-format
@@ -2358,7 +2354,7 @@ msgstr "無法關閉目錄 \"%s\": %m"
 #: pg_receivewal.c:323
 #, c-format
 msgid "segment file \"%s\" has incorrect size %lld, skipping"
-msgstr "片斷檔 \"%s\" 大小 %lld 不正確，跳過"
+msgstr "片段檔 \"%s\" 大小 %lld 不正確，跳過"
 
 #: pg_receivewal.c:340
 #, c-format
@@ -2368,7 +2364,7 @@ msgstr "無法開啟壓縮檔 \"%s\": %m"
 #: pg_receivewal.c:343
 #, c-format
 msgid "could not seek in compressed file \"%s\": %m"
-msgstr "無法 seek 壓縮檔 \"%s\": %m"
+msgstr "無法在壓縮檔 \"%s\" 中定位: %m"
 
 #: pg_receivewal.c:349
 #, c-format
@@ -2378,18 +2374,18 @@ msgstr "無法讀取壓縮檔 \"%s\": %m"
 #: pg_receivewal.c:352
 #, c-format
 msgid "could not read compressed file \"%s\": read %d of %zu"
-msgstr "無法讀取壓縮檔 \"%s\": 已讀取 %d / %zu"
+msgstr "無法讀取壓縮檔 \"%1$s\": 應讀取 %3$zu，實際讀取 %2$d"
 
 #: pg_receivewal.c:362
 #, c-format
 msgid "compressed segment file \"%s\" has incorrect uncompressed size %d, skipping"
-msgstr "壓縮片斷檔 \"%s\" 的未壓縮大小 %d 不正確，跳過"
+msgstr "壓縮片段檔 \"%s\" 的未壓縮大小 %d 不正確，跳過"
 
 # libpq/be-secure.c:649
 #: pg_receivewal.c:390
 #, c-format
 msgid "could not create LZ4 decompression context: %s"
-msgstr "無法建立 LZ4 解壓縮 context: %s"
+msgstr "無法建立 LZ4 解壓縮上下文: %s"
 
 #: pg_receivewal.c:420
 #, c-format
@@ -2399,17 +2395,17 @@ msgstr "無法解壓縮檔案 \"%s\": %s"
 #: pg_receivewal.c:443
 #, c-format
 msgid "could not free LZ4 decompression context: %s"
-msgstr "無法釋放 LZ4 解壓縮 context: %s"
+msgstr "無法釋放 LZ4 解壓縮上下文: %s"
 
 #: pg_receivewal.c:448
 #, c-format
 msgid "compressed segment file \"%s\" has incorrect uncompressed size %zu, skipping"
-msgstr "壓縮片斷檔 \"%s\" 的未壓縮大小 %zu 不正確，跳過"
+msgstr "壓縮片段檔 \"%s\" 的未壓縮大小 %zu 不正確，跳過"
 
 #: pg_receivewal.c:453
 #, c-format
 msgid "cannot check file \"%s\": compression with %s not supported by this build"
-msgstr "無法檢查檔案 \"%s\": 此版本不支援 %s 壓縮"
+msgstr "不能檢查檔案 \"%s\": 此建置版本不支援 %s 壓縮"
 
 #: pg_receivewal.c:578
 #, c-format
@@ -2424,12 +2420,12 @@ msgstr "無法解析結束位置 \"%s\""
 #: pg_receivewal.c:766
 #, c-format
 msgid "cannot use --create-slot together with --drop-slot"
-msgstr "無法同時使用 --create-slot 和 --drop-slot"
+msgstr "不能同時使用 --create-slot 和 --drop-slot"
 
 #: pg_receivewal.c:782
 #, c-format
 msgid "cannot use --synchronous together with --no-sync"
-msgstr "無法同時使用 --synchronous 和 --no-sync"
+msgstr "不能同時使用 --synchronous 和 --no-sync"
 
 #: pg_receivewal.c:792
 #, c-format
@@ -2444,7 +2440,7 @@ msgstr "尚未支援 %s 壓縮"
 #: pg_receivewal.c:859
 #, c-format
 msgid "replication connection using slot \"%s\" is unexpectedly database specific"
-msgstr "使用槽 \"%s\" 的複寫連線意外的只能用於特定資料庫"
+msgstr "使用槽 \"%s\" 的複寫連線意外地只能用於特定資料庫"
 
 #: pg_receivewal.c:878 pg_recvlogical.c:995
 #, c-format
@@ -2472,9 +2468,7 @@ msgstr "連線中斷，等待 %d 秒後重試"
 msgid ""
 "%s controls PostgreSQL logical decoding streams.\n"
 "\n"
-msgstr ""
-"%s 控制 PostgreSQL 邏輯解碼串流\n"
-"\n"
+msgstr "%s 控制 PostgreSQL 邏輯解碼串流。\n\n"
 
 #: pg_recvlogical.c:88
 #, c-format
@@ -2522,7 +2516,7 @@ msgid ""
 "  -o, --option=NAME[=VALUE]\n"
 "                         pass option NAME with optional value VALUE to the\n"
 "                         output plugin\n"
-msgstr "  -o, --option=NAME\n                         將選項 NAME 和選擇性的值 VALUE 傳給輸出外掛程式\n"
+msgstr "  -o, --option=NAME[=VALUE]\n                         將選項 NAME 和選擇性的值 VALUE 傳給輸出外掛程式\n"
 
 #: pg_recvlogical.c:105
 #, c-format
@@ -2552,7 +2546,7 @@ msgstr "  -d, --dbname=DBNAME    要連線的資料庫\n"
 #: pg_recvlogical.c:148
 #, c-format
 msgid "confirming write up to %X/%08X, flush to %X/%08X (slot %s)"
-msgstr "正在確認寫入至 %X/%08X，排清至 %X/%08X (槽 %s)"
+msgstr "正在確認寫入至 %X/%08X, 排清至 %X/%08X (槽 %s)"
 
 #: pg_recvlogical.c:172 receivelog.c:360
 #, c-format
@@ -2611,7 +2605,7 @@ msgstr "複寫串流意外終止: %s"
 #: pg_recvlogical.c:806
 #, c-format
 msgid "could not parse start position \"%s\""
-msgstr "無法解析開始位罝: \"%s\""
+msgstr "無法解析開始位置: \"%s\""
 
 #: pg_recvlogical.c:884
 #, c-format
@@ -2636,12 +2630,12 @@ msgstr "至少需要指定一個操作"
 #: pg_recvlogical.c:912
 #, c-format
 msgid "cannot use --create-slot or --start together with --drop-slot"
-msgstr "--create-slot 或 --start 無法和 --drop-slot 一起使用"
+msgstr "--create-slot 或 --start 不能和 --drop-slot 一起使用"
 
 #: pg_recvlogical.c:919
 #, c-format
 msgid "cannot use --create-slot or --drop-slot together with --startpos"
-msgstr "--create-slot 或 --drop-slot 無法和 --startpos 一起使用"
+msgstr "--create-slot 或 --drop-slot 不能和 --startpos 一起使用"
 
 #: pg_recvlogical.c:926
 #, c-format
@@ -2681,28 +2675,28 @@ msgstr "無法關閉封存狀態檔 \"%s\": %s"
 #: receivelog.c:122
 #, c-format
 msgid "could not get size of write-ahead log file \"%s\": %s"
-msgstr "無法取得 write-ahead 日誌檔 \"%s\" 的大小: %s"
+msgstr "無法取得預寫式日誌檔 \"%s\" 的大小: %s"
 
 #: receivelog.c:133
 #, c-format
 msgid "could not open existing write-ahead log file \"%s\": %s"
-msgstr "無法開啟已存在的 write-ahead 日誌檔 \"%s\": %s"
+msgstr "無法開啟已存在的預寫式日誌檔 \"%s\": %s"
 
 #: receivelog.c:142
 #, c-format
 msgid "could not fsync existing write-ahead log file \"%s\": %s"
-msgstr "無法 fsync 已存在的 write-ahead 日誌檔 \"%s\": %s"
+msgstr "無法 fsync 已存在的預寫式日誌檔 \"%s\": %s"
 
 #: receivelog.c:157
 #, c-format
 msgid "write-ahead log file \"%s\" has %zd byte, should be 0 or %d"
 msgid_plural "write-ahead log file \"%s\" has %zd bytes, should be 0 or %d"
-msgstr[0] "write-ahead 日誌檔 \"%s\" 大小為 %zd 個位元組，應為 0 或 %d"
+msgstr[0] "預寫式日誌檔 \"%s\" 大小為 %zd 個位元組，應為 0 或 %d"
 
 #: receivelog.c:175
 #, c-format
 msgid "could not open write-ahead log file \"%s\": %s"
-msgstr "無法開啟 write-head 日誌檔 \"%s\": %s"
+msgstr "無法開啟預寫式日誌檔 \"%s\": %s"
 
 #: receivelog.c:216
 #, c-format
@@ -2752,12 +2746,12 @@ msgstr "伺服器中不存在起始時間軸 %u"
 #: receivelog.c:554
 #, c-format
 msgid "unexpected response to TIMELINE_HISTORY command: got %d rows and %d fields, expected %d rows and %d fields"
-msgstr "TIMELINE_HISTORY 命令出現非預回應: 收到 %d 列和 %d 欄，預期 %d 列和 %d 欄"
+msgstr "TIMELINE_HISTORY 命令出現非預期回應: 收到 %d 列和 %d 欄，預期 %d 列和 %d 欄"
 
 #: receivelog.c:632
 #, c-format
 msgid "server reported unexpected next timeline %u, following timeline %u"
-msgstr "伺服器回報非預期的下一個時間軸 %u，所跟隨的時間軸 %u"
+msgstr "伺服器回報非預期的下一個時間軸 %u，目前的時間軸為 %u"
 
 #: receivelog.c:638
 #, c-format
@@ -2767,7 +2761,7 @@ msgstr "伺服器在 %2$X/%3$08X 處停止串流時間軸 %1$u，但回報下一
 #: receivelog.c:678
 #, c-format
 msgid "replication stream was terminated before stop point"
-msgstr "複寫串流在停止點之前被終結"
+msgstr "複寫串流在停止點之前被終止"
 
 #: receivelog.c:724
 #, c-format
@@ -2777,7 +2771,7 @@ msgstr "時間軸結束後出現意外的結果集: 收到 %d 列和 %d 欄，�
 #: receivelog.c:733
 #, c-format
 msgid "could not parse next timeline's starting point \"%s\""
-msgstr "無法解析下一個時間軸的啟始點 \"%s\""
+msgstr "無法解析下一個時間軸的起始點 \"%s\""
 
 #: receivelog.c:781 receivelog.c:1036 walmethods.c:1206
 #, c-format
@@ -2787,12 +2781,12 @@ msgstr "無法 fsync 檔案 \"%s\": %s"
 #: receivelog.c:1097
 #, c-format
 msgid "received write-ahead log record for offset %u with no file open"
-msgstr "收到 write-ahead 日誌記錄給偏移 %u 但無開啟的檔案"
+msgstr "收到位移 %u 的預寫式日誌記錄，但無開啟的檔案"
 
 #: receivelog.c:1107
 #, c-format
 msgid "got WAL data offset %08x, expected %08x"
-msgstr "收到 WAL 資料偏移 %08x，預期 %08x"
+msgstr "收到 WAL 資料位移 %08x，預期 %08x"
 
 #: receivelog.c:1142
 #, c-format
@@ -2802,7 +2796,7 @@ msgstr "無法將 %d 個位元組寫入 WAL 檔 \"%s\": %s"
 #: receivelog.c:1167 receivelog.c:1207 receivelog.c:1235
 #, c-format
 msgid "could not send copy-end packet: %s"
-msgstr "無法傳送 copy-end 封包: %s"
+msgstr "無法傳送 COPY 結束封包: %s"
 
 #: streamutil.c:162
 msgid "Password: "
@@ -2811,7 +2805,7 @@ msgstr "密碼: "
 #: streamutil.c:189
 #, c-format
 msgid "could not connect to server"
-msgstr "無法連線至資料庫"
+msgstr "無法連線至伺服器"
 
 #: streamutil.c:246
 #, c-format
@@ -2842,17 +2836,17 @@ msgstr[0] "遠端伺服器回報無效的 WAL 片段大小 (%d 位元組)"
 #: streamutil.c:336
 #, c-format
 msgid "The WAL segment size must be a power of two between 1 MB and 1 GB."
-msgstr "WAL 片段大小必須是 1 MB 到 1 GB 之間的 2 的冪。"
+msgstr "WAL 片段大小必須是 1 MB 到 1 GB 之間的二的冪。"
 
 #: streamutil.c:378
 #, c-format
 msgid "could not fetch group access flag: got %d rows and %d fields, expected %d rows and %d or more fields"
-msgstr "無法取得群組存取標誌: 收到 %d 列和 %d 欄，預期 %d 列和 %d 或更多欄"
+msgstr "無法取得群組存取旗標: 收到 %d 列和 %d 欄，預期 %d 列和 %d 或更多欄"
 
 #: streamutil.c:387
 #, c-format
 msgid "group access flag could not be parsed: %s"
-msgstr "無法解析群組存取標誌: %s"
+msgstr "無法解析群組存取旗標: %s"
 
 #: streamutil.c:430 streamutil.c:467
 #, c-format
@@ -2915,7 +2909,7 @@ msgstr "壓縮模式不支援 unlink"
 
 #: walmethods.c:1293
 msgid "could not close compression stream"
-msgstr "無法關閉壓縮串流: %s"
+msgstr "無法關閉壓縮串流"
 
 #, c-format
 #~ msgid "WAL segment size must be a power of two between 1 MB and 1 GB, but the remote server reported a value of %d byte"

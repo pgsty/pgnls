@@ -26,7 +26,7 @@ msgstr "plpy.cursor 預期查詢或計畫"
 #: plpy_cursorobject.c:177
 #, c-format
 msgid "plpy.cursor takes a sequence as its second argument"
-msgstr "plpy.execute 接受序列做為第二個參數"
+msgstr "plpy.cursor 接受序列做為第二個參數"
 
 #: plpy_cursorobject.c:193 plpy_spi.c:207
 #, c-format
@@ -37,7 +37,7 @@ msgstr "無法執行計畫"
 #, c-format
 msgid "Expected sequence of %d argument, got %d: %s"
 msgid_plural "Expected sequence of %d arguments, got %d: %s"
-msgstr[0] "預期 %d 個參數序列，收到 %d 個: %s"
+msgstr[0] "預期包含 %d 個參數的序列，收到 %d 個: %s"
 
 # fe-connect.c:1347
 #: plpy_cursorobject.c:264 plpy_spi.c:93 plpy_spi.c:261 plpy_typeio.c:1215
@@ -85,22 +85,22 @@ msgstr "%s"
 #: plpy_exec.c:77
 #, c-format
 msgid "unsupported set function return mode"
-msgstr "不支援的集合函數回傳模式"
+msgstr "不支援傳回集合的函式的傳回模式"
 
 #: plpy_exec.c:78
 #, c-format
 msgid "PL/Python set-returning functions only support returning one value per call."
-msgstr "PL/Python 的集合回傳函數僅支援每次呼叫回傳一個值。"
+msgstr "PL/Python 傳回集合的函式僅支援每次呼叫傳回一個值。"
 
 #: plpy_exec.c:142
 #, c-format
 msgid "returned object cannot be iterated"
-msgstr "無法迭代回傳的物件"
+msgstr "不能迭代傳回的物件"
 
 #: plpy_exec.c:143
 #, c-format
 msgid "PL/Python set-returning functions must return an iterable object."
-msgstr "PL/Python 的集合回傳函數必須回傳一個可迭代的物件。"
+msgstr "PL/Python 傳回集合的函式必須傳回可迭代的物件。"
 
 #: plpy_exec.c:157
 #, c-format
@@ -110,22 +110,22 @@ msgstr "從迭代器取得下一個項目時發生錯誤"
 #: plpy_exec.c:200
 #, c-format
 msgid "PL/Python procedure did not return None"
-msgstr "PL/Python 程序未回傳 None"
+msgstr "PL/Python 程序未傳回 None"
 
 #: plpy_exec.c:204
 #, c-format
 msgid "PL/Python function with return type \"void\" did not return None"
-msgstr "PL/Python 函數的回傳型別為 \"void\" 但未回傳 None"
+msgstr "PL/Python 函式的傳回型別為 \"void\" 但未傳回 None"
 
 #: plpy_exec.c:235
 #, c-format
 msgid "function returning record called in context that cannot accept type record"
-msgstr "在不接受記錄型別的 context 中呼叫回傳記錄的函數"
+msgstr "在不能接受 record 型別的情況下呼叫傳回 record 的函式"
 
 #: plpy_exec.c:460 plpy_exec.c:484
 #, c-format
 msgid "unexpected return value from trigger procedure"
-msgstr "觸發程序回傳非預期的值"
+msgstr "觸發器函式傳回非預期的值"
 
 #: plpy_exec.c:461
 #, c-format
@@ -135,32 +135,32 @@ msgstr "預期 None 或字串。"
 #: plpy_exec.c:474
 #, c-format
 msgid "PL/Python trigger function returned \"MODIFY\" in a DELETE trigger -- ignored"
-msgstr "PL/Python 觸發函數在 DELETE 觸發器中回傳 \"MODIFY\" -- 已忽略"
+msgstr "PL/Python 觸發器函式在 DELETE 觸發器中傳回 \"MODIFY\" -- 已忽略"
 
 #: plpy_exec.c:485
 #, c-format
 msgid "Expected None, \"OK\", \"SKIP\", or \"MODIFY\"."
-msgstr "預期 None 或 \"OK\" 或 \"SKIP\" 或 \"MODIFY\"。"
+msgstr "預期 None, \"OK\", \"SKIP\" 或 \"MODIFY\"。"
 
 #: plpy_exec.c:577
 #, c-format
 msgid "PyList_SetItem() failed, while setting up arguments"
-msgstr "設定 PyList_SetItem() 的參數時失敗"
+msgstr "設定參數時 PyList_SetItem() 失敗"
 
 #: plpy_exec.c:581
 #, c-format
 msgid "PyDict_SetItemString() failed, while setting up arguments"
-msgstr "設定 PyDict_SetItemString() 的參數時失敗"
+msgstr "設定參數時 PyDict_SetItemString() 失敗"
 
 #: plpy_exec.c:791
 #, c-format
 msgid "while creating return value"
-msgstr "在建立回傳值時"
+msgstr "在建立傳回值時"
 
 #: plpy_exec.c:1042
 #, c-format
 msgid "TD[\"new\"] deleted, cannot modify row"
-msgstr "TD[\"new\"] 已刪除，無法修改資料列"
+msgstr "TD[\"new\"] 已刪除，不能修改資料列"
 
 #: plpy_exec.c:1047
 #, c-format
@@ -181,13 +181,13 @@ msgstr "TD[\"new\"] 中的鍵 \"%s\" 不在觸發資料列的欄位中"
 #: plpy_exec.c:1084
 #, c-format
 msgid "cannot set system attribute \"%s\""
-msgstr "無法設定系統屬性 \"%s\""
+msgstr "不能設定系統屬性 \"%s\""
 
 # commands/tablecmds.c:4580
 #: plpy_exec.c:1089
 #, c-format
 msgid "cannot set generated column \"%s\""
-msgstr "無法設定產生的欄位 \"%s\""
+msgstr "不能設定產生欄位 \"%s\""
 
 #: plpy_exec.c:1147
 #, c-format
@@ -197,7 +197,7 @@ msgstr "在修改觸發資料列時"
 #: plpy_exec.c:1199
 #, c-format
 msgid "forcibly aborting a subtransaction that has not been exited"
-msgstr "強制中止尚未結束的子交易"
+msgstr "正在強制中止尚未結束的子交易"
 
 #: plpy_main.c:70 plpy_main.c:90
 #, c-format
@@ -217,7 +217,7 @@ msgstr "PL/Python 程序 \"%s\""
 #: plpy_main.c:371
 #, c-format
 msgid "PL/Python function \"%s\""
-msgstr "PL/Python 函數 \"%s\""
+msgstr "PL/Python 函式 \"%s\""
 
 #: plpy_main.c:379
 #, c-format
@@ -248,7 +248,7 @@ msgstr "無法產生 SPI 例外"
 #: plpy_plpymodule.c:396
 #, c-format
 msgid "could not unpack arguments in plpy.elog"
-msgstr "無法解析 plpy.elog 中的參數"
+msgstr "無法解包 plpy.elog 中的參數"
 
 #: plpy_plpymodule.c:405
 msgid "could not parse error message in plpy.elog"
@@ -263,7 +263,7 @@ msgstr "參數 'message' 被同時以名稱和位置給定"
 #: plpy_plpymodule.c:449
 #, c-format
 msgid "'%s' is an invalid keyword argument for this function"
-msgstr "這個函數的 '%s' 是無效關鍵字參數"
+msgstr "這個函式的 '%s' 是無效關鍵字參數"
 
 #: plpy_plpymodule.c:460 plpy_plpymodule.c:466
 #, c-format
@@ -273,22 +273,22 @@ msgstr "無效的 SQLSTATE 碼"
 #: plpy_procedure.c:237
 #, c-format
 msgid "trigger functions can only be called as triggers"
-msgstr "觸發函數只能作為觸發器被呼叫"
+msgstr "觸發器函式只能作為觸發器被呼叫"
 
 #: plpy_procedure.c:241
 #, c-format
 msgid "PL/Python functions cannot return type %s"
-msgstr "PL/Python 函數無法回傳型別 %s"
+msgstr "PL/Python 函式不能傳回型別 %s"
 
 #: plpy_procedure.c:319
 #, c-format
 msgid "PL/Python functions cannot accept type %s"
-msgstr "PL/Python 函數不能接受型別 %s"
+msgstr "PL/Python 函式不能接受型別 %s"
 
 #: plpy_procedure.c:409
 #, c-format
 msgid "could not compile PL/Python function \"%s\""
-msgstr "無法編譯 PL/Python 函數 \"%s\""
+msgstr "無法編譯 PL/Python 函式 \"%s\""
 
 #: plpy_procedure.c:412
 #, c-format
@@ -348,7 +348,7 @@ msgstr "尚未進入這個子交易"
 #: plpy_subxactobject.c:172
 #, c-format
 msgid "there is no subtransaction to exit from"
-msgstr "無需結束任何子交易"
+msgstr "沒有可結束的子交易"
 
 #: plpy_typeio.c:588
 #, c-format
@@ -363,7 +363,7 @@ msgstr "模組中找不到 Decimal 屬性"
 #: plpy_typeio.c:598
 #, c-format
 msgid "conversion from numeric to Decimal failed"
-msgstr "從數值轉換為 Decimal 失敗"
+msgstr "從 numeric 轉換為 Decimal 失敗"
 
 #: plpy_typeio.c:916
 #, c-format
@@ -378,24 +378,24 @@ msgstr "無法建立 Python 物件的字串表示"
 #: plpy_typeio.c:1064
 #, c-format
 msgid "could not convert Python object into cstring: Python string representation appears to contain null bytes"
-msgstr "無法將 Python 物件轉換為 cstring: Python 字串表示中似乎包含 null 位元組"
+msgstr "無法將 Python 物件轉換為 cstring: Python 字串表示中似乎包含零位元組"
 
 #: plpy_typeio.c:1161
 #, c-format
 msgid "return value of function with array return type is not a Python sequence"
-msgstr "回傳型別是陣列的函數的回傳值並非 Python 序列"
+msgstr "傳回型別是陣列的函式的傳回值並非 Python 序列"
 
 # access/common/tupdesc.c:679
 #: plpy_typeio.c:1206
 #, c-format
 msgid "could not determine sequence length for function return value"
-msgstr "無法確定函數回傳值的序列長度"
+msgstr "無法確定函式傳回值的序列長度"
 
 # executor/execQual.c:2085 utils/adt/arrayfuncs.c:507
 #: plpy_typeio.c:1230 plpy_typeio.c:1245 plpy_typeio.c:1261
 #, c-format
 msgid "multidimensional arrays must have array expressions with matching dimensions"
-msgstr "多維陣列必須有相同維度的陣列表達式"
+msgstr "多維陣列中的陣列運算式必須具有相符的維度"
 
 # executor/execQual.c:257 executor/execQual.c:285 executor/execQual.c:2065
 # utils/adt/array_userfuncs.c:362 utils/adt/arrayfuncs.c:216
@@ -411,18 +411,18 @@ msgstr "陣列維度數超過允許的最大值(%d)"
 #: plpy_typeio.c:1337
 #, c-format
 msgid "malformed record literal: \"%s\""
-msgstr "格式錯誤的記錄文字: \"%s\""
+msgstr "格式錯誤的記錄字面值: \"%s\""
 
 # utils/adt/rowtypes.c:126
 #: plpy_typeio.c:1338
 #, c-format
 msgid "Missing left parenthesis."
-msgstr "缺少左括號。"
+msgstr "缺少左圓括號。"
 
 #: plpy_typeio.c:1339 plpy_typeio.c:1543
 #, c-format
 msgid "To return a composite type in an array, return the composite type as a Python tuple, e.g., \"[('foo',)]\"."
-msgstr "若要在陣列中回傳複合型別，請將複合型別回傳為 Python 的 tuple，例如: \"[('foo',)]\"。"
+msgstr "若要在陣列中傳回複合型別，請將複合型別傳回為 Python 的 tuple，例如: \"[('foo',)]\"。"
 
 #: plpy_typeio.c:1386
 #, c-format
@@ -432,12 +432,12 @@ msgstr "對照表中找不到鍵 \"%s\""
 #: plpy_typeio.c:1387
 #, c-format
 msgid "To return null in a column, add the value None to the mapping with the key named after the column."
-msgstr "若要在欄位回傳 null，以欄位名稱為鍵值將 None 加入對照表。"
+msgstr "若要在欄位傳回 NULL，以欄位名稱為鍵、None 為值加入對照表。"
 
 #: plpy_typeio.c:1440
 #, c-format
 msgid "length of returned sequence did not match number of columns in row"
-msgstr "回傳的序列長度與資料列中的欄位數不一致"
+msgstr "傳回的序列長度與資料列中的欄位數不一致"
 
 #: plpy_typeio.c:1541
 #, c-format
@@ -447,7 +447,7 @@ msgstr "Python 物件中不存在屬性 \"%s\""
 #: plpy_typeio.c:1544
 #, c-format
 msgid "To return null in a column, let the returned object have an attribute named after column with value None."
-msgstr "若要在欄位回傳 null，以欄位名稱為回傳物件的屬性名稱並以 None 為值。"
+msgstr "若要在欄位傳回 NULL，以欄位名稱為傳回物件的屬性名稱並以 None 為值。"
 
 #: plpy_util.c:29
 #, c-format
@@ -457,7 +457,7 @@ msgstr "無法將 Python 的 Unicode 物件轉換為位元組"
 #: plpy_util.c:35
 #, c-format
 msgid "could not extract bytes from encoded string"
-msgstr "無法從編碼字串中提取位元組"
+msgstr "無法從編碼字串中擷取位元組"
 
 #, c-format
 #~ msgid "Only one Python major version can be used in one session."
