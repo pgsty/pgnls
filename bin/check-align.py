@@ -21,7 +21,8 @@ What this checks, per catalog:
      entry wraps and the continuation is indented to the description column, the
      Chinese continuation must be indented to the Chinese description column.
   4. Option syntax and metavariables are left alone. --option=DBNAME keeps
-     DBNAME, and NAME(args), MXID,MXID and VAR[=ARG] remain complete.
+     DBNAME. The two approved Traditional Chinese psql usage examples may
+     localize NAME/VALUE only when the complete example matches its review.
 
 Exits 1 if anything fails. No database, no network; stdlib plus poio.
 """
@@ -45,6 +46,24 @@ OPTION = re.compile(r'^(?:\s+-{1,2}[\w?][^\s]*(?:, --[^\s]+)?(?:[ =][A-Z][A-Z_]*
 INDENT = re.compile(r'^( {4,})(?=\S)')
 METAVAR = re.compile(r'--[\w-]+=([A-Z][A-Z_]{2,})')
 KINDS = (('label', LABEL), ('option', OPTION))
+
+# The PG19 final review (F10) localizes explanatory usage placeholders, while
+# option-list metavariables, command names and actual values stay unchanged.
+# Match both complete strings so changed options, brackets or values still fail.
+LOCALIZED_PSQL_USAGE = {
+    '  psql --set=NAME=VALUE\n  or \\set NAME VALUE inside psql\n\n':
+        '  psql --set=名稱=值\n  或在 psql 中 \\set 名稱 值\n\n',
+    '  psql --pset=NAME[=VALUE]\n  or \\pset NAME [VALUE] inside psql\n\n':
+        '  psql --pset=名稱[=值]\n  或在 psql 中 \\pset 名稱 [值]\n\n',
+}
+
+
+def missing_metavariables(english, chinese, language, branch, catalog):
+    if (language, branch, catalog) == ('zh_TW', 'master', 'psql'):
+        if LOCALIZED_PSQL_USAGE.get(english) == chinese:
+            return []
+    return [name for line in english.split('\n') for name in METAVAR.findall(line)
+            if name not in chinese]
 
 
 def width(text):
@@ -84,11 +103,9 @@ def main():
             if not chinese:
                 continue
 
-            for line in english.split('\n'):
-                for name in METAVAR.findall(line):
-                    if name not in chinese:
-                        problems.append('%s:%d metavariable %s was translated away'
-                                        % (rel, entry.line, name))
+            for name in missing_metavariables(english, chinese, language, branch, catalog):
+                problems.append('%s:%d metavariable %s was translated away'
+                                % (rel, entry.line, name))
 
             if english.count('\n') != chinese.count('\n'):
                 continue          # a width-wrapped sentence joined into one line
