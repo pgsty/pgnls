@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-19 14:49+0000\n"
-"PO-Revision-Date: 2026-09-20 12:27+0800\n"
+"POT-Creation-Date: 2026-09-23 14:41+0000\n"
+"PO-Revision-Date: 2026-09-23 23:11+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
@@ -4148,7 +4148,7 @@ msgstr "未記錄索引 \"%s\" 對頁面 %u 所在範圍的 BRIN 摘要產生請
 #: access/transam/xlogfuncs.c:272 access/transam/xlogfuncs.c:311
 #: access/transam/xlogfuncs.c:332 access/transam/xlogfuncs.c:353
 #: access/transam/xlogfuncs.c:419 access/transam/xlogfuncs.c:478
-#: commands/wait.c:176 statistics/attribute_stats.c:153
+#: commands/wait.c:178 statistics/attribute_stats.c:153
 #: statistics/attribute_stats.c:644 statistics/extended_stats_funcs.c:370
 #: statistics/extended_stats_funcs.c:1778 statistics/relation_stats.c:86
 #, c-format
@@ -4653,45 +4653,45 @@ msgstr "存取方法 %2$s 的運算子家族 \"%1$s\" 缺少運算子 %3$s 的�
 msgid "operator family \"%s\" of access method %s is missing cross-type operator(s)"
 msgstr "存取方法 %2$s 的運算子家族 \"%1$s\" 缺少跨型別運算子"
 
-#: access/heap/heapam.c:1222 access/index/indexam.c:274
+#: access/heap/heapam.c:1224 access/index/indexam.c:274
 #, c-format
 msgid "cannot query non-catalog table \"%s\" during logical decoding"
 msgstr "邏輯解碼期間不能查詢非目錄資料表 \"%s\""
 
 # tcop/postgres.c:1129
-#: access/heap/heapam.c:2240
+#: access/heap/heapam.c:2242
 #, c-format
 msgid "cannot insert tuples in a parallel worker"
 msgstr "不能在並行工作行程中插入元組"
 
-#: access/heap/heapam.c:2795
+#: access/heap/heapam.c:2797
 #, c-format
 msgid "cannot delete tuples during a parallel operation"
 msgstr "並行操作期間不能刪除元組"
 
-#: access/heap/heapam.c:2842
+#: access/heap/heapam.c:2844
 #, c-format
 msgid "attempted to delete invisible tuple"
 msgstr "試圖刪除不可見元組"
 
-#: access/heap/heapam.c:3334 access/index/genam.c:832
+#: access/heap/heapam.c:3336 access/index/genam.c:832
 #, c-format
 msgid "cannot update tuples during a parallel operation"
 msgstr "並行操作期間不能更新元組"
 
-#: access/heap/heapam.c:3511
+#: access/heap/heapam.c:3513
 #, c-format
 msgid "attempted to update invisible tuple"
 msgstr "試圖更新不可見元組"
 
 # access/heap/heapam.c:495
-#: access/heap/heapam.c:5151 access/heap/heapam.c:5189
-#: access/heap/heapam.c:5478 access/heap/heapam_handler.c:379
+#: access/heap/heapam.c:5153 access/heap/heapam.c:5191
+#: access/heap/heapam.c:5480 access/heap/heapam_handler.c:379
 #, c-format
 msgid "could not obtain lock on row in relation \"%s\""
 msgstr "無法取得關聯 \"%s\" 中的資料列鎖定"
 
-#: access/heap/heapam.c:6635 commands/trigger.c:3416
+#: access/heap/heapam.c:6637 commands/trigger.c:3416
 #: executor/nodeModifyTable.c:2627 executor/nodeModifyTable.c:2717
 #, c-format
 msgid "tuple to be updated was already modified by an operation triggered by the current command"
@@ -4708,29 +4708,29 @@ msgstr "待鎖定的元組已因並行更新而移動到另一個分割"
 msgid "row is too big: size %zu, maximum size %zu"
 msgstr "資料列過大: 大小為 %zu, 最大值是 %zu"
 
-#: access/heap/pruneheap.c:891
+#: access/heap/pruneheap.c:897
 #, c-format
 msgid "dead line pointer found on page marked all-visible"
 msgstr "在標記為全可見的頁面上發現死資料列指標"
 
 # commands/vacuum.c:1202 commands/vacuumlazy.c:263
-#: access/heap/pruneheap.c:892 access/heap/pruneheap.c:916
+#: access/heap/pruneheap.c:898 access/heap/pruneheap.c:922
 #, c-format
 msgid "relation \"%s\", page %u, tuple %u"
 msgstr "關聯 \"%s\", 頁面 %u, 元組 %u"
 
-#: access/heap/pruneheap.c:915
+#: access/heap/pruneheap.c:921
 #, c-format
 msgid "tuple not visible to all transactions found on page marked all-visible"
 msgstr "在標記為全可見的頁面上發現並非對所有交易可見的元組"
 
-#: access/heap/pruneheap.c:936
+#: access/heap/pruneheap.c:942
 #, c-format
 msgid "page is not marked all-visible but visibility map bit is set"
 msgstr "頁面未標記為全可見，但可見性對應位元已設定"
 
 # catalog/heap.c:747 catalog/index.c:527 commands/tablecmds.c:1471
-#: access/heap/pruneheap.c:937
+#: access/heap/pruneheap.c:943
 #, c-format
 msgid "relation \"%s\", page %u"
 msgstr "關聯 \"%s\", 頁面 %u"
@@ -5181,7 +5181,7 @@ msgid "operator family \"%s\" of access method %s is missing support function %d
 msgstr "存取方法 %2$s 的運算子家族 \"%1$s\" 缺少型別 %4$s 的支援函式 %3$d"
 
 # executor/execMain.c:820
-#: access/table/table.c:150 optimizer/util/plancat.c:149
+#: access/table/table.c:150 optimizer/util/plancat.c:150
 #, c-format
 msgid "cannot open relation \"%s\""
 msgstr "不能開啟關聯 \"%s\""
@@ -6346,7 +6346,7 @@ msgid "WAL level not sufficient for making an online backup"
 msgstr "產生線上備份的 WAL 等級不足"
 
 #: access/transam/xlog.c:9028 access/transam/xlog.c:9358
-#: access/transam/xlogfuncs.c:279 commands/subscriptioncmds.c:3293
+#: access/transam/xlogfuncs.c:279 commands/subscriptioncmds.c:3299
 #, c-format
 msgid "\"wal_level\" must be set to \"replica\" or \"logical\" at server start."
 msgstr "伺服器啟動時必須將 \"wal_level\" 設為 \"replica\" 或 \"logical\"。"
@@ -6534,9 +6534,9 @@ msgstr "無效的 WAL 檔案名稱 \"%s\""
 # access/transam/xlog.c:5401
 #: access/transam/xlogfuncs.c:554 access/transam/xlogfuncs.c:584
 #: access/transam/xlogfuncs.c:608 access/transam/xlogfuncs.c:631
-#: access/transam/xlogfuncs.c:699 commands/wait.c:306 commands/wait.c:315
-#: commands/wait.c:324 commands/wait.c:341 commands/wait.c:348
-#: commands/wait.c:355
+#: access/transam/xlogfuncs.c:699 commands/wait.c:308 commands/wait.c:317
+#: commands/wait.c:326 commands/wait.c:343 commands/wait.c:350
+#: commands/wait.c:357
 #, c-format
 msgid "recovery is not in progress"
 msgstr "目前未進行復原"
@@ -7269,7 +7269,7 @@ msgstr "您可以在完成必要的組態變更後重新啟動伺服器。"
 #: catalog/dependency.c:1169 catalog/dependency.c:1176
 #: catalog/dependency.c:1187 commands/tablecmds.c:1560
 #: commands/tablecmds.c:17361 commands/tablespace.c:473 commands/user.c:1309
-#: commands/view.c:441 commands/wait.c:106 executor/execExprInterp.c:5285
+#: commands/view.c:441 commands/wait.c:107 executor/execExprInterp.c:5285
 #: executor/execExprInterp.c:5293 libpq/auth-oauth.c:700 libpq/auth.c:316
 #: replication/logical/applyparallelworker.c:1060 replication/slot.c:1851
 #: replication/slot.c:2993 replication/slot.c:2995 replication/syncrep.c:1088
@@ -7922,7 +7922,7 @@ msgstr "使用 %s 時不能使用 IN SCHEMA 子句"
 # utils/adt/ruleutils.c:1300
 #: catalog/aclchk.c:1565 catalog/catalog.c:684 catalog/heap.c:2657
 #: catalog/heap.c:2979 catalog/objectaddress.c:1537
-#: catalog/pg_publication.c:702 commands/analyze.c:1061 commands/copy.c:1123
+#: catalog/pg_publication.c:708 commands/analyze.c:1061 commands/copy.c:1123
 #: commands/sequence.c:1660 commands/tablecmds.c:7798 commands/tablecmds.c:7972
 #: commands/tablecmds.c:8173 commands/tablecmds.c:8309
 #: commands/tablecmds.c:8463 commands/tablecmds.c:8557
@@ -8965,7 +8965,7 @@ msgid "pg_class index OID value not set when in binary upgrade mode"
 msgstr "二進位升級模式下未設定索引的 pg_class OID 值"
 
 # commands/dbcommands.c:201
-#: catalog/index.c:964 utils/cache/relcache.c:3801
+#: catalog/index.c:964 utils/cache/relcache.c:3791
 #, c-format
 msgid "index relfilenumber value not set when in binary upgrade mode"
 msgstr "二進位升級模式下未設定索引的 relfilenumber 值"
@@ -8976,30 +8976,30 @@ msgid "DROP INDEX CONCURRENTLY must be first action in transaction"
 msgstr "DROP INDEX CONCURRENTLY 必須是交易中的第一個操作"
 
 # commands/tablecmds.c:2199
-#: catalog/index.c:3777
+#: catalog/index.c:3851
 #, c-format
 msgid "cannot reindex temporary tables of other sessions"
 msgstr "不能為其他工作階段的暫存資料表重建索引"
 
-#: catalog/index.c:3788 commands/indexcmds.c:3835
+#: catalog/index.c:3862 commands/indexcmds.c:3835
 #, c-format
 msgid "cannot reindex invalid index on TOAST table"
 msgstr "不能重建 TOAST 資料表上的無效索引"
 
 # commands/tablecmds.c:5425
-#: catalog/index.c:3804 commands/indexcmds.c:3713 commands/indexcmds.c:3859
+#: catalog/index.c:3878 commands/indexcmds.c:3713 commands/indexcmds.c:3859
 #: commands/tablecmds.c:3746
 #, c-format
 msgid "cannot move system relation \"%s\""
 msgstr "不能搬移系統關聯 \"%s\""
 
 # commands/indexcmds.c:1067
-#: catalog/index.c:3941
+#: catalog/index.c:4015
 #, c-format
 msgid "index \"%s\" was reindexed"
 msgstr "索引 \"%s\" 已重建"
 
-#: catalog/index.c:4107
+#: catalog/index.c:4181
 #, c-format
 msgid "cannot reindex invalid index \"%s.%s\" on TOAST table, skipping"
 msgstr "不能重建 TOAST 資料表上的無效索引 \"%s.%s\"，跳過"
@@ -9110,8 +9110,8 @@ msgstr "尚未實作跨資料庫參考: %s"
 
 # catalog/namespace.c:1201 gram.y:2516 gram.y:7422 parser/parse_expr.c:1183
 # parser/parse_target.c:734
-#: catalog/namespace.c:3407 gram.y:19661 gram.y:19701 parser/parse_expr.c:875
-#: parser/parse_target.c:1270
+#: catalog/namespace.c:3407 parser/parse_expr.c:875 parser/parse_target.c:1270
+#: gram.y:19661 gram.y:19701
 #, c-format
 msgid "improper qualified name (too many dotted names): %s"
 msgstr "不合適的限定名稱(以點號分隔的名稱部分過多): %s"
@@ -10232,7 +10232,7 @@ msgstr "不能分離分割 \"%s\""
 msgid "The partition is being detached concurrently or has an unfinished detach."
 msgstr "該分割正在並行分離，或存在尚未完成的分離操作。"
 
-#: catalog/pg_inherits.c:596 catalog/pg_publication.c:82
+#: catalog/pg_inherits.c:596 catalog/pg_publication.c:88
 #: commands/tablecmds.c:4959 commands/tablecmds.c:18503
 #, c-format
 msgid "Use ALTER TABLE ... DETACH PARTITION ... FINALIZE to complete the pending detach operation."
@@ -10479,64 +10479,64 @@ msgstr "SQL 函式不能有 %s 型別的引數"
 msgid "SQL function \"%s\""
 msgstr "SQL 函式 \"%s\""
 
-#: catalog/pg_publication.c:66
+#: catalog/pg_publication.c:72
 #, c-format
 msgid "cannot specify relation \"%s\" in the publication EXCEPT clause"
 msgstr "不能在發布的 EXCEPT 子句中指定關聯 \"%s\""
 
 # executor/execMain.c:820
-#: catalog/pg_publication.c:71
+#: catalog/pg_publication.c:77
 #, c-format
 msgid "cannot add relation \"%s\" to publication"
 msgstr "不能將關聯 \"%s\" 加入發布"
 
-#: catalog/pg_publication.c:81
+#: catalog/pg_publication.c:87
 #, c-format
 msgid "This operation is not supported for partitions with an incomplete detach."
 msgstr "尚未完成分離的分割不支援此操作。"
 
 # input.c:213
-#: catalog/pg_publication.c:87
+#: catalog/pg_publication.c:93
 #, c-format
 msgid "This operation is not supported for individual partitions."
 msgstr "個別分割不支援此操作。"
 
 # describe.c:117
-#: catalog/pg_publication.c:103
+#: catalog/pg_publication.c:109
 #, c-format
 msgid "This operation is not supported for system tables."
 msgstr "系統資料表不支援此操作。"
 
 # describe.c:117
-#: catalog/pg_publication.c:110
+#: catalog/pg_publication.c:116
 #, c-format
 msgid "This operation is not supported for temporary tables."
 msgstr "暫存資料表不支援此操作。"
 
 # describe.c:117
-#: catalog/pg_publication.c:115
+#: catalog/pg_publication.c:121
 #, c-format
 msgid "This operation is not supported for unlogged tables."
 msgstr "不記錄 WAL 的資料表不支援此操作。"
 
-#: catalog/pg_publication.c:129 catalog/pg_publication.c:137
+#: catalog/pg_publication.c:135 catalog/pg_publication.c:143
 #, c-format
 msgid "cannot add schema \"%s\" to publication"
 msgstr "不能將 schema \"%s\" 加入發布"
 
 # commands/schemacmds.c:103 commands/schemacmds.c:298
-#: catalog/pg_publication.c:131
+#: catalog/pg_publication.c:137
 #, c-format
 msgid "This operation is not supported for system schemas."
 msgstr "系統 schema 不支援此操作。"
 
 # commands/user.c:1244
-#: catalog/pg_publication.c:139
+#: catalog/pg_publication.c:145
 #, c-format
 msgid "Temporary schemas cannot be replicated."
 msgstr "不能複寫暫存 schema。"
 
-#: catalog/pg_publication.c:568
+#: catalog/pg_publication.c:574
 #, c-format
 msgid "relation \"%s\" is already member of publication \"%s\""
 msgstr "關聯 \"%s\" 已是發布 \"%s\" 的成員"
@@ -10544,24 +10544,24 @@ msgstr "關聯 \"%s\" 已是發布 \"%s\" 的成員"
 # commands/tablecmds.c:3079 commands/tablecmds.c:3172
 # commands/tablecmds.c:3222 commands/tablecmds.c:3318
 # commands/tablecmds.c:3379 commands/tablecmds.c:4573
-#: catalog/pg_publication.c:708
+#: catalog/pg_publication.c:714
 #, c-format
 msgid "cannot use system column \"%s\" in publication column list"
 msgstr "發布欄位清單中不能使用系統欄位 \"%s\""
 
 # commands/tablecmds.c:4580
-#: catalog/pg_publication.c:714
+#: catalog/pg_publication.c:720
 #, c-format
 msgid "cannot use virtual generated column \"%s\" in publication column list"
 msgstr "發布欄位清單中不能使用虛擬產生欄位 \"%s\""
 
 # commands/tablecmds.c:808
-#: catalog/pg_publication.c:720
+#: catalog/pg_publication.c:726
 #, c-format
 msgid "duplicate column \"%s\" in publication column list"
 msgstr "發布欄位清單中的欄位 \"%s\" 重複"
 
-#: catalog/pg_publication.c:832
+#: catalog/pg_publication.c:838
 #, c-format
 msgid "schema \"%s\" is already member of publication \"%s\""
 msgstr "schema \"%s\" 已是發布 \"%s\" 的成員"
@@ -10659,8 +10659,8 @@ msgstr ", \"%s\""
 # commands/user.c:899 commands/user.c:1012 commands/user.c:1104
 # commands/user.c:1233 commands/variable.c:664 utils/cache/lsyscache.c:2064
 # utils/init/miscinit.c:335
-#: catalog/pg_subscription.c:218 commands/subscriptioncmds.c:2031
-#: commands/subscriptioncmds.c:2390
+#: catalog/pg_subscription.c:218 commands/subscriptioncmds.c:2037
+#: commands/subscriptioncmds.c:2396
 #, c-format
 msgid "subscription owner \"%s\" does not have permission on foreign server \"%s\""
 msgstr "訂閱擁有者 \"%1$s\" 對外部伺服器 \"%2$s\" 的權限不足"
@@ -10917,15 +10917,15 @@ msgid "must be superuser to rename %s"
 msgstr "必須是超級使用者才能重新命名 %s"
 
 #: commands/alter.c:250 commands/subscriptioncmds.c:720
-#: commands/subscriptioncmds.c:1688 commands/subscriptioncmds.c:1763
-#: commands/subscriptioncmds.c:2784
+#: commands/subscriptioncmds.c:1694 commands/subscriptioncmds.c:1769
+#: commands/subscriptioncmds.c:2790
 #, c-format
 msgid "password_required=false is superuser-only"
 msgstr "password_required=false 僅限超級使用者使用"
 
 #: commands/alter.c:251 commands/subscriptioncmds.c:721
-#: commands/subscriptioncmds.c:1689 commands/subscriptioncmds.c:1764
-#: commands/subscriptioncmds.c:2785
+#: commands/subscriptioncmds.c:1695 commands/subscriptioncmds.c:1770
+#: commands/subscriptioncmds.c:2791
 #, c-format
 msgid "Subscriptions with the password_required option set to false may only be created or modified by the superuser."
 msgstr "只有超級使用者才能建立或修改 password_required 選項設為 false 的訂閱。"
@@ -11194,7 +11194,7 @@ msgstr "不能重新整理預設定序的版本"
 # rewrite/rewriteDefine.c:258
 #. translator: %s is an SQL command
 #. translator: %s is an SQL ALTER command
-#: commands/collationcmds.c:448 commands/subscriptioncmds.c:2161
+#: commands/collationcmds.c:448 commands/subscriptioncmds.c:2167
 #: commands/tablecmds.c:8189 commands/tablecmds.c:8199
 #: commands/tablecmds.c:8201 commands/tablecmds.c:16770
 #: commands/tablecmds.c:20317 commands/tablecmds.c:20338
@@ -11260,13 +11260,13 @@ msgid "cannot set comment on relation \"%s\""
 msgstr "不能為關聯 \"%s\" 設定註解"
 
 # utils/adt/ri_triggers.c:2921
-#: commands/constraint.c:61 utils/adt/ri_triggers.c:2265
+#: commands/constraint.c:61 utils/adt/ri_triggers.c:2266
 #, c-format
 msgid "function \"%s\" was not called by trigger manager"
 msgstr "觸發器管理員未呼叫函式 \"%s\""
 
 # utils/adt/ri_triggers.c:2930
-#: commands/constraint.c:68 utils/adt/ri_triggers.c:2274
+#: commands/constraint.c:68 utils/adt/ri_triggers.c:2275
 #, c-format
 msgid "function \"%s\" must be fired AFTER ROW"
 msgstr "函式 \"%s\" 必須由 AFTER ROW 觸發器引發"
@@ -11454,7 +11454,7 @@ msgstr "選項 \"%s\" 的參數必須是有效的編碼名稱"
 
 # utils/adt/date.c:2510 utils/adt/timestamp.c:3793 utils/adt/timestamp.c:3942
 #: commands/copy.c:780 commands/dbcommands.c:890 commands/dbcommands.c:2439
-#: commands/wait.c:128
+#: commands/wait.c:129
 #, c-format
 msgid "option \"%s\" not recognized"
 msgstr "無法識別選項 \"%s\""
@@ -12906,7 +12906,7 @@ msgstr "%s 只能在 table_rewrite 事件觸發器函式中呼叫"
 msgid "%s can only be called in an event trigger function"
 msgstr "%s 只能在事件觸發器函式中呼叫"
 
-#: commands/explain_state.c:136 commands/explain_state.c:161 commands/wait.c:87
+#: commands/explain_state.c:136 commands/explain_state.c:161 commands/wait.c:88
 #: postmaster/checkpointer.c:1022 replication/walsender.c:1209
 #, c-format
 msgid "unrecognized value for %s option \"%s\": \"%s\""
@@ -15737,7 +15737,7 @@ msgid "Foreign-data wrapper must be defined with CONNECTION specified."
 msgstr "定義外部資料包裝器時必須指定 CONNECTION。"
 
 #: commands/subscriptioncmds.c:925 commands/subscriptioncmds.c:1096
-#: commands/subscriptioncmds.c:1359 commands/subscriptioncmds.c:2328
+#: commands/subscriptioncmds.c:1365 commands/subscriptioncmds.c:2334
 #, c-format
 msgid "subscription \"%s\" could not connect to the publisher: %s"
 msgstr "訂閱 \"%1$s\" 無法連線到發布伺服器: %2$s"
@@ -15757,116 +15757,116 @@ msgstr "訂閱已建立，但尚未連線"
 msgid "To initiate replication, you must manually create the replication slot, enable the subscription, and alter the subscription to refresh publications."
 msgstr "要啟動複寫，必須手動建立複寫槽、啟用訂閱，並修改訂閱以重新整理發布。"
 
-#: commands/subscriptioncmds.c:1373 replication/logical/sequencesync.c:471
+#: commands/subscriptioncmds.c:1379 replication/logical/sequencesync.c:502
 #, c-format
 msgid "cannot synchronize sequences if the publisher is running a version earlier than PostgreSQL 19"
 msgstr "發布伺服器執行的版本早於 PostgreSQL 19 時，不能同步序列"
 
 # sql_help.h:45
-#: commands/subscriptioncmds.c:1497
+#: commands/subscriptioncmds.c:1503
 #, c-format
 msgid "cannot set option \"%s\" for enabled subscription"
 msgstr "不能為已啟用的訂閱設定選項 \"%s\""
 
-#: commands/subscriptioncmds.c:1511
+#: commands/subscriptioncmds.c:1517
 #, c-format
 msgid "cannot set option \"%s\" for a subscription that does not have a slot name"
 msgstr "不能為沒有槽名稱的訂閱設定選項 \"%s\""
 
 # utils/adt/acl.c:1875 utils/adt/regproc.c:117 utils/adt/regproc.c:138
 # utils/adt/regproc.c:290
-#: commands/subscriptioncmds.c:1562 commands/subscriptioncmds.c:2444
-#: commands/subscriptioncmds.c:2850 utils/cache/lsyscache.c:4018
+#: commands/subscriptioncmds.c:1568 commands/subscriptioncmds.c:2450
+#: commands/subscriptioncmds.c:2856 utils/cache/lsyscache.c:4018
 #, c-format
 msgid "subscription \"%s\" does not exist"
 msgstr "訂閱 \"%s\" 不存在"
 
 # sql_help.h:45
-#: commands/subscriptioncmds.c:1717
+#: commands/subscriptioncmds.c:1723
 #, c-format
 msgid "cannot set %s for enabled subscription"
 msgstr "不能為已啟用的訂閱設定 %s"
 
-#: commands/subscriptioncmds.c:1802
+#: commands/subscriptioncmds.c:1808
 #, c-format
 msgid "\"slot_name\" and \"two_phase\" cannot be altered at the same time"
 msgstr "不能同時修改 \"slot_name\" 和 \"two_phase\""
 
-#: commands/subscriptioncmds.c:1818
+#: commands/subscriptioncmds.c:1824
 #, c-format
 msgid "cannot alter \"two_phase\" when logical replication worker is still running"
 msgstr "邏輯複寫工作行程仍在執行時，不能修改 \"two_phase\""
 
-#: commands/subscriptioncmds.c:1819 commands/subscriptioncmds.c:1904
+#: commands/subscriptioncmds.c:1825 commands/subscriptioncmds.c:1910
 #, c-format
 msgid "Try again after some time."
 msgstr "稍後重試。"
 
-#: commands/subscriptioncmds.c:1832
+#: commands/subscriptioncmds.c:1838
 #, c-format
 msgid "cannot disable \"two_phase\" when prepared transactions exist"
 msgstr "存在預備交易時，不能停用 \"two_phase\""
 
 # utils/misc/guc.c:783
-#: commands/subscriptioncmds.c:1833
+#: commands/subscriptioncmds.c:1839
 #, c-format
 msgid "Resolve these transactions and try again."
 msgstr "先處理完這些交易，然後重試。"
 
-#: commands/subscriptioncmds.c:1902
+#: commands/subscriptioncmds.c:1908
 #, c-format
 msgid "cannot alter option \"%s\" when logical replication worker is still running"
 msgstr "邏輯複寫工作行程仍在執行時，不能修改選項 \"%s\""
 
-#: commands/subscriptioncmds.c:1976
+#: commands/subscriptioncmds.c:1982
 #, c-format
 msgid "cannot enable subscription that does not have a slot name"
 msgstr "不能啟用沒有槽名稱的訂閱"
 
-#: commands/subscriptioncmds.c:2111 commands/subscriptioncmds.c:2159
+#: commands/subscriptioncmds.c:2117 commands/subscriptioncmds.c:2165
 #, c-format
 msgid "ALTER SUBSCRIPTION with refresh is not allowed for disabled subscriptions"
 msgstr "已停用的訂閱不允許使用帶重新整理的 ALTER SUBSCRIPTION"
 
-#: commands/subscriptioncmds.c:2112
+#: commands/subscriptioncmds.c:2118
 #, c-format
 msgid "Use ALTER SUBSCRIPTION ... SET PUBLICATION ... WITH (refresh = false)."
 msgstr "使用 ALTER SUBSCRIPTION ... SET PUBLICATION ... WITH (refresh = false)。"
 
-#: commands/subscriptioncmds.c:2121 commands/subscriptioncmds.c:2173
+#: commands/subscriptioncmds.c:2127 commands/subscriptioncmds.c:2179
 #, c-format
 msgid "ALTER SUBSCRIPTION with refresh and copy_data is not allowed when two_phase is enabled"
 msgstr "啟用 two_phase 時，不允許在 ALTER SUBSCRIPTION 中同時啟用 refresh 和 copy_data"
 
-#: commands/subscriptioncmds.c:2122
+#: commands/subscriptioncmds.c:2128
 #, c-format
 msgid "Use ALTER SUBSCRIPTION ... SET PUBLICATION with refresh = false, or with copy_data = false, or use DROP/CREATE SUBSCRIPTION."
 msgstr "使用帶有 refresh = false 或 copy_data = false 的 ALTER SUBSCRIPTION ... SET PUBLICATION，或使用 DROP/CREATE SUBSCRIPTION。"
 
 #. translator: %s is an SQL ALTER command
-#: commands/subscriptioncmds.c:2175
+#: commands/subscriptioncmds.c:2181
 #, c-format
 msgid "Use %s with refresh = false, or with copy_data = false, or use DROP/CREATE SUBSCRIPTION."
 msgstr "使用帶有 refresh = false 或 copy_data = false 的 %s，或使用 DROP/CREATE SUBSCRIPTION。"
 
 #  translator: %s is a SQL statement name
 # executor/functions.c:117
-#: commands/subscriptioncmds.c:2198 commands/subscriptioncmds.c:2237
+#: commands/subscriptioncmds.c:2204 commands/subscriptioncmds.c:2243
 #, c-format
 msgid "%s is not allowed for disabled subscriptions"
 msgstr "已停用的訂閱不允許執行 %s"
 
-#: commands/subscriptioncmds.c:2221
+#: commands/subscriptioncmds.c:2227
 #, c-format
 msgid "ALTER SUBSCRIPTION ... REFRESH PUBLICATION with copy_data is not allowed when two_phase is enabled"
 msgstr "啟用 two_phase 時，不允許在 ALTER SUBSCRIPTION ... REFRESH PUBLICATION 中啟用 copy_data"
 
-#: commands/subscriptioncmds.c:2222
+#: commands/subscriptioncmds.c:2228
 #, c-format
 msgid "Use ALTER SUBSCRIPTION ... REFRESH PUBLICATION with copy_data = false, or use DROP/CREATE SUBSCRIPTION."
 msgstr "使用帶有 copy_data = false 的 ALTER SUBSCRIPTION ... REFRESH PUBLICATION，或使用 DROP/CREATE SUBSCRIPTION。"
 
-#: commands/subscriptioncmds.c:2269
+#: commands/subscriptioncmds.c:2275
 #, c-format
 msgid "skip WAL location (LSN %X/%08X) must be greater than origin LSN %X/%08X"
 msgstr "要跳過的 WAL 位置 (LSN %X/%08X) 必須大於複寫來源 LSN %X/%08X"
@@ -15874,173 +15874,173 @@ msgstr "要跳過的 WAL 位置 (LSN %X/%08X) 必須大於複寫來源 LSN %X/%0
 # catalog/pg_conversion.c:307 commands/comment.c:958
 # commands/conversioncmds.c:109 commands/conversioncmds.c:133
 # commands/conversioncmds.c:192
-#: commands/subscriptioncmds.c:2448
+#: commands/subscriptioncmds.c:2454
 #, c-format
 msgid "subscription \"%s\" does not exist, skipping"
 msgstr "訂閱 \"%s\" 不存在，跳過"
 
-#: commands/subscriptioncmds.c:2726
+#: commands/subscriptioncmds.c:2732
 #, c-format
 msgid "dropped replication slot \"%s\" on publisher"
 msgstr "已在發布伺服器上刪除複寫槽 \"%s\""
 
-#: commands/subscriptioncmds.c:2735 commands/subscriptioncmds.c:2743
+#: commands/subscriptioncmds.c:2741 commands/subscriptioncmds.c:2749
 #, c-format
 msgid "could not drop replication slot \"%s\" on publisher: %s"
 msgstr "無法在發布伺服器上刪除複寫槽 \"%s\": %s"
 
 # catalog/aclchk.c:1548 catalog/aclchk.c:1973 tcop/fastpath.c:230
-#: commands/subscriptioncmds.c:2883
+#: commands/subscriptioncmds.c:2889
 #, c-format
 msgid "subscription with OID %u does not exist"
 msgstr "OID 為 %u 的訂閱不存在"
 
 # fe-misc.c:610
 # fe-misc.c:701
-#: commands/subscriptioncmds.c:3018 commands/subscriptioncmds.c:3419
+#: commands/subscriptioncmds.c:3024 commands/subscriptioncmds.c:3425
 #, c-format
 msgid "could not receive list of replicated tables from the publisher: %s"
 msgstr "無法從發布伺服器接收參與複寫的資料表清單: %s"
 
-#: commands/subscriptioncmds.c:3057
+#: commands/subscriptioncmds.c:3063
 #, c-format
 msgid "subscription \"%s\" requested copy_data with origin = NONE but might copy data that had a different origin"
 msgstr "訂閱 \"%s\" 請求在 origin = NONE 時執行 copy_data，但可能複製來自其他來源的資料"
 
-#: commands/subscriptioncmds.c:3059 commands/subscriptioncmds.c:3068
+#: commands/subscriptioncmds.c:3065 commands/subscriptioncmds.c:3074
 #, c-format
 msgid "The subscription subscribes to a publication (%s) that contains tables that are written to by other subscriptions."
 msgid_plural "The subscription subscribes to publications (%s) that contain tables that are written to by other subscriptions."
 msgstr[0] "該訂閱所訂閱的發布 (%s) 包含由其他訂閱寫入的資料表。"
 
-#: commands/subscriptioncmds.c:3062
+#: commands/subscriptioncmds.c:3068
 #, c-format
 msgid "Verify that initial data copied from the publisher tables did not come from other origins."
 msgstr "確認從發布伺服器資料表複製的初始資料並非來自其他來源。"
 
-#: commands/subscriptioncmds.c:3066
+#: commands/subscriptioncmds.c:3072
 #, c-format
 msgid "subscription \"%s\" enabled retain_dead_tuples but might not reliably detect conflicts for changes from different origins"
 msgstr "訂閱 \"%s\" 已啟用 retain_dead_tuples，但可能無法可靠偵測來自不同來源的變更所產生的衝突"
 
-#: commands/subscriptioncmds.c:3071
+#: commands/subscriptioncmds.c:3077
 #, c-format
 msgid "Consider using origin = NONE or disabling retain_dead_tuples."
 msgstr "可考慮使用 origin = NONE 或停用 retain_dead_tuples。"
 
 # fe-misc.c:610
 # fe-misc.c:701
-#: commands/subscriptioncmds.c:3157
+#: commands/subscriptioncmds.c:3163
 #, c-format
 msgid "could not receive list of replicated sequences from the publisher: %s"
 msgstr "無法從發布伺服器接收參與複寫的序列清單: %s"
 
-#: commands/subscriptioncmds.c:3189
+#: commands/subscriptioncmds.c:3195
 #, c-format
 msgid "subscription \"%s\" requested origin = NONE but might synchronize sequence values that had a different origin"
 msgstr "訂閱 \"%s\" 已請求 origin = NONE，但可能同步來自其他來源的序列值"
 
-#: commands/subscriptioncmds.c:3191
+#: commands/subscriptioncmds.c:3197
 #, c-format
 msgid "The subscription subscribes to a publication (%s) that contains sequences that are synchronized from other subscriptions."
 msgid_plural "The subscription subscribes to publications (%s) that contain sequences that are synchronized from other subscriptions."
 msgstr[0] "該訂閱所訂閱的發布 (%s) 包含從其他訂閱同步的序列。"
 
-#: commands/subscriptioncmds.c:3194
+#: commands/subscriptioncmds.c:3200
 #, c-format
 msgid "Verify that the initial values copied from the publisher sequences did not come from other origins."
 msgstr "確認從發布伺服器序列複製的初始值並非來自其他來源。"
 
-#: commands/subscriptioncmds.c:3229
+#: commands/subscriptioncmds.c:3235
 #, c-format
 msgid "cannot enable retain_dead_tuples if the publisher is running a version earlier than PostgreSQL 19"
 msgstr "發布伺服器執行的版本早於 PostgreSQL 19 時，不能啟用 retain_dead_tuples"
 
 # fe-exec.c:2204
-#: commands/subscriptioncmds.c:3236
+#: commands/subscriptioncmds.c:3242
 #, c-format
 msgid "could not obtain recovery progress from the publisher: %s"
 msgstr "無法從發布伺服器取得復原進度: %s"
 
-#: commands/subscriptioncmds.c:3248
+#: commands/subscriptioncmds.c:3254
 #, c-format
 msgid "cannot enable retain_dead_tuples if the publisher is in recovery"
 msgstr "發布伺服器處於復原狀態時，不能啟用 retain_dead_tuples"
 
-#: commands/subscriptioncmds.c:3292
+#: commands/subscriptioncmds.c:3298
 #, c-format
 msgid "\"wal_level\" is insufficient to create the replication slot required by retain_dead_tuples"
 msgstr "\"wal_level\" 不足以建立 retain_dead_tuples 所需的複寫槽"
 
-#: commands/subscriptioncmds.c:3298
+#: commands/subscriptioncmds.c:3304
 #, c-format
 msgid "commit timestamp and origin data required for detecting conflicts won't be retained"
 msgstr "不會保留偵測衝突所需的提交時間戳記和複寫來源資料"
 
-#: commands/subscriptioncmds.c:3299
+#: commands/subscriptioncmds.c:3305
 #, c-format
 msgid "Consider setting \"%s\" to true."
 msgstr "可考慮將 \"%s\" 設定為 true。"
 
-#: commands/subscriptioncmds.c:3305
+#: commands/subscriptioncmds.c:3311
 #, c-format
 msgid "deleted rows to detect conflicts would not be removed until the subscription is enabled"
 msgstr "為偵測衝突而保留的已刪除資料列，在啟用訂閱之前不會被刪除"
 
 # commands/dbcommands.c:139
-#: commands/subscriptioncmds.c:3307
+#: commands/subscriptioncmds.c:3313
 #, c-format
 msgid "Consider setting %s to false."
 msgstr "可考慮將 %s 設定為 false。"
 
-#: commands/subscriptioncmds.c:3314
+#: commands/subscriptioncmds.c:3320
 #, c-format
 msgid "max_retention_duration is ineffective when retain_dead_tuples is disabled"
 msgstr "停用 retain_dead_tuples 時，max_retention_duration 不起作用"
 
-#: commands/subscriptioncmds.c:3447 replication/logical/tablesync.c:851
+#: commands/subscriptioncmds.c:3453 replication/logical/tablesync.c:851
 #: replication/pgoutput/pgoutput.c:1191
 #, c-format
 msgid "cannot use different column lists for table \"%s.%s\" in different publications"
 msgstr "不能在不同發布中為資料表 \"%s.%s\" 使用不同的欄位清單"
 
-#: commands/subscriptioncmds.c:3497
+#: commands/subscriptioncmds.c:3503
 #, c-format
 msgid "could not connect to publisher when attempting to drop replication slot \"%s\": %s"
 msgstr "嘗試刪除複寫槽 \"%s\" 時無法連線到發布伺服器: %s"
 
 #. translator: %s is an SQL ALTER command
-#: commands/subscriptioncmds.c:3500
+#: commands/subscriptioncmds.c:3506
 #, c-format
 msgid "Use %s to disable the subscription, and then use %s to disassociate it from the slot."
 msgstr "使用 %s 停用訂閱，然後使用 %s 解除訂閱與複寫槽的關聯。"
 
 # commands/copy.c:2716 parser/parse_target.c:648 parser/parse_target.c:658
-#: commands/subscriptioncmds.c:3531
+#: commands/subscriptioncmds.c:3537
 #, c-format
 msgid "publication name \"%s\" used more than once"
 msgstr "多次使用發布名稱 \"%s\""
 
 # commands/aggregatecmds.c:264 commands/functioncmds.c:699
-#: commands/subscriptioncmds.c:3575
+#: commands/subscriptioncmds.c:3581
 #, c-format
 msgid "publication \"%s\" is already in subscription \"%s\""
 msgstr "發布 \"%s\" 已包含在訂閱 \"%s\" 中"
 
 # catalog/namespace.c:200 utils/adt/regproc.c:837
-#: commands/subscriptioncmds.c:3589
+#: commands/subscriptioncmds.c:3595
 #, c-format
 msgid "publication \"%s\" is not in subscription \"%s\""
 msgstr "發布 \"%s\" 不在訂閱 \"%s\" 中"
 
 # sql_help.h:45
-#: commands/subscriptioncmds.c:3600
+#: commands/subscriptioncmds.c:3606
 #, c-format
 msgid "cannot drop all the publications from a subscription"
 msgstr "不能從訂閱中移除全部發布"
 
 # utils/misc/guc.c:3419
-#: commands/subscriptioncmds.c:3657
+#: commands/subscriptioncmds.c:3663
 #, c-format
 msgid "%s requires a Boolean value or \"parallel\""
 msgstr "%s 需要布林值或 \"parallel\""
@@ -18500,8 +18500,8 @@ msgstr "不能從外部子資料表收集轉換元組"
 
 #: commands/trigger.c:3417 executor/nodeModifyTable.c:1722
 #: executor/nodeModifyTable.c:1796 executor/nodeModifyTable.c:2628
-#: executor/nodeModifyTable.c:2718 executor/nodeModifyTable.c:3543
-#: executor/nodeModifyTable.c:3740
+#: executor/nodeModifyTable.c:2718 executor/nodeModifyTable.c:3544
+#: executor/nodeModifyTable.c:3755
 #, c-format
 msgid "Consider using an AFTER trigger instead of a BEFORE trigger to propagate changes to other rows."
 msgstr "考慮使用 AFTER 觸發器代替 BEFORE 觸發器，將變更傳播到其他資料列。"
@@ -18511,7 +18511,7 @@ msgstr "考慮使用 AFTER 觸發器代替 BEFORE 觸發器，將變更傳播到
 #: commands/trigger.c:3459 executor/nodeLockRows.c:228
 #: executor/nodeModifyTable.c:403 executor/nodeModifyTable.c:1738
 #: executor/nodeModifyTable.c:2644 executor/nodeModifyTable.c:2850
-#: executor/nodeModifyTable.c:3581 utils/adt/ri_triggers.c:2945
+#: executor/nodeModifyTable.c:3588 utils/adt/ri_triggers.c:2957
 #, c-format
 msgid "could not serialize access due to concurrent update"
 msgstr "因為並行更新，無法序列化存取"
@@ -18520,8 +18520,8 @@ msgstr "因為並行更新，無法序列化存取"
 # executor/execMain.c:1598
 #: commands/trigger.c:3467 executor/nodeLockRows.c:237
 #: executor/nodeModifyTable.c:1828 executor/nodeModifyTable.c:2735
-#: executor/nodeModifyTable.c:2866 executor/nodeModifyTable.c:3561
-#: utils/adt/ri_triggers.c:2938
+#: executor/nodeModifyTable.c:2866 executor/nodeModifyTable.c:3562
+#: utils/adt/ri_triggers.c:2950
 #, c-format
 msgid "could not serialize access due to concurrent delete"
 msgstr "由於並行刪除，無法序列化存取"
@@ -19145,8 +19145,8 @@ msgid "Only roles with the %s attribute may create roles with the %s attribute."
 msgstr "只有具有 %s 屬性的角色才能建立具有 %s 屬性的角色。"
 
 # commands/user.c:1396
-#: commands/user.c:361 commands/user.c:1399 commands/user.c:1406 gram.y:17771
-#: gram.y:17817 utils/adt/acl.c:5782 utils/adt/acl.c:5788
+#: commands/user.c:361 commands/user.c:1399 commands/user.c:1406
+#: utils/adt/acl.c:5782 utils/adt/acl.c:5788 gram.y:17771 gram.y:17817
 #, c-format
 msgid "role name \"%s\" is reserved"
 msgstr "角色名稱 \"%s\" 已保留"
@@ -19868,24 +19868,24 @@ msgid "view \"%s\" will be a temporary view"
 msgstr "檢視 \"%s\" 將是暫存檢視"
 
 # sql_help.h:313
-#: commands/wait.c:56
+#: commands/wait.c:57
 #, c-format
 msgid "%s can only be executed as a top-level statement"
 msgstr "%s 只能作為頂層敘述執行"
 
-#: commands/wait.c:58
+#: commands/wait.c:59
 #, c-format
 msgid "WAIT cannot be used within a function, procedure, or DO block."
 msgstr "不能在函式、程序或 DO 區塊中使用 WAIT。"
 
 # utils/adt/network.c:105
-#: commands/wait.c:105
+#: commands/wait.c:106
 #, c-format
 msgid "invalid timeout value: \"%s\""
 msgstr "無效的逾時值: \"%s\""
 
 # commands/sequence.c:963
-#: commands/wait.c:112
+#: commands/wait.c:113
 #, c-format
 msgid "timeout cannot be negative"
 msgstr "逾時值不能為負數"
@@ -19900,17 +19900,17 @@ msgstr "目前交易持有快照時不能執行 WAIT"
 msgid "This transaction runs at an isolation level higher than READ COMMITTED, so it holds a snapshot from its first query until it ends."
 msgstr "目前交易以高於 READ COMMITTED 的隔離層級執行，因此從第一次查詢開始持有快照，直到交易結束。"
 
-#: commands/wait.c:177
+#: commands/wait.c:179
 #, c-format
 msgid "Waiting for primary_flush can only be done on a primary server. Use standby_flush mode on a standby server."
 msgstr "只能在主伺服器上等待 primary_flush。在待命伺服器上使用 standby_flush 模式。"
 
-#: commands/wait.c:227
+#: commands/wait.c:229
 #, c-format
 msgid "cannot wait for a standby LSN while holding locks"
 msgstr "持有鎖定時不能等待待命伺服器 LSN"
 
-#: commands/wait.c:228
+#: commands/wait.c:230
 #, c-format
 msgid "This session holds a lock on %s, which could make recovery wait for this session while this session waits for recovery."
 msgstr "目前工作階段持有 %s 上的鎖定，可能導致復原過程等待目前工作階段，而目前工作階段又在等待復原過程。"
@@ -19920,42 +19920,42 @@ msgstr "目前工作階段持有 %s 上的鎖定，可能導致復原過程等�
 msgid "Release the locks, or execute WAIT before acquiring them."
 msgstr "請釋放這些鎖定，或在取得鎖定之前執行 WAIT。"
 
-#: commands/wait.c:257
+#: commands/wait.c:259
 #, c-format
 msgid "timed out while waiting for target LSN %X/%08X to be replayed; current standby_replay LSN %X/%08X"
 msgstr "等待目標 LSN %X/%08X 重播時逾時；目前 standby_replay LSN 為 %X/%08X"
 
-#: commands/wait.c:265
+#: commands/wait.c:267
 #, c-format
 msgid "timed out while waiting for target LSN %X/%08X to be written; current standby_write LSN %X/%08X"
 msgstr "等待目標 LSN %X/%08X 寫入時逾時；目前 standby_write LSN 為 %X/%08X"
 
-#: commands/wait.c:273
+#: commands/wait.c:275
 #, c-format
 msgid "timed out while waiting for target LSN %X/%08X to be flushed; current standby_flush LSN %X/%08X"
 msgstr "等待目標 LSN %X/%08X 排清時逾時；目前 standby_flush LSN 為 %X/%08X"
 
-#: commands/wait.c:281
+#: commands/wait.c:283
 #, c-format
 msgid "timed out while waiting for target LSN %X/%08X to be flushed; current primary_flush LSN %X/%08X"
 msgstr "等待目標 LSN %X/%08X 排清時逾時；目前 primary_flush LSN 為 %X/%08X"
 
-#: commands/wait.c:307
+#: commands/wait.c:309
 #, c-format
 msgid "Recovery ended before target LSN %X/%08X was replayed; last standby_replay LSN %X/%08X."
 msgstr "在重播目標 LSN %X/%08X 之前復原已結束；最後的 standby_replay LSN 為 %X/%08X。"
 
-#: commands/wait.c:316
+#: commands/wait.c:318
 #, c-format
 msgid "Recovery ended before target LSN %X/%08X was written; last standby_write LSN %X/%08X."
 msgstr "在寫入目標 LSN %X/%08X 之前復原已結束；最後的 standby_write LSN 為 %X/%08X。"
 
-#: commands/wait.c:325
+#: commands/wait.c:327
 #, c-format
 msgid "Recovery ended before target LSN %X/%08X was flushed; last standby_flush LSN %X/%08X."
 msgstr "在排清目標 LSN %X/%08X 之前復原已結束；最後的 standby_flush LSN 為 %X/%08X。"
 
-#: commands/wait.c:342 commands/wait.c:349 commands/wait.c:356
+#: commands/wait.c:344 commands/wait.c:351 commands/wait.c:358
 #, c-format
 msgid "Waiting for the %s LSN can only be executed during recovery."
 msgstr "只能在復原期間等待 %s LSN。"
@@ -20739,8 +20739,8 @@ msgid "Consider defining the foreign key on table \"%s\"."
 msgstr "可以考慮在資料表 \"%s\" 上定義外來鍵。"
 
 #. translator: %s is a SQL command name
-#: executor/nodeModifyTable.c:2828 executor/nodeModifyTable.c:3549
-#: executor/nodeModifyTable.c:3746
+#: executor/nodeModifyTable.c:2828 executor/nodeModifyTable.c:3550
+#: executor/nodeModifyTable.c:3761
 #, c-format
 msgid "%s command cannot affect row a second time"
 msgstr "%s 命令不能再次影響同一資料列"
@@ -20750,17 +20750,17 @@ msgstr "%s 命令不能再次影響同一資料列"
 msgid "Ensure that no rows proposed for insertion within the same command have duplicate constrained values."
 msgstr "確保同一命令中待插入的資料列，其受條件約束的值沒有重複。"
 
-#: executor/nodeModifyTable.c:3542 executor/nodeModifyTable.c:3739
+#: executor/nodeModifyTable.c:3543 executor/nodeModifyTable.c:3754
 #, c-format
 msgid "tuple to be updated or deleted was already modified by an operation triggered by the current command"
 msgstr "待更新或刪除的元組已被目前命令觸發的操作修改"
 
-#: executor/nodeModifyTable.c:3551 executor/nodeModifyTable.c:3748
+#: executor/nodeModifyTable.c:3552 executor/nodeModifyTable.c:3763
 #, c-format
 msgid "Ensure that not more than one source row matches any one target row."
 msgstr "確保每個目標資料列最多匹配一個來源資料列。"
 
-#: executor/nodeModifyTable.c:3625
+#: executor/nodeModifyTable.c:3632
 #, c-format
 msgid "tuple to be merged was already moved to another partition due to concurrent update"
 msgstr "待合併的元組已因並行更新而移動到另一個分割"
@@ -20953,7 +20953,7 @@ msgstr "未找到使用者 \"%1$s\" 在伺服器 \"%2$s\" 上的使用者映射"
 
 # commands/comment.c:928
 #: foreign/foreign.c:380 optimizer/plan/createplan.c:7166
-#: optimizer/util/plancat.c:542
+#: optimizer/util/plancat.c:543
 #, c-format
 msgid "access to non-system foreign table is restricted"
 msgstr "對非系統外部資料表的存取受限"
@@ -21082,7 +21082,7 @@ msgstr "對於產生欄位，必須指定 GENERATED ALWAYS"
 # utils/adt/ri_triggers.c:2055 utils/adt/ri_triggers.c:2235
 # utils/adt/ri_triggers.c:2440 utils/adt/ri_triggers.c:2536
 # utils/adt/ri_triggers.c:2659
-#: gram.y:4534 utils/adt/ri_triggers.c:2349
+#: utils/adt/ri_triggers.c:2350 gram.y:4534
 #, c-format
 msgid "MATCH PARTIAL not yet implemented"
 msgstr "MATCH PARTIAL 尚未實作"
@@ -21126,7 +21126,7 @@ msgid "duplicate trigger events specified"
 msgstr "觸發器事件重複指定"
 
 # gram.y:2369 gram.y:2384 parser/analyze.c:2894 parser/analyze.c:2918
-#: gram.y:6331 parser/parse_utilcmd.c:3980 parser/parse_utilcmd.c:4006
+#: parser/parse_utilcmd.c:3980 parser/parse_utilcmd.c:4006 gram.y:6331
 #, c-format
 msgid "constraint declared INITIALLY DEFERRED must be DEFERRABLE"
 msgstr "宣告為 INITIALLY DEFERRED 的限制必須是 DEFERRABLE"
@@ -21170,13 +21170,13 @@ msgid "aggregates cannot have output arguments"
 msgstr "聚合函式不能宣告輸出參數"
 
 # gram.y:3496 utils/adt/regproc.c:639
-#: gram.y:9239 utils/adt/regproc.c:678
+#: utils/adt/regproc.c:678 gram.y:9239
 #, c-format
 msgid "missing argument"
 msgstr "缺少引數"
 
 # gram.y:3497 utils/adt/regproc.c:640
-#: gram.y:9240 utils/adt/regproc.c:679
+#: utils/adt/regproc.c:679 gram.y:9240
 #, c-format
 msgid "Use NONE to denote the missing argument of a unary operator."
 msgstr "使用 NONE 表示遺漏的一元運算子參數。"
@@ -21333,8 +21333,8 @@ msgid "improper use of \"*\""
 msgstr "\"*\" 不當使用"
 
 # gram.y:8218 gram.y:8220 y.tab.c:19175
-#: gram.y:19211 gram.y:19228 tsearch/spell.c:972 tsearch/spell.c:989
-#: tsearch/spell.c:1006 tsearch/spell.c:1023 tsearch/spell.c:1098
+#: tsearch/spell.c:972 tsearch/spell.c:989 tsearch/spell.c:1006
+#: tsearch/spell.c:1023 tsearch/spell.c:1098 gram.y:19211 gram.y:19228
 #, c-format
 msgid "syntax error"
 msgstr "語法錯誤"
@@ -21513,10 +21513,10 @@ msgstr "發現過多的語法錯誤，放棄檔案 \"%s\""
 
 #  translator: first %s is inet or cidr
 # utils/adt/datetime.c:3342 utils/adt/network.c:93
-#: jsonpath_gram.y:270 jsonpath_gram.y:631 jsonpath_scan.l:625
-#: jsonpath_scan.l:636 jsonpath_scan.l:646 jsonpath_scan.l:698
 #: utils/adt/bytea.c:258 utils/adt/encode.c:755 utils/adt/encode.c:820
-#: utils/adt/jsonfuncs.c:664
+#: utils/adt/jsonfuncs.c:664 jsonpath_gram.y:270 jsonpath_gram.y:631
+#: jsonpath_scan.l:625 jsonpath_scan.l:636 jsonpath_scan.l:646
+#: jsonpath_scan.l:698
 #, c-format
 msgid "invalid input syntax for type %s"
 msgstr "型別 %s 的輸入語法無效"
@@ -21532,7 +21532,7 @@ msgid "Unrecognized flag character \"%.*s\" in LIKE_REGEX predicate."
 msgstr "LIKE_REGEX 述詞中的旗標字元 \"%.*s\" 無法識別。"
 
 # utils/adt/regexp.c:178
-#: jsonpath_gram.y:663 tsearch/spell.c:752 utils/adt/regexp.c:223
+#: tsearch/spell.c:752 utils/adt/regexp.c:223 jsonpath_gram.y:663
 #, c-format
 msgid "invalid regular expression: %s"
 msgstr "不合法的正規表示式: %s"
@@ -21603,7 +21603,7 @@ msgid "invalid hexadecimal digit"
 msgstr "無效的十六進位數字"
 
 # utils/adt/network.c:105
-#: jsonpath_scan.l:592 utils/adt/jsonfuncs.c:652
+#: utils/adt/jsonfuncs.c:652 jsonpath_scan.l:592
 #, c-format
 msgid "unsupported Unicode escape sequence"
 msgstr "不支援的 Unicode 逸出序列"
@@ -24041,44 +24041,44 @@ msgstr "%s 不能套用到外部聯結中可能為 NULL 的一側"
 
 # optimizer/plan/planner.c:698
 #. translator: %s is a SQL row locking clause such as FOR UPDATE
-#: optimizer/plan/planner.c:1802 parser/analyze.c:1864 parser/analyze.c:2123
+#: optimizer/plan/planner.c:1814 parser/analyze.c:1864 parser/analyze.c:2123
 #: parser/analyze.c:3405
 #, c-format
 msgid "%s is not allowed with UNION/INTERSECT/EXCEPT"
 msgstr "%s 不允許與 UNION/INTERSECT/EXCEPT 一起使用"
 
-#: optimizer/plan/planner.c:2547 optimizer/plan/planner.c:4426
+#: optimizer/plan/planner.c:2559 optimizer/plan/planner.c:4438
 #, c-format
 msgid "could not implement GROUP BY"
 msgstr "無法實作 GROUP BY"
 
-#: optimizer/plan/planner.c:2548 optimizer/plan/planner.c:4427
-#: optimizer/plan/planner.c:5108 optimizer/prep/prepunion.c:1127
+#: optimizer/plan/planner.c:2560 optimizer/plan/planner.c:4439
+#: optimizer/plan/planner.c:5120 optimizer/prep/prepunion.c:1127
 #, c-format
 msgid "Some of the datatypes only support hashing, while others only support sorting."
 msgstr "有些資料型別只支援雜湊，有些資料型別只支援排序。"
 
-#: optimizer/plan/planner.c:5107
+#: optimizer/plan/planner.c:5119
 #, c-format
 msgid "could not implement DISTINCT"
 msgstr "無法實作 DISTINCT"
 
-#: optimizer/plan/planner.c:6572
+#: optimizer/plan/planner.c:6584
 #, c-format
 msgid "could not implement window PARTITION BY"
 msgstr "無法實作視窗 PARTITION BY"
 
-#: optimizer/plan/planner.c:6573
+#: optimizer/plan/planner.c:6585
 #, c-format
 msgid "Window partitioning columns must be of sortable datatypes."
 msgstr "視窗分割欄位必須屬於可排序的資料型別。"
 
-#: optimizer/plan/planner.c:6577
+#: optimizer/plan/planner.c:6589
 #, c-format
 msgid "could not implement window ORDER BY"
 msgstr "無法實作視窗 ORDER BY"
 
-#: optimizer/plan/planner.c:6578
+#: optimizer/plan/planner.c:6590
 #, c-format
 msgid "Window ordering columns must be of sortable datatypes."
 msgstr "視窗排序欄位必須屬於可排序的資料型別。"
@@ -24135,17 +24135,17 @@ msgid "SQL function \"%s\" during inlining"
 msgstr "內嵌 SQL 函式 \"%s\" 期間"
 
 # command.c:1148
-#: optimizer/util/plancat.c:158
+#: optimizer/util/plancat.c:159
 #, c-format
 msgid "cannot access temporary or unlogged relations during recovery"
 msgstr "復原期間不能存取暫存關聯或不記錄 WAL 的關聯"
 
-#: optimizer/util/plancat.c:874
+#: optimizer/util/plancat.c:877
 #, c-format
 msgid "whole row unique index inference specifications are not supported"
 msgstr "唯一索引推斷條件中不支援整列引用"
 
-#: optimizer/util/plancat.c:913
+#: optimizer/util/plancat.c:916
 #, c-format
 msgid "constraint in ON CONFLICT clause has no associated index"
 msgstr "ON CONFLICT 子句中的條件約束沒有關聯的索引"
@@ -24158,7 +24158,7 @@ msgid "%s not supported with exclusion constraints"
 msgstr "%s 不支援排他條件約束"
 
 # commands/tablecmds.c:4160
-#: optimizer/util/plancat.c:1190
+#: optimizer/util/plancat.c:1165
 #, c-format
 msgid "there is no unique or exclusion constraint matching the ON CONFLICT specification"
 msgstr "沒有與 ON CONFLICT 指定的衝突目標匹配的唯一條件約束或排他條件約束"
@@ -27095,7 +27095,7 @@ msgstr "具有 WHERE 條件的規則只能有 SELECT, INSERT, UPDATE 或 DELETE 
 # parser/analyze.c:1687 parser/analyze.c:1759 rewrite/rewriteHandler.c:177
 # rewrite/rewriteManip.c:749 rewrite/rewriteManip.c:805
 #: parser/parse_utilcmd.c:3419 parser/parse_utilcmd.c:3520
-#: rewrite/rewriteHandler.c:545 rewrite/rewriteManip.c:1204
+#: rewrite/rewriteHandler.c:545 rewrite/rewriteManip.c:1205
 #, c-format
 msgid "conditional UNION/INTERSECT/EXCEPT statements are not implemented"
 msgstr "條件式 UNION/INTERSECT/EXCEPT 陳述式未實作"
@@ -27294,7 +27294,7 @@ msgid "invalid Unicode escape value"
 msgstr "Unicode 逸出字元值無效"
 
 # utils/adt/network.c:105
-#: parser/parser.c:494 scan.l:680 utils/adt/varlena.c:5811
+#: parser/parser.c:494 utils/adt/varlena.c:5811 scan.l:680
 #, c-format
 msgid "invalid Unicode escape"
 msgstr "無效的 Unicode 逸出字元"
@@ -27305,8 +27305,8 @@ msgid "Unicode escapes must be \\XXXX or \\+XXXXXX."
 msgstr "Unicode 逸出必須是 \\XXXX 或 \\+XXXXXX。"
 
 # utils/adt/network.c:105
-#: parser/parser.c:523 scan.l:641 scan.l:657 scan.l:673
-#: utils/adt/varlena.c:5836
+#: parser/parser.c:523 utils/adt/varlena.c:5836 scan.l:641 scan.l:657
+#: scan.l:673
 #, c-format
 msgid "invalid Unicode surrogate pair"
 msgstr "無效的 Unicode 代理配對"
@@ -29227,59 +29227,64 @@ msgstr "刪除 %2$s/%3$s/xid* 時無法刪除檔案 \"%1$s\": %m"
 msgid "could not read from file \"%s\": read %d instead of %d bytes"
 msgstr "無法讀取檔案 \"%s\": 已讀取 %d 位元組，預期為 %d 位元組"
 
-#: replication/logical/sequencesync.c:195
+#: replication/logical/sequencesync.c:197
 #, c-format
 msgid "mismatched or renamed sequence on subscriber (%s)"
 msgid_plural "mismatched or renamed sequences on subscriber (%s)"
 msgstr[0] "訂閱伺服器上的序列不符或已重新命名 (%s)"
 
-#: replication/logical/sequencesync.c:214
+#: replication/logical/sequencesync.c:216
 #, c-format
 msgid "insufficient privileges on subscriber sequence (%s)"
 msgid_plural "insufficient privileges on subscriber sequences (%s)"
 msgstr[0] "訂閱伺服器上序列的權限不足 (%s)"
 
-#: replication/logical/sequencesync.c:219
+#: replication/logical/sequencesync.c:221
 #, c-format
 msgid "Grant UPDATE on the sequence to the subscription owner on the subscriber."
 msgid_plural "Grant UPDATE on the sequences to the subscription owner on the subscriber."
 msgstr[0] "在訂閱伺服器上將序列的 UPDATE 權限授予訂閱擁有者。"
 
-#: replication/logical/sequencesync.c:231
+#: replication/logical/sequencesync.c:233
 #, c-format
 msgid "insufficient privileges on publisher sequence (%s)"
 msgid_plural "insufficient privileges on publisher sequences (%s)"
 msgstr[0] "發布伺服器上序列的權限不足 (%s)"
 
-#: replication/logical/sequencesync.c:235
+#: replication/logical/sequencesync.c:237
 #, c-format
 msgid "Grant SELECT on the sequence to the role used for the replication connection on the publisher."
 msgid_plural "Grant SELECT on the sequences to the role used for the replication connection on the publisher."
 msgstr[0] "在發布伺服器上將序列的 SELECT 權限授予用於複寫連線的角色。"
 
-#: replication/logical/sequencesync.c:247
+#: replication/logical/sequencesync.c:249
 #, c-format
 msgid "missing sequence on publisher (%s)"
 msgid_plural "missing sequences on publisher (%s)"
 msgstr[0] "發布伺服器上缺少序列 (%s)"
 
 # libpq/auth.c:378
-#: replication/logical/sequencesync.c:255
+#: replication/logical/sequencesync.c:257
 #, c-format
 msgid "logical replication sequence synchronization failed for subscription \"%s\""
 msgstr "訂閱 \"%s\" 的邏輯複寫序列同步失敗"
 
-#: replication/logical/sequencesync.c:569
+#: replication/logical/sequencesync.c:600
 #, c-format
 msgid "could not fetch sequence information from the publisher: %s"
 msgstr "無法從發布伺服器取得序列資訊: %s"
 
-#: replication/logical/sequencesync.c:652
+#: replication/logical/sequencesync.c:683
 #, c-format
 msgid "skip synchronization of sequence \"%s.%s\" because it has been dropped concurrently"
 msgstr "跳過序列 \"%s.%s\" 的同步，因為它已被並行刪除"
 
-#: replication/logical/sequencesync.c:824
+#: replication/logical/sequencesync.c:697
+#, c-format
+msgid "skip synchronization of sequence \"%s.%s\" because it is no longer part of subscription \"%s\""
+msgstr "跳過序列 \"%s.%s\" 的同步，因為它已不再屬於訂閱 \"%s\""
+
+#: replication/logical/sequencesync.c:868
 #, c-format
 msgid "sequencesync worker for subscription \"%s\" could not connect to the publisher: %s"
 msgstr "訂閱 \"%s\" 的序列同步工作行程無法連線到發布伺服器: %s"
@@ -31029,12 +31034,12 @@ msgid "WITH cannot be used in a query that is rewritten by rules into multiple q
 msgstr "WITH 不能用於被規則重寫為多個查詢的查詢中"
 
 # rewrite/rewriteManip.c:737 rewrite/rewriteManip.c:793
-#: rewrite/rewriteManip.c:1192
+#: rewrite/rewriteManip.c:1193
 #, c-format
 msgid "conditional utility statements are not implemented"
 msgstr "條件式公用程式陳述式未實作"
 
-#: rewrite/rewriteManip.c:1924
+#: rewrite/rewriteManip.c:1925
 #, c-format
 msgid "NEW variables in ON UPDATE rules cannot reference columns that are part of a multiple assignment in the subject UPDATE command"
 msgstr "ON UPDATE 規則中的 NEW 變數不能引用主 UPDATE 命令中參與多重指派的欄位"
@@ -32104,13 +32109,13 @@ msgstr "共享記憶體佇列中的訊息大小 %zu 無效"
 msgid "out of shared memory"
 msgstr "共享記憶體用盡"
 
-#: storage/ipc/shmem.c:382
+#: storage/ipc/shmem.c:383
 #, c-format
 msgid "shared memory struct \"%s\" is already registered"
 msgstr "共享記憶體結構 \"%s\" 已註冊"
 
 # utils/adt/array_userfuncs.c:50
-#: storage/ipc/shmem.c:548
+#: storage/ipc/shmem.c:552
 #, c-format
 msgid "could not create ShmemIndex entry for data structure \"%s\""
 msgstr "無法為資料結構 \"%s\" 建立 ShmemIndex 項目"
@@ -32118,23 +32123,23 @@ msgstr "無法為資料結構 \"%s\" 建立 ShmemIndex 項目"
 # storage/buffer/buf_table.c:93 storage/freespace/freespace.c:1014
 # storage/ipc/shmem.c:185 storage/ipc/shmem.c:246 storage/ipc/shmem.c:386
 # storage/lmgr/lock.c:561 storage/lmgr/lock.c:624 storage/lmgr/proc.c:179
-#: storage/ipc/shmem.c:565
+#: storage/ipc/shmem.c:569
 #, c-format
 msgid "not enough shared memory for data structure \"%s\" (%zd bytes requested)"
 msgstr "沒有足夠的共享記憶體給資料結構 \"%s\"(需要 %zd 位元組)"
 
 # utils/adt/array_userfuncs.c:50
-#: storage/ipc/shmem.c:619
+#: storage/ipc/shmem.c:623
 #, c-format
 msgid "could not find ShmemIndex entry for data structure \"%s\""
 msgstr "無法找到資料結構 \"%s\" 的 ShmemIndex 項目"
 
-#: storage/ipc/shmem.c:635 storage/ipc/shmem.c:1022
+#: storage/ipc/shmem.c:639 storage/ipc/shmem.c:1033
 #, c-format
 msgid "cannot attach to shared memory struct \"%s\" because it was not fully initialized"
 msgstr "不能附接到共享記憶體結構 \"%s\"，因為它尚未完全初始化"
 
-#: storage/ipc/shmem.c:643
+#: storage/ipc/shmem.c:647
 #, c-format
 msgid "shared memory struct \"%s\" was created with different size: existing %zu, requested %zd"
 msgstr "共享記憶體結構 \"%s\" 建立時的大小不同: 現有大小為 %zu，請求大小為 %zd"
@@ -32142,7 +32147,7 @@ msgstr "共享記憶體結構 \"%s\" 建立時的大小不同: 現有大小為 %
 # storage/buffer/buf_table.c:93 storage/freespace/freespace.c:1014
 # storage/ipc/shmem.c:185 storage/ipc/shmem.c:246 storage/ipc/shmem.c:386
 # storage/lmgr/lock.c:561 storage/lmgr/lock.c:624 storage/lmgr/proc.c:179
-#: storage/ipc/shmem.c:718 storage/ipc/shmem.c:816
+#: storage/ipc/shmem.c:722 storage/ipc/shmem.c:820
 #, c-format
 msgid "out of shared memory (%zu bytes requested)"
 msgstr "共享記憶體不足 (請求 %zu 位元組)"
@@ -36151,28 +36156,28 @@ msgstr "jsonpath 項目方法 .%s() 只能套用到物件"
 
 #  translator: first %s is name of a SQL construct, eg CASE
 # parser/parse_coerce.c:933
-#: utils/adt/jsonpath_exec.c:3389
+#: utils/adt/jsonpath_exec.c:3393
 #, c-format
 msgid "could not convert value of type %s to jsonpath"
 msgstr "無法將型別 %s 的值轉換為 jsonpath"
 
 # startup.c:502
-#: utils/adt/jsonpath_exec.c:3423
+#: utils/adt/jsonpath_exec.c:3427
 #, c-format
 msgid "could not find jsonpath variable \"%s\""
 msgstr "無法找到 jsonpath 變數 \"%s\""
 
-#: utils/adt/jsonpath_exec.c:3476
+#: utils/adt/jsonpath_exec.c:3480
 #, c-format
 msgid "\"vars\" argument is not an object"
 msgstr "\"vars\" 引數不是物件"
 
-#: utils/adt/jsonpath_exec.c:3477
+#: utils/adt/jsonpath_exec.c:3481
 #, c-format
 msgid "Jsonpath parameters should be encoded as key-value pairs of \"vars\" object."
 msgstr "Jsonpath 參數應編碼為 \"vars\" 物件的鍵值對。"
 
-#: utils/adt/jsonpath_exec.c:3749
+#: utils/adt/jsonpath_exec.c:3753
 #, c-format
 msgid "jsonpath array subscript is not a single numeric value"
 msgstr "jsonpath 陣列下標不是單一數值"
@@ -36183,42 +36188,42 @@ msgstr "jsonpath 陣列下標不是單一數值"
 # utils/adt/int8.c:751 utils/adt/int8.c:776 utils/adt/int8.c:796
 # utils/adt/int8.c:816 utils/adt/int8.c:842 utils/adt/int8.c:1010
 # utils/adt/int8.c:1049 utils/adt/numeric.c:1838 utils/adt/varbit.c:1313
-#: utils/adt/jsonpath_exec.c:3764
+#: utils/adt/jsonpath_exec.c:3768
 #, c-format
 msgid "jsonpath array subscript is out of integer range"
 msgstr "jsonpath 陣列下標超出整數範圍"
 
-#: utils/adt/jsonpath_exec.c:3986
+#: utils/adt/jsonpath_exec.c:3990
 #, c-format
 msgid "cannot convert value from %s to %s without time zone usage"
 msgstr "不使用時區就不能將值從 %s 轉換為 %s"
 
-#: utils/adt/jsonpath_exec.c:3988
+#: utils/adt/jsonpath_exec.c:3992
 #, c-format
 msgid "Use *_tz() function for time zone support."
 msgstr "使用 *_tz() 函式以支援時區。"
 
-#: utils/adt/jsonpath_exec.c:4292
+#: utils/adt/jsonpath_exec.c:4296
 #, c-format
 msgid "JSON path expression for column \"%s\" must return single item when no wrapper is requested"
 msgstr "未請求包裝時，欄位 \"%s\" 的 JSON 路徑運算式必須傳回單一項"
 
-#: utils/adt/jsonpath_exec.c:4294 utils/adt/jsonpath_exec.c:4299
+#: utils/adt/jsonpath_exec.c:4298 utils/adt/jsonpath_exec.c:4303
 #, c-format
 msgid "Use the WITH WRAPPER clause to wrap SQL/JSON items into an array."
 msgstr "使用 WITH WRAPPER 子句將 SQL/JSON 項包裝成陣列。"
 
-#: utils/adt/jsonpath_exec.c:4298
+#: utils/adt/jsonpath_exec.c:4302
 #, c-format
 msgid "JSON path expression in JSON_QUERY must return single item when no wrapper is requested"
 msgstr "未請求包裝時，JSON_QUERY 中的 JSON 路徑運算式必須傳回單一項"
 
-#: utils/adt/jsonpath_exec.c:4355 utils/adt/jsonpath_exec.c:4379
+#: utils/adt/jsonpath_exec.c:4359 utils/adt/jsonpath_exec.c:4383
 #, c-format
 msgid "JSON path expression for column \"%s\" must return single scalar item"
 msgstr "欄位 \"%s\" 的 JSON 路徑運算式必須傳回單一純量項"
 
-#: utils/adt/jsonpath_exec.c:4360 utils/adt/jsonpath_exec.c:4384
+#: utils/adt/jsonpath_exec.c:4364 utils/adt/jsonpath_exec.c:4388
 #, c-format
 msgid "JSON path expression in JSON_VALUE must return single scalar item"
 msgstr "JSON_VALUE 中的 JSON 路徑運算式必須傳回單一純量項"
@@ -37377,108 +37382,108 @@ msgstr "不合適的型別名稱"
 
 # utils/adt/ri_triggers.c:337 utils/adt/ri_triggers.c:2743
 # utils/adt/ri_triggers.c:3248 utils/adt/ri_triggers.c:3285
-#: utils/adt/ri_triggers.c:384 utils/adt/ri_triggers.c:1865
-#: utils/adt/ri_triggers.c:3410
+#: utils/adt/ri_triggers.c:385 utils/adt/ri_triggers.c:1866
+#: utils/adt/ri_triggers.c:3473
 #, c-format
 msgid "insert or update on table \"%s\" violates foreign key constraint \"%s\""
 msgstr "資料表 \"%s\" 的插入或更新違反外來鍵限制 \"%s\""
 
 # utils/adt/ri_triggers.c:340 utils/adt/ri_triggers.c:2746
-#: utils/adt/ri_triggers.c:387 utils/adt/ri_triggers.c:1868
+#: utils/adt/ri_triggers.c:388 utils/adt/ri_triggers.c:1869
 #, c-format
 msgid "MATCH FULL does not allow mixing of null and nonnull key values."
 msgstr "MATCH FULL 不允許混合 NULL 和非 NULL 鍵值。"
 
 # utils/adt/ri_triggers.c:2938
-#: utils/adt/ri_triggers.c:2282
+#: utils/adt/ri_triggers.c:2283
 #, c-format
 msgid "function \"%s\" must be fired for INSERT"
 msgstr "函式 \"%s\" 必須針對 INSERT 引發"
 
 # utils/adt/ri_triggers.c:2944
-#: utils/adt/ri_triggers.c:2288
+#: utils/adt/ri_triggers.c:2289
 #, c-format
 msgid "function \"%s\" must be fired for UPDATE"
 msgstr "函式 \"%s\" 必須針對 UPDATE 引發"
 
 # utils/adt/ri_triggers.c:2958
-#: utils/adt/ri_triggers.c:2294
+#: utils/adt/ri_triggers.c:2295
 #, c-format
 msgid "function \"%s\" must be fired for DELETE"
 msgstr "函式 \"%s\" 必須針對 DELETE 引發"
 
-#: utils/adt/ri_triggers.c:2317
+#: utils/adt/ri_triggers.c:2318
 #, c-format
 msgid "no pg_constraint entry for trigger \"%s\" on table \"%s\""
 msgstr "觸發器 \"%s\" (在資料表 \"%s\") 沒有 pg_constraint 項目"
 
 # utils/adt/ri_triggers.c:2503 utils/adt/ri_triggers.c:2984
-#: utils/adt/ri_triggers.c:2319
+#: utils/adt/ri_triggers.c:2320
 #, c-format
 msgid "Remove this referential integrity trigger and its mates, then do ALTER TABLE ADD CONSTRAINT."
 msgstr "移除此參考完整性觸發器及其配套觸發器，然後執行 ALTER TABLE ADD CONSTRAINT。"
 
 # utils/adt/ri_triggers.c:3215
-#: utils/adt/ri_triggers.c:2727
+#: utils/adt/ri_triggers.c:2739
 #, c-format
 msgid "referential integrity query on \"%s\" from constraint \"%s\" on \"%s\" gave unexpected result"
 msgstr "\"%s\" 上的參考完整性查詢 (來自限制 \"%s\" 於 \"%s\") 產生非預期的結果"
 
 # utils/adt/ri_triggers.c:3219
-#: utils/adt/ri_triggers.c:2731
+#: utils/adt/ri_triggers.c:2743
 #, c-format
 msgid "This is most likely due to a rule having rewritten the query."
 msgstr "最可能的原因是規則已重寫查詢。"
 
 # utils/adt/ri_triggers.c:337 utils/adt/ri_triggers.c:2743
 # utils/adt/ri_triggers.c:3248 utils/adt/ri_triggers.c:3285
-#: utils/adt/ri_triggers.c:3400
+#: utils/adt/ri_triggers.c:3463
 #, c-format
 msgid "removing partition \"%s\" violates foreign key constraint \"%s\""
 msgstr "分離分割 \"%s\" 違反外來鍵條件約束 \"%s\""
 
 # utils/adt/ri_triggers.c:3296
-#: utils/adt/ri_triggers.c:3403 utils/adt/ri_triggers.c:3442
+#: utils/adt/ri_triggers.c:3466 utils/adt/ri_triggers.c:3505
 #, c-format
 msgid "Key (%s)=(%s) is still referenced from table \"%s\"."
 msgstr "索引鍵 (%s)=(%s) 仍被資料表 \"%s\" 參考。"
 
 # utils/adt/ri_triggers.c:3287
-#: utils/adt/ri_triggers.c:3414
+#: utils/adt/ri_triggers.c:3477
 #, c-format
 msgid "Key (%s)=(%s) is not present in table \"%s\"."
 msgstr "索引鍵 (%s)=(%s) 沒有出現在資料表 \"%s\"。"
 
 # utils/adt/ri_triggers.c:3287
-#: utils/adt/ri_triggers.c:3417
+#: utils/adt/ri_triggers.c:3480
 #, c-format
 msgid "Key is not present in table \"%s\"."
 msgstr "資料表 \"%s\" 中不存在索引鍵。"
 
-#: utils/adt/ri_triggers.c:3423
+#: utils/adt/ri_triggers.c:3486
 #, c-format
 msgid "update or delete on table \"%s\" violates RESTRICT setting of foreign key constraint \"%s\" on table \"%s\""
 msgstr "對資料表 \"%1$s\" 的更新或刪除違反資料表 \"%3$s\" 上外來鍵條件約束 \"%2$s\" 的 RESTRICT 設定"
 
 # utils/adt/ri_triggers.c:3296
-#: utils/adt/ri_triggers.c:3428
+#: utils/adt/ri_triggers.c:3491
 #, c-format
 msgid "Key (%s)=(%s) is referenced from table \"%s\"."
 msgstr "索引鍵 (%s)=(%s) 被資料表 \"%s\" 引用。"
 
 # utils/adt/ri_triggers.c:3296
-#: utils/adt/ri_triggers.c:3431
+#: utils/adt/ri_triggers.c:3494
 #, c-format
 msgid "Key is referenced from table \"%s\"."
 msgstr "索引鍵被資料表 \"%s\" 引用。"
 
-#: utils/adt/ri_triggers.c:3437
+#: utils/adt/ri_triggers.c:3500
 #, c-format
 msgid "update or delete on table \"%s\" violates foreign key constraint \"%s\" on table \"%s\""
 msgstr "資料表 \"%s\" 的更新或刪除違反外來鍵限制 \"%s\" (於資料表 \"%s\")"
 
 # utils/adt/ri_triggers.c:3296
-#: utils/adt/ri_triggers.c:3445
+#: utils/adt/ri_triggers.c:3508
 #, c-format
 msgid "Key is still referenced from table \"%s\"."
 msgstr "索引鍵仍被資料表 \"%s\" 引用。"
@@ -38427,32 +38432,32 @@ msgid "operator class \"%s\" of access method %s is missing support function %d 
 msgstr "存取方法 %2$s 的運算子類別 \"%1$s\" 缺少型別 %4$s 的支援函式 %3$d"
 
 # commands/dbcommands.c:201
-#: utils/cache/relcache.c:3811
+#: utils/cache/relcache.c:3801
 #, c-format
 msgid "heap relfilenumber value not set when in binary upgrade mode"
 msgstr "二進位升級模式下未設定堆積的 relfilenumber 值"
 
 # commands/dbcommands.c:201
-#: utils/cache/relcache.c:3819
+#: utils/cache/relcache.c:3809
 #, c-format
 msgid "unexpected request for new relfilenumber in binary upgrade mode"
 msgstr "二進位升級模式下出現非預期的新 relfilenumber 請求"
 
 # utils/cache/relcache.c:3264
-#: utils/cache/relcache.c:6685
+#: utils/cache/relcache.c:6675
 #, c-format
 msgid "could not create relation-cache initialization file \"%s\": %m"
 msgstr "無法建立關聯快取初始化檔案 \"%s\": %m"
 
 # utils/cache/relcache.c:3266
-#: utils/cache/relcache.c:6687
+#: utils/cache/relcache.c:6677
 #, c-format
 msgid "Continuing anyway, but there's something wrong."
 msgstr "仍然繼續執行，但存在某些問題。"
 
 # access/transam/xlog.c:1944 access/transam/xlog.c:5453
 # access/transam/xlog.c:5607 postmaster/postmaster.c:3504
-#: utils/cache/relcache.c:7017
+#: utils/cache/relcache.c:7007
 #, c-format
 msgid "could not remove cache file \"%s\": %m"
 msgstr "無法刪除快取檔案 \"%s\": %m"
