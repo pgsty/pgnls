@@ -32,7 +32,7 @@ msgstr "警告: "
 #: ../../../src/common/logging.c:315 ../../../src/common/logging.c:317
 #, c-format
 msgid "detail: "
-msgstr "詳細內容: "
+msgstr "詳情: "
 
 #: ../../../src/common/logging.c:324 ../../../src/common/logging.c:326
 #, c-format
@@ -161,7 +161,7 @@ msgstr "使用者名稱查詢失敗: 錯誤碼 %lu"
 
 #: ../../fe_utils/cancel.c:186 ../../fe_utils/cancel.c:235
 msgid "Cancel request sent\n"
-msgstr "已傳送取消要求\n"
+msgstr "已傳送取消請求\n"
 
 # fe-connect.c:1427
 #: ../../fe_utils/cancel.c:187 ../../fe_utils/cancel.c:236
@@ -287,7 +287,7 @@ msgstr "資料庫名稱包含換行或歸位符號: \"%s\"\n"
 #: reindexdb.c:184 reindexdb.c:203 vacuumdb.c:216 vacuumdb.c:236
 #, c-format
 msgid "Try \"%s --help\" for more information."
-msgstr "執行 \"%s --help\" 顯示更多資訊。"
+msgstr "用 \"%s --help\" 取得更多資訊。"
 
 #: clusterdb.c:130 createdb.c:166 createuser.c:208 dropdb.c:119 dropuser.c:108
 #: pg_isready.c:109 reindexdb.c:201 vacuumdb.c:234
@@ -326,12 +326,12 @@ msgstr "%s 對資料庫中所有先前已叢集化的資料表進行叢集化。
 #: pg_isready.c:226 reindexdb.c:898 vacuumdb.c:351
 #, c-format
 msgid "Usage:\n"
-msgstr "使用方法:\n"
+msgstr "用法:\n"
 
 #: clusterdb.c:275 reindexdb.c:899 vacuumdb.c:352
 #, c-format
 msgid "  %s [OPTION]... [DBNAME]\n"
-msgstr "  %s [選項]... [資料庫]\n"
+msgstr "  %s [選項]... [資料庫名稱]\n"
 
 #: clusterdb.c:276 createdb.c:302 createuser.c:419 dropdb.c:173 dropuser.c:173
 #: pg_isready.c:229 reindexdb.c:900 vacuumdb.c:353
@@ -361,7 +361,7 @@ msgstr "  -e, --echo                顯示被送到伺服器的命令\n"
 #: clusterdb.c:280
 #, c-format
 msgid "  -q, --quiet               don't write any messages\n"
-msgstr "  -q, --quiet               不顯示任何訊息\n"
+msgstr "  -q, --quiet               不輸出任何訊息\n"
 
 #: clusterdb.c:281
 #, c-format
@@ -371,7 +371,7 @@ msgstr "  -t, --table=TABLE         僅對指定的資料表進行叢集化\n"
 #: clusterdb.c:282
 #, c-format
 msgid "  -v, --verbose             write a lot of output\n"
-msgstr "  -v, --verbose             顯示詳細的執行訊息\n"
+msgstr "  -v, --verbose             產生詳細輸出\n"
 
 #: clusterdb.c:283 createuser.c:441 dropdb.c:177 dropuser.c:177
 #, c-format
@@ -406,17 +406,17 @@ msgstr "  -p, --port=PORT           資料庫伺服器連接埠\n"
 #: clusterdb.c:288 dropdb.c:183 vacuumdb.c:387
 #, c-format
 msgid "  -U, --username=USERNAME   user name to connect as\n"
-msgstr "  -U, --username=USERNAME   用來連線的使用者\n"
+msgstr "  -U, --username=USERNAME   用來連線的使用者名稱\n"
 
 #: clusterdb.c:289 createuser.c:454 dropdb.c:184 dropuser.c:184 vacuumdb.c:388
 #, c-format
 msgid "  -w, --no-password         never prompt for password\n"
-msgstr "  -w, --no-password         絕不提示密碼\n"
+msgstr "  -w, --no-password         不詢問密碼\n"
 
 #: clusterdb.c:290 createuser.c:455 dropdb.c:185 dropuser.c:185 vacuumdb.c:389
 #, c-format
 msgid "  -W, --password            force password prompt\n"
-msgstr "  -W, --password            強制密碼提示\n"
+msgstr "  -W, --password            要求詢問密碼\n"
 
 #: clusterdb.c:291 dropdb.c:186 vacuumdb.c:390
 #, c-format
@@ -598,17 +598,17 @@ msgstr "  -p, --port=PORT              資料庫伺服器連接埠\n"
 #: createdb.c:322 reindexdb.c:918
 #, c-format
 msgid "  -U, --username=USERNAME      user name to connect as\n"
-msgstr "  -U, --username=USERNAME      用來連線的使用者\n"
+msgstr "  -U, --username=USERNAME      用來連線的使用者名稱\n"
 
 #: createdb.c:323 reindexdb.c:919
 #, c-format
 msgid "  -w, --no-password            never prompt for password\n"
-msgstr "  -w, --no-password            絕不提示密碼\n"
+msgstr "  -w, --no-password            不詢問密碼\n"
 
 #: createdb.c:324 reindexdb.c:920
 #, c-format
 msgid "  -W, --password               force password prompt\n"
-msgstr "  -W, --password               強制密碼提示\n"
+msgstr "  -W, --password               要求詢問密碼\n"
 
 #: createdb.c:325 reindexdb.c:921
 #, c-format
@@ -637,7 +637,7 @@ msgstr "再輸入一次: "
 #: createuser.c:237
 #, c-format
 msgid "Passwords didn't match.\n"
-msgstr "密碼不符。\n"
+msgstr "密碼不一致。\n"
 
 # utils/misc/guc.c:434
 #: createuser.c:245
@@ -1087,16 +1087,14 @@ msgstr "      --tablespace=TABLESPACE  重建索引所在的表空間\n"
 #: reindexdb.c:912
 #, c-format
 msgid "  -v, --verbose                write a lot of output\n"
-msgstr "  -v, --verbose                輸出詳細資訊\n"
+msgstr "  -v, --verbose                產生詳細輸出\n"
 
 #: reindexdb.c:922
 #, c-format
 msgid ""
 "\n"
 "Read the description of the SQL command REINDEX for details.\n"
-msgstr ""
-"\n"
-"請閱讀 SQL 指令 REINDEX 的描述以取得詳細資訊。\n"
+msgstr "\n請參考 SQL 命令 REINDEX 的說明。\n"
 
 #: vacuumdb.c:250 vacuumdb.c:253 vacuumdb.c:256 vacuumdb.c:259 vacuumdb.c:262
 #: vacuumdb.c:265 vacuumdb.c:268 vacuumdb.c:271 vacuumdb.c:281
@@ -1261,7 +1259,7 @@ msgstr "  -P, --parallel=PARALLEL_WORKERS 可用時使用指定數量的背景�
 #: vacuumdb.c:374
 #, c-format
 msgid "  -q, --quiet                     don't write any messages\n"
-msgstr "  -q, --quiet                     不顯示任何訊息\n"
+msgstr "  -q, --quiet                     不輸出任何訊息\n"
 
 #: vacuumdb.c:375
 #, c-format
@@ -1276,7 +1274,7 @@ msgstr "  -t, --table='TABLE[(COLUMNS)]'  僅清理指定的資料表\n"
 #: vacuumdb.c:377
 #, c-format
 msgid "  -v, --verbose                   write a lot of output\n"
-msgstr "  -v, --verbose                   顯示詳細的執行訊息\n"
+msgstr "  -v, --verbose                   產生詳細輸出\n"
 
 #: vacuumdb.c:378
 #, c-format

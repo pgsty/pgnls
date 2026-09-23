@@ -233,7 +233,7 @@ msgstr "無法寫入檔案 \"%s\": %m"
 #: utils/misc/guc.c:4428
 #, c-format
 msgid "could not fsync file \"%s\": %m"
-msgstr "無法 fsync 檔案 \"%s\": %m"
+msgstr "無法對檔案 \"%s\" 執行 fsync: %m"
 
 # commands/sequence.c:798 executor/execGrouping.c:328
 # executor/execGrouping.c:388 executor/nodeIndexscan.c:1051 lib/dllist.c:43
@@ -320,7 +320,7 @@ msgstr "無法讀取執行檔 \"%s\": %m"
 #: ../common/exec.c:226
 #, c-format
 msgid "could not find a \"%s\" to execute"
-msgstr "找不到要執行的 \"%s\""
+msgstr "找不到可執行的 \"%s\""
 
 # utils/error/elog.c:1128
 #: ../common/exec.c:253
@@ -419,7 +419,7 @@ msgstr "無法同步檔案 \"%s\" 所在的檔案系統: %m"
 #: utils/adt/genfile.c:437 utils/adt/genfile.c:613
 #, c-format
 msgid "could not stat file \"%s\": %m"
-msgstr "無法取得檔案狀態 \"%s\": %m"
+msgstr "無法取得檔案 \"%s\" 的狀態: %m"
 
 #: ../common/file_utils.c:133 ../common/file_utils.c:243
 #, c-format
@@ -477,7 +477,7 @@ msgstr "JSON 巢狀過深，允許的最大深度為 6400。"
 #: ../common/jsonapi.c:2490
 #, c-format
 msgid "Escape sequence \"\\%.*s\" is invalid."
-msgstr "無效的逸出序列 \"\\%.*s\"。"
+msgstr "逸出序列 \"\\%.*s\" 無效。"
 
 #: ../common/jsonapi.c:2494
 #, c-format
@@ -487,27 +487,27 @@ msgstr "必須對值為 0x%02x 的字元進行逸出處理。"
 #: ../common/jsonapi.c:2498
 #, c-format
 msgid "Expected end of input, but found \"%.*s\"."
-msgstr "預期輸入結束，但找到 \"%.*s\"。"
+msgstr "預期為輸入結束，實際為 \"%.*s\"。"
 
 #: ../common/jsonapi.c:2501
 #, c-format
 msgid "Expected array element or \"]\", but found \"%.*s\"."
-msgstr "預期是陣列元素或 \"]\"，但找到 \"%.*s\"。"
+msgstr "預期為陣列元素或 \"]\"，實際為 \"%.*s\"。"
 
 #: ../common/jsonapi.c:2504
 #, c-format
 msgid "Expected \",\" or \"]\", but found \"%.*s\"."
-msgstr "預期是 \",\" 或 \"]\"，但找到 \"%.*s\"。"
+msgstr "預期為 \",\" 或 \"]\"，實際為 \"%.*s\"。"
 
 #: ../common/jsonapi.c:2507
 #, c-format
 msgid "Expected \":\", but found \"%.*s\"."
-msgstr "預期是 \":\"，但找到 \"%.*s\"。"
+msgstr "預期為 \":\"，實際為 \"%.*s\"。"
 
 #: ../common/jsonapi.c:2510
 #, c-format
 msgid "Expected JSON value, but found \"%.*s\"."
-msgstr "預期是 JSON 值，但找到 \"%.*s\"。"
+msgstr "預期為 JSON 值，實際為 \"%.*s\"。"
 
 #: ../common/jsonapi.c:2513
 msgid "The input string ended unexpectedly."
@@ -516,22 +516,22 @@ msgstr "輸入字串非預期地結束。"
 #: ../common/jsonapi.c:2515
 #, c-format
 msgid "Expected string or \"}\", but found \"%.*s\"."
-msgstr "預期是字串或 \"}\"，但找到 \"%.*s\"。"
+msgstr "預期為字串或 \"}\"，實際為 \"%.*s\"。"
 
 #: ../common/jsonapi.c:2518
 #, c-format
 msgid "Expected \",\" or \"}\", but found \"%.*s\"."
-msgstr "預期是 \",\" 或 \"}\"，但找到 \"%.*s\"。"
+msgstr "預期為 \",\" 或 \"}\"，實際為 \"%.*s\"。"
 
 #: ../common/jsonapi.c:2521
 #, c-format
 msgid "Expected string, but found \"%.*s\"."
-msgstr "預期是字串，但找到 \"%.*s\"。"
+msgstr "預期為字串，實際為 \"%.*s\"。"
 
 #: ../common/jsonapi.c:2524
 #, c-format
 msgid "Token \"%.*s\" is invalid."
-msgstr "符記 \"%.*s\" 是無效的。"
+msgstr "符記 \"%.*s\" 無效。"
 
 #: ../common/jsonapi.c:2530 jsonpath_scan.l:593
 #, c-format
@@ -580,7 +580,7 @@ msgstr "警告: "
 #: ../common/logging.c:315 ../common/logging.c:317
 #, c-format
 msgid "detail: "
-msgstr "詳細: "
+msgstr "詳情: "
 
 #: ../common/logging.c:324 ../common/logging.c:326
 #, c-format
@@ -904,7 +904,7 @@ msgstr "找不到指令"
 #: ../common/wait_error.c:64
 #, c-format
 msgid "child process exited with exit code %d"
-msgstr "子行程結束，結束代碼 %d"
+msgstr "子行程結束，結束碼 %d"
 
 #: ../common/wait_error.c:72
 #, c-format
@@ -919,7 +919,7 @@ msgstr "子行程因訊號 %d 而終止: %s"
 #: ../common/wait_error.c:82
 #, c-format
 msgid "child process exited with unrecognized status %d"
-msgstr "子行程結束，不明狀態代碼 %d"
+msgstr "子行程已結束，狀態 %d 無法識別"
 
 #: ../include/postmaster/proctypelist.h:34
 msgid "archiver"
@@ -1613,7 +1613,7 @@ msgstr "將每個查詢的原始解析樹寫入日誌。"
 #. translator: GUC parameter "debug_print_rewritten" short description
 #: ../include/utils/guc_tables.inc.c:1308 utils/guc_tables.inc.c:1308
 msgid "Logs each query's rewritten parse tree."
-msgstr "記錄每個查詢的重寫解析樹。"
+msgstr "將每個查詢的重寫解析樹寫入日誌。"
 
 #. translator: GUC parameter "debug_raw_expression_coverage_test" short description
 #: ../include/utils/guc_tables.inc.c:1322 utils/guc_tables.inc.c:1322
@@ -2787,7 +2787,7 @@ msgstr "設定每個交易的鎖定數量上限。"
 #. translator: GUC parameter "max_locks_per_transaction" long description
 #: ../include/utils/guc_tables.inc.c:3755 utils/guc_tables.inc.c:3755
 msgid "The shared lock table is sized on the assumption that at most \"max_locks_per_transaction\" objects per server process or prepared transaction will need to be locked at any one time."
-msgstr "共享鎖定表的大小基於以下假設: 每個伺服器行程或預備交易在任何時刻最多需要鎖定 \"max_locks_per_transaction\" 個物件。"
+msgstr "共享鎖定表的大小基於以下假設：每個伺服器行程或預備交易在任何時刻最多需要鎖定 \"max_locks_per_transaction\" 個物件。"
 
 # utils/misc/guc.c:1071
 #. translator: GUC parameter "max_logical_replication_workers" short description
@@ -2857,7 +2857,7 @@ msgstr "設定每個交易的述詞鎖定數量上限。"
 #. translator: GUC parameter "max_pred_locks_per_transaction" long description
 #: ../include/utils/guc_tables.inc.c:3898 utils/guc_tables.inc.c:3898
 msgid "The shared predicate lock table is sized on the assumption that at most \"max_pred_locks_per_transaction\" objects per server process or prepared transaction will need to be locked at any one time."
-msgstr "共享述詞鎖定表的大小基於以下假設: 每個伺服器行程或預備交易在任何時刻最多需要鎖定 \"max_pred_locks_per_transaction\" 個物件。"
+msgstr "共享述詞鎖定表的大小基於以下假設：每個伺服器行程或預備交易在任何時刻最多需要鎖定 \"max_pred_locks_per_transaction\" 個物件。"
 
 # utils/misc/guc.c:1071
 #. translator: GUC parameter "max_prepared_transactions" short description
@@ -4586,7 +4586,7 @@ msgstr "存取方法 %2$s 的運算子家族 \"%1$s\" 中，為運算子 %3$s �
 #: utils/adt/varchar.c:1003 utils/adt/varchar.c:1059
 #, c-format
 msgid "could not determine which collation to use for string hashing"
-msgstr "無法確定用於字串雜湊的定序"
+msgstr "無法判斷字串雜湊使用何種定序"
 
 #: access/hash/hashfunc.c:281 access/hash/hashfunc.c:336 catalog/heap.c:703
 #: catalog/heap.c:709 commands/createas.c:203 commands/createas.c:515
@@ -5578,7 +5578,7 @@ msgstr "歷史記錄檔 \"%s\" 中有無效資料"
 #: access/transam/timeline.c:196
 #, c-format
 msgid "Timeline IDs must be less than child timeline's ID."
-msgstr "時間軸 ID 必須小於子時間軸 ID。"
+msgstr "時間軸 ID 必須小於子時間軸的 ID。"
 
 #: access/transam/timeline.c:590 postmaster/walsummarizer.c:926
 #, c-format
@@ -6539,7 +6539,7 @@ msgstr "無效的 WAL 檔案名稱 \"%s\""
 #: commands/wait.c:355
 #, c-format
 msgid "recovery is not in progress"
-msgstr "不在復原中"
+msgstr "目前未進行復原"
 
 #: access/transam/xlogfuncs.c:555 access/transam/xlogfuncs.c:585
 #: access/transam/xlogfuncs.c:609 access/transam/xlogfuncs.c:632
@@ -6598,7 +6598,7 @@ msgstr "不支援發出預讀建議的平台不支援 \"recovery_prefetch\"。"
 #: access/transam/xlogreader.c:621
 #, c-format
 msgid "invalid record offset at %X/%08X: expected at least %u, got %u"
-msgstr "%X/%08X 處的記錄位移無效: 至少應為 %u，實際為 %u"
+msgstr "位於 %X/%08X 的記錄位移無效: 預期至少 %u，實際為 %u"
 
 # access/transam/xlog.c:2443
 #: access/transam/xlogreader.c:630
@@ -6609,17 +6609,17 @@ msgstr "請求的 %X/%08X 處是續接記錄"
 #: access/transam/xlogreader.c:671 access/transam/xlogreader.c:1146
 #, c-format
 msgid "invalid record length at %X/%08X: expected at least %u, got %u"
-msgstr "%X/%08X 處的記錄長度無效: 至少應為 %u，實際為 %u"
+msgstr "位於 %X/%08X 的記錄長度無效: 預期至少 %u，實際為 %u"
 
 #: access/transam/xlogreader.c:761
 #, c-format
 msgid "there is no contrecord flag at %X/%08X"
-msgstr "%X/%08X 處沒有續接記錄旗標"
+msgstr "位於 %X/%08X 沒有續接記錄旗標"
 
 #: access/transam/xlogreader.c:774
 #, c-format
 msgid "invalid contrecord length %u (expected %lld) at %X/%08X"
-msgstr "%3$X/%4$08X 處的續接記錄長度 %1$u 無效 (預期為 %2$lld)"
+msgstr "位於 %3$X/%4$08X 的續接記錄長度 %1$u 無效(預期為 %2$lld)"
 
 # access/transam/xlog.c:2465
 #: access/transam/xlogreader.c:1154
@@ -6631,13 +6631,13 @@ msgstr "%2$X/%3$08X 處的資源管理員 ID %1$u 無效"
 #: access/transam/xlogreader.c:1167 access/transam/xlogreader.c:1183
 #, c-format
 msgid "record with incorrect prev-link %X/%08X at %X/%08X"
-msgstr "%3$X/%4$08X 處的記錄具有不正確的前一記錄連結 %1$X/%2$08X"
+msgstr "位於 %3$X/%4$08X 的記錄有不正確的前一記錄連結 %1$X/%2$08X"
 
 # access/transam/xlog.c:2269
 #: access/transam/xlogreader.c:1221
 #, c-format
 msgid "incorrect resource manager data checksum in record at %X/%08X"
-msgstr "%X/%08X 處記錄的資源管理員資料檢查碼不正確"
+msgstr "位於 %X/%08X 的記錄中資源管理員資料檢查碼不正確"
 
 #: access/transam/xlogreader.c:1255
 #, c-format
@@ -6672,12 +6672,12 @@ msgstr "WAL 片段 %3$s 中出現非預期的 pageaddr %1$X/%2$08X, LSN %4$X/%5$
 #: access/transam/xlogreader.c:1358
 #, c-format
 msgid "out-of-sequence timeline ID %u (after %u) in WAL segment %s, LSN %X/%08X, offset %u"
-msgstr "WAL 片段 %3$s 中的時間軸 ID %1$u 順序錯誤 (前一個為 %2$u), LSN %4$X/%5$08X, 位移 %6$u"
+msgstr "WAL 片段 %3$s 中的時間軸 ID %1$u 順序錯誤(前一個為 %2$u), LSN %4$X/%5$08X, 位移 %6$u"
 
 #: access/transam/xlogreader.c:1790
 #, c-format
 msgid "out-of-order block_id %u at %X/%08X"
-msgstr "%2$X/%3$08X 處的 block_id %1$u 順序錯誤"
+msgstr "位於 %2$X/%3$08X 的 block_id %1$u 順序錯誤"
 
 #: access/transam/xlogreader.c:1814
 #, c-format
@@ -6722,7 +6722,7 @@ msgstr "%2$X/%3$08X 處的 block_id %1$u 無效"
 #: access/transam/xlogreader.c:1997
 #, c-format
 msgid "record with invalid length at %X/%08X"
-msgstr "%X/%08X 處的記錄長度無效"
+msgstr "位於 %X/%08X 的記錄長度無效"
 
 #: access/transam/xlogreader.c:2023
 #, c-format
@@ -7011,7 +7011,7 @@ msgstr "重做在 %X/%08X 處完成，系統資源使用: %s"
 #: access/transam/xlogrecovery.c:1864
 #, c-format
 msgid "last completed transaction was at log time %s"
-msgstr "上次完成交易是在日誌時間 %s"
+msgstr "最後一個已完成交易對應的日誌時間為 %s"
 
 # access/transam/xlog.c:4284
 #: access/transam/xlogrecovery.c:1873
@@ -7732,7 +7732,7 @@ msgstr "-c %s 需要值"
 #: postmaster/postmaster.c:780
 #, c-format
 msgid "Try \"%s --help\" for more information.\n"
-msgstr "執行 \"%s --help\" 顯示更多資訊。\n"
+msgstr "用 \"%s --help\" 取得更多資訊。\n"
 
 # tcop/postgres.c:2650
 #: bootstrap/bootstrap.c:346
@@ -9106,7 +9106,7 @@ msgstr "文字搜尋組態 \"%s\" 不存在"
 #: catalog/namespace.c:3401 parser/parse_expr.c:868 parser/parse_target.c:1263
 #, c-format
 msgid "cross-database references are not implemented: %s"
-msgstr "跨資料庫參考未實作: %s"
+msgstr "尚未實作跨資料庫參考: %s"
 
 # catalog/namespace.c:1201 gram.y:2516 gram.y:7422 parser/parse_expr.c:1183
 # parser/parse_target.c:734
@@ -9114,7 +9114,7 @@ msgstr "跨資料庫參考未實作: %s"
 #: parser/parse_target.c:1270
 #, c-format
 msgid "improper qualified name (too many dotted names): %s"
-msgstr "限定名稱不正確 (以點號分隔的名稱部分過多): %s"
+msgstr "不合適的限定名稱(以點號分隔的名稱部分過多): %s"
 
 #: catalog/namespace.c:3537
 #, c-format
@@ -9140,7 +9140,7 @@ msgstr "schema \"%s\" 不存在"
 #: catalog/namespace.c:3647
 #, c-format
 msgid "improper relation name (too many dotted names): %s"
-msgstr "關聯名稱不正確 (以點號分隔的名稱部分過多): %s"
+msgstr "不合適的關聯名稱(以點號分隔的名稱部分過多): %s"
 
 # commands/comment.c:928
 #: catalog/namespace.c:4088 utils/adt/regproc.c:1064
@@ -11049,7 +11049,7 @@ msgstr "無法存取非同步佇列頁面 %<PRId64> 位移 %d 處。"
 #: commands/async.c:915
 #, c-format
 msgid "channel name cannot be empty"
-msgstr "通道名稱不能是空的"
+msgstr "通道名稱不能為空"
 
 # utils/mb/encnames.c:445
 #: commands/async.c:921
@@ -11805,17 +11805,17 @@ msgstr "從標準輸入 COPY 失敗: %s"
 #: commands/copyfromparse.c:843
 #, c-format
 msgid "wrong number of fields in header line: got %d, expected %d"
-msgstr "標頭行中的欄位數錯誤: 實際為 %d, 預期為 %d"
+msgstr "標頭行中的欄位數錯誤: 實際為 %d，預期為 %d"
 
 #: commands/copyfromparse.c:859
 #, c-format
 msgid "column name mismatch in header line field %d: got null value (\"%s\"), expected \"%s\""
-msgstr "標頭行第 %d 個欄位的欄位名稱不符: 實際為 NULL 值 (\"%s\"), 預期為 \"%s\""
+msgstr "標頭行第 %d 個欄位的欄位名稱不符: 實際為 NULL 值 (\"%s\")，預期為 \"%s\""
 
 #: commands/copyfromparse.c:866
 #, c-format
 msgid "column name mismatch in header line field %d: got \"%s\", expected \"%s\""
-msgstr "標頭行第 %d 個欄位的欄位名稱不符: 實際為 \"%s\", 預期為 \"%s\""
+msgstr "標頭行第 %d 個欄位的欄位名稱不符: 實際為 \"%s\"，預期為 \"%s\""
 
 # commands/copy.c:1816
 #: commands/copyfromparse.c:1004 commands/copyfromparse.c:1871
@@ -12134,7 +12134,7 @@ msgstr "%s 不是有效的編碼名稱"
 #: commands/dbcommands.c:955
 #, c-format
 msgid "unrecognized locale provider: %s"
-msgstr "未能識別的區域提供者: %s"
+msgstr "無法識別的區域提供者: %s"
 
 # fe-connect.c:2675
 #: commands/dbcommands.c:968 commands/dbcommands.c:2472 commands/user.c:306
@@ -13263,7 +13263,7 @@ msgstr "不能為擴充模組 \"%2$s\" 新增 schema \"%1$s\"，因為該 schema
 #: commands/extension.c:3977 commands/typecmds.c:4109 utils/fmgr/funcapi.c:727
 #, c-format
 msgid "could not find multirange type for data type %s"
-msgstr "無法為資料型別 %s 找到多範圍型別"
+msgstr "找不到資料型別 %s 的多範圍型別"
 
 #: commands/extension.c:4019
 #, c-format
@@ -14061,7 +14061,7 @@ msgstr "無法判斷索引運算式該用何種定序"
 #: utils/adt/misc.c:603
 #, c-format
 msgid "collations are not supported by type %s"
-msgstr "定序不被型別 %s 所支援"
+msgstr "定序不被型別 %s 支援"
 
 # parser/parse_oper.c:778
 #: commands/indexcmds.c:2202
@@ -17855,7 +17855,7 @@ msgstr "不能將常數運算式用作分割索引鍵"
 #: commands/tablecmds.c:20626
 #, c-format
 msgid "could not determine which collation to use for partition expression"
-msgstr "無法確定用於分割運算式的定序"
+msgstr "無法判斷分割運算式該用何種定序"
 
 # commands/indexcmds.c:570
 #: commands/tablecmds.c:20661
@@ -20018,7 +20018,7 @@ msgstr "資料表資料列型別和查詢指定的資料列型別不符"
 #: executor/execExpr.c:668 executor/nodeModifyTable.c:229
 #, c-format
 msgid "Query has too many columns."
-msgstr "查詢的欄位太多。"
+msgstr "查詢的欄位過多。"
 
 #: executor/execExpr.c:675 executor/nodeModifyTable.c:248
 #, c-format
@@ -20137,7 +20137,7 @@ msgstr "陣列維度數目 (%d) 超過允許的上限 (%d)"
 #: executor/execExprInterp.c:3531 executor/execExprInterp.c:3566
 #, c-format
 msgid "multidimensional arrays must have array expressions with matching dimensions"
-msgstr "多維陣列必須有相符維度的陣列運算式"
+msgstr "多維陣列中的陣列運算式必須具有相符的維度"
 
 # access/nbtree/nbtinsert.c:404 access/nbtree/nbtsort.c:499
 #: executor/execExprInterp.c:3543 utils/adt/arrayutils.c:83
@@ -20706,7 +20706,7 @@ msgstr "查詢為序號 %d 的產生欄位提供值。"
 #: executor/nodeModifyTable.c:285
 #, c-format
 msgid "Query has too few columns."
-msgstr "查詢的欄位太少。"
+msgstr "查詢的欄位不足。"
 
 #: executor/nodeModifyTable.c:1721 executor/nodeModifyTable.c:1795
 #, c-format
@@ -22054,7 +22054,7 @@ msgstr "PAM 驗證使用者 \"%s\" 失敗"
 #: libpq/auth.c:289
 #, c-format
 msgid "BSD authentication failed for user \"%s\""
-msgstr "使用者 \"%s\" 的 BSD 驗證失敗"
+msgstr "BSD 驗證使用者 \"%s\" 失敗"
 
 # libpq/auth.c:387
 #: libpq/auth.c:292
@@ -22094,7 +22094,7 @@ msgstr "驗證識別碼已設定多次"
 #: libpq/auth.c:352
 #, c-format
 msgid "previous identifier: \"%s\"; new identifier: \"%s\""
-msgstr "先前的識別碼: \"%s\"；新的識別碼: \"%s\""
+msgstr "先前的識別碼: \"%s\"; 新的識別碼: \"%s\""
 
 #: libpq/auth.c:362
 #, c-format
@@ -22189,7 +22189,7 @@ msgstr "連線已通過驗證: user=\"%s\" method=%s (%s:%d)"
 #: libpq/auth.c:733
 #, c-format
 msgid "expected password response, got message type %d"
-msgstr "預期密碼回應，取得訊息型別 %d"
+msgstr "預期為 密碼 回應，實際為訊息型別 %d"
 
 # libpq/auth.c:803
 #: libpq/auth.c:754
@@ -22226,7 +22226,7 @@ msgstr "無法設定環境: %m"
 #: libpq/auth.c:1021
 #, c-format
 msgid "expected GSS response, got message type %d"
-msgstr "預期 GSS 回應，取得訊息型別 %d"
+msgstr "預期為 GSS 回應，實際為訊息型別 %d"
 
 #: libpq/auth.c:1087
 msgid "accepting GSS security context failed"
@@ -22244,7 +22244,7 @@ msgstr "無法取得 SSPI 認證"
 #: libpq/auth.c:1299
 #, c-format
 msgid "expected SSPI response, got message type %d"
-msgstr "預期 SSPI 回應，取得訊息型別 %d"
+msgstr "預期為 SSPI 回應，實際為訊息型別 %d"
 
 # libpq/be-secure.c:649
 #: libpq/auth.c:1377
@@ -22290,19 +22290,19 @@ msgstr "無法繫結至本機位址 \"%s\": %m"
 #: libpq/auth.c:1816
 #, c-format
 msgid "could not connect to Ident server at address \"%s\", port %s: %m"
-msgstr "無法連線到位於位址 \"%s\"，埠號 %s 的 Ident 伺服器: %m"
+msgstr "無法連線到位於位址 \"%s\", 埠號 %s 的 Ident 伺服器: %m"
 
 # libpq/hba.c:1412
 #: libpq/auth.c:1838
 #, c-format
 msgid "could not send query to Ident server at address \"%s\", port %s: %m"
-msgstr "無法將查詢傳送至位於位址 \"%s\"，埠號 %s 的 Ident 伺服器: %m"
+msgstr "無法將查詢傳送至位於位址 \"%s\", 埠號 %s 的 Ident 伺服器: %m"
 
 # libpq/hba.c:1427
 #: libpq/auth.c:1855
 #, c-format
 msgid "could not receive response from Ident server at address \"%s\", port %s: %m"
-msgstr "無法從位於位址 \"%s\"，埠號 %s 的 Ident 伺服器接收回應: %m"
+msgstr "無法從位於位址 \"%s\", 埠號 %s 的 Ident 伺服器接收回應: %m"
 
 # libpq/hba.c:1437
 #: libpq/auth.c:1865
@@ -22326,13 +22326,13 @@ msgstr "無法取得對等認證: %m"
 #: libpq/auth.c:1935
 #, c-format
 msgid "could not look up local user ID %ld: %m"
-msgstr "無法尋找本機使用者 ID %ld: %m"
+msgstr "無法查詢本機使用者 ID %ld: %m"
 
 # libpq/hba.c:1481 libpq/hba.c:1512 libpq/hba.c:1582
 #: libpq/auth.c:1941
 #, c-format
 msgid "local user with ID %ld does not exist"
-msgstr "本機使用者 ID %ld 的使用者並不存在"
+msgstr "ID 為 %ld 的本機使用者不存在"
 
 # libpq/auth.c:585
 #: libpq/auth.c:2041
@@ -22433,7 +22433,7 @@ msgstr "無法初始化 LDAP: %m"
 #: libpq/auth.c:2408
 #, c-format
 msgid "could not set LDAP protocol version: %s"
-msgstr "無法設定 LDAP 協定版本: %s"
+msgstr "無法設定 LDAP 通訊協定版本: %s"
 
 # port/win32/security.c:39
 #: libpq/auth.c:2424
@@ -22551,7 +22551,7 @@ msgstr "大型物件描述符 %d 不是以讀取模式開啟的"
 #: libpq/be-fsstubs.c:197 libpq/be-fsstubs.c:572
 #, c-format
 msgid "large object descriptor %d was not opened for writing"
-msgstr "大型物件描述子 %d 未開啟以供寫入"
+msgstr "大型物件描述符 %d 不是以寫入模式開啟的"
 
 #: libpq/be-fsstubs.c:224
 #, c-format
@@ -23019,7 +23019,7 @@ msgstr "未回報 SSL 錯誤"
 #: libpq/be-secure-openssl.c:2193
 #, c-format
 msgid "SSL error code %lu"
-msgstr "SSL 錯誤代碼 %lu"
+msgstr "SSL 錯誤碼 %lu"
 
 #: libpq/be-secure-openssl.c:2350
 #, c-format
@@ -23704,7 +23704,7 @@ msgid ""
 "Usage:\n"
 "  %s [OPTION]...\n"
 "\n"
-msgstr "使用方法:\n  %s [選項]...\n\n"
+msgstr "用法:\n  %s [選項]...\n\n"
 
 # postmaster/postmaster.c:1017 tcop/postgres.c:2115
 #: main/main.c:388
@@ -23804,7 +23804,7 @@ msgstr "  -S WORK-MEM        設定排序可用的記憶體 (單位 kB)\n"
 #: main/main.c:406
 #, c-format
 msgid "  -V, --version      output version information, then exit\n"
-msgstr "  -V, --version      輸出版本資訊，然後結束\n"
+msgstr "  -V, --version      顯示版本，然後結束\n"
 
 # postmaster/postmaster.c:1022 tcop/postgres.c:2120
 #: main/main.c:407
@@ -23821,7 +23821,7 @@ msgstr "  --describe-config  描述組態參數，然後結束\n"
 #: main/main.c:409
 #, c-format
 msgid "  -?, --help         show this help, then exit\n"
-msgstr "  -?, --help         顯示此說明，然後結束\n"
+msgstr "  -?, --help         顯示說明，然後結束\n"
 
 # postmaster/postmaster.c:1039 tcop/postgres.c:2134
 #: main/main.c:411
@@ -25488,7 +25488,7 @@ msgstr "遞迴查詢 \"%s\" 不可包含資料修改陳述式"
 #: parser/parse_cte.c:942
 #, c-format
 msgid "recursive query \"%s\" does not have the form non-recursive-term UNION [ALL] recursive-term"
-msgstr "遞迴查詢 \"%s\" 沒有下列格式: 非遞迴項 UNION [ALL] 遞迴項"
+msgstr "遞迴查詢 \"%s\" 沒有下列格式：非遞迴項 UNION [ALL] 遞迴項"
 
 #: parser/parse_cte.c:977
 #, c-format
@@ -26851,7 +26851,7 @@ msgstr "型別參考 %s 轉換至 %s"
 #: utils/cache/typcache.c:545
 #, c-format
 msgid "type \"%s\" is only a shell"
-msgstr "型別 \"%s\" 只是 shell"
+msgstr "型別 \"%s\" 只是 shell 型別"
 
 #: parser/parse_type.c:354
 #, c-format
@@ -28425,12 +28425,12 @@ msgstr "摘要產生在磁碟上已到達 %X/%08X，在記憶體中已到達 %X/
 #: postmaster/walsummarizer.c:1101
 #, c-format
 msgid "could not find a valid record after %X/%08X: %s"
-msgstr "無法在 %X/%08X 之後找到有效的記錄: %s"
+msgstr "%X/%08X 之後找不到有效的記錄: %s"
 
 #: postmaster/walsummarizer.c:1105
 #, c-format
 msgid "could not find a valid record after %X/%08X"
-msgstr "無法在 %X/%08X 之後找到有效的記錄"
+msgstr "%X/%08X 之後找不到有效的記錄"
 
 #: postmaster/walsummarizer.c:1156
 #, c-format
@@ -28516,7 +28516,7 @@ msgstr "主伺服器回應無效"
 #: replication/libpqwalreceiver/libpqwalreceiver.c:453
 #, c-format
 msgid "Could not identify system: got %d rows and %d fields, expected %d rows and %d or more fields."
-msgstr "無法識別系統: 實際為 %d 筆資料和 %d 個欄位，預期為 %d 筆資料和至少 %d 個欄位。"
+msgstr "無法識別系統: 收到 %d 列和 %d 欄，預期 %d 列和 %d 或更多欄。"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:467
 #, c-format
@@ -28590,7 +28590,7 @@ msgstr "無法建立複寫槽 \"%s\": %s"
 #: replication/libpqwalreceiver/libpqwalreceiver.c:1025
 #, c-format
 msgid "Could not create replication slot \"%s\": got %d rows and %d fields, expected %d rows and %d fields."
-msgstr "無法建立複寫槽 \"%1$s\": 實際為 %2$d 筆資料和 %3$d 個欄位，預期為 %4$d 筆資料和 %5$d 個欄位。"
+msgstr "無法建立複寫槽 \"%1$s\": 收到 %2$d 列和 %3$d 欄，預期 %4$d 列和 %5$d 欄。"
 
 #: replication/libpqwalreceiver/libpqwalreceiver.c:1077
 #, c-format
@@ -31130,7 +31130,7 @@ msgstr "無效的二進位整數"
 #: scan.l:1206
 #, c-format
 msgid "%s at end of input"
-msgstr "在輸入末端發生 %s"
+msgstr "輸入結尾發生 %s"
 
 #  translator: first %s is typically "syntax error"
 # scan.l:629
@@ -31822,17 +31822,17 @@ msgstr "在暫存檔案目錄中發現非預期檔案: \"%s\""
 #: storage/file/fd.c:3552
 #, c-format
 msgid "syncing data directory (syncfs), elapsed time: %ld.%02d s, current path: %s"
-msgstr "正在同步資料目錄 (syncfs)，已用時間: %ld.%02d 秒，目前路徑: %s"
+msgstr "正在同步資料目錄 (syncfs)，已用時間: %ld.%02d 秒, 目前路徑: %s"
 
 #: storage/file/fd.c:3779
 #, c-format
 msgid "syncing data directory (pre-fsync), elapsed time: %ld.%02d s, current path: %s"
-msgstr "正在同步資料目錄 (pre-fsync)，已用時間: %ld.%02d 秒，目前路徑: %s"
+msgstr "正在同步資料目錄 (pre-fsync)，已用時間: %ld.%02d 秒, 目前路徑: %s"
 
 #: storage/file/fd.c:3811
 #, c-format
 msgid "syncing data directory (fsync), elapsed time: %ld.%02d s, current path: %s"
-msgstr "正在同步資料目錄 (fsync)，已用時間: %ld.%02d 秒，目前路徑: %s"
+msgstr "正在同步資料目錄 (fsync)，已用時間: %ld.%02d 秒, 目前路徑: %s"
 
 # commands/tablespace.c:386 commands/tablespace.c:483
 #: storage/file/fd.c:4000
@@ -31864,12 +31864,12 @@ msgstr "由於 %2$s 過小，不支援對資料使用 \"%1$s\"。"
 #: storage/file/reinit.c:145
 #, c-format
 msgid "resetting unlogged relations (init), elapsed time: %ld.%02d s, current path: %s"
-msgstr "正在重設不記錄 WAL 的關聯 (初始化)，已用時間: %ld.%02d 秒，目前路徑: %s"
+msgstr "正在重設不記錄 WAL 的關聯 (初始化)，已用時間: %ld.%02d 秒, 目前路徑: %s"
 
 #: storage/file/reinit.c:148
 #, c-format
 msgid "resetting unlogged relations (cleanup), elapsed time: %ld.%02d s, current path: %s"
-msgstr "正在重設不記錄 WAL 的關聯 (清理)，已用時間: %ld.%02d 秒，目前路徑: %s"
+msgstr "正在重設不記錄 WAL 的關聯 (清理)，已用時間: %ld.%02d 秒, 目前路徑: %s"
 
 #: storage/file/sharedfileset.c:73
 #, c-format
@@ -33303,7 +33303,7 @@ msgstr "伺服器行程的命令列引數無效: %s"
 #: tcop/postgres.c:4110 tcop/postgres.c:4116
 #, c-format
 msgid "Try \"%s --help\" for more information."
-msgstr "執行 \"%s --help\" 顯示更多資訊。"
+msgstr "用 \"%s --help\" 取得更多資訊。"
 
 # tcop/postgres.c:2650
 #: tcop/postgres.c:4114
@@ -33798,7 +33798,7 @@ msgstr "無法開啟統計資料暫存檔 \"%s\": %m"
 #: utils/activity/pgstat.c:1785
 #, c-format
 msgid "could not write temporary statistics file \"%s\": %m"
-msgstr "無法寫入暫存統計資料檔 \"%s\": %m"
+msgstr "無法寫入統計資料暫存檔 \"%s\": %m"
 
 # postmaster/pgstat.c:2347
 #: utils/activity/pgstat.c:1795
@@ -35766,7 +35766,7 @@ msgstr "不能在陣列上呼叫 %s"
 #: utils/adt/jsonfuncs.c:729
 #, c-format
 msgid "JSON data, line %d: %s%s%s"
-msgstr "JSON 資料，第 %d 行: %s%s%s"
+msgstr "JSON 資料, 第 %d 行: %s%s%s"
 
 # parser/parse_target.c:292
 #: utils/adt/jsonfuncs.c:1885 utils/adt/jsonfuncs.c:1922
@@ -36232,7 +36232,7 @@ msgstr "levenshtein 引數超過 %d 個字元的最大長度"
 #: utils/adt/like.c:150
 #, c-format
 msgid "could not determine which collation to use for LIKE"
-msgstr "無法確定用於 LIKE 的定序"
+msgstr "無法判斷 LIKE 該用何種定序"
 
 # utils/adt/array_userfuncs.c:50
 #: utils/adt/like.c:181 utils/adt/like_support.c:1106
@@ -36977,7 +36977,7 @@ msgstr "ICU 區域 \"%s\" 的語言 \"%s\" 未知"
 #: utils/adt/pg_locale_icu.c:428
 #, c-format
 msgid "could not get language from locale \"%s\": %s"
-msgstr "無法從區域設定 \"%s\" 獲得語言: %s"
+msgstr "無法從區域 \"%s\" 取得語言: %s"
 
 # access/transam/xlog.c:3170 access/transam/xlog.c:3319
 #: utils/adt/pg_locale_icu.c:469 utils/adt/pg_locale_icu.c:486
@@ -37495,7 +37495,7 @@ msgstr "匿名複合型別輸入未實作"
 #: utils/adt/rowtypes.c:227 utils/adt/rowtypes.c:285 utils/adt/rowtypes.c:296
 #, c-format
 msgid "malformed record literal: \"%s\""
-msgstr "記錄字面值的格式不正確: \"%s\""
+msgstr "格式錯誤的記錄字面值: \"%s\""
 
 # utils/adt/rowtypes.c:126
 #: utils/adt/rowtypes.c:159
@@ -37616,7 +37616,7 @@ msgstr "TIMESTAMP(%d)%s 精確度已降至允許的最大值 %d"
 #: utils/adt/timestamp.c:196 utils/adt/timestamp.c:453
 #, c-format
 msgid "timestamp out of range: \"%s\""
-msgstr "timestamp 超過範圍: \"%s\""
+msgstr "timestamp 超出範圍: \"%s\""
 
 # utils/adt/timestamp.c:271
 #: utils/adt/timestamp.c:391
@@ -38566,7 +38566,7 @@ msgstr " 在第 %d 個字元處"
 # utils/error/elog.c:1504
 #: utils/error/elog.c:3707 utils/error/elog.c:3714
 msgid "DETAIL:  "
-msgstr "詳細資訊:  "
+msgstr "詳情:  "
 
 # utils/error/elog.c:1511
 #: utils/error/elog.c:3721
@@ -39632,7 +39632,7 @@ msgstr "檔案位置"
 # utils/misc/guc.c:243
 #: utils/misc/guc_tables.c:734
 msgid "Connections and Authentication / Connection Settings"
-msgstr "連線和驗證/連線設定"
+msgstr "連線與驗證 / 連線設定"
 
 # utils/misc/guc.c:243
 #: utils/misc/guc_tables.c:735

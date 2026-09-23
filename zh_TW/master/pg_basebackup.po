@@ -32,7 +32,7 @@ msgstr "警告: "
 #: ../../../src/common/logging.c:315 ../../../src/common/logging.c:317
 #, c-format
 msgid "detail: "
-msgstr "詳細內容: "
+msgstr "詳情: "
 
 #: ../../../src/common/logging.c:324 ../../../src/common/logging.c:326
 #, c-format
@@ -174,7 +174,7 @@ msgstr "無法寫入檔案 \"%s\": %m"
 #: ../../common/file_utils.c:510 pg_recvlogical.c:214
 #, c-format
 msgid "could not fsync file \"%s\": %m"
-msgstr "無法 fsync 檔案 \"%s\": %m"
+msgstr "無法對檔案 \"%s\" 執行 fsync: %m"
 
 # commands/sequence.c:798 executor/execGrouping.c:328
 # executor/execGrouping.c:388 executor/nodeIndexscan.c:1051 lib/dllist.c:43
@@ -260,7 +260,7 @@ msgstr "無法讀取目錄 \"%s\": %m"
 #: ../../common/file_utils.c:520 pg_basebackup.c:2332 walmethods.c:462
 #, c-format
 msgid "could not rename file \"%s\" to \"%s\": %m"
-msgstr "無法將檔案 \"%s\" 更名為 \"%s\": %m"
+msgstr "無法將檔案 \"%s\" 重新命名為 \"%s\": %m"
 
 # port/win32/security.c:39
 #: ../../common/restricted_token.c:60
@@ -567,7 +567,7 @@ msgstr "注入復原設定時出現非預期的狀態"
 #: pg_basebackup.c:246
 #, c-format
 msgid "removing data directory \"%s\""
-msgstr "刪除資料目錄 \"%s\""
+msgstr "正在刪除資料目錄 \"%s\""
 
 #: pg_basebackup.c:248
 #, c-format
@@ -577,7 +577,7 @@ msgstr "無法刪除資料目錄"
 #: pg_basebackup.c:252
 #, c-format
 msgid "removing contents of data directory \"%s\""
-msgstr "刪除資料目錄 \"%s\" 的內容"
+msgstr "正在刪除資料目錄 \"%s\" 的內容"
 
 #: pg_basebackup.c:254
 #, c-format
@@ -587,7 +587,7 @@ msgstr "無法刪除資料目錄的內容"
 #: pg_basebackup.c:259
 #, c-format
 msgid "removing WAL directory \"%s\""
-msgstr "刪除 WAL 目錄 \"%s\""
+msgstr "正在刪除 WAL 目錄 \"%s\""
 
 #: pg_basebackup.c:261
 #, c-format
@@ -597,7 +597,7 @@ msgstr "無法刪除 WAL 目錄"
 #: pg_basebackup.c:265
 #, c-format
 msgid "removing contents of WAL directory \"%s\""
-msgstr "刪除 WAL 目錄 \"%s\" 的內容"
+msgstr "正在刪除 WAL 目錄 \"%s\" 的內容"
 
 #: pg_basebackup.c:267
 #, c-format
@@ -607,12 +607,12 @@ msgstr "無法刪除 WAL 目錄的內容"
 #: pg_basebackup.c:273
 #, c-format
 msgid "data directory \"%s\" not removed at user's request"
-msgstr "使用者要求不刪除資料目錄 \"%s\""
+msgstr "根據使用者要求，未刪除資料目錄 \"%s\""
 
 #: pg_basebackup.c:276
 #, c-format
 msgid "WAL directory \"%s\" not removed at user's request"
-msgstr "使用者要求不刪除 WAL 目錄 \"%s\""
+msgstr "根據使用者要求，未刪除 WAL 目錄 \"%s\""
 
 #: pg_basebackup.c:280
 #, c-format
@@ -832,7 +832,7 @@ msgstr "      --no-estimate-size 不在伺服器端估算備份大小\n"
 #: pg_basebackup.c:433
 #, c-format
 msgid "      --no-manifest      suppress generation of backup manifest\n"
-msgstr "      --no-manifest      禁止產生備份清單\n"
+msgstr "      --no-manifest      不產生備份清單\n"
 
 #: pg_basebackup.c:434
 #, c-format
@@ -1277,7 +1277,7 @@ msgstr "子執行緒結束，錯誤碼 %u"
 #: pg_basebackup.c:2293
 #, c-format
 msgid "syncing data to disk ..."
-msgstr "同步資料到磁碟 ..."
+msgstr "正在同步資料到磁碟 ..."
 
 #: pg_basebackup.c:2318
 #, c-format
@@ -1512,7 +1512,7 @@ msgstr "  -P, --publisher-server=CONNSTR  發布伺服器連接字串\n"
 #: pg_createsubscriber.c:298
 #, c-format
 msgid "  -s, --socketdir=DIR             socket directory to use (default current dir.)\n"
-msgstr "  -s, --socketdir=DIR             使用的 socket 目錄 (預設為目前目錄)\n"
+msgstr "  -s, --socketdir=DIR             使用的 socket 目錄(預設為目前目錄)\n"
 
 #: pg_createsubscriber.c:299
 #, c-format
@@ -1532,7 +1532,7 @@ msgstr "  -U, --subscriber-username=NAME  訂閱伺服器連線使用的使用�
 #: pg_createsubscriber.c:302
 #, c-format
 msgid "  -v, --verbose                   output verbose messages\n"
-msgstr "  -v, --verbose                   輸出詳細訊息\n"
+msgstr "  -v, --verbose                   顯示詳細訊息\n"
 
 #: pg_createsubscriber.c:303
 #, c-format
@@ -2303,7 +2303,7 @@ msgstr "      --synchronous      寫入預寫式日誌後立即排清\n"
 msgid ""
 "  -Z, --compress=METHOD[:DETAIL]\n"
 "                         compress as specified\n"
-msgstr "  -Z, --compress=METHOD[:DETAIL]\n                         指定壓縮方式\n"
+msgstr "  -Z, --compress=METHOD[:DETAIL]\n                         根據指定的方式壓縮\n"
 
 #: pg_receivewal.c:103
 #, c-format
@@ -2776,7 +2776,7 @@ msgstr "無法解析下一個時間軸的起始點 \"%s\""
 #: receivelog.c:781 receivelog.c:1036 walmethods.c:1206
 #, c-format
 msgid "could not fsync file \"%s\": %s"
-msgstr "無法 fsync 檔案 \"%s\": %s"
+msgstr "無法對檔案 \"%s\" 執行 fsync: %s"
 
 #: receivelog.c:1097
 #, c-format

@@ -32,7 +32,7 @@ msgstr "警告: "
 #: ../../../src/common/logging.c:315 ../../../src/common/logging.c:317
 #, c-format
 msgid "detail: "
-msgstr "詳細內容: "
+msgstr "詳情: "
 
 #: ../../../src/common/logging.c:324 ../../../src/common/logging.c:326
 #, c-format
@@ -613,7 +613,7 @@ msgstr "位於 %3$X/%4$08X 的續接記錄長度 %1$u 無效(預期為 %2$lld)"
 #: xlogreader.c:1154
 #, c-format
 msgid "invalid resource manager ID %u at %X/%08X"
-msgstr "位於 %2$X/%3$08X 的無效資源管理員 ID %1$u"
+msgstr "%2$X/%3$08X 處的資源管理員 ID %1$u 無效"
 
 # access/transam/xlog.c:2458
 #: xlogreader.c:1167 xlogreader.c:1183
@@ -655,7 +655,7 @@ msgstr "WAL 檔案來自不同的資料庫系統: 資料頁標頭中的 XLOG_BLC
 #: xlogreader.c:1332
 #, c-format
 msgid "unexpected pageaddr %X/%08X in WAL segment %s, LSN %X/%08X, offset %u"
-msgstr "非預期的 pageaddr %X/%08X 位於 WAL 片段 %s, LSN %X/%08X, 位移 %u"
+msgstr "WAL 片段 %3$s 中出現非預期的 pageaddr %1$X/%2$08X, LSN %4$X/%5$08X, 位移 %6$u"
 
 #: xlogreader.c:1358
 #, c-format
@@ -670,42 +670,42 @@ msgstr "位於 %2$X/%3$08X 的 block_id %1$u 順序錯誤"
 #: xlogreader.c:1814
 #, c-format
 msgid "BKPBLOCK_HAS_DATA set, but no data included at %X/%08X"
-msgstr "設定了 BKPBLOCK_HAS_DATA，但在 %X/%08X 沒有包含任何資料"
+msgstr "%X/%08X 處已設定 BKPBLOCK_HAS_DATA，但未包含資料"
 
 #: xlogreader.c:1821
 #, c-format
 msgid "BKPBLOCK_HAS_DATA not set, but data length is %d at %X/%08X"
-msgstr "未設定 BKPBLOCK_HAS_DATA，但在 %2$X/%3$08X 的資料長度為 %1$d"
+msgstr "未設定 BKPBLOCK_HAS_DATA，但 %2$X/%3$08X 處的資料長度為 %1$d"
 
 #: xlogreader.c:1857
 #, c-format
 msgid "BKPIMAGE_HAS_HOLE set, but hole offset %d length %d block image length %d at %X/%08X"
-msgstr "設定了 BKPIMAGE_HAS_HOLE，但在 %4$X/%5$08X 的空洞位移為 %1$d，長度為 %2$d，區塊影像長度為 %3$d"
+msgstr "已設定 BKPIMAGE_HAS_HOLE，但 %4$X/%5$08X 處的空洞位移為 %1$d，長度為 %2$d，區塊映像長度為 %3$d"
 
 #: xlogreader.c:1873
 #, c-format
 msgid "BKPIMAGE_HAS_HOLE not set, but hole offset %d length %d at %X/%08X"
-msgstr "未設定 BKPIMAGE_HAS_HOLE，但在 %3$X/%4$08X 的空洞位移為 %1$d，長度為 %2$d"
+msgstr "未設定 BKPIMAGE_HAS_HOLE，但 %3$X/%4$08X 處的空洞位移為 %1$d，長度為 %2$d"
 
 #: xlogreader.c:1887
 #, c-format
 msgid "BKPIMAGE_COMPRESSED set, but block image length %d at %X/%08X"
-msgstr "設定了 BKPIMAGE_COMPRESSED，但在 %2$X/%3$08X 的區塊影像長度為 %1$d"
+msgstr "已設定 BKPIMAGE_COMPRESSED，但 %2$X/%3$08X 處的區塊映像長度為 %1$d"
 
 #: xlogreader.c:1902
 #, c-format
 msgid "neither BKPIMAGE_HAS_HOLE nor BKPIMAGE_COMPRESSED set, but block image length is %d at %X/%08X"
-msgstr "既未設定 BKPIMAGE_HAS_HOLE，也未設定 BKPIMAGE_COMPRESSED，但在 %2$X/%3$08X 的區塊影像長度為 %1$d"
+msgstr "既未設定 BKPIMAGE_HAS_HOLE，也未設定 BKPIMAGE_COMPRESSED，但 %2$X/%3$08X 處的區塊映像長度為 %1$d"
 
 #: xlogreader.c:1918
 #, c-format
 msgid "BKPBLOCK_SAME_REL set but no previous rel at %X/%08X"
-msgstr "設定了 BKPBLOCK_SAME_REL，但在 %X/%08X 沒有先前的關聯"
+msgstr "%X/%08X 處已設定 BKPBLOCK_SAME_REL，但沒有先前的關聯"
 
 #: xlogreader.c:1930
 #, c-format
 msgid "invalid block_id %u at %X/%08X"
-msgstr "位於 %2$X/%3$08X 的無效 block_id %1$u"
+msgstr "%2$X/%3$08X 處的 block_id %1$u 無效"
 
 #: xlogreader.c:1997
 #, c-format
@@ -720,27 +720,27 @@ msgstr "在 WAL 記錄中找不到具有 ID %d 的備份區塊"
 #: xlogreader.c:2107
 #, c-format
 msgid "could not restore image at %X/%08X with invalid block %d specified"
-msgstr "無法還原 %X/%08X 處的影像，因為指定的區塊 %d 無效"
+msgstr "無法還原 %X/%08X 處的映像，因為指定的區塊 %d 無效"
 
 #: xlogreader.c:2114
 #, c-format
 msgid "could not restore image at %X/%08X with invalid state, block %d"
-msgstr "無法還原處於無效狀態的影像, 位置 %X/%08X, 區塊 %d"
+msgstr "無法還原 %X/%08X 處的映像，狀態無效, 區塊 %d"
 
 #: xlogreader.c:2141 xlogreader.c:2158
 #, c-format
 msgid "could not restore image at %X/%08X compressed with %s not supported by build, block %d"
-msgstr "無法還原用此建置版本不支援的壓縮方法 %3$s 壓縮的影像, 位置 %1$X/%2$08X, 區塊 %4$d"
+msgstr "無法還原 %X/%08X 處使用 %s 壓縮的映像，此建置版本不支援該壓縮方式, 區塊 %d"
 
 #: xlogreader.c:2167
 #, c-format
 msgid "could not restore image at %X/%08X compressed with unknown method, block %d"
-msgstr "無法還原使用未知方法壓縮的影像, 位置 %X/%08X, 區塊 %d"
+msgstr "無法還原 %X/%08X 處使用未知方法壓縮的映像, 區塊 %d"
 
 #: xlogreader.c:2175
 #, c-format
 msgid "could not decompress image at %X/%08X, block %d"
-msgstr "無法解壓縮影像, 位置 %X/%08X, 區塊 %d"
+msgstr "無法解壓縮 %X/%08X 處的映像, 區塊 %d"
 
 #, c-format
 #~ msgid "WAL segment size must be a power of two between 1 MB and 1 GB, but the WAL file \"%s\" header specifies %d byte"

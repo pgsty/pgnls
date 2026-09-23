@@ -43,7 +43,7 @@ msgstr "找不到可執行的 \"%s\""
 #: ../../common/exec.c:253
 #, c-format
 msgid "could not resolve path \"%s\" to absolute form: %m"
-msgstr "無法解析路徑 \"%s\" 為絕對路徑: %m"
+msgstr "無法將路徑 \"%s\" 解析為絕對路徑: %m"
 
 #: ../../common/exec.c:364
 #, c-format
@@ -152,7 +152,7 @@ msgstr "子行程結束，結束碼 %d"
 #: ../../common/wait_error.c:72
 #, c-format
 msgid "child process was terminated by exception 0x%X"
-msgstr "子行程因異常 0x%X 而終止"
+msgstr "子行程被例外 0x%X 終止"
 
 #: ../../common/wait_error.c:76
 #, c-format
@@ -162,7 +162,7 @@ msgstr "子行程因訊號 %d 而終止: %s"
 #: ../../common/wait_error.c:82
 #, c-format
 msgid "child process exited with unrecognized status %d"
-msgstr "子行程結束，不明狀態碼 %d"
+msgstr "子行程已結束，狀態 %d 無法識別"
 
 #: ../../port/path.c:870
 #, c-format
@@ -253,7 +253,7 @@ msgstr "%2$s 需要程式 \"%1$s\"，但在與 \"%3$s\" 相同的目錄中找不
 #: pg_ctl.c:894
 #, c-format
 msgid "program \"%s\" was found by \"%s\" but was not the same version as %s\n"
-msgstr "程式 \"%s\" 被 \"%s\" 找到，但版本與 %s 不相同\n"
+msgstr "程式 \"%s\" 被 \"%s\" 找到，但版本不同於 %s\n"
 
 #: pg_ctl.c:926
 #, c-format
@@ -484,7 +484,7 @@ msgstr "%s: 無法發送訊號 %d(PID: %d): %m\n"
 #: pg_ctl.c:1441
 #, c-format
 msgid "%s: could not find own program executable\n"
-msgstr "%s: 找不到自身的程式執行檔\n"
+msgstr "%s: 找不到自身程式的執行檔\n"
 
 #: pg_ctl.c:1451
 #, c-format
@@ -554,7 +554,7 @@ msgstr "%s: 無法配置 SID: 錯誤碼 %lu\n"
 #: pg_ctl.c:1839
 #, c-format
 msgid "%s: could not create restricted token: error code %lu\n"
-msgstr "%s: 無法建立受限制的權杖: 錯誤碼 %lu\n"
+msgstr "%s: 無法建立受限權杖: 錯誤碼 %lu\n"
 
 #: pg_ctl.c:1920
 #, c-format
@@ -867,7 +867,7 @@ msgstr "%s: 無法使用命令 \"%s\" 確定資料目錄\n"
 #: pg_ctl.c:2191
 #, c-format
 msgid "%s: control file appears to be corrupt\n"
-msgstr "%s: 控制檔似乎損壞\n"
+msgstr "%s: 控制檔似乎已損毀\n"
 
 #: pg_ctl.c:2259
 #, c-format

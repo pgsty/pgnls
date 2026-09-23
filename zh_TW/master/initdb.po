@@ -32,7 +32,7 @@ msgstr "警告: "
 #: ../../../src/common/logging.c:315 ../../../src/common/logging.c:317
 #, c-format
 msgid "detail: "
-msgstr "詳細內容: "
+msgstr "詳情: "
 
 #: ../../../src/common/logging.c:324 ../../../src/common/logging.c:326
 #, c-format
@@ -120,7 +120,7 @@ msgstr "記憶體不足\n"
 #: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:159
 #, c-format
 msgid "cannot duplicate null pointer (internal error)\n"
-msgstr "不能複製空指標（內部錯誤）\n"
+msgstr "不能複製空指標(內部錯誤)\n"
 
 #: ../../common/fe_memutils.c:209
 #, c-format
@@ -191,7 +191,7 @@ msgstr "無法對檔案 \"%s\" 執行 fsync: %m"
 #: ../../common/file_utils.c:520
 #, c-format
 msgid "could not rename file \"%s\" to \"%s\": %m"
-msgstr "無法將檔案 \"%s\" 更名為 \"%s\": %m"
+msgstr "無法將檔案 \"%s\" 重新命名為 \"%s\": %m"
 
 # access/transam/slru.c:930 commands/tablespace.c:529
 # commands/tablespace.c:694 utils/adt/misc.c:174
@@ -284,7 +284,7 @@ msgstr "子行程結束，結束碼 %d"
 #: ../../common/wait_error.c:72
 #, c-format
 msgid "child process was terminated by exception 0x%X"
-msgstr "子行程因異常 0x%X 而終止"
+msgstr "子行程被例外 0x%X 終止"
 
 #: ../../common/wait_error.c:76
 #, c-format
@@ -322,13 +322,13 @@ msgstr "不能同時使用 %s 和 %s 選項"
 #: ../../fe_utils/string_utils.c:585
 #, c-format
 msgid "shell command argument contains a newline or carriage return: \"%s\"\n"
-msgstr "shell 命令的參數包含換行或歸位字元: \"%s\"\n"
+msgstr "shell 命令的參數包含換行或歸位符號: \"%s\"\n"
 
 # commands/copy.c:828
 #: ../../fe_utils/string_utils.c:758
 #, c-format
 msgid "database name contains a newline or carriage return: \"%s\"\n"
-msgstr "資料庫名稱包含換行或歸位字元: \"%s\"\n"
+msgstr "資料庫名稱包含換行或歸位符號: \"%s\"\n"
 
 #: ../../port/dirmod.c:287
 #, c-format
@@ -368,13 +368,13 @@ msgstr "無法還原舊的區域 \"%s\""
 #: initdb.c:678 initdb.c:1694
 #, c-format
 msgid "could not open file \"%s\" for reading: %m"
-msgstr "無法開啟檔案 \"%s\" 以進行讀取: %m"
+msgstr "無法開啟檔案 \"%s\" 以讀取: %m"
 
 # commands/copy.c:1094
 #: initdb.c:722 initdb.c:1030 initdb.c:1050
 #, c-format
 msgid "could not open file \"%s\" for writing: %m"
-msgstr "無法開啟檔案 \"%s\" 以進行寫入: %m"
+msgstr "無法開啟檔案 \"%s\" 以寫入: %m"
 
 # access/transam/xlog.c:5319 access/transam/xlog.c:5439
 #: initdb.c:726 initdb.c:1033 initdb.c:1052
@@ -821,7 +821,7 @@ msgstr "  -L DIRECTORY              指定尋找輸入檔案的路徑\n"
 #: initdb.c:2557
 #, c-format
 msgid "  -n, --no-clean            do not clean up after errors\n"
-msgstr "  -n, --no-clean            錯誤發生後不執行清理動作\n"
+msgstr "  -n, --no-clean            發生錯誤後不清理\n"
 
 #: initdb.c:2558
 #, c-format
@@ -1128,7 +1128,7 @@ msgstr "正在執行引導後的初始化程序 ... "
 #: initdb.c:3277
 #, c-format
 msgid "-c %s requires a value"
-msgstr "-c %s 需要提供值"
+msgstr "-c %s 需要值"
 
 #: initdb.c:3302
 #, c-format
@@ -1143,12 +1143,12 @@ msgstr "正在以不清理模式執行。出錯後不會進行清理。\n"
 #: initdb.c:3379
 #, c-format
 msgid "unrecognized locale provider: %s"
-msgstr "未能識別的區域提供者: %s"
+msgstr "無法識別的區域提供者: %s"
 
 #: initdb.c:3422
 #, c-format
 msgid "too many command-line arguments (first is \"%s\")"
-msgstr "命令列參數過多（第一個多餘參數是 \"%s\"）"
+msgstr "命令列參數過多(第一個多餘參數是 \"%s\")"
 
 #: initdb.c:3429 initdb.c:3433 initdb.c:3437
 #, c-format

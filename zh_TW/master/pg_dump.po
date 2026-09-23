@@ -32,7 +32,7 @@ msgstr "警告: "
 #: ../../../src/common/logging.c:315 ../../../src/common/logging.c:317
 #, c-format
 msgid "detail: "
-msgstr "詳細內容: "
+msgstr "詳情: "
 
 #: ../../../src/common/logging.c:324 ../../../src/common/logging.c:326
 #, c-format
@@ -210,7 +210,7 @@ msgstr "無法同步檔案 \"%s\" 所在的檔案系統: %m"
 #: ../../common/file_utils.c:123 ../../common/file_utils.c:588
 #, c-format
 msgid "could not stat file \"%s\": %m"
-msgstr "無法取得檔案狀態 \"%s\": %m"
+msgstr "無法取得檔案 \"%s\" 的狀態: %m"
 
 #: ../../common/file_utils.c:133 ../../common/file_utils.c:243
 #: ../../fe_utils/option_utils.c:99
@@ -237,7 +237,7 @@ msgstr "無法讀取目錄 \"%s\": %m"
 #: ../../common/file_utils.c:440 ../../common/file_utils.c:510
 #, c-format
 msgid "could not fsync file \"%s\": %m"
-msgstr "無法 fsync 檔案 \"%s\": %m"
+msgstr "無法對檔案 \"%s\" 執行 fsync: %m"
 
 # access/transam/xlog.c:3037 access/transam/xlog.c:3819
 # access/transam/xlog.c:3862 commands/user.c:282 commands/user.c:412
@@ -250,12 +250,12 @@ msgstr "無法將檔案 \"%s\" 重新命名為 \"%s\": %m"
 #: ../../common/wait_error.c:55
 #, c-format
 msgid "command not executable"
-msgstr "無法執行的命令"
+msgstr "無法執行指令"
 
 #: ../../common/wait_error.c:59
 #, c-format
 msgid "command not found"
-msgstr "找不到命令"
+msgstr "找不到指令"
 
 #: ../../common/wait_error.c:64
 #, c-format
@@ -265,7 +265,7 @@ msgstr "子行程結束，結束碼 %d"
 #: ../../common/wait_error.c:72
 #, c-format
 msgid "child process was terminated by exception 0x%X"
-msgstr "子行程因異常 0x%X 而終止"
+msgstr "子行程被例外 0x%X 終止"
 
 #: ../../common/wait_error.c:76
 #, c-format
@@ -1029,7 +1029,7 @@ msgstr "還原 OID 為 %u 的大物件"
 #: pg_backup_archiver.c:1523
 #, c-format
 msgid "could not create large object %u: %s"
-msgstr "無法建立大物件 %u: %s"
+msgstr "無法建立大型物件 %u: %s"
 
 # fe-lobj.c:410
 # fe-lobj.c:495
@@ -1657,7 +1657,7 @@ msgstr "on_exit_nicely 槽已用盡"
 #: pg_dump.c:819 pg_dumpall.c:392 pg_restore.c:340
 #, c-format
 msgid "too many command-line arguments (first is \"%s\")"
-msgstr "命令列引數過多(第一個多餘引數是 \"%s\")"
+msgstr "命令列參數過多(第一個多餘參數是 \"%s\")"
 
 #: pg_dump.c:856
 #, c-format
@@ -1752,7 +1752,7 @@ msgstr "用法:\n"
 #: pg_dump.c:1295
 #, c-format
 msgid "  %s [OPTION]... [DBNAME]\n"
-msgstr "  %s [選項]... [資料庫名]\n"
+msgstr "  %s [選項]... [資料庫名稱]\n"
 
 #: pg_dump.c:1297 pg_dumpall.c:708 pg_restore.c:539
 #, c-format
@@ -2688,7 +2688,7 @@ msgstr "無法識別的條件約束型別: %c"
 #: pg_dump.c:19331
 #, c-format
 msgid "unrecognized sequence type: %s"
-msgstr "無法辨識的序列型別: %s"
+msgstr "無法識別的序列型別: %s"
 
 #: pg_dump.c:19464 pg_dump.c:19702
 #, c-format
@@ -2795,7 +2795,7 @@ msgstr "%2$s 需要程式 \"%1$s\"，但在與 \"%3$s\" 相同的目錄中找不
 #: pg_dumpall.c:242
 #, c-format
 msgid "program \"%s\" was found by \"%s\" but was not the same version as %s"
-msgstr "程式 \"%s\" 被 \"%s\" 找到，但版本與 %s 不同"
+msgstr "程式 \"%s\" 被 \"%s\" 找到，但版本不同於 %s"
 
 #: pg_dumpall.c:401
 #, c-format
