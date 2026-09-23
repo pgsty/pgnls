@@ -30,7 +30,7 @@ msgstr "警告: "
 #: ../../../src/common/logging.c:294
 #, c-format
 msgid "detail: "
-msgstr "詳細內容: "
+msgstr "詳情: "
 
 #: ../../../src/common/logging.c:301
 #, c-format
@@ -46,7 +46,7 @@ msgstr "%13.3f ops/sec  %6.0f usecs/op\n"
 #: pg_test_fsync.c:50
 #, c-format
 msgid "could not create thread for alarm"
-msgstr "無法為警報建立執行緒"
+msgstr "無法建立定時通知執行緒"
 
 #: pg_test_fsync.c:95
 #, c-format
@@ -56,7 +56,7 @@ msgstr "%s: %m"
 #: pg_test_fsync.c:159
 #, c-format
 msgid "Usage: %s [-f FILENAME] [-s SECS-PER-TEST]\n"
-msgstr "用法: %s [-f FILENAME] [-s SECS-PER-TEST]\n"
+msgstr "用法: %s [-f 檔案名稱] [-s 每次測試秒數]\n"
 
 #: pg_test_fsync.c:185
 #, c-format
@@ -77,7 +77,7 @@ msgstr "%s 必須在範圍 %u..%u 內"
 #: pg_test_fsync.c:205
 #, c-format
 msgid "too many command-line arguments (first is \"%s\")"
-msgstr "命令列參數過多(第一個是 \"%s\")"
+msgstr "命令列參數過多(第一個多餘參數是 \"%s\")"
 
 #: pg_test_fsync.c:211
 #, c-format
@@ -88,17 +88,17 @@ msgstr[0] "每個測試 %u 秒\n"
 #: pg_test_fsync.c:216
 #, c-format
 msgid "O_DIRECT supported on this platform for open_datasync and open_sync.\n"
-msgstr "此平臺的 open_datasync 和 open_sync 支援 O_DIRECT。\n"
+msgstr "此平台的 open_datasync 和 open_sync 支援 O_DIRECT。\n"
 
 #: pg_test_fsync.c:218
 #, c-format
 msgid "F_NOCACHE supported on this platform for open_datasync and open_sync.\n"
-msgstr "此平臺的 open_datasync 和 open_sync 支援 F_NOCACHE。\n"
+msgstr "此平台的 open_datasync 和 open_sync 支援 F_NOCACHE。\n"
 
 #: pg_test_fsync.c:220
 #, c-format
 msgid "Direct I/O is not supported on this platform.\n"
-msgstr "此平臺不支援直接 I/O。\n"
+msgstr "此平台不支援直接 I/O。\n"
 
 #: pg_test_fsync.c:245 pg_test_fsync.c:336 pg_test_fsync.c:361
 #: pg_test_fsync.c:385 pg_test_fsync.c:529 pg_test_fsync.c:541
@@ -123,14 +123,14 @@ msgstr "fsync 失敗"
 msgid ""
 "\n"
 "Compare file sync methods using one %dkB write:\n"
-msgstr "\n比較使用一個 %dkB 寫入的檔案同步方式:\n"
+msgstr "\n比較使用一次 %dkB 寫入的檔案同步方式:\n"
 
 #: pg_test_fsync.c:294
 #, c-format
 msgid ""
 "\n"
 "Compare file sync methods using two %dkB writes:\n"
-msgstr "\n比較使用兩個 %dkB 寫入的檔案同步方式:\n"
+msgstr "\n比較使用兩次 %dkB 寫入的檔案同步方式:\n"
 
 #: pg_test_fsync.c:295
 #, c-format
@@ -192,14 +192,14 @@ msgstr "16 *  1kB open_sync 寫入"
 msgid ""
 "\n"
 "Test if fsync on non-write file descriptor is honored:\n"
-msgstr "\n測試 fsync 非寫入檔案描述符是否被尊重:\n"
+msgstr "\n測試對未用於寫入的檔案描述符執行 fsync 是否生效:\n"
 
 #: pg_test_fsync.c:515
 #, c-format
 msgid ""
 "(If the times are similar, fsync() can sync data written on a different\n"
 "descriptor.)\n"
-msgstr "(如果時間相近，fsync() 可以同步被寫入不同描述符的資料。)\n"
+msgstr "(如果時間相近，fsync() 可以同步透過其他描述符寫入的資料。)\n"
 
 #: pg_test_fsync.c:580
 #, c-format

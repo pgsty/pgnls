@@ -32,7 +32,7 @@ msgstr "警告: "
 #: ../../../src/common/logging.c:297
 #, c-format
 msgid "detail: "
-msgstr "詳細內容: "
+msgstr "詳情: "
 
 #: ../../../src/common/logging.c:304
 #, c-format
@@ -54,18 +54,18 @@ msgstr "無法讀取執行檔 \"%s\": %m"
 #: ../../common/exec.c:225
 #, c-format
 msgid "could not find a \"%s\" to execute"
-msgstr "找不到要執行的 \"%s\""
+msgstr "找不到可執行的 \"%s\""
 
 # utils/error/elog.c:1128
 #: ../../common/exec.c:252
 #, c-format
 msgid "could not resolve path \"%s\" to absolute form: %m"
-msgstr "無法解析路徑 \"%s\" 為絕對路徑: %m"
+msgstr "無法將路徑 \"%s\" 解析為絕對路徑: %m"
 
 #: ../../common/exec.c:363 copy.c:326
 #, c-format
 msgid "could not execute command \"%s\": %m"
-msgstr "無法執行命令 \"%s\": %m"
+msgstr "無法執行指令 \"%s\": %m"
 
 # utils/init/miscinit.c:792 utils/misc/guc.c:5074
 #: ../../common/exec.c:375
@@ -76,7 +76,7 @@ msgstr "無法讀取命令 \"%s\" 的輸出: %m"
 #: ../../common/exec.c:378
 #, c-format
 msgid "no data was returned by command \"%s\""
-msgstr "命令 \"%s\" 未回傳任何資料"
+msgstr "命令 \"%s\" 未傳回任何資料"
 
 # fe-misc.c:991
 #: ../../common/exec.c:405
@@ -106,7 +106,7 @@ msgstr "記憶體不足\n"
 #: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:159
 #, c-format
 msgid "cannot duplicate null pointer (internal error)\n"
-msgstr "無法複製 null 指標(內部錯誤)\n"
+msgstr "不能複製空指標(內部錯誤)\n"
 
 #: ../../common/fe_memutils.c:209
 #, c-format
@@ -122,7 +122,7 @@ msgstr "無效的記憶體配置請求大小 %zu * %zu\n"
 #: ../../common/username.c:43
 #, c-format
 msgid "could not look up effective user ID %ld: %s"
-msgstr "無法查詢有效的使用者ID %ld: %s"
+msgstr "無法查詢有效使用者 ID %ld: %s"
 
 # commands/user.c:899 commands/user.c:1012 commands/user.c:1104
 # commands/user.c:1233 commands/variable.c:664 utils/cache/lsyscache.c:2064
@@ -160,12 +160,12 @@ msgstr "子行程被例外 0x%X 終止"
 #: ../../common/wait_error.c:76
 #, c-format
 msgid "child process was terminated by signal %d: %s"
-msgstr "子行程被訊號 %d 終止: %s"
+msgstr "子行程因訊號 %d 而終止: %s"
 
 #: ../../common/wait_error.c:82
 #, c-format
 msgid "child process exited with unrecognized status %d"
-msgstr "子行程結束，不明狀態代碼 %d"
+msgstr "子行程已結束，狀態 %d 無法識別"
 
 #: ../../fe_utils/cancel.c:186 ../../fe_utils/cancel.c:235
 msgid "Cancel request sent\n"
@@ -191,17 +191,17 @@ msgstr "已中斷\n"
 #: ../../fe_utils/print.c:3189
 #, c-format
 msgid "Cannot print table contents: number of cells %<PRIu64> is equal to or exceeds maximum %zu.\n"
-msgstr "無法列印表格內容: 儲存格數 %<PRIu64> 達到或超過上限 %zu。\n"
+msgstr "不能列印表格內容: 儲存格數 %<PRIu64> 達到或超過上限 %zu。\n"
 
 #: ../../fe_utils/print.c:3230
 #, c-format
 msgid "Cannot add header to table content: column count of %d exceeded.\n"
-msgstr "無法將標題新增至表格內容: 欄位數已超過 %d。\n"
+msgstr "不能將標題新增至表格內容: 欄位數已超過 %d。\n"
 
 #: ../../fe_utils/print.c:3273
 #, c-format
 msgid "Cannot add cell to table content: total cell count of %<PRIu64> exceeded.\n"
-msgstr "無法將儲存格新增至表格內容: 已超出總儲存格數 %<PRIu64>。\n"
+msgstr "不能將儲存格新增至表格內容: 已超出總儲存格數 %<PRIu64>。\n"
 
 #: ../../fe_utils/print.c:3531
 #, c-format
@@ -251,7 +251,7 @@ msgstr "\\%s: 忽略額外的參數 \"%s\""
 #: command.c:336
 #, c-format
 msgid "\\%s command ignored; use \\endif or Ctrl-C to exit current \\if block"
-msgstr "\\%s 命令被忽略；請使用 \\endif 或 Ctrl-C 結束當前的 \\if 區塊"
+msgstr "\\%s 命令被忽略；請使用 \\endif 或 Ctrl-C 結束目前的 \\if 區塊"
 
 # command.c:501
 # command.c:535
@@ -265,26 +265,26 @@ msgstr "\\%s 命令被忽略；請使用 \\endif 或 Ctrl-C 結束當前的 \\if
 #: command.c:2955 command.c:3215 command.c:3261 command.c:3301
 #, c-format
 msgid "\\%s: missing required argument"
-msgstr "\\%s 命令被忽略；請使用 \\endif 或 Ctrl-C 結束當前的 \\if 區塊"
+msgstr "\\%s: 缺少必要的參數"
 
 # command.c:240
 #: command.c:721
 #, c-format
 msgid "could not get home directory for user ID %ld: %s"
-msgstr "無法取得使用者ID %ld 的家目錄: %s"
+msgstr "無法取得使用者 ID %ld 的家目錄: %s"
 
 # command.c:256
 #: command.c:740
 #, c-format
 msgid "\\%s: could not change directory to \"%s\": %m"
-msgstr "%s: 無法變更目錄至 \"%s\": %m"
+msgstr "\\%s: 無法變更目錄至 \"%s\": %m"
 
 # common.c:636
 # common.c:871
 #: command.c:813
 #, c-format
 msgid "You are currently not connected to a database.\n"
-msgstr "目前未連線至資料庫。\n"
+msgstr "目前尚未連線至資料庫。\n"
 
 #: command.c:841
 msgid "Connection Information"
@@ -374,7 +374,7 @@ msgstr "SSL 程式庫"
 #: command.c:925 command.c:928 command.c:931 command.c:934 command.c:946
 #: command.c:950 command.c:4531 command.c:4532
 msgid "unknown"
-msgstr "unknown"
+msgstr "未知"
 
 # libpq/be-secure.c:294 libpq/be-secure.c:387
 #: command.c:927
@@ -406,7 +406,7 @@ msgstr "無"
 #: command.c:1358 command.c:1459 command.c:3294
 #, c-format
 msgid "no query buffer"
-msgstr "沒有查詢緩存區"
+msgstr "沒有查詢緩衝區"
 
 # commands/user.c:240 commands/user.c:371
 #: command.c:1391 command.c:6420
@@ -422,7 +422,7 @@ msgstr "沒有變更"
 #: command.c:1622
 #, c-format
 msgid "%s: invalid encoding name or conversion procedure not found"
-msgstr "%s: 無效的編碼名稱或找不到編碼轉換程序"
+msgstr "%s: 無效的編碼名稱或找不到編碼轉換函式"
 
 # commands/vacuum.c:2258 commands/vacuumlazy.c:489 commands/vacuumlazy.c:770
 # nodes/print.c:86 storage/lmgr/deadlock.c:888 tcop/postgres.c:3285
@@ -487,7 +487,7 @@ msgstr "\\endif: 沒有對應的 \\if"
 # command.c:598
 #: command.c:2502
 msgid "Query buffer is empty."
-msgstr "查詢緩存區是空的。"
+msgstr "查詢緩衝區是空的。"
 
 # command.c:915
 # command.c:939
@@ -500,7 +500,7 @@ msgstr "輸入使用者 \"%s\" 的新密碼: "
 
 #: command.c:2583
 msgid "Enter it again: "
-msgstr "再次輸入: "
+msgstr "再輸入一次: "
 
 #: command.c:2592
 #, c-format
@@ -516,7 +516,7 @@ msgstr "\\%s: 無法讀取變數的值"
 # command.c:632
 #: command.c:2777
 msgid "Query buffer reset (cleared)."
-msgstr "查詢緩存區已重設(已清除)。"
+msgstr "查詢緩衝區已重設(已清除)。"
 
 # command.c:646
 #: command.c:2836
@@ -539,13 +539,13 @@ msgstr "非管道模式中不允許使用 \\sendpipeline"
 #: command.c:2960
 #, c-format
 msgid "\\%s: environment variable name must not contain \"=\""
-msgstr "\\%s: 環境變數名稱不應包含 \"=\""
+msgstr "\\%s: 環境變數名稱不得包含 \"=\""
 
 # copy.c:122
 #: command.c:3008
 #, c-format
 msgid "function name is required"
-msgstr "需要函數名稱"
+msgstr "需要函式名稱"
 
 # copy.c:122
 #: command.c:3010
@@ -632,7 +632,7 @@ msgstr "\\watch: 迭代次數被指定多次"
 #: command.c:3459
 #, c-format
 msgid "\\watch: incorrect iteration count \"%s\""
-msgstr "\\watch: 錯誤的迭代次數 \"%s"
+msgstr "\\watch: 錯誤的迭代次數 \"%s\""
 
 # commands/copy.c:2716 parser/parse_target.c:648 parser/parse_target.c:658
 #: command.c:3469
@@ -694,51 +694,49 @@ msgstr "\\connect: %s"
 #: command.c:4355
 #, c-format
 msgid "You are now connected to database \"%s\" as user \"%s\" on address \"%s\" at port \"%s\".\n"
-msgstr "已連線至資料庫 \"%s\"，使用者 \"%s\"，位址 \"%s\"，連接埠 \"%s\"。\n"
+msgstr "已連線至資料庫 \"%s\", 使用者 \"%s\", 位址 \"%s\", 連接埠 \"%s\"。\n"
 
 # command.c:981
 #: command.c:4358
 #, c-format
 msgid "You are now connected to database \"%s\" as user \"%s\" via socket in \"%s\" at port \"%s\".\n"
-msgstr "已連線至資料庫 \"%s\"，使用者 \"%s\"，socket \"%s\"，連接埠 \"%s\"。\n"
+msgstr "已連線至資料庫 \"%s\", 使用者 \"%s\", socket 目錄 \"%s\", 連接埠 \"%s\"。\n"
 
 # command.c:981
 #: command.c:4364
 #, c-format
 msgid "You are now connected to database \"%s\" as user \"%s\" on host \"%s\" (address \"%s\") at port \"%s\".\n"
-msgstr "已連線至資料庫 \"%s\"，使用者 \"%s\"，主機 “%s” (位址 \"%s\")，連接埠 \"%s\"。\n"
+msgstr "已連線至資料庫 \"%s\", 使用者 \"%s\", 主機 \"%s\" (位址 \"%s\"), 連接埠 \"%s\"。\n"
 
 # command.c:981
 #: command.c:4367
 #, c-format
 msgid "You are now connected to database \"%s\" as user \"%s\" on host \"%s\" at port \"%s\".\n"
-msgstr "已連線至資料庫 \"%s\"，使用者 \"%s\"，主機 “%s”，連接埠 \"%s\"。\n"
+msgstr "已連線至資料庫 \"%s\", 使用者 \"%s\", 主機 \"%s\", 連接埠 \"%s\"。\n"
 
 # command.c:981
 #: command.c:4372
 #, c-format
 msgid "You are now connected to database \"%s\" as user \"%s\".\n"
-msgstr "已連線至資料庫 \"%s\"，使用者 \"%s\"。\n"
+msgstr "已連線至資料庫 \"%s\", 使用者 \"%s\"。\n"
 
 #: command.c:4478
 #, c-format
 msgid "%s (%s, server %s)\n"
-msgstr "%s (%s，伺服器 %s)\n"
+msgstr "%s (%s, 伺服器 %s)\n"
 
 #: command.c:4491
 #, c-format
 msgid ""
 "WARNING: %s major version %s, server major version %s.\n"
 "         Some psql features might not work.\n"
-msgstr ""
-"警告: %s 主要版本 %s，伺服器主要版本 %s。\n"
-"         某些 psql 功能可能無法運作。\n"
+msgstr "警告: %s 主要版本 %s, 伺服器主要版本 %s。\n      某些 psql 功能可能無法運作。\n"
 
 # startup.c:652
 #: command.c:4530
 #, c-format
 msgid "SSL connection (protocol: %s, cipher: %s, compression: %s, ALPN: %s)\n"
-msgstr "SSL 連線 (協定: %s，加密套件: %s，壓縮: %s，ALPN: %s)\n"
+msgstr "SSL 連線 (協定: %s, 加密套件: %s, 壓縮: %s, ALPN: %s)\n"
 
 # help.c:48
 #: command.c:4533 help.c:39
@@ -761,7 +759,7 @@ msgid ""
 "WARNING: Console code page (%u) differs from Windows code page (%u)\n"
 "         8-bit characters might not work correctly. See psql reference\n"
 "         page \"Notes for Windows users\" for details.\n"
-msgstr "警告: console 字碼頁(%u)與 Windows 字碼頁(%u)不同\n         8 位元字元可能無法正確運作。詳細資訊請參閱\n         psql 手冊 \"Windows 使用者注意事項 \"。\n"
+msgstr "警告: 主控台字碼頁(%u)與 Windows 字碼頁(%u)不同\n      8 位元字元可能無法正確運作。詳細資訊請參閱\n      psql 手冊 \"Windows 使用者注意事項\"。\n"
 
 #: command.c:4682
 #, c-format
@@ -806,7 +804,7 @@ msgstr "\\pset: 允許的格式包括 aligned, asciidoc, csv, html, latex, latex
 #: command.c:5166
 #, c-format
 msgid "\\pset: allowed line styles are ascii, old-ascii, unicode"
-msgstr "\\pset: 允許的行樣式包括 ascii、old-ascii、unicode"
+msgstr "\\pset: 允許的線條樣式包括 ascii, old-ascii, unicode"
 
 #: command.c:5181
 #, c-format
@@ -826,7 +824,7 @@ msgstr "\\pset: 允許的 Unicode 標頭線樣式包括 single, double"
 #: command.c:5263
 #, c-format
 msgid "\\pset: allowed xheader_width values are \"%s\" (default), \"%s\", \"%s\", or a number specifying the exact width"
-msgstr "\\pset: 允許的 xheader_width 值為 \"%s\"（預設）、\"%s\"、\"%s\"，或指定確切寬度的數字"
+msgstr "\\pset: 允許的 xheader_width 值為 \"%s\"（預設）, \"%s\", \"%s\"，或指定確切寬度的數字"
 
 # commands/copy.c:828
 #: command.c:5280
@@ -903,7 +901,7 @@ msgstr "CSV 的欄位分隔符號是 \"%s\"。\n"
 #: command.c:5489 command.c:5497
 #, c-format
 msgid "Field separator is zero byte.\n"
-msgstr "欄位分隔符號為 0 位元組。\n"
+msgstr "欄位分隔符號是值為零的位元組。\n"
 
 # command.c:1389
 #: command.c:5491
@@ -933,7 +931,7 @@ msgstr "輸出格式為 %s。\n"
 #: command.c:5518
 #, c-format
 msgid "Line style is %s.\n"
-msgstr "行樣式為 %s。\n"
+msgstr "線條樣式為 %s。\n"
 
 # command.c:1377
 #: command.c:5525
@@ -944,18 +942,18 @@ msgstr "空值顯示為 \"%s\"。\n"
 #: command.c:5533
 #, c-format
 msgid "Locale-adjusted numeric output is on.\n"
-msgstr "根據區域調整數字輸出已啟動。\n"
+msgstr "根據區域設定調整數字輸出已啟動。\n"
 
 #: command.c:5535
 #, c-format
 msgid "Locale-adjusted numeric output is off.\n"
-msgstr "根據區域調整數字輸出已關閉。\n"
+msgstr "根據區域設定調整數字輸出已關閉。\n"
 
 # command.c:1470
 #: command.c:5542
 #, c-format
 msgid "Pager is used for long output.\n"
-msgstr "分頁顯示已啟動。\n"
+msgstr "較長的輸出使用分頁顯示。\n"
 
 # command.c:1472
 #: command.c:5544
@@ -973,13 +971,13 @@ msgstr "分頁顯示已關閉。\n"
 #, c-format
 msgid "Pager won't be used for less than %d line.\n"
 msgid_plural "Pager won't be used for less than %d lines.\n"
-msgstr[0] "少於 %d 行時不要分頁顯示。\n"
+msgstr[0] "少於 %d 行時不會分頁顯示。\n"
 
 # command.c:1405
 #: command.c:5562 command.c:5572
 #, c-format
 msgid "Record separator is zero byte.\n"
-msgstr "記錄分隔符號是 0 位元組。\n"
+msgstr "記錄分隔符號是值為零的位元組。\n"
 
 # command.c:1403
 #: command.c:5564
@@ -1021,13 +1019,13 @@ msgstr "標題未設定。\n"
 #: command.c:5598
 #, c-format
 msgid "Tuples only is on.\n"
-msgstr "只顯示資料 on\n"
+msgstr "只顯示資料 on。\n"
 
 # command.c:1418
 #: command.c:5600
 #, c-format
 msgid "Tuples only is off.\n"
-msgstr "只顯示資料 off\n"
+msgstr "只顯示資料 off。\n"
 
 # command.c:1355
 #: command.c:5606
@@ -1098,12 +1096,12 @@ msgstr "\"%s.%s\" 不是檢視表"
 #: command.c:6331
 #, c-format
 msgid "could not parse reloptions array"
-msgstr "無法解析 reloption 陣列"
+msgstr "無法解析 reloptions 陣列"
 
 #: common.c:220
 #, c-format
 msgid "cannot escape without active connection"
-msgstr "沒有活動中連線無法 escape"
+msgstr "沒有活動中連線時不能逸出"
 
 # commands/copy.c:828
 #: common.c:261
@@ -1192,13 +1190,13 @@ msgstr "無法顯示結果表格: %m"
 #: common.c:809
 #, c-format
 msgid "no rows returned for \\gset"
-msgstr "沒有回傳資料給 \\gset"
+msgstr "沒有傳回資料列給 \\gset"
 
 # utils/adt/regproc.c:471 utils/adt/regproc.c:491
 #: common.c:814
 #, c-format
 msgid "more than one row returned for \\gset"
-msgstr "回傳多於一筆資料給 \\gset"
+msgstr "傳回多於一筆資料給 \\gset"
 
 # utils/misc/guc.c:4239
 #: common.c:832
@@ -1306,7 +1304,7 @@ msgstr "無法取得檔案 \"%s\" 的狀態: %m"
 #: copy.c:346
 #, c-format
 msgid "%s: cannot copy from/to a directory"
-msgstr "%s: 無法複製至/從目錄"
+msgstr "%s: 不能從目錄複製或複製至目錄"
 
 # access/transam/xlog.c:3154 access/transam/xlog.c:3341
 #: copy.c:383
@@ -1334,7 +1332,7 @@ msgstr "已被使用者取消"
 msgid ""
 "Enter data to be copied followed by a newline.\n"
 "End with a backslash and a period on a line by itself, or an EOF signal."
-msgstr "請輸入要複製的資料，然後加上換行字元。\n以反斜線和一個獨立的句點結束，或者使用 EOF 訊號。"
+msgstr "請輸入要複製的資料，然後加上換行字元。\n在單獨一行輸入反斜線和句點以結束，或者使用 EOF 訊號。"
 
 #: copy.c:697
 msgid "aborted because of read failure"
@@ -1347,13 +1345,13 @@ msgstr "試圖結束複製模式"
 #: crosstabview.c:124
 #, c-format
 msgid "\\crosstabview: statement did not return a result set"
-msgstr "試圖結束複製模式"
+msgstr "\\crosstabview: 敘述未傳回結果集"
 
 # parser/parse_expr.c:492
 #: crosstabview.c:130
 #, c-format
 msgid "\\crosstabview: query must return at least three columns"
-msgstr "\\crosstabview: 查詢至少要回傳三個欄位"
+msgstr "\\crosstabview: 查詢至少要傳回三個欄位"
 
 #: crosstabview.c:157
 #, c-format
@@ -1363,7 +1361,7 @@ msgstr "\\crosstabview: 垂直和水平標頭必須是不同的欄位"
 #: crosstabview.c:173
 #, c-format
 msgid "\\crosstabview: data column must be specified when query returns more than three columns"
-msgstr "\\crosstabview: 當查詢回傳超過三個欄位時，必須指定資料欄位"
+msgstr "\\crosstabview: 當查詢傳回超過三個欄位時，必須指定資料欄位"
 
 #: crosstabview.c:229
 #, c-format
@@ -1373,14 +1371,14 @@ msgstr "\\crosstabview: 超過最大欄位數限制(%d)"
 #: crosstabview.c:398
 #, c-format
 msgid "\\crosstabview: query result contains multiple data values for row \"%s\", column \"%s\""
-msgstr "\\crosstabview: 查詢結果包含多個資料值，列 ”%s”，欄 ”%s”"
+msgstr "\\crosstabview: 查詢結果包含列 \"%s\", 欄 \"%s\" 的多個資料值"
 
 # fe-exec.c:1906
 # fe-exec.c:1929
 #: crosstabview.c:646
 #, c-format
 msgid "\\crosstabview: column number %d is out of range 1..%d"
-msgstr "\\crosstabview: 欄位編號 %d 超過範圍 1..%d"
+msgstr "\\crosstabview: 欄位編號 %d 超出範圍 1..%d"
 
 #: crosstabview.c:671
 #, c-format
@@ -1465,13 +1463,13 @@ msgstr "描述"
 # describe.c:97
 #: describe.c:134
 msgid "List of aggregate functions"
-msgstr "聚合函數列表"
+msgstr "聚合函式列表"
 
 # describe.c:117
 #: describe.c:159
 #, c-format
 msgid "The server (version %s) does not support access methods."
-msgstr "伺服器(版本 %s)不支援存取方式。"
+msgstr "伺服器(版本 %s)不支援存取方法。"
 
 # describe.c:543
 # describe.c:1477
@@ -1486,12 +1484,12 @@ msgstr "資料表"
 
 #: describe.c:183 describe.c:5922
 msgid "Handler"
-msgstr "Handler"
+msgstr "處理函式"
 
 # describe.c:1703
 #: describe.c:206
 msgid "List of access methods"
-msgstr "存取方式清單"
+msgstr "存取方法清單"
 
 # describe.c:128
 # describe.c:186
@@ -1529,30 +1527,30 @@ msgstr "\\df 只接受 [%s] 作為選項"
 #: describe.c:324
 #, c-format
 msgid "\\df does not take a \"%c\" option with server version %s"
-msgstr "\\df 伺服器版本 %2$s 不接受 \"%1$c\" 選項"
+msgstr "伺服器版本為 %2$s 時，\\df 不接受 \"%1$c\" 選項"
 
 #. translator: "agg" is short for "aggregate"
 #: describe.c:359 describe.c:377
 msgid "agg"
-msgstr "agg"
+msgstr "聚合"
 
 #: describe.c:360 describe.c:378
 msgid "window"
-msgstr "window"
+msgstr "視窗"
 
 #: describe.c:361
 msgid "proc"
-msgstr "proc"
+msgstr "程序"
 
 # describe.c:498
 #: describe.c:362 describe.c:380
 msgid "func"
-msgstr "func"
+msgstr "函式"
 
 # describe.c:575
 #: describe.c:379 describe.c:1444
 msgid "trigger"
-msgstr "trigger"
+msgstr "觸發器"
 
 # describe.c:415
 # describe.c:543
@@ -1619,7 +1617,7 @@ msgstr "否"
 
 #: describe.c:422 describe.c:840 describe.c:5008 describe.c:7132
 msgid "Leakproof?"
-msgstr "防洩漏?"
+msgstr "防洩漏？"
 
 # describe.c:186
 #: describe.c:427
@@ -1634,7 +1632,7 @@ msgstr "內部名稱"
 # describe.c:221
 #: describe.c:609
 msgid "List of functions"
-msgstr "函數清單"
+msgstr "函式清單"
 
 #: describe.c:674
 msgid "Elements"
@@ -1664,7 +1662,7 @@ msgstr "結果型別"
 #: describe.c:837 describe.c:4822 describe.c:4986 describe.c:5496
 #: describe.c:7226 describe.c:7230
 msgid "Function"
-msgstr "函數"
+msgstr "函式"
 
 # describe.c:336
 #: describe.c:924
@@ -1678,7 +1676,7 @@ msgstr "字元編碼"
 
 #: describe.c:969 describe.c:973
 msgid "Locale Provider"
-msgstr "區域提供者"
+msgstr "區域設定提供者"
 
 # describe.c:128
 #: describe.c:977 describe.c:5116
@@ -1697,7 +1695,7 @@ msgstr "Ctype"
 #: describe.c:982 describe.c:986 describe.c:990 describe.c:5122 describe.c:5126
 #: describe.c:5130
 msgid "Locale"
-msgstr "區域"
+msgstr "區域設定"
 
 # describe.c:983
 # describe.c:1204
@@ -1720,34 +1718,34 @@ msgstr "資料庫清單"
 # describe.c:1477
 #: describe.c:1080 describe.c:1237 describe.c:4053
 msgid "table"
-msgstr "table"
+msgstr "資料表"
 
 # describe.c:415
 # describe.c:543
 # describe.c:1477
 #: describe.c:1081 describe.c:4054
 msgid "view"
-msgstr "view"
+msgstr "檢視"
 
 #: describe.c:1082 describe.c:4055
 msgid "materialized view"
-msgstr "materialized view"
+msgstr "物化檢視表"
 
 # describe.c:415
 # describe.c:543
 # describe.c:1477
 #: describe.c:1083 describe.c:1239 describe.c:4057
 msgid "sequence"
-msgstr "sequence"
+msgstr "序列"
 
 # describe.c:933
 #: describe.c:1084 describe.c:4059
 msgid "foreign table"
-msgstr "foreign table"
+msgstr "外部資料表"
 
 #: describe.c:1085 describe.c:4060 describe.c:4324
 msgid "partitioned table"
-msgstr "partitioned table"
+msgstr "分割資料表"
 
 # sql_help.h:325
 #: describe.c:1101
@@ -1768,7 +1766,7 @@ msgstr "存取權限"
 # describe.c:498
 #: describe.c:1241
 msgid "function"
-msgstr "函數"
+msgstr "函式"
 
 # describe.c:415
 # describe.c:745
@@ -1809,26 +1807,26 @@ msgstr "物件"
 # catalog/dependency.c:1511
 #: describe.c:1327
 msgid "table constraint"
-msgstr "table constraint"
+msgstr "資料表條件約束"
 
 #: describe.c:1351
 msgid "domain constraint"
-msgstr "domain constraint"
+msgstr "可用域條件約束"
 
 # catalog/dependency.c:1592
 #: describe.c:1375
 msgid "operator class"
-msgstr "operator class"
+msgstr "運算子類別"
 
 # sql_help.h:269
 #: describe.c:1399
 msgid "operator family"
-msgstr "operator family"
+msgstr "運算子家族"
 
 # describe.c:559
 #: describe.c:1422
 msgid "rule"
-msgstr "rule"
+msgstr "規則"
 
 # describe.c:593
 #: describe.c:1467
@@ -1851,11 +1849,11 @@ msgstr "找不到任何關聯。"
 #: describe.c:1731
 #, c-format
 msgid "Did not find any relation with OID %s."
-msgstr "找不到到 OID 為 %s 的關聯。"
+msgstr "找不到 OID 為 %s 的關聯。"
 
 #: describe.c:1779 describe.c:1803
 msgid "Start"
-msgstr "開始"
+msgstr "起始值"
 
 #: describe.c:1780 describe.c:1804
 msgid "Minimum"
@@ -1885,13 +1883,13 @@ msgstr "擁有者: %s"
 #: describe.c:1855
 #, c-format
 msgid "Sequence for identity column: %s"
-msgstr "自動增量欄位序列: %s"
+msgstr "使用此序列的識別欄位: %s"
 
 # describe.c:871
 #: describe.c:1863
 #, c-format
 msgid "Unlogged sequence \"%s.%s\""
-msgstr "無日誌序列 \"%s.%s\""
+msgstr "不記錄 WAL 的序列 \"%s.%s\""
 
 # describe.c:867
 #: describe.c:1866
@@ -1903,7 +1901,7 @@ msgstr "序列 \"%s.%s\""
 #: describe.c:2009
 #, c-format
 msgid "Unlogged table \"%s.%s\""
-msgstr "無日誌資料表 \"%s.%s\""
+msgstr "不記錄 WAL 的資料表 \"%s.%s\""
 
 # describe.c:859
 #: describe.c:2012
@@ -1921,13 +1919,13 @@ msgstr "檢視表 \"%s.%s\""
 #: describe.c:2020
 #, c-format
 msgid "Materialized view \"%s.%s\""
-msgstr "實體化檢視表 \"%s.%s\""
+msgstr "物化檢視表 \"%s.%s\""
 
 # describe.c:871
 #: describe.c:2025
 #, c-format
 msgid "Unlogged index \"%s.%s\""
-msgstr "無日誌索引 \"%s.%s\""
+msgstr "不記錄 WAL 的索引 \"%s.%s\""
 
 # describe.c:871
 #: describe.c:2028
@@ -1939,7 +1937,7 @@ msgstr "索引 \"%s.%s\""
 #: describe.c:2033
 #, c-format
 msgid "Unlogged partitioned index \"%s.%s\""
-msgstr "無日誌分割索引 \"%s.%s\""
+msgstr "不記錄 WAL 的分割索引 \"%s.%s\""
 
 # describe.c:871
 #: describe.c:2036
@@ -1969,7 +1967,7 @@ msgstr "外部資料表 \"%s.%s\""
 #: describe.c:2053
 #, c-format
 msgid "Unlogged partitioned table \"%s.%s\""
-msgstr "無日誌分割資料表 \"%s.%s\""
+msgstr "不記錄 WAL 的分割資料表 \"%s.%s\""
 
 # describe.c:933
 #: describe.c:2056
@@ -1996,7 +1994,7 @@ msgstr "預設"
 
 #: describe.c:2077
 msgid "Key?"
-msgstr "索引鍵?"
+msgstr "索引鍵？"
 
 # describe.c:1636
 #: describe.c:2079 describe.c:4892 describe.c:4903
@@ -2012,7 +2010,7 @@ msgstr "FDW 選項"
 # describe.c:1635
 #: describe.c:2083
 msgid "Storage"
-msgstr "儲存體"
+msgstr "儲存方式"
 
 #: describe.c:2085
 msgid "Compression"
@@ -2029,13 +2027,13 @@ msgstr "分割來自: %s %s%s"
 
 #: describe.c:2242
 msgid "No partition constraint"
-msgstr "沒有分割規則"
+msgstr "沒有分割條件約束"
 
 # catalog/dependency.c:1511
 #: describe.c:2244
 #, c-format
 msgid "Partition constraint: %s"
-msgstr "分割規則: %s"
+msgstr "分割條件約束: %s"
 
 #: describe.c:2268
 #, c-format
@@ -2051,7 +2049,7 @@ msgstr "所屬資料表: \"%s.%s\""
 # describe.c:925
 #: describe.c:2367
 msgid "primary key, "
-msgstr "primary key, "
+msgstr "主索引鍵, "
 
 # describe.c:927
 #: describe.c:2370
@@ -2077,24 +2075,24 @@ msgstr "給資料表 \"%s.%s\""
 #: describe.c:2384
 #, c-format
 msgid ", predicate (%s)"
-msgstr ", predicate (%s)"
+msgstr ", 述詞 (%s)"
 
 # describe.c:940
 #: describe.c:2387
 msgid ", clustered"
-msgstr ", clustered"
+msgstr ", 已叢集化"
 
 #: describe.c:2390
 msgid ", invalid"
-msgstr ", invalid"
+msgstr ", 無效"
 
 #: describe.c:2393
 msgid ", deferrable"
-msgstr ", deferrable"
+msgstr ", 可延遲"
 
 #: describe.c:2396
 msgid ", initially deferred"
-msgstr ", initially deferred"
+msgstr ", 初始延遲"
 
 #: describe.c:2399
 msgid ", replica identity"
@@ -2108,12 +2106,12 @@ msgstr "索引:"
 # describe.c:1174
 #: describe.c:2548
 msgid "Check constraints:"
-msgstr "檢查規則:"
+msgstr "檢查條件約束:"
 
 # describe.c:1189
 #: describe.c:2609
 msgid "Foreign-key constraints:"
-msgstr "外鍵檢查規則:"
+msgstr "外來鍵條件約束:"
 
 #: describe.c:2668
 msgid "Referenced by:"
@@ -2129,11 +2127,11 @@ msgstr "政策(強制列安全性已啟動):"
 
 #: describe.c:2723
 msgid "Policies (row security enabled): (none)"
-msgstr "政策(列安全性已啟動): (none)"
+msgstr "政策(列安全性已啟動): (無)"
 
 #: describe.c:2726
 msgid "Policies (forced row security enabled): (none)"
-msgstr "政策(強制列安全性已啟動): (none)"
+msgstr "政策(強制列安全性已啟動): (無)"
 
 #: describe.c:2729
 msgid "Policies (row security disabled):"
@@ -2160,7 +2158,7 @@ msgstr "永遠觸發的規則:"
 
 #: describe.c:3005
 msgid "Rules firing on replica only:"
-msgstr "只在複本觸發的規則:"
+msgstr "只在 replica 模式下觸發的規則:"
 
 # describe.c:1636
 #: describe.c:3084 describe.c:5280
@@ -2174,7 +2172,7 @@ msgstr "非空條件約束:"
 
 #: describe.c:3145
 msgid " (local, inherited)"
-msgstr " (本地定義，繼承)"
+msgstr " (本地定義, 繼承)"
 
 #: describe.c:3146
 msgid " (inherited)"
@@ -2204,7 +2202,7 @@ msgstr "永遠觸發的觸發器:"
 
 #: describe.c:3354
 msgid "Triggers firing on replica only:"
-msgstr "只在複本觸發的觸發器:"
+msgstr "只在 replica 模式下觸發的觸發器:"
 
 # postmaster/postmaster.c:2120 postmaster/postmaster.c:2130
 #: describe.c:3425
@@ -2261,12 +2259,12 @@ msgstr "REPLICA IDENTITY"
 # describe.c:1259
 #: describe.c:3601
 msgid "Has OIDs: yes"
-msgstr "有 OID: yes"
+msgstr "有 OID: 是"
 
 #: describe.c:3610
 #, c-format
 msgid "Access method: %s"
-msgstr "存取方式: %s"
+msgstr "存取方法: %s"
 
 # describe.c:1342
 #: describe.c:3687
@@ -2315,7 +2313,7 @@ msgstr "建立資料庫"
 
 #: describe.c:3798
 msgid "Cannot login"
-msgstr "無法登入"
+msgstr "不能登入"
 
 # describe.c:1636
 #: describe.c:3801
@@ -2329,7 +2327,7 @@ msgstr "忽略 RLS"
 # help.c:123
 #: describe.c:3814
 msgid "No connections"
-msgstr "無連線"
+msgstr "不允許連線"
 
 # help.c:123
 #: describe.c:3816
@@ -2412,7 +2410,7 @@ msgstr "暫時"
 
 #: describe.c:4087
 msgid "unlogged"
-msgstr "無日誌"
+msgstr "不記錄 WAL"
 
 #: describe.c:4088
 msgid "Persistence"
@@ -2420,7 +2418,7 @@ msgstr "永續性"
 
 #: describe.c:4104 describe.c:4348
 msgid "Access method"
-msgstr "存取方式"
+msgstr "存取方法"
 
 # describe.c:641
 #: describe.c:4184
@@ -2450,7 +2448,7 @@ msgstr "找不到名為 \"%s\" 的檢視表。"
 #: describe.c:4196
 #, c-format
 msgid "Did not find any materialized views named \"%s\"."
-msgstr "找不到名為 \"%s\" 的實體化檢視表。"
+msgstr "找不到名為 \"%s\" 的物化檢視表。"
 
 # describe.c:641
 #: describe.c:4199
@@ -2486,7 +2484,7 @@ msgstr "找不到任何檢視表。"
 #: describe.c:4219
 #, c-format
 msgid "Did not find any materialized views."
-msgstr "找不到任何實體化檢視表。"
+msgstr "找不到任何物化檢視表。"
 
 # describe.c:641
 #: describe.c:4221
@@ -2522,7 +2520,7 @@ msgstr "檢視表清單"
 
 #: describe.c:4235
 msgid "List of materialized views"
-msgstr "實體化檢視表清單"
+msgstr "物化檢視表清單"
 
 # describe.c:1753
 #: describe.c:4236
@@ -2538,7 +2536,7 @@ msgstr "外部資料表清單"
 #: describe.c:4286
 #, c-format
 msgid "The server (version %s) does not support declarative table partitioning."
-msgstr "伺服器(版本%s)不支援聲明式資料表分割。"
+msgstr "伺服器(版本 %s)不支援聲明式資料表分割。"
 
 # describe.c:1549
 #: describe.c:4297
@@ -2558,7 +2556,7 @@ msgstr "分割關聯清單"
 # describe.c:1375
 #: describe.c:4334
 msgid "Parent name"
-msgstr "所屬名稱"
+msgstr "父關聯名稱"
 
 #: describe.c:4354
 msgid "Leaf partition size"
@@ -2583,7 +2581,7 @@ msgstr "呼叫處理器"
 
 #: describe.c:4501 describe.c:5923
 msgid "Validator"
-msgstr "驗證程式"
+msgstr "驗證函式"
 
 #: describe.c:4502
 msgid "Inline handler"
@@ -2601,7 +2599,7 @@ msgstr "檢查"
 # describe.c:1602
 #: describe.c:4620
 msgid "List of domains"
-msgstr "Domain 清單"
+msgstr "可用域清單"
 
 # describe.c:1635
 #: describe.c:4654
@@ -2630,13 +2628,13 @@ msgstr "上下文"
 # sql_help.h:366
 #: describe.c:4766
 msgid "List of configuration parameters"
-msgstr "設定參數清單"
+msgstr "組態參數清單"
 
 # utils/misc/guc.c:3281 utils/misc/guc.c:3970 utils/misc/guc.c:4006
 # utils/misc/guc.c:4062 utils/misc/guc.c:4399 utils/misc/guc.c:4548
 #: describe.c:4768
 msgid "List of non-default configuration parameters"
-msgstr "非預設設定參數清單"
+msgstr "非預設組態參數清單"
 
 # describe.c:117
 #: describe.c:4795
@@ -2676,7 +2674,7 @@ msgstr "停用"
 # describe.c:1477
 #: describe.c:4821 describe.c:6774
 msgid "Enabled"
-msgstr "已啟用"
+msgstr "啟用狀態"
 
 #: describe.c:4823
 msgid "Tags"
@@ -2728,7 +2726,7 @@ msgstr "指派時"
 # describe.c:1695
 #: describe.c:4998
 msgid "Implicit?"
-msgstr "隱含的?"
+msgstr "隱含的？"
 
 # describe.c:1703
 #: describe.c:5062
@@ -2741,7 +2739,7 @@ msgstr "提供者"
 
 #: describe.c:5145 describe.c:5150
 msgid "Deterministic?"
-msgstr "確定性?"
+msgstr "確定性？"
 
 # describe.c:1549
 #: describe.c:5189
@@ -2780,7 +2778,7 @@ msgstr "方法"
 
 #: describe.c:5499
 msgid "Get next token"
-msgstr "取得下一個 token"
+msgstr "取得下一個符記"
 
 #: describe.c:5501
 msgid "End parse"
@@ -2788,11 +2786,11 @@ msgstr "結束解析"
 
 #: describe.c:5503
 msgid "Get headline"
-msgstr "取得標題"
+msgstr "取得摘要"
 
 #: describe.c:5505
 msgid "Get token types"
-msgstr "取得 token 型別"
+msgstr "取得符記型別"
 
 #: describe.c:5515
 #, c-format
@@ -2807,26 +2805,26 @@ msgstr "文字搜尋解析器 \"%s\""
 # describe.c:1375
 #: describe.c:5537
 msgid "Token name"
-msgstr "Token 名稱"
+msgstr "符記名稱"
 
 #: describe.c:5550
 #, c-format
 msgid "Token types for parser \"%s.%s\""
-msgstr "解析器 \"%s.%s\" 的 token 型別"
+msgstr "解析器 \"%s.%s\" 的符記型別"
 
 #: describe.c:5553
 #, c-format
 msgid "Token types for parser \"%s\""
-msgstr "解析器 \"%s\" 的 token 型別"
+msgstr "解析器 \"%s\" 的符記型別"
 
 #: describe.c:5597
 msgid "Template"
-msgstr "模版"
+msgstr "範本"
 
 # help.c:88
 #: describe.c:5598
 msgid "Init options"
-msgstr "初始選項"
+msgstr "初始化選項"
 
 # describe.c:1549
 #: describe.c:5624
@@ -2866,7 +2864,7 @@ msgstr "找不到任何文字搜尋組態。"
 
 #: describe.c:5863
 msgid "Token"
-msgstr "Token"
+msgstr "符記"
 
 #: describe.c:5864
 msgid "Dictionaries"
@@ -2971,7 +2969,7 @@ msgstr "擴充模組 \"%s\" 中的物件"
 #: describe.c:6366
 #, c-format
 msgid "improper qualified name (too many dotted names): %s"
-msgstr "不合適的完整名稱(太多點號名稱): %s"
+msgstr "不合適的限定名稱(以點號分隔的名稱部分過多): %s"
 
 # catalog/namespace.c:1195 parser/parse_expr.c:1157 parser/parse_target.c:725
 #: describe.c:6380
@@ -3012,7 +3010,7 @@ msgstr "產生欄位"
 
 #: describe.c:6448 describe.c:6658
 msgid "Via root"
-msgstr "經由 root"
+msgstr "經由根資料表"
 
 # describe.c:1549
 #: describe.c:6469
@@ -3051,7 +3049,7 @@ msgstr "來自以下 schema 的資料表:"
 #: describe.c:6759
 #, c-format
 msgid "The server (version %s) does not support subscriptions."
-msgstr "伺服器(版本 %s)不支援使用者映射。"
+msgstr "伺服器(版本 %s)不支援訂閱。"
 
 # describe.c:1636
 #: describe.c:6775
@@ -3134,17 +3132,17 @@ msgstr "儲存型別"
 # catalog/dependency.c:1592
 #: describe.c:6930
 msgid "Operator class"
-msgstr "操作符類別"
+msgstr "運算子類別"
 
 # sql_help.h:269
 #: describe.c:6942 describe.c:7023 describe.c:7115 describe.c:7218
 msgid "Operator family"
-msgstr "操作符族群"
+msgstr "運算子家族"
 
 # describe.c:336
 #: describe.c:6977
 msgid "List of operator classes"
-msgstr "操作符類別清單"
+msgstr "運算子類別清單"
 
 #: describe.c:7024
 msgid "Applicable types"
@@ -3153,12 +3151,12 @@ msgstr "適用型別"
 # describe.c:336
 #: describe.c:7065
 msgid "List of operator families"
-msgstr "操作符族群清單"
+msgstr "運算子家族清單"
 
 # describe.c:512
 #: describe.c:7116
 msgid "Operator"
-msgstr "操作符"
+msgstr "運算子"
 
 #: describe.c:7117
 msgid "Strategy"
@@ -3178,12 +3176,12 @@ msgstr "用途"
 
 #: describe.c:7129
 msgid "Sort opfamily"
-msgstr "排序 opfamily"
+msgstr "排序運算子家族"
 
 # catalog/aclchk.c:1294
 #: describe.c:7172
 msgid "List of operators of operator families"
-msgstr "操作符族群操作符清單"
+msgstr "運算子家族中的運算子清單"
 
 # describe.c:322
 #: describe.c:7219
@@ -3202,7 +3200,7 @@ msgstr "編號"
 # catalog/aclchk.c:1294
 #: describe.c:7264
 msgid "List of support functions of operator families"
-msgstr "操作符族群支援函數清單"
+msgstr "運算子家族的支援函式清單"
 
 #: describe.c:7295
 msgid "ID"
@@ -3218,9 +3216,7 @@ msgstr "大物件"
 msgid ""
 "psql is the PostgreSQL interactive terminal.\n"
 "\n"
-msgstr ""
-"psql 是 PostgreSQL 互動式操作介面。\n"
-"\n"
+msgstr "psql 是 PostgreSQL 互動式終端機。\n\n"
 
 #: help.c:61 help.c:389 help.c:476 help.c:525
 msgid "Usage:\n"
@@ -3231,9 +3227,7 @@ msgstr "用法:\n"
 msgid ""
 "  psql [OPTION]... [DBNAME [USERNAME]]\n"
 "\n"
-msgstr ""
-"  psql [OPTION]... [DBNAME [USERNAME]]\n"
-"\n"
+msgstr "  psql [選項]... [資料庫名 [使用者名稱]]\n\n"
 
 #: help.c:64
 msgid "General options:\n"
@@ -3264,7 +3258,7 @@ msgid ""
 "  -v, --set=, --variable=NAME=VALUE\n"
 "                           set psql variable NAME to VALUE\n"
 "                           (e.g., -v ON_ERROR_STOP=1)\n"
-msgstr "  -v, --set=, --variable=NAME\n                           設定 psql 變數 NAME 為 VALUE\n                           (例如 -v ON_ERROR_STOP=1)\n"
+msgstr "  -v, --set=, --variable=NAME=VALUE\n                           設定 psql 變數 NAME 為 VALUE\n                           (例如 -v ON_ERROR_STOP=1)\n"
 
 #: help.c:72
 msgid "  -V, --version            output version information, then exit\n"
@@ -3333,7 +3327,7 @@ msgstr "  -L, --log-file=FILENAME  將工作階段記錄存檔\n"
 # help.c:108
 #: help.c:86
 msgid "  -n, --no-readline        disable enhanced command line editing (readline)\n"
-msgstr "  -n, --no-readline        停用命令列編輯(readline)\n"
+msgstr "  -n, --no-readline        停用增強的命令列編輯(readline)\n"
 
 # help.c:107
 #: help.c:87
@@ -3353,7 +3347,7 @@ msgstr "  -s, --single-step        單步模式(確認每個查詢)\n"
 # help.c:110
 #: help.c:90
 msgid "  -S, --single-line        single-line mode (end of line terminates SQL command)\n"
-msgstr "  -S, --single-line        單行模式(一行就是一個 SQL 命令)\n"
+msgstr "  -S, --single-line        單行模式(行尾結束 SQL 命令)\n"
 
 # help.c:112
 #: help.c:92
@@ -3367,7 +3361,7 @@ msgstr ""
 # help.c:113
 #: help.c:93
 msgid "  -A, --no-align           unaligned table output mode\n"
-msgstr "  -A, --no-align           使用非對齊資料表輸出模式\n"
+msgstr "  -A, --no-align           使用非對齊表格輸出模式\n"
 
 # help.c:234
 #: help.c:94
@@ -3380,9 +3374,7 @@ msgstr "      --csv                CSV(逗號分隔值)表格輸出模式\n"
 msgid ""
 "  -F, --field-separator=STRING\n"
 "                           field separator for unaligned output (default: \"%s\")\n"
-msgstr ""
-"  -F, --field-separator=STRING\n"
-"                           非對齊輸出的欄位分隔符號(預設: %s)\n"
+msgstr "  -F, --field-separator=STRING\n                           非對齊輸出的欄位分隔符號(預設: \"%s\")\n"
 
 # help.c:114
 #: help.c:98
@@ -3411,7 +3403,7 @@ msgstr "  -t, --tuples-only        只顯示資料\n"
 # help.c:116
 #: help.c:103
 msgid "  -T, --table-attr=TEXT    set HTML table tag attributes (e.g., width, border)\n"
-msgstr "  -T, --table-attr=TEXT    設定 HTML 表格標籤屬性 (例如: width、border)\n"
+msgstr "  -T, --table-attr=TEXT    設定 HTML 表格標籤屬性 (例如: width, border)\n"
 
 # help.c:117
 #: help.c:104
@@ -3423,18 +3415,14 @@ msgstr "  -x, --expanded           開啟展開表格輸出模式\n"
 msgid ""
 "  -z, --field-separator-zero\n"
 "                           set field separator for unaligned output to zero byte\n"
-msgstr ""
-"  -z, --field-separator-zero\n"
-"                           將非對齊輸出的欄位分隔符設定為 0 位元組\n"
+msgstr "  -z, --field-separator-zero\n                           將非對齊輸出的欄位分隔符設定成值為零的位元組\n"
 
 # help.c:121
 #: help.c:107
 msgid ""
 "  -0, --record-separator-zero\n"
 "                           set record separator for unaligned output to zero byte\n"
-msgstr ""
-"  -0, --record-separator-zero\n"
-"                           將非對齊輸出的記錄分隔符設定為 0 位元組\n"
+msgstr "  -0, --record-separator-zero\n                           將非對齊輸出的記錄分隔符設定成值為零的位元組\n"
 
 #: help.c:110
 msgid ""
@@ -3446,7 +3434,7 @@ msgstr ""
 
 #: help.c:111
 msgid "  -h, --host=HOSTNAME      database server host or socket directory\n"
-msgstr "  -h, --host=HOSTNAME      資料庫伺服器主機或socket目錄\n"
+msgstr "  -h, --host=HOSTNAME      資料庫伺服器主機或 socket 目錄\n"
 
 #: help.c:112
 msgid "  -p, --port=PORT          database server port\n"
@@ -3462,7 +3450,7 @@ msgstr "  -w, --no-password        不詢問密碼\n"
 
 #: help.c:115
 msgid "  -W, --password           force password prompt (should happen automatically)\n"
-msgstr "  -W, --password           要求輸入密碼(應該是自動的)\n"
+msgstr "  -W, --password           強制提示輸入密碼(應自動提示)\n"
 
 # help.c:140
 #: help.c:117
@@ -3486,7 +3474,7 @@ msgstr "回報錯誤至 <%s>。\n"
 #: help.c:121
 #, c-format
 msgid "%s home page: <%s>\n"
-msgstr "%s 網頁: <%s>\n"
+msgstr "%s 首頁: <%s>\n"
 
 # help.c:174
 #: help.c:163
@@ -3500,7 +3488,7 @@ msgstr "  \\copyright             顯示 PostgreSQL 的使用和發佈條款\n"
 
 #: help.c:165
 msgid "  \\crosstabview [COLUMNS] execute query and display result in crosstab\n"
-msgstr "  \\crosstabview [COLUMNS]  執行查詢並以樞紐分析表顯示結果\n"
+msgstr "  \\crosstabview [COLUMNS] 執行查詢並以樞紐分析表顯示結果\n"
 
 #: help.c:166
 msgid "  \\errverbose            show most recent error message at maximum verbosity\n"
@@ -3525,7 +3513,7 @@ msgstr "  \\gexec                 執行查詢，然後執行結果中的每個�
 # help.c:194
 #: help.c:171
 msgid "  \\gset [PREFIX]         execute query and store result in psql variables\n"
-msgstr "  \\gset [PREFIX]         執行查詢並將結果存儲在 psql 變數中\n"
+msgstr "  \\gset [PREFIX]         執行查詢並將結果儲存在 psql 變數中\n"
 
 #: help.c:172
 msgid "  \\gx [(OPTIONS)] [FILE] as \\g, but forces expanded output mode\n"
@@ -3553,7 +3541,7 @@ msgid ""
 "  \\watch [[i=]SEC] [c=N] [m=MIN]\n"
 "                         execute query every SEC seconds, up to N times,\n"
 "                         stop if less than MIN rows are returned\n"
-msgstr "  \\watch [[i=]SEC] [c=N] [m=MIN]\n                         每 SEC 秒執行一次查詢，最多執行 N 次，\n                         回傳資料列少於 MIN 時停止\n"
+msgstr "  \\watch [[i=]SEC] [c=N] [m=MIN]\n                         每 SEC 秒執行一次查詢，最多執行 N 次，\n                         傳回資料列少於 MIN 時停止\n"
 
 #: help.c:181 help.c:189 help.c:201 help.c:211 help.c:218 help.c:276 help.c:284
 #: help.c:304 help.c:317 help.c:326 help.c:332
@@ -3584,17 +3572,17 @@ msgstr "  \\h [NAME]              顯示 SQL 命令語法的說明，用 * 代�
 # help.c:192
 #: help.c:191
 msgid "Query Buffer\n"
-msgstr "查詢暫存區\n"
+msgstr "查詢緩衝區\n"
 
 # help.c:193
 #: help.c:192
 msgid "  \\e [FILE] [LINE]       edit the query buffer (or file) with external editor\n"
-msgstr "  \\e [FILE] [LINE]       使用外部編輯器編輯查詢暫存區(或檔案)\n"
+msgstr "  \\e [FILE] [LINE]       使用外部編輯器編輯查詢緩衝區(或檔案)\n"
 
 # help.c:193
 #: help.c:193
 msgid "  \\ef [FUNCNAME [LINE]]  edit function definition with external editor\n"
-msgstr "  \\ef [FUNCNAME [LINE]]  使用外部編輯器編輯函數定義\n"
+msgstr "  \\ef [FUNCNAME [LINE]]  使用外部編輯器編輯函式定義\n"
 
 # help.c:193
 #: help.c:194
@@ -3604,12 +3592,12 @@ msgstr "  \\ev [VIEWNAME [LINE]]  使用外部編輯器編輯檢視表定義\n"
 # help.c:195
 #: help.c:195
 msgid "  \\p                     show the contents of the query buffer\n"
-msgstr "  \\p                     顯示查詢暫存區的內容\n"
+msgstr "  \\p                     顯示查詢緩衝區的內容\n"
 
 # help.c:196
 #: help.c:196
 msgid "  \\r                     reset (clear) the query buffer\n"
-msgstr "  \\r                     重設(清空)查詢暫存區\n"
+msgstr "  \\r                     重設(清空)查詢緩衝區\n"
 
 # help.c:198
 #: help.c:198
@@ -3619,7 +3607,7 @@ msgstr "  \\s [FILE]              顯示歷史記錄或存入檔案\n"
 # help.c:200
 #: help.c:200
 msgid "  \\w FILE                write query buffer to file\n"
-msgstr "  \\w FILE                將查詢暫存區寫入檔案\n"
+msgstr "  \\w FILE                將查詢緩衝區寫入檔案\n"
 
 # help.c:203
 #: help.c:203
@@ -3629,7 +3617,7 @@ msgstr "輸入/輸出\n"
 # help.c:251
 #: help.c:204
 msgid "  \\copy ...              perform SQL COPY with data stream to the client host\n"
-msgstr "  \\copy ...              用 SQL 的 COPY 並將資料流傳送至客戶端\n"
+msgstr "  \\copy ...              用 SQL 的 COPY 並將資料流傳送至客戶端主機\n"
 
 # help.c:204
 #: help.c:205
@@ -3691,7 +3679,7 @@ msgstr "資訊性\n"
 
 #: help.c:221
 msgid "  (options: S = show system objects, x = expanded mode, + = additional detail)\n"
-msgstr "  (選項: S = 顯示系統物件，x = 展開模式，+ = 額外詳細資訊)\n"
+msgstr "  (選項: S = 顯示系統物件, x = 展開模式, + = 額外詳細資訊)\n"
 
 # help.c:226
 #: help.c:222
@@ -3701,17 +3689,17 @@ msgstr "  \\d[Sx+]                列出資料表、檢視表、序列\n"
 # help.c:212
 #: help.c:223
 msgid "  \\d[S+]   NAME          describe table, view, sequence, or index\n"
-msgstr "  \\d[S+]   描述資料表、檢視表、序列或索引\n"
+msgstr "  \\d[S+]   NAME          描述資料表、檢視表、序列或索引\n"
 
 # help.c:215
 #: help.c:224
 msgid "  \\da[Sx]  [PATTERN]     list aggregates\n"
-msgstr "  \\da[Sx]  列出聚合函式\n"
+msgstr "  \\da[Sx]  [PATTERN]     列出聚合函式\n"
 
 # help.c:228
 #: help.c:225
 msgid "  \\dA[x+]  [PATTERN]     list access methods\n"
-msgstr "  \\dA[x+]  列出存取方法\n"
+msgstr "  \\dA[x+]  [PATTERN]     列出存取方法\n"
 
 # help.c:224
 #: help.c:226
@@ -3735,7 +3723,7 @@ msgstr "  \\dAp[x+] [AMPTRN [OPFPTRN]]   列出運算子家族的支援函式\n"
 # help.c:228
 #: help.c:230
 msgid "  \\db[x+]  [PATTERN]     list tablespaces\n"
-msgstr "  \\db[x+]  列出表空間\n"
+msgstr "  \\db[x+]  [PATTERN]     列出表空間\n"
 
 # help.c:217
 #: help.c:231
@@ -3750,7 +3738,7 @@ msgstr "  \\dconfig[x+] [PATTERN] 列出組態參數\n"
 # help.c:218
 #: help.c:233
 msgid "  \\dC[x+]  [PATTERN]     list casts\n"
-msgstr "  \\dC[x+]  列出轉型\n"
+msgstr "  \\dC[x+]  [PATTERN]     列出轉型\n"
 
 # help.c:219
 #: help.c:234
@@ -3760,12 +3748,12 @@ msgstr "  \\dd[Sx]  [PATTERN]     顯示未在其他位置顯示的物件描述\
 # help.c:220
 #: help.c:235
 msgid "  \\dD[Sx+] [PATTERN]     list domains\n"
-msgstr "  \\dD[Sx+] [PATTERN]     列出 domain\n"
+msgstr "  \\dD[Sx+] [PATTERN]     列出可用域\n"
 
 # help.c:218
 #: help.c:236
 msgid "  \\ddp[x]  [PATTERN]     list default privileges\n"
-msgstr "  \\ddp[x]  列出預設權限\n"
+msgstr "  \\ddp[x]  [PATTERN]     列出預設權限\n"
 
 # help.c:228
 #: help.c:237
@@ -3802,7 +3790,7 @@ msgstr "  \\df[anptw][Sx+] [FUNCPTRN [TYPEPTRN ...]]\n                         �
 # help.c:221
 #: help.c:244
 msgid "  \\dF[x+]  [PATTERN]     list text search configurations\n"
-msgstr "  \\dF[x+]  列出文字搜尋組態\n"
+msgstr "  \\dF[x+]  [PATTERN]     列出文字搜尋組態\n"
 
 # help.c:228
 #: help.c:245
@@ -3842,7 +3830,7 @@ msgstr "  \\dL[Sx+] [PATTERN]     列出程序語言\n"
 # help.c:228
 #: help.c:252
 msgid "  \\dm[Sx+] [PATTERN]     list materialized views\n"
-msgstr "  \\dm[Sx+] [PATTERN]     列出實體化檢視表\n"
+msgstr "  \\dm[Sx+] [PATTERN]     列出物化檢視表\n"
 
 # help.c:228
 #: help.c:253
@@ -3864,7 +3852,7 @@ msgstr "  \\dO[Sx+] [PATTERN]     列出定序\n"
 # help.c:226
 #: help.c:257
 msgid "  \\dp[Sx]  [PATTERN]     list table, view, and sequence access privileges\n"
-msgstr "  \\dp[Sx]  列出資料表、檢視表、序列的存取權限\n"
+msgstr "  \\dp[Sx]  [PATTERN]     列出資料表、檢視表、序列的存取權限\n"
 
 # help.c:228
 #: help.c:258
@@ -3920,7 +3908,7 @@ msgstr "  \\dv[Sx+] [PATTERN]     列出檢視表\n"
 # help.c:217
 #: help.c:269
 msgid "  \\dx[x+]  [PATTERN]     list extensions\n"
-msgstr "  \\dx[x+]  列出擴充模組\n"
+msgstr "  \\dx[x+]  [PATTERN]     列出擴充模組\n"
 
 # help.c:218
 #: help.c:270
@@ -3930,22 +3918,22 @@ msgstr "  \\dX[x]   [PATTERN]     列出延伸統計資訊\n"
 # help.c:222
 #: help.c:271
 msgid "  \\dy[x+]  [PATTERN]     list event triggers\n"
-msgstr "  \\dy[x+]  列出事件觸發器\n"
+msgstr "  \\dy[x+]  [PATTERN]     列出事件觸發器\n"
 
 # help.c:228
 #: help.c:272
 msgid "  \\l[x+]   [PATTERN]     list databases\n"
-msgstr "  \\l[x+]   列出資料庫\n"
+msgstr "  \\l[x+]   [PATTERN]     列出資料庫\n"
 
 # help.c:193
 #: help.c:273
 msgid "  \\sf[+]   FUNCNAME      show a function's definition\n"
-msgstr "  \\sf[+]   顯示函式的定義\n"
+msgstr "  \\sf[+]   FUNCNAME      顯示函式的定義\n"
 
 # help.c:193
 #: help.c:274
 msgid "  \\sv[+]   VIEWNAME      show a view's definition\n"
-msgstr "  \\sv[+]   顯示檢視表的定義\n"
+msgstr "  \\sv[+]   VIEWNAME      顯示檢視表的定義\n"
 
 # help.c:218
 #: help.c:275
@@ -3991,7 +3979,7 @@ msgstr "  \\a                     切換對齊和非對齊的輸出模式\n"
 # help.c:235
 #: help.c:288
 msgid "  \\C [STRING]            set table title, or unset if none\n"
-msgstr "  \\C [STRING]            設定表格標題，若無則取消設定\n"
+msgstr "  \\C [STRING]            設定表格標題，若無參數則取消設定\n"
 
 # help.c:236
 #: help.c:289
@@ -4024,7 +4012,7 @@ msgstr "  \\t [on|off]            只顯示資料(目前是 %s)\n"
 # help.c:245
 #: help.c:301
 msgid "  \\T [STRING]            set HTML <table> tag attributes, or unset if none\n"
-msgstr "  \\T [STRING]            設定 HTML <table> 標籤屬性，若無則取消設定\n"
+msgstr "  \\T [STRING]            設定 HTML <table> 標籤屬性，若無參數則取消設定\n"
 
 # help.c:246
 #: help.c:302
@@ -4193,7 +4181,7 @@ msgid ""
 "  psql --set=NAME=VALUE\n"
 "  or \\set NAME VALUE inside psql\n"
 "\n"
-msgstr "  psql --set=NAME\n  或在 pgsql 中 \\set NAME VALUE\n\n"
+msgstr "  psql --set=名稱=值\n  或在 psql 中 \\set 名稱 值\n\n"
 
 #: help.c:392
 msgid ""
@@ -4208,10 +4196,7 @@ msgid ""
 "  COMP_KEYWORD_CASE\n"
 "    determines the case used to complete SQL key words\n"
 "    [lower, upper, preserve-lower, preserve-upper]\n"
-msgstr ""
-"  COMP_KEYWORD_CASE\n"
-"    決定完成SQL關鍵字時使用的大小寫\n"
-"    [lower, upper, preserve-lower, preserve-upper]\n"
+msgstr "  COMP_KEYWORD_CASE\n    決定完成 SQL 關鍵字時使用的大小寫\n    [lower, upper, preserve-lower, preserve-upper]\n"
 
 #: help.c:397
 msgid ""
@@ -4270,9 +4255,7 @@ msgstr ""
 msgid ""
 "  HIDE_TABLEAM\n"
 "    if set, table access methods are not displayed\n"
-msgstr ""
-"  HIDE_TABLEAM\n"
-"    若設定，則不顯示資料表存取方式\n"
+msgstr "  HIDE_TABLEAM\n    若設定，則不顯示資料表存取方法\n"
 
 #: help.c:413
 msgid ""
@@ -4314,17 +4297,13 @@ msgstr ""
 msgid ""
 "  IGNOREEOF\n"
 "    number of EOFs needed to terminate an interactive session\n"
-msgstr ""
-"  IGNOREEOF\n"
-"    結束互動式工作階段所需的EOF次數\n"
+msgstr "  IGNOREEOF\n    結束互動式工作階段所需的 EOF 次數\n"
 
 #: help.c:425
 msgid ""
 "  LASTOID\n"
 "    value of the last affected OID\n"
-msgstr ""
-"  LASTOID\n"
-"    上一個受影響的OID\n"
+msgstr "  LASTOID\n    上一個受影響的 OID\n"
 
 #: help.c:427
 msgid ""
@@ -4346,7 +4325,7 @@ msgstr "  ON_ERROR_ROLLBACK\n    若設定，錯誤不會停止交易(使用隱�
 msgid ""
 "  ON_ERROR_STOP\n"
 "    stop batch execution after error\n"
-msgstr "  ON_ERROR_ROLLBACK\n    若設定，錯誤不會停止交易(使用隱式儲存點)\n"
+msgstr "  ON_ERROR_STOP\n    發生錯誤後停止批次執行\n"
 
 #: help.c:434
 msgid ""
@@ -4360,17 +4339,13 @@ msgstr ""
 msgid ""
 "  PROMPT1\n"
 "    specifies the standard psql prompt\n"
-msgstr ""
-"  PROMPT1\n"
-"    指定標準的psql提示符號\n"
+msgstr "  PROMPT1\n    指定標準的 psql 提示符號\n"
 
 #: help.c:438
 msgid ""
 "  PROMPT2\n"
 "    specifies the prompt used when a statement continues from a previous line\n"
-msgstr ""
-"  PROMPT2\n"
-"    指定當一個陳述式從前一行繼續時所使用的提示符號\n"
+msgstr "  PROMPT2\n    指定當陳述式從前一行繼續時所使用的提示符號\n"
 
 #: help.c:440
 msgid ""
@@ -4392,9 +4367,7 @@ msgstr ""
 msgid ""
 "  ROW_COUNT\n"
 "    number of rows returned or affected by last query, or 0\n"
-msgstr ""
-"  ROW_COUNT\n"
-"    上一次查詢所回傳或受影響的列數，或為 0\n"
+msgstr "  ROW_COUNT\n    上一次查詢所傳回或受影響的列數，或為 0\n"
 
 #: help.c:446
 msgid ""
@@ -4434,17 +4407,13 @@ msgstr ""
 msgid ""
 "  SHOW_CONTEXT\n"
 "    controls display of message context fields [never, errors, always]\n"
-msgstr ""
-"  SHOW_CONTEXT\n"
-"    控制訊息上下文欄位的顯示[never, errors, always]\n"
+msgstr "  SHOW_CONTEXT\n    控制訊息上下文欄位的顯示 [never, errors, always]\n"
 
 #: help.c:457
 msgid ""
 "  SINGLELINE\n"
 "    if set, end of line terminates SQL commands (same as -S option)\n"
-msgstr ""
-"  SINGLELINE\n"
-"    若設定，SQL命令在行尾結束(同 -S 選項)\n"
+msgstr "  SINGLELINE\n    若設定，SQL 命令在行尾結束(同 -S 選項)\n"
 
 #: help.c:459
 msgid ""
@@ -4486,11 +4455,7 @@ msgid ""
 "  VERSION_NAME\n"
 "  VERSION_NUM\n"
 "    psql's version (in verbose string, short string, or numeric format)\n"
-msgstr ""
-"  VERSION\n"
-"  VERSION_NAME\n"
-"  VERSION_NUM\n"
-"    psql的版本(以詳細字串、簡短字串或數字格式表示)\n"
+msgstr "  VERSION\n  VERSION_NAME\n  VERSION_NUM\n    psql 的版本(以詳細字串、簡短字串或數字格式表示)\n"
 
 #: help.c:471
 #, c-format
@@ -4513,7 +4478,7 @@ msgid ""
 "  psql --pset=NAME[=VALUE]\n"
 "  or \\pset NAME [VALUE] inside psql\n"
 "\n"
-msgstr "  psql --pset=NAME\n  或在 psql 中 \\pset NAME [VALUE]\n\n"
+msgstr "  psql --pset=名稱[=值]\n  或在 psql 中 \\pset 名稱 [值]\n\n"
 
 #: help.c:479
 msgid ""
@@ -4527,7 +4492,7 @@ msgstr ""
 msgid ""
 "  columns\n"
 "    target width for the wrapped format\n"
-msgstr "  columns\n    封裝格式的目標寬度\n"
+msgstr "  columns\n    wrapped 格式的目標寬度\n"
 
 #: help.c:483
 #, c-format
@@ -4540,9 +4505,7 @@ msgstr "  csv_fieldsep\n    CSV 輸出格式的欄位分隔符號 (預設 \"%c\"
 msgid ""
 "  expanded (or x)\n"
 "    expanded output [on, off, auto]\n"
-msgstr ""
-"  expanded (or x)\n"
-"    展開輸出 [on, off, auto]\n"
+msgstr "  expanded (或 x)\n    展開輸出 [on, off, auto]\n"
 
 #: help.c:488
 #, c-format
@@ -4558,9 +4521,7 @@ msgstr ""
 msgid ""
 "  fieldsep_zero\n"
 "    set field separator for unaligned output to a zero byte\n"
-msgstr ""
-"  fieldsep_zero\n"
-"    設定非對齊輸出的欄位分隔符為 0 位元組\n"
+msgstr "  fieldsep_zero\n    將非對齊輸出的欄位分隔符設定成值為零的位元組\n"
 
 #: help.c:493
 msgid ""
@@ -4622,19 +4583,14 @@ msgstr ""
 msgid ""
 "  recordsep_zero\n"
 "    set record separator for unaligned output to a zero byte\n"
-msgstr ""
-"  recordsep_zero\n"
-"    將非對齊輸出的記錄分隔符設定為 0 位元組\n"
+msgstr "  recordsep_zero\n    將非對齊輸出的記錄分隔符設定成值為零的位元組\n"
 
 #: help.c:509
 msgid ""
 "  tableattr (or T)\n"
 "    specify attributes for table tag in html format, or proportional\n"
 "    column widths for left-aligned data types in latex-longtable format\n"
-msgstr ""
-"  tableattr (or T)\n"
-"    指定HTML格式中表格標籤的屬性，或是LaTeX-longtable\n"
-"    格式中左對齊資料型別的比例列寬\n"
+msgstr "  tableattr (或 T)\n    指定 html 格式中表格標籤的屬性，或是 latex-longtable\n    格式中左對齊資料型別的比例欄寬\n"
 
 #: help.c:512
 msgid ""
@@ -4684,10 +4640,7 @@ msgid ""
 "  NAME=VALUE [NAME=VALUE] psql ...\n"
 "  or \\setenv NAME [VALUE] inside psql\n"
 "\n"
-msgstr ""
-"  NAME=VALUE [NAME=VALUE] psql ...\n"
-"  或在 psql 中 \\setenv NAME [VALUE]\n"
-"\n"
+msgstr "  名稱=值 [名稱=值] psql ...\n  或在 psql 中 \\setenv 名稱 [值]\n\n"
 
 #: help.c:530
 msgid ""
@@ -4695,19 +4648,13 @@ msgid ""
 "  psql ...\n"
 "  or \\setenv NAME [VALUE] inside psql\n"
 "\n"
-msgstr ""
-"  set NAME=VALUE\n"
-"  psql ...\n"
-"  或在 psql 中 \\setenv NAME [VALUE]\n"
-"\n"
+msgstr "  set 名稱=值\n  psql ...\n  或在 psql 中 \\setenv 名稱 [值]\n\n"
 
 #: help.c:533
 msgid ""
 "  COLUMNS\n"
 "    number of columns for wrapped format\n"
-msgstr ""
-"  COLUMNS\n"
-"    用於封裝格式的欄位數\n"
+msgstr "  COLUMNS\n    用於 wrapped 格式的顯示欄數\n"
 
 #: help.c:535
 msgid ""
@@ -4769,9 +4716,7 @@ msgstr ""
 msgid ""
 "  PSQL_EDITOR, EDITOR, VISUAL\n"
 "    editor used by the \\e, \\ef, and \\ev commands\n"
-msgstr ""
-"  PSQL_EDITOR, EDITOR, VISUAL\n"
-"    \\e、\\ef、\\ev 命令使用的編輯器\n"
+msgstr "  PSQL_EDITOR, EDITOR, VISUAL\n    \\e, \\ef 和 \\ev 命令使用的編輯器\n"
 
 #: help.c:551
 msgid ""
@@ -4922,7 +4867,7 @@ msgstr "用 \\? 取得說明。"
 
 #: mainloop.c:301
 msgid "You are using psql, the command-line interface to PostgreSQL."
-msgstr "您正在使用 psql，這是 PostgreSQL 的命令列介面"
+msgstr "您正在使用 psql，這是 PostgreSQL 的命令列介面。"
 
 # startup.c:292
 #: mainloop.c:302
@@ -4933,12 +4878,7 @@ msgid ""
 "       \\? for help with psql commands\n"
 "       \\g or terminate with semicolon to execute query\n"
 "       \\q to quit\n"
-msgstr ""
-"輸入: \\copyright 顯示發行條款\n"
-"       \\h 顯示 SQL 命令的說明\n"
-"       \\? 顯示 psql 命令的說明\n"
-"       \\g 或以分號結尾以執行查詢\n"
-"       \\q 結束\n"
+msgstr "輸入:  \\copyright 顯示發行條款\n       \\h 顯示 SQL 命令的說明\n       \\? 顯示 psql 命令的說明\n       \\g 或以分號結尾以執行查詢\n       \\q 結束\n"
 
 #: mainloop.c:326
 msgid "Use \\q to quit."
@@ -4955,18 +4895,18 @@ msgstr "用 Control-C 結束。"
 #: mainloop.c:462 mainloop.c:621
 #, c-format
 msgid "query ignored; use \\endif or Ctrl-C to exit current \\if block"
-msgstr "查詢被忽略；使用 \\endif 或按 Ctrl-C 以結束當前的 \\if 區塊"
+msgstr "查詢被忽略；使用 \\endif 或按 Ctrl-C 以結束目前的 \\if 區塊"
 
 #: mainloop.c:639
 #, c-format
 msgid "reached EOF without finding closing \\endif(s)"
-msgstr "查詢被忽略；使用 \\endif 或按 Ctrl-C 以結束當前的 \\if 區塊"
+msgstr "已到達 EOF，但找不到結束用的 \\endif"
 
 # scan.l:407
 #: psqlscanslash.l:655
 #, c-format
 msgid "unterminated quoted string"
-msgstr "未完成的引號字串"
+msgstr "未結束的引號字串"
 
 #: psqlscanslash.l:905
 #, c-format
@@ -5035,13 +4975,13 @@ msgstr "%s: 記憶體不足"
 #: sql_help.c:4253 sql_help.c:4282 sql_help.c:4298 sql_help.c:4300
 #: sql_help.c:4804 sql_help.c:4852 sql_help.c:5011
 msgid "name"
-msgstr "name"
+msgstr "名稱"
 
 # describe.c:480
 #: sql_help.c:36 sql_help.c:39 sql_help.c:42 sql_help.c:354 sql_help.c:1900
 #: sql_help.c:3434 sql_help.c:4571
 msgid "aggregate_signature"
-msgstr "aggregate_signature"
+msgstr "聚合函式簽章"
 
 #: sql_help.c:37 sql_help.c:67 sql_help.c:82 sql_help.c:120 sql_help.c:274
 #: sql_help.c:295 sql_help.c:426 sql_help.c:473 sql_help.c:552 sql_help.c:600
@@ -5052,7 +4992,7 @@ msgstr "aggregate_signature"
 #: sql_help.c:1545 sql_help.c:1566 sql_help.c:1580 sql_help.c:1592
 #: sql_help.c:1605 sql_help.c:1632 sql_help.c:1698 sql_help.c:1751
 msgid "new_name"
-msgstr "new_name"
+msgstr "新名稱"
 
 #: sql_help.c:40 sql_help.c:69 sql_help.c:84 sql_help.c:122 sql_help.c:272
 #: sql_help.c:293 sql_help.c:424 sql_help.c:509 sql_help.c:557 sql_help.c:647
@@ -5062,7 +5002,7 @@ msgstr "new_name"
 #: sql_help.c:1431 sql_help.c:1504 sql_help.c:1547 sql_help.c:1568
 #: sql_help.c:1630 sql_help.c:1746 sql_help.c:3104
 msgid "new_owner"
-msgstr "new_owner"
+msgstr "新擁有者"
 
 # catalog/dependency.c:1714
 #: sql_help.c:43 sql_help.c:71 sql_help.c:86 sql_help.c:276 sql_help.c:346
@@ -5071,12 +5011,12 @@ msgstr "new_owner"
 #: sql_help.c:1166 sql_help.c:1366 sql_help.c:1549 sql_help.c:1570
 #: sql_help.c:1582 sql_help.c:1594 sql_help.c:1634 sql_help.c:1753
 msgid "new_schema"
-msgstr "new_schema"
+msgstr "新 schema"
 
 # describe.c:1174
 #: sql_help.c:44 sql_help.c:1964 sql_help.c:3435 sql_help.c:4600
 msgid "where aggregate_signature is:"
-msgstr "其中 aggregate_signature 是:"
+msgstr "其中聚合函式簽章為:"
 
 #: sql_help.c:45 sql_help.c:48 sql_help.c:51 sql_help.c:364 sql_help.c:377
 #: sql_help.c:381 sql_help.c:397 sql_help.c:400 sql_help.c:403 sql_help.c:544
@@ -5091,7 +5031,7 @@ msgstr "其中 aggregate_signature 是:"
 #: sql_help.c:4584 sql_help.c:4590 sql_help.c:4601 sql_help.c:4604
 #: sql_help.c:4607
 msgid "argmode"
-msgstr "argmode"
+msgstr "參數模式"
 
 #: sql_help.c:46 sql_help.c:49 sql_help.c:52 sql_help.c:365 sql_help.c:378
 #: sql_help.c:382 sql_help.c:398 sql_help.c:401 sql_help.c:404 sql_help.c:545
@@ -5105,7 +5045,7 @@ msgstr "argmode"
 #: sql_help.c:3651 sql_help.c:4578 sql_help.c:4585 sql_help.c:4591
 #: sql_help.c:4602 sql_help.c:4605 sql_help.c:4608
 msgid "argname"
-msgstr "argname"
+msgstr "參數名稱"
 
 # describe.c:1689
 #: sql_help.c:47 sql_help.c:50 sql_help.c:53 sql_help.c:366 sql_help.c:379
@@ -5119,7 +5059,7 @@ msgstr "argname"
 #: sql_help.c:3624 sql_help.c:3652 sql_help.c:4579 sql_help.c:4586
 #: sql_help.c:4592 sql_help.c:4603 sql_help.c:4606 sql_help.c:4609
 msgid "argtype"
-msgstr "argtype"
+msgstr "參數型別"
 
 # postmaster/postmaster.c:1017 tcop/postgres.c:2115
 #: sql_help.c:114 sql_help.c:421 sql_help.c:498 sql_help.c:510 sql_help.c:993
@@ -5130,31 +5070,31 @@ msgstr "argtype"
 #: sql_help.c:3318 sql_help.c:3340 sql_help.c:3482 sql_help.c:3839
 #: sql_help.c:4047 sql_help.c:4297 sql_help.c:4299 sql_help.c:5079
 msgid "option"
-msgstr "option"
+msgstr "選項"
 
 #: sql_help.c:115 sql_help.c:994 sql_help.c:1693 sql_help.c:2513
 #: sql_help.c:2744 sql_help.c:3319 sql_help.c:3483
 msgid "where option can be:"
-msgstr "其中 option 可以是:"
+msgstr "其中選項可以是:"
 
 #: sql_help.c:116 sql_help.c:2277
 msgid "allowconn"
-msgstr "allowconn"
+msgstr "是否允許連線"
 
 #: sql_help.c:117 sql_help.c:995 sql_help.c:1694 sql_help.c:2278
 #: sql_help.c:2514 sql_help.c:2745 sql_help.c:3320
 msgid "connlimit"
-msgstr "connlimit"
+msgstr "連線限制"
 
 #: sql_help.c:118 sql_help.c:2279
 msgid "istemplate"
-msgstr "istemplate"
+msgstr "是否為範本"
 
 # describe.c:1342
 #: sql_help.c:124 sql_help.c:635 sql_help.c:703 sql_help.c:717 sql_help.c:1369
 #: sql_help.c:1424 sql_help.c:4303
 msgid "new_tablespace"
-msgstr "new_tablespace"
+msgstr "新表空間"
 
 # sql_help.h:366
 #: sql_help.c:127 sql_help.c:130 sql_help.c:132 sql_help.c:572 sql_help.c:574
@@ -5164,7 +5104,7 @@ msgstr "new_tablespace"
 #: sql_help.c:1705 sql_help.c:1708 sql_help.c:2478 sql_help.c:2681
 #: sql_help.c:4015 sql_help.c:4321 sql_help.c:4482 sql_help.c:4792
 msgid "configuration_parameter"
-msgstr "configuration_parameter"
+msgstr "組態參數"
 
 # describe.c:415
 # describe.c:543
@@ -5184,26 +5124,26 @@ msgstr "configuration_parameter"
 #: sql_help.c:3107 sql_help.c:3134 sql_help.c:3341 sql_help.c:4048
 #: sql_help.c:4793 sql_help.c:4794 sql_help.c:4795 sql_help.c:4796
 msgid "value"
-msgstr "value"
+msgstr "值"
 
 #: sql_help.c:214
 msgid "target_role"
-msgstr "target_role"
+msgstr "目標角色"
 
 #: sql_help.c:215 sql_help.c:950 sql_help.c:953 sql_help.c:2330 sql_help.c:2713
 #: sql_help.c:2790 sql_help.c:2795 sql_help.c:3978 sql_help.c:3987
 #: sql_help.c:4006 sql_help.c:4018 sql_help.c:4445 sql_help.c:4454
 #: sql_help.c:4473 sql_help.c:4485
 msgid "schema_name"
-msgstr "schema_name"
+msgstr "schema 名稱"
 
 #: sql_help.c:216
 msgid "abbreviated_grant_or_revoke"
-msgstr "abbreviated_grant_or_revoke"
+msgstr "簡寫授權或撤銷"
 
 #: sql_help.c:217
 msgid "where abbreviated_grant_or_revoke is one of:"
-msgstr "其中 abbreviated_grant_or_revoke 可以是:"
+msgstr "其中簡寫授權或撤銷為下列之一:"
 
 # describe.c:1375
 #: sql_help.c:218 sql_help.c:219 sql_help.c:220 sql_help.c:221 sql_help.c:222
@@ -5216,7 +5156,7 @@ msgstr "其中 abbreviated_grant_or_revoke 可以是:"
 #: sql_help.c:3326 sql_help.c:3327 sql_help.c:4027 sql_help.c:4031
 #: sql_help.c:4494 sql_help.c:4498 sql_help.c:4814
 msgid "role_name"
-msgstr "role_name"
+msgstr "角色名稱"
 
 #: sql_help.c:260 sql_help.c:279 sql_help.c:486 sql_help.c:957 sql_help.c:1384
 #: sql_help.c:1386 sql_help.c:1390 sql_help.c:1441 sql_help.c:1453
@@ -5236,11 +5176,11 @@ msgstr "role_name"
 #: sql_help.c:5227 sql_help.c:5228 sql_help.c:5229 sql_help.c:5230
 #: sql_help.c:5231
 msgid "expression"
-msgstr "expression"
+msgstr "運算式"
 
 #: sql_help.c:263 sql_help.c:2300
 msgid "domain_constraint"
-msgstr "domain_constraint"
+msgstr "可用域條件約束"
 
 # catalog/dependency.c:1511
 #: sql_help.c:265 sql_help.c:267 sql_help.c:270 sql_help.c:278 sql_help.c:501
@@ -5250,29 +5190,29 @@ msgstr "domain_constraint"
 #: sql_help.c:2424 sql_help.c:2429 sql_help.c:3017 sql_help.c:3029
 #: sql_help.c:4093
 msgid "constraint_name"
-msgstr "constraint_name"
+msgstr "條件約束名稱"
 
 # catalog/dependency.c:1511
 #: sql_help.c:268 sql_help.c:1362
 msgid "new_constraint_name"
-msgstr "new_constraint_name"
+msgstr "新條件約束名稱"
 
 # describe.c:1174
 #: sql_help.c:277 sql_help.c:2301
 msgid "where domain_constraint is:"
-msgstr "其中 domain_constraint 是:"
+msgstr "其中可用域條件約束為:"
 
 #: sql_help.c:344 sql_help.c:1144
 msgid "new_version"
-msgstr "new_version"
+msgstr "新版本"
 
 #: sql_help.c:348 sql_help.c:350
 msgid "member_object"
-msgstr "member_object"
+msgstr "成員物件"
 
 #: sql_help.c:351
 msgid "where member_object is:"
-msgstr "其中 member_object 是:"
+msgstr "其中成員物件為:"
 
 # describe.c:1375
 #: sql_help.c:352 sql_help.c:357 sql_help.c:358 sql_help.c:359 sql_help.c:360
@@ -5292,24 +5232,24 @@ msgstr "其中 member_object 是:"
 #: sql_help.c:4594 sql_help.c:4595 sql_help.c:4596 sql_help.c:4597
 #: sql_help.c:4598
 msgid "object_name"
-msgstr "object_name"
+msgstr "物件名稱"
 
 # describe.c:480
 #: sql_help.c:353 sql_help.c:1899 sql_help.c:4570
 msgid "aggregate_name"
-msgstr "aggregate_name"
+msgstr "聚合函式名稱"
 
 # describe.c:1688
 #: sql_help.c:355 sql_help.c:1901 sql_help.c:2193 sql_help.c:2197
 #: sql_help.c:2199 sql_help.c:3452
 msgid "source_type"
-msgstr "source_type"
+msgstr "來源型別"
 
 # describe.c:1689
 #: sql_help.c:356 sql_help.c:1902 sql_help.c:2194 sql_help.c:2198
 #: sql_help.c:2200 sql_help.c:3453
 msgid "target_type"
-msgstr "target_type"
+msgstr "目標型別"
 
 # describe.c:498
 #: sql_help.c:363 sql_help.c:816 sql_help.c:1917 sql_help.c:2195
@@ -5319,72 +5259,72 @@ msgstr "target_type"
 #: sql_help.c:4955 sql_help.c:4959 sql_help.c:4962 sql_help.c:5198
 #: sql_help.c:5202 sql_help.c:5206 sql_help.c:5209
 msgid "function_name"
-msgstr "function_name"
+msgstr "函式名稱"
 
 # describe.c:512
 #: sql_help.c:368 sql_help.c:809 sql_help.c:1924 sql_help.c:2622
 msgid "operator_name"
-msgstr "operator_name"
+msgstr "運算子名稱"
 
 # describe.c:321
 #: sql_help.c:369 sql_help.c:743 sql_help.c:747 sql_help.c:751 sql_help.c:1925
 #: sql_help.c:2599 sql_help.c:3576
 msgid "left_type"
-msgstr "left_type"
+msgstr "左運算元型別"
 
 # describe.c:321
 #: sql_help.c:370 sql_help.c:744 sql_help.c:748 sql_help.c:752 sql_help.c:1926
 #: sql_help.c:2600 sql_help.c:3577
 msgid "right_type"
-msgstr "right_type"
+msgstr "右運算元型別"
 
 #: sql_help.c:372 sql_help.c:374 sql_help.c:772 sql_help.c:775 sql_help.c:778
 #: sql_help.c:807 sql_help.c:819 sql_help.c:827 sql_help.c:830 sql_help.c:833
 #: sql_help.c:1461 sql_help.c:1928 sql_help.c:1930 sql_help.c:2619
 #: sql_help.c:2640 sql_help.c:3038 sql_help.c:3586 sql_help.c:3595
 msgid "index_method"
-msgstr "index_method"
+msgstr "索引存取方法"
 
 #: sql_help.c:376 sql_help.c:1934 sql_help.c:4583
 msgid "procedure_name"
-msgstr "procedure_name"
+msgstr "程序名稱"
 
 # describe.c:1375
 #: sql_help.c:380 sql_help.c:1940 sql_help.c:4002 sql_help.c:4589
 msgid "routine_name"
-msgstr "routine_name"
+msgstr "常式名稱"
 
 #: sql_help.c:392 sql_help.c:1430 sql_help.c:1957 sql_help.c:2474
 #: sql_help.c:2680 sql_help.c:2990 sql_help.c:3177 sql_help.c:3757
 #: sql_help.c:4024 sql_help.c:4491
 msgid "type_name"
-msgstr "type_name"
+msgstr "型別名稱"
 
 #: sql_help.c:393 sql_help.c:1958 sql_help.c:2473 sql_help.c:2679
 #: sql_help.c:3178 sql_help.c:3410 sql_help.c:3758 sql_help.c:4009
 #: sql_help.c:4476
 msgid "lang_name"
-msgstr "lang_name"
+msgstr "語言名稱"
 
 #: sql_help.c:396
 msgid "and aggregate_signature is:"
-msgstr "且 aggregate_signature 是:"
+msgstr "且聚合函式簽章為:"
 
 # describe.c:498
 #: sql_help.c:419 sql_help.c:2060 sql_help.c:2343
 msgid "handler_function"
-msgstr "handler_function"
+msgstr "處理函式"
 
 # commands/define.c:279
 #: sql_help.c:420 sql_help.c:2344
 msgid "validator_function"
-msgstr "validator_function"
+msgstr "驗證函式"
 
 # describe.c:498
 #: sql_help.c:468 sql_help.c:547 sql_help.c:691 sql_help.c:883 sql_help.c:1047
 #: sql_help.c:1356 sql_help.c:1639
 msgid "action"
-msgstr "action"
+msgstr "動作"
 
 # describe.c:1375
 #: sql_help.c:470 sql_help.c:477 sql_help.c:481 sql_help.c:482 sql_help.c:485
@@ -5416,17 +5356,17 @@ msgstr "action"
 #: sql_help.c:5039 sql_help.c:5041 sql_help.c:5043 sql_help.c:5097
 #: sql_help.c:5235 sql_help.c:5242 sql_help.c:5244
 msgid "column_name"
-msgstr "column_name"
+msgstr "欄位名稱"
 
 # describe.c:1375
 #: sql_help.c:471 sql_help.c:696 sql_help.c:1359 sql_help.c:1749
 msgid "new_column_name"
-msgstr "new_column_name"
+msgstr "新欄位名稱"
 
 #: sql_help.c:476 sql_help.c:568 sql_help.c:704 sql_help.c:904 sql_help.c:1068
 #: sql_help.c:1375 sql_help.c:1649
 msgid "where action is one of:"
-msgstr "其中 action 可以是:"
+msgstr "其中動作為下列之一:"
 
 # describe.c:526
 #: sql_help.c:478 sql_help.c:483 sql_help.c:1117 sql_help.c:1377
@@ -5434,7 +5374,7 @@ msgstr "其中 action 可以是:"
 #: sql_help.c:2402 sql_help.c:2618 sql_help.c:2815 sql_help.c:2973
 #: sql_help.c:3260 sql_help.c:4254
 msgid "data_type"
-msgstr "data_type"
+msgstr "資料型別"
 
 # describe.c:128
 #: sql_help.c:479 sql_help.c:484 sql_help.c:1378 sql_help.c:1383
@@ -5443,57 +5383,57 @@ msgstr "data_type"
 #: sql_help.c:2996 sql_help.c:3010 sql_help.c:3065 sql_help.c:3261
 #: sql_help.c:3267 sql_help.c:4090
 msgid "collation"
-msgstr "collation"
+msgstr "定序"
 
 # catalog/dependency.c:1511
 #: sql_help.c:480 sql_help.c:1379 sql_help.c:2406 sql_help.c:2417
 #: sql_help.c:2976 sql_help.c:2992 sql_help.c:3005
 msgid "column_constraint"
-msgstr "column_constraint"
+msgstr "欄位條件約束"
 
 #: sql_help.c:490 sql_help.c:632 sql_help.c:706 sql_help.c:1399 sql_help.c:5091
 msgid "integer"
-msgstr "integer"
+msgstr "整數"
 
 #: sql_help.c:492 sql_help.c:495 sql_help.c:708 sql_help.c:711 sql_help.c:1401
 #: sql_help.c:1404
 msgid "attribute_option"
-msgstr "attribute_option"
+msgstr "屬性選項"
 
 # catalog/dependency.c:1511
 #: sql_help.c:500 sql_help.c:1408 sql_help.c:2407 sql_help.c:2418
 #: sql_help.c:2977 sql_help.c:2993 sql_help.c:3006
 msgid "table_constraint"
-msgstr "table_constraint"
+msgstr "資料表條件約束"
 
 # describe.c:575
 #: sql_help.c:503 sql_help.c:504 sql_help.c:505 sql_help.c:506 sql_help.c:1414
 #: sql_help.c:1415 sql_help.c:1416 sql_help.c:1417 sql_help.c:1959
 msgid "trigger_name"
-msgstr "trigger_name"
+msgstr "觸發器名稱"
 
 #: sql_help.c:507 sql_help.c:508 sql_help.c:1428 sql_help.c:1429
 #: sql_help.c:2410 sql_help.c:2415 sql_help.c:2980 sql_help.c:3003
 msgid "parent_table"
-msgstr "parent_table"
+msgstr "父資料表"
 
 #: sql_help.c:567 sql_help.c:624 sql_help.c:693 sql_help.c:903 sql_help.c:1067
 #: sql_help.c:1608 sql_help.c:2329
 msgid "extension_name"
-msgstr "extension_name"
+msgstr "擴充模組名稱"
 
 #: sql_help.c:569 sql_help.c:1069 sql_help.c:2475
 msgid "execution_cost"
-msgstr "execution_cost"
+msgstr "執行成本"
 
 #: sql_help.c:570 sql_help.c:1070 sql_help.c:2476
 msgid "result_rows"
-msgstr "result_rows"
+msgstr "結果資料列數"
 
 # describe.c:498
 #: sql_help.c:571 sql_help.c:2477
 msgid "support_function"
-msgstr "support_function"
+msgstr "支援函式"
 
 # describe.c:1636
 #: sql_help.c:593 sql_help.c:595 sql_help.c:992 sql_help.c:1000 sql_help.c:1004
@@ -5516,22 +5456,22 @@ msgstr "support_function"
 #: sql_help.c:4487 sql_help.c:4489 sql_help.c:4490 sql_help.c:4492
 #: sql_help.c:4493 sql_help.c:4495 sql_help.c:4496
 msgid "role_specification"
-msgstr "role_specification"
+msgstr "角色指定項"
 
 #: sql_help.c:594 sql_help.c:596 sql_help.c:1722 sql_help.c:2264
 #: sql_help.c:2799 sql_help.c:3338 sql_help.c:3791 sql_help.c:4824
 msgid "user_name"
-msgstr "user_name"
+msgstr "使用者名稱"
 
 #: sql_help.c:597 sql_help.c:1012 sql_help.c:1711 sql_help.c:2798
 #: sql_help.c:4030 sql_help.c:4497
 msgid "where role_specification can be:"
-msgstr "其中 role_specification 可以是:"
+msgstr "其中角色指定項可以是:"
 
 # utils/misc/guc.c:237
 #: sql_help.c:599
 msgid "group_name"
-msgstr "group_name"
+msgstr "群組名稱"
 
 # describe.c:1342
 #: sql_help.c:620 sql_help.c:1480 sql_help.c:2276 sql_help.c:2548
@@ -5539,59 +5479,59 @@ msgstr "group_name"
 #: sql_help.c:3061 sql_help.c:3091 sql_help.c:3103 sql_help.c:4021
 #: sql_help.c:4488
 msgid "tablespace_name"
-msgstr "tablespace_name"
+msgstr "表空間名稱"
 
 # describe.c:543
 # describe.c:1477
 #: sql_help.c:622 sql_help.c:715 sql_help.c:1422 sql_help.c:1432
 #: sql_help.c:1475 sql_help.c:1837
 msgid "index_name"
-msgstr "index_name"
+msgstr "索引名稱"
 
 #: sql_help.c:626 sql_help.c:629 sql_help.c:718 sql_help.c:720 sql_help.c:1425
 #: sql_help.c:1427 sql_help.c:1478 sql_help.c:2546 sql_help.c:2580
 #: sql_help.c:2986 sql_help.c:2999 sql_help.c:3013 sql_help.c:3059
 #: sql_help.c:3089
 msgid "storage_parameter"
-msgstr "storage_parameter"
+msgstr "儲存參數"
 
 # describe.c:1375
 #: sql_help.c:631
 msgid "column_number"
-msgstr "column_number"
+msgstr "欄位編號"
 
 # large_obj.c:264
 #: sql_help.c:655 sql_help.c:1922 sql_help.c:4580
 msgid "large_object_oid"
-msgstr "large_object_oid"
+msgstr "大型物件 OID"
 
 #: sql_help.c:714 sql_help.c:1407 sql_help.c:2974
 msgid "compression_method"
-msgstr "compression_method"
+msgstr "壓縮方法"
 
 #: sql_help.c:716 sql_help.c:1423
 msgid "new_access_method"
-msgstr "new_access_method"
+msgstr "新存取方法"
 
 #: sql_help.c:753 sql_help.c:2603
 msgid "res_proc"
-msgstr "res_proc"
+msgstr "限制選擇率估算函式"
 
 #: sql_help.c:754 sql_help.c:2604
 msgid "join_proc"
-msgstr "join_proc"
+msgstr "聯結選擇率估算函式"
 
 #: sql_help.c:755 sql_help.c:2601
 msgid "com_op"
-msgstr "com_op"
+msgstr "交換運算子"
 
 #: sql_help.c:756 sql_help.c:2602
 msgid "neg_op"
-msgstr "neg_op"
+msgstr "否定運算子"
 
 #: sql_help.c:808 sql_help.c:820 sql_help.c:2621
 msgid "strategy_number"
-msgstr "strategy_number"
+msgstr "策略編號"
 
 # describe.c:415
 # describe.c:745
@@ -5601,21 +5541,21 @@ msgstr "strategy_number"
 #: sql_help.c:822 sql_help.c:824 sql_help.c:825 sql_help.c:2623 sql_help.c:2624
 #: sql_help.c:2627 sql_help.c:2628
 msgid "op_type"
-msgstr "op_type"
+msgstr "運算元型別"
 
 #: sql_help.c:812 sql_help.c:2625
 msgid "sort_family_name"
-msgstr "sort_family_name"
+msgstr "排序運算子家族名稱"
 
 #: sql_help.c:813 sql_help.c:823 sql_help.c:2626
 msgid "support_number"
-msgstr "support_number"
+msgstr "支援函式編號"
 
 # describe.c:1689
 #: sql_help.c:817 sql_help.c:2196 sql_help.c:2630 sql_help.c:3180
 #: sql_help.c:3182
 msgid "argument_type"
-msgstr "argument_type"
+msgstr "參數型別"
 
 # describe.c:415
 # describe.c:543
@@ -5634,48 +5574,48 @@ msgstr "argument_type"
 #: sql_help.c:4939 sql_help.c:5002 sql_help.c:5037 sql_help.c:5096
 #: sql_help.c:5186 sql_help.c:5249
 msgid "table_name"
-msgstr "table_name"
+msgstr "資料表名稱"
 
 #: sql_help.c:853 sql_help.c:2656
 msgid "using_expression"
-msgstr "using_expression"
+msgstr "USING 運算式"
 
 #: sql_help.c:854 sql_help.c:2657
 msgid "check_expression"
-msgstr "check_expression"
+msgstr "CHECK 運算式"
 
 # describe.c:1636
 #: sql_help.c:936 sql_help.c:938 sql_help.c:2708
 msgid "publication_object"
-msgstr "publication_object"
+msgstr "發布物件"
 
 # describe.c:1636
 #: sql_help.c:940
 msgid "publication_drop_object"
-msgstr "publication_drop_object"
+msgstr "從發布移除的物件"
 
 # sql_help.h:366
 #: sql_help.c:942 sql_help.c:2709
 msgid "publication_parameter"
-msgstr "publication_parameter"
+msgstr "發布參數"
 
 #: sql_help.c:948 sql_help.c:2711
 msgid "where publication_object is one of:"
-msgstr "其中 publication_object 可以是:"
+msgstr "其中發布物件為下列之一:"
 
 # catalog/dependency.c:1511
 #: sql_help.c:949 sql_help.c:1777 sql_help.c:2712 sql_help.c:5080
 msgid "table_and_columns"
-msgstr "table_and_columns"
+msgstr "資料表與欄位"
 
 #: sql_help.c:951
 msgid "and publication_drop_object is one of:"
-msgstr "且 publication_drop_object 可以是:"
+msgstr "且從發布移除的物件為下列之一:"
 
 # catalog/dependency.c:1511
 #: sql_help.c:954 sql_help.c:1782 sql_help.c:2714 sql_help.c:5095
 msgid "and table_and_columns is:"
-msgstr "且 table_constraint 是:"
+msgstr "且資料表與欄位為:"
 
 # command.c:915
 # command.c:939
@@ -5684,275 +5624,275 @@ msgstr "且 table_constraint 是:"
 #: sql_help.c:996 sql_help.c:1695 sql_help.c:2515 sql_help.c:2746
 #: sql_help.c:3321
 msgid "password"
-msgstr "password"
+msgstr "密碼"
 
 #: sql_help.c:997 sql_help.c:1696 sql_help.c:2516 sql_help.c:2747
 #: sql_help.c:3322
 msgid "timestamp"
-msgstr "timestamp"
+msgstr "時間戳記"
 
 # commands/user.c:240 commands/user.c:371
 #: sql_help.c:1001 sql_help.c:1005 sql_help.c:1008 sql_help.c:1011
 #: sql_help.c:1700 sql_help.c:1704 sql_help.c:1707 sql_help.c:1710
 #: sql_help.c:3990 sql_help.c:4457
 msgid "database_name"
-msgstr "database_name"
+msgstr "資料庫名稱"
 
 #: sql_help.c:1118 sql_help.c:2816
 msgid "increment"
-msgstr "increment"
+msgstr "增量"
 
 #: sql_help.c:1119 sql_help.c:2817
 msgid "minvalue"
-msgstr "minvalue"
+msgstr "最小值"
 
 #: sql_help.c:1120 sql_help.c:2818
 msgid "maxvalue"
-msgstr "maxvalue"
+msgstr "最大值"
 
 #: sql_help.c:1121 sql_help.c:2819 sql_help.c:4677 sql_help.c:4781
 #: sql_help.c:4935 sql_help.c:5113 sql_help.c:5182
 msgid "start"
-msgstr "start"
+msgstr "起始值"
 
 #: sql_help.c:1122 sql_help.c:1396
 msgid "restart"
-msgstr "restart"
+msgstr "重新起算值"
 
 #: sql_help.c:1123 sql_help.c:2820
 msgid "cache"
-msgstr "cache"
+msgstr "快取數量"
 
 # describe.c:415
 # describe.c:543
 # describe.c:1477
 #: sql_help.c:1168
 msgid "new_target"
-msgstr "new_target"
+msgstr "新目標"
 
 #: sql_help.c:1187 sql_help.c:2873
 msgid "conninfo"
-msgstr "conninfo"
+msgstr "連線資訊"
 
 # describe.c:498
 #: sql_help.c:1189 sql_help.c:1193 sql_help.c:1197 sql_help.c:2874
 msgid "publication_name"
-msgstr "publication_name"
+msgstr "發布名稱"
 
 # describe.c:1636
 #: sql_help.c:1190 sql_help.c:1194 sql_help.c:1198
 msgid "publication_option"
-msgstr "publication_option"
+msgstr "發布選項"
 
 # help.c:88
 #: sql_help.c:1201
 msgid "refresh_option"
-msgstr "refresh_option"
+msgstr "重新整理選項"
 
 # sql_help.h:366
 #: sql_help.c:1206 sql_help.c:2875
 msgid "subscription_parameter"
-msgstr "subscription_parameter"
+msgstr "訂閱參數"
 
 # help.c:88
 #: sql_help.c:1209
 msgid "skip_option"
-msgstr "skip_option"
+msgstr "略過選項"
 
 #: sql_help.c:1371 sql_help.c:1374
 msgid "partition_name"
-msgstr "partition_name"
+msgstr "分割名稱"
 
 #: sql_help.c:1372 sql_help.c:2419 sql_help.c:3007
 msgid "partition_bound_spec"
-msgstr "partition_bound_spec"
+msgstr "分割界限定義"
 
 # describe.c:415
 # describe.c:543
 # describe.c:1477
 #: sql_help.c:1393 sql_help.c:1444 sql_help.c:3021
 msgid "sequence_options"
-msgstr "sequence_options"
+msgstr "序列選項"
 
 # describe.c:415
 # describe.c:543
 # describe.c:1477
 #: sql_help.c:1395
 msgid "sequence_option"
-msgstr "sequence_option"
+msgstr "序列選項"
 
 #: sql_help.c:1409
 msgid "table_constraint_using_index"
-msgstr "table_constraint_using_index"
+msgstr "使用索引的資料表條件約束"
 
 #: sql_help.c:1418 sql_help.c:1419 sql_help.c:1420 sql_help.c:1421
 msgid "rewrite_rule_name"
-msgstr "rewrite_rule_name"
+msgstr "重寫規則名稱"
 
 #: sql_help.c:1433 sql_help.c:2433 sql_help.c:3051
 msgid "and partition_bound_spec is:"
-msgstr "且 partition_bound_spec 是:"
+msgstr "且分割界限定義為:"
 
 #: sql_help.c:1434 sql_help.c:1435 sql_help.c:1436 sql_help.c:2434
 #: sql_help.c:2435 sql_help.c:2436 sql_help.c:3052 sql_help.c:3053
 #: sql_help.c:3054
 msgid "partition_bound_expr"
-msgstr "partition_bound_expr"
+msgstr "分割界限運算式"
 
 #: sql_help.c:1437 sql_help.c:1438 sql_help.c:2437 sql_help.c:2438
 #: sql_help.c:3055 sql_help.c:3056
 msgid "numeric_literal"
-msgstr "numeric_literal"
+msgstr "數值字面量"
 
 # describe.c:1174
 #: sql_help.c:1439
 msgid "and column_constraint is:"
-msgstr "且 column_constraint 是:"
+msgstr "且欄位條件約束為:"
 
 # describe.c:1639
 #: sql_help.c:1442 sql_help.c:2426 sql_help.c:2469 sql_help.c:2678
 #: sql_help.c:3019
 msgid "default_expr"
-msgstr "default_expr"
+msgstr "預設運算式"
 
 #: sql_help.c:1443 sql_help.c:2427 sql_help.c:3020
 msgid "generation_expr"
-msgstr "generation_expr"
+msgstr "產生運算式"
 
 #: sql_help.c:1445 sql_help.c:1446 sql_help.c:1457 sql_help.c:1460
 #: sql_help.c:1464 sql_help.c:3022 sql_help.c:3023 sql_help.c:3034
 #: sql_help.c:3037 sql_help.c:3041
 msgid "index_parameters"
-msgstr "index_parameters"
+msgstr "索引參數"
 
 # describe.c:415
 # describe.c:543
 # describe.c:1477
 #: sql_help.c:1447 sql_help.c:1468 sql_help.c:3024 sql_help.c:3045
 msgid "reftable"
-msgstr "reftable"
+msgstr "所參照的資料表"
 
 # describe.c:744
 #: sql_help.c:1448 sql_help.c:1469 sql_help.c:1470 sql_help.c:3025
 #: sql_help.c:3046 sql_help.c:3047
 msgid "refcolumn"
-msgstr "refcolumn"
+msgstr "所參照的欄位"
 
 #: sql_help.c:1449 sql_help.c:1450 sql_help.c:1471 sql_help.c:1472
 #: sql_help.c:3026 sql_help.c:3027 sql_help.c:3048 sql_help.c:3049
 msgid "referential_action"
-msgstr "referential_action"
+msgstr "參照動作"
 
 # catalog/dependency.c:1511
 #: sql_help.c:1451 sql_help.c:2428 sql_help.c:3028
 msgid "and table_constraint is:"
-msgstr "且 table_constraint 是:"
+msgstr "且資料表條件約束為:"
 
 #: sql_help.c:1462 sql_help.c:3039
 msgid "exclude_element"
-msgstr "exclude_element"
+msgstr "排除項"
 
 # describe.c:512
 #: sql_help.c:1463 sql_help.c:3040 sql_help.c:4675 sql_help.c:4779
 #: sql_help.c:4933 sql_help.c:5111 sql_help.c:5180
 msgid "operator"
-msgstr "operator"
+msgstr "運算子"
 
 # describe.c:937
 #: sql_help.c:1465 sql_help.c:2549 sql_help.c:3042
 msgid "predicate"
-msgstr "predicate"
+msgstr "述詞"
 
 #: sql_help.c:1473
 msgid "and table_constraint_using_index is:"
-msgstr "並且 table_constraint_using_index 是:"
+msgstr "並且使用索引的資料表條件約束為:"
 
 #: sql_help.c:1476 sql_help.c:3057
 msgid "index_parameters in UNIQUE, PRIMARY KEY, and EXCLUDE constraints are:"
-msgstr "UNIQUE, PRIMARY KEY, and EXCLUDE 約束條件中的 index_parameters 是:"
+msgstr "UNIQUE, PRIMARY KEY 和 EXCLUDE 條件約束中的索引參數為:"
 
 #: sql_help.c:1481 sql_help.c:3062
 msgid "exclude_element in an EXCLUDE constraint is:"
-msgstr "在 EXCLUDE 約束條件的 exclude_element 是:"
+msgstr "EXCLUDE 條件約束中的排除項為:"
 
 #: sql_help.c:1485 sql_help.c:2542 sql_help.c:2984 sql_help.c:2997
 #: sql_help.c:3011 sql_help.c:3066 sql_help.c:4091
 msgid "opclass"
-msgstr "opclass"
+msgstr "運算子類別"
 
 #: sql_help.c:1486 sql_help.c:2543 sql_help.c:3067
 msgid "opclass_parameter"
-msgstr "opclass_parameter"
+msgstr "運算子類別參數"
 
 #: sql_help.c:1488 sql_help.c:3069
 msgid "referential_action in a FOREIGN KEY/REFERENCES constraint is:"
-msgstr "FOREIGN KEY/REFERENCES 約束中的 referential_action 是:"
+msgstr "FOREIGN KEY/REFERENCES 條件約束中的參照動作為:"
 
 # describe.c:1342
 #: sql_help.c:1506 sql_help.c:1509 sql_help.c:3106
 msgid "tablespace_option"
-msgstr "tablespace_option"
+msgstr "表空間選項"
 
 #: sql_help.c:1530 sql_help.c:1533 sql_help.c:1539 sql_help.c:1543
 msgid "token_type"
-msgstr "token_type"
+msgstr "符記型別"
 
 #: sql_help.c:1531 sql_help.c:1534
 msgid "dictionary_name"
-msgstr "dictionary_name"
+msgstr "字典名稱"
 
 #: sql_help.c:1536 sql_help.c:1540
 msgid "old_dictionary"
-msgstr "old_dictionary"
+msgstr "舊字典"
 
 #: sql_help.c:1537 sql_help.c:1541
 msgid "new_dictionary"
-msgstr "new_dictionary"
+msgstr "新字典"
 
 #: sql_help.c:1636 sql_help.c:1650 sql_help.c:1653 sql_help.c:1654
 #: sql_help.c:3259
 msgid "attribute_name"
-msgstr "attribute_name"
+msgstr "屬性名稱"
 
 #: sql_help.c:1637
 msgid "new_attribute_name"
-msgstr "new_attribute_name"
+msgstr "新屬性名稱"
 
 #: sql_help.c:1641 sql_help.c:1645
 msgid "new_enum_value"
-msgstr "new_enum_value"
+msgstr "新列舉值"
 
 #: sql_help.c:1642
 msgid "neighbor_enum_value"
-msgstr "neighbor_enum_value"
+msgstr "相鄰列舉值"
 
 #: sql_help.c:1644
 msgid "existing_enum_value"
-msgstr "existing_enum_value"
+msgstr "現有列舉值"
 
 # describe.c:512
 #: sql_help.c:1647
 msgid "property"
-msgstr "property"
+msgstr "屬性"
 
 #: sql_help.c:1723 sql_help.c:2411 sql_help.c:2420 sql_help.c:2832
 #: sql_help.c:3339 sql_help.c:3792 sql_help.c:3999 sql_help.c:4045
 #: sql_help.c:4466
 msgid "server_name"
-msgstr "server_name"
+msgstr "伺服器名稱"
 
 #: sql_help.c:1755 sql_help.c:1758 sql_help.c:3354
 msgid "view_option_name"
-msgstr "view_option_name"
+msgstr "檢視選項名稱"
 
 #: sql_help.c:1756 sql_help.c:3355
 msgid "view_option_value"
-msgstr "view_option_value"
+msgstr "檢視選項值"
 
 #: sql_help.c:1778 sql_help.c:1838 sql_help.c:2033 sql_help.c:3841
 #: sql_help.c:4301 sql_help.c:5081
 msgid "where option can be one of:"
-msgstr "其中 option 可以是:"
+msgstr "其中選項可以是下列之一:"
 
 #: sql_help.c:1779 sql_help.c:1780 sql_help.c:1839 sql_help.c:2035
 #: sql_help.c:2039 sql_help.c:2222 sql_help.c:3842 sql_help.c:3843
@@ -5963,20 +5903,20 @@ msgstr "其中 option 可以是:"
 #: sql_help.c:5088 sql_help.c:5089 sql_help.c:5090 sql_help.c:5092
 #: sql_help.c:5093
 msgid "boolean"
-msgstr "boolean"
+msgstr "布林值"
 
 #: sql_help.c:1781 sql_help.c:5094
 msgid "size"
-msgstr "size"
+msgstr "大小"
 
 #: sql_help.c:1798 sql_help.c:4840 sql_help.c:4842 sql_help.c:4866
 msgid "transaction_mode"
-msgstr "transaction_mode"
+msgstr "交易模式"
 
 # access/transam/xact.c:2544 access/transam/xact.c:2635
 #: sql_help.c:1799 sql_help.c:4843 sql_help.c:4867
 msgid "where transaction_mode is one of:"
-msgstr "其中 transaction_mode 可以是:"
+msgstr "其中交易模式為下列之一:"
 
 # gram.y:3496 utils/adt/regproc.c:639
 #: sql_help.c:1808 sql_help.c:4685 sql_help.c:4694 sql_help.c:4698
@@ -5984,44 +5924,44 @@ msgstr "其中 transaction_mode 可以是:"
 #: sql_help.c:4956 sql_help.c:4960 sql_help.c:4963 sql_help.c:5190
 #: sql_help.c:5199 sql_help.c:5203 sql_help.c:5207 sql_help.c:5210
 msgid "argument"
-msgstr "argument"
+msgstr "引數"
 
 #: sql_help.c:1904
 msgid "relation_name"
-msgstr "relation_name"
+msgstr "關聯名稱"
 
 # describe.c:1375
 #: sql_help.c:1909 sql_help.c:3993 sql_help.c:4460
 msgid "domain_name"
-msgstr "domain_name"
+msgstr "可用域名稱"
 
 # describe.c:1375
 #: sql_help.c:1931
 msgid "policy_name"
-msgstr "policy_name"
+msgstr "政策名稱"
 
 # describe.c:1375
 #: sql_help.c:1944
 msgid "rule_name"
-msgstr "rule_name"
+msgstr "規則名稱"
 
 #: sql_help.c:1963 sql_help.c:4599
 msgid "string_literal"
-msgstr "string_literal"
+msgstr "字串字面量"
 
 #: sql_help.c:1988 sql_help.c:4263 sql_help.c:4513
 msgid "transaction_id"
-msgstr "transaction_id"
+msgstr "交易 ID"
 
 # describe.c:1375
 #: sql_help.c:2023 sql_help.c:2030 sql_help.c:4117
 msgid "filename"
-msgstr "filename"
+msgstr "檔名"
 
 #: sql_help.c:2024 sql_help.c:2031 sql_help.c:2769 sql_help.c:2770
 #: sql_help.c:2771
 msgid "command"
-msgstr "command"
+msgstr "命令"
 
 # help.c:123
 #: sql_help.c:2026 sql_help.c:2768 sql_help.c:3209 sql_help.c:3391
@@ -6030,138 +5970,138 @@ msgstr "command"
 #: sql_help.c:4926 sql_help.c:4928 sql_help.c:5046 sql_help.c:5173
 #: sql_help.c:5175
 msgid "condition"
-msgstr "condition"
+msgstr "條件"
 
 #: sql_help.c:2029 sql_help.c:2583 sql_help.c:3092 sql_help.c:3356
 #: sql_help.c:3374 sql_help.c:4081
 msgid "query"
-msgstr "query"
+msgstr "查詢"
 
 # help.c:211
 #: sql_help.c:2034
 msgid "format_name"
-msgstr "format_name"
+msgstr "格式名稱"
 
 #: sql_help.c:2036
 msgid "delimiter_character"
-msgstr "delimiter_character"
+msgstr "分隔字元"
 
 #: sql_help.c:2037
 msgid "null_string"
-msgstr "null_string"
+msgstr "NULL 標記字串"
 
 #: sql_help.c:2038
 msgid "default_string"
-msgstr "default_string"
+msgstr "DEFAULT 標記字串"
 
 #  translator: %s represents a digit string
 # fe-protocol3.c:651
 # fe-protocol3.c:659
 #: sql_help.c:2040
 msgid "quote_character"
-msgstr "quote_character"
+msgstr "引號字元"
 
 #: sql_help.c:2041
 msgid "escape_character"
-msgstr "escape_character"
+msgstr "逸出字元"
 
 # describe.c:498
 #: sql_help.c:2045
 msgid "error_action"
-msgstr "error_action"
+msgstr "錯誤處理動作"
 
 # gram.y:8218 gram.y:8220 y.tab.c:19175
 #: sql_help.c:2046
 msgid "maxerror"
-msgstr "maxerror"
+msgstr "最大錯誤數"
 
 # utils/mb/encnames.c:445
 #: sql_help.c:2047
 msgid "encoding_name"
-msgstr "encoding_name"
+msgstr "編碼名稱"
 
 #: sql_help.c:2048
 msgid "verbosity"
-msgstr "verbosity"
+msgstr "詳細程度"
 
 #: sql_help.c:2059
 msgid "access_method_type"
-msgstr "access_method_type"
+msgstr "存取方法型別"
 
 # describe.c:526
 #: sql_help.c:2130 sql_help.c:2149 sql_help.c:2152
 msgid "arg_data_type"
-msgstr "arg_data_type"
+msgstr "參數資料型別"
 
 # describe.c:498
 #: sql_help.c:2131 sql_help.c:2153 sql_help.c:2161
 msgid "sfunc"
-msgstr "sfunc"
+msgstr "狀態轉換函式名稱"
 
 # describe.c:526
 #: sql_help.c:2132 sql_help.c:2154 sql_help.c:2162
 msgid "state_data_type"
-msgstr "state_data_type"
+msgstr "狀態資料型別"
 
 # describe.c:526
 #: sql_help.c:2133 sql_help.c:2155 sql_help.c:2163
 msgid "state_data_size"
-msgstr "state_data_size"
+msgstr "狀態資料大小"
 
 # describe.c:498
 #: sql_help.c:2134 sql_help.c:2156 sql_help.c:2164
 msgid "ffunc"
-msgstr "ffunc"
+msgstr "最終函式"
 
 #: sql_help.c:2135 sql_help.c:2165
 msgid "combinefunc"
-msgstr "combinefunc"
+msgstr "合併函式"
 
 # describe.c:498
 #: sql_help.c:2136 sql_help.c:2166
 msgid "serialfunc"
-msgstr "serialfunc"
+msgstr "序列化函式"
 
 #: sql_help.c:2137 sql_help.c:2167
 msgid "deserialfunc"
-msgstr "deserialfunc"
+msgstr "反序列化函式"
 
 #: sql_help.c:2138 sql_help.c:2157 sql_help.c:2168
 msgid "initial_condition"
-msgstr "initial_condition"
+msgstr "初始條件"
 
 # describe.c:498
 #: sql_help.c:2139 sql_help.c:2169
 msgid "msfunc"
-msgstr "msfunc"
+msgstr "移動聚合狀態轉換函式"
 
 #: sql_help.c:2140 sql_help.c:2170
 msgid "minvfunc"
-msgstr "minvfunc"
+msgstr "移動聚合逆向狀態轉換函式"
 
 # describe.c:526
 #: sql_help.c:2141 sql_help.c:2171
 msgid "mstate_data_type"
-msgstr "mstate_data_type"
+msgstr "移動聚合狀態資料型別"
 
 # describe.c:526
 #: sql_help.c:2142 sql_help.c:2172
 msgid "mstate_data_size"
-msgstr "mstate_data_size"
+msgstr "移動聚合狀態資料大小"
 
 # describe.c:498
 #: sql_help.c:2143 sql_help.c:2173
 msgid "mffunc"
-msgstr "mffunc"
+msgstr "移動聚合最終函式"
 
 #: sql_help.c:2144 sql_help.c:2174
 msgid "minitial_condition"
-msgstr "minitial_condition"
+msgstr "移動聚合初始條件"
 
 # describe.c:512
 #: sql_help.c:2145 sql_help.c:2175
 msgid "sort_operator"
-msgstr "sort_operator"
+msgstr "排序運算子"
 
 #: sql_help.c:2158
 msgid "or the old syntax"
@@ -6170,16 +6110,16 @@ msgstr "或是舊語法"
 # describe.c:1689
 #: sql_help.c:2160
 msgid "base_type"
-msgstr "base_type"
+msgstr "輸入型別"
 
 # help.c:127
 #: sql_help.c:2218 sql_help.c:2268
 msgid "locale"
-msgstr "locale"
+msgstr "區域設定"
 
 #: sql_help.c:2219 sql_help.c:2269
 msgid "lc_collate"
-msgstr "lc_collate"
+msgstr "定序區域設定"
 
 # describe.c:415
 # describe.c:745
@@ -6187,274 +6127,274 @@ msgstr "lc_collate"
 # describe.c:1587
 #: sql_help.c:2220 sql_help.c:2270
 msgid "lc_ctype"
-msgstr "lc_ctype"
+msgstr "字元分類區域設定"
 
 #: sql_help.c:2221 sql_help.c:4566
 msgid "provider"
-msgstr "provider"
+msgstr "提供者"
 
 # describe.c:559
 #: sql_help.c:2223
 msgid "rules"
-msgstr "rules"
+msgstr "規則"
 
 #: sql_help.c:2224 sql_help.c:2331
 msgid "version"
-msgstr "version"
+msgstr "版本"
 
 # describe.c:1636
 #: sql_help.c:2226
 msgid "existing_collation"
-msgstr "existing_collation"
+msgstr "現有定序"
 
 # describe.c:187
 #: sql_help.c:2236
 msgid "source_encoding"
-msgstr "source_encoding"
+msgstr "來源編碼"
 
 # describe.c:365
 #: sql_help.c:2237
 msgid "dest_encoding"
-msgstr "dest_encoding"
+msgstr "目標編碼"
 
 #: sql_help.c:2265 sql_help.c:3132
 msgid "template"
-msgstr "template"
+msgstr "範本"
 
 # describe.c:365
 #: sql_help.c:2266
 msgid "encoding"
-msgstr "encoding"
+msgstr "編碼"
 
 #: sql_help.c:2267
 msgid "strategy"
-msgstr "strategy"
+msgstr "策略"
 
 # help.c:127
 #: sql_help.c:2271
 msgid "builtin_locale"
-msgstr "builtin_locale"
+msgstr "內建區域設定"
 
 # help.c:127
 #: sql_help.c:2272
 msgid "icu_locale"
-msgstr "icu_locale"
+msgstr "ICU 區域設定"
 
 # describe.c:559
 #: sql_help.c:2273
 msgid "icu_rules"
-msgstr "icu_rules"
+msgstr "ICU 規則"
 
 #: sql_help.c:2274
 msgid "locale_provider"
-msgstr "locale_provider"
+msgstr "區域設定提供者"
 
 #: sql_help.c:2275
 msgid "collation_version"
-msgstr "collation_version"
+msgstr "定序版本"
 
 #: sql_help.c:2280
 msgid "oid"
-msgstr "oid"
+msgstr "OID"
 
 #: sql_help.c:2315 sql_help.c:2766 sql_help.c:3205
 msgid "event"
-msgstr "event"
+msgstr "事件"
 
 #: sql_help.c:2316
 msgid "filter_variable"
-msgstr "filter_variable"
+msgstr "篩選變數"
 
 #: sql_help.c:2317
 msgid "filter_value"
-msgstr "filter_value"
+msgstr "篩選值"
 
 # describe.c:1688
 #: sql_help.c:2408 sql_help.c:2978
 msgid "source_table"
-msgstr "source_table"
+msgstr "來源資料表"
 
 # help.c:88
 #: sql_help.c:2409 sql_help.c:2979
 msgid "like_option"
-msgstr "like_option"
+msgstr "LIKE 選項"
 
 # describe.c:1174
 #: sql_help.c:2423 sql_help.c:3016
 msgid "where column_constraint is:"
-msgstr "其中 column_constraint 是:"
+msgstr "其中欄位條件約束為:"
 
 #: sql_help.c:2432 sql_help.c:3050
 msgid "and like_option is:"
-msgstr "且 like_option 是:"
+msgstr "且 LIKE 選項為:"
 
 # describe.c:1689
 #: sql_help.c:2470
 msgid "rettype"
-msgstr "rettype"
+msgstr "傳回型別"
 
 #: sql_help.c:2472
 msgid "column_type"
-msgstr "column_type"
+msgstr "欄位型別"
 
 # describe.c:977
 #: sql_help.c:2481 sql_help.c:2684
 msgid "definition"
-msgstr "definition"
+msgstr "定義"
 
 #: sql_help.c:2482 sql_help.c:2685
 msgid "obj_file"
-msgstr "obj_file"
+msgstr "物件檔"
 
 # utils/adt/encode.c:307
 #: sql_help.c:2483 sql_help.c:2686
 msgid "link_symbol"
-msgstr "link_symbol"
+msgstr "連結符號"
 
 #: sql_help.c:2484 sql_help.c:2687
 msgid "sql_body"
-msgstr "sql_body"
+msgstr "SQL 常式主體"
 
 #: sql_help.c:2522 sql_help.c:2751 sql_help.c:3328
 msgid "uid"
-msgstr "uid"
+msgstr "使用者 ID"
 
 #: sql_help.c:2538 sql_help.c:2579 sql_help.c:2985 sql_help.c:2998
 #: sql_help.c:3012 sql_help.c:3088
 msgid "method"
-msgstr "method"
+msgstr "方法"
 
 #: sql_help.c:2560
 msgid "call_handler"
-msgstr "call_handler"
+msgstr "呼叫處理器"
 
 #: sql_help.c:2561
 msgid "inline_handler"
-msgstr "inline_handler"
+msgstr "內嵌處理器"
 
 # describe.c:498
 #: sql_help.c:2562
 msgid "valfunction"
-msgstr "valfunction"
+msgstr "驗證函式"
 
 #: sql_help.c:2620
 msgid "family_name"
-msgstr "family_name"
+msgstr "運算子家族名稱"
 
 # describe.c:1635
 #: sql_help.c:2631
 msgid "storage_type"
-msgstr "storage_type"
+msgstr "儲存型別"
 
 #: sql_help.c:2772 sql_help.c:3212
 msgid "where event can be one of:"
-msgstr "其中 event 可以是:"
+msgstr "其中事件可以是下列之一:"
 
 #: sql_help.c:2792 sql_help.c:2794
 msgid "schema_element"
-msgstr "schema_element"
+msgstr "schema 元素"
 
 #: sql_help.c:2833
 msgid "server_type"
-msgstr "server_type"
+msgstr "伺服器型別"
 
 # utils/misc/guc.c:1652
 #: sql_help.c:2834
 msgid "server_version"
-msgstr "server_version"
+msgstr "伺服器版本"
 
 #: sql_help.c:2835 sql_help.c:3996 sql_help.c:4463
 msgid "fdw_name"
-msgstr "fdw_name"
+msgstr "FDW 名稱"
 
 # utils/misc/guc.c:279
 #: sql_help.c:2852 sql_help.c:2855
 msgid "statistics_name"
-msgstr "statistics_name"
+msgstr "統計資料名稱"
 
 # utils/misc/guc.c:279
 #: sql_help.c:2856
 msgid "statistics_kind"
-msgstr "statistics_kind"
+msgstr "統計資料種類"
 
 # describe.c:498
 #: sql_help.c:2872
 msgid "subscription_name"
-msgstr "subscription_name"
+msgstr "訂閱名稱"
 
 #: sql_help.c:3105
 msgid "directory"
-msgstr "directory"
+msgstr "目錄"
 
 #: sql_help.c:3119
 msgid "parser_name"
-msgstr "parser_name"
+msgstr "解析器名稱"
 
 #: sql_help.c:3120
 msgid "source_config"
-msgstr "source_config"
+msgstr "來源組態"
 
 # describe.c:498
 #: sql_help.c:3149
 msgid "start_function"
-msgstr "start_function"
+msgstr "開始函式"
 
 # sql_help.h:249
 #: sql_help.c:3150
 msgid "gettoken_function"
-msgstr "gettoken_function"
+msgstr "取得符記函式"
 
 # describe.c:498
 #: sql_help.c:3151
 msgid "end_function"
-msgstr "end_function"
+msgstr "結束函式"
 
 # describe.c:498
 #: sql_help.c:3152
 msgid "lextypes_function"
-msgstr "lextypes_function"
+msgstr "符記型別函式"
 
 # describe.c:498
 #: sql_help.c:3153
 msgid "headline_function"
-msgstr "headline_function"
+msgstr "摘要函式"
 
 # describe.c:498
 #: sql_help.c:3165
 msgid "init_function"
-msgstr "init_function"
+msgstr "初始化函式"
 
 # describe.c:498
 #: sql_help.c:3166
 msgid "lexize_function"
-msgstr "lexize_function"
+msgstr "詞彙規範化函式"
 
 # describe.c:498
 #: sql_help.c:3179
 msgid "from_sql_function_name"
-msgstr "from_sql_function_name"
+msgstr "從 SQL 轉換的函式名稱"
 
 # describe.c:498
 #: sql_help.c:3181
 msgid "to_sql_function_name"
-msgstr "to_sql_function_name"
+msgstr "轉換到 SQL 的函式名稱"
 
 #: sql_help.c:3207
 msgid "referenced_table_name"
-msgstr "referenced_table_name"
+msgstr "被參照資料表名稱"
 
 #: sql_help.c:3208
 msgid "transition_relation_name"
-msgstr "transition_relation_name"
+msgstr "轉換關聯名稱"
 
 # utils/adt/regproc.c:644 utils/adt/regproc.c:1276
 #: sql_help.c:3211
 msgid "arguments"
-msgstr "arguments"
+msgstr "引數"
 
 #: sql_help.c:3263
 msgid "label"
-msgstr "label"
+msgstr "標籤"
 
 # describe.c:415
 # describe.c:745
@@ -6462,116 +6402,116 @@ msgstr "label"
 # describe.c:1587
 #: sql_help.c:3265
 msgid "subtype"
-msgstr "subtype"
+msgstr "子型別"
 
 # describe.c:512
 #: sql_help.c:3266
 msgid "subtype_operator_class"
-msgstr "subtype_operator_class"
+msgstr "子型別運算子類別"
 
 # describe.c:498
 #: sql_help.c:3268
 msgid "canonical_function"
-msgstr "canonical_function"
+msgstr "規範化函式"
 
 # describe.c:498
 #: sql_help.c:3269
 msgid "subtype_diff_function"
-msgstr "subtype_diff_function"
+msgstr "子型別差值函式"
 
 # describe.c:1635
 #: sql_help.c:3270
 msgid "multirange_type_name"
-msgstr "multirange_type_name"
+msgstr "多範圍型別名稱"
 
 # describe.c:498
 #: sql_help.c:3272
 msgid "input_function"
-msgstr "input_function"
+msgstr "輸入函式"
 
 # describe.c:498
 #: sql_help.c:3273
 msgid "output_function"
-msgstr "output_function"
+msgstr "輸出函式"
 
 # sql_help.h:249
 #: sql_help.c:3274
 msgid "receive_function"
-msgstr "receive_function"
+msgstr "接收函式"
 
 # describe.c:498
 #: sql_help.c:3275
 msgid "send_function"
-msgstr "send_function"
+msgstr "傳送函式"
 
 #: sql_help.c:3276
 msgid "type_modifier_input_function"
-msgstr "type_modifier_input_function"
+msgstr "型別修飾詞輸入函式"
 
 #: sql_help.c:3277
 msgid "type_modifier_output_function"
-msgstr "type_modifier_output_function"
+msgstr "型別修飾詞輸出函式"
 
 # describe.c:498
 #: sql_help.c:3278
 msgid "analyze_function"
-msgstr "analyze_function"
+msgstr "分析函式"
 
 # describe.c:498
 #: sql_help.c:3279
 msgid "subscript_function"
-msgstr "subscript_function"
+msgstr "下標操作函式"
 
 #: sql_help.c:3280
 msgid "internallength"
-msgstr "internallength"
+msgstr "內部長度"
 
 #: sql_help.c:3281
 msgid "alignment"
-msgstr "alignment"
+msgstr "對齊方式"
 
 # describe.c:1635
 #: sql_help.c:3282
 msgid "storage"
-msgstr "storage"
+msgstr "儲存方式"
 
 #: sql_help.c:3283
 msgid "like_type"
-msgstr "like_type"
+msgstr "LIKE 型別"
 
 #: sql_help.c:3284
 msgid "category"
-msgstr "category"
+msgstr "類別"
 
 #: sql_help.c:3285
 msgid "preferred"
-msgstr "preferred"
+msgstr "是否為偏好型別"
 
 # describe.c:1639
 #: sql_help.c:3286
 msgid "default"
-msgstr "default"
+msgstr "預設值"
 
 #: sql_help.c:3287
 msgid "element"
-msgstr "element"
+msgstr "元素型別"
 
 # utils/adt/encode.c:295
 #: sql_help.c:3288
 msgid "delimiter"
-msgstr "delimiter"
+msgstr "分隔符"
 
 # describe.c:415
 # describe.c:543
 # describe.c:1477
 #: sql_help.c:3289
 msgid "collatable"
-msgstr "collatable"
+msgstr "是否可定序"
 
 #: sql_help.c:3387 sql_help.c:4076 sql_help.c:4172 sql_help.c:4663
 #: sql_help.c:4766 sql_help.c:4921 sql_help.c:5036 sql_help.c:5168
 msgid "with_query"
-msgstr "with_query"
+msgstr "WITH 查詢"
 
 #: sql_help.c:3389 sql_help.c:4078 sql_help.c:4682 sql_help.c:4688
 #: sql_help.c:4691 sql_help.c:4695 sql_help.c:4699 sql_help.c:4707
@@ -6580,7 +6520,7 @@ msgstr "with_query"
 #: sql_help.c:5193 sql_help.c:5196 sql_help.c:5200 sql_help.c:5204
 #: sql_help.c:5212
 msgid "alias"
-msgstr "alias"
+msgstr "別名"
 
 #: sql_help.c:3390 sql_help.c:4667 sql_help.c:4709 sql_help.c:4711
 #: sql_help.c:4715 sql_help.c:4717 sql_help.c:4718 sql_help.c:4719
@@ -6589,46 +6529,46 @@ msgstr "alias"
 #: sql_help.c:5045 sql_help.c:5172 sql_help.c:5214 sql_help.c:5216
 #: sql_help.c:5220 sql_help.c:5222 sql_help.c:5223 sql_help.c:5224
 msgid "from_item"
-msgstr "from_item"
+msgstr "FROM 項目"
 
 #: sql_help.c:3392 sql_help.c:3877 sql_help.c:4230 sql_help.c:5047
 msgid "cursor_name"
-msgstr "cursor_name"
+msgstr "游標名稱"
 
 #: sql_help.c:3393 sql_help.c:4084 sql_help.c:4178 sql_help.c:5048
 msgid "output_alias"
-msgstr "output_alias"
+msgstr "輸出別名"
 
 # commands/typecmds.c:637
 #: sql_help.c:3394 sql_help.c:4085 sql_help.c:4179 sql_help.c:5049
 msgid "output_expression"
-msgstr "output_expression"
+msgstr "輸出運算式"
 
 #: sql_help.c:3395 sql_help.c:4086 sql_help.c:4180 sql_help.c:4666
 #: sql_help.c:4769 sql_help.c:4924 sql_help.c:5050 sql_help.c:5171
 msgid "output_name"
-msgstr "output_name"
+msgstr "輸出名稱"
 
 #: sql_help.c:3411
 msgid "code"
-msgstr "code"
+msgstr "程式碼"
 
 #: sql_help.c:3816
 msgid "parameter"
-msgstr "parameter"
+msgstr "參數"
 
 #: sql_help.c:3840 sql_help.c:4255
 msgid "statement"
-msgstr "statement"
+msgstr "敘述"
 
 # help.c:123
 #: sql_help.c:3876 sql_help.c:4229
 msgid "direction"
-msgstr "direction"
+msgstr "方向"
 
 #: sql_help.c:3878 sql_help.c:4231
 msgid "where direction can be one of:"
-msgstr "其中 direction 可以是:"
+msgstr "其中方向可以是下列之一:"
 
 #: sql_help.c:3879 sql_help.c:3880 sql_help.c:3881 sql_help.c:3882
 #: sql_help.c:3883 sql_help.c:4232 sql_help.c:4233 sql_help.c:4234
@@ -6636,32 +6576,32 @@ msgstr "其中 direction 可以是:"
 #: sql_help.c:4780 sql_help.c:4782 sql_help.c:4934 sql_help.c:4936
 #: sql_help.c:5112 sql_help.c:5114 sql_help.c:5181 sql_help.c:5183
 msgid "count"
-msgstr "count"
+msgstr "計數"
 
 # describe.c:415
 # describe.c:543
 # describe.c:1477
 #: sql_help.c:3986 sql_help.c:4453
 msgid "sequence_name"
-msgstr "sequence_name"
+msgstr "序列名稱"
 
 #: sql_help.c:4004 sql_help.c:4471
 msgid "arg_name"
-msgstr "arg_name"
+msgstr "參數名稱"
 
 # describe.c:1689
 #: sql_help.c:4005 sql_help.c:4472
 msgid "arg_type"
-msgstr "arg_type"
+msgstr "參數型別"
 
 #: sql_help.c:4012 sql_help.c:4479
 msgid "loid"
-msgstr "loid"
+msgstr "大型物件 OID"
 
 # sql_help.h:277
 #: sql_help.c:4043
 msgid "remote_schema"
-msgstr "remote_schema"
+msgstr "遠端 schema"
 
 # describe.c:82
 # describe.c:177
@@ -6674,279 +6614,279 @@ msgstr "remote_schema"
 # describe.c:1633
 #: sql_help.c:4046
 msgid "local_schema"
-msgstr "local_schema"
+msgstr "本機 schema"
 
 #: sql_help.c:4082
 msgid "conflict_target"
-msgstr "conflict_target"
+msgstr "衝突目標"
 
 # describe.c:128
 #: sql_help.c:4083
 msgid "conflict_action"
-msgstr "conflict_action"
+msgstr "衝突處理動作"
 
 #: sql_help.c:4087
 msgid "where conflict_target can be one of:"
-msgstr "其中 conflict_target 可以是:"
+msgstr "其中衝突目標可以是下列之一:"
 
 # describe.c:1375
 #: sql_help.c:4088
 msgid "index_column_name"
-msgstr "index_column_name"
+msgstr "索引欄位名稱"
 
 #: sql_help.c:4089
 msgid "index_expression"
-msgstr "index_expression"
+msgstr "索引運算式"
 
 # describe.c:937
 #: sql_help.c:4092
 msgid "index_predicate"
-msgstr "index_predicate"
+msgstr "索引述詞"
 
 #: sql_help.c:4094
 msgid "and conflict_action is one of:"
-msgstr "其中 conflict_action 可以是:"
+msgstr "且衝突處理動作為下列之一:"
 
 #: sql_help.c:4100 sql_help.c:4203 sql_help.c:5044
 msgid "sub-SELECT"
-msgstr "sub-SELECT"
+msgstr "SELECT 子查詢"
 
 #: sql_help.c:4109 sql_help.c:4244 sql_help.c:5019
 msgid "channel"
-msgstr "channel"
+msgstr "通道"
 
 #: sql_help.c:4131
 msgid "lockmode"
-msgstr "lockmode"
+msgstr "鎖定模式"
 
 #: sql_help.c:4132
 msgid "where lockmode is one of:"
-msgstr "其中 lockmode 可以是:"
+msgstr "其中鎖定模式為下列之一:"
 
 # describe.c:415
 # describe.c:543
 # describe.c:1477
 #: sql_help.c:4173
 msgid "target_table_name"
-msgstr "target_table_name"
+msgstr "目標資料表名稱"
 
 #: sql_help.c:4174
 msgid "target_alias"
-msgstr "target_alias"
+msgstr "目標別名"
 
 # describe.c:526
 #: sql_help.c:4175
 msgid "data_source"
-msgstr "data_source"
+msgstr "資料來源"
 
 #: sql_help.c:4176 sql_help.c:4712 sql_help.c:4970 sql_help.c:5217
 msgid "join_condition"
-msgstr "join_condition"
+msgstr "聯結條件"
 
 #: sql_help.c:4177
 msgid "when_clause"
-msgstr "when_clause"
+msgstr "WHEN 子句"
 
 #: sql_help.c:4181
 msgid "where data_source is:"
-msgstr "其中 data_source 是:"
+msgstr "其中資料來源為:"
 
 # describe.c:415
 # describe.c:543
 # describe.c:1477
 #: sql_help.c:4182
 msgid "source_table_name"
-msgstr "source_table_name"
+msgstr "來源資料表名稱"
 
 # describe.c:1688
 #: sql_help.c:4183
 msgid "source_query"
-msgstr "source_query"
+msgstr "來源查詢"
 
 #: sql_help.c:4184
 msgid "source_alias"
-msgstr "source_alias"
+msgstr "來源別名"
 
 #: sql_help.c:4185
 msgid "and when_clause is:"
-msgstr "且 when_clause 是:"
+msgstr "且 WHEN 子句為:"
 
 #: sql_help.c:4187 sql_help.c:4190
 msgid "merge_update"
-msgstr "merge_update"
+msgstr "MERGE 更新動作"
 
 #: sql_help.c:4188 sql_help.c:4191
 msgid "merge_delete"
-msgstr "merge_delete"
+msgstr "MERGE 刪除動作"
 
 #: sql_help.c:4193
 msgid "merge_insert"
-msgstr "merge_insert"
+msgstr "MERGE 插入動作"
 
 # catalog/dependency.c:1511
 #: sql_help.c:4194
 msgid "and merge_insert is:"
-msgstr "且 merge_insert 是:"
+msgstr "且 MERGE 插入動作為:"
 
 #: sql_help.c:4197
 msgid "and merge_update is:"
-msgstr "且 merge_update 是:"
+msgstr "且 MERGE 更新動作為:"
 
 #: sql_help.c:4204
 msgid "and merge_delete is:"
-msgstr "且 merge_delete 是:"
+msgstr "且 MERGE 刪除動作為:"
 
 #: sql_help.c:4245
 msgid "payload"
-msgstr "payload"
+msgstr "負載資料"
 
 #: sql_help.c:4272
 msgid "old_role"
-msgstr "old_role"
+msgstr "舊角色"
 
 #: sql_help.c:4273
 msgid "new_role"
-msgstr "new_role"
+msgstr "新角色"
 
 # sql_help.h:382
 #: sql_help.c:4312 sql_help.c:4521 sql_help.c:4529
 msgid "savepoint_name"
-msgstr "savepoint_name"
+msgstr "儲存點名稱"
 
 # utils/adt/arrayfuncs.c:1168
 #: sql_help.c:4669 sql_help.c:4727 sql_help.c:4927 sql_help.c:4985
 #: sql_help.c:5174 sql_help.c:5232
 msgid "grouping_element"
-msgstr "grouping_element"
+msgstr "分組元素"
 
 #: sql_help.c:4671 sql_help.c:4775 sql_help.c:4929 sql_help.c:5176
 msgid "window_name"
-msgstr "window_name"
+msgstr "視窗名稱"
 
 # describe.c:977
 #: sql_help.c:4672 sql_help.c:4776 sql_help.c:4930 sql_help.c:5177
 msgid "window_definition"
-msgstr "window_definition"
+msgstr "視窗定義"
 
 #: sql_help.c:4673 sql_help.c:4687 sql_help.c:4731 sql_help.c:4777
 #: sql_help.c:4931 sql_help.c:4945 sql_help.c:4989 sql_help.c:5178
 #: sql_help.c:5192 sql_help.c:5236
 msgid "select"
-msgstr "select"
+msgstr "SELECT 敘述"
 
 #: sql_help.c:4679 sql_help.c:4937 sql_help.c:5184
 msgid "from_reference"
-msgstr "from_reference"
+msgstr "FROM 參照"
 
 #: sql_help.c:4680 sql_help.c:4938 sql_help.c:5185
 msgid "where from_item can be one of:"
-msgstr "其中 from_item 可以是:"
+msgstr "其中 FROM 項目可以是下列之一:"
 
 #: sql_help.c:4683 sql_help.c:4689 sql_help.c:4692 sql_help.c:4696
 #: sql_help.c:4708 sql_help.c:4941 sql_help.c:4947 sql_help.c:4950
 #: sql_help.c:4954 sql_help.c:4966 sql_help.c:5188 sql_help.c:5194
 #: sql_help.c:5197 sql_help.c:5201 sql_help.c:5213
 msgid "column_alias"
-msgstr "column_alias"
+msgstr "欄位別名"
 
 #: sql_help.c:4684 sql_help.c:4942 sql_help.c:5189
 msgid "sampling_method"
-msgstr "sampling_method"
+msgstr "取樣方法"
 
 #: sql_help.c:4686 sql_help.c:4944 sql_help.c:5191
 msgid "seed"
-msgstr "seed"
+msgstr "種子"
 
 #: sql_help.c:4690 sql_help.c:4729 sql_help.c:4948 sql_help.c:4987
 #: sql_help.c:5195 sql_help.c:5234
 msgid "with_query_name"
-msgstr "with_query_name"
+msgstr "WITH 查詢名稱"
 
 # describe.c:977
 #: sql_help.c:4700 sql_help.c:4703 sql_help.c:4706 sql_help.c:4958
 #: sql_help.c:4961 sql_help.c:4964 sql_help.c:5205 sql_help.c:5208
 #: sql_help.c:5211
 msgid "column_definition"
-msgstr "column_definition"
+msgstr "欄位定義"
 
 #: sql_help.c:4710 sql_help.c:4716 sql_help.c:4968 sql_help.c:4974
 #: sql_help.c:5215 sql_help.c:5221
 msgid "join_type"
-msgstr "join_type"
+msgstr "聯結型別"
 
 #: sql_help.c:4713 sql_help.c:4971 sql_help.c:5218
 msgid "join_column"
-msgstr "join_column"
+msgstr "聯結欄位"
 
 #: sql_help.c:4714 sql_help.c:4972 sql_help.c:5219
 msgid "join_using_alias"
-msgstr "join_using_alias"
+msgstr "JOIN USING 別名"
 
 #: sql_help.c:4720 sql_help.c:4978 sql_help.c:5225
 msgid "and grouping_element can be one of:"
-msgstr "其中 grouping_element 可以是:"
+msgstr "且分組元素可以是下列之一:"
 
 #: sql_help.c:4728 sql_help.c:4986 sql_help.c:5233
 msgid "and with_query is:"
-msgstr "且 with_query 是:"
+msgstr "且 WITH 查詢為:"
 
 # describe.c:415
 # describe.c:543
 # describe.c:1477
 #: sql_help.c:4732 sql_help.c:4990 sql_help.c:5237
 msgid "values"
-msgstr "values"
+msgstr "VALUES 敘述"
 
 #: sql_help.c:4733 sql_help.c:4991 sql_help.c:5238
 msgid "insert"
-msgstr "insert"
+msgstr "INSERT 敘述"
 
 #: sql_help.c:4734 sql_help.c:4992 sql_help.c:5239
 msgid "update"
-msgstr "update"
+msgstr "UPDATE 敘述"
 
 #: sql_help.c:4735 sql_help.c:4993 sql_help.c:5240
 msgid "delete"
-msgstr "delete"
+msgstr "DELETE 敘述"
 
 #: sql_help.c:4736 sql_help.c:4994 sql_help.c:5241
 msgid "merge"
-msgstr "merge"
+msgstr "MERGE 敘述"
 
 #: sql_help.c:4738 sql_help.c:4996 sql_help.c:5243
 msgid "search_seq_col_name"
-msgstr "search_seq_col_name"
+msgstr "搜尋順序欄位名稱"
 
 #: sql_help.c:4740 sql_help.c:4998 sql_help.c:5245
 msgid "cycle_mark_col_name"
-msgstr "cycle_mark_col_name"
+msgstr "環標記欄位名稱"
 
 #: sql_help.c:4741 sql_help.c:4999 sql_help.c:5246
 msgid "cycle_mark_value"
-msgstr "cycle_mark_value"
+msgstr "環標記值"
 
 #: sql_help.c:4742 sql_help.c:5000 sql_help.c:5247
 msgid "cycle_mark_default"
-msgstr "cycle_mark_default"
+msgstr "環標記預設值"
 
 #: sql_help.c:4743 sql_help.c:5001 sql_help.c:5248
 msgid "cycle_path_col_name"
-msgstr "cycle_path_col_name"
+msgstr "環路徑欄位名稱"
 
 # describe.c:415
 # describe.c:543
 # describe.c:1477
 #: sql_help.c:4770
 msgid "new_table"
-msgstr "new_table"
+msgstr "新資料表"
 
 #: sql_help.c:4841
 msgid "snapshot_id"
-msgstr "snapshot_id"
+msgstr "快照 ID"
 
 #: sql_help.c:5110
 msgid "sort_expression"
-msgstr "sort_expression"
+msgstr "排序運算式"
 
 # sql_help.h:25
 # sql_help.h:373
@@ -6957,7 +6897,7 @@ msgstr "中止目前的交易"
 # sql_help.h:29
 #: sql_help.c:5261
 msgid "change the definition of an aggregate function"
-msgstr "變更聚合函數的定義"
+msgstr "變更聚合函式的定義"
 
 # sql_help.h:45
 #: sql_help.c:5267
@@ -6982,7 +6922,7 @@ msgstr "定義預設存取權限"
 # sql_help.h:41
 #: sql_help.c:5291
 msgid "change the definition of a domain"
-msgstr "變更 domain 的定義"
+msgstr "變更可用域的定義"
 
 # sql_help.h:85
 #: sql_help.c:5297
@@ -7007,7 +6947,7 @@ msgstr "變更外部資料表的定義"
 # sql_help.h:45
 #: sql_help.c:5321
 msgid "change the definition of a function"
-msgstr "變更函數的定義"
+msgstr "變更函式的定義"
 
 #: sql_help.c:5327
 msgid "change role name or membership"
@@ -7031,7 +6971,7 @@ msgstr "變更大物件的定義"
 # sql_help.h:53
 #: sql_help.c:5351
 msgid "change the definition of a materialized view"
-msgstr "變更實體化檢視表的定義"
+msgstr "變更物化檢視表的定義"
 
 # sql_help.h:65
 #: sql_help.c:5357
@@ -7046,12 +6986,12 @@ msgstr "變更運算子類別的定義"
 # sql_help.h:65
 #: sql_help.c:5369
 msgid "change the definition of an operator family"
-msgstr "變更運算子族群的定義"
+msgstr "變更運算子家族的定義"
 
 # sql_help.h:33
 #: sql_help.c:5375
 msgid "change the definition of a row-level security policy"
-msgstr "變更運算子族群的定義"
+msgstr "變更資料列層級安全政策的定義"
 
 # sql_help.h:57
 #: sql_help.c:5381
@@ -7071,7 +7011,7 @@ msgstr "變更資料庫角色"
 # sql_help.h:45
 #: sql_help.c:5399
 msgid "change the definition of a routine"
-msgstr "變更 routine 的定義"
+msgstr "變更常式的定義"
 
 # sql_help.h:77
 #: sql_help.c:5405
@@ -7177,7 +7117,7 @@ msgstr "呼叫程序"
 # sql_help.h:105
 #: sql_help.c:5531
 msgid "force a write-ahead log checkpoint"
-msgstr "強制執行 write-ahead 日誌檢查點"
+msgstr "強制執行預寫式日誌檢查點"
 
 # sql_help.h:109
 #: sql_help.c:5537
@@ -7187,7 +7127,7 @@ msgstr "關閉游標"
 # sql_help.h:113
 #: sql_help.c:5543
 msgid "cluster a table according to an index"
-msgstr "根據索引對資料表進行分群"
+msgstr "根據索引對資料表進行叢集化"
 
 # sql_help.h:117
 #: sql_help.c:5549
@@ -7212,12 +7152,12 @@ msgstr "在檔案和資料表間複製資料"
 # sql_help.h:133
 #: sql_help.c:5573
 msgid "define a new access method"
-msgstr "建立存取方式"
+msgstr "建立存取方法"
 
 # sql_help.h:129
 #: sql_help.c:5579
 msgid "define a new aggregate function"
-msgstr "建立聚合函數"
+msgstr "建立聚合函式"
 
 # sql_help.h:133
 #: sql_help.c:5585
@@ -7242,7 +7182,7 @@ msgstr "建立資料庫"
 # sql_help.h:149
 #: sql_help.c:5609
 msgid "define a new domain"
-msgstr "建立 domain"
+msgstr "建立可用域"
 
 # sql_help.h:201
 #: sql_help.c:5615
@@ -7266,7 +7206,7 @@ msgstr "建立外部資料表"
 # sql_help.h:153
 #: sql_help.c:5639
 msgid "define a new function"
-msgstr "建立函數"
+msgstr "建立函式"
 
 # sql_help.h:189
 #: sql_help.c:5645 sql_help.c:5705 sql_help.c:5807
@@ -7286,7 +7226,7 @@ msgstr "建立程序語言"
 # sql_help.h:213
 #: sql_help.c:5663
 msgid "define a new materialized view"
-msgstr "建立實體化檢視表"
+msgstr "建立物化檢視表"
 
 # sql_help.h:173
 #: sql_help.c:5669
@@ -7301,11 +7241,11 @@ msgstr "建立運算子類別"
 # sql_help.h:173
 #: sql_help.c:5681
 msgid "define a new operator family"
-msgstr "建立運算子族群"
+msgstr "建立運算子家族"
 
 #: sql_help.c:5687
 msgid "define a new row-level security policy for a table"
-msgstr "建立運算子族群"
+msgstr "為資料表建立資料列層級安全政策"
 
 # sql_help.h:165
 #: sql_help.c:5693
@@ -7386,7 +7326,7 @@ msgstr "建立文字搜尋範本"
 # sql_help.h:173
 #: sql_help.c:5789
 msgid "define a new transform"
-msgstr "建立 transform"
+msgstr "建立轉換"
 
 # sql_help.h:201
 #: sql_help.c:5795
@@ -7410,7 +7350,7 @@ msgstr "建立檢視表"
 # sql_help.h:217
 #: sql_help.c:5825
 msgid "deallocate a prepared statement"
-msgstr "釋放已編譯陳述式"
+msgstr "釋放預備敘述"
 
 # sql_help.h:221
 #: sql_help.c:5831
@@ -7433,12 +7373,12 @@ msgstr "執行匿名程式區塊"
 # sql_help.h:233
 #: sql_help.c:5855
 msgid "remove an access method"
-msgstr "刪除存取方式"
+msgstr "刪除存取方法"
 
 # sql_help.h:229
 #: sql_help.c:5861
 msgid "remove an aggregate function"
-msgstr "刪除聚合函數"
+msgstr "刪除聚合函式"
 
 # sql_help.h:233
 #: sql_help.c:5867
@@ -7463,7 +7403,7 @@ msgstr "刪除資料庫"
 # sql_help.h:245
 #: sql_help.c:5891
 msgid "remove a domain"
-msgstr "刪除 domain"
+msgstr "刪除可用域"
 
 # sql_help.h:293
 #: sql_help.c:5897
@@ -7488,7 +7428,7 @@ msgstr "刪除外部資料表"
 # sql_help.h:249
 #: sql_help.c:5921
 msgid "remove a function"
-msgstr "刪除函數"
+msgstr "刪除函式"
 
 # sql_help.h:241
 #: sql_help.c:5927 sql_help.c:5993 sql_help.c:6095
@@ -7508,7 +7448,7 @@ msgstr "刪除程序語言"
 # sql_help.h:305
 #: sql_help.c:5945
 msgid "remove a materialized view"
-msgstr "刪除實體化檢視表"
+msgstr "刪除物化檢視表"
 
 # sql_help.h:269
 #: sql_help.c:5951
@@ -7523,11 +7463,11 @@ msgstr "刪除運算子類別"
 # sql_help.h:269
 #: sql_help.c:5963
 msgid "remove an operator family"
-msgstr "刪除運算子族群"
+msgstr "刪除運算子家族"
 
 #: sql_help.c:5969
 msgid "remove database objects owned by a database role"
-msgstr "刪除運算子族群"
+msgstr "刪除資料庫角色擁有的資料庫物件"
 
 #: sql_help.c:5975
 msgid "remove a row-level security policy from a table"
@@ -7546,7 +7486,7 @@ msgstr "刪除發布"
 # sql_help.h:249
 #: sql_help.c:5999
 msgid "remove a routine"
-msgstr "刪除 routine"
+msgstr "刪除常式"
 
 # sql_help.h:273
 #: sql_help.c:6005
@@ -7611,7 +7551,7 @@ msgstr "刪除文字搜尋範本"
 # sql_help.h:269
 #: sql_help.c:6077
 msgid "remove a transform"
-msgstr "刪除 transform"
+msgstr "刪除轉換"
 
 # sql_help.h:293
 #: sql_help.c:6083
@@ -7635,7 +7575,7 @@ msgstr "刪除檢視表"
 # sql_help.h:313
 #: sql_help.c:6119
 msgid "execute a prepared statement"
-msgstr "執行已編譯陳述式"
+msgstr "執行預備敘述"
 
 # sql_help.h:317
 #: sql_help.c:6125
@@ -7694,13 +7634,13 @@ msgstr "產生通知"
 # sql_help.h:353
 #: sql_help.c:6191
 msgid "prepare a statement for execution"
-msgstr "預先編譯陳述式以執行"
+msgstr "預備敘述以供執行"
 
 # sql_help.h:25
 # sql_help.h:373
 #: sql_help.c:6197
 msgid "prepare the current transaction for two-phase commit"
-msgstr "為目前的交易準備兩階段提交"
+msgstr "為兩階段提交預備目前的交易"
 
 #: sql_help.c:6203
 msgid "change the ownership of database objects owned by a database role"
@@ -7708,7 +7648,7 @@ msgstr "變更由資料庫角色擁有的資料庫物件的所有權"
 
 #: sql_help.c:6209
 msgid "replace the contents of a materialized view"
-msgstr "替換實體化檢視表的內容"
+msgstr "替換物化檢視表的內容"
 
 # sql_help.h:357
 #: sql_help.c:6215
@@ -7732,12 +7672,12 @@ msgstr "移除存取權限"
 
 #: sql_help.c:6245
 msgid "cancel a transaction that was earlier prepared for two-phase commit"
-msgstr "取消先前為兩階提交可準備的交易"
+msgstr "取消先前為兩階段提交所準備的交易"
 
 # sql_help.h:377
 #: sql_help.c:6251
 msgid "roll back to a savepoint"
-msgstr "還原至儲存點"
+msgstr "回復至儲存點"
 
 # sql_help.h:381
 #: sql_help.c:6257
@@ -7762,7 +7702,7 @@ msgstr "變更執行時期參數"
 # sql_help.h:397
 #: sql_help.c:6287
 msgid "set constraint check timing for the current transaction"
-msgstr "設定目前交易的約束檢查時機"
+msgstr "設定目前交易的條件約束檢查時機"
 
 # sql_help.h:405
 #: sql_help.c:6293
@@ -7859,10 +7799,7 @@ msgid ""
 "tab completion query failed: %s\n"
 "Query was:\n"
 "%s"
-msgstr ""
-"tab 補全命令失敗: %s\n"
-"查詢如下: \n"
-"%s"
+msgstr "tab 補全查詢失敗: %s\n查詢如下:\n%s"
 
 # access/transam/xlog.c:3720
 #: variables.c:141

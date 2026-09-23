@@ -22,7 +22,7 @@ msgstr ""
 #: ../../common/controldata_utils.c:83
 #, c-format
 msgid "could not open file \"%s\" for reading: %m"
-msgstr "無法開啟檔案 \"%s\" 以供讀取: %m"
+msgstr "無法開啟檔案 \"%s\" 以讀取: %m"
 
 # access/transam/xlog.c:1659 access/transam/xlog.c:2942
 # access/transam/xlog.c:5397 access/transam/xlog.c:5448
@@ -40,7 +40,7 @@ msgstr "無法讀取檔案 \"%s\": %m"
 #: ../../common/controldata_utils.c:105
 #, c-format
 msgid "could not read file \"%s\": read %d of %zu"
-msgstr "無法讀取檔案 \"%s\": 已讀取 %d / %zu"
+msgstr "無法讀取檔案 \"%1$s\": 應讀取 %3$zu，實際讀取 %2$d"
 
 # access/transam/slru.c:680 access/transam/xlog.c:1567
 # access/transam/xlog.c:1691 access/transam/xlog.c:3013
@@ -83,14 +83,14 @@ msgstr "無法寫入檔案 \"%s\": %m"
 #: ../../common/controldata_utils.c:262
 #, c-format
 msgid "could not fsync file \"%s\": %m"
-msgstr "無法 fsync 檔案 \"%s\": %m"
+msgstr "無法對檔案 \"%s\" 執行 fsync: %m"
 
 #: pg_controldata.c:35
 #, c-format
 msgid ""
 "%s displays control information of a PostgreSQL database cluster.\n"
 "\n"
-msgstr "%s 顯示 PostgreSQL 資料庫叢集的控制資訊\n\n"
+msgstr "%s 顯示 PostgreSQL 資料庫叢集的控制資訊。\n\n"
 
 #: pg_controldata.c:36
 #, c-format
@@ -100,7 +100,7 @@ msgstr "用法:\n"
 #: pg_controldata.c:37
 #, c-format
 msgid "  %s [OPTION] [DATADIR]\n"
-msgstr "  %s [OPTION] [DATADIR]\n"
+msgstr "  %s [選項] [資料目錄]\n"
 
 #: pg_controldata.c:38
 #, c-format
@@ -152,20 +152,20 @@ msgstr "啟動中"
 
 #: pg_controldata.c:57
 msgid "shut down"
-msgstr "關閉"
+msgstr "已關閉"
 
 # access/transam/xlog.c:3596
 #: pg_controldata.c:59
 msgid "shut down in recovery"
-msgstr "復原關閉中"
+msgstr "在復原期間已關閉"
 
 #: pg_controldata.c:61
 msgid "shutting down"
-msgstr "關閉中"
+msgstr "正在關閉"
 
 #: pg_controldata.c:63
 msgid "in crash recovery"
-msgstr "損毀復原中"
+msgstr "崩潰復原中"
 
 # access/transam/xlog.c:3596
 #: pg_controldata.c:65
@@ -194,7 +194,7 @@ msgstr "用 \"%s --help\" 取得更多資訊。"
 #: pg_controldata.c:155
 #, c-format
 msgid "too many command-line arguments (first is \"%s\")"
-msgstr "命令列參數過多(第一個是 \"%s\")"
+msgstr "命令列參數過多(第一個多餘參數是 \"%s\")"
 
 #: pg_controldata.c:163
 #, c-format
@@ -208,11 +208,7 @@ msgid ""
 "Either the file is corrupt, or it has a different layout than this program\n"
 "is expecting.  The results below are untrustworthy.\n"
 "\n"
-msgstr ""
-"警告: 計算出來的 CRC 校驗值與儲存在檔案中的值不符。\n"
-"可能是檔案損壞，或是與程式所預期的結構不同，下列\n"
-"的結果是不可靠的。\n"
-"\n"
+msgstr "警告: 計算出的 CRC 檢查碼與檔案中儲存的值不符。\n檔案可能已損毀，也可能採用了此程式預期之外的配置。\n以下結果不可信。\n\n"
 
 #: pg_controldata.c:180
 #, c-format
@@ -246,7 +242,7 @@ msgstr "pg_control 版本號碼:             %u\n"
 #: pg_controldata.c:241
 #, c-format
 msgid "Catalog version number:               %u\n"
-msgstr "Catalog 版本號碼:                %u\n"
+msgstr "系統目錄版本號碼:                %u\n"
 
 #: pg_controldata.c:243
 #, c-format
@@ -366,17 +362,17 @@ msgstr "最新檢查點的時間:                %s\n"
 #: pg_controldata.c:286
 #, c-format
 msgid "Fake LSN counter for unlogged rels:   %X/%X\n"
-msgstr "無日誌關聯的虛擬 LSN 計數:       %X/%X\n"
+msgstr "不記錄 WAL 的關聯偽 LSN 計數器:  %X/%X\n"
 
 #: pg_controldata.c:288
 #, c-format
 msgid "Minimum recovery ending location:     %X/%X\n"
-msgstr "復原結束位置下限:                %X/%X\n"
+msgstr "復原必須到達的最小位置:          %X/%X\n"
 
 #: pg_controldata.c:290
 #, c-format
 msgid "Min recovery ending loc's timeline:   %u\n"
-msgstr "最小還原結束位置的時間軸:        %u\n"
+msgstr "最小復原位置的時間軸:            %u\n"
 
 #: pg_controldata.c:292
 #, c-format
@@ -398,14 +394,14 @@ msgstr "需要備份結束記錄:                %s\n"
 # describe.c:1692
 #: pg_controldata.c:297
 msgid "no"
-msgstr "no"
+msgstr "否"
 
 # describe.c:1262
 # describe.c:1637
 # describe.c:1694
 #: pg_controldata.c:297
 msgid "yes"
-msgstr "yes"
+msgstr "是"
 
 #: pg_controldata.c:298
 #, c-format
@@ -460,7 +456,7 @@ msgstr "資料庫區塊大小:                  %u\n"
 #: pg_controldata.c:319
 #, c-format
 msgid "Blocks per segment of large relation: %u\n"
-msgstr "大型關聯每個片段的區塊數:        %u\n"
+msgstr "大型關聯每個區段的區塊數:        %u\n"
 
 #: pg_controldata.c:321
 #, c-format
@@ -499,7 +495,7 @@ msgstr "日期/時間型別的儲存方式:         %s\n"
 
 #: pg_controldata.c:335
 msgid "64-bit integers"
-msgstr "64位元整數"
+msgstr "64 位元整數"
 
 #: pg_controldata.c:336
 #, c-format

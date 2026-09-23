@@ -26,13 +26,13 @@ msgstr "%13.3f ops/sec  %6.0f usecs/op\n"
 #: pg_test_fsync.c:159
 #, c-format
 msgid "Usage: %s [-f FILENAME] [-s SECS-PER-TEST]\n"
-msgstr "用法: %s [-f FILENAME] [-s SECS-PER-TEST]\n"
+msgstr "用法: %s [-f 檔案名稱] [-s 每次測試秒數]\n"
 
 # postmaster/postmaster.c:512 postmaster/postmaster.c:525
 #: pg_test_fsync.c:186 pg_test_fsync.c:200 pg_test_fsync.c:211
 #, c-format
 msgid "Try \"%s --help\" for more information.\n"
-msgstr "執行 \"%s --help\" 顯示更多資訊。\n"
+msgstr "用 \"%s --help\" 取得更多資訊。\n"
 
 #: pg_test_fsync.c:216
 #, c-format
@@ -43,12 +43,12 @@ msgstr[0] "每個測試 %u 秒\n"
 #: pg_test_fsync.c:221
 #, c-format
 msgid "O_DIRECT supported on this platform for open_datasync and open_sync.\n"
-msgstr "此平臺的 open_datasync 和 open_sync 支援 O_DIRECT。\n"
+msgstr "此平台的 open_datasync 和 open_sync 支援 O_DIRECT。\n"
 
 #: pg_test_fsync.c:223
 #, c-format
 msgid "Direct I/O is not supported on this platform.\n"
-msgstr "此平臺不支援直接 I/O。\n"
+msgstr "此平台不支援直接 I/O。\n"
 
 #: pg_test_fsync.c:248 pg_test_fsync.c:314 pg_test_fsync.c:339
 #: pg_test_fsync.c:363 pg_test_fsync.c:507 pg_test_fsync.c:519
@@ -73,14 +73,14 @@ msgstr "fsync 失敗"
 msgid ""
 "\n"
 "Compare file sync methods using one %dkB write:\n"
-msgstr "\n比較使用一個 %dkB 寫入的檔案同步方式:\n"
+msgstr "\n比較使用一次 %dkB 寫入的檔案同步方式:\n"
 
 #: pg_test_fsync.c:272
 #, c-format
 msgid ""
 "\n"
 "Compare file sync methods using two %dkB writes:\n"
-msgstr "\n比較使用兩個 %dkB 寫入的檔案同步方式:\n"
+msgstr "\n比較使用兩次 %dkB 寫入的檔案同步方式:\n"
 
 #: pg_test_fsync.c:273
 #, c-format
@@ -142,14 +142,14 @@ msgstr "16 *  1kB open_sync 寫入"
 msgid ""
 "\n"
 "Test if fsync on non-write file descriptor is honored:\n"
-msgstr "\n測試 fsync 非寫入檔案描述符是否被尊重:\n"
+msgstr "\n測試對未用於寫入的檔案描述符執行 fsync 是否生效:\n"
 
 #: pg_test_fsync.c:493
 #, c-format
 msgid ""
 "(If the times are similar, fsync() can sync data written on a different\n"
 "descriptor.)\n"
-msgstr "(如果時間相近，fsync() 可以同步被寫入不同描述符的資料。)\n"
+msgstr "(如果時間相近，fsync() 可以同步透過其他描述符寫入的資料。)\n"
 
 #: pg_test_fsync.c:558
 #, c-format

@@ -20,7 +20,7 @@ msgstr ""
 #: pl_comp.c:329 pl_handler.c:496
 #, c-format
 msgid "PL/pgSQL functions cannot accept type %s"
-msgstr "PL/pgSQL 函式無法接受型別 %s"
+msgstr "PL/pgSQL 函式不能接受型別 %s"
 
 #: pl_comp.c:421
 #, c-format
@@ -30,22 +30,22 @@ msgstr "無法判斷多型函式 \"%s\" 實際傳回型別"
 #: pl_comp.c:451
 #, c-format
 msgid "trigger functions can only be called as triggers"
-msgstr "觸發函式只能當做觸發呼叫"
+msgstr "觸發器函式只能當做觸發器呼叫"
 
 #: pl_comp.c:455 pl_handler.c:480
 #, c-format
 msgid "PL/pgSQL functions cannot return type %s"
-msgstr "PL/pgSQL 函式無法傳回型別 %s"
+msgstr "PL/pgSQL 函式不能傳回型別 %s"
 
 #: pl_comp.c:495
 #, c-format
 msgid "trigger functions cannot have declared arguments"
-msgstr "觸發函式不能有宣告過的參數"
+msgstr "觸發器函式不能有宣告過的參數"
 
 #: pl_comp.c:496
 #, c-format
 msgid "The arguments of the trigger can be accessed through TG_NARGS and TG_ARGV instead."
-msgstr "觸發程序的參數可以改透過 TG_NARGS 和 TG_ARGV 存取。"
+msgstr "觸發器的參數可以改透過 TG_NARGS 和 TG_ARGV 存取。"
 
 #: pl_comp.c:629
 #, c-format
@@ -96,7 +96,7 @@ msgstr "變數 \"%s\" 不存在"
 #: pl_comp.c:1630
 #, c-format
 msgid "column \"%s\" of relation \"%s\" does not exist"
-msgstr "欄位 \"%s\" 於relation \"%s\" 不存在"
+msgstr "關聯 \"%2$s\" 的欄位 \"%1$s\" 不存在"
 
 # catalog/namespace.c:200 utils/adt/regproc.c:837
 #: pl_comp.c:1683
@@ -114,18 +114,18 @@ msgstr "關聯 \"%s\" 沒有複合型別"
 #: pl_comp.c:1794
 #, c-format
 msgid "variable \"%s\" has pseudo-type %s"
-msgstr "變數 \"%s\" 具有處擬型別 %s"
+msgstr "變數 \"%s\" 具有虛擬型別 %s"
 
 #: pl_comp.c:1983
 #, c-format
 msgid "type \"%s\" is only a shell"
-msgstr "型別 \"%s\" 只是殼"
+msgstr "型別 \"%s\" 只是 shell 型別"
 
 # utils/cache/typcache.c:414
 #: pl_comp.c:2065 pl_exec.c:7087
 #, c-format
 msgid "type %s is not composite"
-msgstr "型別 %s 不是複合"
+msgstr "型別 %s 不是複合型別"
 
 # parser/parse_coerce.c:1208 parser/parse_coerce.c:1225
 # parser/parse_coerce.c:1279 parser/parse_expr.c:794 parser/parse_expr.c:1350
@@ -155,21 +155,21 @@ msgstr "在函式進入期間"
 #: pl_exec.c:641
 #, c-format
 msgid "control reached end of function without RETURN"
-msgstr "控制權已到達沒有 RETURN 的函式結尾"
+msgstr "控制流程到達函式結尾，但未執行 RETURN"
 
 #: pl_exec.c:647
 msgid "while casting return value to function's return type"
-msgstr "將傳回值轉換成函式的傳回值時"
+msgstr "將傳回值轉換成函式的傳回型別時"
 
 #: pl_exec.c:659 pl_exec.c:3681
 #, c-format
 msgid "set-valued function called in context that cannot accept a set"
-msgstr "set-valued 函式於無法接受集合的內容中進行呼叫"
+msgstr "在不能接受集合的情境中呼叫傳回集合的函式"
 
 #: pl_exec.c:664 pl_exec.c:3687
 #, c-format
 msgid "materialize mode required, but it is not allowed in this context"
-msgstr "需要具體化模式，但此上下文不允許該模式"
+msgstr "需要物化模式，但此上下文不允許該模式"
 
 #: pl_exec.c:791 pl_exec.c:1062 pl_exec.c:1220
 msgid "during function exit"
@@ -177,21 +177,21 @@ msgstr "在函式結束期間"
 
 #: pl_exec.c:846 pl_exec.c:910 pl_exec.c:3480
 msgid "returned record type does not match expected record type"
-msgstr "傳回的記錄型別與預期的記錄型別不相符。"
+msgstr "傳回的記錄型別與預期的記錄型別不相符"
 
 #: pl_exec.c:1059 pl_exec.c:1217
 #, c-format
 msgid "control reached end of trigger procedure without RETURN"
-msgstr "控制權已到達沒有 RETURN 的觸發程序結尾"
+msgstr "控制流程到達觸發器函式結尾，但未執行 RETURN"
 
 #: pl_exec.c:1067
 #, c-format
 msgid "trigger procedure cannot return a set"
-msgstr "觸發程序無法傳回集合"
+msgstr "觸發器函式不能傳回集合"
 
 #: pl_exec.c:1106 pl_exec.c:1134
 msgid "returned row structure does not match the structure of the triggering table"
-msgstr "傳回的資料列結構與觸發的資料表結構不相符"
+msgstr "傳回的資料列結構與觸發器所在資料表的結構不相符"
 
 #. translator: last %s is a phrase such as "during statement block
 #. local variable initialization"
@@ -254,7 +254,7 @@ msgstr "GET STACKED DIAGNOSTICS 不能用於例外處理器之外"
 #: pl_exec.c:2629
 #, c-format
 msgid "case not found"
-msgstr "找不到案例"
+msgstr "找不到匹配的 CASE 分支"
 
 #: pl_exec.c:2630
 #, c-format
@@ -264,17 +264,17 @@ msgstr "CASE 陳述式遺漏 ELSE 部分。"
 #: pl_exec.c:2723
 #, c-format
 msgid "lower bound of FOR loop cannot be null"
-msgstr "FOR 迴圈的下限不可為 null"
+msgstr "FOR 迴圈的下限不可為 NULL"
 
 #: pl_exec.c:2739
 #, c-format
 msgid "upper bound of FOR loop cannot be null"
-msgstr "FOR 迴圈的上限不可為 null"
+msgstr "FOR 迴圈的上限不可為 NULL"
 
 #: pl_exec.c:2757
 #, c-format
 msgid "BY value of FOR loop cannot be null"
-msgstr "FOR 迴圈的 BY 值不可為 null"
+msgstr "FOR 迴圈的 BY 值不可為 NULL"
 
 #: pl_exec.c:2763
 #, c-format
@@ -284,17 +284,17 @@ msgstr "FOR 迴圈的 BY 值必須大於零"
 #: pl_exec.c:2897 pl_exec.c:4685
 #, c-format
 msgid "cursor \"%s\" already in use"
-msgstr "指標 \"%s\" 已在使用中"
+msgstr "游標 \"%s\" 已在使用中"
 
 #: pl_exec.c:2920 pl_exec.c:4755
 #, c-format
 msgid "arguments given for cursor without arguments"
-msgstr "指定給沒有參數之指標的參數"
+msgstr "向沒有參數的游標傳入參數"
 
 #: pl_exec.c:2939 pl_exec.c:4774
 #, c-format
 msgid "arguments required for cursor"
-msgstr "指標所需的參數"
+msgstr "游標需要參數"
 
 # catalog/heap.c:1797
 #: pl_exec.c:3030
@@ -312,7 +312,7 @@ msgstr "FOREACH 運算式必須產生陣列而非型別 %s"
 #: pl_exec.c:3062
 #, c-format
 msgid "slice dimension (%d) is out of the valid range 0..%d"
-msgstr "分割維度(%d)超出有效範圍 0..%d"
+msgstr "切片維度(%d)超出有效範圍 0..%d"
 
 #: pl_exec.c:3089
 #, c-format
@@ -332,7 +332,7 @@ msgstr "傳回複合型別的函式不能傳回非複合值"
 #: pl_exec.c:3337 pl_gram.y:3444
 #, c-format
 msgid "cannot use RETURN NEXT in a non-SETOF function"
-msgstr "無法在非 SETOF 函式中使用 RETURN NEXT"
+msgstr "不能在非 SETOF 函式中使用 RETURN NEXT"
 
 #: pl_exec.c:3378 pl_exec.c:3510
 #, c-format
@@ -352,16 +352,16 @@ msgstr "RETURN NEXT 必須要有參數"
 #: pl_exec.c:3557 pl_gram.y:3508
 #, c-format
 msgid "cannot use RETURN QUERY in a non-SETOF function"
-msgstr "無法在非 SETOF 函式中使用 RETURN QUERY"
+msgstr "不能在非 SETOF 函式中使用 RETURN QUERY"
 
 #: pl_exec.c:3575
 msgid "structure of query does not match function result type"
-msgstr "查詢的結構與函式結果型別不相符"
+msgstr "查詢結果的結構與函式結果型別不相符"
 
 #: pl_exec.c:3630 pl_exec.c:4461 pl_exec.c:8982
 #, c-format
 msgid "query string argument of EXECUTE is null"
-msgstr "EXECUTE 的查詢字串參數為 null"
+msgstr "EXECUTE 的查詢字串參數為 NULL"
 
 #: pl_exec.c:3715 pl_exec.c:3853
 #, c-format
@@ -376,7 +376,7 @@ msgstr "沒有參數的 RAISE 不能在例外處理常式之外使用"
 #: pl_exec.c:3843
 #, c-format
 msgid "RAISE statement option cannot be null"
-msgstr "RAISE 陳述式選項不可為 null"
+msgstr "RAISE 陳述式選項不可為 NULL"
 
 # commands/vacuum.c:2258 commands/vacuumlazy.c:489 commands/vacuumlazy.c:770
 # nodes/print.c:86 storage/lmgr/deadlock.c:888 tcop/postgres.c:3285
@@ -393,7 +393,7 @@ msgstr "斷言失敗"
 #: pl_exec.c:4334 pl_exec.c:4524
 #, c-format
 msgid "cannot COPY to/from client in PL/pgSQL"
-msgstr "無法在 PL/pgSQL 中與客戶端進行 COPY"
+msgstr "不能在 PL/pgSQL 中與客戶端進行 COPY"
 
 #: pl_exec.c:4340
 #, c-format
@@ -403,7 +403,7 @@ msgstr "PL/pgSQL 中不支援的交易命令"
 #: pl_exec.c:4363 pl_exec.c:4553
 #, c-format
 msgid "INTO used with a command that cannot return data"
-msgstr "搭配指令使用的 INTO 無法傳回資料"
+msgstr "INTO 用於不能傳回資料的指令"
 
 #: pl_exec.c:4386 pl_exec.c:4576
 #, c-format
@@ -433,12 +433,12 @@ msgstr "如果要捨棄 SELECT 的結果，請改用 PERFORM。"
 #: pl_exec.c:4516
 #, c-format
 msgid "EXECUTE of SELECT ... INTO is not implemented"
-msgstr "SELECT ...INTO 的 EXECUTE 尚未實作"
+msgstr "SELECT ... INTO 的 EXECUTE 尚未實作"
 
 #: pl_exec.c:4517
 #, c-format
 msgid "You might want to use EXECUTE ... INTO or EXECUTE CREATE TABLE ... AS instead."
-msgstr "你可能想改用  EXECUTE ... INTO or EXECUTE CREATE TABLE ... AS。"
+msgstr "可以考慮改用 EXECUTE ... INTO 或 EXECUTE CREATE TABLE ... AS。"
 
 #: pl_exec.c:4530
 #, c-format
@@ -448,23 +448,23 @@ msgstr "尚未實作透過 EXECUTE 執行交易命令"
 #: pl_exec.c:4840 pl_exec.c:4928
 #, c-format
 msgid "cursor variable \"%s\" is null"
-msgstr "指標變數 \"%s\" 為 null"
+msgstr "游標變數 \"%s\" 為 NULL"
 
 # commands/portalcmds.c:182 commands/portalcmds.c:229
 #: pl_exec.c:4851 pl_exec.c:4939
 #, c-format
 msgid "cursor \"%s\" does not exist"
-msgstr "cursor \"%s\" 不存在"
+msgstr "游標 \"%s\" 不存在"
 
 #: pl_exec.c:4864
 #, c-format
 msgid "relative or absolute cursor position is null"
-msgstr "相對或絕對指標位置為 null"
+msgstr "相對或絕對游標位置為 NULL"
 
 #: pl_exec.c:5088 pl_exec.c:5183
 #, c-format
 msgid "null value cannot be assigned to variable \"%s\" declared NOT NULL"
-msgstr "不可將 Null 值指派給宣告為 NOT NULL 的變數 \"%s\""
+msgstr "不可將 NULL 值指派給宣告為 NOT NULL 的變數 \"%s\""
 
 #: pl_exec.c:5164
 #, c-format
@@ -474,13 +474,13 @@ msgstr "不可將非複合值指派給資料列變數"
 #: pl_exec.c:5196
 #, c-format
 msgid "cannot assign non-composite value to a record variable"
-msgstr "不可將非複合值指派給記錄變數"
+msgstr "不可將非複合值指派給 record 變數"
 
 # parser/parse_target.c:268 parser/parse_target.c:501
 #: pl_exec.c:5247
 #, c-format
 msgid "cannot assign to system column \"%s\""
-msgstr "無法指派給系統欄位 \"%s\""
+msgstr "不能指派給系統欄位 \"%s\""
 
 #: pl_exec.c:5696
 #, c-format
@@ -538,7 +538,7 @@ msgstr "尚未指派記錄 \"%s\""
 #: pl_exec.c:7819
 #, c-format
 msgid "The tuple structure of a not-yet-assigned record is indeterminate."
-msgstr "尚未指派之記錄的欄組結構未定。"
+msgstr "尚未指派之記錄的元組結構未定。"
 
 # parser/parse_coerce.c:676 parser/parse_coerce.c:703
 # parser/parse_coerce.c:719 parser/parse_coerce.c:733
@@ -546,7 +546,7 @@ msgstr "尚未指派之記錄的欄組結構未定。"
 #: pl_exec.c:8058
 #, c-format
 msgid "cannot cast type %s to %s"
-msgstr "無法將型別 %s 轉換成 %s"
+msgstr "不能將型別 %s 轉換成 %s"
 
 #: pl_exec.c:8580 pl_gram.y:3567
 #, c-format
@@ -571,7 +571,7 @@ msgstr "FOR 用於 SELECT 資料列"
 
 #: pl_funcs.c:253
 msgid "FOR over cursor"
-msgstr "FOR 用於指標"
+msgstr "FOR 用於游標"
 
 #: pl_funcs.c:255
 msgid "FOREACH over array"
@@ -632,17 +632,17 @@ msgstr "\"%s\" 不是純量變數"
 #: pl_gram.y:1402 pl_gram.y:1595
 #, c-format
 msgid "loop variable of loop over rows must be a record variable or list of scalar variables"
-msgstr "資料列迴圈的迴圈變數必須是記錄變數或純量變數清單"
+msgstr "資料列迴圈的迴圈變數必須是 record 變數或純量變數清單"
 
 #: pl_gram.y:1437
 #, c-format
 msgid "cursor FOR loop must have only one target variable"
-msgstr "指標 FOR 迴圈只能有一個目標變數"
+msgstr "游標 FOR 迴圈只能有一個目標變數"
 
 #: pl_gram.y:1444
 #, c-format
 msgid "cursor FOR loop must use a bound cursor variable"
-msgstr "指標 FOR 迴圈必須使用繫結指標變數"
+msgstr "游標 FOR 迴圈必須使用已繫結的游標變數"
 
 #: pl_gram.y:1534
 #, c-format
@@ -652,7 +652,7 @@ msgstr "整數 FOR 迴圈只能有一個目標變數"
 #: pl_gram.y:1568
 #, c-format
 msgid "cannot specify REVERSE in query FOR loop"
-msgstr "無法在查詢 FOR 迴圈中指定 REVERSE"
+msgstr "不能在查詢 FOR 迴圈中指定 REVERSE"
 
 #: pl_gram.y:1700
 #, c-format
@@ -694,7 +694,7 @@ msgstr "語法錯誤"
 
 #: pl_gram.y:1925 pl_gram.y:1927 pl_gram.y:2417 pl_gram.y:2419
 msgid "invalid SQLSTATE code"
-msgstr "SQLSTATE 程式碼無效"
+msgstr "無效的 SQLSTATE 碼"
 
 #: pl_gram.y:2135
 msgid "syntax error, expected \"FOR\""
@@ -708,12 +708,12 @@ msgstr "FETCH 陳述式不能傳回多筆資料"
 #: pl_gram.y:2293
 #, c-format
 msgid "cursor variable must be a simple variable"
-msgstr "指標變數必須是簡單變數"
+msgstr "游標變數必須是簡單變數"
 
 #: pl_gram.y:2299
 #, c-format
 msgid "variable \"%s\" must be of type cursor or refcursor"
-msgstr "變數 \"%s\" 必須是指標型別或 refcursor 型別"
+msgstr "變數 \"%s\" 必須是 cursor 型別或 refcursor 型別"
 
 #: pl_gram.y:2633 pl_gram.y:2644
 #, c-format
@@ -756,16 +756,16 @@ msgstr "遺漏資料型別宣告"
 
 #: pl_gram.y:3146
 msgid "INTO specified more than once"
-msgstr "INTO 指定一次以上"
+msgstr "多次指定 INTO"
 
 #: pl_gram.y:3310
 msgid "expected FROM or IN"
-msgstr "預期 FROM 或 IN "
+msgstr "預期 FROM 或 IN"
 
 #: pl_gram.y:3371
 #, c-format
 msgid "RETURN cannot have a parameter in function returning set"
-msgstr "RETURN 在傳回 set 的函式中不能有參數"
+msgstr "RETURN 在傳回集合的函式中不能有參數"
 
 #: pl_gram.y:3372
 #, c-format
@@ -795,7 +795,7 @@ msgstr "RETURN NEXT 在具有 OUT 參數的函式中不能有參數"
 #: pl_gram.y:3625
 #, c-format
 msgid "record variable cannot be part of multiple-item INTO list"
-msgstr "記錄變數不能是多項目 INTO 清單的一部分"
+msgstr "record 變數不能是多項目 INTO 清單的一部分"
 
 #: pl_gram.y:3673
 #, c-format
@@ -805,7 +805,7 @@ msgstr "指定太多的 INTO 變數"
 #: pl_gram.y:3884
 #, c-format
 msgid "end label \"%s\" specified for unlabeled block"
-msgstr "為未標籤區塊指定結束標籤 \"%s\""
+msgstr "為未加標籤的區塊指定結束標籤 \"%s\""
 
 #: pl_gram.y:3891
 #, c-format
@@ -815,12 +815,12 @@ msgstr "結束標籤 \"%s\" 不同於區塊標籤 \"%s\""
 #: pl_gram.y:3925
 #, c-format
 msgid "cursor \"%s\" has no arguments"
-msgstr "指標 \"%s\" 沒有參數"
+msgstr "游標 \"%s\" 沒有參數"
 
 #: pl_gram.y:3939
 #, c-format
 msgid "cursor \"%s\" has arguments"
-msgstr "指標 \"%s\" 有參數"
+msgstr "游標 \"%s\" 有參數"
 
 #: pl_gram.y:3984
 #, c-format
@@ -864,7 +864,7 @@ msgstr "為 RAISE 指定的參數太少"
 
 #: pl_handler.c:159
 msgid "Sets handling of conflicts between PL/pgSQL variable names and table column names."
-msgstr "PL/pgSQL 變數名稱和資料表欄位名稱衝突處理。"
+msgstr "設定 PL/pgSQL 變數名稱和資料表欄位名稱衝突的處理方式。"
 
 #: pl_handler.c:168
 msgid "Print information about parameters in the DETAIL part of the error messages generated on INTO ... STRICT failures."
@@ -896,7 +896,7 @@ msgstr "輸入結尾發生 %s"
 #: pl_scanner.c:559
 #, c-format
 msgid "%s at or near \"%s\""
-msgstr "\"%2$s\" 附近發生 %1$s"
+msgstr "在 \"%2$s\" 或其附近發生 %1$s"
 
 #~ msgid "EXECUTE statement"
 #~ msgstr "EXECUTE 陳述式"

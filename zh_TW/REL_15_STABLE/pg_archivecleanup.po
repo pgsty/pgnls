@@ -30,7 +30,7 @@ msgstr "警告: "
 #: ../../../src/common/logging.c:294
 #, c-format
 msgid "detail: "
-msgstr "詳細內容: "
+msgstr "詳情: "
 
 #: ../../../src/common/logging.c:301
 #, c-format
@@ -81,7 +81,7 @@ msgstr "用 \"%s --help\" 取得更多資訊。"
 msgid ""
 "%s removes older WAL files from PostgreSQL archives.\n"
 "\n"
-msgstr "%s 從 PostgreSQL 封存檔中移除較舊的 WAL 檔\n"
+msgstr "%s 從 PostgreSQL 封存檔中移除較舊的 WAL 檔。\n\n"
 
 #: pg_archivecleanup.c:252
 #, c-format
@@ -91,7 +91,7 @@ msgstr "用法:\n"
 #: pg_archivecleanup.c:253
 #, c-format
 msgid "  %s [OPTION]... ARCHIVELOCATION OLDESTKEPTWALFILE\n"
-msgstr "  %s [OPTION]... ARCHIVELOCATION OLDESTKEPTWALFILE\n"
+msgstr "  %s [選項]... 封存位置 最早保留的WAL檔案\n"
 
 #: pg_archivecleanup.c:254
 #, c-format
@@ -115,7 +115,7 @@ msgstr "  -n             空跑，顯示將被刪除的檔案名\n"
 #: pg_archivecleanup.c:257
 #, c-format
 msgid "  -V, --version  output version information, then exit\n"
-msgstr "  -V, --version  輸出版本資訊，然後結束\n"
+msgstr "  -V, --version  顯示版本，然後結束\n"
 
 #: pg_archivecleanup.c:258
 #, c-format
@@ -125,7 +125,7 @@ msgstr "  -x EXT         清除有此副檔名的檔案\n"
 #: pg_archivecleanup.c:259
 #, c-format
 msgid "  -?, --help     show this help, then exit\n"
-msgstr "  -?, --help     顯示此說明，然後結束\n"
+msgstr "  -?, --help     顯示說明，然後結束\n"
 
 #: pg_archivecleanup.c:260
 #, c-format
@@ -135,7 +135,7 @@ msgid ""
 "  archive_cleanup_command = 'pg_archivecleanup [OPTION]... ARCHIVELOCATION %%r'\n"
 "e.g.\n"
 "  archive_cleanup_command = 'pg_archivecleanup /mnt/server/archiverdir %%r'\n"
-msgstr "\n用於 postgresql.conf 中的 archive_cleanup_command:\n  archive_cleanup_command = 'pg_archivecleanup [OPTION]... ARCHIVELOCATION %%r'\n例如:\n  archive_cleanup_command = 'pg_archivecleanup /mnt/server/archiverdir %%r'\n"
+msgstr "\n用於 postgresql.conf 中的 archive_cleanup_command：\n  archive_cleanup_command = 'pg_archivecleanup [OPTION]... ARCHIVELOCATION %%r'\n例如：\n  archive_cleanup_command = 'pg_archivecleanup /mnt/server/archiverdir %%r'\n"
 
 #: pg_archivecleanup.c:265
 #, c-format
@@ -156,12 +156,12 @@ msgstr "\n回報錯誤至 <%s>。\n"
 #: pg_archivecleanup.c:270
 #, c-format
 msgid "%s home page: <%s>\n"
-msgstr "%s 網站: <%s>\n"
+msgstr "%s 首頁: <%s>\n"
 
 #: pg_archivecleanup.c:332
 #, c-format
 msgid "must specify archive location"
-msgstr "必需指定封存檔位置"
+msgstr "必須指定封存檔位置"
 
 #: pg_archivecleanup.c:344
 #, c-format

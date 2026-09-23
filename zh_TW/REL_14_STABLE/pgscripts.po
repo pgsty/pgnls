@@ -58,13 +58,13 @@ msgstr "警告: "
 #: ../../common/fe_memutils.c:104 ../../common/fe_memutils.c:168
 #, c-format
 msgid "out of memory\n"
-msgstr "記憶體用盡\n"
+msgstr "記憶體不足\n"
 
 # common.c:78
 #: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:160
 #, c-format
 msgid "cannot duplicate null pointer (internal error)\n"
-msgstr "無法複製 null 指標(內部錯誤)\n"
+msgstr "不能複製空指標(內部錯誤)\n"
 
 #: ../../common/fe_memutils.c:210
 #, c-format
@@ -80,7 +80,7 @@ msgstr "無效的記憶體配置請求大小 %zu * %zu\n"
 #: ../../common/username.c:43
 #, c-format
 msgid "could not look up effective user ID %ld: %s"
-msgstr "找不到有效的使用者 ID %ld: %s"
+msgstr "無法查詢有效使用者 ID %ld: %s"
 
 # commands/user.c:899 commands/user.c:1012 commands/user.c:1104
 # commands/user.c:1233 commands/variable.c:664 utils/cache/lsyscache.c:2064
@@ -93,11 +93,11 @@ msgstr "使用者不存在"
 #: ../../common/username.c:60
 #, c-format
 msgid "user name lookup failure: error code %lu"
-msgstr "找不到使用者名稱: 錯誤碼 %lu"
+msgstr "使用者名稱查詢失敗: 錯誤碼 %lu"
 
 #: ../../fe_utils/cancel.c:189 ../../fe_utils/cancel.c:238
 msgid "Cancel request sent\n"
-msgstr "已傳送取消要求\n"
+msgstr "已傳送取消請求\n"
 
 # fe-connect.c:1427
 #: ../../fe_utils/cancel.c:190 ../../fe_utils/cancel.c:239
@@ -150,12 +150,12 @@ msgstr "已中斷\n"
 #: ../../fe_utils/print.c:3105
 #, c-format
 msgid "Cannot add header to table content: column count of %d exceeded.\n"
-msgstr "無法將標題新增至表格內容: 欄位數已超過 %d。\n"
+msgstr "不能將標題新增至表格內容: 欄位數已超過 %d。\n"
 
 #: ../../fe_utils/print.c:3145
 #, c-format
 msgid "Cannot add cell to table content: total cell count of %d exceeded.\n"
-msgstr "無法將資料格新增至資料表內容: 超過資料格總計 %d。\n"
+msgstr "不能將儲存格新增至表格內容: 已超出總儲存格數 %d。\n"
 
 #: ../../fe_utils/print.c:3403
 #, c-format
@@ -170,7 +170,7 @@ msgstr "查詢失敗: %s"
 #: ../../fe_utils/query_utils.c:34 ../../fe_utils/query_utils.c:59
 #, c-format
 msgid "query was: %s"
-msgstr "查詢為: %s"
+msgstr "查詢是: %s"
 
 #: clusterdb.c:112 clusterdb.c:131 createdb.c:123 createdb.c:142
 #: createuser.c:172 createuser.c:187 dropdb.c:103 dropdb.c:112 dropdb.c:120
@@ -178,13 +178,13 @@ msgstr "查詢為: %s"
 #: reindexdb.c:174 reindexdb.c:193 vacuumdb.c:251 vacuumdb.c:270
 #, c-format
 msgid "Try \"%s --help\" for more information.\n"
-msgstr "執行 \"%s --help\" 取得更多資訊。\n"
+msgstr "用 \"%s --help\" 取得更多資訊。\n"
 
 #: clusterdb.c:129 createdb.c:140 createuser.c:185 dropdb.c:118 dropuser.c:107
 #: pg_isready.c:108 reindexdb.c:191 vacuumdb.c:268
 #, c-format
 msgid "too many command-line arguments (first is \"%s\")"
-msgstr "命令列參數過多(第一個是 \"%s\")"
+msgstr "命令列參數過多(第一個多餘參數是 \"%s\")"
 
 #: clusterdb.c:148
 #, c-format
@@ -194,7 +194,7 @@ msgstr "不能同時對所有資料庫和某個指定資料庫進行叢集化"
 #: clusterdb.c:154
 #, c-format
 msgid "cannot cluster specific table(s) in all databases"
-msgstr "不能在所有資料庫中對指定表進行聚簇"
+msgstr "無法在所有資料庫中對指定資料表進行叢集化"
 
 #: clusterdb.c:220
 #, c-format
@@ -209,27 +209,25 @@ msgstr "對資料庫 \"%s\" 進行叢集化失敗: %s"
 #: clusterdb.c:253
 #, c-format
 msgid "%s: clustering database \"%s\"\n"
-msgstr "%s: 重新排列資料庫 \"%s\"\n"
+msgstr "%s: 對資料庫 \"%s\" 進行叢集化\n"
 
 #: clusterdb.c:269
 #, c-format
 msgid ""
 "%s clusters all previously clustered tables in a database.\n"
 "\n"
-msgstr ""
-"%s 重新排列所有資料庫中曾經重排的資料庫。\n"
-"\n"
+msgstr "%s 對資料庫中所有先前已叢集化的資料表進行叢集化。\n\n"
 
 #: clusterdb.c:270 createdb.c:269 createuser.c:353 dropdb.c:170 dropuser.c:170
 #: pg_isready.c:225 reindexdb.c:801 vacuumdb.c:1036
 #, c-format
 msgid "Usage:\n"
-msgstr "使用方法:\n"
+msgstr "用法:\n"
 
 #: clusterdb.c:271 reindexdb.c:802 vacuumdb.c:1037
 #, c-format
 msgid "  %s [OPTION]... [DBNAME]\n"
-msgstr "  %s [選項]... [資料庫]\n"
+msgstr "  %s [選項]... [資料庫名稱]\n"
 
 #: clusterdb.c:272 createdb.c:271 createuser.c:355 dropdb.c:172 dropuser.c:172
 #: pg_isready.c:228 reindexdb.c:803 vacuumdb.c:1038
@@ -244,12 +242,12 @@ msgstr ""
 #: clusterdb.c:273
 #, c-format
 msgid "  -a, --all                 cluster all databases\n"
-msgstr "  -a, --all                 重新排列所有資料庫\n"
+msgstr "  -a, --all                 對所有資料庫進行叢集化\n"
 
 #: clusterdb.c:274
 #, c-format
 msgid "  -d, --dbname=DBNAME       database to cluster\n"
-msgstr "  -d, --dbname=DBNAME       重新排列指定的資料庫\n"
+msgstr "  -d, --dbname=DBNAME       要進行叢集化的資料庫\n"
 
 #: clusterdb.c:275 createuser.c:359 dropdb.c:173 dropuser.c:173
 #, c-format
@@ -259,17 +257,17 @@ msgstr "  -e, --echo                顯示被送到伺服器的命令\n"
 #: clusterdb.c:276
 #, c-format
 msgid "  -q, --quiet               don't write any messages\n"
-msgstr "  -q, --quiet               不顯示任何訊息\n"
+msgstr "  -q, --quiet               不輸出任何訊息\n"
 
 #: clusterdb.c:277
 #, c-format
 msgid "  -t, --table=TABLE         cluster specific table(s) only\n"
-msgstr "  -t, --table=TABLE         僅對指定的資料表進行叢集化\n\n"
+msgstr "  -t, --table=TABLE         僅對指定的資料表進行叢集化\n"
 
 #: clusterdb.c:278
 #, c-format
 msgid "  -v, --verbose             write a lot of output\n"
-msgstr "  -v, --verbose             顯示詳細的執行訊息\n"
+msgstr "  -v, --verbose             產生詳細輸出\n"
 
 #: clusterdb.c:279 createuser.c:371 dropdb.c:176 dropuser.c:176
 #, c-format
@@ -304,22 +302,22 @@ msgstr "  -p, --port=PORT           資料庫伺服器連接埠\n"
 #: clusterdb.c:284 dropdb.c:182 vacuumdb.c:1066
 #, c-format
 msgid "  -U, --username=USERNAME   user name to connect as\n"
-msgstr "  -U, --username=USERNAME   用來連線的使用者\n"
+msgstr "  -U, --username=USERNAME   用來連線的使用者名稱\n"
 
 #: clusterdb.c:285 createuser.c:381 dropdb.c:183 dropuser.c:183 vacuumdb.c:1067
 #, c-format
 msgid "  -w, --no-password         never prompt for password\n"
-msgstr "  -w, --no-password         絕不提示密碼\n"
+msgstr "  -w, --no-password         不詢問密碼\n"
 
 #: clusterdb.c:286 createuser.c:382 dropdb.c:184 dropuser.c:184 vacuumdb.c:1068
 #, c-format
 msgid "  -W, --password            force password prompt\n"
-msgstr "  -W, --password            強制密碼提示\n"
+msgstr "  -W, --password            要求詢問密碼\n"
 
 #: clusterdb.c:287 dropdb.c:185 vacuumdb.c:1069
 #, c-format
 msgid "  --maintenance-db=DBNAME   alternate maintenance database\n"
-msgstr "  --maintenance-db=DBNAME   替代的維護資料庫\n\n"
+msgstr "  --maintenance-db=DBNAME   替代的維護資料庫\n"
 
 #: clusterdb.c:288
 #, c-format
@@ -342,13 +340,13 @@ msgstr "\n回報錯誤至 <%s>。\n"
 #: pg_isready.c:240 reindexdb.c:827 vacuumdb.c:1072
 #, c-format
 msgid "%s home page: <%s>\n"
-msgstr "%s 網站: <%s>\n"
+msgstr "%s 首頁: <%s>\n"
 
 #: common.c:107
 #, c-format
 msgid "query returned %d row instead of one: %s"
 msgid_plural "query returned %d rows instead of one: %s"
-msgstr[0] "查詢回傳 %d 筆資料，而非一筆資料: %s"
+msgstr[0] "查詢傳回 %d 筆資料，而非一筆資料: %s"
 
 #  translator: Make sure the (y/n) prompts match the translation of this.
 #. translator: abbreviation for "yes"
@@ -447,12 +445,12 @@ msgstr "      --lc-ctype=LOCALE        資料庫的 LC_CTYPE 設定\n"
 #: createdb.c:278
 #, c-format
 msgid "  -O, --owner=OWNER            database user to own the new database\n"
-msgstr "  -O, --owner=OWNER            指定新資料庫的擁有者\n"
+msgstr "  -O, --owner=OWNER            擁有新資料庫的資料庫使用者\n"
 
 #: createdb.c:279
 #, c-format
 msgid "  -T, --template=TEMPLATE      template database to copy\n"
-msgstr "  -T, --template=TEMPLATE      指定要使用的資料庫樣板\n"
+msgstr "  -T, --template=TEMPLATE      要複製的樣板資料庫\n"
 
 #: createdb.c:280 reindexdb.c:816
 #, c-format
@@ -477,31 +475,29 @@ msgstr "  -p, --port=PORT              資料庫伺服器連接埠\n"
 #: createdb.c:285 reindexdb.c:821
 #, c-format
 msgid "  -U, --username=USERNAME      user name to connect as\n"
-msgstr "  -U, --username=USERNAME      用來連線的使用者\n"
+msgstr "  -U, --username=USERNAME      用來連線的使用者名稱\n"
 
 #: createdb.c:286 reindexdb.c:822
 #, c-format
 msgid "  -w, --no-password            never prompt for password\n"
-msgstr "  -w, --no-password            絕不提示密碼\n"
+msgstr "  -w, --no-password            不詢問密碼\n"
 
 #: createdb.c:287 reindexdb.c:823
 #, c-format
 msgid "  -W, --password               force password prompt\n"
-msgstr "  -W, --password               強制密碼提示\n"
+msgstr "  -W, --password               要求詢問密碼\n"
 
 #: createdb.c:288 reindexdb.c:824
 #, c-format
 msgid "  --maintenance-db=DBNAME      alternate maintenance database\n"
-msgstr "  --maintenance-db=DBNAME      替代的維護資料庫\n\n"
+msgstr "  --maintenance-db=DBNAME      替代的維護資料庫\n"
 
 #: createdb.c:289
 #, c-format
 msgid ""
 "\n"
 "By default, a database with the same name as the current user is created.\n"
-msgstr ""
-"\n"
-"預設會建立與使用者同名的資料庫。\n"
+msgstr "\n預設會建立與目前使用者同名的資料庫。\n"
 
 # fe-connect.c:2675
 #: createuser.c:151
@@ -511,11 +507,11 @@ msgstr "--connection-limit 的值無效: %s"
 
 #: createuser.c:195
 msgid "Enter name of role to add: "
-msgstr "輸入新身分的名稱:"
+msgstr "輸入新身分的名稱: "
 
 #: createuser.c:210
 msgid "Enter password for new role: "
-msgstr "輸入新身分的密碼:"
+msgstr "輸入新身分的密碼: "
 
 #: createuser.c:211
 msgid "Enter it again: "
@@ -524,20 +520,20 @@ msgstr "再輸入一次: "
 #: createuser.c:214
 #, c-format
 msgid "Passwords didn't match.\n"
-msgstr "密碼不符。\n"
+msgstr "密碼不一致。\n"
 
 # utils/misc/guc.c:434
 #: createuser.c:222
 msgid "Shall the new role be a superuser?"
-msgstr "新身分是否要成為超級使用者?"
+msgstr "新身分是否要成為超級使用者？"
 
 #: createuser.c:237
 msgid "Shall the new role be allowed to create databases?"
-msgstr "是否允許新身分建立資料庫?"
+msgstr "是否允許新身分建立資料庫？"
 
 #: createuser.c:245
 msgid "Shall the new role be allowed to create more new roles?"
-msgstr "是否允許新身分建立更多身分 ?"
+msgstr "是否允許新身分建立更多身分？"
 
 #: createuser.c:283
 #, c-format
@@ -559,7 +555,7 @@ msgstr "%s 會建立新的 PostgreSQL 身分。\n\n"
 #: createuser.c:354 dropuser.c:171
 #, c-format
 msgid "  %s [OPTION]... [ROLENAME]\n"
-msgstr "  %s [選項]...[身分\n"
+msgstr "  %s [選項]... [身分名稱]\n"
 
 #: createuser.c:356
 #, c-format
@@ -574,7 +570,7 @@ msgstr "  -d, --createdb            身分可以建立新資料庫\n"
 #: createuser.c:358
 #, c-format
 msgid "  -D, --no-createdb         role cannot create databases (default)\n"
-msgstr "  -D, --no-createdb         角色不能建立資料庫 (預設)\n\n"
+msgstr "  -D, --no-createdb         角色不能建立資料庫 (預設)\n"
 
 #: createuser.c:360
 #, c-format
@@ -586,7 +582,7 @@ msgstr "  -g, --role=ROLE           新角色將成為此角色的成員\n"
 msgid ""
 "  -i, --inherit             role inherits privileges of roles it is a\n"
 "                            member of (default)\n"
-msgstr "  -i, --inherit             身分會繼承父身分的\n                            權限(預設)\n"
+msgstr "  -i, --inherit             身分會繼承其所屬身分的\n                            權限(預設)\n"
 
 #: createuser.c:363
 #, c-format
@@ -616,7 +612,7 @@ msgstr "  -r, --createrole          身分可以建立新身分\n"
 #: createuser.c:368
 #, c-format
 msgid "  -R, --no-createrole       role cannot create roles (default)\n"
-msgstr "  -R, --no-createrole       角色不能建立角色 (預設)\n\n"
+msgstr "  -R, --no-createrole       角色不能建立角色 (預設)\n"
 
 #: createuser.c:369
 #, c-format
@@ -626,7 +622,7 @@ msgstr "  -s, --superuser           身分將是超級使用者\n"
 #: createuser.c:370
 #, c-format
 msgid "  -S, --no-superuser        role will not be superuser (default)\n"
-msgstr "  -S, --no-superuser        角色不是超級使用者 (預設)\n\n"
+msgstr "  -S, --no-superuser        角色不是超級使用者 (預設)\n"
 
 #: createuser.c:372
 #, c-format
@@ -638,7 +634,7 @@ msgstr "  --interactive             提示輸入缺少的角色名稱和屬性�
 #: createuser.c:374
 #, c-format
 msgid "  --replication             role can initiate replication\n"
-msgstr "  --replication             角色可以發起複寫\n\n"
+msgstr "  --replication             角色可以發起複寫\n"
 
 #: createuser.c:375
 #, c-format
@@ -662,7 +658,7 @@ msgstr "資料庫 \"%s\" 會被永久刪除。\n"
 
 #: dropdb.c:127 dropuser.c:130
 msgid "Are you sure?"
-msgstr "您確定嗎?"
+msgstr "您確定嗎？"
 
 #: dropdb.c:155
 #, c-format
@@ -697,11 +693,11 @@ msgstr "  -i, --interactive         刪除任何東西前要先詢問\n"
 #: dropdb.c:177
 #, c-format
 msgid "  --if-exists               don't report error if database doesn't exist\n"
-msgstr "  --if-exists               資料庫不存在時不回報錯誤\n\n"
+msgstr "  --if-exists               資料庫不存在時不回報錯誤\n"
 
 #: dropuser.c:117
 msgid "Enter name of role to drop: "
-msgstr "輸入要刪除的身分:"
+msgstr "輸入要刪除的身分: "
 
 #: dropuser.c:121
 #, c-format
@@ -711,7 +707,7 @@ msgstr "缺少必要的引數: 角色名稱"
 #: dropuser.c:129
 #, c-format
 msgid "Role \"%s\" will be permanently removed.\n"
-msgstr "身分 \"%s\"  將被永久刪除。\n"
+msgstr "身分 \"%s\" 將被永久刪除。\n"
 
 #: dropuser.c:154
 #, c-format
@@ -735,7 +731,7 @@ msgstr "  -i, --interactive         刪除前提示確認；若未指定角色�
 #: dropuser.c:177
 #, c-format
 msgid "  --if-exists               don't report error if user doesn't exist\n"
-msgstr "  --if-exists               使用者不存在時不回報錯誤\n\n"
+msgstr "  --if-exists               使用者不存在時不回報錯誤\n"
 
 #: dropuser.c:182
 #, c-format
@@ -785,17 +781,17 @@ msgstr "%s 對 PostgreSQL 資料庫發起連線檢查。\n\n"
 #: pg_isready.c:226
 #, c-format
 msgid "  %s [OPTION]...\n"
-msgstr "  %s [OPTION]...\n"
+msgstr "  %s [選項]...\n"
 
 #: pg_isready.c:229
 #, c-format
 msgid "  -d, --dbname=DBNAME      database name\n"
-msgstr "  -d, --dbname=DBNAME      資料庫名稱\n\n"
+msgstr "  -d, --dbname=DBNAME      資料庫名稱\n"
 
 #: pg_isready.c:230
 #, c-format
 msgid "  -q, --quiet              run quietly\n"
-msgstr "  -q, --quiet              安靜地執行\n\n"
+msgstr "  -q, --quiet              安靜地執行\n"
 
 #: pg_isready.c:231
 #, c-format
@@ -810,22 +806,22 @@ msgstr "  -?, --help               顯示說明，然後結束\n"
 #: pg_isready.c:235
 #, c-format
 msgid "  -h, --host=HOSTNAME      database server host or socket directory\n"
-msgstr "  -h, --host=HOSTNAME      資料庫伺服器主機或socket目錄\n"
+msgstr "  -h, --host=HOSTNAME      資料庫伺服器主機或 socket 目錄\n"
 
 #: pg_isready.c:236
 #, c-format
 msgid "  -p, --port=PORT          database server port\n"
-msgstr "  -p, --port=PORT          資料庫伺服器連接埠\n\n"
+msgstr "  -p, --port=PORT          資料庫伺服器連接埠\n"
 
 #: pg_isready.c:237
 #, c-format
 msgid "  -t, --timeout=SECS       seconds to wait when attempting connection, 0 disables (default: %s)\n"
-msgstr "  -t, --timeout=SECS       嘗試連線時等待的秒數，0 表示停用 (預設: %s)\n\n"
+msgstr "  -t, --timeout=SECS       嘗試連線時等待的秒數，0 表示停用逾時 (預設: %s)\n"
 
 #: pg_isready.c:238
 #, c-format
 msgid "  -U, --username=USERNAME  user name to connect as\n"
-msgstr "  -U, --username=USERNAME  用來連線的使用者名稱\n\n"
+msgstr "  -U, --username=USERNAME  用來連線的使用者名稱\n"
 
 # gram.y:5697 gram.y:5775
 #: reindexdb.c:157 vacuumdb.c:198
@@ -841,49 +837,49 @@ msgstr "不能同時對所有資料庫和某個指定資料庫重建索引"
 #: reindexdb.c:215
 #, c-format
 msgid "cannot reindex all databases and system catalogs at the same time"
-msgstr "不能同時對所有資料庫和系統目錄重建索引"
+msgstr "無法同時對所有資料庫和系統目錄重建索引"
 
 #: reindexdb.c:220
 #, c-format
 msgid "cannot reindex specific schema(s) in all databases"
-msgstr "不能在所有資料庫中對指定模式重建索引"
+msgstr "無法在所有資料庫中對指定 schema重建索引"
 
 #: reindexdb.c:225
 #, c-format
 msgid "cannot reindex specific table(s) in all databases"
-msgstr "不能在所有資料庫中對指定表重建索引"
+msgstr "無法在所有資料庫中對指定資料表重建索引"
 
 #: reindexdb.c:230
 #, c-format
 msgid "cannot reindex specific index(es) in all databases"
-msgstr "不能在所有資料庫中重建指定索引"
+msgstr "無法在所有資料庫中重建指定索引"
 
 #: reindexdb.c:243
 #, c-format
 msgid "cannot reindex specific schema(s) and system catalogs at the same time"
-msgstr "不能同時對指定模式和系統目錄重建索引"
+msgstr "無法同時對指定 schema和系統目錄重建索引"
 
 #: reindexdb.c:248
 #, c-format
 msgid "cannot reindex specific table(s) and system catalogs at the same time"
-msgstr "不能同時對指定表和系統目錄重建索引"
+msgstr "無法同時對指定資料表和系統目錄重建索引"
 
 #: reindexdb.c:253
 #, c-format
 msgid "cannot reindex specific index(es) and system catalogs at the same time"
-msgstr "不能同時對指定索引和系統目錄重建索引"
+msgstr "無法同時對指定索引和系統目錄重建索引"
 
 # tcop/postgres.c:1129
 #: reindexdb.c:259
 #, c-format
 msgid "cannot use multiple jobs to reindex system catalogs"
-msgstr "無法使用多個並行工作重建系統目錄的索引"
+msgstr "不能使用多個並行工作重建系統目錄的索引"
 
 # tcop/postgres.c:1129
 #: reindexdb.c:288
 #, c-format
 msgid "cannot use multiple jobs to reindex indexes"
-msgstr "不能使用多個作業重建索引"
+msgstr "無法使用多個作業重建索引"
 
 #: reindexdb.c:353 reindexdb.c:361 vacuumdb.c:470 vacuumdb.c:478 vacuumdb.c:486
 #: vacuumdb.c:494 vacuumdb.c:502 vacuumdb.c:510 vacuumdb.c:518 vacuumdb.c:526
@@ -939,66 +935,64 @@ msgstr ""
 #: reindexdb.c:804
 #, c-format
 msgid "  -a, --all                    reindex all databases\n"
-msgstr "  -a, --all                    對所有資料庫重建索引\n\n"
+msgstr "  -a, --all                    對所有資料庫重建索引\n"
 
 #: reindexdb.c:805
 #, c-format
 msgid "      --concurrently           reindex concurrently\n"
-msgstr "      --concurrently           並行重建索引\n\n"
+msgstr "      --concurrently           並行重建索引\n"
 
 #: reindexdb.c:806
 #, c-format
 msgid "  -d, --dbname=DBNAME          database to reindex\n"
-msgstr "  -d, --dbname=DBNAME          要重建索引的資料庫\n\n"
+msgstr "  -d, --dbname=DBNAME          要重建索引的資料庫\n"
 
 #: reindexdb.c:808
 #, c-format
 msgid "  -i, --index=INDEX            recreate specific index(es) only\n"
-msgstr "  -i, --index=INDEX            僅重新建立指定的索引\n\n"
+msgstr "  -i, --index=INDEX            僅重新建立指定的索引\n"
 
 #: reindexdb.c:809
 #, c-format
 msgid "  -j, --jobs=NUM               use this many concurrent connections to reindex\n"
-msgstr "  -j, --jobs=NUM               使用指定數量的並行連線重建索引\n\n"
+msgstr "  -j, --jobs=NUM               使用指定數量的並行連線重建索引\n"
 
 #: reindexdb.c:810
 #, c-format
 msgid "  -q, --quiet                  don't write any messages\n"
-msgstr "  -q, --quiet                  不輸出任何訊息\n\n"
+msgstr "  -q, --quiet                  不輸出任何訊息\n"
 
 #: reindexdb.c:811
 #, c-format
 msgid "  -s, --system                 reindex system catalogs only\n"
-msgstr "  -s, --system                 僅重建系統目錄的索引\n\n"
+msgstr "  -s, --system                 僅重建系統目錄的索引\n"
 
 #: reindexdb.c:812
 #, c-format
 msgid "  -S, --schema=SCHEMA          reindex specific schema(s) only\n"
-msgstr "  -S, --schema=SCHEMA          僅對指定的 schema 重建索引\n\n"
+msgstr "  -S, --schema=SCHEMA          僅對指定的 schema 重建索引\n"
 
 #: reindexdb.c:813
 #, c-format
 msgid "  -t, --table=TABLE            reindex specific table(s) only\n"
-msgstr "  -t, --table=TABLE            僅對指定的資料表重建索引\n\n"
+msgstr "  -t, --table=TABLE            僅對指定的資料表重建索引\n"
 
 #: reindexdb.c:814
 #, c-format
 msgid "      --tablespace=TABLESPACE  tablespace where indexes are rebuilt\n"
-msgstr "      --tablespace=TABLESPACE  重建索引所在的表空間\n\n"
+msgstr "      --tablespace=TABLESPACE  重建索引所在的表空間\n"
 
 #: reindexdb.c:815
 #, c-format
 msgid "  -v, --verbose                write a lot of output\n"
-msgstr "  -v, --verbose                輸出詳細資訊\n\n"
+msgstr "  -v, --verbose                產生詳細輸出\n"
 
 #: reindexdb.c:825
 #, c-format
 msgid ""
 "\n"
 "Read the description of the SQL command REINDEX for details.\n"
-msgstr ""
-"\n"
-"請閱讀 SQL 指令 REINDEX 的描述以取得詳細資訊。\n"
+msgstr "\n請參考 SQL 命令 REINDEX 的說明。\n"
 
 # commands/define.c:233
 #: vacuumdb.c:206
@@ -1036,12 +1030,12 @@ msgstr "不能將 \"%s\" 選項與 \"%s\" 選項一起使用"
 #: vacuumdb.c:363
 #, c-format
 msgid "cannot vacuum all databases and a specific one at the same time"
-msgstr "不能同時對所有資料庫和某個指定資料庫進行重整"
+msgstr "不能同時對所有資料庫和某個指定資料庫進行清理"
 
 #: vacuumdb.c:368
 #, c-format
 msgid "cannot vacuum specific table(s) in all databases"
-msgstr "不能在所有資料庫中清理指定表"
+msgstr "無法在所有資料庫中清理指定資料表"
 
 #: vacuumdb.c:457
 msgid "Generating minimal optimizer statistics (1 target)"
@@ -1063,41 +1057,39 @@ msgstr "%s: 正在處理資料庫 \"%s\": %s\n"
 #: vacuumdb.c:545
 #, c-format
 msgid "%s: vacuuming database \"%s\"\n"
-msgstr "%s: 重整資料庫 \"%s\"\n"
+msgstr "%s: 清理資料庫 \"%s\"\n"
 
 #: vacuumdb.c:1024
 #, c-format
 msgid "vacuuming of table \"%s\" in database \"%s\" failed: %s"
-msgstr "重整資料庫 \"%2$s\" 中的資料表 \"%1$s\" 失敗: %3$s"
+msgstr "清理資料庫 \"%2$s\" 中的資料表 \"%1$s\" 失敗: %3$s"
 
 #: vacuumdb.c:1027
 #, c-format
 msgid "vacuuming of database \"%s\" failed: %s"
-msgstr "重整資料庫 \"%s\" 失敗: %s"
+msgstr "清理資料庫 \"%s\" 失敗: %s"
 
 #: vacuumdb.c:1035
 #, c-format
 msgid ""
 "%s cleans and analyzes a PostgreSQL database.\n"
 "\n"
-msgstr ""
-"%s 整理並分析 PostgreSQL 資料庫。\n"
-"\n"
+msgstr "%s 清理並分析 PostgreSQL 資料庫。\n\n"
 
 #: vacuumdb.c:1039
 #, c-format
 msgid "  -a, --all                       vacuum all databases\n"
-msgstr "  -a, --all                       重整所有資料庫\n"
+msgstr "  -a, --all                       清理所有資料庫\n"
 
 #: vacuumdb.c:1040
 #, c-format
 msgid "  -d, --dbname=DBNAME             database to vacuum\n"
-msgstr "  -d, --dbname=DBNAME             重整指定的資料庫\n"
+msgstr "  -d, --dbname=DBNAME             清理指定的資料庫\n"
 
 #: vacuumdb.c:1041
 #, c-format
 msgid "      --disable-page-skipping     disable all page-skipping behavior\n"
-msgstr "      --disable-page-skipping     停用所有頁面跳過行為\n\n"
+msgstr "      --disable-page-skipping     停用所有頁面跳過行為\n"
 
 #: vacuumdb.c:1042
 #, c-format
@@ -1107,7 +1099,7 @@ msgstr "  -e, --echo                      顯示被送到伺服器的命令\n"
 #: vacuumdb.c:1043
 #, c-format
 msgid "  -f, --full                      do full vacuuming\n"
-msgstr "  -f, --full                      進行完整的資料庫重整\n"
+msgstr "  -f, --full                      進行完全清理\n"
 
 #: vacuumdb.c:1044
 #, c-format
@@ -1117,62 +1109,62 @@ msgstr "  -F, --freeze                    凍結資料列交易資訊\n"
 #: vacuumdb.c:1045
 #, c-format
 msgid "      --force-index-cleanup       always remove index entries that point to dead tuples\n"
-msgstr "      --force-index-cleanup       一律刪除指向死元組的索引項目\n\n"
+msgstr "      --force-index-cleanup       一律刪除指向死元組的索引項目\n"
 
 #: vacuumdb.c:1046
 #, c-format
 msgid "  -j, --jobs=NUM                  use this many concurrent connections to vacuum\n"
-msgstr "  -j, --jobs=NUM                  使用指定數量的並行連線進行重整\n\n"
+msgstr "  -j, --jobs=NUM                  使用指定數量的並行連線進行清理\n"
 
 #: vacuumdb.c:1047
 #, c-format
 msgid "      --min-mxid-age=MXID_AGE     minimum multixact ID age of tables to vacuum\n"
-msgstr "      --min-mxid-age=MXID_AGE     待重整資料表的最小多重交易 ID 年齡\n\n"
+msgstr "      --min-mxid-age=MXID_AGE     待清理資料表的最小多重交易 ID 年齡\n"
 
 #: vacuumdb.c:1048
 #, c-format
 msgid "      --min-xid-age=XID_AGE       minimum transaction ID age of tables to vacuum\n"
-msgstr "      --min-xid-age=XID_AGE       待重整資料表的最小交易 ID 年齡\n\n"
+msgstr "      --min-xid-age=XID_AGE       待清理資料表的最小交易 ID 年齡\n"
 
 #: vacuumdb.c:1049
 #, c-format
 msgid "      --no-index-cleanup          don't remove index entries that point to dead tuples\n"
-msgstr "      --no-index-cleanup          不刪除指向死元組的索引項目\n\n"
+msgstr "      --no-index-cleanup          不刪除指向死元組的索引項目\n"
 
 #: vacuumdb.c:1050
 #, c-format
 msgid "      --no-process-toast          skip the TOAST table associated with the table to vacuum\n"
-msgstr "      --no-process-toast          跳過與待重整資料表相關聯的 TOAST 資料表\n\n"
+msgstr "      --no-process-toast          跳過與待清理資料表相關聯的 TOAST 資料表\n"
 
 #: vacuumdb.c:1051
 #, c-format
 msgid "      --no-truncate               don't truncate empty pages at the end of the table\n"
-msgstr "      --no-truncate               不截斷資料表末尾的空白頁面\n\n"
+msgstr "      --no-truncate               不截斷資料表末尾的空白頁面\n"
 
 #: vacuumdb.c:1052
 #, c-format
 msgid "  -P, --parallel=PARALLEL_WORKERS use this many background workers for vacuum, if available\n"
-msgstr "  -P, --parallel=PARALLEL_WORKERS 可用時使用指定數量的背景工作行程進行重整\n\n"
+msgstr "  -P, --parallel=PARALLEL_WORKERS 可用時使用指定數量的背景工作行程進行清理\n"
 
 #: vacuumdb.c:1053
 #, c-format
 msgid "  -q, --quiet                     don't write any messages\n"
-msgstr "  -q, --quiet                     不顯示任何訊息\n"
+msgstr "  -q, --quiet                     不輸出任何訊息\n"
 
 #: vacuumdb.c:1054
 #, c-format
 msgid "      --skip-locked               skip relations that cannot be immediately locked\n"
-msgstr "      --skip-locked               跳過無法立即鎖定的關聯\n\n"
+msgstr "      --skip-locked               跳過無法立即鎖定的關聯\n"
 
 #: vacuumdb.c:1055
 #, c-format
 msgid "  -t, --table='TABLE[(COLUMNS)]'  vacuum specific table(s) only\n"
-msgstr "  -t, --table='TABLE[(COLUMNS)]'  僅重整指定的資料表\n\n"
+msgstr "  -t, --table='TABLE[(COLUMNS)]'  僅清理指定的資料表\n"
 
 #: vacuumdb.c:1056
 #, c-format
 msgid "  -v, --verbose                   write a lot of output\n"
-msgstr "  -v, --verbose                   顯示詳細的執行訊息\n"
+msgstr "  -v, --verbose                   產生詳細輸出\n"
 
 #: vacuumdb.c:1057
 #, c-format
@@ -1182,19 +1174,19 @@ msgstr "  -V, --version                   顯示版本，然後結束\n"
 #: vacuumdb.c:1058
 #, c-format
 msgid "  -z, --analyze                   update optimizer statistics\n"
-msgstr "  -z, --analyze                   更新最佳化處理器統計資料\n"
+msgstr "  -z, --analyze                   更新最佳化工具統計資料\n"
 
 #: vacuumdb.c:1059
 #, c-format
 msgid "  -Z, --analyze-only              only update optimizer statistics; no vacuum\n"
-msgstr "  -Z, --analyze-only              只更新最佳化工具統計資料；不重整\n\n"
+msgstr "  -Z, --analyze-only              只更新最佳化工具統計資料；不清理\n"
 
 #: vacuumdb.c:1060
 #, c-format
 msgid ""
 "      --analyze-in-stages         only update optimizer statistics, in multiple\n"
 "                                  stages for faster results; no vacuum\n"
-msgstr "      --analyze-in-stages         只更新最佳化工具統計資料，分多個階段\n                                  以更快獲得結果；不執行重整\n"
+msgstr "      --analyze-in-stages         只更新最佳化工具統計資料，分多個階段\n                                  以更快獲得結果；不執行清理\n"
 
 #: vacuumdb.c:1062
 #, c-format

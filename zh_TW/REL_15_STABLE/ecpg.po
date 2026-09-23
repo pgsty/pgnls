@@ -24,12 +24,12 @@ msgstr "變數 \"%s\" 必須具有數值型別"
 #: descriptor.c:125 descriptor.c:156
 #, c-format
 msgid "descriptor %s bound to connection %s does not exist"
-msgstr "綁定到連線 %2$s 的描述符 %1$s 不存在"
+msgstr "繫結到連線 %2$s 的描述符 %1$s 不存在"
 
 #: descriptor.c:127 descriptor.c:158
 #, c-format
 msgid "descriptor %s bound to the default connection does not exist"
-msgstr "綁定到預設連線的描述符 %s 不存在"
+msgstr "繫結到預設連線的描述符 %s 不存在"
 
 #: descriptor.c:173 descriptor.c:225
 #, c-format
@@ -54,7 +54,7 @@ msgstr "未實作描述符項目 \"%s\""
 #: descriptor.c:302
 #, c-format
 msgid "descriptor item \"%s\" cannot be set"
-msgstr "無法設定描述符項目 \"%s\""
+msgstr "不能設定描述符項目 \"%s\""
 
 #: ecpg.c:36
 #, c-format
@@ -69,13 +69,13 @@ msgid ""
 "Usage:\n"
 "  %s [OPTION]... FILE...\n"
 "\n"
-msgstr "用法:\n  %s [OPTION]... FILE...\n\n"
+msgstr "用法:\n  %s [選項]... 檔案...\n\n"
 
 # postmaster/postmaster.c:1017 tcop/postgres.c:2115
 #: ecpg.c:41
 #, c-format
 msgid "Options:\n"
-msgstr "選項: \n"
+msgstr "選項:\n"
 
 #: ecpg.c:42
 #, c-format
@@ -89,7 +89,7 @@ msgstr "  -c             自動從嵌入式 SQL 碼產生 C 程式碼；\n      
 msgid ""
 "  -C MODE        set compatibility mode; MODE can be one of\n"
 "                 \"INFORMIX\", \"INFORMIX_SE\", \"ORACLE\"\n"
-msgstr "  -C MODE        設定相容性模式；MODE 可以是:\n                 \"INFORMIX\", \"INFORMIX_SE\", \"ORACLE\"\n"
+msgstr "  -C MODE        設定相容性模式；MODE 可為下列之一:\n                 \"INFORMIX\", \"INFORMIX_SE\", \"ORACLE\"\n"
 
 #: ecpg.c:47
 #, c-format
@@ -126,7 +126,7 @@ msgstr "  -o OUTFILE     將結果寫入 OUTFILE\n"
 msgid ""
 "  -r OPTION      specify run-time behavior; OPTION can be:\n"
 "                 \"no_indicator\", \"prepare\", \"questionmarks\"\n"
-msgstr "  -r OPTION      指定執行階段行為，選項可以是:\n                 \"no_indicator\", \"prepare\", \"questionmarks\"\n"
+msgstr "  -r OPTION      指定執行階段行為；OPTION 可以是:\n                 \"no_indicator\", \"prepare\", \"questionmarks\"\n"
 
 #: ecpg.c:56
 #, c-format
@@ -167,7 +167,7 @@ msgstr "\n回報錯誤至 <%s>。\n"
 #: ecpg.c:63
 #, c-format
 msgid "%s home page: <%s>\n"
-msgstr "%s 網頁: <%s>\n"
+msgstr "%s 首頁: <%s>\n"
 
 #: ecpg.c:152
 #, c-format
@@ -208,12 +208,12 @@ msgstr "搜尋清單結束\n"
 #: ecpg.c:284
 #, c-format
 msgid "%s: no input files specified\n"
-msgstr "%s: 未指定輸入檔\n"
+msgstr "%s: 未指定輸入檔案\n"
 
 #: ecpg.c:490
 #, c-format
 msgid "cursor \"%s\" has been declared but not opened"
-msgstr "指標 \"%s\" 已宣告但尚未開啟"
+msgstr "游標 \"%s\" 已宣告但尚未開啟"
 
 #: ecpg.c:503 preproc.y:130
 #, c-format
@@ -230,24 +230,24 @@ msgstr "未結束的 /* 註解"
 #: pgc.l:532
 #, c-format
 msgid "unterminated bit string literal"
-msgstr "未結束的位元字串"
+msgstr "未結束的位元字串字面值"
 
 # scan.l:358
 #: pgc.l:540
 #, c-format
 msgid "unterminated hexadecimal string literal"
-msgstr "未結束的十六進位字串"
+msgstr "未結束的十六進位字串字面值"
 
 #: pgc.l:615
 #, c-format
 msgid "invalid bit string literal"
-msgstr "無效的位元字串"
+msgstr "無效的位元字串字面值"
 
 # scan.l:358
 #: pgc.l:620
 #, c-format
 msgid "invalid hexadecimal string literal"
-msgstr "未結束的十六進位字串"
+msgstr "無效的十六進位字串字面值"
 
 #: pgc.l:638
 #, c-format
@@ -285,7 +285,7 @@ msgstr "參數後有多餘的垃圾字元"
 #: pgc.l:975 pgc.l:978 pgc.l:981
 #, c-format
 msgid "trailing junk after numeric literal"
-msgstr "數字文字後有多餘的垃圾字元"
+msgstr "數值字面值後有多餘的垃圾字元"
 
 # scan.l:312
 #: pgc.l:1108
@@ -341,12 +341,12 @@ msgstr "在 EXEC SQL INCLUDE 指令中的語法錯誤"
 #: pgc.l:1533
 #, c-format
 msgid "internal error: unreachable state; please report this to <%s>"
-msgstr "內部錯誤: 非預期的狀態，請將錯誤回報至 <%s>"
+msgstr "內部錯誤: 不可達的狀態，請將錯誤回報至 <%s>"
 
 #: pgc.l:1685
 #, c-format
 msgid "Error: include path \"%s/%s\" is too long on line %d, skipping\n"
-msgstr "錯誤: 引用檔路徑 \"%s/%s\" 第 %d 行太長，略過\n"
+msgstr "錯誤: 第 %3$d 行的引用檔路徑 \"%1$s/%2$s\" 過長，略過\n"
 
 #: pgc.l:1708
 #, c-format
@@ -372,7 +372,7 @@ msgstr "錯誤: "
 #: preproc.y:514
 #, c-format
 msgid "cursor \"%s\" does not exist"
-msgstr "指標 \"%s\" 不存在"
+msgstr "游標 \"%s\" 不存在"
 
 #: preproc.y:543
 #, c-format
@@ -383,7 +383,7 @@ msgstr "在型別定義中不允許初始值設定"
 #: preproc.y:545
 #, c-format
 msgid "type name \"string\" is reserved in Informix mode"
-msgstr "型別名稱 \"string\" 在 Informix 模式是保留字"
+msgstr "型別名稱 \"string\" 在 Informix 模式中是保留名稱"
 
 #: preproc.y:552 preproc.y:17926
 #, c-format
@@ -454,7 +454,7 @@ msgstr "未實作 COPY FROM STDIN"
 #: preproc.y:10231 preproc.y:17499
 #, c-format
 msgid "\"database\" cannot be used as cursor name in INFORMIX mode"
-msgstr "在 INFORMIX 模式下無法使用 \"database\" 作為指標名稱"
+msgstr "在 INFORMIX 模式下不能使用 \"database\" 作為游標名稱"
 
 #: preproc.y:10238 preproc.y:17509
 #, c-format
@@ -464,7 +464,7 @@ msgstr "不支援在不同的 DECLARE 陳述式中使用變數 \"%s\""
 #: preproc.y:10240 preproc.y:17511
 #, c-format
 msgid "cursor \"%s\" is already defined"
-msgstr "指標 \"%s\" 已定義"
+msgstr "游標 \"%s\" 已定義"
 
 #: preproc.y:10714
 #, c-format
@@ -475,7 +475,7 @@ msgstr "不再支援的 LIMIT #,# 語法已傳到伺服器"
 #: preproc.y:11047 preproc.y:11054
 #, c-format
 msgid "subquery in FROM must have an alias"
-msgstr "FROM中的子查詢要有別名"
+msgstr "FROM 中的子查詢必須有別名"
 
 #: preproc.y:17191 preproc.y:17198
 #, c-format
@@ -490,7 +490,7 @@ msgstr "預期是 \"@\"，但發現 \"%s\""
 #: preproc.y:17246
 #, c-format
 msgid "only protocols \"tcp\" and \"unix\" and database type \"postgresql\" are supported"
-msgstr "僅支援協議 \"tcp\"、\"unix\" 和資料庫型別 \"postgresql\""
+msgstr "僅支援協定 \"tcp\" 和 \"unix\" 以及資料庫型別 \"postgresql\""
 
 #: preproc.y:17249
 #, c-format
@@ -530,7 +530,7 @@ msgstr "不完整的陳述式"
 #: preproc.y:17399 preproc.y:17416
 #, c-format
 msgid "unrecognized token \"%s\""
-msgstr "無法識別的 token \"%s\""
+msgstr "無法識別的符記 \"%s\""
 
 #: preproc.y:17461
 #, c-format
@@ -540,12 +540,12 @@ msgstr "名稱 \"%s\" 已宣告"
 #: preproc.y:17729
 #, c-format
 msgid "only data types numeric and decimal have precision/scale argument"
-msgstr "只有數值和小數資料型別具有精確度/小數位數參數"
+msgstr "只有 numeric 和 decimal 資料型別具有精確度/小數位數參數"
 
 #: preproc.y:17741
 #, c-format
 msgid "interval specification not allowed here"
-msgstr "此處不允許間隔規格"
+msgstr "此處不允許時間間隔欄位限定符"
 
 #: preproc.y:17901 preproc.y:17953
 #, c-format
@@ -565,12 +565,12 @@ msgstr "在 EXEC SQL VAR 命令中不允許初始值設定"
 #: preproc.y:18836
 #, c-format
 msgid "arrays of indicators are not allowed on input"
-msgstr "輸入不允許使用指標陣列"
+msgstr "輸入不允許使用指示器陣列"
 
 #: preproc.y:19023
 #, c-format
 msgid "operator not allowed in variable definition"
-msgstr "變數定義中不允許使用此運算子"
+msgstr "變數定義中不允許使用運算子"
 
 #  translator: first %s is typically "syntax error"
 # scan.l:629
@@ -578,7 +578,7 @@ msgstr "變數定義中不允許使用此運算子"
 #: preproc.y:19064
 #, c-format
 msgid "%s at or near \"%s\""
-msgstr "%s 於 %s"
+msgstr "在 \"%2$s\" 或其附近發生 %1$s"
 
 # commands/sequence.c:798 executor/execGrouping.c:328
 # executor/execGrouping.c:388 executor/nodeIndexscan.c:1051 lib/dllist.c:43
@@ -623,17 +623,17 @@ msgstr "變數 \"%s\" 被區域變數遮蔽"
 #: type.c:277
 #, c-format
 msgid "indicator variable \"%s\" is hidden by a local variable of a different type"
-msgstr "指標變數 \"%s\" 被不同型別的區域變數遮蔽"
+msgstr "指示器變數 \"%s\" 被不同型別的區域變數遮蔽"
 
 #: type.c:279
 #, c-format
 msgid "indicator variable \"%s\" is hidden by a local variable"
-msgstr "指標變數 \"%s\" 被區域變數遮蔽"
+msgstr "指示器變數 \"%s\" 被區域變數遮蔽"
 
 #: type.c:287
 #, c-format
 msgid "indicator for array/pointer has to be array/pointer"
-msgstr "陣列/指標的指標必須是陣列/指標"
+msgstr "陣列/指標的指示器必須是陣列/指標"
 
 #: type.c:291
 #, c-format
@@ -643,27 +643,27 @@ msgstr "不支援巢狀陣列(字串除外)"
 #: type.c:333
 #, c-format
 msgid "indicator for struct has to be a struct"
-msgstr "結構體的指示器必須是一個結構體"
+msgstr "結構的指示器必須是結構"
 
 #: type.c:353 type.c:374 type.c:394
 #, c-format
 msgid "indicator for simple data type has to be simple"
-msgstr "簡單資料型別的指示器必須是簡單的"
+msgstr "簡單資料型別的指示器必須是簡單型別"
 
 #: type.c:625
 #, c-format
 msgid "indicator struct \"%s\" has too few members"
-msgstr "指示器結構體 \"%s\" 成員過少"
+msgstr "指示器結構 \"%s\" 成員過少"
 
 #: type.c:633
 #, c-format
 msgid "indicator struct \"%s\" has too many members"
-msgstr "指示器結構體 \"%s\" 成員過多"
+msgstr "指示器結構 \"%s\" 成員過多"
 
 #: type.c:744
 #, c-format
 msgid "unrecognized descriptor item code %d"
-msgstr "無法辨識的描述子項目代碼 %d"
+msgstr "無法辨識的描述符項目代碼 %d"
 
 #: variable.c:89 variable.c:115
 #, c-format
@@ -698,7 +698,7 @@ msgstr "變數 \"%s\" 未宣告"
 #: variable.c:492
 #, c-format
 msgid "indicator variable must have an integer type"
-msgstr "指標變數必須是整數型別"
+msgstr "指示器變數必須是整數型別"
 
 #: variable.c:504
 #, c-format
@@ -714,7 +714,7 @@ msgstr "不支援多維陣列"
 #, c-format
 msgid "multilevel pointers (more than 2 levels) are not supported; found %d level"
 msgid_plural "multilevel pointers (more than 2 levels) are not supported; found %d levels"
-msgstr[0] "不支援多層指標(2層以上)，發現 %d 層"
+msgstr[0] "不支援多層指標(超過 2 層)，發現 %d 層"
 
 #: variable.c:537
 #, c-format

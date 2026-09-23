@@ -42,13 +42,13 @@ msgstr ""
 #: ../../common/fe_memutils.c:104 ../../common/fe_memutils.c:167
 #, c-format
 msgid "out of memory\n"
-msgstr "記憶體用盡\n"
+msgstr "記憶體不足\n"
 
 # common.c:78
 #: ../../common/fe_memutils.c:98 ../../common/fe_memutils.c:159
 #, c-format
 msgid "cannot duplicate null pointer (internal error)\n"
-msgstr "無法複製 null 指標(內部錯誤)\n"
+msgstr "不能複製空指標(內部錯誤)\n"
 
 #: ../../common/fe_memutils.c:209
 #, c-format
@@ -84,13 +84,13 @@ msgstr "%s: %s 必須在範圍 %u..%u 內\n"
 #: pg_test_timing.c:107
 #, c-format
 msgid "%s: too many command-line arguments (first is \"%s\")\n"
-msgstr "%s: 命令列參數過多(第一個是 \"%s\")\n"
+msgstr "%s: 命令列參數過多(第一個多餘參數是 \"%s\")\n"
 
 #: pg_test_timing.c:115
 #, c-format
 msgid "Testing timing overhead for %u second.\n"
 msgid_plural "Testing timing overhead for %u seconds.\n"
-msgstr[0] "測試 %u 秒的計時額外負擔。\n"
+msgstr[0] "正在測試計時額外負擔，持續 %u 秒。\n"
 
 #: pg_test_timing.c:151
 #, c-format
@@ -123,5 +123,5 @@ msgstr "次數"
 #: pg_test_timing.c:197
 #, c-format
 msgid "Histogram of timing durations:\n"
-msgstr "計時期間的 histogram:\n"
+msgstr "計時持續時間的直方圖:\n"
 

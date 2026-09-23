@@ -47,7 +47,8 @@ INDENT = re.compile(r'^( {4,})(?=\S)')
 METAVAR = re.compile(r'--[\w-]+=([A-Z][A-Z_]{2,})')
 KINDS = (('label', LABEL), ('option', OPTION))
 
-# The PG19 final review (F10) localizes explanatory usage placeholders, while
+# The PG19 final review (F10), also applied to identical PG14–18 messages,
+# localizes explanatory usage placeholders, while
 # option-list metavariables, command names and actual values stay unchanged.
 # Match both complete strings so changed options, brackets or values still fail.
 LOCALIZED_PSQL_USAGE = {
@@ -59,7 +60,9 @@ LOCALIZED_PSQL_USAGE = {
 
 
 def missing_metavariables(english, chinese, language, branch, catalog):
-    if (language, branch, catalog) == ('zh_TW', 'master', 'psql'):
+    if (language == 'zh_TW' and catalog == 'psql'
+            and branch in {'master', 'REL_18_STABLE', 'REL_17_STABLE',
+                           'REL_16_STABLE', 'REL_15_STABLE', 'REL_14_STABLE'}):
         if LOCALIZED_PSQL_USAGE.get(english) == chinese:
             return []
     return [name for line in english.split('\n') for name in METAVAR.findall(line)
