@@ -113,6 +113,26 @@ make show BRANCH=master CATALOG=psql
 make clean
 ```
 
+For a PGWeb installation with the language migration applied, generate a
+language-scoped review bundle from the curated catalogs and the matching Babel
+snapshot:
+
+```bash
+python3 bin/pgweb-bundle.py --language zh_TW \
+  --upstream tmp/babel-snapshot/download/zh_TW --output /tmp/nls-zh_TW.jsonl.gz
+# In the pgweb checkout:
+.venv/bin/python manage.py nls_import /tmp/nls-zh_TW.jsonl.gz --check
+.venv/bin/python manage.py nls_import /tmp/nls-zh_TW.jsonl.gz
+```
+
+The default is PG14–19; repeat `--major` to select versions. English message sets
+must match the snapshot. Candidates start pending, with the Babel translation
+kept alongside the curated PO text; review decisions remain independent per
+language. Re-importing preserves existing human review state. Historical
+`zh_CN` IDs must be retained when refreshing an existing database; the importer
+rejects new IDs for a source message that already exists. Bundle tests run with
+`python3 -m unittest discover -s tests`.
+
 To land these in `messages.git`, check out the matching branch and overwrite `zh_CN/`:
 
 ```bash
