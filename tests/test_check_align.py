@@ -15,8 +15,10 @@ class LocalizedUsageTests(unittest.TestCase):
 
     def test_approved_complete_examples_pass(self):
         for english, chinese in check_align.LOCALIZED_PSQL_USAGE.items():
-            with self.subTest(english=english):
-                self.assertEqual(self.check(english, chinese), [])
+            for branch in ('master', 'REL_18_STABLE', 'REL_17_STABLE',
+                           'REL_16_STABLE', 'REL_15_STABLE', 'REL_14_STABLE'):
+                with self.subTest(english=english, branch=branch):
+                    self.assertEqual(self.check(english, chinese, branch=branch), [])
 
     def test_changed_commands_values_and_optional_brackets_fail(self):
         for english, chinese in check_align.LOCALIZED_PSQL_USAGE.items():
@@ -31,7 +33,7 @@ class LocalizedUsageTests(unittest.TestCase):
     def test_exception_is_scoped_to_reviewed_language_branch_and_catalog(self):
         for english, chinese in check_align.LOCALIZED_PSQL_USAGE.items():
             self.assertEqual(self.check(english, chinese, language='zh_CN'), ['NAME'])
-            self.assertEqual(self.check(english, chinese, branch='REL_18_STABLE'), ['NAME'])
+            self.assertEqual(self.check(english, chinese, branch='REL_13_STABLE'), ['NAME'])
             self.assertEqual(self.check(english, chinese, catalog='pg_dump'), ['NAME'])
 
     def test_option_list_metavariables_still_require_original_names(self):
