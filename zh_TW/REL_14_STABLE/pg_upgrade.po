@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: pg_upgrade (PostgreSQL) 14\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
 "POT-Creation-Date: 2026-09-17 19:47+0000\n"
-"PO-Revision-Date: 2026-09-19 12:00+0800\n"
+"PO-Revision-Date: 2026-09-29 16:59+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
@@ -898,7 +898,7 @@ msgid ""
 "\n"
 "in each affected database:\n"
 "\n"
-msgstr "\n舊叢集的 \"public\" schema中定義了 \"plpython_call_handler\" 函式，\n它與 \"pg_catalog\" schema中定義的同名函式重複。\n可以在 psql 中執行以下命令確認：\n\n    \\df *.plpython_call_handler\n\n該函式的 \"public\" schema版本由 8.1 之前的 plpython 安裝建立。\n必須將其刪除，pg_upgrade 才能完成，\n因為它引用了現已廢棄的 \"plpython\" 共用物件檔案。\n可以執行以下命令，刪除該函式的 \"public\" schema版本:\n\n    DROP FUNCTION public.plpython_call_handler()\n\n請在以下每個受影響的資料庫中執行該命令：\n\n"
+msgstr "\n舊叢集的 \"public\" schema 中定義了 \"plpython_call_handler\" 函式，\n它與 \"pg_catalog\" schema 中定義的同名函式重複。\n可以在 psql 中執行以下命令確認：\n\n    \\df *.plpython_call_handler\n\n該函式的 \"public\" schema 版本由 8.1 之前的 plpython 安裝建立。\n必須將其刪除，pg_upgrade 才能完成，\n因為它引用了現已廢棄的 \"plpython\" 共用物件檔案。\n可以執行以下命令，刪除該函式的 \"public\" schema 版本：\n\n    DROP FUNCTION public.plpython_call_handler()\n\n請在以下每個受影響的資料庫中執行該命令：\n\n"
 
 #: function.c:132
 #, c-format
