@@ -1,7 +1,8 @@
 #!/bin/bash
 # Build reproducible Chinese catalog archives without replacing existing assets.
 # Each language gets six branch archives and a complete archive; a bilingual
-# archive and SHA256SUMS complete the release. GNU tar is required.
+# archive and SHA256SUMS complete the release. Archives contain only PO files.
+# GNU tar is required.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -39,10 +40,6 @@ if [ -z "$TAR" ]; then
 fi
 
 # Check all inputs and output names before writing any release assets.
-if [ ! -f LICENSE ] || [ -L LICENSE ]; then
-    echo "Missing or non-regular LICENSE" >&2
-    exit 1
-fi
 ASSETS=("pg-messages-zh_CN-zh_TW-$STAMP.tar.gz")
 ALL_FILES=()
 for language in $LANGUAGES; do
@@ -73,7 +70,7 @@ trap 'rm -rf "$STAGE"' EXIT
 archive() {
     local name="$1"
     shift
-    printf '%s\n' LICENSE "$@" | sort > "$STAGE/files"
+    printf '%s\n' "$@" | sort > "$STAGE/files"
     "$TAR" --format=gnu --owner=0 --group=0 --numeric-owner \
         --mode=0644 --mtime="@$SOURCE_DATE_EPOCH" --no-recursion \
         -cf - -T "$STAGE/files" | gzip -n > "$STAGE/$name"

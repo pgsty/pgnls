@@ -120,16 +120,17 @@ make clean            remove compiled build/ while preserving release assets in 
 
 `make dist` requires GNU tar (`gtar` on macOS), gzip and `shasum`. It creates
 one bilingual archive, one complete archive per language, and six branch
-archives per language, plus `SHA256SUMS`. Each archive contains `LICENSE` and
-PO files preserving `<language>/<branch>/<catalog>.po`; it does not contain
-compiled MO files. `make mo` compiles all 324 catalogs separately for local use.
+archives per language, plus `SHA256SUMS`. Each archive contains only PO files
+preserving `<language>/<branch>/<catalog>.po`. The repository's `LICENSE` and
+compiled MO files are not included. `make mo` compiles all 324 catalogs separately
+for local use.
 
 Set `STAMP` to choose the release label and `DIST` to choose the output directory:
 
 ```bash
-STAMP=20260929 make dist
+STAMP=20260930 make dist
 # Or build another copy in a fresh directory:
-STAMP=20260929 DIST=/tmp/pgnls-20260929 make dist
+STAMP=20260930 DIST=/tmp/pgnls-20260930 make dist
 ```
 
 The default output directory is `dist/<STAMP>/`. Existing release files are
