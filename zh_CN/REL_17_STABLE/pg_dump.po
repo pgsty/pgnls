@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_dump (PostgreSQL) 17\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-17 06:32+0000\n"
+"POT-Creation-Date: 2026-09-29 14:01+0000\n"
 "PO-Revision-Date: 2026-09-29 22:12+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
@@ -1032,12 +1032,12 @@ msgstr "无法打开标准输出以追加内容: %m"
 msgid "unrecognized file format \"%d\""
 msgstr "无法识别的文件格式 \"%d\""
 
-#: pg_backup_archiver.c:2546 pg_backup_archiver.c:4674
+#: pg_backup_archiver.c:2546 pg_backup_archiver.c:4676
 #, c-format
 msgid "finished item %d %s %s"
 msgstr "已完成条目 %d %s %s"
 
-#: pg_backup_archiver.c:2550 pg_backup_archiver.c:4687
+#: pg_backup_archiver.c:2550 pg_backup_archiver.c:4689
 #, c-format
 msgid "worker process failed: exit code %d"
 msgstr "工作进程失败: 退出码 %d"
@@ -1097,101 +1097,101 @@ msgstr "未找到触发器 \"%s\""
 msgid "could not set session user to \"%s\": %s"
 msgstr "无法把会话用户设为 \"%s\": %s"
 
-#: pg_backup_archiver.c:3520
+#: pg_backup_archiver.c:3522
 #, c-format
 msgid "could not set \"search_path\" to \"%s\": %s"
 msgstr "无法把 \"search_path\" 设为 \"%s\": %s"
 
-#: pg_backup_archiver.c:3581
+#: pg_backup_archiver.c:3583
 #, c-format
 msgid "could not set \"default_tablespace\" to %s: %s"
 msgstr "无法把 \"default_tablespace\" 设为 %s: %s"
 
-#: pg_backup_archiver.c:3630
+#: pg_backup_archiver.c:3632
 #, c-format
 msgid "could not set \"default_table_access_method\": %s"
 msgstr "无法设置 \"default_table_access_method\": %s"
 
-#: pg_backup_archiver.c:3679
+#: pg_backup_archiver.c:3681
 #, c-format
 msgid "could not alter table access method: %s"
 msgstr "无法修改表访问方法: %s"
 
-#: pg_backup_archiver.c:3780
+#: pg_backup_archiver.c:3782
 #, c-format
 msgid "don't know how to set owner for object type \"%s\""
 msgstr "不知道如何为对象类型 \"%s\" 设置所有者"
 
-#: pg_backup_archiver.c:4031
+#: pg_backup_archiver.c:4033
 #, c-format
 msgid "did not find magic string in file header"
 msgstr "文件头部中未找到魔数字符串"
 
-#: pg_backup_archiver.c:4045
+#: pg_backup_archiver.c:4047
 #, c-format
 msgid "unsupported version (%d.%d) in file header"
 msgstr "在文件头部中有不支持的版本（%d.%d）"
 
-#: pg_backup_archiver.c:4050
+#: pg_backup_archiver.c:4052
 #, c-format
 msgid "sanity check on integer size (%lu) failed"
 msgstr "整数大小（%lu）的合理性检查失败"
 
-#: pg_backup_archiver.c:4054
+#: pg_backup_archiver.c:4056
 #, c-format
 msgid ""
 "archive was made on a machine with larger integers, some operations might "
 "fail"
 msgstr "归档由使用更大整数类型的机器生成，某些操作可能失败"
 
-#: pg_backup_archiver.c:4064
+#: pg_backup_archiver.c:4066
 #, c-format
 msgid "expected format (%d) differs from format found in file (%d)"
 msgstr "预期格式为 %d，与文件中找到的格式 %d 不同"
 
-#: pg_backup_archiver.c:4086
+#: pg_backup_archiver.c:4088
 #, c-format
 msgid ""
 "archive is compressed, but this installation does not support compression "
 "(%s) -- no data will be available"
 msgstr "归档已压缩，但此安装不支持压缩（%s）；将没有可用数据"
 
-#: pg_backup_archiver.c:4122
+#: pg_backup_archiver.c:4124
 #, c-format
 msgid "invalid creation date in header"
 msgstr "在头部中的创建日期无效"
 
-#: pg_backup_archiver.c:4256
+#: pg_backup_archiver.c:4258
 #, c-format
 msgid "processing item %d %s %s"
 msgstr "正在处理条目 %d %s %s"
 
-#: pg_backup_archiver.c:4341
+#: pg_backup_archiver.c:4343
 #, c-format
 msgid "entering main parallel loop"
 msgstr "正在进入主并行循环"
 
-#: pg_backup_archiver.c:4352
+#: pg_backup_archiver.c:4354
 #, c-format
 msgid "skipping item %d %s %s"
 msgstr "正在跳过条目 %d %s %s"
 
-#: pg_backup_archiver.c:4361
+#: pg_backup_archiver.c:4363
 #, c-format
 msgid "launching item %d %s %s"
 msgstr "正在启动条目 %d %s %s"
 
-#: pg_backup_archiver.c:4415
+#: pg_backup_archiver.c:4417
 #, c-format
 msgid "finished main parallel loop"
 msgstr "已完成主并行循环"
 
-#: pg_backup_archiver.c:4451
+#: pg_backup_archiver.c:4453
 #, c-format
 msgid "processing missed item %d %s %s"
 msgstr "正在处理遗漏的条目 %d %s %s"
 
-#: pg_backup_archiver.c:4993
+#: pg_backup_archiver.c:4995
 #, c-format
 msgid "table \"%s\" could not be created, will not restore its data"
 msgstr "无法创建表 \"%s\"，将不恢复其数据"

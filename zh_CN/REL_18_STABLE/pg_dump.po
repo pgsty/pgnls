@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_dump (PostgreSQL) 18\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-17 06:14+0000\n"
+"POT-Creation-Date: 2026-09-29 15:42+0000\n"
 "PO-Revision-Date: 2026-09-29 22:12+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
@@ -1096,12 +1096,12 @@ msgstr "无法打开标准输出以追加内容: %m"
 msgid "unrecognized file format \"%d\""
 msgstr "无法识别的文件格式 \"%d\""
 
-#: pg_backup_archiver.c:2567 pg_backup_archiver.c:4837
+#: pg_backup_archiver.c:2567 pg_backup_archiver.c:4839
 #, c-format
 msgid "finished item %d %s %s"
 msgstr "已完成条目 %d %s %s"
 
-#: pg_backup_archiver.c:2571 pg_backup_archiver.c:4850
+#: pg_backup_archiver.c:2571 pg_backup_archiver.c:4852
 #, c-format
 msgid "worker process failed: exit code %d"
 msgstr "工作进程失败: 退出码 %d"
@@ -1173,106 +1173,106 @@ msgstr "未找到触发器 \"%s\""
 msgid "could not set session user to \"%s\": %s"
 msgstr "无法把会话用户设为 \"%s\": %s"
 
-#: pg_backup_archiver.c:3651
+#: pg_backup_archiver.c:3653
 #, c-format
 msgid "could not set \"search_path\" to \"%s\": %s"
 msgstr "无法把 \"search_path\" 设为 \"%s\": %s"
 
-#: pg_backup_archiver.c:3712
+#: pg_backup_archiver.c:3714
 #, c-format
 msgid "could not set \"default_tablespace\" to %s: %s"
 msgstr "无法把 \"default_tablespace\" 设为 %s: %s"
 
-#: pg_backup_archiver.c:3761
+#: pg_backup_archiver.c:3763
 #, c-format
 msgid "could not set \"default_table_access_method\": %s"
 msgstr "无法设置 \"default_table_access_method\": %s"
 
-#: pg_backup_archiver.c:3810
+#: pg_backup_archiver.c:3812
 #, c-format
 msgid "could not alter table access method: %s"
 msgstr "无法修改表访问方法: %s"
 
-#: pg_backup_archiver.c:3911
+#: pg_backup_archiver.c:3913
 #, c-format
 msgid "don't know how to set owner for object type \"%s\""
 msgstr "不知道如何为对象类型 \"%s\" 设置所有者"
 
-#: pg_backup_archiver.c:4046
+#: pg_backup_archiver.c:4048
 #, c-format
 msgid "unexpected TOC entry in _printTocEntry(): %d %s %s"
 msgstr "_printTocEntry() 中出现意外的 TOC 条目: %d %s %s"
 
-#: pg_backup_archiver.c:4194
+#: pg_backup_archiver.c:4196
 #, c-format
 msgid "did not find magic string in file header"
 msgstr "文件头部中未找到魔数字符串"
 
-#: pg_backup_archiver.c:4208
+#: pg_backup_archiver.c:4210
 #, c-format
 msgid "unsupported version (%d.%d) in file header"
 msgstr "在文件头部中有不支持的版本（%d.%d）"
 
-#: pg_backup_archiver.c:4213
+#: pg_backup_archiver.c:4215
 #, c-format
 msgid "sanity check on integer size (%lu) failed"
 msgstr "整数大小（%lu）的合理性检查失败"
 
-#: pg_backup_archiver.c:4217
+#: pg_backup_archiver.c:4219
 #, c-format
 msgid ""
 "archive was made on a machine with larger integers, some operations might "
 "fail"
 msgstr "归档由使用更大整数类型的机器生成，某些操作可能失败"
 
-#: pg_backup_archiver.c:4227
+#: pg_backup_archiver.c:4229
 #, c-format
 msgid "expected format (%d) differs from format found in file (%d)"
 msgstr "预期格式为 %d，与文件中找到的格式 %d 不同"
 
-#: pg_backup_archiver.c:4249
+#: pg_backup_archiver.c:4251
 #, c-format
 msgid ""
 "archive is compressed, but this installation does not support compression "
 "(%s) -- no data will be available"
 msgstr "归档已压缩，但此安装不支持压缩（%s）；将没有可用数据"
 
-#: pg_backup_archiver.c:4285
+#: pg_backup_archiver.c:4287
 #, c-format
 msgid "invalid creation date in header"
 msgstr "在头部中的创建日期无效"
 
-#: pg_backup_archiver.c:4419
+#: pg_backup_archiver.c:4421
 #, c-format
 msgid "processing item %d %s %s"
 msgstr "正在处理条目 %d %s %s"
 
-#: pg_backup_archiver.c:4504
+#: pg_backup_archiver.c:4506
 #, c-format
 msgid "entering main parallel loop"
 msgstr "正在进入主并行循环"
 
-#: pg_backup_archiver.c:4515
+#: pg_backup_archiver.c:4517
 #, c-format
 msgid "skipping item %d %s %s"
 msgstr "正在跳过条目 %d %s %s"
 
-#: pg_backup_archiver.c:4524
+#: pg_backup_archiver.c:4526
 #, c-format
 msgid "launching item %d %s %s"
 msgstr "正在启动条目 %d %s %s"
 
-#: pg_backup_archiver.c:4578
+#: pg_backup_archiver.c:4580
 #, c-format
 msgid "finished main parallel loop"
 msgstr "已完成主并行循环"
 
-#: pg_backup_archiver.c:4614
+#: pg_backup_archiver.c:4616
 #, c-format
 msgid "processing missed item %d %s %s"
 msgstr "正在处理遗漏的条目 %d %s %s"
 
-#: pg_backup_archiver.c:5156
+#: pg_backup_archiver.c:5158
 #, c-format
 msgid "table \"%s\" could not be created, will not restore its data"
 msgstr "无法创建表 \"%s\"，将不恢复其数据"

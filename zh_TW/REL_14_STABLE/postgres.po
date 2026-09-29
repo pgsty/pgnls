@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 14\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-17 19:45+0000\n"
+"POT-Creation-Date: 2026-09-29 14:44+0000\n"
 "PO-Revision-Date: 2026-09-29 22:12+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
@@ -48,8 +48,8 @@ msgstr "無法開啟檔案 \"%s\" 以讀取: %m"
 #: access/transam/xlogfuncs.c:722 commands/extension.c:3622 libpq/hba.c:534
 #: replication/basebackup.c:2015 replication/logical/origin.c:729
 #: replication/logical/origin.c:765 replication/logical/reorderbuffer.c:5112
-#: replication/logical/snapbuild.c:1919 replication/logical/snapbuild.c:1961
-#: replication/logical/snapbuild.c:1988 replication/slot.c:1796
+#: replication/logical/snapbuild.c:1963 replication/logical/snapbuild.c:2005
+#: replication/logical/snapbuild.c:2032 replication/slot.c:1796
 #: replication/slot.c:1837 replication/walsender.c:559
 #: storage/file/buffile.c:445 storage/file/copydir.c:195
 #: utils/adt/genfile.c:202 utils/adt/misc.c:881 utils/cache/relmapper.c:744
@@ -64,8 +64,8 @@ msgstr "無法讀取檔案 \"%s\": %m"
 #: ../common/controldata_utils.c:107 ../common/controldata_utils.c:111
 #: access/transam/xlog.c:3607 access/transam/xlog.c:4856
 #: replication/basebackup.c:2019 replication/logical/origin.c:734
-#: replication/logical/origin.c:773 replication/logical/snapbuild.c:1924
-#: replication/logical/snapbuild.c:1966 replication/logical/snapbuild.c:1993
+#: replication/logical/origin.c:773 replication/logical/snapbuild.c:1968
+#: replication/logical/snapbuild.c:2010 replication/logical/snapbuild.c:2037
 #: replication/slot.c:1800 replication/slot.c:1841 replication/walsender.c:564
 #: utils/cache/relmapper.c:748
 #, c-format
@@ -86,7 +86,7 @@ msgstr "無法讀取檔案 \"%1$s\": 應讀取 %3$zu，實際讀取 %2$d"
 #: commands/copyfrom.c:1586 commands/copyto.c:328 libpq/be-fsstubs.c:455
 #: libpq/be-fsstubs.c:525 replication/logical/origin.c:667
 #: replication/logical/origin.c:806 replication/logical/reorderbuffer.c:5170
-#: replication/logical/snapbuild.c:1828 replication/logical/snapbuild.c:2001
+#: replication/logical/snapbuild.c:1872 replication/logical/snapbuild.c:2045
 #: replication/slot.c:1685 replication/slot.c:1848 replication/walsender.c:574
 #: storage/file/copydir.c:218 storage/file/copydir.c:223 storage/file/fd.c:735
 #: storage/file/fd.c:3528 storage/file/fd.c:3631 utils/cache/relmapper.c:759
@@ -127,7 +127,7 @@ msgstr "位元組順序可能不一致\n用於儲存 pg_control 檔案的位元�
 #: replication/logical/reorderbuffer.c:3765
 #: replication/logical/reorderbuffer.c:4316
 #: replication/logical/reorderbuffer.c:5092
-#: replication/logical/snapbuild.c:1783 replication/logical/snapbuild.c:1890
+#: replication/logical/snapbuild.c:1827 replication/logical/snapbuild.c:1934
 #: replication/slot.c:1768 replication/walsender.c:532
 #: replication/walsender.c:2590 storage/file/copydir.c:161
 #: storage/file/fd.c:710 storage/file/fd.c:3297 storage/file/fd.c:3515
@@ -159,7 +159,7 @@ msgstr "無法寫入檔案 \"%s\": %m"
 #: access/transam/timeline.c:506 access/transam/twophase.c:1747
 #: access/transam/xlog.c:3446 access/transam/xlog.c:3636
 #: access/transam/xlog.c:4814 access/transam/xlog.c:11021
-#: access/transam/xlog.c:11062 replication/logical/snapbuild.c:1821
+#: access/transam/xlog.c:11062 replication/logical/snapbuild.c:1865
 #: replication/slot.c:1669 replication/slot.c:1778 storage/file/fd.c:727
 #: storage/file/fd.c:3623 storage/smgr/md.c:959 storage/smgr/md.c:1000
 #: storage/sync/sync.c:454 utils/cache/relmapper.c:891 utils/misc/guc.c:8481
@@ -320,7 +320,7 @@ msgstr "無效的記憶體配置請求大小 %zu * %zu\n"
 #: commands/copyto.c:730 commands/extension.c:3601 commands/tablespace.c:811
 #: commands/tablespace.c:900 guc-file.l:1062 postmaster/pgarch.c:696
 #: replication/basebackup.c:439 replication/basebackup.c:622
-#: replication/basebackup.c:698 replication/logical/snapbuild.c:1700
+#: replication/basebackup.c:698 replication/logical/snapbuild.c:1744
 #: storage/file/copydir.c:68 storage/file/copydir.c:107 storage/file/fd.c:1862
 #: storage/file/fd.c:1948 storage/file/fd.c:3148 storage/file/fd.c:3351
 #: utils/adt/dbsize.c:70 utils/adt/dbsize.c:222 utils/adt/dbsize.c:302
@@ -350,7 +350,7 @@ msgstr "無法讀取目錄 \"%s\": %m"
 # access/transam/xlog.c:3862 commands/user.c:282 commands/user.c:412
 # postmaster/pgarch.c:597
 #: ../common/file_utils.c:378 access/transam/xlogarchive.c:412
-#: postmaster/syslogger.c:1523 replication/logical/snapbuild.c:1840
+#: postmaster/syslogger.c:1523 replication/logical/snapbuild.c:1884
 #: replication/slot.c:674 replication/slot.c:1552 replication/slot.c:1701
 #: storage/file/fd.c:745 storage/file/fd.c:843 utils/time/snapmgr.c:1322
 #, c-format
@@ -1142,8 +1142,8 @@ msgstr "存取方法 %2$s 的運算子家族 \"%1$s\" 中，為運算子 %3$s �
 msgid "could not determine which collation to use for string hashing"
 msgstr "無法判斷字串雜湊使用何種定序"
 
-#: access/hash/hashfunc.c:281 access/hash/hashfunc.c:338 catalog/heap.c:728
-#: catalog/heap.c:734 commands/createas.c:206 commands/createas.c:515
+#: access/hash/hashfunc.c:281 access/hash/hashfunc.c:338 catalog/heap.c:729
+#: catalog/heap.c:735 commands/createas.c:206 commands/createas.c:515
 #: commands/indexcmds.c:1987 commands/tablecmds.c:17249 commands/view.c:86
 #: regex/regc_pg_locale.c:263 utils/adt/formatting.c:1669
 #: utils/adt/formatting.c:1793 utils/adt/formatting.c:1918 utils/adt/like.c:194
@@ -1208,39 +1208,39 @@ msgid "operator family \"%s\" of access method %s is missing cross-type operator
 msgstr "存取方法 %2$s 的運算子家族 \"%1$s\" 缺少跨型別運算子"
 
 # tcop/postgres.c:1129
-#: access/heap/heapam.c:2302
+#: access/heap/heapam.c:2334
 #, c-format
 msgid "cannot insert tuples in a parallel worker"
 msgstr "不能在並行工作行程中插入元組"
 
-#: access/heap/heapam.c:2773
+#: access/heap/heapam.c:2805
 #, c-format
 msgid "cannot delete tuples during a parallel operation"
 msgstr "並行操作期間不能刪除元組"
 
-#: access/heap/heapam.c:2819
+#: access/heap/heapam.c:2851
 #, c-format
 msgid "attempted to delete invisible tuple"
 msgstr "試圖刪除不可見元組"
 
-#: access/heap/heapam.c:3265 access/heap/heapam.c:6617 access/index/genam.c:816
+#: access/heap/heapam.c:3297 access/heap/heapam.c:6649 access/index/genam.c:816
 #, c-format
 msgid "cannot update tuples during a parallel operation"
 msgstr "並行操作期間不能更新元組"
 
-#: access/heap/heapam.c:3452
+#: access/heap/heapam.c:3484
 #, c-format
 msgid "attempted to update invisible tuple"
 msgstr "試圖更新不可見元組"
 
 # access/heap/heapam.c:495
-#: access/heap/heapam.c:4941 access/heap/heapam.c:4979
-#: access/heap/heapam.c:5246 access/heap/heapam_handler.c:457
+#: access/heap/heapam.c:4973 access/heap/heapam.c:5011
+#: access/heap/heapam.c:5278 access/heap/heapam_handler.c:457
 #, c-format
 msgid "could not obtain lock on row in relation \"%s\""
 msgstr "無法取得關聯 \"%s\" 中的資料列鎖定"
 
-#: access/heap/heapam.c:6371 commands/trigger.c:3166
+#: access/heap/heapam.c:6403 commands/trigger.c:3166
 #: executor/nodeModifyTable.c:1988 executor/nodeModifyTable.c:2078
 #, c-format
 msgid "tuple to be updated was already modified by an operation triggered by the current command"
@@ -1297,7 +1297,7 @@ msgstr "無法將檔案 \"%s\" 縮短到 %u: %m"
 #: access/transam/xlog.c:4805 postmaster/postmaster.c:4665
 #: postmaster/postmaster.c:4675 replication/logical/origin.c:599
 #: replication/logical/origin.c:641 replication/logical/origin.c:660
-#: replication/logical/snapbuild.c:1797 replication/slot.c:1649
+#: replication/logical/snapbuild.c:1841 replication/slot.c:1649
 #: storage/file/buffile.c:506 storage/file/copydir.c:207
 #: utils/init/miscinit.c:1478 utils/init/miscinit.c:1489
 #: utils/init/miscinit.c:1497 utils/misc/guc.c:8442 utils/misc/guc.c:8473
@@ -1313,7 +1313,7 @@ msgstr "無法寫入檔案 \"%s\": %m"
 #: access/transam/xlogarchive.c:118 access/transam/xlogarchive.c:422
 #: postmaster/postmaster.c:1098 postmaster/syslogger.c:1465
 #: replication/logical/origin.c:575 replication/logical/reorderbuffer.c:4585
-#: replication/logical/snapbuild.c:1742 replication/logical/snapbuild.c:2162
+#: replication/logical/snapbuild.c:1786 replication/logical/snapbuild.c:2206
 #: replication/slot.c:1752 storage/file/fd.c:785 storage/file/fd.c:3168
 #: storage/file/fd.c:3230 storage/file/reinit.c:250 storage/ipc/dsm.c:315
 #: storage/smgr/md.c:347 storage/smgr/md.c:397 storage/sync/sync.c:250
@@ -4854,7 +4854,7 @@ msgstr "不能刪除 %s，因為有其他物件依存於它"
 #: commands/tablecmds.c:14100 commands/tablespace.c:470 commands/user.c:1095
 #: commands/view.c:506 libpq/auth.c:346 replication/slot.c:181
 #: replication/syncrep.c:1110 storage/lmgr/deadlock.c:1151
-#: storage/lmgr/proc.c:1482 utils/misc/guc.c:7152 utils/misc/guc.c:7188
+#: storage/lmgr/proc.c:1485 utils/misc/guc.c:7152 utils/misc/guc.c:7188
 #: utils/misc/guc.c:7258 utils/misc/guc.c:11502 utils/misc/guc.c:11536
 #: utils/misc/guc.c:11570 utils/misc/guc.c:11613 utils/misc/guc.c:11655
 #: utils/misc/guc.c:12611 utils/misc/guc.c:12613
@@ -4888,75 +4888,75 @@ msgid "constant of the type %s cannot be used here"
 msgstr "此處不能使用型別為 %s 的常數"
 
 # catalog/heap.c:221
-#: catalog/heap.c:332
+#: catalog/heap.c:333
 #, c-format
 msgid "permission denied to create \"%s.%s\""
 msgstr "權限不足，無法建立 \"%s.%s\""
 
 # catalog/heap.c:223
-#: catalog/heap.c:334
+#: catalog/heap.c:335
 #, c-format
 msgid "System catalog modifications are currently disallowed."
 msgstr "目前不允許修改系統目錄。"
 
 # catalog/heap.c:382 commands/tablecmds.c:2897
-#: catalog/heap.c:509 commands/tablecmds.c:2322 commands/tablecmds.c:2959
+#: catalog/heap.c:510 commands/tablecmds.c:2322 commands/tablecmds.c:2959
 #: commands/tablecmds.c:6747
 #, c-format
 msgid "tables can have at most %d columns"
 msgstr "資料表最多可以有 %d 個欄位"
 
 # catalog/heap.c:399
-#: catalog/heap.c:527 commands/tablecmds.c:7079
+#: catalog/heap.c:528 commands/tablecmds.c:7079
 #, c-format
 msgid "column name \"%s\" conflicts with a system column name"
 msgstr "欄位名稱 \"%s\" 與系統欄位名稱衝突"
 
 # commands/copy.c:2716 parser/parse_target.c:648 parser/parse_target.c:658
-#: catalog/heap.c:543
+#: catalog/heap.c:544
 #, c-format
 msgid "column name \"%s\" specified more than once"
 msgstr "欄位名稱 \"%s\" 指定多次"
 
 # catalog/heap.c:460
 #. translator: first %s is an integer not a name
-#: catalog/heap.c:625
+#: catalog/heap.c:626
 #, c-format
 msgid "partition key column %s has pseudo-type %s"
 msgstr "分割索引鍵欄位 %s 具有虛擬型別 %s"
 
 # catalog/heap.c:460
-#: catalog/heap.c:630
+#: catalog/heap.c:631
 #, c-format
 msgid "column \"%s\" has pseudo-type %s"
 msgstr "欄位 \"%s\" 有虛擬型別 %s"
 
 # commands/typecmds.c:1112
-#: catalog/heap.c:661
+#: catalog/heap.c:662
 #, c-format
 msgid "composite type %s cannot be made a member of itself"
 msgstr "複合型別 %s 不能成為自己的成員"
 
 #. translator: first %s is an integer not a name
-#: catalog/heap.c:726
+#: catalog/heap.c:727
 #, c-format
 msgid "no collation was derived for partition key column %s with collatable type %s"
 msgstr "分割索引鍵欄位 %s 的型別 %s 支援定序，但未能為該欄位推導出定序"
 
-#: catalog/heap.c:732 commands/createas.c:203 commands/createas.c:512
+#: catalog/heap.c:733 commands/createas.c:203 commands/createas.c:512
 #, c-format
 msgid "no collation was derived for column \"%s\" with collatable type %s"
 msgstr "欄位 \"%s\" 的型別 %s 支援定序，但未能為該欄位推導出定序"
 
 # catalog/heap.c:747 catalog/index.c:527 commands/tablecmds.c:1471
-#: catalog/heap.c:1220 catalog/index.c:879 commands/createas.c:408
+#: catalog/heap.c:1221 catalog/index.c:879 commands/createas.c:408
 #: commands/tablecmds.c:3881
 #, c-format
 msgid "relation \"%s\" already exists"
 msgstr "關聯 \"%s\" 已經存在"
 
 # catalog/pg_type.c:293 catalog/pg_type.c:525
-#: catalog/heap.c:1236 catalog/pg_type.c:439 catalog/pg_type.c:790
+#: catalog/heap.c:1237 catalog/pg_type.c:439 catalog/pg_type.c:790
 #: catalog/pg_type.c:937 commands/typecmds.c:250 commands/typecmds.c:262
 #: commands/typecmds.c:758 commands/typecmds.c:1180 commands/typecmds.c:1406
 #: commands/typecmds.c:1609 commands/typecmds.c:2581
@@ -4964,19 +4964,19 @@ msgstr "關聯 \"%s\" 已經存在"
 msgid "type \"%s\" already exists"
 msgstr "\"%s\" 型別已經存在"
 
-#: catalog/heap.c:1237
+#: catalog/heap.c:1238
 #, c-format
 msgid "A relation has an associated type of the same name, so you must use a name that doesn't conflict with any existing type."
 msgstr "關聯有同名的相關聯型別，因此您必須使用未與任何現有型別衝突的名稱。"
 
 # commands/dbcommands.c:201
-#: catalog/heap.c:1266
+#: catalog/heap.c:1267
 #, c-format
 msgid "pg_class heap OID value not set when in binary upgrade mode"
 msgstr "二進位升級模式下未設定堆積關聯的 pg_class OID 值"
 
 # utils/adt/pseudotypes.c:253
-#: catalog/heap.c:2552
+#: catalog/heap.c:2553
 #, c-format
 msgid "cannot add NO INHERIT constraint to partitioned table \"%s\""
 msgstr "不能向分割資料表 \"%s\" 新增 NO INHERIT 條件約束"
@@ -4987,70 +4987,70 @@ msgid "too many check constraints on relation \"%s\""
 msgstr "關聯 \"%s\" 的檢查條件約束過多"
 
 # catalog/heap.c:1640
-#: catalog/heap.c:2835
+#: catalog/heap.c:2842
 #, c-format
 msgid "check constraint \"%s\" already exists"
 msgstr "檢查條件約束 \"%s\" 已經存在"
 
 # catalog/heap.c:1631 commands/tablecmds.c:3692
-#: catalog/heap.c:3005 catalog/index.c:893 catalog/pg_constraint.c:673
+#: catalog/heap.c:3020 catalog/index.c:893 catalog/pg_constraint.c:673
 #: commands/tablecmds.c:8817
 #, c-format
 msgid "constraint \"%s\" for relation \"%s\" already exists"
 msgstr "限制 \"%s\" (適用於關聯 \"%s\") 已存在"
 
 # commands/tablecmds.c:3455
-#: catalog/heap.c:3012
+#: catalog/heap.c:3027
 #, c-format
 msgid "constraint \"%s\" conflicts with non-inherited constraint on relation \"%s\""
 msgstr "條件約束 \"%s\" 與關聯 \"%s\" 上的不可繼承條件約束衝突"
 
 # commands/tablecmds.c:3455
-#: catalog/heap.c:3023
+#: catalog/heap.c:3038
 #, c-format
 msgid "constraint \"%s\" conflicts with inherited constraint on relation \"%s\""
 msgstr "條件約束 \"%s\" 與關聯 \"%s\" 上的繼承條件約束衝突"
 
 # catalog/namespace.c:200 utils/adt/regproc.c:837
-#: catalog/heap.c:3033
+#: catalog/heap.c:3048
 #, c-format
 msgid "constraint \"%s\" conflicts with NOT VALID constraint on relation \"%s\""
 msgstr "條件約束 \"%s\" 與關聯 \"%s\" 上的 NOT VALID 條件約束衝突"
 
-#: catalog/heap.c:3038
+#: catalog/heap.c:3053
 #, c-format
 msgid "merging constraint \"%s\" with inherited definition"
 msgstr "正在合併限制 \"%s\" 與繼承的定義"
 
 # parser/parse_clause.c:539
-#: catalog/heap.c:3143
+#: catalog/heap.c:3162
 #, c-format
 msgid "cannot use generated column \"%s\" in column generation expression"
 msgstr "欄位產生運算式中不能使用產生欄位 \"%s\""
 
-#: catalog/heap.c:3145
+#: catalog/heap.c:3164
 #, c-format
 msgid "A generated column cannot reference another generated column."
 msgstr "產生欄位不能引用其他產生欄位。"
 
 # catalog/heap.c:1809
-#: catalog/heap.c:3151
+#: catalog/heap.c:3170
 #, c-format
 msgid "cannot use whole-row variable in column generation expression"
 msgstr "欄位產生運算式中不能使用整列變數"
 
-#: catalog/heap.c:3152
+#: catalog/heap.c:3171
 #, c-format
 msgid "This would cause the generated column to depend on its own value."
 msgstr "這會導致產生欄位相依於其自身的值。"
 
-#: catalog/heap.c:3207
+#: catalog/heap.c:3226
 #, c-format
 msgid "generation expression is not immutable"
 msgstr "產生運算式不是不可變的"
 
 # catalog/heap.c:1827 rewrite/rewriteHandler.c:646
-#: catalog/heap.c:3235 rewrite/rewriteHandler.c:1322
+#: catalog/heap.c:3254 rewrite/rewriteHandler.c:1322
 #, c-format
 msgid "column \"%s\" is of type %s but default expression is of type %s"
 msgstr "欄位 \"%s\" 是型別 %s，但是預設值運算式是型別 %s"
@@ -5058,7 +5058,7 @@ msgstr "欄位 \"%s\" 是型別 %s，但是預設值運算式是型別 %s"
 # catalog/heap.c:1832 parser/analyze.c:2689 parser/parse_node.c:247
 # parser/parse_target.c:362 parser/parse_target.c:570
 # parser/parse_target.c:579 rewrite/rewriteHandler.c:651
-#: catalog/heap.c:3240 commands/prepare.c:368 parser/analyze.c:2695
+#: catalog/heap.c:3259 commands/prepare.c:368 parser/analyze.c:2695
 #: parser/parse_target.c:594 parser/parse_target.c:891
 #: parser/parse_target.c:901 rewrite/rewriteHandler.c:1327
 #, c-format
@@ -5066,33 +5066,33 @@ msgid "You will need to rewrite or cast the expression."
 msgstr "您需要重寫運算式或對其進行型別轉換。"
 
 # catalog/heap.c:1601
-#: catalog/heap.c:3287
+#: catalog/heap.c:3306
 #, c-format
 msgid "only table \"%s\" can be referenced in check constraint"
 msgstr "只有資料表 \"%s\" 可以在檢查條件約束中被參照"
 
-#: catalog/heap.c:3585
+#: catalog/heap.c:3604
 #, c-format
 msgid "unsupported ON COMMIT and foreign key combination"
 msgstr "不支援的 ON COMMIT 和外來鍵組合"
 
-#: catalog/heap.c:3586
+#: catalog/heap.c:3605
 #, c-format
 msgid "Table \"%s\" references \"%s\", but they do not have the same ON COMMIT setting."
 msgstr "資料表 \"%s\" 參考 \"%s\"，但它們沒有相同 ON COMMIT 設定。"
 
 # catalog/heap.c:2093
-#: catalog/heap.c:3591
+#: catalog/heap.c:3610
 #, c-format
 msgid "cannot truncate a table referenced in a foreign key constraint"
 msgstr "不能截斷外來鍵限制中參考的資料表"
 
-#: catalog/heap.c:3592
+#: catalog/heap.c:3611
 #, c-format
 msgid "Table \"%s\" references \"%s\"."
 msgstr "資料表 \"%s\" 參考 \"%s\"。"
 
-#: catalog/heap.c:3594
+#: catalog/heap.c:3613
 #, c-format
 msgid "Truncate table \"%s\" at the same time, or use TRUNCATE ... CASCADE."
 msgstr "同時截斷資料表 \"%s\"，或使用 TRUNCATE ... CASCADE。"
@@ -22758,69 +22758,69 @@ msgstr "刪除 pg_replslot/%2$s/xid* 時無法刪除檔案 \"%1$s\": %m"
 msgid "could not read from file \"%s\": read %d instead of %d bytes"
 msgstr "無法讀取檔案 \"%s\": 已讀取 %d 位元組，預期為 %d 位元組"
 
-#: replication/logical/snapbuild.c:637
+#: replication/logical/snapbuild.c:681
 #, c-format
 msgid "initial slot snapshot too large"
 msgstr "初始槽快照過大"
 
-#: replication/logical/snapbuild.c:691
+#: replication/logical/snapbuild.c:735
 #, c-format
 msgid "exported logical decoding snapshot: \"%s\" with %u transaction ID"
 msgid_plural "exported logical decoding snapshot: \"%s\" with %u transaction IDs"
 msgstr[0] "已匯出邏輯解碼快照: \"%s\"，含 %u 個交易 ID"
 
-#: replication/logical/snapbuild.c:1421 replication/logical/snapbuild.c:1533
-#: replication/logical/snapbuild.c:2068
+#: replication/logical/snapbuild.c:1465 replication/logical/snapbuild.c:1577
+#: replication/logical/snapbuild.c:2112
 #, c-format
 msgid "logical decoding found consistent point at %X/%X"
 msgstr "邏輯解碼在 %X/%X 找到一致點"
 
 #  translator: %s represents an SQL statement name
 # access/transam/xact.c:2183
-#: replication/logical/snapbuild.c:1423
+#: replication/logical/snapbuild.c:1467
 #, c-format
 msgid "There are no running transactions."
 msgstr "沒有正在執行的交易。"
 
-#: replication/logical/snapbuild.c:1484
+#: replication/logical/snapbuild.c:1528
 #, c-format
 msgid "logical decoding found initial starting point at %X/%X"
 msgstr "邏輯解碼在 %X/%X 找到初始起點"
 
-#: replication/logical/snapbuild.c:1486 replication/logical/snapbuild.c:1510
+#: replication/logical/snapbuild.c:1530 replication/logical/snapbuild.c:1554
 #, c-format
 msgid "Waiting for transactions (approximately %d) older than %u to end."
 msgstr "正在等待早於交易 %2$u 的交易 (約 %1$d 個) 結束。"
 
-#: replication/logical/snapbuild.c:1508
+#: replication/logical/snapbuild.c:1552
 #, c-format
 msgid "logical decoding found initial consistent point at %X/%X"
 msgstr "邏輯解碼在 %X/%X 找到初始一致點"
 
 # access/transam/xact.c:2544 access/transam/xact.c:2635
-#: replication/logical/snapbuild.c:1535
+#: replication/logical/snapbuild.c:1579
 #, c-format
 msgid "There are no old transactions anymore."
 msgstr "不再有舊的交易。"
 
 # access/transam/xlog.c:2019
-#: replication/logical/snapbuild.c:1932
+#: replication/logical/snapbuild.c:1976
 #, c-format
 msgid "snapbuild state file \"%s\" has wrong magic number: %u instead of %u"
 msgstr "快照建置狀態檔 \"%s\" 的魔數不正確: %u 而非 %u"
 
 # access/transam/xlog.c:2019
-#: replication/logical/snapbuild.c:1938
+#: replication/logical/snapbuild.c:1982
 #, c-format
 msgid "snapbuild state file \"%s\" has unsupported version: %u instead of %u"
 msgstr "快照建置狀態檔 \"%s\" 使用不支援的版本: %u 而非 %u"
 
-#: replication/logical/snapbuild.c:2009
+#: replication/logical/snapbuild.c:2053
 #, c-format
 msgid "checksum mismatch for snapbuild state file \"%s\": is %u, should be %u"
 msgstr "快照建置狀態檔 \"%s\" 的檢查碼不符: 實際為 %u，預期為 %u"
 
-#: replication/logical/snapbuild.c:2070
+#: replication/logical/snapbuild.c:2114
 #, c-format
 msgid "Logical decoding will begin using saved snapshot."
 msgstr "邏輯解碼將開始使用已儲存的快照。"
@@ -22830,7 +22830,7 @@ msgstr "邏輯解碼將開始使用已儲存的快照。"
 # access/transam/xlog.c:2930 libpq/hba.c:911 libpq/hba.c:935
 # utils/error/elog.c:1118 utils/init/miscinit.c:783 utils/init/miscinit.c:889
 # utils/misc/database.c:68
-#: replication/logical/snapbuild.c:2142
+#: replication/logical/snapbuild.c:2186
 #, c-format
 msgid "could not parse file name \"%s\""
 msgstr "無法解析檔案名稱 \"%s\""
@@ -24434,8 +24434,8 @@ msgstr "共享記憶體佇列中的訊息大小 %zu 無效"
 # storage/ipc/shmem.c:185 storage/ipc/shmem.c:246 storage/ipc/shmem.c:386
 # storage/lmgr/lock.c:561 storage/lmgr/lock.c:624 storage/lmgr/proc.c:179
 #: storage/ipc/shm_toc.c:118 storage/ipc/shm_toc.c:200 storage/lmgr/lock.c:996
-#: storage/lmgr/lock.c:1034 storage/lmgr/lock.c:2864 storage/lmgr/lock.c:4278
-#: storage/lmgr/lock.c:4343 storage/lmgr/lock.c:4693
+#: storage/lmgr/lock.c:1034 storage/lmgr/lock.c:2865 storage/lmgr/lock.c:4279
+#: storage/lmgr/lock.c:4344 storage/lmgr/lock.c:4694
 #: storage/lmgr/predicate.c:2488 storage/lmgr/predicate.c:2503
 #: storage/lmgr/predicate.c:3993 storage/lmgr/predicate.c:5108
 #: utils/hash/dynahash.c:1112
@@ -24477,7 +24477,7 @@ msgid "PID %d is not a PostgreSQL server process"
 msgstr "PID %d 不是 PostgreSQL 伺服器行程"
 
 # utils/adt/misc.c:98
-#: storage/ipc/signalfuncs.c:104 storage/lmgr/proc.c:1503
+#: storage/ipc/signalfuncs.c:104 storage/lmgr/proc.c:1506
 #: utils/adt/mcxtfuncs.c:212
 #, c-format
 msgid "could not send signal to process %d: %m"
@@ -24748,13 +24748,13 @@ msgid "Only RowExclusiveLock or less can be acquired on database objects during 
 msgstr "復原期間只能在資料庫物件上取得 RowExclusiveLock 或更低層級的鎖定。"
 
 # storage/lmgr/lock.c:562 storage/lmgr/lock.c:625
-#: storage/lmgr/lock.c:997 storage/lmgr/lock.c:1035 storage/lmgr/lock.c:2865
-#: storage/lmgr/lock.c:4279 storage/lmgr/lock.c:4344 storage/lmgr/lock.c:4694
+#: storage/lmgr/lock.c:997 storage/lmgr/lock.c:1035 storage/lmgr/lock.c:2866
+#: storage/lmgr/lock.c:4280 storage/lmgr/lock.c:4345 storage/lmgr/lock.c:4695
 #, c-format
 msgid "You might need to increase max_locks_per_transaction."
 msgstr "您可能必須增加 max_locks_per_transaction。"
 
-#: storage/lmgr/lock.c:3320 storage/lmgr/lock.c:3388 storage/lmgr/lock.c:3504
+#: storage/lmgr/lock.c:3321 storage/lmgr/lock.c:3389 storage/lmgr/lock.c:3505
 #, c-format
 msgid "cannot PREPARE while holding both session-level and transaction-level locks on the same object"
 msgstr "在同一物件上同時持有工作階段層級和交易層級鎖定時，不能執行 PREPARE"
@@ -24832,27 +24832,27 @@ msgstr "重新執行這個交易可能會成功。"
 msgid "number of requested standby connections exceeds max_wal_senders (currently %d)"
 msgstr "要求的待命伺服器連線數超過 max_wal_senders（目前為 %d）"
 
-#: storage/lmgr/proc.c:1600
+#: storage/lmgr/proc.c:1603
 #, c-format
 msgid "process %d avoided deadlock for %s on %s by rearranging queue order after %ld.%03d ms"
 msgstr "行程 %d 避免 %s 的死結 (%s 上)，方法是在 %ld.%03d 毫秒後重新安排佇列順序"
 
-#: storage/lmgr/proc.c:1615
+#: storage/lmgr/proc.c:1618
 #, c-format
 msgid "process %d detected deadlock while waiting for %s on %s after %ld.%03d ms"
 msgstr "行程 %d 正在等候 %s (%s 上) 時，在 %ld.%03d 毫秒後偵測到死結"
 
-#: storage/lmgr/proc.c:1624
+#: storage/lmgr/proc.c:1627
 #, c-format
 msgid "process %d still waiting for %s on %s after %ld.%03d ms"
 msgstr "行程 %d 在下列時間後仍等候 %s (%s 上): %ld.%03d 毫秒"
 
-#: storage/lmgr/proc.c:1631
+#: storage/lmgr/proc.c:1634
 #, c-format
 msgid "process %d acquired %s on %s after %ld.%03d ms"
 msgstr "行程 %d 在下列時間後取得 %s (%s 上): %ld.%03d 毫秒"
 
-#: storage/lmgr/proc.c:1648
+#: storage/lmgr/proc.c:1651
 #, c-format
 msgid "process %d failed to acquire %s on %s after %ld.%03d ms"
 msgstr "行程 %d 在下列時間後無法取得 %s (%s 上): %ld.%03d 毫秒"

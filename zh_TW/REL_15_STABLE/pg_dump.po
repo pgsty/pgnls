@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_dump (PostgreSQL) 15\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-17 19:34+0000\n"
+"POT-Creation-Date: 2026-09-29 14:33+0000\n"
 "PO-Revision-Date: 2026-09-29 22:12+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
@@ -819,12 +819,12 @@ msgstr "無法關閉輸入檔: %m"
 msgid "unrecognized file format \"%d\""
 msgstr "無法辨識的檔案格式 \"%d\""
 
-#: pg_backup_archiver.c:2465 pg_backup_archiver.c:4551
+#: pg_backup_archiver.c:2465 pg_backup_archiver.c:4553
 #, c-format
 msgid "finished item %d %s %s"
 msgstr "已完成項目 %d %s %s"
 
-#: pg_backup_archiver.c:2469 pg_backup_archiver.c:4564
+#: pg_backup_archiver.c:2469 pg_backup_archiver.c:4566
 #, c-format
 msgid "worker process failed: exit code %d"
 msgstr "工作行程失敗: 結束碼 %d"
@@ -890,94 +890,94 @@ msgstr "找不到觸發器 \"%s\""
 msgid "could not set session user to \"%s\": %s"
 msgstr "無法將工作階段使用者設為 \"%s\": %s"
 
-#: pg_backup_archiver.c:3422
+#: pg_backup_archiver.c:3424
 #, c-format
 msgid "could not set search_path to \"%s\": %s"
 msgstr "無法將 search_path 設定為 \"%s\": %s"
 
 # access/transam/slru.c:930 commands/tablespace.c:529
 # commands/tablespace.c:694 utils/adt/misc.c:174
-#: pg_backup_archiver.c:3484
+#: pg_backup_archiver.c:3486
 #, c-format
 msgid "could not set default_tablespace to %s: %s"
 msgstr "無法將 default_tablespace 設定為 %s: %s"
 
-#: pg_backup_archiver.c:3534
+#: pg_backup_archiver.c:3536
 #, c-format
 msgid "could not set default_table_access_method: %s"
 msgstr "無法設定 default_table_access_method: %s"
 
-#: pg_backup_archiver.c:3628 pg_backup_archiver.c:3793
+#: pg_backup_archiver.c:3630 pg_backup_archiver.c:3795
 #, c-format
 msgid "don't know how to set owner for object type \"%s\""
 msgstr "不知道如何設定物件型別 \"%s\" 的擁有者"
 
-#: pg_backup_archiver.c:3860
+#: pg_backup_archiver.c:3862
 #, c-format
 msgid "did not find magic string in file header"
 msgstr "檔案標頭中找不到魔術字串"
 
-#: pg_backup_archiver.c:3874
+#: pg_backup_archiver.c:3876
 #, c-format
 msgid "unsupported version (%d.%d) in file header"
 msgstr "檔案標頭中的版本不受支援(%d.%d)"
 
-#: pg_backup_archiver.c:3879
+#: pg_backup_archiver.c:3881
 #, c-format
 msgid "sanity check on integer size (%lu) failed"
 msgstr "整數大小(%lu)的完整性檢查失敗"
 
-#: pg_backup_archiver.c:3883
+#: pg_backup_archiver.c:3885
 #, c-format
 msgid "archive was made on a machine with larger integers, some operations might fail"
 msgstr "封存檔是在支援較大整數的電腦上建立的，某些操作可能會失敗"
 
-#: pg_backup_archiver.c:3893
+#: pg_backup_archiver.c:3895
 #, c-format
 msgid "expected format (%d) differs from format found in file (%d)"
 msgstr "預期的格式(%d)與檔案中找到的格式(%d)不同"
 
-#: pg_backup_archiver.c:3908
+#: pg_backup_archiver.c:3910
 #, c-format
 msgid "archive is compressed, but this installation does not support compression -- no data will be available"
 msgstr "封存已壓縮，但此安裝不支援壓縮；將沒有可用資料"
 
-#: pg_backup_archiver.c:3942
+#: pg_backup_archiver.c:3944
 #, c-format
 msgid "invalid creation date in header"
 msgstr "標頭中的建立日期無效"
 
-#: pg_backup_archiver.c:4076
+#: pg_backup_archiver.c:4078
 #, c-format
 msgid "processing item %d %s %s"
 msgstr "處理項目 %d %s %s"
 
-#: pg_backup_archiver.c:4155
+#: pg_backup_archiver.c:4157
 #, c-format
 msgid "entering main parallel loop"
 msgstr "進入主要並行迴圈"
 
-#: pg_backup_archiver.c:4166
+#: pg_backup_archiver.c:4168
 #, c-format
 msgid "skipping item %d %s %s"
 msgstr "跳過項目 %d %s %s"
 
-#: pg_backup_archiver.c:4175
+#: pg_backup_archiver.c:4177
 #, c-format
 msgid "launching item %d %s %s"
 msgstr "啟動項目 %d %s %s"
 
-#: pg_backup_archiver.c:4229
+#: pg_backup_archiver.c:4231
 #, c-format
 msgid "finished main parallel loop"
 msgstr "完成主要並行迴圈"
 
-#: pg_backup_archiver.c:4265
+#: pg_backup_archiver.c:4267
 #, c-format
 msgid "processing missed item %d %s %s"
 msgstr "處理遺漏的項目 %d %s %s"
 
-#: pg_backup_archiver.c:4870
+#: pg_backup_archiver.c:4872
 #, c-format
 msgid "table \"%s\" could not be created, will not restore its data"
 msgstr "無法建立資料表 \"%s\"，將不會還原其資料"
