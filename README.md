@@ -175,7 +175,7 @@ the long version; [`ref/errata.md`](ref/errata.md) has the known defects.
 
 - **Templates** — the babel `po-{14..19}-branch` snapshot of 2026-09-17. `make fetch-upstream && make diff` tells you at any time whether `zh_CN/` still matches the current upstream POT entry for entry.
 - **Only what should change** — `msgstr` values, `fuzzy` flags, and `#|` previous-message comments. Source references (`#:`), extracted comments (`#.`), `msgctxt`, other flags, entry order and obsolete `#~` entries are preserved byte for byte, so running `msgmerge` against a newer POT should be a no-op for the entries in common.
-- **Plurals** — normalised to the Chinese standard `nplurals=1; plural=0;`. The existing headers disagree: `postgres` and `psql` declared 1, nine directories declared 2, and `libpq` and `initdb` carried plural entries with no `Plural-Forms` header at all. Across the whole set, `pg_dump`'s circular foreign-key message is the only entry whose two Chinese forms differed in meaning; collapsing keeps the singular wording, and upstream has been asked to rule on it.
+- **Plurals** — normalised to the Chinese standard `nplurals=1; plural=0;`. The existing headers disagree: `postgres` and `psql` declared 1, nine directories declared 2, and `libpq` and `initdb` carried plural entries with no `Plural-Forms` header at all. `pg_dump`'s circular foreign-key warning uses the number-neutral wording `以下表涉及循环外键约束:` so the single Chinese plural form covers both self-references within one table and cycles among multiple tables.
 - **Consistency** — one glossary governs the whole set, so similar English strings read consistently across every catalog and every branch, which is what makes six branches reviewable as one body of work rather than six.
 
 ### Catalog headers
@@ -236,5 +236,7 @@ The translations follow PostgreSQL itself and are available under the [PostgreSQ
 <div align="center">
 
 Ruohang Feng &lt;rh@vonng.com&gt; · 2026-09
+
+Catalogs last updated: 2026-09-29 22:12+0800 · zh_CN / zh_TW · PostgreSQL 14–19
 
 </div>
