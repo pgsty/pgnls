@@ -28,6 +28,32 @@ HEADER = {
     'Plural-Forms': 'nplurals=1; plural=0;',
     'Last-Translator': 'Ruohang Feng <rh@vonng.com>',
 }
+CURRENT_AUTHOR = '# Ruohang Feng (vonng@pigsty) <rh@vonng.com>, 2026.'
+
+
+def check_header_comments(po, language, component):
+    """Check the comment template for the 2026 Chinese retranslation."""
+    if po.header is None:
+        return ['missing PO header']
+    variant = 'Simplified' if language == 'zh_CN' else 'Traditional'
+    prefix = [
+        '# %s Chinese message translation file for %s' % (variant, component),
+        '# Copyright (C) 2026 PostgreSQL Global Development Group',
+        '# This file is distributed under the same license as the PostgreSQL package.',
+        '#',
+    ]
+    comments = po.header.comments
+    problems = []
+    if comments[:4] != prefix:
+        problems.append('header title, copyright or license does not match the 2026 template')
+    if comments[-2:] != [CURRENT_AUTHOR, '#'] or sum('rh@vonng.com' in line for line in comments) != 1:
+        problems.append('header must end with the unique current translator credit and a blank comment')
+    for line in comments[4:-2]:
+        if not re.fullmatch(r'# .+ <[^<>\s]+@[^<>\s]+>, \d{4}(?:-\d{4}|-\d{2}-\d{2})?\.', line):
+            problems.append('unexpected header comment or malformed historical credit: %r' % line)
+    if re.search(r'public domain|pgsql\.cc|FIRST AUTHOR|\bLANGUAGE\b', '\n'.join(comments), re.I):
+        problems.append('obsolete statement or placeholder in header comments')
+    return problems
 
 
 def main():
@@ -55,6 +81,8 @@ def main():
         for path in files:
             rel = path.relative_to(ROOT)
             po = poio.read_po(path)
+            problems.extend('%s: %s' % (rel, issue)
+                            for issue in check_header_comments(po, language, path.stem))
 
             if have_msgfmt:
                 run = subprocess.run(['msgfmt', '--check', '--check-format', '--statistics',
@@ -115,7 +143,7 @@ def main():
         if len(problems) > 40:
             print('  ... and %d more' % (len(problems) - 40))
         return 1
-    print('OK — every catalog is 100% translated, 0 fuzzy, 0 untranslated, msgfmt clean.')
+    print('OK — every catalog is 100% translated, 0 fuzzy, 0 untranslated, msgfmt clean; headers consistent.')
     return 0
 
 

@@ -178,6 +178,47 @@ the long version; [`ref/errata.md`](ref/errata.md) has the known defects.
 - **Plurals** — normalised to the Chinese standard `nplurals=1; plural=0;`. The existing headers disagree: `postgres` and `psql` declared 1, nine directories declared 2, and `libpq` and `initdb` carried plural entries with no `Plural-Forms` header at all. Across the whole set, `pg_dump`'s circular foreign-key message is the only entry whose two Chinese forms differed in meaning; collapsing keeps the singular wording, and upstream has been asked to rule on it.
 - **Consistency** — one glossary governs the whole set, so similar English strings read consistently across every catalog and every branch, which is what makes six branches reviewable as one body of work rather than six.
 
+### Catalog headers
+
+The current `zh_CN` and `zh_TW` catalogs for PostgreSQL 14–19 are a complete
+replacement translation produced in 2026. All 324 files use this comment template,
+with the language variant and component adjusted to match the file:
+
+```po
+# Simplified Chinese message translation file for pg_combinebackup
+# Copyright (C) 2026 PostgreSQL Global Development Group
+# This file is distributed under the same license as the PostgreSQL package.
+#
+# Ruohang Feng (vonng@pigsty) <rh@vonng.com>, 2026.
+#
+```
+
+Historical translator credits precede the current credit. Preserve their names,
+email addresses, contribution dates and relative order, using
+`# Name <email>, YYYY.` or `# Name <email>, YYYY-MM-DD.`. These credits acknowledge
+earlier contributions; their dates do not imply participation in the 2026
+retranslation. Restore missing credits only from evidence for the same catalog,
+such as its historical `Last-Translator` field. A `Language-Team` field alone is
+not an author list.
+
+The copyright year identifies this complete retranslation; keep it at 2026 for
+this edition rather than copying a template's old year or advancing it merely
+because the calendar changes. Keep `Last-Translator` as
+`Ruohang Feng <rh@vonng.com>`; the Pigsty identifier belongs in the author comment.
+Set `PO-Revision-Date` to the actual revision time with its timezone, and preserve
+the other machine header fields when changing comments. `make check` validates
+the comment template as well as the machine fields.
+
+The old public-domain comments in Simplified Chinese `initdb`, `pg_config`,
+`pg_ctl` and `pgscripts` came from the early `--foreign-user` template. PostgreSQL
+[changed the generator to use PGDG in 2009](https://github.com/postgres/postgres/commit/ccd31eb861e727671e4a771d4bcc37f1179caec9),
+and the Spanish catalogs have a
+[2010 normalization precedent](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=commitdiff;h=a337a4c05ea12e10b05c9e1c51d206ac8937f4c1).
+The unified header describes the current retranslation; it does not change the
+status of earlier public-domain material. Bao Wei's restored credits in those
+four catalogs come from their `Last-Translator` and revision dates in the
+[2005 initial import](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=commit;h=a7305233d211c5fdc9c48a66ca49d614430bde46).
+
 ## Submitting upstream
 
 Submitted the way the [NLS wiki](https://wiki.postgresql.org/wiki/NLS) asks for it: one Redmine issue per branch (numbers in the table above), with attachments named `<catalog>-zh_CN.po`. They supersede [#8117](https://redmine.postgresql.org/issues/8117), an earlier issue covering the 19 branch alone.
