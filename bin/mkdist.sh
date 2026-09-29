@@ -1,17 +1,32 @@
 #!/bin/bash
-# Build the release archives into dist/: one tarball per upstream branch plus one
-# holding all six, and a SHA256SUMS covering them. Every archive unpacks to
-# zh_CN/<branch>/<catalog>.po, the layout messages.git expects.
-#
-# GNU tar is required. BSD tar on macOS stores AppleDouble (._*) companions for
-# extended attributes, which would ship resource-fork junk to everyone else.
+# Build reproducible Chinese catalog archives without replacing existing assets.
+# Each language gets six branch archives and a complete archive; a bilingual
+# archive and SHA256SUMS complete the release. GNU tar is required.
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-DIST="$ROOT/dist"
 STAMP="${STAMP:-$(date +%Y%m%d)}"
-PREFIX="pg-messages-zh_CN"
+DIST="${DIST:-$ROOT/dist/$STAMP}"
+LANGUAGES="zh_CN zh_TW"
 BRANCHES="master REL_18_STABLE REL_17_STABLE REL_16_STABLE REL_15_STABLE REL_14_STABLE"
+export LC_ALL=C COPYFILE_DISABLE=1
+cd "$ROOT"
+
+if [[ ! "$STAMP" =~ ^[a-zA-Z0-9_.-]+$ ]]; then
+    echo "STAMP must contain only letters, digits, dots, underscores or hyphens" >&2
+    exit 1
+fi
+if [ -z "${SOURCE_DATE_EPOCH:-}" ]; then
+    if [ ! -e "$ROOT/.git" ]; then
+        echo "Set SOURCE_DATE_EPOCH when building from an exported source tree" >&2
+        exit 1
+    fi
+    SOURCE_DATE_EPOCH="$(git log -1 --format=%ct)"
+fi
+if [[ ! "$SOURCE_DATE_EPOCH" =~ ^[0-9]+$ ]]; then
+    echo "SOURCE_DATE_EPOCH must be a Unix timestamp in seconds" >&2
+    exit 1
+fi
 
 TAR="$(command -v gtar || true)"
 if [ -z "$TAR" ]; then
@@ -23,28 +38,64 @@ if [ -z "$TAR" ]; then
     fi
 fi
 
-# Belt and braces: tell BSD utilities not to write ._* alongside, and tell GNU
-# tar to leave any that already exist on disk out of the archive.
-export COPYFILE_DISABLE=1
-EXCLUDE=(--exclude='.DS_Store' --exclude='._*' --exclude='.AppleDouble'
-         --exclude='__MACOSX' --exclude='*.swp')
-# Fixed ownership so the archives do not carry this machine's uid/gid.
-OWNER=(--owner=0 --group=0 --numeric-owner)
-
-rm -rf "$DIST"
+# Check all inputs and output names before writing any release assets.
+if [ ! -f LICENSE ] || [ -L LICENSE ]; then
+    echo "Missing or non-regular LICENSE" >&2
+    exit 1
+fi
+ASSETS=("pg-messages-zh_CN-zh_TW-$STAMP.tar.gz")
+ALL_FILES=()
+for language in $LANGUAGES; do
+    ASSETS+=("pg-messages-$language-$STAMP.tar.gz")
+    for branch in $BRANCHES; do
+        ASSETS+=("pg-messages-$language-$branch-$STAMP.tar.gz")
+        files=("$language/$branch/"*.po)
+        for file in "${files[@]}"; do
+            if [ ! -f "$file" ] || [ -L "$file" ]; then
+                echo "Missing or non-regular catalog: $file" >&2
+                exit 1
+            fi
+        done
+        ALL_FILES+=("${files[@]}")
+    done
+done
+for name in "${ASSETS[@]}" SHA256SUMS; do
+    if [ -e "$DIST/$name" ] || [ -L "$DIST/$name" ]; then
+        echo "Refusing to overwrite $DIST/$name; choose a new DIST or STAMP" >&2
+        exit 1
+    fi
+done
 mkdir -p "$DIST"
-cd "$ROOT"
+DIST="$(cd "$DIST" && pwd)"
+STAGE="$(mktemp -d "$DIST/.mkdist.XXXXXX")"
+trap 'rm -rf "$STAGE"' EXIT
 
-"$TAR" "${EXCLUDE[@]}" "${OWNER[@]}" -czf "$DIST/$PREFIX-$STAMP.tar.gz" zh_CN
-printf '  %-46s %2d catalogs\n' "$PREFIX-$STAMP.tar.gz" "$(find zh_CN -name '*.po' | wc -l)"
+archive() {
+    local name="$1"
+    shift
+    printf '%s\n' LICENSE "$@" | sort > "$STAGE/files"
+    "$TAR" --format=gnu --owner=0 --group=0 --numeric-owner \
+        --mode=0644 --mtime="@$SOURCE_DATE_EPOCH" --no-recursion \
+        -cf - -T "$STAGE/files" | gzip -n > "$STAGE/$name"
+    printf '  %-55s %3d catalogs\n' "$name" "$#"
+}
 
-for branch in $BRANCHES; do
-    name="$PREFIX-$branch-$STAMP.tar.gz"
-    "$TAR" "${EXCLUDE[@]}" "${OWNER[@]}" -czf "$DIST/$name" "zh_CN/$branch"
-    printf '  %-46s %2d catalogs\n' "$name" "$(ls "zh_CN/$branch"/*.po | wc -l)"
+archive "pg-messages-zh_CN-zh_TW-$STAMP.tar.gz" "${ALL_FILES[@]}"
+for language in $LANGUAGES; do
+    LANGUAGE_FILES=()
+    for branch in $BRANCHES; do
+        files=("$language/$branch/"*.po)
+        LANGUAGE_FILES+=("${files[@]}")
+        archive "pg-messages-$language-$branch-$STAMP.tar.gz" "${files[@]}"
+    done
+    archive "pg-messages-$language-$STAMP.tar.gz" "${LANGUAGE_FILES[@]}"
 done
 
-cd "$DIST"
+cd "$STAGE"
 shasum -a 256 ./*.tar.gz > SHA256SUMS
+# Hard links fail if a destination appeared after the preflight check.
+for name in "${ASSETS[@]}" SHA256SUMS; do
+    ln "$STAGE/$name" "$DIST/$name"
+done
 echo
-ls -l
+echo "Release assets: $DIST"

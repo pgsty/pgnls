@@ -1,8 +1,8 @@
 <div align="center">
 
-# PostgreSQL Simplified Chinese Message Catalogs
+# PostgreSQL Chinese Message Catalogs
 
-**Complete `zh_CN` translations for PostgreSQL 14 – 19**
+**Complete `zh_CN` and `zh_TW` translations for PostgreSQL 14 – 19**
 
 [![Review Workbench](https://img.shields.io/badge/Review_Workbench-pgsql.cc%2Fnls-2f6fa3?style=for-the-badge&logo=postgresql&logoColor=white)](https://pgsql.cc/nls)
 
@@ -15,7 +15,7 @@
 
 </div>
 
-**162 files, 67,501 messages, 100% translated, zero fuzzy, zero untranslated** — every file clean under `msgfmt --check --check-format`.
+**162 files and 67,501 messages per language; 324 files and 135,002 messages in total.** Both languages are 100% translated, with zero fuzzy and zero untranslated entries — every file clean under `msgfmt --check --check-format`.
 
 The initial `zh_CN` baseline from `pgtranslation/messages.git` dated from 2019; its headers still read `Project-Id-Version: postgres (PostgreSQL) 12`. Across PostgreSQL 14 – 19 it carried a reviewed translation for 77.1% of messages; of the remaining 15,475, some 11,770 were fuzzy entries that babel matched by similarity and 3,705 were empty. This repository is a complete set rebuilt from the current templates, with terminology held to a single glossary shared across all catalogs and all six branches, and every message verified against its English original. How that was done is spelled out in [How this was made](#how-this-was-made).
 
@@ -36,8 +36,9 @@ Every message is browsable at **<https://pgsql.cc/nls>** — the English origina
 
 </div>
 
-Message counts describe the current local catalogs; download links refer to the
-dated release below. The upstream percentages describe the initial baseline.
+Catalog and message counts are per language and describe the current local
+catalogs; download links refer to the dated Simplified Chinese release below.
+The upstream percentages describe the initial `zh_CN` baseline.
 
 The branch names link to the same catalogs as they stand today in the upstream translation repository, `pgtranslation/messages.git`:
 
@@ -48,6 +49,9 @@ git clone https://git.postgresql.org/git/pgtranslation/messages.git
 PostgreSQL 19 lives on `master` there; there is no `REL_19_STABLE`. From PG17 on there are two extra catalogs, `pg_combinebackup` and `pg_walsummary` — of which `pg_combinebackup` is a new file for `zh_CN`.
 
 ## Download
+
+The links below identify a historical release. To build the current bilingual
+catalogs locally, see [Usage](#usage).
 
 Release [`20260918`](https://github.com/pgsty/pgnls/releases/tag/20260918) carries one archive per
 upstream branch plus the whole set. Each unpacks to `zh_CN/<branch>/<catalog>.po`, so a
@@ -78,7 +82,7 @@ Checksums for every archive are in `SHA256SUMS` on the same release page.
 zh_CN/<branch>/<catalog>.po       162 catalogs, one directory per upstream branch
 zh_TW/<branch>/<catalog>.po       162 curated Traditional Chinese catalogs
 ref/                              style guide, phrasebook, glossaries, process, errata
-bin/                              standalone tools; Python 3 and GNU gettext only
+bin/                              standalone tools; Python 3, GNU gettext, GNU tar, gzip
 Makefile                          the usual operations
 LICENSE                           the PostgreSQL License, verbatim from postgres.git
 ```
@@ -104,14 +108,36 @@ catalogs: 67,501 messages across the same six branches, all translated.
 ```
 make check            validate all 324 zh_CN/zh_TW catalogs (msgfmt, completeness, headers, alignment)
 make stats            message counts per catalog per branch
-make mo               compile to .mo under build/
-make dist             release assets: six branch zips, a tarball, SHA256SUMS
+make mo               compile both languages to .mo under build/<branch>/<language>/LC_MESSAGES/
+make dist             15 release tarballs covering both languages, plus SHA256SUMS, under dist/<date>/
+make redmine          flat catalog files under dist/<date>/redmine/<language>/<branch>/
 make fetch-upstream   pull a fresh zh_CN snapshot from babel into tmp/
 make diff             compare zh_CN/ against that snapshot: msgid drift and coverage
 make check-align      column alignment by East Asian display width, on its own
 make show BRANCH=master CATALOG=psql
-make clean
+make clean            remove compiled build/ while preserving release assets in dist/
 ```
+
+`make dist` requires GNU tar (`gtar` on macOS), gzip and `shasum`. It creates
+one bilingual archive, one complete archive per language, and six branch
+archives per language, plus `SHA256SUMS`. Each archive contains `LICENSE` and
+PO files preserving `<language>/<branch>/<catalog>.po`; it does not contain
+compiled MO files. `make mo` compiles all 324 catalogs separately for local use.
+
+Set `STAMP` to choose the release label and `DIST` to choose the output directory:
+
+```bash
+STAMP=20260929 make dist
+# Or build another copy in a fresh directory:
+STAMP=20260929 DIST=/tmp/pgnls-20260929 make dist
+```
+
+The default output directory is `dist/<STAMP>/`. Existing release files are
+never overwritten; choose a fresh directory to rebuild. Archive member order,
+ownership, permissions and timestamps are normalized, and gzip timestamps are
+omitted. `SOURCE_DATE_EPOCH` defaults to the current Git commit timestamp; when
+building an exported source tree without `.git`, pass that timestamp explicitly.
+The same PO files, stamp, epoch and archive tools produce identical archives.
 
 For a PGWeb installation with the language migration applied, generate a
 language-scoped review bundle from the curated catalogs and the matching Babel
@@ -139,7 +165,10 @@ To land these in `messages.git`, check out the matching branch and overwrite `zh
 cp zh_CN/REL_18_STABLE/*.po /path/to/messages/zh_CN/
 ```
 
-The zips from `make dist` use the flat `<catalog>-zh_CN.po` naming the Redmine patch tracker asks for — same bytes as `zh_CN/`, different filenames. The tarball keeps this repository's layout.
+`make redmine` prepares separate language and branch directories containing
+`<catalog>-zh_CN.po` or `<catalog>-zh_TW.po`, using the same bytes as the source
+catalogs. Its default output is `dist/<STAMP>/redmine/`; set `OUT` to use another
+directory. These flat submission files are separate from the release tarballs.
 
 ## History
 
