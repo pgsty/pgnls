@@ -5,17 +5,29 @@ Verified counts come from the published catalogs, not from memory.
 
 ## Open
 
-### `"members"` should not be translated
-
-`multixact "members" limit exceeded` and its companions render `"members"` as
-成员. It is the name of the `pg_multixact/members` storage area — the quotes in
-the English are marking a name, not emphasising a noun — so it should stay as
-`"members"`, the way other on-disk names are left alone.
-
-Affected: 5 files. Not yet fixed; queued for the next revision, and disclosed on
-the Redmine issues rather than left for a reviewer to find.
+None currently recorded.
 
 ## Resolved
+
+### `"members"` — earlier erratum withdrawn
+
+An earlier erratum said that `members` in `multixact "members" limit exceeded`
+must remain in English because it names the `pg_multixact/members` storage area.
+Reviewing the complete calling context on 2026-09-29 does not support that
+requirement.
+
+`GetNewMultiXactId` checks whether allocating new member records would cross the
+member-space wraparound boundary. The accompanying detail compares the requested
+member count with the remaining capacity, and the hint recommends VACUUM with
+lower multixact freeze ages. This is a member-space capacity error, not a path
+access error. The storage directory has the same name, but that and the quotation
+marks do not require treating the word as a literal path in this message.
+See the [PG18 source context](https://github.com/postgres/postgres/blob/REL_18_STABLE/src/backend/access/transam/multixact.c).
+
+The existing translations, `多事务 "成员" 超过限制` and
+`超過多重交易 "成員" 的限制`, are retained. The message occurs in ten active
+entries across PG14–18 and both languages; the earlier count of five included
+only Simplified Chinese. PG19 has no active entry for this message.
 
 ### `cluster` — glossary drift
 
