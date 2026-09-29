@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 15\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
 "POT-Creation-Date: 2026-09-17 19:30+0000\n"
-"PO-Revision-Date: 2026-09-20 12:27+0800\n"
+"PO-Revision-Date: 2026-09-29 14:35+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
@@ -5284,6 +5284,11 @@ msgstr "二進位升級模式下未設定 relfilenode 值"
 #, c-format
 msgid "cannot add NO INHERIT constraint to partitioned table \"%s\""
 msgstr "不能向分割資料表 \"%s\" 新增 NO INHERIT 條件約束"
+
+#: catalog/heap.c:2297 catalog/heap.c:2569
+#, c-format
+msgid "too many check constraints on relation \"%s\""
+msgstr "關聯 \"%s\" 的檢查條件約束過多"
 
 # catalog/heap.c:1640
 #: catalog/heap.c:2497

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 14\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
 "POT-Creation-Date: 2026-09-16 11:46+0000\n"
-"PO-Revision-Date: 2026-09-17 16:00+0800\n"
+"PO-Revision-Date: 2026-09-29 14:35+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
 "Language: zh_CN\n"
@@ -4622,6 +4622,11 @@ msgstr "二进制升级模式下未设置堆关系的 pg_class OID 值"
 #, c-format
 msgid "cannot add NO INHERIT constraint to partitioned table \"%s\""
 msgstr "不能向分区表 \"%s\" 添加 NO INHERIT 约束"
+
+#: catalog/heap.c:2635 catalog/heap.c:2907
+#, c-format
+msgid "too many check constraints on relation \"%s\""
+msgstr "关系 \"%s\" 的检查约束过多"
 
 #: catalog/heap.c:2835
 #, c-format
