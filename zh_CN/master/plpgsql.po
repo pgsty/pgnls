@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-19 14:39+0000\n"
+"POT-Creation-Date: 2026-10-07 19:09+0000\n"
 "PO-Revision-Date: 2026-09-17 16:00+0800\n"
 "Last-Translator: Feng Ruohang <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
@@ -114,7 +114,7 @@ msgstr "变量 \"%s\" 具有伪类型 %s"
 msgid "type \"%s\" is only a shell"
 msgstr "类型 \"%s\" 只是 shell 类型"
 
-#: pl_comp.c:2088 pl_exec.c:7188
+#: pl_comp.c:2088 pl_exec.c:7195
 #, c-format
 msgid "type %s is not composite"
 msgstr "类型 %s 不是复合类型"
@@ -275,17 +275,17 @@ msgstr "FOR 循环的 BY 值不能为 NULL"
 msgid "BY value of FOR loop must be greater than zero"
 msgstr "FOR 循环的 BY 值必须大于零"
 
-#: pl_exec.c:2928 pl_exec.c:4786
+#: pl_exec.c:2928 pl_exec.c:4793
 #, c-format
 msgid "cursor \"%s\" already in use"
 msgstr "游标 \"%s\" 已在使用"
 
-#: pl_exec.c:2951 pl_exec.c:4856
+#: pl_exec.c:2951 pl_exec.c:4863
 #, c-format
 msgid "arguments given for cursor without arguments"
 msgstr "向不带参数的游标传递了参数"
 
-#: pl_exec.c:2970 pl_exec.c:4875
+#: pl_exec.c:2970 pl_exec.c:4882
 #, c-format
 msgid "arguments required for cursor"
 msgstr "游标需要参数"
@@ -349,7 +349,7 @@ msgstr "不能在非 SETOF 函数中使用 RETURN QUERY"
 msgid "structure of query does not match function result type"
 msgstr "查询结果的结构与函数的返回类型不匹配"
 
-#: pl_exec.c:3663 pl_exec.c:4562 pl_exec.c:9092
+#: pl_exec.c:3663 pl_exec.c:4569 pl_exec.c:9099
 #, c-format
 msgid "query string argument of EXECUTE is null"
 msgstr "EXECUTE 的查询字符串参数为 NULL"
@@ -379,164 +379,164 @@ msgstr "%s"
 msgid "assertion failed"
 msgstr "断言失败"
 
-#: pl_exec.c:4435 pl_exec.c:4625
+#: pl_exec.c:4442 pl_exec.c:4632
 #, c-format
 msgid "cannot COPY to/from client in PL/pgSQL"
 msgstr "不能在 PL/pgSQL 中从客户端或向客户端使用 COPY 命令"
 
-#: pl_exec.c:4441
+#: pl_exec.c:4448
 #, c-format
 msgid "unsupported transaction command in PL/pgSQL"
 msgstr "PL/pgSQL 中不支持的事务命令"
 
-#: pl_exec.c:4464 pl_exec.c:4654
+#: pl_exec.c:4471 pl_exec.c:4661
 #, c-format
 msgid "INTO used with a command that cannot return data"
 msgstr "INTO 不能用于不返回数据的命令"
 
-#: pl_exec.c:4487 pl_exec.c:4677
+#: pl_exec.c:4494 pl_exec.c:4684
 #, c-format
 msgid "query returned no rows"
 msgstr "查询未返回任何行"
 
-#: pl_exec.c:4509 pl_exec.c:4696 pl_exec.c:5834
+#: pl_exec.c:4516 pl_exec.c:4703 pl_exec.c:5841
 #, c-format
 msgid "query returned more than one row"
 msgstr "查询返回超过一行"
 
-#: pl_exec.c:4511
+#: pl_exec.c:4518
 #, c-format
 msgid "Make sure the query returns a single row, or use LIMIT 1."
 msgstr "确保查询返回一行，或使用 LIMIT 1。"
 
-#: pl_exec.c:4527
+#: pl_exec.c:4534
 #, c-format
 msgid "query has no destination for result data"
 msgstr "查询结果数据没有接收目标"
 
-#: pl_exec.c:4528
+#: pl_exec.c:4535
 #, c-format
 msgid "If you want to discard the results of a SELECT, use PERFORM instead."
 msgstr "如果要丢弃 SELECT 语句的结果，改用 PERFORM。"
 
-#: pl_exec.c:4617
+#: pl_exec.c:4624
 #, c-format
 msgid "EXECUTE of SELECT ... INTO is not implemented"
 msgstr "尚未实现通过 EXECUTE 执行 SELECT ... INTO"
 
-#: pl_exec.c:4618
+#: pl_exec.c:4625
 #, c-format
 msgid "You might want to use EXECUTE ... INTO or EXECUTE CREATE TABLE ... AS instead."
 msgstr "可以考虑改用 EXECUTE ... INTO 或 EXECUTE CREATE TABLE ... AS。"
 
-#: pl_exec.c:4631
+#: pl_exec.c:4638
 #, c-format
 msgid "EXECUTE of transaction commands is not implemented"
 msgstr "尚未实现通过 EXECUTE 执行事务命令"
 
-#: pl_exec.c:4941 pl_exec.c:5029
+#: pl_exec.c:4948 pl_exec.c:5036
 #, c-format
 msgid "cursor variable \"%s\" is null"
 msgstr "游标变量 \"%s\" 为 NULL"
 
-#: pl_exec.c:4952 pl_exec.c:5040
+#: pl_exec.c:4959 pl_exec.c:5047
 #, c-format
 msgid "cursor \"%s\" does not exist"
 msgstr "游标 \"%s\" 不存在"
 
-#: pl_exec.c:4965
+#: pl_exec.c:4972
 #, c-format
 msgid "relative or absolute cursor position is null"
 msgstr "游标的相对或绝对位置为 NULL"
 
-#: pl_exec.c:5189 pl_exec.c:5284
+#: pl_exec.c:5196 pl_exec.c:5291
 #, c-format
 msgid "null value cannot be assigned to variable \"%s\" declared NOT NULL"
 msgstr "不能向声明为 NOT NULL 的变量 \"%s\" 赋 NULL 值"
 
-#: pl_exec.c:5265
+#: pl_exec.c:5272
 #, c-format
 msgid "cannot assign non-composite value to a row variable"
 msgstr "不能向行变量赋非复合类型的值"
 
-#: pl_exec.c:5297
+#: pl_exec.c:5304
 #, c-format
 msgid "cannot assign non-composite value to a record variable"
 msgstr "不能向 record 变量赋非复合类型的值"
 
-#: pl_exec.c:5339 pl_exec.c:5512 pl_exec.c:5599 pl_exec.c:5690 pl_exec.c:6887
+#: pl_exec.c:5346 pl_exec.c:5519 pl_exec.c:5606 pl_exec.c:5697 pl_exec.c:6894
 #, c-format
 msgid "record \"%s\" has no field \"%s\""
 msgstr "记录 \"%s\" 没有字段 \"%s\""
 
-#: pl_exec.c:5348
+#: pl_exec.c:5355
 #, c-format
 msgid "cannot assign to system column \"%s\""
 msgstr "不能向系统列 \"%s\" 赋值"
 
-#: pl_exec.c:5797
+#: pl_exec.c:5804
 #, c-format
 msgid "query did not return data"
 msgstr "查询未返回数据"
 
-#: pl_exec.c:5798 pl_exec.c:5810 pl_exec.c:5835 pl_exec.c:5915 pl_exec.c:5920
+#: pl_exec.c:5805 pl_exec.c:5817 pl_exec.c:5842 pl_exec.c:5922 pl_exec.c:5927
 #, c-format
 msgid "query: %s"
 msgstr "查询: %s"
 
-#: pl_exec.c:5806
+#: pl_exec.c:5813
 #, c-format
 msgid "query returned %d column"
 msgid_plural "query returned %d columns"
 msgstr[0] "查询返回 %d 列"
 
-#: pl_exec.c:5914
+#: pl_exec.c:5921
 #, c-format
 msgid "query is SELECT INTO, but it should be plain SELECT"
 msgstr "查询是 SELECT INTO，但应为普通 SELECT"
 
-#: pl_exec.c:5919
+#: pl_exec.c:5926
 #, c-format
 msgid "query is not a SELECT"
 msgstr "查询不是 SELECT"
 
-#: pl_exec.c:6901 pl_exec.c:6941 pl_exec.c:6981
+#: pl_exec.c:6908 pl_exec.c:6948 pl_exec.c:6988
 #, c-format
 msgid "type of parameter %d (%s) does not match that when preparing the plan (%s)"
 msgstr "参数 %d 的类型（%s）与准备计划时的类型（%s）不匹配"
 
-#: pl_exec.c:7392 pl_exec.c:7426 pl_exec.c:7500 pl_exec.c:7526
+#: pl_exec.c:7399 pl_exec.c:7433 pl_exec.c:7507 pl_exec.c:7533
 #, c-format
 msgid "number of source and target fields in assignment does not match"
 msgstr "赋值时源字段与目标字段的数量不匹配"
 
 #. translator: %s represents a name of an extra check
-#: pl_exec.c:7394 pl_exec.c:7428 pl_exec.c:7502 pl_exec.c:7528
+#: pl_exec.c:7401 pl_exec.c:7435 pl_exec.c:7509 pl_exec.c:7535
 #, c-format
 msgid "%s check of %s is active."
 msgstr "%2$s 中的 %1$s 检查已启用。"
 
-#: pl_exec.c:7398 pl_exec.c:7432 pl_exec.c:7506 pl_exec.c:7532
+#: pl_exec.c:7405 pl_exec.c:7439 pl_exec.c:7513 pl_exec.c:7539
 #, c-format
 msgid "Make sure the query returns the exact list of columns."
 msgstr "确保查询返回准确的列列表。"
 
-#: pl_exec.c:7919
+#: pl_exec.c:7926
 #, c-format
 msgid "record \"%s\" is not assigned yet"
 msgstr "记录 \"%s\" 尚未赋值"
 
-#: pl_exec.c:7920
+#: pl_exec.c:7927
 #, c-format
 msgid "The tuple structure of a not-yet-assigned record is indeterminate."
 msgstr "尚未赋值的记录，其元组结构尚不确定。"
 
-#: pl_exec.c:8159
+#: pl_exec.c:8166
 #, c-format
 msgid "cannot cast type %s to %s"
 msgstr "不能把类型 %s 转换为 %s"
 
-#: pl_exec.c:8681 pl_gram.y:3572
+#: pl_exec.c:8688 pl_gram.y:3572
 #, c-format
 msgid "variable \"%s\" is declared CONSTANT"
 msgstr "变量 \"%s\" 已声明为 CONSTANT"

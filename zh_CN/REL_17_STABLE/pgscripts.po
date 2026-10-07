@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pgscripts (PostgreSQL) 14\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-19 15:29+0000\n"
+"POT-Creation-Date: 2026-10-07 07:00+0000\n"
 "PO-Revision-Date: 2024-06-26 11:01+0200\n"
 "Last-Translator: Jie Zhang <zhangjie2@fujitsu.com>\n"
 "Language-Team: Chinese (Simplified) <zhangjie2@fujitsu.com>\n"
@@ -275,18 +275,18 @@ msgstr ""
 "\n"
 
 #: clusterdb.c:275 createdb.c:300 createuser.c:417 dropdb.c:171 dropuser.c:171
-#: pg_isready.c:226 reindexdb.c:887 vacuumdb.c:1171
+#: pg_isready.c:226 reindexdb.c:890 vacuumdb.c:1171
 #, c-format
 msgid "Usage:\n"
 msgstr "使用方法:\n"
 
-#: clusterdb.c:276 reindexdb.c:888 vacuumdb.c:1172
+#: clusterdb.c:276 reindexdb.c:891 vacuumdb.c:1172
 #, c-format
 msgid "  %s [OPTION]... [DBNAME]\n"
 msgstr "  %s [选项]... [数据库名字]\n"
 
 #: clusterdb.c:277 createdb.c:302 createuser.c:419 dropdb.c:173 dropuser.c:173
-#: pg_isready.c:229 reindexdb.c:889 vacuumdb.c:1173
+#: pg_isready.c:229 reindexdb.c:892 vacuumdb.c:1173
 #, c-format
 msgid ""
 "\n"
@@ -336,7 +336,7 @@ msgid "  -?, --help                show this help, then exit\n"
 msgstr "  -?, --help                显示此帮助, 然后退出\n"
 
 #: clusterdb.c:286 createdb.c:319 createuser.c:450 dropdb.c:180 dropuser.c:180
-#: pg_isready.c:235 reindexdb.c:904 vacuumdb.c:1202
+#: pg_isready.c:235 reindexdb.c:907 vacuumdb.c:1202
 #, c-format
 msgid ""
 "\n"
@@ -385,7 +385,7 @@ msgstr ""
 "阅读 SQL 命令 CLUSTER 的描述信息, 以便获得更详细的信息.\n"
 
 #: clusterdb.c:294 createdb.c:327 createuser.c:456 dropdb.c:187 dropuser.c:186
-#: pg_isready.c:240 reindexdb.c:912 vacuumdb.c:1210
+#: pg_isready.c:240 reindexdb.c:915 vacuumdb.c:1210
 #, c-format
 msgid ""
 "\n"
@@ -395,7 +395,7 @@ msgstr ""
 "臭虫报告至<%s>.\n"
 
 #: clusterdb.c:295 createdb.c:328 createuser.c:457 dropdb.c:188 dropuser.c:187
-#: pg_isready.c:241 reindexdb.c:913 vacuumdb.c:1211
+#: pg_isready.c:241 reindexdb.c:916 vacuumdb.c:1211
 #, c-format
 msgid "%s home page: <%s>\n"
 msgstr "%s 主页: <%s>\n"
@@ -463,7 +463,7 @@ msgstr "  %s [选项]... [数据库名称] [描述]\n"
 msgid "  -D, --tablespace=TABLESPACE  default tablespace for the database\n"
 msgstr "  -D, --tablespace=TABLESPACE  数据库默认表空间\n"
 
-#: createdb.c:304 reindexdb.c:893
+#: createdb.c:304 reindexdb.c:896
 #, c-format
 msgid "  -e, --echo                   show the commands being sent to the server\n"
 msgstr "  -e, --echo                   显示发送到服务端的命令\n"
@@ -534,42 +534,42 @@ msgstr "  -h, --host=主机名        数据库服务器的主机名或套接字
 msgid "  -T, --template=TEMPLATE      template database to copy\n"
 msgstr "  -T, --template=TEMPLATE      要拷贝的数据库模板\n"
 
-#: createdb.c:317 reindexdb.c:902
+#: createdb.c:317 reindexdb.c:905
 #, c-format
 msgid "  -V, --version                output version information, then exit\n"
 msgstr "  -V, --version                输出版本信息, 然后退出\n"
 
-#: createdb.c:318 reindexdb.c:903
+#: createdb.c:318 reindexdb.c:906
 #, c-format
 msgid "  -?, --help                   show this help, then exit\n"
 msgstr "  -?, --help                   显示此帮助, 然后退出\n"
 
-#: createdb.c:320 reindexdb.c:905
+#: createdb.c:320 reindexdb.c:908
 #, c-format
 msgid "  -h, --host=HOSTNAME          database server host or socket directory\n"
 msgstr "  -h, --host=HOSTNAME          数据库服务器所在机器的主机名或套接字目录\n"
 
-#: createdb.c:321 reindexdb.c:906
+#: createdb.c:321 reindexdb.c:909
 #, c-format
 msgid "  -p, --port=PORT              database server port\n"
 msgstr "  -p, --port=PORT              数据库服务器端口号\n"
 
-#: createdb.c:322 reindexdb.c:907
+#: createdb.c:322 reindexdb.c:910
 #, c-format
 msgid "  -U, --username=USERNAME      user name to connect as\n"
 msgstr "  -U, --username=USERNAME      联接的用户名\n"
 
-#: createdb.c:323 reindexdb.c:908
+#: createdb.c:323 reindexdb.c:911
 #, c-format
 msgid "  -w, --no-password            never prompt for password\n"
 msgstr "  -w, --no-password            永远不提示输入口令\n"
 
-#: createdb.c:324 reindexdb.c:909
+#: createdb.c:324 reindexdb.c:912
 #, c-format
 msgid "  -W, --password               force password prompt\n"
 msgstr "  -W, --password               强制提示输入口令\n"
 
-#: createdb.c:325 reindexdb.c:910
+#: createdb.c:325 reindexdb.c:913
 #, c-format
 msgid "  --maintenance-db=DBNAME      alternate maintenance database\n"
 msgstr "  --maintenance-db=DBNAME      更改维护数据库\n"
@@ -958,49 +958,55 @@ msgstr "  -U, --username=USERNAME  连接的用户名\n"
 msgid "cannot use multiple jobs to reindex system catalogs"
 msgstr "无法使用多个作业重新索引系统目录"
 
-#: reindexdb.c:218
+#: reindexdb.c:216
+#, fuzzy, c-format
+#| msgid "cannot use multiple jobs to reindex indexes"
+msgid "cannot use multiple jobs to reindex indexes concurrently"
+msgstr "无法使用多个作业重新索引索引"
+
+#: reindexdb.c:221
 #, c-format
 msgid "cannot reindex all databases and a specific one at the same time"
 msgstr "无法对所有数据库和一个指定的索引同时进行索引重建操作"
 
-#: reindexdb.c:298 reindexdb.c:305 vacuumdb.c:514 vacuumdb.c:521 vacuumdb.c:528
+#: reindexdb.c:301 reindexdb.c:308 vacuumdb.c:514 vacuumdb.c:521 vacuumdb.c:528
 #: vacuumdb.c:535 vacuumdb.c:542 vacuumdb.c:549 vacuumdb.c:556 vacuumdb.c:563
 #: vacuumdb.c:570 vacuumdb.c:577 vacuumdb.c:584
 #, c-format
 msgid "cannot use the \"%s\" option on server versions older than PostgreSQL %s"
 msgstr "不能在PostgreSQL %2$s之前的服务器版本上使用 \"%1$s\" 选项"
 
-#: reindexdb.c:604
+#: reindexdb.c:607
 #, c-format
 msgid "reindexing of database \"%s\" failed: %s"
 msgstr "在数据库\"%s\"上重新创建索引失败: %s"
 
-#: reindexdb.c:608
+#: reindexdb.c:611
 #, c-format
 msgid "reindexing of index \"%s\" in database \"%s\" failed: %s"
 msgstr "在数据库\"%2$s\"中对索引\"%1$s\"重新创建失败: %3$s"
 
-#: reindexdb.c:612
+#: reindexdb.c:615
 #, c-format
 msgid "reindexing of schema \"%s\" in database \"%s\" failed: %s"
 msgstr "在数据库\"%2$s\"中对模式\"%1$s\"的索引重建失败：%3$s"
 
-#: reindexdb.c:616
+#: reindexdb.c:619
 #, c-format
 msgid "reindexing of system catalogs in database \"%s\" failed: %s"
 msgstr "在数据库\"%s\"中重新索引系统目录失败: %s"
 
-#: reindexdb.c:620
+#: reindexdb.c:623
 #, c-format
 msgid "reindexing of table \"%s\" in database \"%s\" failed: %s"
 msgstr "在数据库\"%2$s\"中对表\"%1$s\"上的索引重新创建失败: %3$s"
 
-#: reindexdb.c:843
+#: reindexdb.c:846
 #, c-format
 msgid "%s: reindexing database \"%s\"\n"
 msgstr "%s: 对数据库 \"%s\" 重新创建索引\n"
 
-#: reindexdb.c:886
+#: reindexdb.c:889
 #, c-format
 msgid ""
 "%s reindexes a PostgreSQL database.\n"
@@ -1009,63 +1015,63 @@ msgstr ""
 "%s  对一个PostgreSQL 数据库重新创建索引.\n"
 "\n"
 
-#: reindexdb.c:890
+#: reindexdb.c:893
 #, c-format
 msgid "  -a, --all                    reindex all databases\n"
 msgstr "  -a, --all                    对所有数据库进行重建索引操作\n"
 
-#: reindexdb.c:891
+#: reindexdb.c:894
 #, c-format
 msgid "      --concurrently           reindex concurrently\n"
 msgstr "      --concurrently           同时重新索引\n"
 
-#: reindexdb.c:892
+#: reindexdb.c:895
 #, c-format
 msgid "  -d, --dbname=DBNAME          database to reindex\n"
 msgstr "  -d, --dbname=DBNAME          对数据库中的索引进行重建\n"
 
-#: reindexdb.c:894
+#: reindexdb.c:897
 #, c-format
 msgid "  -i, --index=INDEX            recreate specific index(es) only\n"
 msgstr "  -i, --index=INDEX            仅重新创建指定的索引\n"
 
-#: reindexdb.c:895
+#: reindexdb.c:898
 #, c-format
 msgid "  -j, --jobs=NUM               use this many concurrent connections to reindex\n"
 msgstr "  -j, --jobs=NUM               使用这么多并发连接来重新创建索引\n"
 
-#: reindexdb.c:896
+#: reindexdb.c:899
 #, c-format
 msgid "  -q, --quiet                  don't write any messages\n"
 msgstr "  -q, --quiet                  不写任何信息\n"
 
-#: reindexdb.c:897
+#: reindexdb.c:900
 #, fuzzy, c-format
 #| msgid "  -s, --system                 reindex system catalogs\n"
 msgid "  -s, --system                 reindex system catalogs only\n"
 msgstr "  -s, --system                 对系统视图重新创建索引\n"
 
-#: reindexdb.c:898
+#: reindexdb.c:901
 #, c-format
 msgid "  -S, --schema=SCHEMA          reindex specific schema(s) only\n"
 msgstr "  -S, --schema=SCHEMA          只对指定模式重建索引\n"
 
-#: reindexdb.c:899
+#: reindexdb.c:902
 #, c-format
 msgid "  -t, --table=TABLE            reindex specific table(s) only\n"
 msgstr "  -t, --table=TABLE            只对指定的表重新创建索引\n"
 
-#: reindexdb.c:900
+#: reindexdb.c:903
 #, c-format
 msgid "      --tablespace=TABLESPACE  tablespace where indexes are rebuilt\n"
 msgstr "      --tablespace=TABLESPACE  重建索引的表空间\n"
 
-#: reindexdb.c:901
+#: reindexdb.c:904
 #, c-format
 msgid "  -v, --verbose                write a lot of output\n"
 msgstr "  -v, --verbose                写大量的输出\n"
 
-#: reindexdb.c:911
+#: reindexdb.c:914
 #, c-format
 msgid ""
 "\n"
@@ -1344,9 +1350,6 @@ msgstr ""
 
 #~ msgid "cannot reindex system catalogs concurrently, skipping all"
 #~ msgstr "无法同时重新索引系统目录，跳过所有"
-
-#~ msgid "cannot use multiple jobs to reindex indexes"
-#~ msgstr "无法使用多个作业重新索引索引"
 
 #, c-format
 #~ msgid "cannot vacuum specific table(s) in all databases"

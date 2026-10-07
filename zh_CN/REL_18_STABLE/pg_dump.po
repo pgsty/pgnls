@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_dump (PostgreSQL) 14\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-19 15:12+0000\n"
+"POT-Creation-Date: 2026-10-07 06:42+0000\n"
 "PO-Revision-Date: 2024-06-26 10:59+0200\n"
 "Last-Translator: Jie Zhang <zhangjie2@fujitsu.com>\n"
 "Language-Team: Chinese (Simplified) <zhangjie2@fujitsu.com>\n"
@@ -1136,12 +1136,12 @@ msgstr "为了读取, 无法打开文件 \"%s\": %m"
 msgid "unrecognized file format \"%d\""
 msgstr "不可识别的文件格式 \"%d\""
 
-#: pg_backup_archiver.c:2567 pg_backup_archiver.c:4837
+#: pg_backup_archiver.c:2567 pg_backup_archiver.c:4839
 #, c-format
 msgid "finished item %d %s %s"
 msgstr "已完成的成员%d %s %s"
 
-#: pg_backup_archiver.c:2571 pg_backup_archiver.c:4850
+#: pg_backup_archiver.c:2571 pg_backup_archiver.c:4852
 #, c-format
 msgid "worker process failed: exit code %d"
 msgstr "子进程已退出, 退出码为 %d"
@@ -1213,107 +1213,107 @@ msgstr "触发器\"%s\"没有找到"
 msgid "could not set session user to \"%s\": %s"
 msgstr "无法设置会话用户为 \"%s\": %s"
 
-#: pg_backup_archiver.c:3651
+#: pg_backup_archiver.c:3653
 #, fuzzy, c-format
 #| msgid "could not set search_path to \"%s\": %s"
 msgid "could not set \"search_path\" to \"%s\": %s"
 msgstr "无法将search_path设置为\"%s\": %s"
 
-#: pg_backup_archiver.c:3712
+#: pg_backup_archiver.c:3714
 #, fuzzy, c-format
 #| msgid "could not set default_tablespace to %s: %s"
 msgid "could not set \"default_tablespace\" to %s: %s"
 msgstr "无法将default_tablespace设置为%s: %s"
 
-#: pg_backup_archiver.c:3761
+#: pg_backup_archiver.c:3763
 #, fuzzy, c-format
 #| msgid "could not set default_table_access_method: %s"
 msgid "could not set \"default_table_access_method\": %s"
 msgstr "无法统设置default_table_access_method: %s"
 
-#: pg_backup_archiver.c:3810
+#: pg_backup_archiver.c:3812
 #, fuzzy, c-format
 #| msgid "could not set default_table_access_method: %s"
 msgid "could not alter table access method: %s"
 msgstr "无法统设置default_table_access_method: %s"
 
-#: pg_backup_archiver.c:3911
+#: pg_backup_archiver.c:3913
 #, c-format
 msgid "don't know how to set owner for object type \"%s\""
 msgstr "不知道如何为对象类型\"%s\"设置属主"
 
-#: pg_backup_archiver.c:4046
+#: pg_backup_archiver.c:4048
 #, c-format
 msgid "unexpected TOC entry in _printTocEntry(): %d %s %s"
 msgstr ""
 
-#: pg_backup_archiver.c:4194
+#: pg_backup_archiver.c:4196
 #, c-format
 msgid "did not find magic string in file header"
 msgstr "在文件头中没有找到魔术字串"
 
-#: pg_backup_archiver.c:4208
+#: pg_backup_archiver.c:4210
 #, c-format
 msgid "unsupported version (%d.%d) in file header"
 msgstr "在文件头中有不支持的版本 (%d.%d)"
 
-#: pg_backup_archiver.c:4213
+#: pg_backup_archiver.c:4215
 #, c-format
 msgid "sanity check on integer size (%lu) failed"
 msgstr "整数尺寸 (%lu) 的健全检查失败"
 
-#: pg_backup_archiver.c:4217
+#: pg_backup_archiver.c:4219
 #, c-format
 msgid "archive was made on a machine with larger integers, some operations might fail"
 msgstr "归档不是在支持更大范围整数的主机上产生的, 有些操作可能失败"
 
-#: pg_backup_archiver.c:4227
+#: pg_backup_archiver.c:4229
 #, c-format
 msgid "expected format (%d) differs from format found in file (%d)"
 msgstr "预期的格式 (%d) 和在文件里找到的格式 (%d) 不同"
 
-#: pg_backup_archiver.c:4249
+#: pg_backup_archiver.c:4251
 #, fuzzy, c-format
 #| msgid "archive is compressed, but this installation does not support compression -- no data will be available"
 msgid "archive is compressed, but this installation does not support compression (%s) -- no data will be available"
 msgstr "归档是压缩过的, 但是当前安装不支持压缩 -- 数据将不可使用"
 
-#: pg_backup_archiver.c:4285
+#: pg_backup_archiver.c:4287
 #, c-format
 msgid "invalid creation date in header"
 msgstr "在头中的创建日期无效"
 
-#: pg_backup_archiver.c:4419
+#: pg_backup_archiver.c:4421
 #, c-format
 msgid "processing item %d %s %s"
 msgstr "正在处理成员%d %s %s"
 
-#: pg_backup_archiver.c:4504
+#: pg_backup_archiver.c:4506
 #, c-format
 msgid "entering main parallel loop"
 msgstr "正在进入主并行循环"
 
-#: pg_backup_archiver.c:4515
+#: pg_backup_archiver.c:4517
 #, c-format
 msgid "skipping item %d %s %s"
 msgstr "忽略成员%d %s %s"
 
-#: pg_backup_archiver.c:4524
+#: pg_backup_archiver.c:4526
 #, c-format
 msgid "launching item %d %s %s"
 msgstr "正在启动成员%d %s %s"
 
-#: pg_backup_archiver.c:4578
+#: pg_backup_archiver.c:4580
 #, c-format
 msgid "finished main parallel loop"
 msgstr "已完成主并行循环"
 
-#: pg_backup_archiver.c:4614
+#: pg_backup_archiver.c:4616
 #, c-format
 msgid "processing missed item %d %s %s"
 msgstr "正在处理丢失的成员%d %s %s"
 
-#: pg_backup_archiver.c:5156
+#: pg_backup_archiver.c:5158
 #, c-format
 msgid "table \"%s\" could not be created, will not restore its data"
 msgstr "无法创建表\"%s\" , 这样无法恢复它的数据"
@@ -2348,8 +2348,8 @@ msgstr "从一个表移除一条行级安全性策略"
 msgid "unexpected policy command type: %c"
 msgstr "意外的策略命令类型：%c"
 
-#: pg_dump.c:4801 pg_dump.c:5358 pg_dump.c:7979 pg_dump.c:13459 pg_dump.c:19671
-#: pg_dump.c:19673 pg_dump.c:20305
+#: pg_dump.c:4801 pg_dump.c:5358 pg_dump.c:7979 pg_dump.c:13459 pg_dump.c:19679
+#: pg_dump.c:19681 pg_dump.c:20313
 #, fuzzy, c-format
 #| msgid "could not parse reloptions array"
 msgid "could not parse %s array"
@@ -2387,7 +2387,7 @@ msgstr "OID 为 %u 的模式不存在"
 msgid "cannot dump statistics for relation kind \"%c\""
 msgstr "不能删除系统关系 \"%s\""
 
-#: pg_dump.c:7514 pg_dump.c:18998
+#: pg_dump.c:7514 pg_dump.c:19006
 #, c-format
 msgid "failed sanity check, parent table with OID %u of sequence with OID %u not found"
 msgstr "健全检查失败,序列OID %2$u 的源表 OID%1$u 未找到"
@@ -2625,85 +2625,85 @@ msgstr "不再支持 WITH OIDS  (表\"%s\")"
 msgid "invalid column number %d for table \"%s\""
 msgstr "对于表 \"%2$s\" 字段个数 %1$d 是无效的"
 
-#: pg_dump.c:18153
+#: pg_dump.c:18098
 #, c-format
 msgid "could not parse index statistic columns"
 msgstr "无法解析索引统计列"
 
-#: pg_dump.c:18155
+#: pg_dump.c:18100
 #, c-format
 msgid "could not parse index statistic values"
 msgstr "无法解析索引统计值"
 
-#: pg_dump.c:18157
+#: pg_dump.c:18102
 #, c-format
 msgid "mismatched number of columns and values for index statistics"
 msgstr ""
 
-#: pg_dump.c:18386
+#: pg_dump.c:18391
 #, c-format
 msgid "missing index for constraint \"%s\""
 msgstr "对于约束 \"%s\" 缺少索引"
 
-#: pg_dump.c:18655
+#: pg_dump.c:18663
 #, c-format
 msgid "unrecognized constraint type: %c"
 msgstr "未知的约束类型: %c"
 
-#: pg_dump.c:18708
+#: pg_dump.c:18716
 #, c-format
 msgid "unrecognized sequence type: %s"
 msgstr "无法识别的序列类型: %s"
 
-#: pg_dump.c:18841 pg_dump.c:19079
+#: pg_dump.c:18849 pg_dump.c:19087
 #, c-format
 msgid "query to get data of sequence \"%s\" returned %d row (expected 1)"
 msgid_plural "query to get data of sequence \"%s\" returned %d rows (expected 1)"
 msgstr[0] "查询得到了序列\"%s\"的数据，返回了%d条记录(期望一条)"
 msgstr[1] "查询得到了序列\"%s\"的数据，返回了%d条记录(期望一条)"
 
-#: pg_dump.c:18877
+#: pg_dump.c:18885
 #, fuzzy, c-format
 #| msgid "unrecognized sequence type: %s"
 msgid "unrecognized sequence type: %d"
 msgstr "无法识别的序列类型: %s"
 
-#: pg_dump.c:19102
+#: pg_dump.c:19110
 #, c-format
 msgid "failed to get data for sequence \"%s\"; user may lack SELECT privilege on the sequence or the sequence may have been concurrently dropped"
 msgstr ""
 
-#: pg_dump.c:19423
+#: pg_dump.c:19431
 #, c-format
 msgid "query to get rule \"%s\" for table \"%s\" failed: wrong number of rows returned"
 msgstr "获取表 \"%2$s\" 的规则 \"%1$s\" 查询失败: 返回了错误的行数"
 
-#: pg_dump.c:19576
+#: pg_dump.c:19584
 #, c-format
 msgid "could not find referenced extension %u"
 msgstr "找不到引用的扩展名%u"
 
-#: pg_dump.c:19675
+#: pg_dump.c:19683
 #, c-format
 msgid "mismatched number of configurations and conditions for extension"
 msgstr "扩展的配置和条件数量不匹配"
 
-#: pg_dump.c:19807
+#: pg_dump.c:19815
 #, c-format
 msgid "reading dependency data"
 msgstr "读取从属数据"
 
-#: pg_dump.c:19893
+#: pg_dump.c:19901
 #, c-format
 msgid "no referencing object %u %u"
 msgstr "没有引用对象%u %u"
 
-#: pg_dump.c:19904
+#: pg_dump.c:19912
 #, c-format
 msgid "no referenced object %u %u"
 msgstr "没有引用的对象 %u %u"
 
-#: pg_dump.c:20339 pg_dump.c:20377 pg_dumpall.c:1853 pg_restore.c:642
+#: pg_dump.c:20347 pg_dump.c:20385 pg_dumpall.c:1853 pg_restore.c:642
 #: pg_restore.c:688
 #, fuzzy, c-format
 #| msgid "access to library \"%s\" is not allowed"
