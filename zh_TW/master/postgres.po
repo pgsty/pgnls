@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-10-07 19:19+0000\n"
-"PO-Revision-Date: 2026-10-08 15:05+0800\n"
+"POT-Creation-Date: 2026-10-08 04:19+0000\n"
+"PO-Revision-Date: 2026-10-08 16:06+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
@@ -11267,13 +11267,13 @@ msgid "cannot set comment on relation \"%s\""
 msgstr "不能為關聯 \"%s\" 設定註解"
 
 # utils/adt/ri_triggers.c:2921
-#: commands/constraint.c:61 utils/adt/ri_triggers.c:2270
+#: commands/constraint.c:61 utils/adt/ri_triggers.c:2272
 #, c-format
 msgid "function \"%s\" was not called by trigger manager"
 msgstr "觸發器管理員未呼叫函式 \"%s\""
 
 # utils/adt/ri_triggers.c:2930
-#: commands/constraint.c:68 utils/adt/ri_triggers.c:2279
+#: commands/constraint.c:68 utils/adt/ri_triggers.c:2281
 #, c-format
 msgid "function \"%s\" must be fired AFTER ROW"
 msgstr "函式 \"%s\" 必須由 AFTER ROW 觸發器引發"
@@ -18519,7 +18519,7 @@ msgstr "考慮使用 AFTER 觸發器代替 BEFORE 觸發器，將變更傳播到
 #: commands/trigger.c:3459 executor/nodeLockRows.c:228
 #: executor/nodeModifyTable.c:403 executor/nodeModifyTable.c:1738
 #: executor/nodeModifyTable.c:2644 executor/nodeModifyTable.c:2850
-#: executor/nodeModifyTable.c:3588 utils/adt/ri_triggers.c:2971
+#: executor/nodeModifyTable.c:3588 utils/adt/ri_triggers.c:2989
 #, c-format
 msgid "could not serialize access due to concurrent update"
 msgstr "因為並行更新，無法序列化存取"
@@ -18529,7 +18529,7 @@ msgstr "因為並行更新，無法序列化存取"
 #: commands/trigger.c:3467 executor/nodeLockRows.c:237
 #: executor/nodeModifyTable.c:1828 executor/nodeModifyTable.c:2735
 #: executor/nodeModifyTable.c:2866 executor/nodeModifyTable.c:3562
-#: utils/adt/ri_triggers.c:2964
+#: utils/adt/ri_triggers.c:2982
 #, c-format
 msgid "could not serialize access due to concurrent delete"
 msgstr "由於並行刪除，無法序列化存取"
@@ -21090,7 +21090,7 @@ msgstr "對於產生欄位，必須指定 GENERATED ALWAYS"
 # utils/adt/ri_triggers.c:2055 utils/adt/ri_triggers.c:2235
 # utils/adt/ri_triggers.c:2440 utils/adt/ri_triggers.c:2536
 # utils/adt/ri_triggers.c:2659
-#: gram.y:4534 utils/adt/ri_triggers.c:2354
+#: gram.y:4534 utils/adt/ri_triggers.c:2356
 #, c-format
 msgid "MATCH PARTIAL not yet implemented"
 msgstr "MATCH PARTIAL 尚未實作"
@@ -29333,11 +29333,6 @@ msgstr "同步可能導致資料遺失，因為待命伺服器無法建置一致
 msgid "dropped replication slot \"%s\" of database with OID %u"
 msgstr "已刪除資料庫 OID 為 %2$u 的複寫槽 \"%1$s\""
 
-#~ #: replication/logical/slotsync.c:739
-#~ #, c-format
-#~ msgid "Logical decoding was concurrently disabled."
-#~ msgstr "邏輯解碼被並行停用。"
-
 #: replication/logical/slotsync.c:715
 #, c-format
 msgid "newly created replication slot \"%s\" is sync-ready now"
@@ -37405,108 +37400,108 @@ msgstr "不合適的型別名稱"
 
 # utils/adt/ri_triggers.c:337 utils/adt/ri_triggers.c:2743
 # utils/adt/ri_triggers.c:3248 utils/adt/ri_triggers.c:3285
-#: utils/adt/ri_triggers.c:389 utils/adt/ri_triggers.c:1870
-#: utils/adt/ri_triggers.c:3522
+#: utils/adt/ri_triggers.c:391 utils/adt/ri_triggers.c:1872
+#: utils/adt/ri_triggers.c:3540
 #, c-format
 msgid "insert or update on table \"%s\" violates foreign key constraint \"%s\""
 msgstr "資料表 \"%s\" 的插入或更新違反外來鍵限制 \"%s\""
 
 # utils/adt/ri_triggers.c:340 utils/adt/ri_triggers.c:2746
-#: utils/adt/ri_triggers.c:392 utils/adt/ri_triggers.c:1873
+#: utils/adt/ri_triggers.c:394 utils/adt/ri_triggers.c:1875
 #, c-format
 msgid "MATCH FULL does not allow mixing of null and nonnull key values."
 msgstr "MATCH FULL 不允許混合 NULL 和非 NULL 鍵值。"
 
 # utils/adt/ri_triggers.c:2938
-#: utils/adt/ri_triggers.c:2287
+#: utils/adt/ri_triggers.c:2289
 #, c-format
 msgid "function \"%s\" must be fired for INSERT"
 msgstr "函式 \"%s\" 必須針對 INSERT 引發"
 
 # utils/adt/ri_triggers.c:2944
-#: utils/adt/ri_triggers.c:2293
+#: utils/adt/ri_triggers.c:2295
 #, c-format
 msgid "function \"%s\" must be fired for UPDATE"
 msgstr "函式 \"%s\" 必須針對 UPDATE 引發"
 
 # utils/adt/ri_triggers.c:2958
-#: utils/adt/ri_triggers.c:2299
+#: utils/adt/ri_triggers.c:2301
 #, c-format
 msgid "function \"%s\" must be fired for DELETE"
 msgstr "函式 \"%s\" 必須針對 DELETE 引發"
 
-#: utils/adt/ri_triggers.c:2322
+#: utils/adt/ri_triggers.c:2324
 #, c-format
 msgid "no pg_constraint entry for trigger \"%s\" on table \"%s\""
 msgstr "觸發器 \"%s\" (在資料表 \"%s\") 沒有 pg_constraint 項目"
 
 # utils/adt/ri_triggers.c:2503 utils/adt/ri_triggers.c:2984
-#: utils/adt/ri_triggers.c:2324
+#: utils/adt/ri_triggers.c:2326
 #, c-format
 msgid "Remove this referential integrity trigger and its mates, then do ALTER TABLE ADD CONSTRAINT."
 msgstr "移除此參考完整性觸發器及其配套觸發器，然後執行 ALTER TABLE ADD CONSTRAINT。"
 
 # utils/adt/ri_triggers.c:3215
-#: utils/adt/ri_triggers.c:2743
+#: utils/adt/ri_triggers.c:2745
 #, c-format
 msgid "referential integrity query on \"%s\" from constraint \"%s\" on \"%s\" gave unexpected result"
 msgstr "\"%s\" 上的參考完整性查詢 (來自限制 \"%s\" 於 \"%s\") 產生非預期的結果"
 
 # utils/adt/ri_triggers.c:3219
-#: utils/adt/ri_triggers.c:2747
+#: utils/adt/ri_triggers.c:2749
 #, c-format
 msgid "This is most likely due to a rule having rewritten the query."
 msgstr "最可能的原因是規則已重寫查詢。"
 
 # utils/adt/ri_triggers.c:337 utils/adt/ri_triggers.c:2743
 # utils/adt/ri_triggers.c:3248 utils/adt/ri_triggers.c:3285
-#: utils/adt/ri_triggers.c:3512
+#: utils/adt/ri_triggers.c:3530
 #, c-format
 msgid "removing partition \"%s\" violates foreign key constraint \"%s\""
 msgstr "分離分割 \"%s\" 違反外來鍵條件約束 \"%s\""
 
 # utils/adt/ri_triggers.c:3296
-#: utils/adt/ri_triggers.c:3515 utils/adt/ri_triggers.c:3554
+#: utils/adt/ri_triggers.c:3533 utils/adt/ri_triggers.c:3572
 #, c-format
 msgid "Key (%s)=(%s) is still referenced from table \"%s\"."
 msgstr "索引鍵 (%s)=(%s) 仍被資料表 \"%s\" 參考。"
 
 # utils/adt/ri_triggers.c:3287
-#: utils/adt/ri_triggers.c:3526
+#: utils/adt/ri_triggers.c:3544
 #, c-format
 msgid "Key (%s)=(%s) is not present in table \"%s\"."
 msgstr "索引鍵 (%s)=(%s) 沒有出現在資料表 \"%s\"。"
 
 # utils/adt/ri_triggers.c:3287
-#: utils/adt/ri_triggers.c:3529
+#: utils/adt/ri_triggers.c:3547
 #, c-format
 msgid "Key is not present in table \"%s\"."
 msgstr "資料表 \"%s\" 中不存在索引鍵。"
 
-#: utils/adt/ri_triggers.c:3535
+#: utils/adt/ri_triggers.c:3553
 #, c-format
 msgid "update or delete on table \"%s\" violates RESTRICT setting of foreign key constraint \"%s\" on table \"%s\""
 msgstr "對資料表 \"%1$s\" 的更新或刪除違反資料表 \"%3$s\" 上外來鍵條件約束 \"%2$s\" 的 RESTRICT 設定"
 
 # utils/adt/ri_triggers.c:3296
-#: utils/adt/ri_triggers.c:3540
+#: utils/adt/ri_triggers.c:3558
 #, c-format
 msgid "Key (%s)=(%s) is referenced from table \"%s\"."
 msgstr "索引鍵 (%s)=(%s) 被資料表 \"%s\" 引用。"
 
 # utils/adt/ri_triggers.c:3296
-#: utils/adt/ri_triggers.c:3543
+#: utils/adt/ri_triggers.c:3561
 #, c-format
 msgid "Key is referenced from table \"%s\"."
 msgstr "索引鍵被資料表 \"%s\" 引用。"
 
-#: utils/adt/ri_triggers.c:3549
+#: utils/adt/ri_triggers.c:3567
 #, c-format
 msgid "update or delete on table \"%s\" violates foreign key constraint \"%s\" on table \"%s\""
 msgstr "資料表 \"%s\" 的更新或刪除違反外來鍵限制 \"%s\" (於資料表 \"%s\")"
 
 # utils/adt/ri_triggers.c:3296
-#: utils/adt/ri_triggers.c:3557
+#: utils/adt/ri_triggers.c:3575
 #, c-format
 msgid "Key is still referenced from table \"%s\"."
 msgstr "索引鍵仍被資料表 \"%s\" 引用。"
