@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 17\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-29 13:57+0000\n"
-"PO-Revision-Date: 2026-09-29 22:12+0800\n"
+"POT-Creation-Date: 2026-10-07 06:56+0000\n"
+"PO-Revision-Date: 2026-10-08 15:05+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
@@ -109,8 +109,8 @@ msgstr "無法開啟檔案 \"%s\" 以讀取: %m"
 #: backup/walsummary.c:283 commands/extension.c:3678 libpq/hba.c:764
 #: replication/logical/origin.c:745 replication/logical/origin.c:781
 #: replication/logical/reorderbuffer.c:5262
-#: replication/logical/snapbuild.c:2139 replication/slot.c:2283
-#: replication/slot.c:2324 replication/walsender.c:673
+#: replication/logical/snapbuild.c:2139 replication/slot.c:2291
+#: replication/slot.c:2332 replication/walsender.c:673
 #: storage/file/buffile.c:470 storage/file/copydir.c:185
 #: utils/adt/genfile.c:197 utils/adt/misc.c:1028 utils/cache/relmapper.c:829
 #, c-format
@@ -124,8 +124,8 @@ msgstr "無法讀取檔案 \"%s\": %m"
 #: ../common/controldata_utils.c:116 ../common/controldata_utils.c:119
 #: access/transam/xlog.c:3459 access/transam/xlog.c:4323
 #: replication/logical/origin.c:750 replication/logical/origin.c:789
-#: replication/logical/snapbuild.c:2144 replication/slot.c:2287
-#: replication/slot.c:2328 replication/walsender.c:678
+#: replication/logical/snapbuild.c:2144 replication/slot.c:2295
+#: replication/slot.c:2336 replication/walsender.c:678
 #: utils/cache/relmapper.c:833
 #, c-format
 msgid "could not read file \"%s\": read %d of %zu"
@@ -146,7 +146,7 @@ msgstr "無法讀取檔案 \"%1$s\": 應讀取 %3$zu，實際讀取 %2$d"
 #: replication/logical/origin.c:683 replication/logical/origin.c:822
 #: replication/logical/reorderbuffer.c:5314
 #: replication/logical/snapbuild.c:1906 replication/logical/snapbuild.c:2030
-#: replication/slot.c:2171 replication/slot.c:2335 replication/walsender.c:688
+#: replication/slot.c:2179 replication/slot.c:2343 replication/walsender.c:688
 #: storage/file/copydir.c:208 storage/file/copydir.c:213 storage/file/fd.c:828
 #: storage/file/fd.c:3753 storage/file/fd.c:3859 utils/cache/relmapper.c:841
 #: utils/cache/relmapper.c:956
@@ -192,7 +192,7 @@ msgstr ""
 #: replication/logical/reorderbuffer.c:4469
 #: replication/logical/reorderbuffer.c:5242
 #: replication/logical/snapbuild.c:1861 replication/logical/snapbuild.c:1971
-#: replication/slot.c:2255 replication/walsender.c:646
+#: replication/slot.c:2263 replication/walsender.c:646
 #: replication/walsender.c:3130 storage/file/copydir.c:151
 #: storage/file/fd.c:803 storage/file/fd.c:3510 storage/file/fd.c:3740
 #: storage/file/fd.c:3830 storage/smgr/md.c:672 utils/cache/relmapper.c:818
@@ -226,7 +226,7 @@ msgstr "無法寫入檔案 \"%s\": %m"
 #: access/transam/xlog.c:4281 access/transam/xlog.c:8713
 #: access/transam/xlog.c:8758 backup/basebackup_server.c:207
 #: commands/dbcommands.c:514 replication/logical/snapbuild.c:1899
-#: replication/slot.c:2155 replication/slot.c:2265 storage/file/fd.c:820
+#: replication/slot.c:2163 replication/slot.c:2273 storage/file/fd.c:820
 #: storage/file/fd.c:3851 storage/smgr/md.c:1345 storage/smgr/md.c:1390
 #: storage/sync/sync.c:446 utils/misc/guc.c:4530
 #, c-format
@@ -448,8 +448,8 @@ msgstr "無法讀取目錄 \"%s\": %m"
 # postmaster/pgarch.c:597
 #: ../common/file_utils.c:498 access/transam/xlogarchive.c:389
 #: postmaster/pgarch.c:834 postmaster/syslogger.c:1559
-#: replication/logical/snapbuild.c:1918 replication/slot.c:967
-#: replication/slot.c:2038 replication/slot.c:2187 storage/file/fd.c:838
+#: replication/logical/snapbuild.c:1918 replication/slot.c:975
+#: replication/slot.c:2046 replication/slot.c:2195 storage/file/fd.c:838
 #: utils/time/snapmgr.c:1295
 #, c-format
 msgid "could not rename file \"%s\" to \"%s\": %m"
@@ -819,7 +819,7 @@ msgstr "無法從子行程取得結束碼: 錯誤碼 %lu"
 #: postmaster/postmaster.c:1049 postmaster/syslogger.c:1488
 #: replication/logical/origin.c:591 replication/logical/reorderbuffer.c:4738
 #: replication/logical/snapbuild.c:1799 replication/logical/snapbuild.c:2233
-#: replication/slot.c:2239 storage/file/fd.c:878 storage/file/fd.c:3378
+#: replication/slot.c:2247 storage/file/fd.c:878 storage/file/fd.c:3378
 #: storage/file/fd.c:3440 storage/file/reinit.c:261 storage/ipc/dsm.c:343
 #: storage/smgr/md.c:381 storage/smgr/md.c:440 storage/sync/sync.c:243
 #: utils/time/snapmgr.c:1626
@@ -1584,7 +1584,7 @@ msgstr "無法寫入檔案 \"%1$s\"，應寫入 %3$d，實際寫入 %2$d: %m"
 #: backup/basebackup_server.c:242 commands/dbcommands.c:494
 #: postmaster/launch_backend.c:340 postmaster/postmaster.c:4099
 #: postmaster/walsummarizer.c:1312 replication/logical/origin.c:603
-#: replication/slot.c:2099 storage/file/copydir.c:157 storage/smgr/md.c:230
+#: replication/slot.c:2107 storage/file/copydir.c:157 storage/smgr/md.c:230
 #: utils/time/snapmgr.c:1274
 #, c-format
 msgid "could not create file \"%s\": %m"
@@ -1607,7 +1607,7 @@ msgstr "無法將檔案 \"%s\" 縮短到 %u: %m"
 #: postmaster/launch_backend.c:351 postmaster/launch_backend.c:363
 #: replication/logical/origin.c:615 replication/logical/origin.c:657
 #: replication/logical/origin.c:676 replication/logical/snapbuild.c:1875
-#: replication/slot.c:2135 storage/file/buffile.c:545
+#: replication/slot.c:2143 storage/file/buffile.c:545
 #: storage/file/copydir.c:197 utils/init/miscinit.c:1656
 #: utils/init/miscinit.c:1667 utils/init/miscinit.c:1675 utils/misc/guc.c:4491
 #: utils/misc/guc.c:4522 utils/misc/guc.c:5680 utils/misc/guc.c:5698
@@ -2979,7 +2979,7 @@ msgstr "\"max_wal_size\" 必須至少是 \"wal_segment_size\" 的兩倍"
 
 #: access/transam/xlog.c:4639 catalog/namespace.c:4707
 #: commands/tablespace.c:1224 commands/user.c:2529 commands/variable.c:72
-#: replication/slot.c:2489 tcop/postgres.c:3735 utils/error/elog.c:2247
+#: replication/slot.c:2497 tcop/postgres.c:3735 utils/error/elog.c:2247
 #, c-format
 msgid "List syntax is invalid."
 msgstr "清單語法不合法。"
@@ -4140,7 +4140,7 @@ msgstr "您可以在完成必要的組態變更後重新啟動伺服器。"
 #: commands/vacuum.c:213 commands/view.c:441 executor/execExprInterp.c:4726
 #: executor/execExprInterp.c:4734 libpq/auth.c:332
 #: replication/logical/applyparallelworker.c:1057 replication/slot.c:261
-#: replication/slot.c:2504 replication/slot.c:2506 replication/syncrep.c:1078
+#: replication/slot.c:2512 replication/slot.c:2514 replication/syncrep.c:1078
 #: storage/lmgr/deadlock.c:1134 storage/lmgr/proc.c:1468 utils/misc/guc.c:3169
 #: utils/misc/guc.c:3210 utils/misc/guc.c:3285 utils/misc/guc.c:6836
 #: utils/misc/guc.c:6870 utils/misc/guc.c:6904 utils/misc/guc.c:6947
@@ -4491,7 +4491,7 @@ msgstr "儲存在伺服器上的備份不允許使用相對路徑"
 # commands/tablespace.c:168
 #: backup/basebackup_server.c:102 commands/dbcommands.c:477
 #: commands/tablespace.c:160 commands/tablespace.c:176
-#: commands/tablespace.c:600 commands/tablespace.c:645 replication/slot.c:2026
+#: commands/tablespace.c:600 commands/tablespace.c:645 replication/slot.c:2034
 #: storage/file/copydir.c:47
 #, c-format
 msgid "could not create directory \"%s\": %m"
@@ -4782,7 +4782,7 @@ msgstr "使用 GRANT/REVOKE ON SCHEMAS 時不能使用 IN SCHEMA 子句"
 # parser/parse_relation.c:1919 parser/parse_type.c:94
 # utils/adt/ruleutils.c:1300
 #: catalog/aclchk.c:1617 catalog/catalog.c:659 catalog/objectaddress.c:1523
-#: catalog/pg_publication.c:532 commands/analyze.c:380 commands/copy.c:989
+#: catalog/pg_publication.c:532 commands/analyze.c:380 commands/copy.c:991
 #: commands/sequence.c:1655 commands/tablecmds.c:7585 commands/tablecmds.c:7739
 #: commands/tablecmds.c:7789 commands/tablecmds.c:7863
 #: commands/tablecmds.c:7933 commands/tablecmds.c:8070
@@ -7659,17 +7659,17 @@ msgid "automatic analyze of table \"%s.%s.%s\"\n"
 msgstr "資料表 \"%s.%s.%s\" 自動分析\n"
 
 # commands/analyze.c:916
-#: commands/analyze.c:1300
+#: commands/analyze.c:1299
 #, c-format
 msgid "\"%s\": scanned %d of %u pages, containing %.0f live rows and %.0f dead rows; %d rows in sample, %.0f estimated total rows"
 msgstr "\"%s\": 已掃描 %d 頁 (共 %u 頁), 包括 %.0f 個存活資料列和 %.0f 個死資料列; 樣本中有 %d 個資料列, 估計資料列總數為 %.0f"
 
-#: commands/analyze.c:1384
+#: commands/analyze.c:1383
 #, c-format
 msgid "skipping analyze of \"%s.%s\" inheritance tree --- this inheritance tree contains no child tables"
 msgstr "跳過 \"%s.%s\" 繼承樹的分析: 此繼承樹不包含子資料表"
 
-#: commands/analyze.c:1482
+#: commands/analyze.c:1481
 #, c-format
 msgid "skipping analyze of \"%s.%s\" inheritance tree --- this inheritance tree contains no analyzable child tables"
 msgstr "跳過 \"%s.%s\" 繼承樹的分析: 此繼承樹不包含可分析的子資料表"
@@ -8032,218 +8032,218 @@ msgid "encoding conversion function %s returned incorrect result for empty input
 msgstr "編碼轉換函式 %s 對空輸入傳回不正確的結果"
 
 # commands/dbcommands.c:192
-#: commands/copy.c:84
+#: commands/copy.c:85
 #, c-format
 msgid "permission denied to COPY to or from an external program"
 msgstr "權限不足，無法使用 COPY 向外部程式輸出或從其輸入"
 
-#: commands/copy.c:85
+#: commands/copy.c:86
 #, c-format
 msgid "Only roles with privileges of the \"%s\" role may COPY to or from an external program."
 msgstr "只有具有 \"%s\" 角色權限的角色才能使用 COPY 向外部程式輸出或從其輸入。"
 
 # commands/copy.c:917
-#: commands/copy.c:87 commands/copy.c:98 commands/copy.c:107
+#: commands/copy.c:88 commands/copy.c:99 commands/copy.c:108
 #, c-format
 msgid "Anyone can COPY to stdout or from stdin. psql's \\copy command also works for anyone."
 msgstr "任何人都可以 COPY 至 stdout (或從 stdin 複製)。psql 的 \\copy 指令也適用於任何人。"
 
 # catalog/aclchk.c:1270
-#: commands/copy.c:95
+#: commands/copy.c:96
 #, c-format
 msgid "permission denied to COPY from a file"
 msgstr "權限不足，無法使用 COPY 從檔案讀取"
 
-#: commands/copy.c:96
+#: commands/copy.c:97
 #, c-format
 msgid "Only roles with privileges of the \"%s\" role may COPY from a file."
 msgstr "只有具有 \"%s\" 角色權限的角色才能使用 COPY 從檔案讀取。"
 
 # catalog/aclchk.c:1270
-#: commands/copy.c:104
+#: commands/copy.c:105
 #, c-format
 msgid "permission denied to COPY to a file"
 msgstr "權限不足，無法使用 COPY 寫入檔案"
 
-#: commands/copy.c:105
+#: commands/copy.c:106
 #, c-format
 msgid "Only roles with privileges of the \"%s\" role may COPY to a file."
 msgstr "只有具有 \"%s\" 角色權限的角色才能使用 COPY 寫入檔案。"
 
-#: commands/copy.c:181
+#: commands/copy.c:182
 #, c-format
 msgid "generated columns are not supported in COPY FROM WHERE conditions"
 msgstr "COPY FROM WHERE 條件不支援產生欄位"
 
 # commands/tablecmds.c:953
-#: commands/copy.c:182 commands/tablecmds.c:12875 commands/tablecmds.c:18135
+#: commands/copy.c:183 commands/tablecmds.c:12875 commands/tablecmds.c:18135
 #: commands/tablecmds.c:18214 commands/trigger.c:657
 #: rewrite/rewriteHandler.c:978 rewrite/rewriteHandler.c:1013
 #, c-format
 msgid "Column \"%s\" is a generated column."
 msgstr "欄位 \"%s\" 是產生欄位。"
 
-#: commands/copy.c:231
+#: commands/copy.c:233
 #, c-format
 msgid "COPY FROM not supported with row-level security"
 msgstr "資料列層級安全性下不支援 COPY FROM"
 
 # rewrite/rewriteDefine.c:240
-#: commands/copy.c:232
+#: commands/copy.c:234
 #, c-format
 msgid "Use INSERT statements instead."
 msgstr "改用 INSERT 敘述。"
 
-#: commands/copy.c:413
+#: commands/copy.c:415
 #, c-format
 msgid "cannot use \"%s\" with HEADER in COPY TO"
 msgstr "COPY TO 中不能將 \"%s\" 用作 HEADER 的值"
 
 # utils/misc/guc.c:3419
-#: commands/copy.c:422
+#: commands/copy.c:424
 #, c-format
 msgid "%s requires a Boolean value or \"match\""
 msgstr "%s 需要布林值或 \"match\""
 
 #. translator: first %s is the name of a COPY option, e.g. ON_ERROR,
 #. second %s is a COPY with direction, e.g. COPY TO
-#: commands/copy.c:440 commands/copy.c:820 commands/copy.c:836
-#: commands/copy.c:853 commands/copy.c:879 commands/copy.c:889
+#: commands/copy.c:442 commands/copy.c:822 commands/copy.c:838
+#: commands/copy.c:855 commands/copy.c:881 commands/copy.c:891
 #, c-format
 msgid "COPY %s cannot be used with %s"
 msgstr "COPY %s 不能與 %s 同時使用"
 
 # commands/typecmds.c:223
 #. translator: first %s is the name of a COPY option, e.g. ON_ERROR
-#: commands/copy.c:454 commands/copy.c:479
+#: commands/copy.c:456 commands/copy.c:481
 #, c-format
 msgid "COPY %s \"%s\" not recognized"
 msgstr "無法識別的 COPY %s 值 \"%s\""
 
 # commands/typecmds.c:223
-#: commands/copy.c:540
+#: commands/copy.c:542
 #, c-format
 msgid "COPY format \"%s\" not recognized"
 msgstr "COPY 格式 \"%s\" 無法辨識"
 
 # commands/define.c:233
-#: commands/copy.c:598 commands/copy.c:613 commands/copy.c:628
-#: commands/copy.c:647
+#: commands/copy.c:600 commands/copy.c:615 commands/copy.c:630
+#: commands/copy.c:649
 #, c-format
 msgid "argument to option \"%s\" must be a list of column names"
 msgstr "選項 \"%s\" 的參數必須是欄位名稱清單"
 
 # commands/define.c:233
-#: commands/copy.c:659
+#: commands/copy.c:661
 #, c-format
 msgid "argument to option \"%s\" must be a valid encoding name"
 msgstr "選項 \"%s\" 的參數必須是有效的編碼名稱"
 
 # utils/adt/date.c:2510 utils/adt/timestamp.c:3793 utils/adt/timestamp.c:3942
-#: commands/copy.c:680 commands/dbcommands.c:866 commands/dbcommands.c:2381
+#: commands/copy.c:682 commands/dbcommands.c:866 commands/dbcommands.c:2381
 #, c-format
 msgid "option \"%s\" not recognized"
 msgstr "無法識別選項 \"%s\""
 
 # commands/copy.c:800
 #. translator: %s is the name of a COPY option, e.g. ON_ERROR
-#: commands/copy.c:693 commands/copy.c:698 commands/copy.c:703
-#: commands/copy.c:778
+#: commands/copy.c:695 commands/copy.c:700 commands/copy.c:705
+#: commands/copy.c:780
 #, c-format
 msgid "cannot specify %s in BINARY mode"
 msgstr "BINARY 模式下不能指定 %s"
 
-#: commands/copy.c:708
+#: commands/copy.c:710
 #, c-format
 msgid "only ON_ERROR STOP is allowed in BINARY mode"
 msgstr "BINARY 模式下只允許 ON_ERROR STOP"
 
 # commands/copy.c:828
-#: commands/copy.c:730
+#: commands/copy.c:732
 #, c-format
 msgid "COPY delimiter must be a single one-byte character"
 msgstr "COPY 分隔符號必須是一個單位元組字元"
 
 # commands/copy.c:828
-#: commands/copy.c:737
+#: commands/copy.c:739
 #, c-format
 msgid "COPY delimiter cannot be newline or carriage return"
 msgstr "COPY 分隔符號不可以是換行字元或歸位符號"
 
-#: commands/copy.c:743
+#: commands/copy.c:745
 #, c-format
 msgid "COPY null representation cannot use newline or carriage return"
 msgstr "COPY 的 NULL 標記字串不可以包含換行字元或歸位符號"
 
-#: commands/copy.c:753
+#: commands/copy.c:755
 #, c-format
 msgid "COPY default representation cannot use newline or carriage return"
 msgstr "COPY 的 DEFAULT 標記字串不能包含換行或歸位字元"
 
 # commands/typecmds.c:173
-#: commands/copy.c:771
+#: commands/copy.c:773
 #, c-format
 msgid "COPY delimiter cannot be \"%s\""
 msgstr "COPY 分隔符號不可以是 \"%s\""
 
 # bootstrap/bootstrap.c:304 postmaster/postmaster.c:500 tcop/postgres.c:2507
 #. translator: %s is the name of a COPY option, e.g. ON_ERROR
-#: commands/copy.c:785 commands/copy.c:802 commands/copy.c:814
-#: commands/copy.c:829 commands/copy.c:845
+#: commands/copy.c:787 commands/copy.c:804 commands/copy.c:816
+#: commands/copy.c:831 commands/copy.c:847
 #, c-format
 msgid "COPY %s requires CSV mode"
 msgstr "COPY %s 需要使用 CSV 模式"
 
 # commands/copy.c:828
-#: commands/copy.c:790
+#: commands/copy.c:792
 #, c-format
 msgid "COPY quote must be a single one-byte character"
 msgstr "COPY 引號必須是一個單位元組字元"
 
 # commands/copy.c:828
-#: commands/copy.c:795
+#: commands/copy.c:797
 #, c-format
 msgid "COPY delimiter and quote must be different"
 msgstr "COPY 分隔符號和引號必須不同"
 
 # commands/copy.c:828
-#: commands/copy.c:807
+#: commands/copy.c:809
 #, c-format
 msgid "COPY escape must be a single one-byte character"
 msgstr "COPY 逸出字元必須是一個單位元組字元"
 
 # commands/copy.c:886
 #. translator: %s is the name of a COPY option, e.g. NULL
-#: commands/copy.c:861 commands/copy.c:897
+#: commands/copy.c:863 commands/copy.c:899
 #, c-format
 msgid "COPY delimiter character must not appear in the %s specification"
 msgstr "COPY 分隔字元不得出現在 %s 標記字串中"
 
 # commands/copy.c:894
 #. translator: %s is the name of a COPY option, e.g. NULL
-#: commands/copy.c:870 commands/copy.c:906
+#: commands/copy.c:872 commands/copy.c:908
 #, c-format
 msgid "CSV quote character must not appear in the %s specification"
 msgstr "CSV 引號字元不得出現在 %s 標記字串中"
 
-#: commands/copy.c:915
+#: commands/copy.c:917
 #, c-format
 msgid "NULL specification and DEFAULT specification cannot be the same"
 msgstr "NULL 標記字串和 DEFAULT 標記字串不能相同"
 
 # commands/tablecmds.c:953
-#: commands/copy.c:977
+#: commands/copy.c:979
 #, c-format
 msgid "column \"%s\" is a generated column"
 msgstr "欄位 \"%s\" 是產生欄位"
 
-#: commands/copy.c:979
+#: commands/copy.c:981
 #, c-format
 msgid "Generated columns cannot be used in COPY."
 msgstr "COPY 中不能使用產生欄位。"
 
 # commands/indexcmds.c:461 commands/tablecmds.c:1299 parser/parse_expr.c:1084
-#: commands/copy.c:994 commands/indexcmds.c:1906 commands/statscmds.c:256
+#: commands/copy.c:996 commands/indexcmds.c:1906 commands/statscmds.c:256
 #: commands/tablecmds.c:2535 commands/tablecmds.c:3006
 #: commands/tablecmds.c:3817 parser/parse_relation.c:3692
 #: parser/parse_relation.c:3702 parser/parse_relation.c:3720
@@ -8254,7 +8254,7 @@ msgid "column \"%s\" does not exist"
 msgstr "欄位 \"%s\" 不存在"
 
 # commands/copy.c:2716 parser/parse_target.c:648 parser/parse_target.c:658
-#: commands/copy.c:1001 commands/tablecmds.c:2561 commands/trigger.c:961
+#: commands/copy.c:1003 commands/tablecmds.c:2561 commands/trigger.c:961
 #: parser/parse_target.c:1083 parser/parse_target.c:1094
 #, c-format
 msgid "column \"%s\" specified more than once"
@@ -11274,7 +11274,8 @@ msgstr "不能在安全受限操作中建立 WITH HOLD 游標"
 
 # commands/portalcmds.c:182 commands/portalcmds.c:229
 #: commands/portalcmds.c:189 commands/portalcmds.c:242
-#: executor/execCurrent.c:70 utils/adt/xml.c:2937 utils/adt/xml.c:3107
+#: executor/execCurrent.c:70 tcop/pquery.c:398 utils/adt/xml.c:2937
+#: utils/adt/xml.c:3107
 #, c-format
 msgid "cursor \"%s\" does not exist"
 msgstr "游標 \"%s\" 不存在"
@@ -15410,19 +15411,19 @@ msgstr "可能已經發生交易回繞造成的資料遺失。"
 msgid "skipping \"%s\" --- cannot vacuum non-tables or special system tables"
 msgstr "跳過 \"%s\": 不能清理非資料表物件或特殊系統資料表"
 
-#: commands/vacuum.c:2552
+#: commands/vacuum.c:2560
 #, c-format
 msgid "scanned index \"%s\" to remove %lld row versions"
 msgstr "已掃描索引 \"%s\" 以刪除 %lld 筆資料列版本"
 
 # commands/vacuum.c:2860 commands/vacuum.c:2927 commands/vacuumlazy.c:597
 # commands/vacuumlazy.c:657
-#: commands/vacuum.c:2571
+#: commands/vacuum.c:2579
 #, c-format
 msgid "index \"%s\" now contains %.0f row versions in %u pages"
 msgstr "索引 \"%s\" 現在包含 %.0f 筆資料列版本 (在 %u 個頁面中)"
 
-#: commands/vacuum.c:2575
+#: commands/vacuum.c:2583
 #, c-format
 msgid ""
 "%.0f index row versions were removed.\n"
@@ -19493,44 +19494,44 @@ msgstr "%s 不能套用到外部聯結中可能為 NULL 的一側"
 
 # optimizer/plan/planner.c:698
 #. translator: %s is a SQL row locking clause such as FOR UPDATE
-#: optimizer/plan/planner.c:1501 parser/analyze.c:1771 parser/analyze.c:2029
+#: optimizer/plan/planner.c:1507 parser/analyze.c:1771 parser/analyze.c:2029
 #: parser/analyze.c:3248
 #, c-format
 msgid "%s is not allowed with UNION/INTERSECT/EXCEPT"
 msgstr "%s 不允許與 UNION/INTERSECT/EXCEPT 一起使用"
 
-#: optimizer/plan/planner.c:2242 optimizer/plan/planner.c:4272
+#: optimizer/plan/planner.c:2248 optimizer/plan/planner.c:4278
 #, c-format
 msgid "could not implement GROUP BY"
 msgstr "無法實作 GROUP BY"
 
-#: optimizer/plan/planner.c:2243 optimizer/plan/planner.c:4273
-#: optimizer/plan/planner.c:4954 optimizer/prep/prepunion.c:1320
+#: optimizer/plan/planner.c:2249 optimizer/plan/planner.c:4279
+#: optimizer/plan/planner.c:4960 optimizer/prep/prepunion.c:1320
 #, c-format
 msgid "Some of the datatypes only support hashing, while others only support sorting."
 msgstr "有些資料型別只支援雜湊，有些資料型別只支援排序。"
 
-#: optimizer/plan/planner.c:4953
+#: optimizer/plan/planner.c:4959
 #, c-format
 msgid "could not implement DISTINCT"
 msgstr "無法實作 DISTINCT"
 
-#: optimizer/plan/planner.c:6333
+#: optimizer/plan/planner.c:6339
 #, c-format
 msgid "could not implement window PARTITION BY"
 msgstr "無法實作視窗 PARTITION BY"
 
-#: optimizer/plan/planner.c:6334
+#: optimizer/plan/planner.c:6340
 #, c-format
 msgid "Window partitioning columns must be of sortable datatypes."
 msgstr "視窗分割欄位必須屬於可排序的資料型別。"
 
-#: optimizer/plan/planner.c:6338
+#: optimizer/plan/planner.c:6344
 #, c-format
 msgid "could not implement window ORDER BY"
 msgstr "無法實作視窗 ORDER BY"
 
-#: optimizer/plan/planner.c:6339
+#: optimizer/plan/planner.c:6345
 #, c-format
 msgid "Window ordering columns must be of sortable datatypes."
 msgstr "視窗排序欄位必須屬於可排序的資料型別。"
@@ -22559,7 +22560,7 @@ msgid "invalid Unicode escape value"
 msgstr "Unicode 逸出字元值無效"
 
 # utils/adt/network.c:105
-#: parser/parser.c:494 scan.l:716 utils/adt/varlena.c:6712
+#: parser/parser.c:494 scan.l:716 utils/adt/varlena.c:6719
 #, c-format
 msgid "invalid Unicode escape"
 msgstr "無效的 Unicode 逸出字元"
@@ -22571,7 +22572,7 @@ msgstr "Unicode 逸出必須是 \\XXXX 或 \\+XXXXXX。"
 
 # utils/adt/network.c:105
 #: parser/parser.c:523 scan.l:677 scan.l:693 scan.l:709
-#: utils/adt/varlena.c:6737
+#: utils/adt/varlena.c:6744
 #, c-format
 msgid "invalid Unicode surrogate pair"
 msgstr "無效的 Unicode 代理配對"
@@ -23918,7 +23919,7 @@ msgstr "邏輯複寫工作行程槽已用盡"
 
 # utils/init/miscinit.c:900
 #: replication/logical/launcher.c:441 replication/logical/launcher.c:527
-#: replication/slot.c:1587 storage/lmgr/lock.c:985 storage/lmgr/lock.c:1023
+#: replication/slot.c:1595 storage/lmgr/lock.c:985 storage/lmgr/lock.c:1023
 #: storage/lmgr/lock.c:2837 storage/lmgr/lock.c:4222 storage/lmgr/lock.c:4287
 #: storage/lmgr/lock.c:4637 storage/lmgr/predicate.c:2469
 #: storage/lmgr/predicate.c:2484 storage/lmgr/predicate.c:3881
@@ -23988,8 +23989,8 @@ msgstr "不能在已執行寫操作的交易中建立邏輯複寫槽"
 msgid "cannot use replication slot \"%s\" for logical decoding"
 msgstr "不能將複寫槽 \"%s\" 用於邏輯解碼"
 
-#: replication/logical/logical.c:613 replication/slot.c:829
-#: replication/slot.c:860
+#: replication/logical/logical.c:613 replication/slot.c:837
+#: replication/slot.c:868
 #, c-format
 msgid "This replication slot is being synchronized from the primary server."
 msgstr "此複寫槽正在從主伺服器同步。"
@@ -24154,7 +24155,7 @@ msgid "could not find free replication state slot for replication origin with ID
 msgstr "無法找到可供 ID 為 %d 的複寫來源使用的空閒複寫狀態槽"
 
 #: replication/logical/origin.c:957 replication/logical/origin.c:1158
-#: replication/slot.c:2448
+#: replication/slot.c:2456
 #, c-format
 msgid "Increase \"max_replication_slots\" and try again."
 msgstr "增大 \"max_replication_slots\" 後重試。"
@@ -24763,7 +24764,7 @@ msgid "cannot enable failover for a replication slot created on the standby"
 msgstr "不能為在待命伺服器上建立的複寫槽啟用容錯移轉"
 
 # commands/tablecmds.c:730
-#: replication/slot.c:374 replication/slot.c:880
+#: replication/slot.c:374 replication/slot.c:888
 #, c-format
 msgid "cannot enable failover for a temporary replication slot"
 msgstr "不能為暫存複寫槽啟用容錯移轉"
@@ -24790,7 +24791,7 @@ msgstr "釋放一個槽，或增大 \"max_replication_slots\"。"
 msgid "replication slot \"%s\" does not exist"
 msgstr "複寫槽 \"%s\" 不存在"
 
-#: replication/slot.c:635 replication/slot.c:1397
+#: replication/slot.c:635 replication/slot.c:1405
 #, c-format
 msgid "replication slot \"%s\" is active for PID %d"
 msgstr "複寫槽 \"%s\" 正用於 PID %d"
@@ -24805,192 +24806,192 @@ msgstr "已取得邏輯複寫槽 \"%s\""
 msgid "acquired physical replication slot \"%s\""
 msgstr "已取得實體複寫槽 \"%s\""
 
-#: replication/slot.c:760
+#: replication/slot.c:768
 #, c-format
 msgid "released logical replication slot \"%s\""
 msgstr "已釋放邏輯複寫槽 \"%s\""
 
-#: replication/slot.c:762
+#: replication/slot.c:770
 #, c-format
 msgid "released physical replication slot \"%s\""
 msgstr "已釋放實體複寫槽 \"%s\""
 
-#: replication/slot.c:828
+#: replication/slot.c:836
 #, c-format
 msgid "cannot drop replication slot \"%s\""
 msgstr "不能刪除複寫槽 \"%s\""
 
 # commands/tablecmds.c:2189
-#: replication/slot.c:847
+#: replication/slot.c:855
 #, c-format
 msgid "cannot use %s with a physical replication slot"
 msgstr "不能將 %s 與實體複寫槽一起使用"
 
-#: replication/slot.c:859
+#: replication/slot.c:867
 #, c-format
 msgid "cannot alter replication slot \"%s\""
 msgstr "不能修改複寫槽 \"%s\""
 
-#: replication/slot.c:869
+#: replication/slot.c:877
 #, c-format
 msgid "cannot enable failover for a replication slot on the standby"
 msgstr "不能為待命伺服器上的複寫槽啟用容錯移轉"
 
 # commands/tablespace.c:610
-#: replication/slot.c:1000 replication/slot.c:1967 replication/slot.c:2358
+#: replication/slot.c:1008 replication/slot.c:1975 replication/slot.c:2366
 #, c-format
 msgid "could not remove directory \"%s\""
 msgstr "無法刪除目錄 \"%s\""
 
-#: replication/slot.c:1432
+#: replication/slot.c:1440
 #, c-format
 msgid "replication slots can only be used if \"max_replication_slots\" > 0"
 msgstr "只有 \"max_replication_slots\" > 0 時才能使用複寫槽"
 
-#: replication/slot.c:1437
+#: replication/slot.c:1445
 #, c-format
 msgid "replication slots can only be used if \"wal_level\" >= \"replica\""
 msgstr "只有 \"wal_level\" >= \"replica\" 時才能使用複寫槽"
 
 # catalog/aclchk.c:1264
-#: replication/slot.c:1449
+#: replication/slot.c:1457
 #, c-format
 msgid "permission denied to use replication slots"
 msgstr "權限不足，無法使用複寫槽"
 
-#: replication/slot.c:1450
+#: replication/slot.c:1458
 #, c-format
 msgid "Only roles with the %s attribute may use replication slots."
 msgstr "只有具有 %s 屬性的角色才能使用複寫槽。"
 
-#: replication/slot.c:1561
+#: replication/slot.c:1569
 #, c-format
 msgid "The slot's restart_lsn %X/%X exceeds the limit by %llu byte."
 msgid_plural "The slot's restart_lsn %X/%X exceeds the limit by %llu bytes."
 msgstr[0] "槽的 restart_lsn %X/%X 超出限制 %llu 位元組。"
 
-#: replication/slot.c:1569
+#: replication/slot.c:1577
 #, c-format
 msgid "The slot conflicted with xid horizon %u."
 msgstr "該槽與 xid 界限 %u 發生衝突。"
 
-#: replication/slot.c:1574
+#: replication/slot.c:1582
 msgid "Logical decoding on standby requires \"wal_level\" >= \"logical\" on the primary server."
 msgstr "待命伺服器上的邏輯解碼需要主伺服器的 \"wal_level\" >= \"logical\"。"
 
 # tcop/postgres.c:2032
-#: replication/slot.c:1582
+#: replication/slot.c:1590
 #, c-format
 msgid "terminating process %d to release replication slot \"%s\""
 msgstr "正在終止行程 %d 以釋放複寫槽 \"%s\""
 
-#: replication/slot.c:1584
+#: replication/slot.c:1592
 #, c-format
 msgid "invalidating obsolete replication slot \"%s\""
 msgstr "正在使過時的複寫槽 \"%s\" 失效"
 
 # access/transam/xlog.c:2019
-#: replication/slot.c:2296
+#: replication/slot.c:2304
 #, c-format
 msgid "replication slot file \"%s\" has wrong magic number: %u instead of %u"
 msgstr "複寫槽檔案 \"%s\" 的魔數不正確: %u 而非 %u"
 
-#: replication/slot.c:2303
+#: replication/slot.c:2311
 #, c-format
 msgid "replication slot file \"%s\" has unsupported version %u"
 msgstr "複寫槽檔案 \"%s\" 使用不支援的版本 %u"
 
-#: replication/slot.c:2310
+#: replication/slot.c:2318
 #, c-format
 msgid "replication slot file \"%s\" has corrupted length %u"
 msgstr "複寫槽檔案 \"%s\" 的長度欄位損毀: %u"
 
-#: replication/slot.c:2346
+#: replication/slot.c:2354
 #, c-format
 msgid "checksum mismatch for replication slot file \"%s\": is %u, should be %u"
 msgstr "複寫槽檔案 \"%s\" 的檢查碼不符: 實際為 %u，預期為 %u"
 
-#: replication/slot.c:2382
+#: replication/slot.c:2390
 #, c-format
 msgid "logical replication slot \"%s\" exists, but \"wal_level\" < \"logical\""
 msgstr "邏輯複寫槽 \"%s\" 存在，但 \"wal_level\" < \"logical\""
 
-#: replication/slot.c:2384
+#: replication/slot.c:2392
 #, c-format
 msgid "Change \"wal_level\" to be \"logical\" or higher."
 msgstr "將 \"wal_level\" 變更為 \"logical\" 或更高層級。"
 
-#: replication/slot.c:2396
+#: replication/slot.c:2404
 #, c-format
 msgid "logical replication slot \"%s\" exists on the standby, but \"hot_standby\" = \"off\""
 msgstr "待命伺服器上存在邏輯複寫槽 \"%s\"，但 \"hot_standby\" = \"off\""
 
-#: replication/slot.c:2398
+#: replication/slot.c:2406
 #, c-format
 msgid "Change \"hot_standby\" to be \"on\"."
 msgstr "將 \"hot_standby\" 變更為 \"on\"。"
 
-#: replication/slot.c:2403
+#: replication/slot.c:2411
 #, c-format
 msgid "physical replication slot \"%s\" exists, but \"wal_level\" < \"replica\""
 msgstr "實體複寫槽 \"%s\" 存在，但 \"wal_level\" < \"replica\""
 
-#: replication/slot.c:2405
+#: replication/slot.c:2413
 #, c-format
 msgid "Change \"wal_level\" to be \"replica\" or higher."
 msgstr "將 \"wal_level\" 變更為 \"replica\" 或更高層級。"
 
-#: replication/slot.c:2447
+#: replication/slot.c:2455
 #, c-format
 msgid "too many replication slots active before shutdown"
 msgstr "停止前作用中的複寫槽過多"
 
-#: replication/slot.c:2674
+#: replication/slot.c:2682
 #, c-format
 msgid "replication slot \"%s\" specified in parameter \"%s\" does not exist"
 msgstr "參數 \"%2$s\" 指定的複寫槽 \"%1$s\" 不存在"
 
-#: replication/slot.c:2676 replication/slot.c:2710 replication/slot.c:2725
+#: replication/slot.c:2684 replication/slot.c:2718 replication/slot.c:2733
 #, c-format
 msgid "Logical replication is waiting on the standby associated with replication slot \"%s\"."
 msgstr "邏輯複寫正在等待與複寫槽 \"%s\" 關聯的待命伺服器。"
 
-#: replication/slot.c:2678
+#: replication/slot.c:2686
 #, c-format
 msgid "Create the replication slot \"%s\" or amend parameter \"%s\"."
 msgstr "建立複寫槽 \"%s\"，或修正參數 \"%s\"。"
 
-#: replication/slot.c:2688
+#: replication/slot.c:2696
 #, c-format
 msgid "cannot specify logical replication slot \"%s\" in parameter \"%s\""
 msgstr "不能在參數 \"%2$s\" 中指定邏輯複寫槽 \"%1$s\""
 
-#: replication/slot.c:2690
+#: replication/slot.c:2698
 #, c-format
 msgid "Logical replication is waiting for correction on replication slot \"%s\"."
 msgstr "邏輯複寫正在等待複寫槽 \"%s\" 的問題被糾正。"
 
-#: replication/slot.c:2692
+#: replication/slot.c:2700
 #, c-format
 msgid "Remove the logical replication slot \"%s\" from parameter \"%s\"."
 msgstr "從參數 \"%2$s\" 中移除邏輯複寫槽 \"%1$s\"。"
 
-#: replication/slot.c:2708
+#: replication/slot.c:2716
 #, c-format
 msgid "physical replication slot \"%s\" specified in parameter \"%s\" has been invalidated"
 msgstr "參數 \"%2$s\" 指定的實體複寫槽 \"%1$s\" 已失效"
 
-#: replication/slot.c:2712
+#: replication/slot.c:2720
 #, c-format
 msgid "Drop and recreate the replication slot \"%s\", or amend parameter \"%s\"."
 msgstr "刪除並重新建立複寫槽 \"%s\"，或修正參數 \"%s\"。"
 
-#: replication/slot.c:2723
+#: replication/slot.c:2731
 #, c-format
 msgid "replication slot \"%s\" specified in parameter \"%s\" does not have active_pid"
 msgstr "參數 \"%2$s\" 指定的複寫槽 \"%1$s\" 沒有 active_pid"
 
-#: replication/slot.c:2727
+#: replication/slot.c:2735
 #, c-format
 msgid "Start the standby associated with the replication slot \"%s\", or amend parameter \"%s\"."
 msgstr "啟動與複寫槽 \"%s\" 關聯的待命伺服器，或修正參數 \"%s\"。"
@@ -27569,24 +27570,24 @@ msgid "disconnection: session time: %d:%02d:%02d.%03d user=%s database=%s host=%
 msgstr "中斷連線: 工作階段時間: %d:%02d:%02d.%03d 使用者=%s 資料庫=%s 主機=%s%s%s"
 
 # tcop/pquery.c:448
-#: tcop/pquery.c:641
+#: tcop/pquery.c:645
 #, c-format
 msgid "bind message has %d result formats but query has %d columns"
 msgstr "繫結訊息有 %d 個結果格式，但查詢有 %d 個欄位"
 
 # tcop/pquery.c:771
-#: tcop/pquery.c:942 tcop/pquery.c:1687
+#: tcop/pquery.c:946 tcop/pquery.c:1691
 #, c-format
 msgid "cursor can only scan forward"
 msgstr "游標只能向前掃描"
 
 # tcop/pquery.c:772
-#: tcop/pquery.c:943 tcop/pquery.c:1688
+#: tcop/pquery.c:947 tcop/pquery.c:1692
 #, c-format
 msgid "Declare it with SCROLL option to enable backward scan."
 msgstr "以 SCROLL 選項宣告它，啟用逆向掃描。"
 
-#: tcop/pquery.c:1011
+#: tcop/pquery.c:1015
 msgid "query result type does not match portal result type"
 msgstr "查詢結果型別與 portal 結果型別不符"
 
@@ -28176,7 +28177,7 @@ msgstr "輸入資料型別不是陣列"
 #: utils/adt/int8.c:1286 utils/adt/numeric.c:1924 utils/adt/numeric.c:4461
 #: utils/adt/rangetypes.c:1488 utils/adt/rangetypes.c:1501
 #: utils/adt/varbit.c:1195 utils/adt/varbit.c:1596 utils/adt/varlena.c:1178
-#: utils/adt/varlena.c:3182
+#: utils/adt/varlena.c:3189
 #, c-format
 msgid "integer out of range"
 msgstr "integer 超過範圍"
@@ -28955,7 +28956,7 @@ msgid "This time zone name appears in the configuration file for time zone abbre
 msgstr "此時區名出現在時區縮寫 \"%s\" 的組態檔案中。"
 
 # utils/adt/datum.c:80 utils/adt/datum.c:92
-#: utils/adt/datum.c:90 utils/adt/datum.c:102
+#: utils/adt/datum.c:91 utils/adt/datum.c:103
 #, c-format
 msgid "invalid Datum pointer"
 msgstr "無效的 Datum 指標"
@@ -31148,7 +31149,7 @@ msgid "Junk after right parenthesis or bracket."
 msgstr "右圓括號或右方括號後有多餘內容。"
 
 # utils/adt/regexp.c:178
-#: utils/adt/regexp.c:304 utils/adt/regexp.c:2069 utils/adt/varlena.c:4318
+#: utils/adt/regexp.c:304 utils/adt/regexp.c:2069 utils/adt/varlena.c:4325
 #, c-format
 msgid "regular expression failed: %s"
 msgstr "正規表示式失敗: %s"
@@ -31225,7 +31226,7 @@ msgstr "提供運算子的兩個參數型別。"
 # utils/adt/not_in.c:64 utils/adt/regproc.c:1110 utils/adt/regproc.c:1115
 # utils/adt/varlena.c:1636 utils/adt/varlena.c:1641
 #: utils/adt/regproc.c:1564 utils/adt/regproc.c:1681 utils/adt/regproc.c:1810
-#: utils/adt/regproc.c:1815 utils/adt/varlena.c:3458 utils/adt/varlena.c:3463
+#: utils/adt/regproc.c:1815 utils/adt/varlena.c:3465 utils/adt/varlena.c:3470
 #, c-format
 msgid "invalid name syntax"
 msgstr "無效的名稱語法"
@@ -31629,19 +31630,25 @@ msgstr "tsquery 中的運算元太長: \"%s\""
 msgid "word is too long in tsquery: \"%s\""
 msgstr "tsquery 中的字詞太長: \"%s\""
 
+# parser/parse_expr.c:614
+#: utils/adt/tsquery.c:643
+#, c-format
+msgid "tsquery is too complex"
+msgstr "tsquery 查詢過於複雜"
+
 # access/transam/xlog.c:2771
-#: utils/adt/tsquery.c:713 utils/adt/tsvector_parser.c:147
+#: utils/adt/tsquery.c:717 utils/adt/tsvector_parser.c:147
 #, c-format
 msgid "syntax error in tsquery: \"%s\""
 msgstr "tsquery 中有語法錯誤: \"%s\""
 
-#: utils/adt/tsquery.c:879
+#: utils/adt/tsquery.c:883
 #, c-format
 msgid "text-search query doesn't contain lexemes: \"%s\""
 msgstr "文字搜尋查詢未包含詞素: \"%s\""
 
 # storage/freespace/freespace.c:341
-#: utils/adt/tsquery.c:890 utils/adt/tsquery_util.c:339
+#: utils/adt/tsquery.c:894 utils/adt/tsquery_util.c:339
 #: utils/adt/tsquery_util.c:383
 #, c-format
 msgid "tsquery is too large"
@@ -31841,8 +31848,8 @@ msgstr "位元字串對型別 bit varying(%d) 而言太長"
 
 # utils/adt/varlena.c:582 utils/adt/varlena.c:646 utils/adt/varlena.c:1312
 #: utils/adt/varbit.c:1081 utils/adt/varbit.c:1191 utils/adt/varlena.c:915
-#: utils/adt/varlena.c:979 utils/adt/varlena.c:1174 utils/adt/varlena.c:3100
-#: utils/adt/varlena.c:3178
+#: utils/adt/varlena.c:979 utils/adt/varlena.c:1174 utils/adt/varlena.c:3107
+#: utils/adt/varlena.c:3185
 #, c-format
 msgid "negative substring length not allowed"
 msgstr "不允許負值子字串長度"
@@ -31873,7 +31880,7 @@ msgid "bit index %d out of valid range (0..%d)"
 msgstr "位元下標 %d 超出有效範圍(0..%d)"
 
 # utils/adt/varlena.c:1529
-#: utils/adt/varbit.c:1833 utils/adt/varlena.c:3382
+#: utils/adt/varbit.c:1833 utils/adt/varlena.c:3389
 #, c-format
 msgid "new bit must be 0 or 1"
 msgstr "新位元必須是 0 或 1"
@@ -31904,42 +31911,42 @@ msgstr "子字串搜尋不支援非確定性定序"
 
 # utils/adt/varlena.c:1407 utils/adt/varlena.c:1438 utils/adt/varlena.c:1474
 # utils/adt/varlena.c:1517
-#: utils/adt/varlena.c:3266 utils/adt/varlena.c:3333
+#: utils/adt/varlena.c:3273 utils/adt/varlena.c:3340
 #, c-format
 msgid "index %d out of valid range, 0..%d"
 msgstr "下標 %d 超出有效範圍 0..%d"
 
 # utils/adt/varlena.c:1407 utils/adt/varlena.c:1438 utils/adt/varlena.c:1474
 # utils/adt/varlena.c:1517
-#: utils/adt/varlena.c:3297 utils/adt/varlena.c:3369
+#: utils/adt/varlena.c:3304 utils/adt/varlena.c:3376
 #, c-format
 msgid "index %lld out of valid range, 0..%lld"
 msgstr "下標 %lld 超出有效範圍 0..%lld"
 
 # utils/adt/varlena.c:2016
-#: utils/adt/varlena.c:4430
+#: utils/adt/varlena.c:4437
 #, c-format
 msgid "field position must not be zero"
 msgstr "欄位位置不得為零"
 
 # scan.l:466
-#: utils/adt/varlena.c:5688
+#: utils/adt/varlena.c:5695
 #, c-format
 msgid "unterminated format() type specifier"
 msgstr "未終止的 format() 型別說明符"
 
-#: utils/adt/varlena.c:5689 utils/adt/varlena.c:5823 utils/adt/varlena.c:5944
+#: utils/adt/varlena.c:5696 utils/adt/varlena.c:5830 utils/adt/varlena.c:5951
 #, c-format
 msgid "For a single \"%%\" use \"%%%%\"."
 msgstr "對於單個 \"%%\" 應使用 \"%%%%\"。"
 
-#: utils/adt/varlena.c:5821 utils/adt/varlena.c:5942
+#: utils/adt/varlena.c:5828 utils/adt/varlena.c:5949
 #, c-format
 msgid "unrecognized format() type specifier \"%.*s\""
 msgstr "無法辨識的 format() 型別說明符 \"%.*s\""
 
 # utils/adt/regproc.c:645
-#: utils/adt/varlena.c:5834 utils/adt/varlena.c:5891
+#: utils/adt/varlena.c:5841 utils/adt/varlena.c:5898
 #, c-format
 msgid "too few arguments for format()"
 msgstr "format() 的引數過少"
@@ -31947,55 +31954,55 @@ msgstr "format() 的引數過少"
 # utils/adt/float.c:1622 utils/adt/float.c:1647 utils/adt/float.c:1672
 # utils/adt/float.c:1698 utils/adt/float.c:1723 utils/adt/float.c:1748
 # utils/adt/float.c:1774 utils/adt/float.c:1799
-#: utils/adt/varlena.c:5987 utils/adt/varlena.c:6169
+#: utils/adt/varlena.c:5994 utils/adt/varlena.c:6176
 #, c-format
 msgid "number is out of range"
 msgstr "數字超出範圍"
 
-#: utils/adt/varlena.c:6050 utils/adt/varlena.c:6078
+#: utils/adt/varlena.c:6057 utils/adt/varlena.c:6085
 #, c-format
 msgid "format specifies argument 0, but arguments are numbered from 1"
 msgstr "格式指定引數 0，但引數編號從 1 開始"
 
 # commands/functioncmds.c:983
-#: utils/adt/varlena.c:6071
+#: utils/adt/varlena.c:6078
 #, c-format
 msgid "width argument position must be ended by \"$\""
 msgstr "寬度引數編號必須以 \"$\" 結尾"
 
-#: utils/adt/varlena.c:6116
+#: utils/adt/varlena.c:6123
 #, c-format
 msgid "null values cannot be formatted as an SQL identifier"
 msgstr "NULL 值不能格式化為 SQL 識別字"
 
 # utils/adt/float.c:1508 utils/adt/float.c:1538
-#: utils/adt/varlena.c:6231
+#: utils/adt/varlena.c:6238
 #, c-format
 msgid "levenshtein distance out of range"
 msgstr "Levenshtein 距離超出範圍"
 
-#: utils/adt/varlena.c:6338
+#: utils/adt/varlena.c:6345
 #, c-format
 msgid "Unicode normalization can only be performed if server encoding is UTF8"
 msgstr "僅當伺服器編碼為 UTF8 時才能進行 Unicode 規範化"
 
-#: utils/adt/varlena.c:6351
+#: utils/adt/varlena.c:6358
 #, c-format
 msgid "invalid normalization form: %s"
 msgstr "無效的規範化形式: %s"
 
-#: utils/adt/varlena.c:6396
+#: utils/adt/varlena.c:6403
 #, c-format
 msgid "Unicode categorization can only be performed if server encoding is UTF8"
 msgstr "僅當伺服器編碼為 UTF8 時才能進行 Unicode 分類"
 
 # utils/adt/network.c:105
-#: utils/adt/varlena.c:6613 utils/adt/varlena.c:6648 utils/adt/varlena.c:6683
+#: utils/adt/varlena.c:6620 utils/adt/varlena.c:6655 utils/adt/varlena.c:6690
 #, c-format
 msgid "invalid Unicode code point: %04X"
 msgstr "無效的 Unicode 碼點: %04X"
 
-#: utils/adt/varlena.c:6713
+#: utils/adt/varlena.c:6720
 #, c-format
 msgid "Unicode escapes must be \\XXXX, \\+XXXXXX, \\uXXXX, or \\UXXXXXXXX."
 msgstr "Unicode 逸出必須是 \\XXXX, \\+XXXXXX, \\uXXXX 或 \\UXXXXXXXX。"
@@ -35886,18 +35893,18 @@ msgid "cannot have more than %d runs for an external sort"
 msgstr "外部排序的有序段數量不能超過 %d"
 
 # utils/sort/tuplesort.c:2082
-#: utils/sort/tuplesortvariants.c:1552
+#: utils/sort/tuplesortvariants.c:1562
 #, c-format
 msgid "could not create unique index \"%s\""
 msgstr "無法建立唯一索引 \"%s\""
 
 # commands/user.c:1396
-#: utils/sort/tuplesortvariants.c:1554
+#: utils/sort/tuplesortvariants.c:1564
 #, c-format
 msgid "Key %s is duplicated."
 msgstr "鍵值 %s 重複。"
 
-#: utils/sort/tuplesortvariants.c:1555
+#: utils/sort/tuplesortvariants.c:1565
 #, c-format
 msgid "Duplicate keys exist."
 msgstr "存在重複的索引鍵。"

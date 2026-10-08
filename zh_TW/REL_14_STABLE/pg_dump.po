@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_dump (PostgreSQL) 14\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-29 14:48+0000\n"
+"POT-Creation-Date: 2026-10-07 03:15+0000\n"
 "PO-Revision-Date: 2026-09-29 22:12+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
@@ -2051,7 +2051,7 @@ msgstr "函式 \"%s\" 的擁有者似乎無效"
 msgid "owner of table \"%s\" appears to be invalid"
 msgstr "資料表 \"%s\" 的擁有者似乎無效"
 
-#: pg_dump.c:7287 pg_dump.c:17870
+#: pg_dump.c:7287 pg_dump.c:17876
 #, c-format
 msgid "failed sanity check, parent table with OID %u of sequence with OID %u not found"
 msgstr "完整性檢查失敗，找不到 OID 為 %u 的父資料表(序列 OID 為 %u)"
@@ -2274,33 +2274,33 @@ msgid "invalid column number %d for table \"%s\""
 msgstr "資料表 \"%2$s\" 的欄位編號 %1$d 無效"
 
 # postmaster/pgstat.c:1908
-#: pg_dump.c:17104
+#: pg_dump.c:17050
 #, c-format
 msgid "could not parse index statistic columns"
 msgstr "無法解析索引統計欄位"
 
 # postmaster/pgstat.c:2234
-#: pg_dump.c:17106
+#: pg_dump.c:17052
 #, c-format
 msgid "could not parse index statistic values"
 msgstr "無法解析索引統計值"
 
-#: pg_dump.c:17108
+#: pg_dump.c:17054
 #, c-format
 msgid "mismatched number of columns and values for index statistics"
 msgstr "索引統計欄位和值的數量不一致"
 
-#: pg_dump.c:17339
+#: pg_dump.c:17342
 #, c-format
 msgid "missing index for constraint \"%s\""
 msgstr "缺少條件約束 \"%s\" 的索引"
 
-#: pg_dump.c:17580
+#: pg_dump.c:17586
 #, c-format
 msgid "unrecognized constraint type: %c"
 msgstr "無法識別的條件約束型別: %c"
 
-#: pg_dump.c:17712 pg_dump.c:17935
+#: pg_dump.c:17718 pg_dump.c:17941
 #, c-format
 msgid "query to get data of sequence \"%s\" returned %d row (expected 1)"
 msgid_plural "query to get data of sequence \"%s\" returned %d rows (expected 1)"
@@ -2309,65 +2309,65 @@ msgstr[0] "取得序列 \"%s\" 資料的查詢傳回 %d 筆資料(預期 1 筆)"
 # utils/adt/acl.c:1261 utils/adt/acl.c:1486 utils/adt/acl.c:1698
 # utils/adt/acl.c:1902 utils/adt/acl.c:2106 utils/adt/acl.c:2315
 # utils/adt/acl.c:2516
-#: pg_dump.c:17746
+#: pg_dump.c:17752
 #, c-format
 msgid "unrecognized sequence type: %s"
 msgstr "無法識別的序列型別: %s"
 
 # fe-exec.c:1204
-#: pg_dump.c:18033
+#: pg_dump.c:18039
 #, c-format
 msgid "unexpected tgtype value: %d"
 msgstr "非預期的 tgtype 值: %d"
 
-#: pg_dump.c:18107
+#: pg_dump.c:18113
 #, c-format
 msgid "invalid argument string (%s) for trigger \"%s\" on table \"%s\""
 msgstr "資料表 \"%3$s\" 上的觸發器 \"%2$s\" 的參數字串（%1$s）無效"
 
-#: pg_dump.c:18381
+#: pg_dump.c:18387
 #, c-format
 msgid "query to get rule \"%s\" for table \"%s\" failed: wrong number of rows returned"
 msgstr "取得資料表 \"%2$s\" 的規則 \"%1$s\" 的查詢失敗: 傳回的資料筆數錯誤"
 
 # catalog/dependency.c:152
-#: pg_dump.c:18543
+#: pg_dump.c:18549
 #, c-format
 msgid "could not find referenced extension %u"
 msgstr "找不到被參考的擴充模組 %u"
 
 # access/transam/xlog.c:2111
-#: pg_dump.c:18634
+#: pg_dump.c:18640
 #, c-format
 msgid "could not parse extension configuration array"
 msgstr "無法解析擴充模組組態陣列"
 
-#: pg_dump.c:18636
+#: pg_dump.c:18642
 #, c-format
 msgid "could not parse extension condition array"
 msgstr "無法解析擴充模組條件陣列"
 
-#: pg_dump.c:18638
+#: pg_dump.c:18644
 #, c-format
 msgid "mismatched number of configurations and conditions for extension"
 msgstr "擴充模組的組態和條件數量不一致"
 
-#: pg_dump.c:18770
+#: pg_dump.c:18776
 #, c-format
 msgid "reading dependency data"
 msgstr "讀取相依性資料"
 
-#: pg_dump.c:18863
+#: pg_dump.c:18869
 #, c-format
 msgid "no referencing object %u %u"
 msgstr "沒有發起參考的物件 %u %u"
 
-#: pg_dump.c:18874
+#: pg_dump.c:18880
 #, c-format
 msgid "no referenced object %u %u"
 msgstr "沒有被參考物件 %u %u"
 
-#: pg_dump.c:19263
+#: pg_dump.c:19269
 #, c-format
 msgid "could not parse reloptions array"
 msgstr "無法解析 reloptions 陣列"

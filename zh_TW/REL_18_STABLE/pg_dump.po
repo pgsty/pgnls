@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_dump (PostgreSQL) 18\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-29 15:42+0000\n"
+"POT-Creation-Date: 2026-10-07 06:42+0000\n"
 "PO-Revision-Date: 2026-09-29 22:12+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
@@ -2361,8 +2361,8 @@ msgstr "讀取列層級安全政策"
 msgid "unexpected policy command type: %c"
 msgstr "非預期的政策命令型別: %c"
 
-#: pg_dump.c:4801 pg_dump.c:5358 pg_dump.c:7979 pg_dump.c:13459 pg_dump.c:19671
-#: pg_dump.c:19673 pg_dump.c:20305
+#: pg_dump.c:4801 pg_dump.c:5358 pg_dump.c:7979 pg_dump.c:13459 pg_dump.c:19679
+#: pg_dump.c:19681 pg_dump.c:20313
 #, c-format
 msgid "could not parse %s array"
 msgstr "無法解析 %s 陣列"
@@ -2402,7 +2402,7 @@ msgstr "OID 為 %u 的 schema 不存在"
 msgid "cannot dump statistics for relation kind \"%c\""
 msgstr "不能備份關聯種類 \"%c\" 的統計資訊"
 
-#: pg_dump.c:7514 pg_dump.c:18998
+#: pg_dump.c:7514 pg_dump.c:19006
 #, c-format
 msgid "failed sanity check, parent table with OID %u of sequence with OID %u not found"
 msgstr "完整性檢查失敗，找不到 OID 為 %u 的父資料表(序列 OID 為 %u)"
@@ -2636,28 +2636,28 @@ msgid "invalid column number %d for table \"%s\""
 msgstr "資料表 \"%2$s\" 的欄位編號 %1$d 無效"
 
 # postmaster/pgstat.c:1908
-#: pg_dump.c:18153
+#: pg_dump.c:18098
 #, c-format
 msgid "could not parse index statistic columns"
 msgstr "無法解析索引統計欄位"
 
 # postmaster/pgstat.c:2234
-#: pg_dump.c:18155
+#: pg_dump.c:18100
 #, c-format
 msgid "could not parse index statistic values"
 msgstr "無法解析索引統計值"
 
-#: pg_dump.c:18157
+#: pg_dump.c:18102
 #, c-format
 msgid "mismatched number of columns and values for index statistics"
 msgstr "索引統計欄位和值的數量不一致"
 
-#: pg_dump.c:18386
+#: pg_dump.c:18391
 #, c-format
 msgid "missing index for constraint \"%s\""
 msgstr "缺少條件約束 \"%s\" 的索引"
 
-#: pg_dump.c:18655
+#: pg_dump.c:18663
 #, c-format
 msgid "unrecognized constraint type: %c"
 msgstr "無法識別的條件約束型別: %c"
@@ -2665,12 +2665,12 @@ msgstr "無法識別的條件約束型別: %c"
 # utils/adt/acl.c:1261 utils/adt/acl.c:1486 utils/adt/acl.c:1698
 # utils/adt/acl.c:1902 utils/adt/acl.c:2106 utils/adt/acl.c:2315
 # utils/adt/acl.c:2516
-#: pg_dump.c:18708
+#: pg_dump.c:18716
 #, c-format
 msgid "unrecognized sequence type: %s"
 msgstr "無法識別的序列型別: %s"
 
-#: pg_dump.c:18841 pg_dump.c:19079
+#: pg_dump.c:18849 pg_dump.c:19087
 #, c-format
 msgid "query to get data of sequence \"%s\" returned %d row (expected 1)"
 msgid_plural "query to get data of sequence \"%s\" returned %d rows (expected 1)"
@@ -2679,43 +2679,43 @@ msgstr[0] "取得序列 \"%s\" 資料的查詢傳回 %d 筆資料(預期 1 筆)"
 # utils/adt/acl.c:1261 utils/adt/acl.c:1486 utils/adt/acl.c:1698
 # utils/adt/acl.c:1902 utils/adt/acl.c:2106 utils/adt/acl.c:2315
 # utils/adt/acl.c:2516
-#: pg_dump.c:18877
+#: pg_dump.c:18885
 #, c-format
 msgid "unrecognized sequence type: %d"
 msgstr "無法識別的序列型別: %d"
 
-#: pg_dump.c:19102
+#: pg_dump.c:19110
 #, c-format
 msgid "failed to get data for sequence \"%s\"; user may lack SELECT privilege on the sequence or the sequence may have been concurrently dropped"
 msgstr "無法取得序列 \"%s\" 的資料；使用者可能缺少該序列的 SELECT 權限，或者該序列可能已被並行刪除"
 
-#: pg_dump.c:19423
+#: pg_dump.c:19431
 #, c-format
 msgid "query to get rule \"%s\" for table \"%s\" failed: wrong number of rows returned"
 msgstr "取得資料表 \"%2$s\" 的規則 \"%1$s\" 的查詢失敗: 傳回的資料筆數錯誤"
 
 # catalog/dependency.c:152
-#: pg_dump.c:19576
+#: pg_dump.c:19584
 #, c-format
 msgid "could not find referenced extension %u"
 msgstr "找不到被參考的擴充模組 %u"
 
-#: pg_dump.c:19675
+#: pg_dump.c:19683
 #, c-format
 msgid "mismatched number of configurations and conditions for extension"
 msgstr "擴充模組的組態和條件數量不一致"
 
-#: pg_dump.c:19807
+#: pg_dump.c:19815
 #, c-format
 msgid "reading dependency data"
 msgstr "讀取相依性資料"
 
-#: pg_dump.c:19893
+#: pg_dump.c:19901
 #, c-format
 msgid "no referencing object %u %u"
 msgstr "沒有發起參考的物件 %u %u"
 
-#: pg_dump.c:19904
+#: pg_dump.c:19912
 #, c-format
 msgid "no referenced object %u %u"
 msgstr "沒有被參考物件 %u %u"
@@ -2723,7 +2723,7 @@ msgstr "沒有被參考物件 %u %u"
 # commands/comment.c:1048 commands/indexcmds.c:216 commands/opclasscmds.c:108
 # commands/opclasscmds.c:648 commands/opclasscmds.c:800
 # commands/opclasscmds.c:900
-#: pg_dump.c:20339 pg_dump.c:20377 pg_dumpall.c:1853 pg_restore.c:642
+#: pg_dump.c:20347 pg_dump.c:20385 pg_dumpall.c:1853 pg_restore.c:642
 #: pg_restore.c:688
 #, c-format
 msgid "%s filter for \"%s\" is not allowed"

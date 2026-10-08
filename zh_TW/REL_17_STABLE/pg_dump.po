@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_dump (PostgreSQL) 17\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-29 14:01+0000\n"
+"POT-Creation-Date: 2026-10-07 07:00+0000\n"
 "PO-Revision-Date: 2026-09-29 22:12+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
@@ -2309,8 +2309,8 @@ msgstr "讀取列層級安全政策"
 msgid "unexpected policy command type: %c"
 msgstr "非預期的政策命令型別: %c"
 
-#: pg_dump.c:4625 pg_dump.c:5183 pg_dump.c:12491 pg_dump.c:18418
-#: pg_dump.c:18420 pg_dump.c:19042
+#: pg_dump.c:4625 pg_dump.c:5183 pg_dump.c:12491 pg_dump.c:18426
+#: pg_dump.c:18428 pg_dump.c:19050
 #, c-format
 msgid "could not parse %s array"
 msgstr "無法解析 %s 陣列"
@@ -2344,7 +2344,7 @@ msgstr "找不到 %s %s 的父擴充模組"
 msgid "schema with OID %u does not exist"
 msgstr "OID 為 %u 的 schema 不存在"
 
-#: pg_dump.c:7263 pg_dump.c:17784
+#: pg_dump.c:7263 pg_dump.c:17792
 #, c-format
 msgid "failed sanity check, parent table with OID %u of sequence with OID %u not found"
 msgstr "完整性檢查失敗，找不到 OID 為 %u 的父資料表(序列 OID 為 %u)"
@@ -2557,33 +2557,33 @@ msgid "invalid column number %d for table \"%s\""
 msgstr "資料表 \"%2$s\" 的欄位編號 %1$d 無效"
 
 # postmaster/pgstat.c:1908
-#: pg_dump.c:17024
+#: pg_dump.c:16969
 #, c-format
 msgid "could not parse index statistic columns"
 msgstr "無法解析索引統計欄位"
 
 # postmaster/pgstat.c:2234
-#: pg_dump.c:17026
+#: pg_dump.c:16971
 #, c-format
 msgid "could not parse index statistic values"
 msgstr "無法解析索引統計值"
 
-#: pg_dump.c:17028
+#: pg_dump.c:16973
 #, c-format
 msgid "mismatched number of columns and values for index statistics"
 msgstr "索引統計欄位和值的數量不一致"
 
-#: pg_dump.c:17257
+#: pg_dump.c:17262
 #, c-format
 msgid "missing index for constraint \"%s\""
 msgstr "缺少條件約束 \"%s\" 的索引"
 
-#: pg_dump.c:17517
+#: pg_dump.c:17525
 #, c-format
 msgid "unrecognized constraint type: %c"
 msgstr "無法識別的條件約束型別: %c"
 
-#: pg_dump.c:17618 pg_dump.c:17848
+#: pg_dump.c:17626 pg_dump.c:17856
 #, c-format
 msgid "query to get data of sequence \"%s\" returned %d row (expected 1)"
 msgid_plural "query to get data of sequence \"%s\" returned %d rows (expected 1)"
@@ -2592,38 +2592,38 @@ msgstr[0] "取得序列 \"%s\" 資料的查詢傳回 %d 筆資料(預期 1 筆)"
 # utils/adt/acl.c:1261 utils/adt/acl.c:1486 utils/adt/acl.c:1698
 # utils/adt/acl.c:1902 utils/adt/acl.c:2106 utils/adt/acl.c:2315
 # utils/adt/acl.c:2516
-#: pg_dump.c:17650
+#: pg_dump.c:17658
 #, c-format
 msgid "unrecognized sequence type: %s"
 msgstr "無法識別的序列型別: %s"
 
-#: pg_dump.c:18170
+#: pg_dump.c:18178
 #, c-format
 msgid "query to get rule \"%s\" for table \"%s\" failed: wrong number of rows returned"
 msgstr "取得資料表 \"%2$s\" 的規則 \"%1$s\" 的查詢失敗: 傳回的資料筆數錯誤"
 
 # catalog/dependency.c:152
-#: pg_dump.c:18323
+#: pg_dump.c:18331
 #, c-format
 msgid "could not find referenced extension %u"
 msgstr "找不到被參考的擴充模組 %u"
 
-#: pg_dump.c:18422
+#: pg_dump.c:18430
 #, c-format
 msgid "mismatched number of configurations and conditions for extension"
 msgstr "擴充模組的組態和條件數量不一致"
 
-#: pg_dump.c:18554
+#: pg_dump.c:18562
 #, c-format
 msgid "reading dependency data"
 msgstr "讀取相依性資料"
 
-#: pg_dump.c:18640
+#: pg_dump.c:18648
 #, c-format
 msgid "no referencing object %u %u"
 msgstr "沒有發起參考的物件 %u %u"
 
-#: pg_dump.c:18651
+#: pg_dump.c:18659
 #, c-format
 msgid "no referenced object %u %u"
 msgstr "沒有被參考物件 %u %u"
@@ -2631,7 +2631,7 @@ msgstr "沒有被參考物件 %u %u"
 # commands/comment.c:1048 commands/indexcmds.c:216 commands/opclasscmds.c:108
 # commands/opclasscmds.c:648 commands/opclasscmds.c:800
 # commands/opclasscmds.c:900
-#: pg_dump.c:19076 pg_dump.c:19114 pg_dumpall.c:2067 pg_restore.c:573
+#: pg_dump.c:19084 pg_dump.c:19122 pg_dumpall.c:2067 pg_restore.c:573
 #: pg_restore.c:619
 #, c-format
 msgid "%s filter for \"%s\" is not allowed"

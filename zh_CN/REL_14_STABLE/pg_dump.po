@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_dump (PostgreSQL) 14\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-29 14:48+0000\n"
+"POT-Creation-Date: 2026-10-07 03:15+0000\n"
 "PO-Revision-Date: 2026-09-29 22:12+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
@@ -2054,7 +2054,7 @@ msgstr "函数 \"%s\" 的所有者似乎无效"
 msgid "owner of table \"%s\" appears to be invalid"
 msgstr "表 \"%s\" 的所有者似乎无效"
 
-#: pg_dump.c:7287 pg_dump.c:17870
+#: pg_dump.c:7287 pg_dump.c:17876
 #, c-format
 msgid ""
 "failed sanity check, parent table with OID %u of sequence with OID %u not "
@@ -2290,96 +2290,96 @@ msgstr "不再支持 WITH OIDS（表 \"%s\"）"
 msgid "invalid column number %d for table \"%s\""
 msgstr "表 \"%2$s\" 的列号 %1$d 无效"
 
-#: pg_dump.c:17104
+#: pg_dump.c:17050
 #, c-format
 msgid "could not parse index statistic columns"
 msgstr "无法解析索引统计信息列"
 
-#: pg_dump.c:17106
+#: pg_dump.c:17052
 #, c-format
 msgid "could not parse index statistic values"
 msgstr "无法解析索引统计信息值"
 
-#: pg_dump.c:17108
+#: pg_dump.c:17054
 #, c-format
 msgid "mismatched number of columns and values for index statistics"
 msgstr "索引统计信息的列数与值的数量不匹配"
 
-#: pg_dump.c:17339
+#: pg_dump.c:17342
 #, c-format
 msgid "missing index for constraint \"%s\""
 msgstr "约束 \"%s\" 缺少对应的索引"
 
-#: pg_dump.c:17580
+#: pg_dump.c:17586
 #, c-format
 msgid "unrecognized constraint type: %c"
 msgstr "无法识别的约束类型: %c"
 
-#: pg_dump.c:17712 pg_dump.c:17935
+#: pg_dump.c:17718 pg_dump.c:17941
 #, c-format
 msgid "query to get data of sequence \"%s\" returned %d row (expected 1)"
 msgid_plural ""
 "query to get data of sequence \"%s\" returned %d rows (expected 1)"
 msgstr[0] "获取序列 \"%s\" 数据的查询返回 %d 行（预期为 1 行）"
 
-#: pg_dump.c:17746
+#: pg_dump.c:17752
 #, c-format
 msgid "unrecognized sequence type: %s"
 msgstr "无法识别的序列类型: %s"
 
-#: pg_dump.c:18033
+#: pg_dump.c:18039
 #, c-format
 msgid "unexpected tgtype value: %d"
 msgstr "意外的 tgtype 值: %d"
 
-#: pg_dump.c:18107
+#: pg_dump.c:18113
 #, c-format
 msgid "invalid argument string (%s) for trigger \"%s\" on table \"%s\""
 msgstr "表 \"%3$s\" 上的触发器 \"%2$s\" 的参数字符串（%1$s）无效"
 
-#: pg_dump.c:18381
+#: pg_dump.c:18387
 #, c-format
 msgid ""
 "query to get rule \"%s\" for table \"%s\" failed: wrong number of rows "
 "returned"
 msgstr "获取表 \"%2$s\" 的规则 \"%1$s\" 的查询失败: 返回的行数错误"
 
-#: pg_dump.c:18543
+#: pg_dump.c:18549
 #, c-format
 msgid "could not find referenced extension %u"
 msgstr "无法找到被引用的扩展 %u"
 
-#: pg_dump.c:18634
+#: pg_dump.c:18640
 #, c-format
 msgid "could not parse extension configuration array"
 msgstr "无法解析扩展配置数组"
 
-#: pg_dump.c:18636
+#: pg_dump.c:18642
 #, c-format
 msgid "could not parse extension condition array"
 msgstr "无法解析扩展条件数组"
 
-#: pg_dump.c:18638
+#: pg_dump.c:18644
 #, c-format
 msgid "mismatched number of configurations and conditions for extension"
 msgstr "扩展的配置和条件数量不匹配"
 
-#: pg_dump.c:18770
+#: pg_dump.c:18776
 #, c-format
 msgid "reading dependency data"
 msgstr "正在读取依赖数据"
 
-#: pg_dump.c:18863
+#: pg_dump.c:18869
 #, c-format
 msgid "no referencing object %u %u"
 msgstr "找不到发起引用的对象 %u %u"
 
-#: pg_dump.c:18874
+#: pg_dump.c:18880
 #, c-format
 msgid "no referenced object %u %u"
 msgstr "找不到被引用的对象 %u %u"
 
-#: pg_dump.c:19263
+#: pg_dump.c:19269
 #, c-format
 msgid "could not parse reloptions array"
 msgstr "无法解析 reloptions 数组"

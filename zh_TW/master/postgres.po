@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-09-29 16:19+0000\n"
-"PO-Revision-Date: 2026-09-29 22:12+0800\n"
+"POT-Creation-Date: 2026-10-07 19:19+0000\n"
+"PO-Revision-Date: 2026-10-08 15:05+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
@@ -109,8 +109,8 @@ msgstr "無法開啟檔案 \"%s\" 以讀取: %m"
 #: backup/walsummary.c:283 commands/extension.c:4035 libpq/hba.c:765
 #: replication/logical/origin.c:786 replication/logical/origin.c:814
 #: replication/logical/reorderbuffer.c:5431
-#: replication/logical/snapbuild.c:1995 replication/slot.c:2749
-#: replication/slot.c:2790 replication/walsender.c:678
+#: replication/logical/snapbuild.c:1995 replication/slot.c:2757
+#: replication/slot.c:2798 replication/walsender.c:678
 #: storage/file/buffile.c:471 storage/file/copydir.c:202
 #: utils/adt/genfile.c:197 utils/adt/misc.c:1001 utils/cache/relmapper.c:830
 #, c-format
@@ -124,8 +124,8 @@ msgstr "無法讀取檔案 \"%s\": %m"
 #: ../common/controldata_utils.c:117 ../common/controldata_utils.c:120
 #: access/transam/xlog.c:3546 access/transam/xlog.c:4439
 #: replication/logical/origin.c:791 replication/logical/origin.c:829
-#: replication/logical/snapbuild.c:2000 replication/slot.c:2753
-#: replication/slot.c:2794 replication/walsender.c:683
+#: replication/logical/snapbuild.c:2000 replication/slot.c:2761
+#: replication/slot.c:2802 replication/walsender.c:683
 #: utils/cache/relmapper.c:834
 #, c-format
 msgid "could not read file \"%s\": read %d of %zu"
@@ -146,7 +146,7 @@ msgstr "無法讀取檔案 \"%1$s\": 應讀取 %3$zu，實際讀取 %2$d"
 #: libpq/be-fsstubs.c:545 replication/logical/origin.c:724
 #: replication/logical/origin.c:862 replication/logical/reorderbuffer.c:5483
 #: replication/logical/snapbuild.c:1740 replication/logical/snapbuild.c:1866
-#: replication/slot.c:2635 replication/slot.c:2801 replication/walsender.c:693
+#: replication/slot.c:2643 replication/slot.c:2809 replication/walsender.c:693
 #: storage/file/copydir.c:225 storage/file/copydir.c:230
 #: storage/file/copydir.c:285 storage/file/copydir.c:290 storage/file/fd.c:829
 #: storage/file/fd.c:3803 storage/file/fd.c:3909 utils/cache/relmapper.c:842
@@ -193,7 +193,7 @@ msgstr ""
 #: replication/logical/reorderbuffer.c:4642
 #: replication/logical/reorderbuffer.c:5411
 #: replication/logical/snapbuild.c:1695 replication/logical/snapbuild.c:1807
-#: replication/slot.c:2721 replication/walsender.c:651
+#: replication/slot.c:2729 replication/walsender.c:651
 #: replication/walsender.c:3354 storage/file/copydir.c:168
 #: storage/file/copydir.c:256 storage/file/fd.c:804 storage/file/fd.c:3560
 #: storage/file/fd.c:3790 storage/file/fd.c:3880 storage/smgr/md.c:697
@@ -228,8 +228,8 @@ msgstr "無法寫入檔案 \"%s\": %m"
 #: access/transam/xlog.c:3575 access/transam/xlog.c:4397
 #: access/transam/xlog.c:8897 access/transam/xlog.c:8941
 #: backup/basebackup_server.c:207 commands/dbcommands.c:519
-#: replication/logical/snapbuild.c:1733 replication/slot.c:2619
-#: replication/slot.c:2731 storage/file/fd.c:821 storage/file/fd.c:3901
+#: replication/logical/snapbuild.c:1733 replication/slot.c:2627
+#: replication/slot.c:2739 storage/file/fd.c:821 storage/file/fd.c:3901
 #: storage/smgr/md.c:1480 storage/smgr/md.c:1540 storage/sync/sync.c:447
 #: utils/misc/guc.c:4428
 #, c-format
@@ -451,8 +451,8 @@ msgstr "無法讀取目錄 \"%s\": %m"
 # postmaster/pgarch.c:597
 #: ../common/file_utils.c:520 access/transam/xlogarchive.c:390
 #: postmaster/pgarch.c:839 postmaster/syslogger.c:1579
-#: replication/logical/snapbuild.c:1752 replication/slot.c:1108
-#: replication/slot.c:2502 replication/slot.c:2651 storage/file/fd.c:839
+#: replication/logical/snapbuild.c:1752 replication/slot.c:1116
+#: replication/slot.c:2510 replication/slot.c:2659 storage/file/fd.c:839
 #: utils/time/snapmgr.c:1315
 #, c-format
 msgid "could not rename file \"%s\" to \"%s\": %m"
@@ -826,7 +826,7 @@ msgstr "無法從子行程取得結束碼: 錯誤碼 %lu"
 #: postmaster/postmaster.c:1083 postmaster/syslogger.c:1508
 #: replication/logical/origin.c:632 replication/logical/reorderbuffer.c:4910
 #: replication/logical/snapbuild.c:1633 replication/logical/snapbuild.c:2089
-#: replication/slot.c:2705 storage/file/fd.c:879 storage/file/fd.c:3428
+#: replication/slot.c:2713 storage/file/fd.c:879 storage/file/fd.c:3428
 #: storage/file/fd.c:3490 storage/file/reinit.c:261 storage/ipc/dsm.c:353
 #: storage/smgr/md.c:412 storage/smgr/md.c:471 storage/sync/sync.c:244
 #: utils/time/snapmgr.c:1646
@@ -4592,7 +4592,7 @@ msgstr "無法判斷字串雜湊使用何種定序"
 
 #: access/hash/hashfunc.c:281 access/hash/hashfunc.c:336 catalog/heap.c:703
 #: catalog/heap.c:709 commands/createas.c:203 commands/createas.c:515
-#: commands/indexcmds.c:2126 commands/tablecmds.c:20627 commands/view.c:79
+#: commands/indexcmds.c:2126 commands/tablecmds.c:20640 commands/view.c:79
 #: regex/regc_pg_locale.c:48 utils/adt/formatting.c:1639
 #: utils/adt/formatting.c:1703 utils/adt/formatting.c:1767
 #: utils/adt/formatting.c:1831 utils/adt/like.c:151 utils/adt/like.c:182
@@ -4754,7 +4754,7 @@ msgstr "無法寫入檔案 \"%1$s\"，應寫入 %3$d，實際寫入 %2$d: %m"
 #: backup/basebackup_server.c:242 commands/dbcommands.c:499
 #: postmaster/launch_backend.c:332 postmaster/postmaster.c:4150
 #: postmaster/walsummarizer.c:1317 replication/logical/origin.c:644
-#: replication/slot.c:2563 storage/file/copydir.c:174
+#: replication/slot.c:2571 storage/file/copydir.c:174
 #: storage/file/copydir.c:262 storage/smgr/md.c:263 utils/time/snapmgr.c:1294
 #, c-format
 msgid "could not create file \"%s\": %m"
@@ -4777,7 +4777,7 @@ msgstr "無法將檔案 \"%s\" 縮短到 %u: %m"
 #: postmaster/launch_backend.c:343 postmaster/launch_backend.c:355
 #: replication/logical/origin.c:656 replication/logical/origin.c:698
 #: replication/logical/origin.c:717 replication/logical/snapbuild.c:1709
-#: replication/slot.c:2599 storage/file/buffile.c:546
+#: replication/slot.c:2607 storage/file/buffile.c:546
 #: storage/file/copydir.c:214 utils/init/miscinit.c:1610
 #: utils/init/miscinit.c:1621 utils/init/miscinit.c:1629 utils/misc/guc.c:4389
 #: utils/misc/guc.c:4420 utils/misc/guc.c:5579 utils/misc/guc.c:5597
@@ -5028,13 +5028,13 @@ msgstr "清理關聯 \"%2$s.%3$s\" 區塊 %1$u 時"
 msgid "while vacuuming relation \"%s.%s\""
 msgstr "清理關聯 \"%s.%s\" 時"
 
-#: access/heap/vacuumlazy.c:3857 commands/vacuumparallel.c:1364
+#: access/heap/vacuumlazy.c:3857 commands/vacuumparallel.c:1404
 #, c-format
 msgid "while vacuuming index \"%s\" of relation \"%s.%s\""
 msgstr "清理關聯 \"%2$s.%3$s\" 的索引 \"%1$s\" 時"
 
 # commands/tablecmds.c:3455
-#: access/heap/vacuumlazy.c:3862 commands/vacuumparallel.c:1370
+#: access/heap/vacuumlazy.c:3862 commands/vacuumparallel.c:1410
 #, c-format
 msgid "while cleaning up index \"%s\" of relation \"%s.%s\""
 msgstr "收尾清理關聯 \"%2$s.%3$s\" 的索引 \"%1$s\" 時"
@@ -5075,7 +5075,7 @@ msgstr "索引 \"%s\" 正在重建，不能存取"
 # commands/indexcmds.c:903 tcop/utility.c:93
 #: access/index/indexam.c:204 catalog/objectaddress.c:1370
 #: commands/indexcmds.c:3055 commands/tablecmds.c:287 commands/tablecmds.c:311
-#: commands/tablecmds.c:20306 commands/tablecmds.c:22232
+#: commands/tablecmds.c:20319 commands/tablecmds.c:22245
 #, c-format
 msgid "\"%s\" is not an index"
 msgstr "\"%s\" 不是索引"
@@ -5153,7 +5153,7 @@ msgstr "存取方法 %2$s 的運算子家族 \"%1$s\" 缺少型別 %3$s 和 %4$s
 # commands/comment.c:334 commands/sequence.c:771 tcop/utility.c:83
 #: access/sequence/sequence.c:75 catalog/aclchk.c:1825
 #: catalog/objectaddress.c:1377 commands/tablecmds.c:269
-#: commands/tablecmds.c:20279 utils/adt/acl.c:2146 utils/adt/acl.c:2176
+#: commands/tablecmds.c:20292 utils/adt/acl.c:2146 utils/adt/acl.c:2176
 #: utils/adt/acl.c:2209 utils/adt/acl.c:2245 utils/adt/acl.c:2276
 #: utils/adt/acl.c:2307
 #, c-format
@@ -5268,103 +5268,103 @@ msgstr "確保已啟用組態參數 \"%s\"。"
 msgid "Could not access commit timestamp of transaction %u."
 msgstr "無法存取交易 %u 的提交時間戳記。"
 
-#: access/transam/multixact.c:1040
+#: access/transam/multixact.c:1038
 #, c-format
 msgid "database is not accepting commands that assign new MultiXactIds to avoid wraparound data loss in database \"%s\""
 msgstr "資料庫不再接受指派新 MultiXactId 的命令，以避免資料庫 \"%s\" 因回繞而遺失資料"
 
-#: access/transam/multixact.c:1042 access/transam/multixact.c:1049
-#: access/transam/multixact.c:1075 access/transam/multixact.c:1086
+#: access/transam/multixact.c:1040 access/transam/multixact.c:1047
+#: access/transam/multixact.c:1073 access/transam/multixact.c:1084
 #, c-format
 msgid ""
 "Execute a database-wide VACUUM in that database.\n"
 "You might also need to commit or roll back old prepared transactions."
 msgstr "在該資料庫中執行全資料庫 VACUUM。\n您可能還需要提交或回復舊的預備交易。"
 
-#: access/transam/multixact.c:1047
+#: access/transam/multixact.c:1045
 #, c-format
 msgid "database is not accepting commands that assign new MultiXactIds to avoid wraparound data loss in database with OID %u"
 msgstr "資料庫不再接受指派新 MultiXactId 的命令，以避免 OID 為 %u 的資料庫因回繞而遺失資料"
 
 # utils/init/postinit.c:130
-#: access/transam/multixact.c:1068 access/transam/multixact.c:2206
+#: access/transam/multixact.c:1066 access/transam/multixact.c:2204
 #, c-format
 msgid "database \"%s\" must be vacuumed before %u more MultiXactId is used"
 msgid_plural "database \"%s\" must be vacuumed before %u more MultiXactIds are used"
 msgstr[0] "資料庫 \"%s\" 必須在再用 %u 個 MultiXactId 之前進行清理"
 
-#: access/transam/multixact.c:1073 access/transam/multixact.c:1084
-#: access/transam/multixact.c:2211 access/transam/multixact.c:2222
+#: access/transam/multixact.c:1071 access/transam/multixact.c:1082
+#: access/transam/multixact.c:2209 access/transam/multixact.c:2220
 #, c-format
 msgid "Approximately %.2f%% of MultiXactId space remains before wraparound."
 msgstr "回繞之前還剩約 %.2f%% 的 MultiXactId 空間。"
 
 # utils/init/postinit.c:130
-#: access/transam/multixact.c:1079 access/transam/multixact.c:2217
+#: access/transam/multixact.c:1077 access/transam/multixact.c:2215
 #, c-format
 msgid "database with OID %u must be vacuumed before %u more MultiXactId is used"
 msgid_plural "database with OID %u must be vacuumed before %u more MultiXactIds are used"
 msgstr[0] "OID 為 %u 的資料庫必須在再用 %u 個 MultiXactId 之前進行清理"
 
-#: access/transam/multixact.c:1116
+#: access/transam/multixact.c:1114
 #, c-format
 msgid "MultiXact members would wrap around"
 msgstr "MultiXact 成員將發生回繞"
 
-#: access/transam/multixact.c:1245
+#: access/transam/multixact.c:1243
 #, c-format
 msgid "MultiXactId %u does no longer exist -- apparent wraparound"
 msgstr "MultiXactId %u 已不存在，似乎已發生回繞"
 
 # access/transam/slru.c:862
-#: access/transam/multixact.c:1251
+#: access/transam/multixact.c:1249
 #, c-format
 msgid "MultiXactId %u has not been created yet -- apparent wraparound"
 msgstr "MultiXactId %u 尚未建立，似乎已發生回繞"
 
-#: access/transam/multixact.c:1276
+#: access/transam/multixact.c:1274
 #, c-format
 msgid "MultiXact %u has invalid offset"
 msgstr "MultiXact %u 的位移無效"
 
-#: access/transam/multixact.c:1321
+#: access/transam/multixact.c:1319
 #, c-format
 msgid "MultiXact %u has invalid next offset"
 msgstr "MultiXact %u 的下一個位移無效"
 
-#: access/transam/multixact.c:1325
+#: access/transam/multixact.c:1323
 #, c-format
 msgid "MultiXact %u with offset (%<PRIu64>) has zero members"
 msgstr "MultiXact %u (位移 %<PRIu64>) 的成員數為零"
 
-#: access/transam/multixact.c:1330
+#: access/transam/multixact.c:1328
 #, c-format
 msgid "MultiXact %u has offset (%<PRIu64>) greater than its next offset (%<PRIu64>)"
 msgstr "MultiXact %u 的位移 (%<PRIu64>) 大於其下一個位移 (%<PRIu64>)"
 
-#: access/transam/multixact.c:1335
+#: access/transam/multixact.c:1333
 #, c-format
 msgid "MultiXact %u has too many members (%<PRIu64>)"
 msgstr "MultiXact %u 的成員過多 (%<PRIu64>)"
 
-#: access/transam/multixact.c:2213 access/transam/multixact.c:2224
+#: access/transam/multixact.c:2211 access/transam/multixact.c:2222
 #, c-format
 msgid ""
 "To avoid MultiXactId assignment failures, execute a database-wide VACUUM in that database.\n"
 "You might also need to commit or roll back old prepared transactions."
 msgstr "為避免 MultiXactId 指派失敗，在該資料庫中執行全資料庫 VACUUM。\n您可能還需要提交或回復舊的預備交易。"
 
-#: access/transam/multixact.c:2478
+#: access/transam/multixact.c:2476
 #, c-format
 msgid "MultiXact member truncation is disabled because oldest checkpointed MultiXact %u does not exist on disk"
 msgstr "已停用 MultiXact 成員截斷，因為檢查點中記錄的最早 MultiXact %u 在磁碟上不存在"
 
-#: access/transam/multixact.c:2731
+#: access/transam/multixact.c:2729
 #, c-format
 msgid "cannot truncate up to MultiXact %u because it does not exist on disk, skipping truncation"
 msgstr "不能截斷至 MultiXact %u，因為它在磁碟上不存在；跳過截斷"
 
-#: access/transam/multixact.c:2748
+#: access/transam/multixact.c:2746
 #, c-format
 msgid "cannot truncate up to MultiXact %u because it has invalid offset, skipping truncation"
 msgstr "不能截斷至 MultiXact %u，因為其位移無效；跳過截斷"
@@ -5373,57 +5373,57 @@ msgstr "不能截斷至 MultiXact %u，因為其位移無效；跳過截斷"
 # access/transam/slru.c:651 access/transam/slru.c:658
 # access/transam/slru.c:665 access/transam/slru.c:672
 # access/transam/slru.c:679
-#: access/transam/multixact.c:2847
+#: access/transam/multixact.c:2845
 #, c-format
 msgid "Could not access offset of multixact %u."
 msgstr "無法存取 multixact %u 的位移。"
 
-#: access/transam/multixact.c:2856
+#: access/transam/multixact.c:2854
 #, c-format
 msgid "Could not access member of multixact %u at offset %<PRIu64>."
 msgstr "無法存取 multixact %u 在位移 %<PRIu64> 處的成員。"
 
-#: access/transam/multixact.c:2859
+#: access/transam/multixact.c:2857
 #, c-format
 msgid "Could not access multixact member at offset %<PRIu64>."
 msgstr "無法存取位移 %<PRIu64> 處的 multixact 成員。"
 
-#: access/transam/parallel.c:761 access/transam/parallel.c:880
+#: access/transam/parallel.c:761 access/transam/parallel.c:891
 #, c-format
 msgid "parallel worker failed to initialize"
 msgstr "並行工作行程初始化失敗"
 
-#: access/transam/parallel.c:762 access/transam/parallel.c:881
-#: commands/repack.c:3950 commands/repack.c:4205
+#: access/transam/parallel.c:762 access/transam/parallel.c:892
+#: commands/repack.c:3963 commands/repack.c:4218
 #, c-format
 msgid "More details may be available in the server log."
 msgstr "伺服器日誌中可能有更多詳細資訊。"
 
 # utils/misc/guc.c:5753
-#: access/transam/parallel.c:942
+#: access/transam/parallel.c:953
 #, c-format
 msgid "postmaster exited during a parallel transaction"
 msgstr "postmaster 在並行交易期間結束"
 
 # fe-exec.c:859
-#: access/transam/parallel.c:1129
+#: access/transam/parallel.c:1140
 #, c-format
 msgid "lost connection to parallel worker"
 msgstr "與並行工作行程的連線已遺失"
 
-#: access/transam/parallel.c:1185 access/transam/parallel.c:1187
+#: access/transam/parallel.c:1196 access/transam/parallel.c:1198
 msgid "parallel worker"
 msgstr "並行工作行程"
 
 # port/pg_shmem.c:94 port/sysv_shmem.c:94
-#: access/transam/parallel.c:1356 commands/repack_worker.c:78
+#: access/transam/parallel.c:1367 commands/repack_worker.c:78
 #: replication/logical/applyparallelworker.c:909
 #, c-format
 msgid "could not map dynamic shared memory segment"
 msgstr "無法映射動態共享記憶體區段"
 
 # utils/fmgr/dfmgr.c:354
-#: access/transam/parallel.c:1361 replication/logical/applyparallelworker.c:915
+#: access/transam/parallel.c:1372 replication/logical/applyparallelworker.c:915
 #, c-format
 msgid "invalid magic number in dynamic shared memory segment"
 msgstr "動態共享記憶體區段中的魔數無效"
@@ -5876,7 +5876,7 @@ msgstr "不能對已匯出快照的交易執行 PREPARE"
 #  translator: %s represents an SQL statement name
 # access/transam/xact.c:2173
 #. translator: %s represents an SQL statement name
-#: access/transam/xact.c:3720
+#: access/transam/xact.c:3730
 #, c-format
 msgid "%s cannot run inside a transaction block"
 msgstr "%s 不能在交易區塊中執行"
@@ -5884,7 +5884,7 @@ msgstr "%s 不能在交易區塊中執行"
 #  translator: %s represents an SQL statement name
 # access/transam/xact.c:2183
 #. translator: %s represents an SQL statement name
-#: access/transam/xact.c:3730
+#: access/transam/xact.c:3740
 #, c-format
 msgid "%s cannot run inside a subtransaction"
 msgstr "%s 不能在子交易中執行"
@@ -5892,7 +5892,7 @@ msgstr "%s 不能在子交易中執行"
 #  translator: %s represents an SQL statement name
 # access/transam/xact.c:2195
 #. translator: %s represents an SQL statement name
-#: access/transam/xact.c:3740
+#: access/transam/xact.c:3750
 #, c-format
 msgid "%s cannot be executed from a function or procedure"
 msgstr "不能從函式或程序中執行 %s"
@@ -5900,67 +5900,67 @@ msgstr "不能從函式或程序中執行 %s"
 #  translator: %s represents an SQL statement name
 # access/transam/xact.c:2246
 #. translator: %s represents an SQL statement name
-#: access/transam/xact.c:3812 access/transam/xact.c:4134
-#: access/transam/xact.c:4213 access/transam/xact.c:4336
-#: access/transam/xact.c:4487 access/transam/xact.c:4556
-#: access/transam/xact.c:4667
+#: access/transam/xact.c:3822 access/transam/xact.c:4144
+#: access/transam/xact.c:4223 access/transam/xact.c:4346
+#: access/transam/xact.c:4497 access/transam/xact.c:4566
+#: access/transam/xact.c:4677
 #, c-format
 msgid "%s can only be used in transaction blocks"
 msgstr "%s 只能用於交易區塊"
 
 # access/transam/xact.c:2429
-#: access/transam/xact.c:4020
+#: access/transam/xact.c:4030
 #, c-format
 msgid "there is already a transaction in progress"
 msgstr "已經有交易在執行中"
 
 # access/transam/xact.c:2544 access/transam/xact.c:2635
-#: access/transam/xact.c:4139 access/transam/xact.c:4218
-#: access/transam/xact.c:4341
+#: access/transam/xact.c:4149 access/transam/xact.c:4228
+#: access/transam/xact.c:4351
 #, c-format
 msgid "there is no transaction in progress"
 msgstr "沒有執行中的交易"
 
-#: access/transam/xact.c:4229
+#: access/transam/xact.c:4239
 #, c-format
 msgid "cannot commit during a parallel operation"
 msgstr "並行操作期間不能提交"
 
-#: access/transam/xact.c:4352
+#: access/transam/xact.c:4362
 #, c-format
 msgid "cannot abort during a parallel operation"
 msgstr "並行操作期間不能中止"
 
-#: access/transam/xact.c:4451
+#: access/transam/xact.c:4461
 #, c-format
 msgid "cannot define savepoints during a parallel operation"
 msgstr "並行操作期間不能定義儲存點"
 
 # command.c:1148
-#: access/transam/xact.c:4538
+#: access/transam/xact.c:4548
 #, c-format
 msgid "cannot release savepoints during a parallel operation"
 msgstr "並行操作期間不能釋放儲存點"
 
 # commands/tablecmds.c:4530 commands/trigger.c:2756
-#: access/transam/xact.c:4548 access/transam/xact.c:4599
-#: access/transam/xact.c:4659 access/transam/xact.c:4708
+#: access/transam/xact.c:4558 access/transam/xact.c:4609
+#: access/transam/xact.c:4669 access/transam/xact.c:4718
 #, c-format
 msgid "savepoint \"%s\" does not exist"
 msgstr "儲存點 \"%s\" 不存在"
 
-#: access/transam/xact.c:4605 access/transam/xact.c:4714
+#: access/transam/xact.c:4615 access/transam/xact.c:4724
 #, c-format
 msgid "savepoint \"%s\" does not exist within current savepoint level"
 msgstr "目前儲存點層級中不存在儲存點 \"%s\""
 
-#: access/transam/xact.c:4647
+#: access/transam/xact.c:4657
 #, c-format
 msgid "cannot rollback to savepoints during a parallel operation"
 msgstr "並行操作期間不能回復到儲存點"
 
 # access/transam/xact.c:3517
-#: access/transam/xact.c:5509
+#: access/transam/xact.c:5519
 #, c-format
 msgid "cannot have more than 2^32-1 subtransactions in a transaction"
 msgstr "每筆交易不能擁有超過 2^32-1 個子交易"
@@ -6115,7 +6115,7 @@ msgstr "\"%s\" 必須至少是 \"%s\" 的兩倍"
 
 #: access/transam/xlog.c:4784 catalog/namespace.c:4776
 #: commands/tablespace.c:1236 commands/user.c:2544 commands/variable.c:72
-#: replication/slot.c:2978 tcop/postgres.c:3708 utils/error/elog.c:2389
+#: replication/slot.c:2986 tcop/postgres.c:3708 utils/error/elog.c:2389
 #: utils/error/elog.c:2693
 #, c-format
 msgid "List syntax is invalid."
@@ -7269,12 +7269,12 @@ msgstr "您可以在完成必要的組態變更後重新啟動伺服器。"
 # nodes/print.c:86 storage/lmgr/deadlock.c:888 tcop/postgres.c:3285
 #: access/transam/xlogrecovery.c:4797 access/transam/xlogrecovery.c:4799
 #: catalog/dependency.c:1169 catalog/dependency.c:1176
-#: catalog/dependency.c:1187 commands/tablecmds.c:1560
-#: commands/tablecmds.c:17361 commands/tablespace.c:473 commands/user.c:1309
+#: catalog/dependency.c:1187 commands/tablecmds.c:1559
+#: commands/tablecmds.c:17374 commands/tablespace.c:473 commands/user.c:1309
 #: commands/view.c:441 commands/wait.c:107 executor/execExprInterp.c:5285
 #: executor/execExprInterp.c:5293 libpq/auth-oauth.c:700 libpq/auth.c:316
-#: replication/logical/applyparallelworker.c:1060 replication/slot.c:1851
-#: replication/slot.c:2993 replication/slot.c:2995 replication/syncrep.c:1088
+#: replication/logical/applyparallelworker.c:1060 replication/slot.c:1859
+#: replication/slot.c:3001 replication/slot.c:3003 replication/syncrep.c:1088
 #: storage/aio/method_io_uring.c:399 storage/lmgr/deadlock.c:1137
 #: storage/lmgr/proc.c:1563 utils/init/postinit.c:1530
 #: utils/init/postinit.c:1531 utils/misc/guc.c:3063 utils/misc/guc.c:3104
@@ -7641,7 +7641,7 @@ msgstr "儲存在伺服器上的備份不允許使用相對路徑"
 # commands/tablespace.c:168
 #: backup/basebackup_server.c:102 commands/dbcommands.c:482
 #: commands/tablespace.c:160 commands/tablespace.c:176
-#: commands/tablespace.c:606 commands/tablespace.c:651 replication/slot.c:2490
+#: commands/tablespace.c:606 commands/tablespace.c:651 replication/slot.c:2498
 #: storage/file/copydir.c:59
 #, c-format
 msgid "could not create directory \"%s\": %m"
@@ -7924,16 +7924,16 @@ msgstr "使用 %s 時不能使用 IN SCHEMA 子句"
 # utils/adt/ruleutils.c:1300
 #: catalog/aclchk.c:1565 catalog/catalog.c:684 catalog/heap.c:2671
 #: catalog/heap.c:2993 catalog/objectaddress.c:1537
-#: catalog/pg_publication.c:708 commands/analyze.c:1084 commands/copy.c:1123
-#: commands/sequence.c:1660 commands/tablecmds.c:7798 commands/tablecmds.c:7972
-#: commands/tablecmds.c:8173 commands/tablecmds.c:8309
-#: commands/tablecmds.c:8463 commands/tablecmds.c:8557
-#: commands/tablecmds.c:8660 commands/tablecmds.c:8815
-#: commands/tablecmds.c:8845 commands/tablecmds.c:9000
-#: commands/tablecmds.c:9103 commands/tablecmds.c:9237
-#: commands/tablecmds.c:9350 commands/tablecmds.c:14829
-#: commands/tablecmds.c:15032 commands/tablecmds.c:15193
-#: commands/tablecmds.c:16610 commands/tablecmds.c:19395 commands/trigger.c:958
+#: catalog/pg_publication.c:708 commands/analyze.c:1084 commands/copy.c:1125
+#: commands/sequence.c:1660 commands/tablecmds.c:7809 commands/tablecmds.c:7983
+#: commands/tablecmds.c:8184 commands/tablecmds.c:8320
+#: commands/tablecmds.c:8474 commands/tablecmds.c:8568
+#: commands/tablecmds.c:8671 commands/tablecmds.c:8826
+#: commands/tablecmds.c:8856 commands/tablecmds.c:9011
+#: commands/tablecmds.c:9114 commands/tablecmds.c:9248
+#: commands/tablecmds.c:9361 commands/tablecmds.c:14842
+#: commands/tablecmds.c:15045 commands/tablecmds.c:15206
+#: commands/tablecmds.c:16623 commands/tablecmds.c:19408 commands/trigger.c:958
 #: parser/analyze.c:2649 parser/parse_relation.c:777 parser/parse_target.c:1071
 #: parser/parse_type.c:144 parser/parse_utilcmd.c:3693
 #: parser/parse_utilcmd.c:3733 parser/parse_utilcmd.c:3775
@@ -7952,7 +7952,7 @@ msgstr "\"%s\" 是索引"
 
 # access/heap/heapam.c:628 access/heap/heapam.c:663 access/heap/heapam.c:698
 # catalog/aclchk.c:293
-#: catalog/aclchk.c:1817 commands/tablecmds.c:16767 commands/tablecmds.c:20315
+#: catalog/aclchk.c:1817 commands/tablecmds.c:16780 commands/tablecmds.c:20328
 #, c-format
 msgid "\"%s\" is a composite type"
 msgstr "\"%s\" 是複合資料型別"
@@ -8625,14 +8625,14 @@ msgid "System catalog modifications are currently disallowed."
 msgstr "目前不允許修改系統目錄。"
 
 # catalog/heap.c:382 commands/tablecmds.c:2897
-#: catalog/heap.c:464 commands/tablecmds.c:2606 commands/tablecmds.c:3057
-#: commands/tablecmds.c:7408
+#: catalog/heap.c:464 commands/tablecmds.c:2605 commands/tablecmds.c:3056
+#: commands/tablecmds.c:7419
 #, c-format
 msgid "tables can have at most %d columns"
 msgstr "資料表最多可以有 %d 個欄位"
 
 # catalog/heap.c:399
-#: catalog/heap.c:482 commands/tablecmds.c:7710
+#: catalog/heap.c:482 commands/tablecmds.c:7721
 #, c-format
 msgid "column name \"%s\" conflicts with a system column name"
 msgstr "欄位名稱 \"%s\" 與系統欄位名稱衝突"
@@ -8692,7 +8692,7 @@ msgstr "欄位 \"%s\" 的型別 %s 支援定序，但未能為該欄位推導出
 
 # catalog/heap.c:747 catalog/index.c:527 commands/tablecmds.c:1471
 #: catalog/heap.c:1197 catalog/index.c:912 commands/createas.c:408
-#: commands/tablecmds.c:4339
+#: commands/tablecmds.c:4338
 #, c-format
 msgid "relation \"%s\" already exists"
 msgstr "關聯 \"%s\" 已經存在"
@@ -8754,7 +8754,7 @@ msgstr "不能在系統欄位 \"%s\" 上新增非空條件約束"
 
 # catalog/heap.c:1631 commands/tablecmds.c:3692
 #: catalog/heap.c:2704 catalog/heap.c:2830 catalog/heap.c:3083
-#: catalog/index.c:926 catalog/pg_constraint.c:1030 commands/tablecmds.c:9865
+#: catalog/index.c:926 catalog/pg_constraint.c:1030 commands/tablecmds.c:9878
 #, c-format
 msgid "constraint \"%s\" for relation \"%s\" already exists"
 msgstr "限制 \"%s\" (適用於關聯 \"%s\") 已存在"
@@ -8788,9 +8788,9 @@ msgid "merging constraint \"%s\" with inherited definition"
 msgstr "正在合併限制 \"%s\" 與繼承的定義"
 
 #: catalog/heap.c:2899 catalog/pg_constraint.c:806 catalog/pg_constraint.c:1159
-#: commands/tablecmds.c:3222 commands/tablecmds.c:3542
-#: commands/tablecmds.c:7333 commands/tablecmds.c:8010
-#: commands/tablecmds.c:18200 commands/tablecmds.c:18382
+#: commands/tablecmds.c:3221 commands/tablecmds.c:3541
+#: commands/tablecmds.c:7344 commands/tablecmds.c:8021
+#: commands/tablecmds.c:18213 commands/tablecmds.c:18395
 #, c-format
 msgid "too many inheritance parents"
 msgstr "繼承父物件過多"
@@ -8995,7 +8995,7 @@ msgstr "不能重建 TOAST 資料表上的無效索引"
 
 # commands/tablecmds.c:5425
 #: catalog/index.c:3879 commands/indexcmds.c:3713 commands/indexcmds.c:3859
-#: commands/tablecmds.c:3746
+#: commands/tablecmds.c:3745
 #, c-format
 msgid "cannot move system relation \"%s\""
 msgstr "不能搬移系統關聯 \"%s\""
@@ -9138,7 +9138,7 @@ msgstr "不能將物件移入或移出 TOAST schema"
 # commands/schemacmds.c:210 commands/schemacmds.c:272
 # commands/schemacmds.c:327 utils/adt/acl.c:2283
 #: catalog/namespace.c:3616 commands/schemacmds.c:266 commands/schemacmds.c:346
-#: commands/tablecmds.c:1505 utils/adt/regproc.c:1696
+#: commands/tablecmds.c:1504 utils/adt/regproc.c:1696
 #, c-format
 msgid "schema \"%s\" does not exist"
 msgstr "schema \"%s\" 不存在"
@@ -9185,22 +9185,22 @@ msgstr "並行操作期間不能建立暫存資料表"
 # commands/lockcmds.c:68 commands/tablecmds.c:541 commands/tablecmds.c:2594
 # commands/trigger.c:141 commands/trigger.c:546 tcop/utility.c:78
 #: catalog/objectaddress.c:1385 commands/policy.c:93 commands/policy.c:373
-#: commands/tablecmds.c:263 commands/tablecmds.c:305 commands/tablecmds.c:2428
-#: commands/tablecmds.c:14967
+#: commands/tablecmds.c:263 commands/tablecmds.c:305 commands/tablecmds.c:2427
+#: commands/tablecmds.c:14980
 #, c-format
 msgid "\"%s\" is not a table"
 msgstr "\"%s\" 不是資料表"
 
 # commands/comment.c:348 commands/view.c:113 tcop/utility.c:88
 #: catalog/objectaddress.c:1392 commands/tablecmds.c:275
-#: commands/tablecmds.c:20284 commands/view.c:112
+#: commands/tablecmds.c:20297 commands/view.c:112
 #, c-format
 msgid "\"%s\" is not a view"
 msgstr "\"%s\" 不是檢視表"
 
 # commands/tablecmds.c:2588
 #: catalog/objectaddress.c:1399 commands/matview.c:200 commands/tablecmds.c:281
-#: commands/tablecmds.c:20289
+#: commands/tablecmds.c:20302
 #, c-format
 msgid "\"%s\" is not a materialized view"
 msgstr "\"%s\" 不是實體化檢視表"
@@ -9209,7 +9209,7 @@ msgstr "\"%s\" 不是實體化檢視表"
 # commands/lockcmds.c:68 commands/tablecmds.c:541 commands/tablecmds.c:2594
 # commands/trigger.c:141 commands/trigger.c:546 tcop/utility.c:78
 #: catalog/objectaddress.c:1406 commands/tablecmds.c:299
-#: commands/tablecmds.c:20294
+#: commands/tablecmds.c:20307
 #, c-format
 msgid "\"%s\" is not a foreign table"
 msgstr "\"%s\" 不是外部資料表"
@@ -10068,25 +10068,25 @@ msgid "collation \"%s\" for encoding \"%s\" already exists"
 msgstr "編碼 \"%2$s\" 的定序 \"%1$s\" 已存在"
 
 # commands/tablecmds.c:3455
-#: catalog/pg_constraint.c:767 commands/tablecmds.c:7995
+#: catalog/pg_constraint.c:767 commands/tablecmds.c:8006
 #, c-format
 msgid "cannot change NO INHERIT status of NOT NULL constraint \"%s\" on relation \"%s\""
 msgstr "不能變更關聯 \"%2$s\" 上 NOT NULL 條件約束 \"%1$s\" 的 NO INHERIT 狀態"
 
-#: catalog/pg_constraint.c:769 commands/tablecmds.c:9623
+#: catalog/pg_constraint.c:769 commands/tablecmds.c:9636
 #, c-format
 msgid "You might need to make the existing constraint inheritable using %s."
 msgstr "您可能需要使用 %s 使現有條件約束可繼承。"
 
 # commands/tablecmds.c:3455
-#: catalog/pg_constraint.c:779 commands/tablecmds.c:8351
+#: catalog/pg_constraint.c:779 commands/tablecmds.c:8362
 #, c-format
 msgid "incompatible NOT VALID constraint \"%s\" on relation \"%s\""
 msgstr "關聯 \"%2$s\" 上的 NOT VALID 條件約束 \"%1$s\" 不相容"
 
 # utils/init/miscinit.c:900
-#: catalog/pg_constraint.c:781 commands/tablecmds.c:8353
-#: commands/tablecmds.c:9635 commands/tablecmds.c:19218
+#: catalog/pg_constraint.c:781 commands/tablecmds.c:8364
+#: commands/tablecmds.c:9648 commands/tablecmds.c:19231
 #, c-format
 msgid "You might need to validate it using %s."
 msgstr "您可能需要使用 %s 驗證它。"
@@ -10240,7 +10240,7 @@ msgid "The partition is being detached concurrently or has an unfinished detach.
 msgstr "該分割正在並行分離，或存在尚未完成的分離操作。"
 
 #: catalog/pg_inherits.c:596 catalog/pg_publication.c:88
-#: commands/tablecmds.c:4959 commands/tablecmds.c:18503
+#: commands/tablecmds.c:4958 commands/tablecmds.c:18516
 #, c-format
 msgid "Use ALTER TABLE ... DETACH PARTITION ... FINALIZE to complete the pending detach operation."
 msgstr "使用 ALTER TABLE ... DETACH PARTITION ... FINALIZE 完成待處理的分離操作。"
@@ -10652,13 +10652,13 @@ msgid "cannot reassign ownership of objects owned by %s because they are require
 msgstr "不能重新指派 %s 所擁有物件的所有權，因為資料庫系統需要這些物件"
 
 #: catalog/pg_subscription.c:70 commands/repack.c:946
-#: commands/tablecmds.c:20954 replication/logical/relation.c:252
+#: commands/tablecmds.c:20967 replication/logical/relation.c:252
 #, c-format
 msgid "\"%s\""
 msgstr "\"%s\""
 
 #: catalog/pg_subscription.c:72 commands/repack.c:948
-#: commands/tablecmds.c:20956 replication/logical/relation.c:254
+#: commands/tablecmds.c:20969 replication/logical/relation.c:254
 #, c-format
 msgid ", \"%s\""
 msgstr ", \"%s\""
@@ -11033,17 +11033,17 @@ msgid "column \"%s\" of relation \"%s\" appears more than once"
 msgstr "關聯 \"%2$s\" 的欄位 \"%1$s\" 出現多次"
 
 # commands/analyze.c:916
-#: commands/analyze.c:1433
+#: commands/analyze.c:1432
 #, c-format
 msgid "\"%s\": scanned %d of %u pages, containing %.0f live rows and %.0f dead rows; %d rows in sample, %.0f estimated total rows"
 msgstr "\"%s\": 已掃描 %d 頁 (共 %u 頁), 包括 %.0f 個存活資料列和 %.0f 個死資料列; 樣本中有 %d 個資料列, 估計資料列總數為 %.0f"
 
-#: commands/analyze.c:1517
+#: commands/analyze.c:1516
 #, c-format
 msgid "skipping analyze of \"%s.%s\" inheritance tree --- this inheritance tree contains no child tables"
 msgstr "跳過 \"%s.%s\" 繼承樹的分析: 此繼承樹不包含子資料表"
 
-#: commands/analyze.c:1615
+#: commands/analyze.c:1614
 #, c-format
 msgid "skipping analyze of \"%s.%s\" inheritance tree --- this inheritance tree contains no analyzable child tables"
 msgstr "跳過 \"%s.%s\" 繼承樹的分析: 此繼承樹不包含可分析的子資料表"
@@ -11116,7 +11116,7 @@ msgstr "定序屬性 \"%s\" 無法辨識"
 # commands/user.c:846 commands/user.c:854 commands/user.c:1356
 # commands/user.c:1364
 #: commands/collationcmds.c:128 commands/collationcmds.c:134
-#: commands/define.c:374 commands/tablecmds.c:8444
+#: commands/define.c:374 commands/tablecmds.c:8455
 #: replication/pgoutput/pgoutput.c:323 replication/pgoutput/pgoutput.c:346
 #: replication/pgoutput/pgoutput.c:364 replication/pgoutput/pgoutput.c:374
 #: replication/pgoutput/pgoutput.c:384 replication/pgoutput/pgoutput.c:394
@@ -11202,9 +11202,9 @@ msgstr "不能重新整理預設定序的版本"
 #. translator: %s is an SQL command
 #. translator: %s is an SQL ALTER command
 #: commands/collationcmds.c:448 commands/subscriptioncmds.c:2167
-#: commands/tablecmds.c:8189 commands/tablecmds.c:8199
-#: commands/tablecmds.c:8201 commands/tablecmds.c:16770
-#: commands/tablecmds.c:20317 commands/tablecmds.c:20338
+#: commands/tablecmds.c:8200 commands/tablecmds.c:8210
+#: commands/tablecmds.c:8212 commands/tablecmds.c:16783
+#: commands/tablecmds.c:20330 commands/tablecmds.c:20351
 #: commands/typecmds.c:3854 commands/typecmds.c:3939 commands/typecmds.c:4293
 #, c-format
 msgid "Use %s instead."
@@ -11315,119 +11315,119 @@ msgid "encoding conversion function %s returned incorrect result for empty input
 msgstr "編碼轉換函式 %s 對空輸入傳回不正確的結果"
 
 # commands/dbcommands.c:192
-#: commands/copy.c:85
+#: commands/copy.c:86
 #, c-format
 msgid "permission denied to COPY to or from an external program"
 msgstr "權限不足，無法使用 COPY 向外部程式輸出或從其輸入"
 
-#: commands/copy.c:86
+#: commands/copy.c:87
 #, c-format
 msgid "Only roles with privileges of the \"%s\" role may COPY to or from an external program."
 msgstr "只有具有 \"%s\" 角色權限的角色才能使用 COPY 向外部程式輸出或從其輸入。"
 
 # commands/copy.c:917
-#: commands/copy.c:88 commands/copy.c:99 commands/copy.c:108
+#: commands/copy.c:89 commands/copy.c:100 commands/copy.c:109
 #, c-format
 msgid "Anyone can COPY to stdout or from stdin. psql's \\copy command also works for anyone."
 msgstr "任何人都可以 COPY 至 stdout (或從 stdin 複製)。psql 的 \\copy 指令也適用於任何人。"
 
 # catalog/aclchk.c:1270
-#: commands/copy.c:96
+#: commands/copy.c:97
 #, c-format
 msgid "permission denied to COPY from a file"
 msgstr "權限不足，無法使用 COPY 從檔案讀取"
 
-#: commands/copy.c:97
+#: commands/copy.c:98
 #, c-format
 msgid "Only roles with privileges of the \"%s\" role may COPY from a file."
 msgstr "只有具有 \"%s\" 角色權限的角色才能使用 COPY 從檔案讀取。"
 
 # catalog/aclchk.c:1270
-#: commands/copy.c:105
+#: commands/copy.c:106
 #, c-format
 msgid "permission denied to COPY to a file"
 msgstr "權限不足，無法使用 COPY 寫入檔案"
 
-#: commands/copy.c:106
+#: commands/copy.c:107
 #, c-format
 msgid "Only roles with privileges of the \"%s\" role may COPY to a file."
 msgstr "只有具有 \"%s\" 角色權限的角色才能使用 COPY 寫入檔案。"
 
-#: commands/copy.c:187
+#: commands/copy.c:188
 #, c-format
 msgid "system columns are not supported in COPY FROM WHERE conditions"
 msgstr "COPY FROM WHERE 條件不支援系統欄位"
 
 # catalog/heap.c:399
-#: commands/copy.c:188
+#: commands/copy.c:189
 #, c-format
 msgid "Column \"%s\" is a system column."
 msgstr "欄位 \"%s\" 是系統欄位。"
 
-#: commands/copy.c:202
+#: commands/copy.c:203
 #, c-format
 msgid "generated columns are not supported in COPY FROM WHERE conditions"
 msgstr "COPY FROM WHERE 條件不支援產生欄位"
 
 # commands/tablecmds.c:953
-#: commands/copy.c:203 commands/tablecmds.c:14850 commands/tablecmds.c:20464
-#: commands/tablecmds.c:20546 commands/trigger.c:661
+#: commands/copy.c:204 commands/tablecmds.c:14863 commands/tablecmds.c:20477
+#: commands/tablecmds.c:20559 commands/trigger.c:661
 #: rewrite/rewriteHandler.c:999 rewrite/rewriteHandler.c:1034
 #, c-format
 msgid "Column \"%s\" is a generated column."
 msgstr "欄位 \"%s\" 是產生欄位。"
 
-#: commands/copy.c:253
+#: commands/copy.c:255
 #, c-format
 msgid "COPY FROM not supported with row-level security"
 msgstr "資料列層級安全性下不支援 COPY FROM"
 
 # rewrite/rewriteDefine.c:240
-#: commands/copy.c:254
+#: commands/copy.c:256
 #, c-format
 msgid "Use INSERT statements instead."
 msgstr "改用 INSERT 敘述。"
 
-#: commands/copy.c:437
+#: commands/copy.c:439
 #, c-format
 msgid "cannot use \"%s\" with HEADER in COPY TO"
 msgstr "COPY TO 中不能將 \"%s\" 用作 HEADER 的值"
 
 #. translator: first %s is the name of a COPY option, e.g. ON_ERROR,
 #. second %s is the special value "match" for that option
-#: commands/copy.c:452
+#: commands/copy.c:454
 #, c-format
 msgid "%s requires a Boolean value, an integer value greater than or equal to zero, or the string \"%s\""
 msgstr "%s 需要布林值、大於或等於零的整數值，或字串 \"%s\""
 
-#: commands/copy.c:464
+#: commands/copy.c:466
 #, c-format
 msgid "a negative integer value cannot be specified for %s"
 msgstr "不能為 %s 指定負整數值"
 
-#: commands/copy.c:470
+#: commands/copy.c:472
 #, c-format
 msgid "cannot use multi-line header in COPY TO"
 msgstr "COPY TO 中不能使用多行標頭"
 
 #. translator: first %s is the name of a COPY option, e.g. ON_ERROR,
 #. second %s is a COPY with direction, e.g. COPY TO
-#: commands/copy.c:488 commands/copy.c:930 commands/copy.c:946
-#: commands/copy.c:963 commands/copy.c:989 commands/copy.c:1010
+#: commands/copy.c:490 commands/copy.c:932 commands/copy.c:948
+#: commands/copy.c:965 commands/copy.c:991 commands/copy.c:1012
 #, c-format
 msgid "COPY %s cannot be used with %s"
 msgstr "COPY %s 不能與 %s 同時使用"
 
 # commands/typecmds.c:223
 #. translator: first %s is the name of a COPY option, e.g. ON_ERROR
-#: commands/copy.c:501 commands/copy.c:559
+#: commands/copy.c:503 commands/copy.c:561
 #, c-format
 msgid "COPY %s \"%s\" not recognized"
 msgstr "無法識別的 COPY %s 值 \"%s\""
 
 # commands/define.c:105 commands/define.c:116 commands/define.c:150
 # commands/define.c:168
-#: commands/copy.c:521 commands/define.c:72 commands/define.c:83
+#: commands/copy.c:523 commands/define.c:72 commands/define.c:83
 #: commands/define.c:177 commands/define.c:195 commands/define.c:210
 #: commands/define.c:228
 #, c-format
@@ -11435,164 +11435,164 @@ msgid "%s requires a numeric value"
 msgstr "%s 需要數值"
 
 # commands/sequence.c:1067
-#: commands/copy.c:531
+#: commands/copy.c:533
 #, c-format
 msgid "REJECT_LIMIT (%<PRId64>) must be greater than zero"
 msgstr "REJECT_LIMIT (%<PRId64>) 必須大於零"
 
 # commands/typecmds.c:223
-#: commands/copy.c:626
+#: commands/copy.c:628
 #, c-format
 msgid "COPY format \"%s\" not recognized"
 msgstr "COPY 格式 \"%s\" 無法辨識"
 
 # commands/define.c:233
-#: commands/copy.c:684 commands/copy.c:699 commands/copy.c:714
-#: commands/copy.c:733
+#: commands/copy.c:686 commands/copy.c:701 commands/copy.c:716
+#: commands/copy.c:735
 #, c-format
 msgid "argument to option \"%s\" must be a list of column names"
 msgstr "選項 \"%s\" 的參數必須是欄位名稱清單"
 
 # commands/define.c:233
-#: commands/copy.c:745
+#: commands/copy.c:747
 #, c-format
 msgid "argument to option \"%s\" must be a valid encoding name"
 msgstr "選項 \"%s\" 的參數必須是有效的編碼名稱"
 
 # utils/adt/date.c:2510 utils/adt/timestamp.c:3793 utils/adt/timestamp.c:3942
-#: commands/copy.c:780 commands/dbcommands.c:890 commands/dbcommands.c:2439
+#: commands/copy.c:782 commands/dbcommands.c:890 commands/dbcommands.c:2439
 #: commands/wait.c:129
 #, c-format
 msgid "option \"%s\" not recognized"
 msgstr "無法識別選項 \"%s\""
 
 # commands/copy.c:800
-#: commands/copy.c:795 commands/copy.c:804 commands/copy.c:813
-#: commands/copy.c:887
+#: commands/copy.c:797 commands/copy.c:806 commands/copy.c:815
+#: commands/copy.c:889
 #, c-format
 msgid "cannot specify %s in BINARY mode"
 msgstr "BINARY 模式下不能指定 %s"
 
 # commands/copy.c:800
-#: commands/copy.c:796 commands/copy.c:805 commands/copy.c:814
-#: commands/copy.c:888
+#: commands/copy.c:798 commands/copy.c:807 commands/copy.c:816
+#: commands/copy.c:890
 #, c-format
 msgid "cannot specify %s in JSON mode"
 msgstr "JSON 模式下不能指定 %s"
 
 # commands/copy.c:828
-#: commands/copy.c:836
+#: commands/copy.c:838
 #, c-format
 msgid "COPY delimiter must be a single one-byte character"
 msgstr "COPY 分隔符號必須是一個單位元組字元"
 
 # commands/copy.c:828
-#: commands/copy.c:843
+#: commands/copy.c:845
 #, c-format
 msgid "COPY delimiter cannot be newline or carriage return"
 msgstr "COPY 分隔符號不可以是換行字元或歸位符號"
 
-#: commands/copy.c:849
+#: commands/copy.c:851
 #, c-format
 msgid "COPY null representation cannot use newline or carriage return"
 msgstr "COPY 的 NULL 標記字串不可以包含換行字元或歸位符號"
 
-#: commands/copy.c:859
+#: commands/copy.c:861
 #, c-format
 msgid "COPY default representation cannot use newline or carriage return"
 msgstr "COPY 的 DEFAULT 標記字串不能包含換行或歸位字元"
 
 # commands/typecmds.c:173
-#: commands/copy.c:877
+#: commands/copy.c:879
 #, c-format
 msgid "COPY delimiter cannot be \"%s\""
 msgstr "COPY 分隔符號不可以是 \"%s\""
 
 # bootstrap/bootstrap.c:304 postmaster/postmaster.c:500 tcop/postgres.c:2507
 #. translator: %s is the name of a COPY option, e.g. ON_ERROR
-#: commands/copy.c:895 commands/copy.c:912 commands/copy.c:924
-#: commands/copy.c:939 commands/copy.c:955
+#: commands/copy.c:897 commands/copy.c:914 commands/copy.c:926
+#: commands/copy.c:941 commands/copy.c:957
 #, c-format
 msgid "COPY %s requires CSV mode"
 msgstr "COPY %s 需要使用 CSV 模式"
 
 # commands/copy.c:828
-#: commands/copy.c:900
+#: commands/copy.c:902
 #, c-format
 msgid "COPY quote must be a single one-byte character"
 msgstr "COPY 引號必須是一個單位元組字元"
 
 # commands/copy.c:828
-#: commands/copy.c:905
+#: commands/copy.c:907
 #, c-format
 msgid "COPY delimiter and quote must be different"
 msgstr "COPY 分隔符號和引號必須不同"
 
 # commands/copy.c:828
-#: commands/copy.c:917
+#: commands/copy.c:919
 #, c-format
 msgid "COPY escape must be a single one-byte character"
 msgstr "COPY 逸出字元必須是一個單位元組字元"
 
 # commands/copy.c:886
 #. translator: %s is the name of a COPY option, e.g. NULL
-#: commands/copy.c:971 commands/copy.c:1018
+#: commands/copy.c:973 commands/copy.c:1020
 #, c-format
 msgid "COPY delimiter character must not appear in the %s specification"
 msgstr "COPY 分隔字元不得出現在 %s 標記字串中"
 
 # commands/copy.c:894
 #. translator: %s is the name of a COPY option, e.g. NULL
-#: commands/copy.c:980 commands/copy.c:1027
+#: commands/copy.c:982 commands/copy.c:1029
 #, c-format
 msgid "CSV quote character must not appear in the %s specification"
 msgstr "CSV 引號字元不得出現在 %s 標記字串中"
 
 # commands/dbcommands.c:138
-#: commands/copy.c:996
+#: commands/copy.c:998
 #, c-format
 msgid "COPY %s is not supported for %s"
 msgstr "不支援對 %2$s 使用 COPY %1$s"
 
 #  translator: %s represents an SQL statement name
 # access/transam/xact.c:2246
-#: commands/copy.c:1001
+#: commands/copy.c:1003
 #, c-format
 msgid "COPY %s can only be used with JSON mode"
 msgstr "COPY %s 只能與 JSON 模式一起使用"
 
-#: commands/copy.c:1036
+#: commands/copy.c:1038
 #, c-format
 msgid "NULL specification and DEFAULT specification cannot be the same"
 msgstr "NULL 標記字串和 DEFAULT 標記字串不能相同"
 
-#: commands/copy.c:1042
+#: commands/copy.c:1044
 #, c-format
 msgid "only ON_ERROR STOP is allowed in BINARY mode"
 msgstr "BINARY 模式下只允許 ON_ERROR STOP"
 
 #. translator: first and second %s are the names of COPY option, e.g.
 #. * ON_ERROR, third is the value of the COPY option, e.g. IGNORE
-#: commands/copy.c:1049
+#: commands/copy.c:1051
 #, c-format
 msgid "COPY %s requires %s to be set to %s"
 msgstr "COPY %s 需要將 %s 設為 %s"
 
 # commands/tablecmds.c:953
-#: commands/copy.c:1111
+#: commands/copy.c:1113
 #, c-format
 msgid "column \"%s\" is a generated column"
 msgstr "欄位 \"%s\" 是產生欄位"
 
-#: commands/copy.c:1113
+#: commands/copy.c:1115
 #, c-format
 msgid "Generated columns cannot be used in COPY."
 msgstr "COPY 中不能使用產生欄位。"
 
 # commands/indexcmds.c:461 commands/tablecmds.c:1299 parser/parse_expr.c:1084
-#: commands/copy.c:1128 commands/indexcmds.c:1988 commands/statscmds.c:259
-#: commands/tablecmds.c:2637 commands/tablecmds.c:3144
-#: commands/tablecmds.c:3973 parser/parse_relation.c:3821
+#: commands/copy.c:1130 commands/indexcmds.c:1988 commands/statscmds.c:259
+#: commands/tablecmds.c:2636 commands/tablecmds.c:3143
+#: commands/tablecmds.c:3972 parser/parse_relation.c:3821
 #: parser/parse_relation.c:3831 parser/parse_relation.c:3849
 #: parser/parse_relation.c:3856 parser/parse_relation.c:3870
 #: utils/adt/tsvector_op.c:2861
@@ -11601,7 +11601,7 @@ msgid "column \"%s\" does not exist"
 msgstr "欄位 \"%s\" 不存在"
 
 # commands/copy.c:2716 parser/parse_target.c:648 parser/parse_target.c:658
-#: commands/copy.c:1135 commands/tablecmds.c:2663 commands/trigger.c:967
+#: commands/copy.c:1137 commands/tablecmds.c:2662 commands/trigger.c:967
 #: parser/parse_target.c:1087 parser/parse_target.c:1098
 #, c-format
 msgid "column \"%s\" specified more than once"
@@ -12586,9 +12586,9 @@ msgstr "使用 DROP AGGREGATE 刪除聚合函式。"
 # catalog/pg_conversion.c:307 commands/comment.c:958
 # commands/conversioncmds.c:109 commands/conversioncmds.c:133
 # commands/conversioncmds.c:192
-#: commands/dropcmds.c:153 commands/sequence.c:457 commands/tablecmds.c:4057
-#: commands/tablecmds.c:4218 commands/tablecmds.c:4270
-#: commands/tablecmds.c:19594 tcop/utility.c:1328
+#: commands/dropcmds.c:153 commands/sequence.c:457 commands/tablecmds.c:4056
+#: commands/tablecmds.c:4217 commands/tablecmds.c:4269
+#: commands/tablecmds.c:19607 tcop/utility.c:1328
 #, c-format
 msgid "relation \"%s\" does not exist, skipping"
 msgstr "關聯 \"%s\" 不存在，跳過"
@@ -12597,7 +12597,7 @@ msgstr "關聯 \"%s\" 不存在，跳過"
 # catalog/namespace.c:1267 catalog/namespace.c:1866 commands/comment.c:509
 # commands/schemacmds.c:210 commands/schemacmds.c:272
 # commands/schemacmds.c:327 utils/adt/acl.c:2283
-#: commands/dropcmds.c:183 commands/dropcmds.c:282 commands/tablecmds.c:1510
+#: commands/dropcmds.c:183 commands/dropcmds.c:282 commands/tablecmds.c:1509
 #, c-format
 msgid "schema \"%s\" does not exist, skipping"
 msgstr "schema \"%s\" 不存在，跳過"
@@ -13879,12 +13879,12 @@ msgid "cannot create indexes on temporary tables of other sessions"
 msgstr "不能在其他工作階段的暫存資料表上建立索引"
 
 # commands/tablespace.c:227
-#: commands/indexcmds.c:790 commands/tablecmds.c:911 commands/tablespace.c:1204
+#: commands/indexcmds.c:790 commands/tablecmds.c:910 commands/tablespace.c:1204
 #, c-format
 msgid "cannot specify default tablespace for partitioned relations"
 msgstr "不能為分割關聯指定資料庫的預設表空間"
 
-#: commands/indexcmds.c:822 commands/tablecmds.c:942 commands/tablecmds.c:3753
+#: commands/indexcmds.c:822 commands/tablecmds.c:941 commands/tablecmds.c:3752
 #, c-format
 msgid "only shared relations can be placed in pg_global tablespace"
 msgstr "只有共用關聯才能放在 pg_global 表空間中"
@@ -14063,7 +14063,7 @@ msgid "could not determine which collation to use for index expression"
 msgstr "無法判斷索引運算式該用何種定序"
 
 # catalog/pg_proc.c:487
-#: commands/indexcmds.c:2134 commands/tablecmds.c:20634 commands/typecmds.c:815
+#: commands/indexcmds.c:2134 commands/tablecmds.c:20647 commands/typecmds.c:815
 #: parser/parse_expr.c:2816 parser/parse_type.c:568 parser/parse_utilcmd.c:4098
 #: utils/adt/misc.c:603
 #, c-format
@@ -14112,8 +14112,8 @@ msgid "access method \"%s\" does not support NULLS FIRST/LAST options"
 msgstr "存取方法 \"%s\" 不支援 NULLS FIRST/LAST 選項"
 
 # commands/indexcmds.c:568
-#: commands/indexcmds.c:2319 commands/tablecmds.c:20659
-#: commands/tablecmds.c:20665 commands/typecmds.c:2393
+#: commands/indexcmds.c:2319 commands/tablecmds.c:20672
+#: commands/tablecmds.c:20678 commands/typecmds.c:2393
 #, c-format
 msgid "data type %s has no default operator class for access method \"%s\""
 msgstr "資料型別 %s 沒有存取方法 \"%s\" 的預設運算子類別"
@@ -14161,7 +14161,7 @@ msgid "could not identify a contained-by operator for type %s"
 msgstr "無法確定型別 %s 的被包含運算子"
 
 # commands/indexcmds.c:568
-#: commands/indexcmds.c:2517 commands/tablecmds.c:10401
+#: commands/indexcmds.c:2517 commands/tablecmds.c:10414
 #, c-format
 msgid "Could not translate compare type %d for operator family \"%s\" of access method \"%s\"."
 msgstr "無法為存取方法 \"%3$s\" 的運算子家族 \"%2$s\" 轉換比較型別 %1$d。"
@@ -14689,10 +14689,10 @@ msgstr "運算子屬性 \"%s\" 一旦設定就不能變更"
 # commands/tablecmds.c:3768 commands/tablecmds.c:5376 commands/trigger.c:147
 # commands/trigger.c:552 tcop/utility.c:182 tcop/utility.c:217
 #: commands/policy.c:86 commands/policy.c:379 commands/repack.c:647
-#: commands/statscmds.c:151 commands/tablecmds.c:1841 commands/tablecmds.c:2444
-#: commands/tablecmds.c:3867 commands/tablecmds.c:6838
-#: commands/tablecmds.c:10157 commands/tablecmds.c:20205
-#: commands/tablecmds.c:20240 commands/trigger.c:320 commands/trigger.c:1353
+#: commands/statscmds.c:151 commands/tablecmds.c:1840 commands/tablecmds.c:2443
+#: commands/tablecmds.c:3866 commands/tablecmds.c:6849
+#: commands/tablecmds.c:10170 commands/tablecmds.c:20218
+#: commands/tablecmds.c:20253 commands/trigger.c:320 commands/trigger.c:1353
 #: commands/trigger.c:1463 rewrite/rewriteDefine.c:270
 #: rewrite/rewriteDefine.c:765 rewrite/rewriteRemove.c:74
 #, c-format
@@ -14751,7 +14751,8 @@ msgstr "不能在安全受限操作中建立 WITH HOLD 游標"
 
 # commands/portalcmds.c:182 commands/portalcmds.c:229
 #: commands/portalcmds.c:200 commands/portalcmds.c:253
-#: executor/execCurrent.c:70 utils/adt/xml.c:2980 utils/adt/xml.c:3150
+#: executor/execCurrent.c:70 tcop/pquery.c:395 utils/adt/xml.c:2980
+#: utils/adt/xml.c:3150
 #, c-format
 msgid "cursor \"%s\" does not exist"
 msgstr "游標 \"%s\" 不存在"
@@ -15178,7 +15179,7 @@ msgid "System catalogs can only be clustered by the index they're already cluste
 msgstr "除非啟用 \"%s\"，否則系統目錄只能按其已經用於叢集化的索引 (若有) 進行叢集化。"
 
 # commands/cluster.c:326
-#: commands/repack.c:797 commands/tablecmds.c:19140
+#: commands/repack.c:797 commands/tablecmds.c:19153
 #, c-format
 msgid "\"%s\" is not an index for table \"%s\""
 msgstr "\"%s\" 不是資料表 \"%s\" 的索引"
@@ -15329,28 +15330,28 @@ msgid "ANALYZE option must be specified when a column list is provided"
 msgstr "提供欄位清單時必須指定 ANALYZE 選項"
 
 # commands/cluster.c:147 commands/tablecmds.c:5326
-#: commands/repack.c:2684 commands/tablecmds.c:17068 commands/tablecmds.c:19130
+#: commands/repack.c:2684 commands/tablecmds.c:17081 commands/tablecmds.c:19143
 #, c-format
 msgid "index \"%s\" for table \"%s\" does not exist"
 msgstr "索引 \"%s\" 於資料表 \"%s\" 不存在"
 
 # access/heap/heapam.c:495
-#: commands/repack.c:2895 commands/repack.c:2933
+#: commands/repack.c:2893 commands/repack.c:2931
 #, c-format
 msgid "could not apply concurrent %s on relation \"%s\""
 msgstr "無法對關聯 \"%2$s\" 套用並行的 %1$s"
 
 # postmaster/postmaster.c:2009
-#: commands/repack.c:3857 replication/logical/launcher.c:567
+#: commands/repack.c:3870 replication/logical/launcher.c:567
 #, c-format
 msgid "out of background worker slots"
 msgstr "背景工作行程槽已用盡"
 
 # utils/init/miscinit.c:900
 #. translator: %s is a GUC variable name
-#: commands/repack.c:3858 replication/logical/launcher.c:470
-#: replication/logical/launcher.c:568 replication/slot.c:1816
-#: replication/slot.c:1836 storage/lmgr/lock.c:1083 storage/lmgr/lock.c:1121
+#: commands/repack.c:3871 replication/logical/launcher.c:470
+#: replication/logical/launcher.c:568 replication/slot.c:1824
+#: replication/slot.c:1844 storage/lmgr/lock.c:1083 storage/lmgr/lock.c:1121
 #: storage/lmgr/lock.c:3042 storage/lmgr/lock.c:4419 storage/lmgr/lock.c:4484
 #: storage/lmgr/lock.c:4834 storage/lmgr/predicate.c:2408
 #: storage/lmgr/predicate.c:2423 storage/lmgr/predicate.c:3820
@@ -15358,23 +15359,23 @@ msgstr "背景工作行程槽已用盡"
 msgid "You might need to increase \"%s\"."
 msgstr "可能需要增大 \"%s\"。"
 
-#: commands/repack.c:3949
+#: commands/repack.c:3962
 #, c-format
 msgid "REPACK decoding worker failed to start"
 msgstr "REPACK 解碼工作行程啟動失敗"
 
-#: commands/repack.c:4014
+#: commands/repack.c:4027
 #, c-format
 msgid "postmaster exited during REPACK command"
 msgstr "postmaster 在執行 REPACK 命令期間結束"
 
 # fe-exec.c:859
-#: commands/repack.c:4204
+#: commands/repack.c:4217
 #, c-format
 msgid "lost connection to REPACK decoding worker"
 msgstr "與 REPACK 解碼工作行程的連線已遺失"
 
-#: commands/repack.c:4248 commands/repack.c:4250
+#: commands/repack.c:4261 commands/repack.c:4263
 msgid "REPACK decoding worker"
 msgstr "REPACK 解碼工作行程"
 
@@ -15567,8 +15568,8 @@ msgid "cannot change ownership of identity sequence"
 msgstr "不能變更識別序列的歸屬"
 
 # commands/cluster.c:326
-#: commands/sequence.c:1676 commands/tablecmds.c:16757
-#: commands/tablecmds.c:19614
+#: commands/sequence.c:1676 commands/tablecmds.c:16770
+#: commands/tablecmds.c:19627
 #, c-format
 msgid "Sequence \"%s\" is linked to table \"%s\"."
 msgstr "序列 \"%s\" 連結至資料表 \"%s\"。"
@@ -15651,13 +15652,13 @@ msgid "duplicate expression in statistics definition"
 msgstr "統計資訊定義中有重複的運算式"
 
 # commands/tablecmds.c:3292
-#: commands/statscmds.c:685 commands/tablecmds.c:8978
+#: commands/statscmds.c:685 commands/tablecmds.c:8989
 #, c-format
 msgid "statistics target %d is too low"
 msgstr "統計資料目標 %d 太低"
 
 # commands/tablecmds.c:3300
-#: commands/statscmds.c:693 commands/tablecmds.c:8986
+#: commands/statscmds.c:693 commands/tablecmds.c:8997
 #, c-format
 msgid "lowering statistics target to %d"
 msgstr "正在將統計資料目標降至 %d"
@@ -16121,7 +16122,7 @@ msgid "Use DROP MATERIALIZED VIEW to remove a materialized view."
 msgstr "使用 DROP MATERIALIZED VIEW 刪除實體化檢視表。"
 
 # tcop/utility.c:92
-#: commands/tablecmds.c:285 commands/tablecmds.c:309 commands/tablecmds.c:22275
+#: commands/tablecmds.c:285 commands/tablecmds.c:309 commands/tablecmds.c:22288
 #: parser/parse_utilcmd.c:2452
 #, c-format
 msgid "index \"%s\" does not exist"
@@ -16150,8 +16151,8 @@ msgid "Use DROP TYPE to remove a type."
 msgstr "使用 DROP TYPE 刪除資料型別。"
 
 # tcop/utility.c:77
-#: commands/tablecmds.c:297 commands/tablecmds.c:16596
-#: commands/tablecmds.c:19315
+#: commands/tablecmds.c:297 commands/tablecmds.c:16609
+#: commands/tablecmds.c:19328
 #, c-format
 msgid "foreign table \"%s\" does not exist"
 msgstr "外部資料表 \"%s\" 不存在"
@@ -16168,25 +16169,25 @@ msgid "Use DROP FOREIGN TABLE to remove a foreign table."
 msgstr "用 DROP FOREIGN TABLE 刪除外部資料表。"
 
 # commands/tablecmds.c:294
-#: commands/tablecmds.c:821
+#: commands/tablecmds.c:820
 #, c-format
 msgid "ON COMMIT can only be used on temporary tables"
 msgstr "ON COMMIT 只能在暫存資料表上使用"
 
 # commands/user.c:1115
-#: commands/tablecmds.c:838
+#: commands/tablecmds.c:837
 #, c-format
 msgid "partitioned tables cannot be unlogged"
 msgstr "不能將分割資料表設為不記錄 WAL 的資料表"
 
 # commands/tablecmds.c:2199
-#: commands/tablecmds.c:858
+#: commands/tablecmds.c:857
 #, c-format
 msgid "cannot create temporary table within security-restricted operation"
 msgstr "安全性限制作業中不可建立暫存資料表"
 
 # commands/copy.c:2716 parser/parse_target.c:648 parser/parse_target.c:658
-#: commands/tablecmds.c:894 commands/tablecmds.c:18017
+#: commands/tablecmds.c:893 commands/tablecmds.c:18030
 #, c-format
 msgid "relation \"%s\" would be inherited from more than once"
 msgstr "會多次從關聯 \"%s\" 繼承"
@@ -16194,224 +16195,224 @@ msgstr "會多次從關聯 \"%s\" 繼承"
 # access/index/indexam.c:139 access/index/indexam.c:164
 # access/index/indexam.c:189 commands/comment.c:327 commands/indexcmds.c:873
 # commands/indexcmds.c:903 tcop/utility.c:93
-#: commands/tablecmds.c:1162
+#: commands/tablecmds.c:1161
 #, c-format
 msgid "\"%s\" is not partitioned"
 msgstr "\"%s\" 未分割"
 
 # commands/indexcmds.c:123
-#: commands/tablecmds.c:1256
+#: commands/tablecmds.c:1255
 #, c-format
 msgid "cannot partition using more than %d columns"
 msgstr "不能使用超過 %d 個欄位進行分割"
 
 # commands/cluster.c:326
-#: commands/tablecmds.c:1312
+#: commands/tablecmds.c:1311
 #, c-format
 msgid "cannot create foreign partition of partitioned table \"%s\""
 msgstr "不能為分割資料表 \"%s\" 建立外部分割"
 
-#: commands/tablecmds.c:1314
+#: commands/tablecmds.c:1313
 #, c-format
 msgid "Table \"%s\" contains indexes that are unique."
 msgstr "資料表 \"%s\" 包含唯一索引。"
 
 # utils/adt/regproc.c:644 utils/adt/regproc.c:1276
-#: commands/tablecmds.c:1454 commands/tablecmds.c:15384
+#: commands/tablecmds.c:1453 commands/tablecmds.c:15397
 #, c-format
 msgid "too many array dimensions"
 msgstr "陣列維度過多"
 
 # access/common/tupdesc.c:511
-#: commands/tablecmds.c:1459 parser/parse_clause.c:774
+#: commands/tablecmds.c:1458 parser/parse_clause.c:774
 #: parser/parse_relation.c:1950
 #, c-format
 msgid "column \"%s\" cannot be declared SETOF"
 msgstr "不能將欄位 \"%s\" 宣告為 SETOF"
 
-#: commands/tablecmds.c:1590
+#: commands/tablecmds.c:1589
 #, c-format
 msgid "DROP INDEX CONCURRENTLY does not support dropping multiple objects"
 msgstr "DROP INDEX CONCURRENTLY 不支援同時刪除多個物件"
 
-#: commands/tablecmds.c:1594
+#: commands/tablecmds.c:1593
 #, c-format
 msgid "DROP INDEX CONCURRENTLY does not support CASCADE"
 msgstr "DROP INDEX CONCURRENTLY 不支援 CASCADE"
 
 # describe.c:871
-#: commands/tablecmds.c:1698
+#: commands/tablecmds.c:1697
 #, c-format
 msgid "cannot drop partitioned index \"%s\" concurrently"
 msgstr "不能並行刪除分割索引 \"%s\""
 
 # utils/adt/pseudotypes.c:253
-#: commands/tablecmds.c:1986
+#: commands/tablecmds.c:1985
 #, c-format
 msgid "cannot truncate only a partitioned table"
 msgstr "不能只截斷分割資料表本身"
 
-#: commands/tablecmds.c:1987
+#: commands/tablecmds.c:1986
 #, c-format
 msgid "Do not specify the ONLY keyword, or use TRUNCATE ONLY on the partitions directly."
 msgstr "不要指定 ONLY 關鍵字，或者在分割上直接使用 TRUNCATE ONLY。"
 
-#: commands/tablecmds.c:2060
+#: commands/tablecmds.c:2059
 #, c-format
 msgid "truncate cascades to table \"%s\""
 msgstr "截斷串聯至資料表 \"%s\""
 
 # executor/execMain.c:820
-#: commands/tablecmds.c:2421
+#: commands/tablecmds.c:2420
 #, c-format
 msgid "cannot truncate foreign table \"%s\""
 msgstr "不能截斷外部資料表 \"%s\""
 
 # commands/tablecmds.c:573
-#: commands/tablecmds.c:2481
+#: commands/tablecmds.c:2480
 #, c-format
 msgid "cannot truncate temporary tables of other sessions"
 msgstr "不能截斷其他工作階段的暫存資料表"
 
 # commands/tablecmds.c:730
-#: commands/tablecmds.c:2719 commands/tablecmds.c:17911
+#: commands/tablecmds.c:2718 commands/tablecmds.c:17924
 #, c-format
 msgid "cannot inherit from partitioned table \"%s\""
 msgstr "不能從分割資料表 \"%s\" 繼承"
 
 # commands/tablecmds.c:730
-#: commands/tablecmds.c:2724
+#: commands/tablecmds.c:2723
 #, c-format
 msgid "cannot inherit from partition \"%s\""
 msgstr "不能從分割 \"%s\" 繼承"
 
 # commands/tablecmds.c:724 parser/analyze.c:1055 parser/analyze.c:1261
-#: commands/tablecmds.c:2732 parser/parse_utilcmd.c:2723
+#: commands/tablecmds.c:2731 parser/parse_utilcmd.c:2723
 #: parser/parse_utilcmd.c:2917
 #, c-format
 msgid "inherited relation \"%s\" is not a table or foreign table"
 msgstr "被繼承的關聯 \"%s\" 不是資料表或外部資料表"
 
 # commands/tablecmds.c:2199
-#: commands/tablecmds.c:2744
+#: commands/tablecmds.c:2743
 #, c-format
 msgid "cannot create a temporary relation as partition of permanent relation \"%s\""
 msgstr "不能建立暫存關聯作為持久關聯 \"%s\" 的分割"
 
 # commands/tablecmds.c:730
-#: commands/tablecmds.c:2753 commands/tablecmds.c:17892
+#: commands/tablecmds.c:2752 commands/tablecmds.c:17905
 #, c-format
 msgid "cannot inherit from temporary relation \"%s\""
 msgstr "不能繼承自暫存關聯 \"%s\""
 
 # commands/tablecmds.c:730
-#: commands/tablecmds.c:2762 commands/tablecmds.c:17899
+#: commands/tablecmds.c:2761 commands/tablecmds.c:17912
 #, c-format
 msgid "cannot inherit from temporary relation of another session"
 msgstr "不能從另一個工作階段的暫存關聯繼承"
 
 # utils/adt/geo_ops.c:4878 utils/adt/geo_ops.c:4901
-#: commands/tablecmds.c:2917 commands/tablecmds.c:2971
-#: commands/tablecmds.c:15067 parser/parse_utilcmd.c:1446
+#: commands/tablecmds.c:2916 commands/tablecmds.c:2970
+#: commands/tablecmds.c:15080 parser/parse_utilcmd.c:1446
 #: parser/parse_utilcmd.c:1490 parser/parse_utilcmd.c:1932
 #: parser/parse_utilcmd.c:2044
 #, c-format
 msgid "cannot convert whole-row table reference"
 msgstr "不能轉換整列資料表引用"
 
-#: commands/tablecmds.c:2918 parser/parse_utilcmd.c:1447
+#: commands/tablecmds.c:2917 parser/parse_utilcmd.c:1447
 #, c-format
 msgid "Generation expression for column \"%s\" contains a whole-row reference to table \"%s\"."
 msgstr "欄位 \"%s\" 的產生運算式包含對資料表 \"%s\" 的整列引用。"
 
 # commands/tablecmds.c:2199
-#: commands/tablecmds.c:2972 parser/parse_utilcmd.c:1491
+#: commands/tablecmds.c:2971 parser/parse_utilcmd.c:1491
 #, c-format
 msgid "Constraint \"%s\" contains a whole-row reference to table \"%s\"."
 msgstr "條件約束 \"%s\" 包含對資料表 \"%s\" 的整列引用。"
 
 # commands/tablecmds.c:994
-#: commands/tablecmds.c:3094 commands/tablecmds.c:3388
+#: commands/tablecmds.c:3093 commands/tablecmds.c:3387
 #, c-format
 msgid "column \"%s\" inherits from generated column but specifies default"
 msgstr "欄位 \"%s\" 繼承自產生欄位，卻指定預設值"
 
-#: commands/tablecmds.c:3099 commands/tablecmds.c:3393
+#: commands/tablecmds.c:3098 commands/tablecmds.c:3392
 #, c-format
 msgid "column \"%s\" inherits from generated column but specifies identity"
 msgstr "欄位 \"%s\" 繼承自產生欄位，卻指定為識別欄位"
 
 # commands/copy.c:2716 parser/parse_target.c:648 parser/parse_target.c:658
-#: commands/tablecmds.c:3107 commands/tablecmds.c:3401
+#: commands/tablecmds.c:3106 commands/tablecmds.c:3400
 #, c-format
 msgid "child column \"%s\" specifies generation expression"
 msgstr "子資料表欄位 \"%s\" 指定產生運算式"
 
-#: commands/tablecmds.c:3109 commands/tablecmds.c:3403
+#: commands/tablecmds.c:3108 commands/tablecmds.c:3402
 #, c-format
 msgid "A child table column cannot be generated unless its parent column is."
 msgstr "只有父資料表中對應的欄位是產生欄位時，子資料表欄位才可為產生欄位。"
 
-#: commands/tablecmds.c:3115 commands/tablecmds.c:3409
-#: commands/tablecmds.c:18179
+#: commands/tablecmds.c:3114 commands/tablecmds.c:3408
+#: commands/tablecmds.c:18192
 #, c-format
 msgid "column \"%s\" inherits from generated column of different kind"
 msgstr "欄位 \"%s\" 繼承自不同種類的產生欄位"
 
-#: commands/tablecmds.c:3117 commands/tablecmds.c:3411
-#: commands/tablecmds.c:18180
+#: commands/tablecmds.c:3116 commands/tablecmds.c:3410
+#: commands/tablecmds.c:18193
 #, c-format
 msgid "Parent column is %s, child column is %s."
 msgstr "父資料表欄位為 %s，子資料表欄位為 %s。"
 
 # commands/tablecmds.c:994
-#: commands/tablecmds.c:3164
+#: commands/tablecmds.c:3163
 #, c-format
 msgid "column \"%s\" inherits conflicting generation expressions"
 msgstr "欄位 \"%s\" 繼承相互衝突的產生運算式"
 
 # commands/tablecmds.c:996
-#: commands/tablecmds.c:3166
+#: commands/tablecmds.c:3165
 #, c-format
 msgid "To resolve the conflict, specify a generation expression explicitly."
 msgstr "要解決衝突，明確指定產生運算式。"
 
 # commands/tablecmds.c:994
-#: commands/tablecmds.c:3170
+#: commands/tablecmds.c:3169
 #, c-format
 msgid "column \"%s\" inherits conflicting default values"
 msgstr "欄位 \"%s\" 繼承衝突的預設值"
 
 # commands/tablecmds.c:996
-#: commands/tablecmds.c:3172
+#: commands/tablecmds.c:3171
 #, c-format
 msgid "To resolve the conflict, specify a default explicitly."
 msgstr "若要解決衝突，請明確指定預設值。"
 
-#: commands/tablecmds.c:3239
+#: commands/tablecmds.c:3238
 #, c-format
 msgid "check constraint name \"%s\" appears multiple times but with different expressions"
 msgstr "檢查限制名稱 \"%s\" 出現多次，但有不同運算式"
 
 # commands/tablecmds.c:946
-#: commands/tablecmds.c:3292
+#: commands/tablecmds.c:3291
 #, c-format
 msgid "merging column \"%s\" with inherited definition"
 msgstr "正在合併欄位 \"%s\" 與繼承的定義"
 
 # commands/tablecmds.c:946
-#: commands/tablecmds.c:3296
+#: commands/tablecmds.c:3295
 #, c-format
 msgid "moving and merging column \"%s\" with inherited definition"
 msgstr "正在移動欄位 \"%s\" 並將其與繼承的定義合併"
 
-#: commands/tablecmds.c:3297
+#: commands/tablecmds.c:3296
 #, c-format
 msgid "User-specified column moved to the position of the inherited column."
 msgstr "使用者指定的欄位已移至繼承欄位的位置。"
 
 # commands/tablecmds.c:953
-#: commands/tablecmds.c:3309
+#: commands/tablecmds.c:3308
 #, c-format
 msgid "column \"%s\" has a type conflict"
 msgstr "欄位 \"%s\" 發生型別衝突"
@@ -16419,9 +16420,9 @@ msgstr "欄位 \"%s\" 發生型別衝突"
 # commands/tablecmds.c:810 commands/tablecmds.c:955 parser/parse_coerce.c:239
 # parser/parse_coerce.c:1110 parser/parse_coerce.c:1127
 # parser/parse_coerce.c:1173
-#: commands/tablecmds.c:3311 commands/tablecmds.c:3345
-#: commands/tablecmds.c:3361 commands/tablecmds.c:3477
-#: commands/tablecmds.c:3505 commands/tablecmds.c:3521
+#: commands/tablecmds.c:3310 commands/tablecmds.c:3344
+#: commands/tablecmds.c:3360 commands/tablecmds.c:3476
+#: commands/tablecmds.c:3504 commands/tablecmds.c:3520
 #: parser/parse_coerce.c:2194 parser/parse_coerce.c:2214
 #: parser/parse_coerce.c:2234 parser/parse_coerce.c:2255
 #: parser/parse_coerce.c:2310 parser/parse_coerce.c:2344
@@ -16433,7 +16434,7 @@ msgid "%s versus %s"
 msgstr "%s 和 %s 的比較"
 
 # commands/tablecmds.c:953
-#: commands/tablecmds.c:3323
+#: commands/tablecmds.c:3322
 #, c-format
 msgid "column \"%s\" has a collation conflict"
 msgstr "欄位 \"%s\" 發生定序衝突"
@@ -16441,284 +16442,284 @@ msgstr "欄位 \"%s\" 發生定序衝突"
 # commands/tablecmds.c:810 commands/tablecmds.c:955 parser/parse_coerce.c:239
 # parser/parse_coerce.c:1110 parser/parse_coerce.c:1127
 # parser/parse_coerce.c:1173
-#: commands/tablecmds.c:3325 commands/tablecmds.c:3491
-#: commands/tablecmds.c:7324 parser/parse_expr.c:4892
+#: commands/tablecmds.c:3324 commands/tablecmds.c:3490
+#: commands/tablecmds.c:7335 parser/parse_expr.c:4892
 #, c-format
 msgid "\"%s\" versus \"%s\""
 msgstr "\"%s\" 對 \"%s\""
 
 # commands/tablecmds.c:953
-#: commands/tablecmds.c:3343
+#: commands/tablecmds.c:3342
 #, c-format
 msgid "column \"%s\" has a storage parameter conflict"
 msgstr "欄位 \"%s\" 發生儲存參數衝突"
 
 # commands/tablecmds.c:953
-#: commands/tablecmds.c:3359 commands/tablecmds.c:3519
+#: commands/tablecmds.c:3358 commands/tablecmds.c:3518
 #, c-format
 msgid "column \"%s\" has a compression method conflict"
 msgstr "欄位 \"%s\" 存在壓縮方法衝突"
 
 # commands/tablecmds.c:801
-#: commands/tablecmds.c:3463
+#: commands/tablecmds.c:3462
 #, c-format
 msgid "merging multiple inherited definitions of column \"%s\""
 msgstr "正在合併欄位 \"%s\" 的多個繼承定義"
 
 # commands/tablecmds.c:808
-#: commands/tablecmds.c:3475
+#: commands/tablecmds.c:3474
 #, c-format
 msgid "inherited column \"%s\" has a type conflict"
 msgstr "繼承的欄位 \"%s\" 有型別衝突"
 
 # commands/tablecmds.c:808
-#: commands/tablecmds.c:3489
+#: commands/tablecmds.c:3488
 #, c-format
 msgid "inherited column \"%s\" has a collation conflict"
 msgstr "繼承的欄位 \"%s\" 有定序衝突"
 
 # commands/tablecmds.c:808
-#: commands/tablecmds.c:3503
+#: commands/tablecmds.c:3502
 #, c-format
 msgid "inherited column \"%s\" has a storage parameter conflict"
 msgstr "繼承的欄位 \"%s\" 有儲存參數衝突"
 
 # commands/tablecmds.c:808
-#: commands/tablecmds.c:3531
+#: commands/tablecmds.c:3530
 #, c-format
 msgid "inherited column \"%s\" has a generation conflict"
 msgstr "繼承欄位 \"%s\" 的產生屬性存在衝突"
 
 # commands/tablecmds.c:5435
-#: commands/tablecmds.c:3762
+#: commands/tablecmds.c:3761
 #, c-format
 msgid "cannot move temporary tables of other sessions"
 msgstr "不能搬移其他工作階段的暫存資料表"
 
 # utils/adt/pseudotypes.c:253
-#: commands/tablecmds.c:3835
+#: commands/tablecmds.c:3834
 #, c-format
 msgid "cannot rename column of typed table"
 msgstr "不能重新命名型別化資料表的欄位"
 
 # commands/tablecmds.c:563
-#: commands/tablecmds.c:3854
+#: commands/tablecmds.c:3853
 #, c-format
 msgid "cannot rename columns of relation \"%s\""
 msgstr "不能重新命名關聯 \"%s\" 的欄位"
 
 # commands/tablecmds.c:1289
-#: commands/tablecmds.c:3949
+#: commands/tablecmds.c:3948
 #, c-format
 msgid "inherited column \"%s\" must be renamed in child tables too"
 msgstr "繼承的欄位 \"%s\" 也必須在子資料表中重新命名"
 
 # commands/tablecmds.c:1307
-#: commands/tablecmds.c:3981
+#: commands/tablecmds.c:3980
 #, c-format
 msgid "cannot rename system column \"%s\""
 msgstr "不能重新命名系統欄位 \"%s\""
 
 # commands/tablecmds.c:1317
-#: commands/tablecmds.c:3996
+#: commands/tablecmds.c:3995
 #, c-format
 msgid "cannot rename inherited column \"%s\""
 msgstr "不能重新命名繼承的欄位 \"%s\""
 
 # commands/tablecmds.c:1289
-#: commands/tablecmds.c:4151
+#: commands/tablecmds.c:4150
 #, c-format
 msgid "inherited constraint \"%s\" must be renamed in child tables too"
 msgstr "繼承條件約束 \"%s\" 也必須在子資料表中重新命名"
 
 # commands/tablecmds.c:1317
-#: commands/tablecmds.c:4158
+#: commands/tablecmds.c:4157
 #, c-format
 msgid "cannot rename inherited constraint \"%s\""
 msgstr "不能重新命名繼承條件約束 \"%s\""
 
 # catalog/dependency.c:312 catalog/dependency.c:717
 #. translator: first %s is a SQL command, eg ALTER TABLE
-#: commands/tablecmds.c:4458
+#: commands/tablecmds.c:4457
 #, c-format
 msgid "cannot %s \"%s\" because it is being used by active queries in this session"
 msgstr "不能對 \"%2$s\" 執行 %1$s，因為此工作階段進行中的查詢正在使用它"
 
 # catalog/dependency.c:152
 #. translator: first %s is a SQL command, eg ALTER TABLE
-#: commands/tablecmds.c:4467
+#: commands/tablecmds.c:4466
 #, c-format
 msgid "cannot %s \"%s\" because it has pending trigger events"
 msgstr "不能對 \"%2$s\" 執行 %1$s，因為它有待處理的觸發器事件"
 
 # commands/cluster.c:394
-#: commands/tablecmds.c:4493
+#: commands/tablecmds.c:4492
 #, c-format
 msgid "cannot alter temporary tables of other sessions"
 msgstr "不能修改其他工作階段的暫存資料表"
 
-#: commands/tablecmds.c:4957
+#: commands/tablecmds.c:4956
 #, c-format
 msgid "cannot alter partition \"%s\" with an incomplete detach"
 msgstr "不能修改分離操作尚未完成的分割 \"%s\""
 
 # commands/dbcommands.c:504
-#: commands/tablecmds.c:5186
+#: commands/tablecmds.c:5184
 #, c-format
 msgid "cannot change persistence setting twice"
 msgstr "不能兩次變更持久性設定"
 
 # commands/tablecmds.c:5395
-#: commands/tablecmds.c:5203
+#: commands/tablecmds.c:5201
 #, c-format
 msgid "cannot have multiple SET ACCESS METHOD subcommands"
 msgstr "不能包含多個 SET ACCESS METHOD 子命令"
 
 # commands/tablecmds.c:2189
-#: commands/tablecmds.c:5937
+#: commands/tablecmds.c:5948
 #, c-format
 msgid "cannot rewrite system relation \"%s\""
 msgstr "不能重寫系統關聯 \"%s\""
 
 # rewrite/rewriteDefine.c:427
-#: commands/tablecmds.c:5943
+#: commands/tablecmds.c:5954
 #, c-format
 msgid "cannot rewrite table \"%s\" used as a catalog table"
 msgstr "不能改寫用作目錄資料表的資料表 \"%s\""
 
 # commands/tablecmds.c:2199
-#: commands/tablecmds.c:5955
+#: commands/tablecmds.c:5966
 #, c-format
 msgid "cannot rewrite temporary tables of other sessions"
 msgstr "不能重寫其他工作階段的暫存資料表"
 
 # commands/typecmds.c:1341
-#: commands/tablecmds.c:6493 commands/tablecmds.c:6513
+#: commands/tablecmds.c:6504 commands/tablecmds.c:6524
 #, c-format
 msgid "column \"%s\" of relation \"%s\" contains null values"
 msgstr "關聯 \"%2$s\" 的欄位 \"%1$s\" 包含 NULL 值"
 
 # commands/tablecmds.c:2490
-#: commands/tablecmds.c:6530
+#: commands/tablecmds.c:6541
 #, c-format
 msgid "check constraint \"%s\" of relation \"%s\" is violated by some row"
 msgstr "有資料列違反關聯 \"%2$s\" 的檢查條件約束 \"%1$s\""
 
 # commands/tablecmds.c:2490
-#: commands/tablecmds.c:6550 partitioning/partbounds.c:3380
+#: commands/tablecmds.c:6561 partitioning/partbounds.c:3380
 #, c-format
 msgid "updated partition constraint for default partition \"%s\" would be violated by some row"
 msgstr "有資料列將違反預設分割 \"%s\" 更新後的分割條件約束"
 
 # commands/tablecmds.c:2490
-#: commands/tablecmds.c:6556
+#: commands/tablecmds.c:6567
 #, c-format
 msgid "partition constraint of relation \"%s\" is violated by some row"
 msgstr "有資料列違反關聯 \"%s\" 的分割條件約束"
 
 # catalog/namespace.c:200 utils/adt/regproc.c:837
 #. translator: %s is a group of some SQL keywords
-#: commands/tablecmds.c:6821
+#: commands/tablecmds.c:6832
 #, c-format
 msgid "ALTER action %s cannot be performed on relation \"%s\""
 msgstr "不能對關聯 \"%2$s\" 執行 ALTER 操作 %1$s"
 
 # commands/tablecmds.c:4711
-#: commands/tablecmds.c:7078 commands/tablecmds.c:7085
+#: commands/tablecmds.c:7089 commands/tablecmds.c:7096
 #, c-format
 msgid "cannot alter type \"%s\" because column \"%s.%s\" uses it"
 msgstr "不能修改型別 \"%s\"，因為欄位 \"%s.%s\" 使用它"
 
 # commands/tablecmds.c:2741
-#: commands/tablecmds.c:7092
+#: commands/tablecmds.c:7103
 #, c-format
 msgid "cannot alter foreign table \"%s\" because column \"%s.%s\" uses its row type"
 msgstr "不能修改外部資料表 \"%s\"，因為欄位 \"%s.%s\" 使用它的資料列型別"
 
 # commands/tablecmds.c:2741
-#: commands/tablecmds.c:7099
+#: commands/tablecmds.c:7110
 #, c-format
 msgid "cannot alter table \"%s\" because column \"%s.%s\" uses its row type"
 msgstr "不能修改資料表 \"%s\"，因為欄位 \"%s.%s\" 使用它的資料列型別"
 
 # commands/tablecmds.c:2741
-#: commands/tablecmds.c:7155
+#: commands/tablecmds.c:7166
 #, c-format
 msgid "cannot alter type \"%s\" because it is the type of a typed table"
 msgstr "不能修改型別 \"%s\"，因為它是型別化資料表的型別"
 
 # catalog/dependency.c:154
-#: commands/tablecmds.c:7157
+#: commands/tablecmds.c:7168
 #, c-format
 msgid "Use ALTER ... CASCADE to alter the typed tables too."
 msgstr "用 ALTER ... CASCADE 一併更改型別化資料表。"
 
 # commands/tablecmds.c:2741
-#: commands/tablecmds.c:7203
+#: commands/tablecmds.c:7214
 #, c-format
 msgid "type %s is the row type of another table"
 msgstr "型別 %s 是另一張資料表的資料列型別"
 
-#: commands/tablecmds.c:7205
+#: commands/tablecmds.c:7216
 #, c-format
 msgid "A typed table must use a stand-alone composite type created with CREATE TYPE."
 msgstr "型別化資料表必須使用透過 CREATE TYPE 建立的獨立複合型別。"
 
 # utils/cache/typcache.c:414
-#: commands/tablecmds.c:7210
+#: commands/tablecmds.c:7221
 #, c-format
 msgid "type %s is not a composite type"
 msgstr "型別 %s 不是複合型別"
 
 # utils/adt/pseudotypes.c:253
-#: commands/tablecmds.c:7237
+#: commands/tablecmds.c:7248
 #, c-format
 msgid "cannot add column to typed table"
 msgstr "不能新增欄位至型別化資料表"
 
 # utils/adt/pseudotypes.c:253
-#: commands/tablecmds.c:7287
+#: commands/tablecmds.c:7298
 #, c-format
 msgid "cannot add column to a partition"
 msgstr "不能將欄位新增到分割"
 
 # commands/tablecmds.c:2850
-#: commands/tablecmds.c:7316 commands/tablecmds.c:18135
+#: commands/tablecmds.c:7327 commands/tablecmds.c:18148
 #, c-format
 msgid "child table \"%s\" has different type for column \"%s\""
 msgstr "子資料表 \"%s\" 的欄位 \"%s\" 有不同的型別"
 
 # commands/tablecmds.c:2850
-#: commands/tablecmds.c:7322 commands/tablecmds.c:18141
+#: commands/tablecmds.c:7333 commands/tablecmds.c:18154
 #, c-format
 msgid "child table \"%s\" has different collation for column \"%s\""
 msgstr "子資料表 \"%s\" 的欄位 \"%s\" 有不同的定序"
 
 # commands/tablecmds.c:2862
-#: commands/tablecmds.c:7340
+#: commands/tablecmds.c:7351
 #, c-format
 msgid "merging definition of column \"%s\" for child \"%s\""
 msgstr "正在合併欄位 \"%s\" 定義 (適用於子系 \"%s\")"
 
-#: commands/tablecmds.c:7393
+#: commands/tablecmds.c:7404
 #, c-format
 msgid "cannot recursively add identity column to table that has child tables"
 msgstr "不能將識別欄位遞迴新增到具有子資料表的資料表"
 
 # commands/tablecmds.c:2807
-#: commands/tablecmds.c:7640
+#: commands/tablecmds.c:7651
 #, c-format
 msgid "column must be added to child tables too"
 msgstr "欄位也必須被加入子資料表"
 
 # commands/tablecmds.c:1328 commands/tablecmds.c:2889
-#: commands/tablecmds.c:7718
+#: commands/tablecmds.c:7729
 #, c-format
 msgid "column \"%s\" of relation \"%s\" already exists, skipping"
 msgstr "關聯 \"%2$s\" 的欄位 \"%1$s\" 已存在，跳過"
 
 # commands/tablecmds.c:1328 commands/tablecmds.c:2889
-#: commands/tablecmds.c:7725
+#: commands/tablecmds.c:7736
 #, c-format
 msgid "column \"%s\" of relation \"%s\" already exists"
 msgstr "欄位 \"%s\" (屬於關聯 \"%s\") 已存在"
@@ -16726,13 +16727,13 @@ msgstr "欄位 \"%s\" (屬於關聯 \"%s\") 已存在"
 # commands/tablecmds.c:3079 commands/tablecmds.c:3172
 # commands/tablecmds.c:3222 commands/tablecmds.c:3318
 # commands/tablecmds.c:3379 commands/tablecmds.c:4573
-#: commands/tablecmds.c:7816 commands/tablecmds.c:7979
-#: commands/tablecmds.c:8180 commands/tablecmds.c:8318
-#: commands/tablecmds.c:8472 commands/tablecmds.c:8566
-#: commands/tablecmds.c:8669 commands/tablecmds.c:8854
-#: commands/tablecmds.c:9020 commands/tablecmds.c:9111
-#: commands/tablecmds.c:9245 commands/tablecmds.c:14839
-#: commands/tablecmds.c:16619 commands/tablecmds.c:19404
+#: commands/tablecmds.c:7827 commands/tablecmds.c:7990
+#: commands/tablecmds.c:8191 commands/tablecmds.c:8329
+#: commands/tablecmds.c:8483 commands/tablecmds.c:8577
+#: commands/tablecmds.c:8680 commands/tablecmds.c:8865
+#: commands/tablecmds.c:9031 commands/tablecmds.c:9122
+#: commands/tablecmds.c:9256 commands/tablecmds.c:14852
+#: commands/tablecmds.c:16632 commands/tablecmds.c:19417
 #, c-format
 msgid "cannot alter system column \"%s\""
 msgstr "不能修改系統欄位 \"%s\""
@@ -16744,27 +16745,27 @@ msgstr "不能修改系統欄位 \"%s\""
 # parser/parse_relation.c:1647 parser/parse_relation.c:1705
 # parser/parse_relation.c:1919 parser/parse_type.c:94
 # utils/adt/ruleutils.c:1300
-#: commands/tablecmds.c:7822 commands/tablecmds.c:8186
-#: commands/tablecmds.c:14600
+#: commands/tablecmds.c:7833 commands/tablecmds.c:8197
+#: commands/tablecmds.c:14613
 #, c-format
 msgid "column \"%s\" of relation \"%s\" is an identity column"
 msgstr "關聯 \"%2$s\" 的欄位 \"%1$s\" 是識別欄位"
 
-#: commands/tablecmds.c:7839
+#: commands/tablecmds.c:7850
 #, c-format
 msgid "column \"%s\" is marked NOT NULL in parent table"
 msgstr "欄位 \"%s\" 在父資料表中標記為 NOT NULL"
 
 # commands/tablecmds.c:2807
-#: commands/tablecmds.c:8057 commands/tablecmds.c:10056
+#: commands/tablecmds.c:8068 commands/tablecmds.c:10069
 #, c-format
 msgid "constraint must be added to child tables too"
 msgstr "限制也必須新增至子資料表"
 
-#: commands/tablecmds.c:8058 commands/tablecmds.c:8296
-#: commands/tablecmds.c:8428 commands/tablecmds.c:8545
-#: commands/tablecmds.c:9418 commands/tablecmds.c:12250
-#: commands/tablecmds.c:12723
+#: commands/tablecmds.c:8069 commands/tablecmds.c:8307
+#: commands/tablecmds.c:8439 commands/tablecmds.c:8556
+#: commands/tablecmds.c:9429 commands/tablecmds.c:12263
+#: commands/tablecmds.c:12736
 #, c-format
 msgid "Do not specify the ONLY keyword."
 msgstr "不要指定 ONLY 關鍵字。"
@@ -16776,48 +16777,48 @@ msgstr "不要指定 ONLY 關鍵字。"
 # parser/parse_relation.c:1647 parser/parse_relation.c:1705
 # parser/parse_relation.c:1919 parser/parse_type.c:94
 # utils/adt/ruleutils.c:1300
-#: commands/tablecmds.c:8195
+#: commands/tablecmds.c:8206
 #, c-format
 msgid "column \"%s\" of relation \"%s\" is a generated column"
 msgstr "關聯 \"%2$s\" 的欄位 \"%1$s\" 是產生欄位"
 
 # utils/adt/pseudotypes.c:253
-#: commands/tablecmds.c:8295
+#: commands/tablecmds.c:8306
 #, c-format
 msgid "cannot add identity to a column of only the partitioned table"
 msgstr "不能僅為分割資料表本身的欄位新增識別屬性"
 
 # commands/tablecmds.c:4838
-#: commands/tablecmds.c:8301
+#: commands/tablecmds.c:8312
 #, c-format
 msgid "cannot add identity to a column of a partition"
 msgstr "不能為分割的欄位新增識別屬性"
 
-#: commands/tablecmds.c:8329
+#: commands/tablecmds.c:8340
 #, c-format
 msgid "column \"%s\" of relation \"%s\" must be declared NOT NULL before identity can be added"
 msgstr "在新增識別屬性之前，必須宣告關聯 \"%2$s\" 的欄位 \"%1$s\" 為 NOT NULL"
 
 # commands/tablecmds.c:1328 commands/tablecmds.c:2889
-#: commands/tablecmds.c:8360
+#: commands/tablecmds.c:8371
 #, c-format
 msgid "column \"%s\" of relation \"%s\" is already an identity column"
 msgstr "關聯 \"%2$s\" 的欄位 \"%1$s\" 已是識別欄位"
 
 # commands/tablecmds.c:1328 commands/tablecmds.c:2889
-#: commands/tablecmds.c:8366
+#: commands/tablecmds.c:8377
 #, c-format
 msgid "column \"%s\" of relation \"%s\" already has a default value"
 msgstr "關聯 \"%2$s\" 的欄位 \"%1$s\" 已具有預設值"
 
 # commands/dbcommands.c:504
-#: commands/tablecmds.c:8427
+#: commands/tablecmds.c:8438
 #, c-format
 msgid "cannot change identity column of only the partitioned table"
 msgstr "不能僅變更分割資料表本身的識別欄位"
 
 # sql_help.h:45
-#: commands/tablecmds.c:8433
+#: commands/tablecmds.c:8444
 #, c-format
 msgid "cannot change identity column of a partition"
 msgstr "不能變更分割的識別欄位"
@@ -16829,18 +16830,18 @@ msgstr "不能變更分割的識別欄位"
 # parser/parse_relation.c:1647 parser/parse_relation.c:1705
 # parser/parse_relation.c:1919 parser/parse_type.c:94
 # utils/adt/ruleutils.c:1300
-#: commands/tablecmds.c:8478 commands/tablecmds.c:8574
+#: commands/tablecmds.c:8489 commands/tablecmds.c:8585
 #, c-format
 msgid "column \"%s\" of relation \"%s\" is not an identity column"
 msgstr "關聯 \"%2$s\" 的欄位 \"%1$s\" 不是識別欄位"
 
 # rewrite/rewriteHandler.c:1374
-#: commands/tablecmds.c:8544
+#: commands/tablecmds.c:8555
 #, c-format
 msgid "cannot drop identity from a column of only the partitioned table"
 msgstr "不能僅刪除分割資料表本身欄位的識別屬性"
 
-#: commands/tablecmds.c:8550
+#: commands/tablecmds.c:8561
 #, c-format
 msgid "cannot drop identity from a column of a partition"
 msgstr "不能刪除分割的欄位的識別屬性"
@@ -16852,7 +16853,7 @@ msgstr "不能刪除分割的欄位的識別屬性"
 # parser/parse_relation.c:1647 parser/parse_relation.c:1705
 # parser/parse_relation.c:1919 parser/parse_type.c:94
 # utils/adt/ruleutils.c:1300
-#: commands/tablecmds.c:8579
+#: commands/tablecmds.c:8590
 #, c-format
 msgid "column \"%s\" of relation \"%s\" is not an identity column, skipping"
 msgstr "關聯 \"%2$s\" 的欄位 \"%1$s\" 不是識別欄位，跳過"
@@ -16864,12 +16865,12 @@ msgstr "關聯 \"%2$s\" 的欄位 \"%1$s\" 不是識別欄位，跳過"
 # parser/parse_relation.c:1647 parser/parse_relation.c:1705
 # parser/parse_relation.c:1919 parser/parse_type.c:94
 # utils/adt/ruleutils.c:1300
-#: commands/tablecmds.c:8676 commands/tablecmds.c:8875
+#: commands/tablecmds.c:8687 commands/tablecmds.c:8886
 #, c-format
 msgid "column \"%s\" of relation \"%s\" is not a generated column"
 msgstr "關聯 \"%2$s\" 的欄位 \"%1$s\" 不是產生欄位"
 
-#: commands/tablecmds.c:8693
+#: commands/tablecmds.c:8704
 #, c-format
 msgid "ALTER TABLE / SET EXPRESSION is not supported for virtual generated columns in tables that are part of a publication"
 msgstr "對於屬於發布的資料表中的虛擬產生欄位，不支援 ALTER TABLE / SET EXPRESSION"
@@ -16881,24 +16882,24 @@ msgstr "對於屬於發布的資料表中的虛擬產生欄位，不支援 ALTER
 # parser/parse_relation.c:1647 parser/parse_relation.c:1705
 # parser/parse_relation.c:1919 parser/parse_type.c:94
 # utils/adt/ruleutils.c:1300
-#: commands/tablecmds.c:8694 commands/tablecmds.c:8867
+#: commands/tablecmds.c:8705 commands/tablecmds.c:8878
 #, c-format
 msgid "Column \"%s\" of relation \"%s\" is a virtual generated column."
 msgstr "關聯 \"%2$s\" 的欄位 \"%1$s\" 是虛擬產生欄位。"
 
 # commands/tablecmds.c:2807
-#: commands/tablecmds.c:8801
+#: commands/tablecmds.c:8812
 #, c-format
 msgid "ALTER TABLE / DROP EXPRESSION must be applied to child tables too"
 msgstr "ALTER TABLE / DROP EXPRESSION 也必須套用到子資料表"
 
 # commands/tablecmds.c:1317
-#: commands/tablecmds.c:8823
+#: commands/tablecmds.c:8834
 #, c-format
 msgid "cannot drop generation expression from inherited column"
 msgstr "不能刪除繼承欄位的產生運算式"
 
-#: commands/tablecmds.c:8866
+#: commands/tablecmds.c:8877
 #, c-format
 msgid "ALTER TABLE / DROP EXPRESSION is not supported for virtual generated columns"
 msgstr "虛擬產生欄位不支援 ALTER TABLE / DROP EXPRESSION"
@@ -16910,12 +16911,12 @@ msgstr "虛擬產生欄位不支援 ALTER TABLE / DROP EXPRESSION"
 # parser/parse_relation.c:1647 parser/parse_relation.c:1705
 # parser/parse_relation.c:1919 parser/parse_type.c:94
 # utils/adt/ruleutils.c:1300
-#: commands/tablecmds.c:8880
+#: commands/tablecmds.c:8891
 #, c-format
 msgid "column \"%s\" of relation \"%s\" is not a generated column, skipping"
 msgstr "關聯 \"%2$s\" 的欄位 \"%1$s\" 不是產生欄位，跳過"
 
-#: commands/tablecmds.c:8958
+#: commands/tablecmds.c:8969
 #, c-format
 msgid "cannot refer to non-index column by number"
 msgstr "不能按欄位編號引用非索引關聯的欄位"
@@ -16927,37 +16928,37 @@ msgstr "不能按欄位編號引用非索引關聯的欄位"
 # parser/parse_relation.c:1647 parser/parse_relation.c:1705
 # parser/parse_relation.c:1919 parser/parse_type.c:94
 # utils/adt/ruleutils.c:1300
-#: commands/tablecmds.c:9010
+#: commands/tablecmds.c:9021
 #, c-format
 msgid "column number %d of relation \"%s\" does not exist"
 msgstr "關聯 \"%2$s\" 的欄位編號 %1$d 不存在"
 
 # commands/tablecmds.c:4580
-#: commands/tablecmds.c:9030
+#: commands/tablecmds.c:9041
 #, c-format
 msgid "cannot alter statistics on virtual generated column \"%s\""
 msgstr "不能修改虛擬產生欄位 \"%s\" 的統計資訊"
 
 # commands/view.c:187
-#: commands/tablecmds.c:9039
+#: commands/tablecmds.c:9050
 #, c-format
 msgid "cannot alter statistics on included column \"%s\" of index \"%s\""
 msgstr "不能修改索引 \"%2$s\" 的包含欄位 \"%1$s\" 的統計資訊"
 
 # commands/tablecmds.c:4711
-#: commands/tablecmds.c:9044
+#: commands/tablecmds.c:9055
 #, c-format
 msgid "cannot alter statistics on non-expression column \"%s\" of index \"%s\""
 msgstr "不能修改索引 \"%2$s\" 的非運算式欄位 \"%1$s\" 的統計資訊"
 
 # sql_help.h:97
-#: commands/tablecmds.c:9046
+#: commands/tablecmds.c:9057
 #, c-format
 msgid "Alter statistics on table column instead."
 msgstr "改為修改資料表欄位的統計資訊。"
 
 # rewrite/rewriteHandler.c:1374
-#: commands/tablecmds.c:9292
+#: commands/tablecmds.c:9303
 #, c-format
 msgid "cannot drop column from typed table"
 msgstr "不能從型別化資料表刪除欄位"
@@ -16969,186 +16970,186 @@ msgstr "不能從型別化資料表刪除欄位"
 # parser/parse_relation.c:1647 parser/parse_relation.c:1705
 # parser/parse_relation.c:1919 parser/parse_type.c:94
 # utils/adt/ruleutils.c:1300
-#: commands/tablecmds.c:9356
+#: commands/tablecmds.c:9367
 #, c-format
 msgid "column \"%s\" of relation \"%s\" does not exist, skipping"
 msgstr "欄位 \"%s\" 不在關聯 \"%s\"，跳過"
 
 # commands/tablecmds.c:3448
-#: commands/tablecmds.c:9369
+#: commands/tablecmds.c:9380
 #, c-format
 msgid "cannot drop system column \"%s\""
 msgstr "不能刪除系統欄位 \"%s\""
 
 # commands/tablecmds.c:3455
-#: commands/tablecmds.c:9379
+#: commands/tablecmds.c:9390
 #, c-format
 msgid "cannot drop inherited column \"%s\""
 msgstr "不能刪除繼承的欄位 \"%s\""
 
-#: commands/tablecmds.c:9392
+#: commands/tablecmds.c:9403
 #, c-format
 msgid "cannot drop column \"%s\" because it is part of the partition key of relation \"%s\""
 msgstr "不能刪除欄位 \"%s\"，因為它是關聯 \"%s\" 分割索引鍵的一部分"
 
 # rewrite/rewriteHandler.c:1374
-#: commands/tablecmds.c:9417
+#: commands/tablecmds.c:9428
 #, c-format
 msgid "cannot drop column from only the partitioned table when partitions exist"
 msgstr "存在分割時，不能只從分割資料表本身刪除欄位"
 
-#: commands/tablecmds.c:9582
+#: commands/tablecmds.c:9594
 #, c-format
 msgid "column \"%s\" of table \"%s\" is not marked NOT NULL"
 msgstr "資料表 \"%2$s\" 的欄位 \"%1$s\" 未標記為 NOT NULL"
 
 # commands/tablecmds.c:1307
-#: commands/tablecmds.c:9618 commands/tablecmds.c:9630
+#: commands/tablecmds.c:9631 commands/tablecmds.c:9643
 #, c-format
 msgid "cannot create primary key on column \"%s\""
 msgstr "不能為欄位 \"%s\" 建立主索引鍵"
 
 #. translator: fourth %s is a constraint characteristic such as NOT VALID
-#: commands/tablecmds.c:9620 commands/tablecmds.c:9632
+#: commands/tablecmds.c:9633 commands/tablecmds.c:9645
 #, c-format
 msgid "The constraint \"%s\" on column \"%s\" of table \"%s\", marked %s, is incompatible with a primary key."
 msgstr "資料表 \"%3$s\" 的欄位 \"%2$s\" 上的條件約束 \"%1$s\" 標記為 %4$s，與主索引鍵不相容。"
 
-#: commands/tablecmds.c:9761
+#: commands/tablecmds.c:9774
 #, c-format
 msgid "ALTER TABLE / ADD CONSTRAINT USING INDEX is not supported on partitioned tables"
 msgstr "分割資料表不支援 ALTER TABLE / ADD CONSTRAINT USING INDEX"
 
-#: commands/tablecmds.c:9786
+#: commands/tablecmds.c:9799
 #, c-format
 msgid "ALTER TABLE / ADD CONSTRAINT USING INDEX will rename index \"%s\" to \"%s\""
 msgstr "ALTER TABLE / ADD CONSTRAINT USING INDEX 會將索引 \"%s\" 重新命名為 \"%s\""
 
-#: commands/tablecmds.c:10143
+#: commands/tablecmds.c:10156
 #, c-format
 msgid "cannot use ONLY for foreign key on partitioned table \"%s\" referencing relation \"%s\""
 msgstr "不能對分割資料表 \"%1$s\" 上引用關聯 \"%2$s\" 的外來鍵使用 ONLY"
 
 # commands/tablecmds.c:3756
-#: commands/tablecmds.c:10151 commands/tablecmds.c:10778
+#: commands/tablecmds.c:10164 commands/tablecmds.c:10791
 #, c-format
 msgid "referenced relation \"%s\" is not a table"
 msgstr "被參照的關聯 \"%s\" 不是資料表"
 
-#: commands/tablecmds.c:10174
+#: commands/tablecmds.c:10187
 #, c-format
 msgid "constraints on permanent tables may reference only permanent tables"
 msgstr "持久資料表上的條件約束只能引用持久資料表"
 
-#: commands/tablecmds.c:10181
+#: commands/tablecmds.c:10194
 #, c-format
 msgid "constraints on unlogged tables may reference only permanent or unlogged tables"
 msgstr "不記錄 WAL 的資料表上的條件約束只能引用持久資料表或不記錄 WAL 的資料表"
 
 # commands/tablecmds.c:2199
-#: commands/tablecmds.c:10187
+#: commands/tablecmds.c:10200
 #, c-format
 msgid "constraints on temporary tables may reference only temporary tables"
 msgstr "暫時資料表的限制只能參照暫時資料表"
 
 # commands/tablecmds.c:2199
-#: commands/tablecmds.c:10191
+#: commands/tablecmds.c:10204
 #, c-format
 msgid "constraints on temporary tables must involve temporary tables of this session"
 msgstr "暫存資料表上的條件約束所涉及的資料表必須是本工作階段的暫存資料表"
 
-#: commands/tablecmds.c:10206 commands/tablecmds.c:10234
+#: commands/tablecmds.c:10219 commands/tablecmds.c:10247
 #, c-format
 msgid "foreign key uses PERIOD on the referenced table but not the referencing table"
 msgstr "外來鍵在被引用資料表上使用 PERIOD，但在引用資料表上沒有使用"
 
-#: commands/tablecmds.c:10246
+#: commands/tablecmds.c:10259
 #, c-format
 msgid "foreign key uses PERIOD on the referencing table but not the referenced table"
 msgstr "外來鍵在引用資料表上使用 PERIOD，但在被引用資料表上沒有使用"
 
-#: commands/tablecmds.c:10260
+#: commands/tablecmds.c:10273
 #, c-format
 msgid "foreign key must use PERIOD when referencing a primary key using WITHOUT OVERLAPS"
 msgstr "引用使用 WITHOUT OVERLAPS 的主索引鍵時，外來鍵必須使用 PERIOD"
 
-#: commands/tablecmds.c:10284 commands/tablecmds.c:10290
+#: commands/tablecmds.c:10297 commands/tablecmds.c:10303
 #, c-format
 msgid "invalid %s action for foreign key constraint containing generated column"
 msgstr "包含產生欄位的外來鍵條件約束的 %s 動作無效"
 
 # commands/comment.c:928
-#: commands/tablecmds.c:10305
+#: commands/tablecmds.c:10318
 #, c-format
 msgid "foreign key constraints on virtual generated columns are not supported"
 msgstr "不支援虛擬產生欄位上的外來鍵條件約束"
 
-#: commands/tablecmds.c:10319 commands/tablecmds.c:10328
+#: commands/tablecmds.c:10332 commands/tablecmds.c:10341
 #, c-format
 msgid "unsupported %s action for foreign key constraint using PERIOD"
 msgstr "使用 PERIOD 的外來鍵條件約束不支援 %s 動作"
 
 # commands/tablecmds.c:3842 commands/tablecmds.c:4330
-#: commands/tablecmds.c:10343
+#: commands/tablecmds.c:10356
 #, c-format
 msgid "number of referencing and referenced columns for foreign key disagree"
 msgstr "外來鍵的參考欄位數和被參考欄位數不一致"
 
 # parser/parse_oper.c:249 parser/parse_oper.c:314
-#: commands/tablecmds.c:10399
+#: commands/tablecmds.c:10412
 #, c-format
 msgid "could not identify an overlaps operator for foreign key"
 msgstr "無法確定外來鍵所需的重疊運算子"
 
 # parser/parse_oper.c:185 utils/adt/arrayfuncs.c:2581
 # utils/adt/ri_triggers.c:3641
-#: commands/tablecmds.c:10400
+#: commands/tablecmds.c:10413
 #, c-format
 msgid "could not identify an equality operator for foreign key"
 msgstr "無法確定外來鍵所需的相等運算子"
 
 # commands/tablecmds.c:3863
-#: commands/tablecmds.c:10465 commands/tablecmds.c:10499
+#: commands/tablecmds.c:10478 commands/tablecmds.c:10512
 #, c-format
 msgid "foreign key constraint \"%s\" cannot be implemented"
 msgstr "外來鍵限制 \"%s\" 不能實作"
 
 # commands/tablecmds.c:3866
-#: commands/tablecmds.c:10467
+#: commands/tablecmds.c:10480
 #, c-format
 msgid "Key columns \"%s\" of the referencing table and \"%s\" of the referenced table are of incompatible types: %s and %s."
 msgstr "引用資料表的索引鍵欄位 \"%s\" 與被引用資料表的索引鍵欄位 \"%s\" 型別不相容: %s 和 %s。"
 
-#: commands/tablecmds.c:10500
+#: commands/tablecmds.c:10513
 #, c-format
 msgid "Key columns \"%s\" of the referencing table and \"%s\" of the referenced table have incompatible collations: \"%s\" and \"%s\".  If either collation is nondeterministic, then both collations have to be the same."
 msgstr "引用資料表的索引鍵欄位 \"%s\" 與被引用資料表的索引鍵欄位 \"%s\" 定序不相容: \"%s\" 和 \"%s\"。如果任一定序是非確定性的，則兩個定序必須相同。"
 
-#: commands/tablecmds.c:10706
+#: commands/tablecmds.c:10719
 #, c-format
 msgid "column \"%s\" referenced in ON DELETE SET action must be part of foreign key"
 msgstr "ON DELETE SET 動作中引用的欄位 \"%s\" 必須是外來鍵的一部分"
 
 # commands/typecmds.c:617 commands/typecmds.c:1504
-#: commands/tablecmds.c:11090 commands/tablecmds.c:11523
+#: commands/tablecmds.c:11103 commands/tablecmds.c:11536
 #: parser/parse_utilcmd.c:947 parser/parse_utilcmd.c:1092
 #, c-format
 msgid "foreign key constraints are not supported on foreign tables"
 msgstr "外部資料表上不支援外來鍵條件約束"
 
-#: commands/tablecmds.c:11506
+#: commands/tablecmds.c:11519
 #, c-format
 msgid "cannot attach table \"%s\" as a partition because it is referenced by foreign key \"%s\""
 msgstr "不能將資料表 \"%s\" 附加為分割，因為外來鍵 \"%s\" 引用它"
 
 # commands/tablecmds.c:3455
-#: commands/tablecmds.c:11787
+#: commands/tablecmds.c:11800
 #, c-format
 msgid "constraint \"%s\" enforceability conflicts with constraint \"%s\" on relation \"%s\""
 msgstr "條件約束 \"%1$s\" 的強制執行屬性與關聯 \"%3$s\" 上的條件約束 \"%2$s\" 衝突"
 
 # commands/tablecmds.c:2807
-#: commands/tablecmds.c:12249
+#: commands/tablecmds.c:12262
 #, c-format
 msgid "constraint must be altered in child tables too"
 msgstr "也必須修改子資料表中的條件約束"
@@ -17160,9 +17161,9 @@ msgstr "也必須修改子資料表中的條件約束"
 # parser/parse_relation.c:1647 parser/parse_relation.c:1705
 # parser/parse_relation.c:1919 parser/parse_type.c:94
 # utils/adt/ruleutils.c:1300
-#: commands/tablecmds.c:12278 commands/tablecmds.c:12830
-#: commands/tablecmds.c:13361 commands/tablecmds.c:14479
-#: commands/tablecmds.c:14708
+#: commands/tablecmds.c:12291 commands/tablecmds.c:12843
+#: commands/tablecmds.c:13374 commands/tablecmds.c:14492
+#: commands/tablecmds.c:14721
 #, c-format
 msgid "constraint \"%s\" of relation \"%s\" does not exist"
 msgstr "限制 \"%s\" (屬於關聯 \"%s\") 不存在"
@@ -17174,18 +17175,18 @@ msgstr "限制 \"%s\" (屬於關聯 \"%s\") 不存在"
 # parser/parse_relation.c:1647 parser/parse_relation.c:1705
 # parser/parse_relation.c:1919 parser/parse_type.c:94
 # utils/adt/ruleutils.c:1300
-#: commands/tablecmds.c:12285
+#: commands/tablecmds.c:12298
 #, c-format
 msgid "constraint \"%s\" of relation \"%s\" is not a foreign key constraint"
 msgstr "關聯 \"%2$s\" 的條件約束 \"%1$s\" 不是外來鍵條件約束"
 
 # commands/tablecmds.c:3455
-#: commands/tablecmds.c:12291
+#: commands/tablecmds.c:12304
 #, c-format
 msgid "cannot alter enforceability of constraint \"%s\" of relation \"%s\""
 msgstr "不能修改關聯 \"%2$s\" 的條件約束 \"%1$s\" 的強制執行屬性"
 
-#: commands/tablecmds.c:12293
+#: commands/tablecmds.c:12306
 #, c-format
 msgid "Only foreign key and check constraints can change enforceability."
 msgstr "只有外來鍵條件約束和檢查條件約束可以變更強制執行屬性。"
@@ -17197,122 +17198,122 @@ msgstr "只有外來鍵條件約束和檢查條件約束可以變更強制執行
 # parser/parse_relation.c:1647 parser/parse_relation.c:1705
 # parser/parse_relation.c:1919 parser/parse_type.c:94
 # utils/adt/ruleutils.c:1300
-#: commands/tablecmds.c:12298
+#: commands/tablecmds.c:12311
 #, c-format
 msgid "constraint \"%s\" of relation \"%s\" is not a not-null constraint"
 msgstr "關聯 \"%2$s\" 的條件約束 \"%1$s\" 不是非空條件約束"
 
 # commands/comment.c:928
-#: commands/tablecmds.c:12304
+#: commands/tablecmds.c:12317
 #, c-format
 msgid "not-null constraint \"%s\" on partitioned table \"%s\" cannot be NO INHERIT"
 msgstr "分割資料表 \"%2$s\" 上的非空條件約束 \"%1$s\" 不能為 NO INHERIT"
 
 # commands/tablecmds.c:3455
-#: commands/tablecmds.c:12312
+#: commands/tablecmds.c:12325
 #, c-format
 msgid "cannot alter inherited constraint \"%s\" on relation \"%s\""
 msgstr "不能修改關聯 \"%2$s\" 上的繼承條件約束 \"%1$s\""
 
 # commands/tablecmds.c:3455
-#: commands/tablecmds.c:12352
+#: commands/tablecmds.c:12365
 #, c-format
 msgid "cannot alter constraint \"%s\" on relation \"%s\""
 msgstr "不能修改關聯 \"%2$s\" 上的條件約束 \"%1$s\""
 
 # commands/tablecmds.c:3455
-#: commands/tablecmds.c:12355
+#: commands/tablecmds.c:12368
 #, c-format
 msgid "Constraint \"%s\" is derived from constraint \"%s\" of relation \"%s\"."
 msgstr "條件約束 \"%1$s\" 衍生自關聯 \"%3$s\" 的條件約束 \"%2$s\"。"
 
-#: commands/tablecmds.c:12357
+#: commands/tablecmds.c:12370
 #, c-format
 msgid "You may alter the constraint it derives from instead."
 msgstr "可以改為修改它所衍生自的條件約束。"
 
 # commands/tablecmds.c:3455
-#: commands/tablecmds.c:12653
+#: commands/tablecmds.c:12666
 #, c-format
 msgid "cannot mark inherited constraint \"%s\" as %s"
 msgstr "不能將繼承條件約束 \"%s\" 標記為 %s"
 
-#: commands/tablecmds.c:12656
+#: commands/tablecmds.c:12669
 #, c-format
 msgid "The matching constraint on parent table \"%s\" is %s."
 msgstr "父資料表 \"%s\" 上對應的條件約束為 %s。"
 
 # commands/tablecmds.c:2807
-#: commands/tablecmds.c:12722
+#: commands/tablecmds.c:12735
 #, c-format
 msgid "constraint must be altered on child tables too"
 msgstr "也必須修改子資料表中的條件約束"
 
 # commands/tablecmds.c:3455
-#: commands/tablecmds.c:13370
+#: commands/tablecmds.c:13383
 #, c-format
 msgid "cannot validate constraint \"%s\" of relation \"%s\""
 msgstr "不能驗證關聯 \"%2$s\" 的條件約束 \"%1$s\""
 
 # input.c:213
-#: commands/tablecmds.c:13372
+#: commands/tablecmds.c:13385
 #, c-format
 msgid "This operation is not supported for this type of constraint."
 msgstr "此類條件約束不支援此操作。"
 
-#: commands/tablecmds.c:13377
+#: commands/tablecmds.c:13390
 #, c-format
 msgid "cannot validate NOT ENFORCED constraint"
 msgstr "不能驗證 NOT ENFORCED 條件約束"
 
 # commands/tablecmds.c:2807
-#: commands/tablecmds.c:13589 commands/tablecmds.c:13689
+#: commands/tablecmds.c:13602 commands/tablecmds.c:13702
 #, c-format
 msgid "constraint must be validated on child tables too"
 msgstr "也必須驗證子資料表中的條件約束"
 
 # commands/tablecmds.c:3968
-#: commands/tablecmds.c:13766
+#: commands/tablecmds.c:13779
 #, c-format
 msgid "column \"%s\" referenced in foreign key constraint does not exist"
 msgstr "外來鍵限制中所參考的欄位 \"%s\" 不存在"
 
-#: commands/tablecmds.c:13772
+#: commands/tablecmds.c:13785
 #, c-format
 msgid "system columns cannot be used in foreign keys"
 msgstr "系統欄位不能用於外來鍵"
 
 # commands/tablecmds.c:3973
-#: commands/tablecmds.c:13776
+#: commands/tablecmds.c:13789
 #, c-format
 msgid "cannot have more than %d keys in a foreign key"
 msgstr "外來鍵的欄位數不能超過 %d"
 
 # commands/tablecmds.c:4042
-#: commands/tablecmds.c:13844
+#: commands/tablecmds.c:13857
 #, c-format
 msgid "cannot use a deferrable primary key for referenced table \"%s\""
 msgstr "不能使用被引用資料表 \"%s\" 的可延遲主索引鍵"
 
 # commands/tablecmds.c:4042
-#: commands/tablecmds.c:13861
+#: commands/tablecmds.c:13874
 #, c-format
 msgid "there is no primary key for referenced table \"%s\""
 msgstr "被參考的資料表 \"%s\" 沒有主索引鍵"
 
-#: commands/tablecmds.c:13934
+#: commands/tablecmds.c:13947
 #, c-format
 msgid "foreign key referenced-columns list must not contain duplicates"
 msgstr "外來鍵的被引用欄位清單不得包含重複欄位"
 
 # commands/tablecmds.c:4160
-#: commands/tablecmds.c:14037
+#: commands/tablecmds.c:14050
 #, c-format
 msgid "cannot use a deferrable unique constraint for referenced table \"%s\""
 msgstr "不能使用被引用資料表 \"%s\" 的可延遲唯一條件約束"
 
 # commands/tablecmds.c:4160
-#: commands/tablecmds.c:14042
+#: commands/tablecmds.c:14055
 #, c-format
 msgid "there is no unique constraint matching given keys for referenced table \"%s\""
 msgstr "沒有唯一限制符合被參考資料表 \"%s\" 之指定索引鍵"
@@ -17324,360 +17325,360 @@ msgstr "沒有唯一限制符合被參考資料表 \"%s\" 之指定索引鍵"
 # parser/parse_relation.c:1647 parser/parse_relation.c:1705
 # parser/parse_relation.c:1919 parser/parse_type.c:94
 # utils/adt/ruleutils.c:1300
-#: commands/tablecmds.c:14483
+#: commands/tablecmds.c:14496
 #, c-format
 msgid "constraint \"%s\" of relation \"%s\" does not exist, skipping"
 msgstr "關聯 \"%2$s\" 的限制 \"%1$s\" 不存在，跳過"
 
 # commands/tablecmds.c:3455
-#: commands/tablecmds.c:14528
+#: commands/tablecmds.c:14541
 #, c-format
 msgid "cannot drop inherited constraint \"%s\" of relation \"%s\""
 msgstr "不能捨棄繼承的限制 \"%s\" (屬於關聯 \"%s\")"
 
 # commands/tablecmds.c:3115
-#: commands/tablecmds.c:14580
+#: commands/tablecmds.c:14593
 #, c-format
 msgid "column \"%s\" is in a primary key"
 msgstr "欄位 \"%s\" 是主索引鍵的一部分"
 
 # commands/tablecmds.c:3115
-#: commands/tablecmds.c:14588
+#: commands/tablecmds.c:14601
 #, c-format
 msgid "column \"%s\" is in index used as replica identity"
 msgstr "欄位 \"%s\" 包含在用作 REPLICA IDENTITY 的索引中"
 
 # catalog/pg_aggregate.c:165 catalog/pg_proc.c:124 executor/functions.c:1082
-#: commands/tablecmds.c:14821
+#: commands/tablecmds.c:14834
 #, c-format
 msgid "cannot alter column type of typed table"
 msgstr "不能更改型別化資料表的欄位型別"
 
-#: commands/tablecmds.c:14849
+#: commands/tablecmds.c:14862
 #, c-format
 msgid "cannot specify USING when altering type of generated column"
 msgstr "修改產生欄位的資料型別時不能指定 USING"
 
 # commands/tablecmds.c:4580
-#: commands/tablecmds.c:14861
+#: commands/tablecmds.c:14874
 #, c-format
 msgid "cannot alter inherited column \"%s\""
 msgstr "不能修改繼承的欄位 \"%s\""
 
 # commands/tablecmds.c:2741
-#: commands/tablecmds.c:14870
+#: commands/tablecmds.c:14883
 #, c-format
 msgid "cannot alter column \"%s\" because it is part of the partition key of relation \"%s\""
 msgstr "不能修改欄位 \"%1$s\"，因為它是關聯 \"%2$s\" 分割索引鍵的一部分"
 
 # commands/tablecmds.c:4738
-#: commands/tablecmds.c:14925
+#: commands/tablecmds.c:14938
 #, c-format
 msgid "result of USING clause for column \"%s\" cannot be cast automatically to type %s"
 msgstr "欄位 \"%s\" 的 USING 子句結果不能自動轉換為型別 %s"
 
 # utils/init/miscinit.c:900
-#: commands/tablecmds.c:14928
+#: commands/tablecmds.c:14941
 #, c-format
 msgid "You might need to add an explicit cast."
 msgstr "可能需要加入明確的型別轉換。"
 
 # commands/tablecmds.c:4647
-#: commands/tablecmds.c:14932
+#: commands/tablecmds.c:14945
 #, c-format
 msgid "column \"%s\" cannot be cast automatically to type %s"
 msgstr "欄位 \"%s\" 不能自動轉換為型別 %s"
 
 # utils/init/miscinit.c:900
 #. translator: USING is SQL, don't translate it
-#: commands/tablecmds.c:14936
+#: commands/tablecmds.c:14949
 #, c-format
 msgid "You might need to specify \"USING %s::%s\"."
 msgstr "可能需要指定 \"USING %s::%s\"。"
 
 # commands/tablecmds.c:3455
-#: commands/tablecmds.c:15039
+#: commands/tablecmds.c:15052
 #, c-format
 msgid "cannot alter inherited column \"%s\" of relation \"%s\""
 msgstr "不能修改關聯 \"%2$s\" 的繼承欄位 \"%1$s\""
 
-#: commands/tablecmds.c:15068
+#: commands/tablecmds.c:15081
 #, c-format
 msgid "USING expression contains a whole-row table reference."
 msgstr "USING 運算式包含整列資料表引用。"
 
 # commands/tablecmds.c:4673
-#: commands/tablecmds.c:15079
+#: commands/tablecmds.c:15092
 #, c-format
 msgid "type of inherited column \"%s\" must be changed in child tables too"
 msgstr "繼承之欄位 \"%s\" 的型別也必須在子資料表中變更"
 
 # commands/tablecmds.c:4711
-#: commands/tablecmds.c:15204
+#: commands/tablecmds.c:15217
 #, c-format
 msgid "cannot alter type of column \"%s\" twice"
 msgstr "不能修改欄位 \"%s\" 的型別兩次"
 
 # commands/tablecmds.c:4738
-#: commands/tablecmds.c:15242
+#: commands/tablecmds.c:15255
 #, c-format
 msgid "generation expression for column \"%s\" cannot be cast automatically to type %s"
 msgstr "欄位 \"%s\" 的產生運算式不能自動轉換為型別 %s"
 
 # commands/tablecmds.c:4738
-#: commands/tablecmds.c:15247
+#: commands/tablecmds.c:15260
 #, c-format
 msgid "default for column \"%s\" cannot be cast automatically to type %s"
 msgstr "欄位 \"%s\" 的預設值不能自動轉換為型別 %s"
 
 # commands/tablecmds.c:4838
-#: commands/tablecmds.c:15551
+#: commands/tablecmds.c:15564
 #, c-format
 msgid "cannot alter type of a column used by a function or procedure"
 msgstr "不能修改函式或程序所使用的欄位的型別"
 
 # commands/tablecmds.c:4839
-#: commands/tablecmds.c:15552 commands/tablecmds.c:15567
-#: commands/tablecmds.c:15587 commands/tablecmds.c:15606
-#: commands/tablecmds.c:15665
+#: commands/tablecmds.c:15565 commands/tablecmds.c:15580
+#: commands/tablecmds.c:15600 commands/tablecmds.c:15619
+#: commands/tablecmds.c:15678
 #, c-format
 msgid "%s depends on column \"%s\"."
 msgstr "%s 相依於欄位 \"%s\"。"
 
 # commands/tablecmds.c:4838
-#: commands/tablecmds.c:15566
+#: commands/tablecmds.c:15579
 #, c-format
 msgid "cannot alter type of a column used by a view or rule"
 msgstr "不能修改被檢視或規則使用的欄位型別"
 
 # commands/tablecmds.c:4838
-#: commands/tablecmds.c:15586
+#: commands/tablecmds.c:15599
 #, c-format
 msgid "cannot alter type of a column used in a trigger definition"
 msgstr "不能修改觸發器定義中使用的欄位型別"
 
 # commands/tablecmds.c:4838
-#: commands/tablecmds.c:15605
+#: commands/tablecmds.c:15618
 #, c-format
 msgid "cannot alter type of a column used in a policy definition"
 msgstr "不能修改原則定義中使用的欄位的型別"
 
 # commands/tablecmds.c:4838
-#: commands/tablecmds.c:15636
+#: commands/tablecmds.c:15649
 #, c-format
 msgid "cannot alter type of a column used by a generated column"
 msgstr "不能修改產生欄位所使用的欄位的型別"
 
 # commands/tablecmds.c:4580
-#: commands/tablecmds.c:15637
+#: commands/tablecmds.c:15650
 #, c-format
 msgid "Column \"%s\" is used by generated column \"%s\"."
 msgstr "產生欄位 \"%2$s\" 使用欄位 \"%1$s\"。"
 
 # commands/tablecmds.c:4838
-#: commands/tablecmds.c:15664
+#: commands/tablecmds.c:15677
 #, c-format
 msgid "cannot alter type of a column used by a publication WHERE clause"
 msgstr "不能修改發布的 WHERE 子句所使用的欄位的型別"
 
 # commands/view.c:187
-#: commands/tablecmds.c:16727 commands/tablecmds.c:16739
+#: commands/tablecmds.c:16740 commands/tablecmds.c:16752
 #, c-format
 msgid "cannot change owner of index \"%s\""
 msgstr "不能變更索引 \"%s\" 的擁有者"
 
-#: commands/tablecmds.c:16729 commands/tablecmds.c:16741
+#: commands/tablecmds.c:16742 commands/tablecmds.c:16754
 #, c-format
 msgid "Change the ownership of the index's table instead."
 msgstr "改為變更該索引所屬資料表的擁有者。"
 
 # executor/execMain.c:814
-#: commands/tablecmds.c:16755
+#: commands/tablecmds.c:16768
 #, c-format
 msgid "cannot change owner of sequence \"%s\""
 msgstr "不能變更序列 \"%s\" 的擁有者"
 
 # commands/view.c:187
-#: commands/tablecmds.c:16780
+#: commands/tablecmds.c:16793
 #, c-format
 msgid "cannot change owner of relation \"%s\""
 msgstr "不能變更關聯 \"%s\" 的擁有者"
 
 # commands/tablecmds.c:5395
-#: commands/tablecmds.c:17247
+#: commands/tablecmds.c:17260
 #, c-format
 msgid "cannot have multiple SET TABLESPACE subcommands"
 msgstr "不允許多個 SET TABLESPACE 子命令"
 
 # commands/copy.c:1012
-#: commands/tablecmds.c:17326
+#: commands/tablecmds.c:17339
 #, c-format
 msgid "cannot set options for relation \"%s\""
 msgstr "不能為關聯 \"%s\" 設定選項"
 
-#: commands/tablecmds.c:17360 commands/view.c:440
+#: commands/tablecmds.c:17373 commands/view.c:440
 #, c-format
 msgid "WITH CHECK OPTION is supported only on automatically updatable views"
 msgstr "WITH CHECK OPTION 僅支援自動可更新的檢視表"
 
-#: commands/tablecmds.c:17613
+#: commands/tablecmds.c:17626
 #, c-format
 msgid "only tables, indexes, and materialized views exist in tablespaces"
 msgstr "表空間中只存在資料表、索引和實體化檢視表"
 
-#: commands/tablecmds.c:17625
+#: commands/tablecmds.c:17638
 #, c-format
 msgid "cannot move relations in to or out of pg_global tablespace"
 msgstr "不能將關聯移入或移出 pg_global 表空間"
 
 # commands/tablecmds.c:724 parser/analyze.c:1055 parser/analyze.c:1261
-#: commands/tablecmds.c:17717
+#: commands/tablecmds.c:17730
 #, c-format
 msgid "aborting because lock on relation \"%s.%s\" is not available"
 msgstr "由於關聯 \"%s.%s\" 上的鎖定不可用而中止"
 
 # describe.c:1542
-#: commands/tablecmds.c:17733
+#: commands/tablecmds.c:17746
 #, c-format
 msgid "no matching relations in tablespace \"%s\" found"
 msgstr "表空間 \"%s\" 中未找到符合的關聯"
 
 # commands/dbcommands.c:504
-#: commands/tablecmds.c:17853
+#: commands/tablecmds.c:17866
 #, c-format
 msgid "cannot change inheritance of typed table"
 msgstr "不能變更型別化資料表的繼承關係"
 
 # commands/dbcommands.c:504
-#: commands/tablecmds.c:17858
+#: commands/tablecmds.c:17871
 #, c-format
 msgid "cannot change inheritance of a partition"
 msgstr "不能變更分割的繼承關聯"
 
 # commands/tablecmds.c:2199
-#: commands/tablecmds.c:17905
+#: commands/tablecmds.c:17918
 #, c-format
 msgid "cannot inherit to temporary relation of another session"
 msgstr "不能為另一個工作階段的暫存關聯新增繼承關聯"
 
 # commands/tablecmds.c:730
-#: commands/tablecmds.c:17918
+#: commands/tablecmds.c:17931
 #, c-format
 msgid "cannot inherit from a partition"
 msgstr "不能從分割繼承"
 
-#: commands/tablecmds.c:17940 commands/tablecmds.c:21025
+#: commands/tablecmds.c:17953 commands/tablecmds.c:21038
 #, c-format
 msgid "circular inheritance not allowed"
 msgstr "不允許循環繼承"
 
 # rewrite/rewriteDefine.c:363
-#: commands/tablecmds.c:17941 commands/tablecmds.c:21026
+#: commands/tablecmds.c:17954 commands/tablecmds.c:21039
 #, c-format
 msgid "\"%s\" is already a child of \"%s\"."
 msgstr "\"%s\" 已經是 \"%s\" 的子系。"
 
 # commands/comment.c:836 commands/trigger.c:483 commands/trigger.c:697
-#: commands/tablecmds.c:17954
+#: commands/tablecmds.c:17967
 #, c-format
 msgid "trigger \"%s\" prevents table \"%s\" from becoming an inheritance child"
 msgstr "觸發器 \"%s\" 阻止資料表 \"%s\" 成為繼承子資料表"
 
-#: commands/tablecmds.c:17956
+#: commands/tablecmds.c:17969
 #, c-format
 msgid "ROW triggers with transition tables are not supported in inheritance hierarchies."
 msgstr "繼承階層中不支援帶有轉換資料表的資料列層級觸發器。"
 
-#: commands/tablecmds.c:18160 commands/tablecmds.c:18409
+#: commands/tablecmds.c:18173 commands/tablecmds.c:18422
 #, c-format
 msgid "column \"%s\" in child table \"%s\" must be marked NOT NULL"
 msgstr "子資料表 \"%2$s\" 中的欄位 \"%1$s\" 必須標記為 NOT NULL"
 
-#: commands/tablecmds.c:18170
+#: commands/tablecmds.c:18183
 #, c-format
 msgid "column \"%s\" in child table must be a generated column"
 msgstr "子資料表中的欄位 \"%s\" 必須是產生欄位"
 
-#: commands/tablecmds.c:18174
+#: commands/tablecmds.c:18187
 #, c-format
 msgid "column \"%s\" in child table must not be a generated column"
 msgstr "子資料表中的欄位 \"%s\" 不得是產生欄位"
 
 # commands/tablecmds.c:2850
-#: commands/tablecmds.c:18220
+#: commands/tablecmds.c:18233
 #, c-format
 msgid "child table is missing column \"%s\""
 msgstr "子資料表缺少欄位 \"%s\""
 
 # commands/tablecmds.c:2850
-#: commands/tablecmds.c:18337
+#: commands/tablecmds.c:18350
 #, c-format
 msgid "child table \"%s\" has different definition for check constraint \"%s\""
 msgstr "子資料表 \"%s\" 有檢查限制 \"%s\" 的不同定義"
 
-#: commands/tablecmds.c:18346
+#: commands/tablecmds.c:18359
 #, c-format
 msgid "constraint \"%s\" conflicts with non-inherited constraint on child table \"%s\""
 msgstr "條件約束 \"%1$s\" 與子資料表 \"%2$s\" 上的不可繼承條件約束衝突"
 
-#: commands/tablecmds.c:18357
+#: commands/tablecmds.c:18370
 #, c-format
 msgid "constraint \"%s\" conflicts with NOT VALID constraint on child table \"%s\""
 msgstr "條件約束 \"%s\" 與子資料表 \"%s\" 上的 NOT VALID 條件約束衝突"
 
-#: commands/tablecmds.c:18368
+#: commands/tablecmds.c:18381
 #, c-format
 msgid "constraint \"%s\" conflicts with NOT ENFORCED constraint on child table \"%s\""
 msgstr "條件約束 \"%s\" 與子資料表 \"%s\" 上的 NOT ENFORCED 條件約束衝突"
 
-#: commands/tablecmds.c:18417
+#: commands/tablecmds.c:18430
 #, c-format
 msgid "child table is missing constraint \"%s\""
 msgstr "子資料表缺少限制 \"%s\""
 
 # commands/conversioncmds.c:151
-#: commands/tablecmds.c:18499
+#: commands/tablecmds.c:18512
 #, c-format
 msgid "partition \"%s\" already pending detach in partitioned table \"%s.%s\""
 msgstr "分割 \"%s\" 在分割資料表 \"%s.%s\" 中已有待完成的分離操作"
 
 # catalog/namespace.c:200 utils/adt/regproc.c:837
-#: commands/tablecmds.c:18528 commands/tablecmds.c:18576
+#: commands/tablecmds.c:18541 commands/tablecmds.c:18589
 #, c-format
 msgid "relation \"%s\" is not a partition of relation \"%s\""
 msgstr "關聯 \"%s\" 不是關聯 \"%s\" 的分割"
 
 # catalog/namespace.c:200 utils/adt/regproc.c:837
-#: commands/tablecmds.c:18582
+#: commands/tablecmds.c:18595
 #, c-format
 msgid "relation \"%s\" is not a parent of relation \"%s\""
 msgstr "關聯 \"%s\" 不是關聯 \"%s\" 的父系"
 
 # commands/functioncmds.c:179 parser/parse_oper.c:113 parser/parse_oper.c:124
-#: commands/tablecmds.c:18858
+#: commands/tablecmds.c:18871
 #, c-format
 msgid "typed tables cannot inherit"
 msgstr "型別化資料表不能繼承"
 
 # commands/tablecmds.c:2850
-#: commands/tablecmds.c:18888
+#: commands/tablecmds.c:18901
 #, c-format
 msgid "table is missing column \"%s\""
 msgstr "資料表缺少欄位 \"%s\""
 
-#: commands/tablecmds.c:18899
+#: commands/tablecmds.c:18912
 #, c-format
 msgid "table has column \"%s\" where type requires \"%s\""
 msgstr "資料表有欄位 \"%s\"，但型別要求此處為欄位 \"%s\""
 
 # commands/tablecmds.c:2850
-#: commands/tablecmds.c:18908
+#: commands/tablecmds.c:18921
 #, c-format
 msgid "table \"%s\" has different type for column \"%s\""
 msgstr "資料表 \"%s\" 的欄位 \"%s\" 有不同的型別"
 
 # commands/tablecmds.c:2850
-#: commands/tablecmds.c:18922
+#: commands/tablecmds.c:18935
 #, c-format
 msgid "table has extra column \"%s\""
 msgstr "資料表有額外欄位 \"%s\""
@@ -17685,144 +17686,144 @@ msgstr "資料表有額外欄位 \"%s\""
 # commands/comment.c:341 commands/indexcmds.c:136 commands/indexcmds.c:937
 # commands/lockcmds.c:68 commands/tablecmds.c:541 commands/tablecmds.c:2594
 # commands/trigger.c:141 commands/trigger.c:546 tcop/utility.c:78
-#: commands/tablecmds.c:18974
+#: commands/tablecmds.c:18987
 #, c-format
 msgid "\"%s\" is not a typed table"
 msgstr "\"%s\" 不是型別化資料表"
 
 # commands/indexcmds.c:406
-#: commands/tablecmds.c:19154
+#: commands/tablecmds.c:19167
 #, c-format
 msgid "cannot use non-unique index \"%s\" as replica identity"
 msgstr "不能將非唯一索引 \"%s\" 用作 REPLICA IDENTITY"
 
-#: commands/tablecmds.c:19160
+#: commands/tablecmds.c:19173
 #, c-format
 msgid "cannot use non-immediate index \"%s\" as replica identity"
 msgstr "不能將唯一性檢查可延遲的索引 \"%s\" 用作 REPLICA IDENTITY"
 
 # commands/indexcmds.c:406
-#: commands/tablecmds.c:19166
+#: commands/tablecmds.c:19179
 #, c-format
 msgid "cannot use expression index \"%s\" as replica identity"
 msgstr "不能將運算式索引 \"%s\" 用作 REPLICA IDENTITY"
 
 # commands/cluster.c:339
-#: commands/tablecmds.c:19172
+#: commands/tablecmds.c:19185
 #, c-format
 msgid "cannot use partial index \"%s\" as replica identity"
 msgstr "不能將部分索引 \"%s\" 用作 REPLICA IDENTITY"
 
-#: commands/tablecmds.c:19191
+#: commands/tablecmds.c:19204
 #, c-format
 msgid "index \"%s\" cannot be used as replica identity because column %d is a system column"
 msgstr "索引 \"%s\" 不能用作 REPLICA IDENTITY，因為欄位 %d 是系統欄位"
 
-#: commands/tablecmds.c:19198
+#: commands/tablecmds.c:19211
 #, c-format
 msgid "index \"%s\" cannot be used as replica identity because column \"%s\" is nullable"
 msgstr "索引 \"%s\" 不能用作 REPLICA IDENTITY，因為欄位 \"%s\" 允許為 NULL"
 
-#: commands/tablecmds.c:19213
+#: commands/tablecmds.c:19226
 #, c-format
 msgid "cannot use index \"%s\" as replica identity"
 msgstr "不能將索引 \"%s\" 用作 REPLICA IDENTITY"
 
 # commands/typecmds.c:1814
 #. translator: third %s is a constraint characteristic such as NOT VALID
-#: commands/tablecmds.c:19216
+#: commands/tablecmds.c:19229
 #, c-format
 msgid "The constraint \"%s\" on column \"%s\" is marked %s."
 msgstr "欄位 \"%2$s\" 上的條件約束 \"%1$s\" 標記為 %3$s。"
 
 # rewrite/rewriteDefine.c:407
-#: commands/tablecmds.c:19467
+#: commands/tablecmds.c:19480
 #, c-format
 msgid "cannot change logged status of table \"%s\" because it is temporary"
 msgstr "不能變更資料表 \"%s\" 的 WAL 記錄狀態，因為它是暫存資料表"
 
 # rewrite/rewriteDefine.c:407
-#: commands/tablecmds.c:19491
+#: commands/tablecmds.c:19504
 #, c-format
 msgid "cannot change table \"%s\" to unlogged because it is referenced by a publication"
 msgstr "不能將資料表 \"%s\" 變更為不記錄 WAL，因為它被某個發布引用"
 
-#: commands/tablecmds.c:19493
+#: commands/tablecmds.c:19506
 #, c-format
 msgid "Unlogged relations cannot be published or excluded via an EXCEPT clause."
 msgstr "不能發布不記錄 WAL 的關聯，也不能透過 EXCEPT 子句將其排除。"
 
-#: commands/tablecmds.c:19494
+#: commands/tablecmds.c:19507
 #, c-format
 msgid "Drop the table from the publication, or remove it from the publication's EXCEPT clause, first."
 msgstr "先從發布中刪除該資料表，或將其從發布的 EXCEPT 子句中移除。"
 
 # rewrite/rewriteDefine.c:427
-#: commands/tablecmds.c:19539
+#: commands/tablecmds.c:19552
 #, c-format
 msgid "could not change table \"%s\" to logged because it references unlogged table \"%s\""
 msgstr "無法將資料表 \"%s\" 變更為記錄 WAL，因為它引用不記錄 WAL 的資料表 \"%s\""
 
 # rewrite/rewriteDefine.c:427
-#: commands/tablecmds.c:19549
+#: commands/tablecmds.c:19562
 #, c-format
 msgid "could not change table \"%s\" to unlogged because it references logged table \"%s\""
 msgstr "無法將資料表 \"%s\" 變更為不記錄 WAL，因為它引用記錄 WAL 的資料表 \"%s\""
 
-#: commands/tablecmds.c:19613
+#: commands/tablecmds.c:19626
 #, c-format
 msgid "cannot move an owned sequence into another schema"
 msgstr "不能將歸屬於欄位的序列移至另一個 schema"
 
 # commands/conversioncmds.c:151
-#: commands/tablecmds.c:19721
+#: commands/tablecmds.c:19734
 #, c-format
 msgid "relation \"%s\" already exists in schema \"%s\""
 msgstr "關聯 \"%s\" 已經存在於 schema \"%s\""
 
 # commands/tablecmds.c:2588
-#: commands/tablecmds.c:20146
+#: commands/tablecmds.c:20159
 #, c-format
 msgid "\"%s\" is not a table or materialized view"
 msgstr "\"%s\" 不是資料表或實體化檢視表"
 
 # access/heap/heapam.c:628 access/heap/heapam.c:663 access/heap/heapam.c:698
 # catalog/aclchk.c:293
-#: commands/tablecmds.c:20299
+#: commands/tablecmds.c:20312
 #, c-format
 msgid "\"%s\" is not a composite type"
 msgstr "\"%s\" 不是複合型別"
 
 # commands/view.c:187
-#: commands/tablecmds.c:20329
+#: commands/tablecmds.c:20342
 #, c-format
 msgid "cannot change schema of index \"%s\""
 msgstr "不能變更索引 \"%s\" 所屬的 schema"
 
-#: commands/tablecmds.c:20331 commands/tablecmds.c:20345
+#: commands/tablecmds.c:20344 commands/tablecmds.c:20358
 #, c-format
 msgid "Change the schema of the table instead."
 msgstr "改為變更資料表所屬的 schema。"
 
 # utils/adt/numeric.c:1761
-#: commands/tablecmds.c:20335
+#: commands/tablecmds.c:20348
 #, c-format
 msgid "cannot change schema of composite type \"%s\""
 msgstr "不能變更複合型別 \"%s\" 所屬的 schema"
 
 # executor/execMain.c:820
-#: commands/tablecmds.c:20343
+#: commands/tablecmds.c:20356
 #, c-format
 msgid "cannot change schema of TOAST table \"%s\""
 msgstr "不能變更 TOAST 資料表 \"%s\" 所屬的 schema"
 
-#: commands/tablecmds.c:20375
+#: commands/tablecmds.c:20388
 #, c-format
 msgid "cannot use \"list\" partition strategy with more than one column"
 msgstr "使用 \"list\" 分割策略時，分割索引鍵不能包含多個欄位"
 
 # commands/indexcmds.c:318 commands/indexcmds.c:456 parser/analyze.c:1299
-#: commands/tablecmds.c:20441
+#: commands/tablecmds.c:20454
 #, c-format
 msgid "column \"%s\" named in partition key does not exist"
 msgstr "分割索引鍵中指定的欄位 \"%s\" 不存在"
@@ -17830,212 +17831,212 @@ msgstr "分割索引鍵中指定的欄位 \"%s\" 不存在"
 # commands/tablecmds.c:3079 commands/tablecmds.c:3172
 # commands/tablecmds.c:3222 commands/tablecmds.c:3318
 # commands/tablecmds.c:3379 commands/tablecmds.c:4573
-#: commands/tablecmds.c:20449
+#: commands/tablecmds.c:20462
 #, c-format
 msgid "cannot use system column \"%s\" in partition key"
 msgstr "不能在分割索引鍵中使用系統欄位 \"%s\""
 
 # commands/tablecmds.c:4580
-#: commands/tablecmds.c:20463 commands/tablecmds.c:20545
+#: commands/tablecmds.c:20476 commands/tablecmds.c:20558
 #, c-format
 msgid "cannot use generated column in partition key"
 msgstr "不能在分割索引鍵中使用產生欄位"
 
-#: commands/tablecmds.c:20532
+#: commands/tablecmds.c:20545
 #, c-format
 msgid "partition key expressions cannot contain system column references"
 msgstr "分割索引鍵運算式不能包含系統欄位引用"
 
 # commands/indexcmds.c:509
-#: commands/tablecmds.c:20596
+#: commands/tablecmds.c:20609
 #, c-format
 msgid "functions in partition key expression must be marked IMMUTABLE"
 msgstr "分割索引鍵運算式中的函式必須標記為 IMMUTABLE"
 
 # commands/tablecmds.c:3973
-#: commands/tablecmds.c:20605
+#: commands/tablecmds.c:20618
 #, c-format
 msgid "cannot use constant expression as partition key"
 msgstr "不能將常數運算式用作分割索引鍵"
 
 # access/common/tupdesc.c:679
-#: commands/tablecmds.c:20626
+#: commands/tablecmds.c:20639
 #, c-format
 msgid "could not determine which collation to use for partition expression"
 msgstr "無法判斷分割運算式該用何種定序"
 
 # commands/indexcmds.c:570
-#: commands/tablecmds.c:20661
+#: commands/tablecmds.c:20674
 #, c-format
 msgid "You must specify a hash operator class or define a default hash operator class for the data type."
 msgstr "您必須為該資料型別指定雜湊運算子類別或定義預設的雜湊運算子類別。"
 
 # commands/indexcmds.c:570
-#: commands/tablecmds.c:20667
+#: commands/tablecmds.c:20680
 #, c-format
 msgid "You must specify a btree operator class or define a default btree operator class for the data type."
 msgstr "您必須為該資料型別指定 btree 運算子類別或定義預設的 btree 運算子類別。"
 
 # rewrite/rewriteDefine.c:363
-#: commands/tablecmds.c:20928
+#: commands/tablecmds.c:20941
 #, c-format
 msgid "\"%s\" is already a partition"
 msgstr "\"%s\" 已是分割"
 
 # utils/adt/pseudotypes.c:253
-#: commands/tablecmds.c:20934
+#: commands/tablecmds.c:20947
 #, c-format
 msgid "cannot attach a typed table as partition"
 msgstr "不能將型別化資料表附加為分割"
 
-#: commands/tablecmds.c:20962
+#: commands/tablecmds.c:20975
 #, c-format
 msgid "cannot attach table \"%s\" as partition because it is referenced in publication %s EXCEPT clause"
 msgid_plural "cannot attach table \"%s\" as partition because it is referenced in publications %s EXCEPT clause"
 msgstr[0] "不能將資料表 \"%s\" 附加為分割，因為發布 %s 的 EXCEPT 子句引用了它"
 
-#: commands/tablecmds.c:20967
+#: commands/tablecmds.c:20980
 #, c-format
 msgid "The publication EXCEPT clause cannot contain tables that are partitions."
 msgstr "發布的 EXCEPT 子句不能包含作為分割的資料表。"
 
-#: commands/tablecmds.c:20968
+#: commands/tablecmds.c:20981
 #, c-format
 msgid "Change the publication's EXCEPT clause using ALTER PUBLICATION ... SET ALL TABLES."
 msgstr "使用 ALTER PUBLICATION ... SET ALL TABLES 變更發布的 EXCEPT 子句。"
 
-#: commands/tablecmds.c:20987
+#: commands/tablecmds.c:21000
 #, c-format
 msgid "cannot attach inheritance child as partition"
 msgstr "不能將繼承子資料表附加為分割"
 
 # commands/dbcommands.c:504
-#: commands/tablecmds.c:21001
+#: commands/tablecmds.c:21014
 #, c-format
 msgid "cannot attach inheritance parent as partition"
 msgstr "不能將繼承父資料表附加為分割"
 
-#: commands/tablecmds.c:21035
+#: commands/tablecmds.c:21048
 #, c-format
 msgid "cannot attach a temporary relation as partition of permanent relation \"%s\""
 msgstr "不能將暫存關聯附加為持久關聯 \"%s\" 的分割"
 
 # commands/tablecmds.c:730
-#: commands/tablecmds.c:21043
+#: commands/tablecmds.c:21056
 #, c-format
 msgid "cannot attach a permanent relation as partition of temporary relation \"%s\""
 msgstr "不能將持久關聯附加為暫存關聯 \"%s\" 的分割"
 
 # commands/tablecmds.c:573
-#: commands/tablecmds.c:21050
+#: commands/tablecmds.c:21063
 #, c-format
 msgid "cannot attach as partition of temporary relation of another session"
 msgstr "不能附加為另一個工作階段的暫存關聯的分割"
 
 # commands/tablecmds.c:5435
-#: commands/tablecmds.c:21056
+#: commands/tablecmds.c:21069
 #, c-format
 msgid "cannot attach temporary relation of another session as partition"
 msgstr "不能將另一個工作階段的暫存關聯附加為分割"
 
 # commands/tablecmds.c:2850
-#: commands/tablecmds.c:21076
+#: commands/tablecmds.c:21089
 #, c-format
 msgid "table \"%s\" being attached contains an identity column \"%s\""
 msgstr "正在附加的資料表 \"%s\" 包含識別欄位 \"%s\""
 
-#: commands/tablecmds.c:21078
+#: commands/tablecmds.c:21091
 #, c-format
 msgid "The new partition may not contain an identity column."
 msgstr "新分割不得包含識別欄位。"
 
 # parser/parse_func.c:1219 parser/parse_target.c:496
-#: commands/tablecmds.c:21086
+#: commands/tablecmds.c:21099
 #, c-format
 msgid "table \"%s\" contains column \"%s\" not found in parent \"%s\""
 msgstr "資料表 \"%1$s\" 包含父資料表 \"%3$s\" 中找不到的欄位 \"%2$s\""
 
-#: commands/tablecmds.c:21089
+#: commands/tablecmds.c:21102
 #, c-format
 msgid "The new partition may contain only the columns present in parent."
 msgstr "新分割只能包含父資料表中已有的欄位。"
 
 # commands/comment.c:836 commands/trigger.c:483 commands/trigger.c:697
-#: commands/tablecmds.c:21101
+#: commands/tablecmds.c:21114
 #, c-format
 msgid "trigger \"%s\" prevents table \"%s\" from becoming a partition"
 msgstr "觸發器 \"%s\" 阻止資料表 \"%s\" 成為分割"
 
 # commands/tablespace.c:386 commands/tablespace.c:483
-#: commands/tablecmds.c:21103
+#: commands/tablecmds.c:21116
 #, c-format
 msgid "ROW triggers with transition tables are not supported on partitions."
 msgstr "分割上不支援帶有轉換資料表的資料列層級觸發器。"
 
-#: commands/tablecmds.c:21285
+#: commands/tablecmds.c:21298
 #, c-format
 msgid "cannot attach foreign table \"%s\" as partition of partitioned table \"%s\""
 msgstr "不能將外部資料表 \"%s\" 附加為分割資料表 \"%s\" 的分割"
 
 # commands/indexcmds.c:956
-#: commands/tablecmds.c:21288
+#: commands/tablecmds.c:21301
 #, c-format
 msgid "Partitioned table \"%s\" contains unique indexes."
 msgstr "分割資料表 \"%s\" 包含唯一索引。"
 
-#: commands/tablecmds.c:21612
+#: commands/tablecmds.c:21625
 #, c-format
 msgid "cannot detach partitions concurrently when a default partition exists"
 msgstr "存在預設分割時，不能並行分離分割"
 
-#: commands/tablecmds.c:21715
+#: commands/tablecmds.c:21728
 #, c-format
 msgid "partitioned table \"%s\" was removed concurrently"
 msgstr "分割資料表 \"%s\" 已被並行刪除"
 
-#: commands/tablecmds.c:21721
+#: commands/tablecmds.c:21734
 #, c-format
 msgid "partition \"%s\" was removed concurrently"
 msgstr "分割 \"%s\" 已被並行刪除"
 
 # commands/view.c:187
-#: commands/tablecmds.c:22312 commands/tablecmds.c:22332
-#: commands/tablecmds.c:22353 commands/tablecmds.c:22372
-#: commands/tablecmds.c:22429
+#: commands/tablecmds.c:22325 commands/tablecmds.c:22345
+#: commands/tablecmds.c:22366 commands/tablecmds.c:22385
+#: commands/tablecmds.c:22442
 #, c-format
 msgid "cannot attach index \"%s\" as a partition of index \"%s\""
 msgstr "不能將索引 \"%s\" 附加為索引 \"%s\" 的分割"
 
-#: commands/tablecmds.c:22315
+#: commands/tablecmds.c:22328
 #, c-format
 msgid "Index \"%s\" is already attached to another index."
 msgstr "索引 \"%s\" 已附加到另一個索引。"
 
 # commands/cluster.c:326
-#: commands/tablecmds.c:22335
+#: commands/tablecmds.c:22348
 #, c-format
 msgid "Index \"%s\" is not an index on any partition of table \"%s\"."
 msgstr "索引 \"%s\" 不是資料表 \"%s\" 的任何分割上的索引。"
 
 # sql_help.h:65
-#: commands/tablecmds.c:22356
+#: commands/tablecmds.c:22369
 #, c-format
 msgid "The index definitions do not match."
 msgstr "索引定義不符。"
 
-#: commands/tablecmds.c:22375
+#: commands/tablecmds.c:22388
 #, c-format
 msgid "The index \"%s\" belongs to a constraint in table \"%s\" but no constraint exists for index \"%s\"."
 msgstr "索引 \"%s\" 屬於資料表 \"%s\" 中的條件約束，但不存在索引 \"%s\" 的條件約束。"
 
 # rewrite/rewriteDefine.c:363
-#: commands/tablecmds.c:22432
+#: commands/tablecmds.c:22445
 #, c-format
 msgid "Another index \"%s\" is already attached for partition \"%s\"."
 msgstr "已為分割 \"%2$s\" 附加另一個索引 \"%1$s\"。"
 
 # access/transam/xlog.c:4550
-#: commands/tablecmds.c:22556
+#: commands/tablecmds.c:22569
 #, c-format
 msgid "invalid primary key definition"
 msgstr "無效的主索引鍵定義"
@@ -18047,30 +18048,30 @@ msgstr "無效的主索引鍵定義"
 # parser/parse_relation.c:1647 parser/parse_relation.c:1705
 # parser/parse_relation.c:1919 parser/parse_type.c:94
 # utils/adt/ruleutils.c:1300
-#: commands/tablecmds.c:22557
+#: commands/tablecmds.c:22570
 #, c-format
 msgid "Column \"%s\" of relation \"%s\" is not marked NOT NULL."
 msgstr "關聯 \"%2$s\" 的欄位 \"%1$s\" 未標記為 NOT NULL。"
 
-#: commands/tablecmds.c:22692
+#: commands/tablecmds.c:22705
 #, c-format
 msgid "column data type %s does not support compression"
 msgstr "欄位的資料型別 %s 不支援壓縮"
 
 # fe-connect.c:2675
-#: commands/tablecmds.c:22699
+#: commands/tablecmds.c:22712
 #, c-format
 msgid "invalid compression method \"%s\""
 msgstr "無效的壓縮方法 \"%s\""
 
 # commands/tablecmds.c:3360
-#: commands/tablecmds.c:22725
+#: commands/tablecmds.c:22738
 #, c-format
 msgid "invalid storage type \"%s\""
 msgstr "不合法的儲存型別 \"%s\""
 
 # commands/tablecmds.c:3391
-#: commands/tablecmds.c:22735
+#: commands/tablecmds.c:22748
 #, c-format
 msgid "column data type %s can only have storage PLAIN"
 msgstr "欄位資料型別 %s 只能使用 PLAIN 儲存方式"
@@ -18518,7 +18519,7 @@ msgstr "考慮使用 AFTER 觸發器代替 BEFORE 觸發器，將變更傳播到
 #: commands/trigger.c:3459 executor/nodeLockRows.c:228
 #: executor/nodeModifyTable.c:403 executor/nodeModifyTable.c:1738
 #: executor/nodeModifyTable.c:2644 executor/nodeModifyTable.c:2850
-#: executor/nodeModifyTable.c:3588 utils/adt/ri_triggers.c:2962
+#: executor/nodeModifyTable.c:3588 utils/adt/ri_triggers.c:2971
 #, c-format
 msgid "could not serialize access due to concurrent update"
 msgstr "因為並行更新，無法序列化存取"
@@ -18528,7 +18529,7 @@ msgstr "因為並行更新，無法序列化存取"
 #: commands/trigger.c:3467 executor/nodeLockRows.c:237
 #: executor/nodeModifyTable.c:1828 executor/nodeModifyTable.c:2735
 #: executor/nodeModifyTable.c:2866 executor/nodeModifyTable.c:3562
-#: utils/adt/ri_triggers.c:2955
+#: utils/adt/ri_triggers.c:2964
 #, c-format
 msgid "could not serialize access due to concurrent delete"
 msgstr "由於並行刪除，無法序列化存取"
@@ -19613,19 +19614,19 @@ msgstr "可能已經發生交易回繞造成的資料遺失。"
 msgid "skipping \"%s\" --- cannot vacuum non-tables or special system tables"
 msgstr "跳過 \"%s\": 不能清理非資料表物件或特殊系統資料表"
 
-#: commands/vacuum.c:2674
+#: commands/vacuum.c:2682
 #, c-format
 msgid "scanned index \"%s\" to remove %<PRId64> row versions"
 msgstr "已掃描索引 \"%s\" 以刪除 %<PRId64> 筆資料列版本"
 
 # commands/vacuum.c:2860 commands/vacuum.c:2927 commands/vacuumlazy.c:597
 # commands/vacuumlazy.c:657
-#: commands/vacuum.c:2693
+#: commands/vacuum.c:2701
 #, c-format
 msgid "index \"%s\" now contains %.0f row versions in %u pages"
 msgstr "索引 \"%s\" 現在包含 %.0f 筆資料列版本 (在 %u 個頁面中)"
 
-#: commands/vacuum.c:2697
+#: commands/vacuum.c:2705
 #, c-format
 msgid ""
 "%.0f index row versions were removed.\n"
@@ -19633,13 +19634,13 @@ msgid ""
 "%u index pages are currently deleted, of which %u are currently reusable."
 msgstr "已刪除 %.0f 筆索引資料列版本。\n新刪除 %u 個索引頁面。\n目前共有 %u 個已刪除的索引頁面，其中 %u 個可供重複使用。"
 
-#: commands/vacuumparallel.c:921
+#: commands/vacuumparallel.c:961
 #, c-format
 msgid "launched %d parallel vacuum worker for index vacuuming (planned: %d)"
 msgid_plural "launched %d parallel vacuum workers for index vacuuming (planned: %d)"
 msgstr[0] "已啟動 %d 個並行清理工作行程執行索引清理 (計畫: %d)"
 
-#: commands/vacuumparallel.c:927
+#: commands/vacuumparallel.c:967
 #, c-format
 msgid "launched %d parallel vacuum worker for index cleanup (planned: %d)"
 msgid_plural "launched %d parallel vacuum workers for index cleanup (planned: %d)"
@@ -20416,62 +20417,62 @@ msgid "concurrent delete, retrying"
 msgstr "並行刪除，正在重試"
 
 # rewrite/rewriteHandler.c:1368
-#: executor/execReplication.c:1073 executor/execReplication.c:1079
-#: executor/execReplication.c:1085
+#: executor/execReplication.c:1092 executor/execReplication.c:1098
+#: executor/execReplication.c:1104
 #, c-format
 msgid "cannot update table \"%s\""
 msgstr "不能更新資料表 \"%s\""
 
-#: executor/execReplication.c:1075 executor/execReplication.c:1093
+#: executor/execReplication.c:1094 executor/execReplication.c:1112
 #, c-format
 msgid "Column used in the publication WHERE expression is not part of the replica identity."
 msgstr "發布的 WHERE 運算式所使用的欄位不屬於 REPLICA IDENTITY。"
 
-#: executor/execReplication.c:1081 executor/execReplication.c:1099
+#: executor/execReplication.c:1100 executor/execReplication.c:1118
 #, c-format
 msgid "Column list used by the publication does not cover the replica identity."
 msgstr "發布使用的欄位清單未涵蓋 REPLICA IDENTITY。"
 
-#: executor/execReplication.c:1087 executor/execReplication.c:1105
+#: executor/execReplication.c:1106 executor/execReplication.c:1124
 #, c-format
 msgid "Replica identity must not contain unpublished generated columns."
 msgstr "REPLICA IDENTITY 不得包含未發布的產生欄位。"
 
 # rewrite/rewriteHandler.c:1374
-#: executor/execReplication.c:1091 executor/execReplication.c:1097
-#: executor/execReplication.c:1103
+#: executor/execReplication.c:1110 executor/execReplication.c:1116
+#: executor/execReplication.c:1122
 #, c-format
 msgid "cannot delete from table \"%s\""
 msgstr "不能從資料表 \"%s\" 中刪除資料"
 
 # commands/tablecmds.c:2741
-#: executor/execReplication.c:1123
+#: executor/execReplication.c:1142
 #, c-format
 msgid "cannot update table \"%s\" because it does not have a replica identity and publishes updates"
 msgstr "不能更新資料表 \"%s\"，因為該資料表發布更新操作，卻沒有 REPLICA IDENTITY"
 
-#: executor/execReplication.c:1125
+#: executor/execReplication.c:1144
 #, c-format
 msgid "To enable updating the table, set REPLICA IDENTITY using ALTER TABLE."
 msgstr "要啟用資料表的更新操作，使用 ALTER TABLE 設定 REPLICA IDENTITY。"
 
-#: executor/execReplication.c:1129
+#: executor/execReplication.c:1148
 #, c-format
 msgid "cannot delete from table \"%s\" because it does not have a replica identity and publishes deletes"
 msgstr "不能從資料表 \"%s\" 中刪除資料，因為該資料表發布刪除操作，卻沒有 REPLICA IDENTITY"
 
-#: executor/execReplication.c:1131
+#: executor/execReplication.c:1150
 #, c-format
 msgid "To enable deleting from the table, set REPLICA IDENTITY using ALTER TABLE."
 msgstr "要啟用資料表的刪除操作，使用 ALTER TABLE 設定 REPLICA IDENTITY。"
 
-#: executor/execReplication.c:1150
+#: executor/execReplication.c:1169
 #, c-format
 msgid "cannot use relation \"%s.%s\" as logical replication target"
 msgstr "不能將關聯 \"%s.%s\" 用作邏輯複寫目標"
 
 #. translator: 3rd and 4th %s are "sequence" or "table"
-#: executor/execReplication.c:1164
+#: executor/execReplication.c:1183
 #, c-format
 msgid "relation \"%s.%s\" type mismatch: source \"%s\", target \"%s\""
 msgstr "關聯 \"%s.%s\" 的種類不符: 來源為 \"%s\"，目標為 \"%s\""
@@ -21824,8 +21825,8 @@ msgstr "驗證方法 \"%2$s\" 必須設定參數 \"%1$s\""
 #: libpq/be-secure-common.c:262 libpq/be-secure-common.c:272
 #: libpq/be-secure-common.c:289 libpq/be-secure-common.c:306
 #: libpq/be-secure-common.c:334 libpq/be-secure-common.c:344
-#: libpq/be-secure-openssl.c:270 libpq/be-secure-openssl.c:284
-#: libpq/be-secure-openssl.c:309 libpq/hba.c:327 libpq/hba.c:662
+#: libpq/be-secure-openssl.c:273 libpq/be-secure-openssl.c:287
+#: libpq/be-secure-openssl.c:312 libpq/hba.c:327 libpq/hba.c:662
 #: libpq/hba.c:1247 libpq/hba.c:1267 libpq/hba.c:1290 libpq/hba.c:1303
 #: libpq/hba.c:1356 libpq/hba.c:1384 libpq/hba.c:1392 libpq/hba.c:1404
 #: libpq/hba.c:1425 libpq/hba.c:1438 libpq/hba.c:1463 libpq/hba.c:1490
@@ -22725,321 +22726,331 @@ msgid "GSSAPI size check error"
 msgstr "GSSAPI 大小檢查錯誤"
 
 # input.c:213
-#: libpq/be-secure-openssl.c:214
+#: libpq/be-secure-openssl.c:220
 #, c-format
 msgid "ssl_sni is not supported with LibreSSL"
 msgstr "LibreSSL 不支援 ssl_sni"
 
-#: libpq/be-secure-openssl.c:231
+#: libpq/be-secure-openssl.c:237
 #, c-format
 msgid "could not load file \"%s\": %s"
 msgstr "無法載入檔案 \"%s\": %s"
 
 # commands/typecmds.c:637
-#: libpq/be-secure-openssl.c:269
+#: libpq/be-secure-openssl.c:272
 #, c-format
 msgid "multiple default hosts specified"
 msgstr "指定多個預設主機"
 
-#: libpq/be-secure-openssl.c:283
+#: libpq/be-secure-openssl.c:286
 #, c-format
 msgid "multiple no_sni hosts specified"
 msgstr "指定多個 no_sni 主機"
 
-#: libpq/be-secure-openssl.c:307
+#: libpq/be-secure-openssl.c:310
 #, c-format
 msgid "multiple entries for host \"%s\" specified"
 msgstr "為主機 \"%s\" 指定多個項目"
 
 # guc-file.l:151 libpq/hba.c:1044
-#: libpq/be-secure-openssl.c:365
+#: libpq/be-secure-openssl.c:380
 #, c-format
 msgid "no SSL configurations loaded"
 msgstr "未載入任何 SSL 組態"
 
 # guc-file.l:151 libpq/hba.c:1044
 #. translator: The two %s contain filenames
-#: libpq/be-secure-openssl.c:367
+#: libpq/be-secure-openssl.c:382
 #, c-format
 msgid "If ssl_sni is enabled then add configuration to file \"%s\", else file \"%s\"."
 msgstr "如果已啟用 ssl_sni，向檔案 \"%s\" 新增組態；否則向檔案 \"%s\" 新增組態。"
 
 # libpq/be-secure.c:649
-#: libpq/be-secure-openssl.c:388 libpq/be-secure-openssl.c:620
+#: libpq/be-secure-openssl.c:403 libpq/be-secure-openssl.c:649
 #, c-format
 msgid "could not create SSL context: %s"
 msgstr "無法建立 SSL 上下文: %s"
 
 # tcop/postgres.c:2262
 #. translator: first %s is a GUC option name, second %s is its value
-#: libpq/be-secure-openssl.c:423 libpq/be-secure-openssl.c:446
+#: libpq/be-secure-openssl.c:438 libpq/be-secure-openssl.c:461
 #, c-format
 msgid "\"%s\" setting \"%s\" not supported by this build"
 msgstr "此建置版本不支援將 \"%s\" 設定為 \"%s\""
 
 # port/win32/security.c:39
-#: libpq/be-secure-openssl.c:433
+#: libpq/be-secure-openssl.c:448
 #, c-format
 msgid "could not set minimum SSL protocol version"
 msgstr "無法設定最低 SSL 協定版本"
 
 # port/win32/security.c:39
-#: libpq/be-secure-openssl.c:456
+#: libpq/be-secure-openssl.c:471
 #, c-format
 msgid "could not set maximum SSL protocol version"
 msgstr "無法設定最高 SSL 協定版本"
 
 # port/win32/security.c:39
-#: libpq/be-secure-openssl.c:473
+#: libpq/be-secure-openssl.c:488
 #, c-format
 msgid "could not set SSL protocol version range"
 msgstr "無法設定 SSL 協定版本範圍"
 
 # commands/cluster.c:326
-#: libpq/be-secure-openssl.c:474
+#: libpq/be-secure-openssl.c:489
 #, c-format
 msgid "\"%s\" cannot be higher than \"%s\"."
 msgstr "\"%s\" 不能高於 \"%s\"。"
 
-#: libpq/be-secure-openssl.c:527
+#: libpq/be-secure-openssl.c:542
 #, c-format
 msgid "could not set the TLSv1.2 cipher list (no valid ciphers available)"
 msgstr "無法設定 TLSv1.2 加密套件列表 (沒有可用的有效加密套件)"
 
-#: libpq/be-secure-openssl.c:542
+#: libpq/be-secure-openssl.c:557
 #, c-format
 msgid "could not set the TLSv1.3 cipher suites (no valid ciphers available)"
 msgstr "無法設定 TLSv1.3 加密套件 (沒有可用的有效加密套件)"
 
-#: libpq/be-secure-openssl.c:641
+#: libpq/be-secure-openssl.c:605
+#, c-format
+msgid "SSL configuration not reloaded, SNI remains %s"
+msgstr "未重新載入 SSL 組態，SNI 仍為 %s"
+
+#: libpq/be-secure-openssl.c:606
+#, c-format
+msgid "The SSL configuration failed to reload, previous configuration and SNI state will remain active."
+msgstr "SSL 組態重新載入失敗。將繼續使用原有組態和 SNI 狀態。"
+
+#: libpq/be-secure-openssl.c:670
 #, c-format
 msgid "SNI is enabled; installed TLS init hook will be ignored"
 msgstr "已啟用 SNI；已安裝的 TLS 初始化掛鉤將被忽略"
 
 #. translator: first %s is a GUC, second %s contains a filename
-#: libpq/be-secure-openssl.c:643
+#: libpq/be-secure-openssl.c:672
 #, c-format
 msgid "TLS init hooks are incompatible with SNI. Set \"%s\" to \"off\" to make use of the hook that is currently installed, or remove the hook and use per-host passphrase commands in \"%s\"."
 msgstr "TLS 初始化掛鉤與 SNI 不相容。將 \"%s\" 設定為 \"off\" 以使用目前安裝的掛鉤，或移除該掛鉤並使用 \"%s\" 中按主機設定的通關密語命令。"
 
 # libpq/be-secure.c:659
-#: libpq/be-secure-openssl.c:695
+#: libpq/be-secure-openssl.c:724
 #, c-format
 msgid "could not load server certificate file \"%s\": %s"
 msgstr "無法載入伺服器憑證檔 \"%s\": %s"
 
-#: libpq/be-secure-openssl.c:719
+#: libpq/be-secure-openssl.c:748
 #, c-format
 msgid "private key file \"%s\" cannot be reloaded because it requires a passphrase"
 msgstr "不能重新載入私鑰檔案 \"%s\"，因為它需要通關密語"
 
 # libpq/be-secure.c:689
-#: libpq/be-secure-openssl.c:724
+#: libpq/be-secure-openssl.c:753
 #, c-format
 msgid "could not load private key file \"%s\": %s"
 msgstr "無法載入私鑰檔 \"%s\": %s"
 
 # libpq/be-secure.c:694
-#: libpq/be-secure-openssl.c:733
+#: libpq/be-secure-openssl.c:762
 #, c-format
 msgid "check of private key failed: %s"
 msgstr "檢查私鑰失敗: %s"
 
 # libpq/be-secure.c:714
-#: libpq/be-secure-openssl.c:750
+#: libpq/be-secure-openssl.c:779
 #, c-format
 msgid "could not load root certificate file \"%s\": %s"
 msgstr "無法載入根憑證檔 \"%s\": %s"
 
 # libpq/be-secure.c:714
-#: libpq/be-secure-openssl.c:789
+#: libpq/be-secure-openssl.c:818
 #, c-format
 msgid "could not load SSL certificate revocation list file \"%s\": %s"
 msgstr "無法載入 SSL 憑證撤銷清單檔案 \"%s\": %s"
 
 # libpq/be-secure.c:714
-#: libpq/be-secure-openssl.c:797
+#: libpq/be-secure-openssl.c:826
 #, c-format
 msgid "could not load SSL certificate revocation list directory \"%s\": %s"
 msgstr "無法載入 SSL 憑證撤銷清單目錄 \"%s\": %s"
 
-#: libpq/be-secure-openssl.c:805
+#: libpq/be-secure-openssl.c:834
 #, c-format
 msgid "could not load SSL certificate revocation list file \"%s\" or directory \"%s\": %s"
 msgstr "無法載入 SSL 憑證撤銷清單檔案 \"%1$s\" 或目錄 \"%2$s\": %3$s"
 
 # libpq/be-secure.c:789
-#: libpq/be-secure-openssl.c:848
+#: libpq/be-secure-openssl.c:884
 #, c-format
 msgid "could not initialize SSL connection: SSL context not set up"
 msgstr "無法初始化 SSL 連線: 未設定 SSL 上下文"
 
 # libpq/be-secure.c:789
-#: libpq/be-secure-openssl.c:862
+#: libpq/be-secure-openssl.c:898
 #, c-format
 msgid "could not initialize SSL connection: %s"
 msgstr "無法初始化 SSL 連線: %s"
 
 # libpq/be-secure.c:798
-#: libpq/be-secure-openssl.c:870
+#: libpq/be-secure-openssl.c:906
 #, c-format
 msgid "could not set SSL socket: %s"
 msgstr "無法設定 SSL socket: %s"
 
 # libpq/be-secure.c:807
-#: libpq/be-secure-openssl.c:962
+#: libpq/be-secure-openssl.c:998
 #, c-format
 msgid "could not accept SSL connection: %m"
 msgstr "無法接受 SSL 連線: %m"
 
 # libpq/be-secure.c:807
-#: libpq/be-secure-openssl.c:966 libpq/be-secure-openssl.c:1024
+#: libpq/be-secure-openssl.c:1002 libpq/be-secure-openssl.c:1060
 #, c-format
 msgid "could not accept SSL connection: EOF detected"
 msgstr "無法接受 SSL 連線: 發現 EOF"
 
 # libpq/be-secure.c:807
-#: libpq/be-secure-openssl.c:1007
+#: libpq/be-secure-openssl.c:1043
 #, c-format
 msgid "could not accept SSL connection: %s"
 msgstr "無法接受 SSL 連線: %s"
 
-#: libpq/be-secure-openssl.c:1011
+#: libpq/be-secure-openssl.c:1047
 #, c-format
 msgid "This may indicate that the client does not support any SSL protocol version between %s and %s."
 msgstr "這可能表示客戶端不支援 %s 到 %s 之間的任何 SSL 協定版本。"
 
 # libpq/be-secure.c:303 libpq/be-secure.c:396
-#: libpq/be-secure-openssl.c:1029 libpq/be-secure-openssl.c:1244
-#: libpq/be-secure-openssl.c:1314
+#: libpq/be-secure-openssl.c:1065 libpq/be-secure-openssl.c:1280
+#: libpq/be-secure-openssl.c:1350
 #, c-format
 msgid "unrecognized SSL error code: %d"
 msgstr "無法識別的 SSL 錯誤碼: %d"
 
-#: libpq/be-secure-openssl.c:1057
+#: libpq/be-secure-openssl.c:1093
 #, c-format
 msgid "received SSL connection request with unexpected ALPN protocol"
 msgstr "收到的 SSL 連線請求包含非預期的 ALPN 協定"
 
-#: libpq/be-secure-openssl.c:1101
+#: libpq/be-secure-openssl.c:1137
 #, c-format
 msgid "SSL certificate's common name contains embedded null"
 msgstr "SSL 憑證的一般名稱包含內嵌的空字元"
 
-#: libpq/be-secure-openssl.c:1147
+#: libpq/be-secure-openssl.c:1183
 #, c-format
 msgid "SSL certificate's distinguished name contains embedded null"
 msgstr "SSL 憑證的可分辨名稱包含內嵌的空字元"
 
 # libpq/be-secure.c:294 libpq/be-secure.c:387
-#: libpq/be-secure-openssl.c:1233 libpq/be-secure-openssl.c:1298
+#: libpq/be-secure-openssl.c:1269 libpq/be-secure-openssl.c:1334
 #, c-format
 msgid "SSL error: %s"
 msgstr "SSL 錯誤: %s"
 
-#: libpq/be-secure-openssl.c:1481
+#: libpq/be-secure-openssl.c:1517
 #, c-format
 msgid "could not open DH parameters file \"%s\": %m"
 msgstr "無法開啟 DH 參數檔案 \"%s\": %m"
 
 # libpq/be-secure.c:689
-#: libpq/be-secure-openssl.c:1493
+#: libpq/be-secure-openssl.c:1529
 #, c-format
 msgid "could not load DH parameters file: %s"
 msgstr "無法載入 DH 參數檔案: %s"
 
 # utils/misc/guc.c:3792
-#: libpq/be-secure-openssl.c:1503
+#: libpq/be-secure-openssl.c:1539
 #, c-format
 msgid "invalid DH parameters: %s"
 msgstr "無效的 DH 參數: %s"
 
 # commands/define.c:279
-#: libpq/be-secure-openssl.c:1512
+#: libpq/be-secure-openssl.c:1548
 #, c-format
 msgid "invalid DH parameters: p is not prime"
 msgstr "無效的 DH 參數: p 不是質數"
 
-#: libpq/be-secure-openssl.c:1521
+#: libpq/be-secure-openssl.c:1557
 #, c-format
 msgid "invalid DH parameters: neither suitable generator or safe prime"
 msgstr "無效的 DH 參數: 產生元不合適，且質數不是安全質數"
 
 # libpq/auth.c:378
-#: libpq/be-secure-openssl.c:1667
+#: libpq/be-secure-openssl.c:1703
 #, c-format
 msgid "Client certificate verification failed at depth %d: %s."
 msgstr "客戶端憑證驗證在深度 %d 處失敗: %s。"
 
-#: libpq/be-secure-openssl.c:1704
+#: libpq/be-secure-openssl.c:1740
 #, c-format
 msgid "Failed certificate data (unverified): subject \"%s\", serial number %s, issuer \"%s\"."
 msgstr "驗證失敗的憑證資料 (未經驗證): 主體 \"%s\", 序號 %s, 簽發者 \"%s\"。"
 
 # utils/error/elog.c:1350 utils/error/elog.c:1360
-#: libpq/be-secure-openssl.c:1705
+#: libpq/be-secure-openssl.c:1741
 msgid "unknown"
 msgstr "未知"
 
-#: libpq/be-secure-openssl.c:2030
+#: libpq/be-secure-openssl.c:2068
 #, c-format
 msgid "no hostname provided in callback, and no fallback configured"
 msgstr "回呼中未提供主機名稱，且未設定後備選項"
 
-#: libpq/be-secure-openssl.c:2054
+#: libpq/be-secure-openssl.c:2092
 #, c-format
 msgid "failed to switch to SSL configuration for host, terminating connection"
 msgstr "無法切換到該主機的 SSL 組態，正在終止連線"
 
-#: libpq/be-secure-openssl.c:2090
+#: libpq/be-secure-openssl.c:2128
 #, c-format
 msgid "DH: could not load DH parameters"
 msgstr "DH: 無法載入 DH 參數"
 
 # startup.c:446
-#: libpq/be-secure-openssl.c:2098
+#: libpq/be-secure-openssl.c:2136
 #, c-format
 msgid "DH: could not set DH parameters: %s"
 msgstr "DH: 無法設定 DH 參數: %s"
 
 # libpq/pqcomm.c:509
-#: libpq/be-secure-openssl.c:2127
+#: libpq/be-secure-openssl.c:2165
 #, c-format
 msgid "could not set group names specified in ssl_groups: %s"
 msgstr "無法設定 ssl_groups 中指定的群組名稱: %s"
 
-#: libpq/be-secure-openssl.c:2129
+#: libpq/be-secure-openssl.c:2167
 msgid "No valid groups found"
 msgstr "未找到有效群組"
 
-#: libpq/be-secure-openssl.c:2130
+#: libpq/be-secure-openssl.c:2168
 #, c-format
 msgid "Ensure that each group name is spelled correctly and supported by the installed version of OpenSSL."
 msgstr "確保每個群組名稱拼寫正確，且受已安裝的 OpenSSL 版本支援。"
 
 # libpq/be-secure.c:303 libpq/be-secure.c:396
-#: libpq/be-secure-openssl.c:2175
+#: libpq/be-secure-openssl.c:2213
 msgid "no SSL error reported"
 msgstr "未回報 SSL 錯誤"
 
 # libpq/be-secure.c:294 libpq/be-secure.c:387
-#: libpq/be-secure-openssl.c:2193
+#: libpq/be-secure-openssl.c:2231
 #, c-format
 msgid "SSL error code %lu"
 msgstr "SSL 錯誤碼 %lu"
 
-#: libpq/be-secure-openssl.c:2350
+#: libpq/be-secure-openssl.c:2388
 #, c-format
 msgid "could not create BIO"
 msgstr "無法建立 BIO"
 
-#: libpq/be-secure-openssl.c:2360
+#: libpq/be-secure-openssl.c:2398
 #, c-format
 msgid "could not get NID for ASN1_OBJECT object"
 msgstr "無法取得 ASN1_OBJECT 物件的 NID"
 
 # fe-secure.c:932
-#: libpq/be-secure-openssl.c:2368
+#: libpq/be-secure-openssl.c:2406
 #, c-format
 msgid "could not convert NID %d to an ASN1_OBJECT structure"
 msgstr "無法將 NID %d 轉換為 ASN1_OBJECT 結構"
@@ -24048,44 +24059,44 @@ msgstr "%s 不能套用到外部聯結中可能為 NULL 的一側"
 
 # optimizer/plan/planner.c:698
 #. translator: %s is a SQL row locking clause such as FOR UPDATE
-#: optimizer/plan/planner.c:1814 parser/analyze.c:1864 parser/analyze.c:2123
+#: optimizer/plan/planner.c:1820 parser/analyze.c:1864 parser/analyze.c:2123
 #: parser/analyze.c:3405
 #, c-format
 msgid "%s is not allowed with UNION/INTERSECT/EXCEPT"
 msgstr "%s 不允許與 UNION/INTERSECT/EXCEPT 一起使用"
 
-#: optimizer/plan/planner.c:2559 optimizer/plan/planner.c:4438
+#: optimizer/plan/planner.c:2565 optimizer/plan/planner.c:4444
 #, c-format
 msgid "could not implement GROUP BY"
 msgstr "無法實作 GROUP BY"
 
-#: optimizer/plan/planner.c:2560 optimizer/plan/planner.c:4439
-#: optimizer/plan/planner.c:5120 optimizer/prep/prepunion.c:1127
+#: optimizer/plan/planner.c:2566 optimizer/plan/planner.c:4445
+#: optimizer/plan/planner.c:5126 optimizer/prep/prepunion.c:1141
 #, c-format
 msgid "Some of the datatypes only support hashing, while others only support sorting."
 msgstr "有些資料型別只支援雜湊，有些資料型別只支援排序。"
 
-#: optimizer/plan/planner.c:5119
+#: optimizer/plan/planner.c:5125
 #, c-format
 msgid "could not implement DISTINCT"
 msgstr "無法實作 DISTINCT"
 
-#: optimizer/plan/planner.c:6584
+#: optimizer/plan/planner.c:6590
 #, c-format
 msgid "could not implement window PARTITION BY"
 msgstr "無法實作視窗 PARTITION BY"
 
-#: optimizer/plan/planner.c:6585
+#: optimizer/plan/planner.c:6591
 #, c-format
 msgid "Window partitioning columns must be of sortable datatypes."
 msgstr "視窗分割欄位必須屬於可排序的資料型別。"
 
-#: optimizer/plan/planner.c:6589
+#: optimizer/plan/planner.c:6595
 #, c-format
 msgid "could not implement window ORDER BY"
 msgstr "無法實作視窗 ORDER BY"
 
-#: optimizer/plan/planner.c:6590
+#: optimizer/plan/planner.c:6596
 #, c-format
 msgid "Window ordering columns must be of sortable datatypes."
 msgstr "視窗排序欄位必須屬於可排序的資料型別。"
@@ -24106,7 +24117,7 @@ msgstr "所有欄位的資料型別都必須可雜湊。"
 # utils/error/elog.c:1118 utils/init/miscinit.c:783 utils/init/miscinit.c:889
 # utils/misc/database.c:68
 #. translator: %s is INTERSECT or EXCEPT
-#: optimizer/prep/prepunion.c:1125
+#: optimizer/prep/prepunion.c:1139
 #, c-format
 msgid "could not implement %s"
 msgstr "無法實作 %s"
@@ -27644,42 +27655,42 @@ msgstr "失敗的系統呼叫是 MapViewOfFileEx。"
 msgid "autovacuum worker took too long to start; canceled"
 msgstr "自動清理工作行程啟動耗時過長；已取消"
 
-#: postmaster/autovacuum.c:2279
+#: postmaster/autovacuum.c:2304
 #, c-format
 msgid "autovacuum: dropping orphan temp table \"%s.%s.%s\""
 msgstr "自動清理: 正在刪除遺留的暫存資料表 \"%s.%s.%s\""
 
-#: postmaster/autovacuum.c:2536
+#: postmaster/autovacuum.c:2561
 #, c-format
 msgid "automatic vacuum of table \"%s.%s.%s\""
 msgstr "資料表 \"%s.%s.%s\" 自動清理"
 
-#: postmaster/autovacuum.c:2539
+#: postmaster/autovacuum.c:2564
 #, c-format
 msgid "automatic analyze of table \"%s.%s.%s\""
 msgstr "資料表 \"%s.%s.%s\" 自動分析"
 
-#: postmaster/autovacuum.c:2748
+#: postmaster/autovacuum.c:2773
 #, c-format
 msgid "processing work entry for relation \"%s.%s.%s\""
 msgstr "正在處理關聯 \"%s.%s.%s\" 的工作項目"
 
-#: postmaster/autovacuum.c:3526
+#: postmaster/autovacuum.c:3551
 #, c-format
 msgid "autovacuum not started because of misconfiguration"
 msgstr "因為設定錯誤，自動清理未啟動"
 
-#: postmaster/autovacuum.c:3527
+#: postmaster/autovacuum.c:3552
 #, c-format
 msgid "Enable the \"track_counts\" option."
 msgstr "啟用 \"track_counts\" 選項。"
 
-#: postmaster/autovacuum.c:3637
+#: postmaster/autovacuum.c:3662
 #, c-format
 msgid "\"autovacuum_max_workers\" (%d) should be less than or equal to \"autovacuum_worker_slots\" (%d)"
 msgstr "\"autovacuum_max_workers\" (%d) 宜小於或等於 \"autovacuum_worker_slots\" (%d)"
 
-#: postmaster/autovacuum.c:3639
+#: postmaster/autovacuum.c:3664
 #, c-format
 msgid "The server will only start up to \"autovacuum_worker_slots\" (%d) autovacuum workers at a given time."
 msgstr "伺服器在同一時間最多只會啟動 \"autovacuum_worker_slots\" (%d) 個自動清理工作行程。"
@@ -28884,7 +28895,7 @@ msgstr "正在建立複寫衝突偵測槽"
 msgid "logical decoding requires a database connection"
 msgstr "邏輯解碼需要資料庫連線"
 
-#: replication/logical/logical.c:138 replication/logical/logicalctl.c:321
+#: replication/logical/logical.c:138 replication/logical/logicalctl.c:378
 #, c-format
 msgid "logical decoding on standby requires \"effective_wal_level\" >= \"logical\" on the primary"
 msgstr "待命伺服器上的邏輯解碼需要主伺服器的 \"effective_wal_level\" >= \"logical\""
@@ -28940,8 +28951,8 @@ msgstr "不能在已執行寫操作的交易中建立邏輯複寫槽"
 msgid "cannot use replication slot \"%s\" for logical decoding"
 msgstr "不能將複寫槽 \"%s\" 用於邏輯解碼"
 
-#: replication/logical/logical.c:623 replication/slot.c:929
-#: replication/slot.c:974
+#: replication/logical/logical.c:623 replication/slot.c:937
+#: replication/slot.c:982
 #, c-format
 msgid "This replication slot is being synchronized from the primary server."
 msgstr "此複寫槽正在從主伺服器同步。"
@@ -28989,17 +29000,17 @@ msgstr "邏輯串流傳輸需要 %s 回呼"
 msgid "logical streaming at prepare time requires a %s callback"
 msgstr "在預備階段進行邏輯串流傳輸需要 %s 回呼"
 
-#: replication/logical/logicalctl.c:322
+#: replication/logical/logicalctl.c:379
 #, c-format
 msgid "Logical decoding was concurrently disabled during the logical replication slot creation."
 msgstr "建立邏輯複寫槽期間，邏輯解碼被並行停用。"
 
-#: replication/logical/logicalctl.c:442
+#: replication/logical/logicalctl.c:514
 #, c-format
 msgid "logical decoding is enabled upon creating a new logical replication slot"
 msgstr "已在建立新的邏輯複寫槽時啟用邏輯解碼"
 
-#: replication/logical/logicalctl.c:579
+#: replication/logical/logicalctl.c:651
 #, c-format
 msgid "logical decoding is disabled because there are no valid logical replication slots"
 msgstr "因沒有有效的邏輯複寫槽，已停用邏輯解碼"
@@ -29302,7 +29313,7 @@ msgid "skipping slot synchronization because the received slot sync LSN %X/%08X 
 msgstr "跳過槽同步，因為收到的槽 \"%3$s\" 的槽同步 LSN %1$X/%2$08X 超前於待命伺服器的位置 %4$X/%5$08X"
 
 #: replication/logical/slotsync.c:289 replication/logical/slotsync.c:367
-#: replication/logical/slotsync.c:737
+#: replication/logical/slotsync.c:905
 #, c-format
 msgid "could not synchronize replication slot \"%s\""
 msgstr "無法同步複寫槽 \"%s\""
@@ -29322,43 +29333,48 @@ msgstr "同步可能導致資料遺失，因為待命伺服器無法建置一致
 msgid "dropped replication slot \"%s\" of database with OID %u"
 msgstr "已刪除資料庫 OID 為 %2$u 的複寫槽 \"%1$s\""
 
-#: replication/logical/slotsync.c:739
-#, c-format
-msgid "Logical decoding was concurrently disabled."
-msgstr "邏輯解碼被並行停用。"
+#~ #: replication/logical/slotsync.c:739
+#~ #, c-format
+#~ msgid "Logical decoding was concurrently disabled."
+#~ msgstr "邏輯解碼被並行停用。"
 
-#: replication/logical/slotsync.c:750
+#: replication/logical/slotsync.c:715
 #, c-format
 msgid "newly created replication slot \"%s\" is sync-ready now"
 msgstr "新建立的複寫槽 \"%s\" 現已準備好同步"
 
-#: replication/logical/slotsync.c:792
+#: replication/logical/slotsync.c:757
 #, c-format
 msgid "exiting from slot synchronization because same name slot \"%s\" already exists on the standby"
 msgstr "結束槽同步，因為待命伺服器上已存在同名槽 \"%s\""
 
-#: replication/logical/slotsync.c:985
+#: replication/logical/slotsync.c:907
+#, c-format
+msgid "Logical decoding was disabled after the remote slot's restart LSN %X/%08X."
+msgstr "邏輯解碼被停用過，在遠端槽的重新啟動 LSN %X/%08X 後。"
+
+#: replication/logical/slotsync.c:1008
 #, c-format
 msgid "could not fetch failover logical slots info from the primary server: %s"
 msgstr "無法從主伺服器取得容錯移轉邏輯槽資訊: %s"
 
-#: replication/logical/slotsync.c:1150
+#: replication/logical/slotsync.c:1173
 #, c-format
 msgid "could not fetch primary slot name \"%s\" info from the primary server: %s"
 msgstr "無法從主伺服器取得主槽 \"%s\" 的資訊: %s"
 
-#: replication/logical/slotsync.c:1152
+#: replication/logical/slotsync.c:1175
 #, c-format
 msgid "Check if \"primary_slot_name\" is configured correctly."
 msgstr "檢查 \"primary_slot_name\" 是否設定正確。"
 
-#: replication/logical/slotsync.c:1172
+#: replication/logical/slotsync.c:1195
 #, c-format
 msgid "cannot synchronize replication slots from a standby server"
 msgstr "不能從待命伺服器同步複寫槽"
 
 #. translator: second %s is a GUC variable name
-#: replication/logical/slotsync.c:1181
+#: replication/logical/slotsync.c:1204
 #, c-format
 msgid "replication slot \"%s\" specified by \"%s\" does not exist on primary server"
 msgstr "由 \"%2$s\" 指定的複寫槽 \"%1$s\" 在主伺服器上不存在"
@@ -29366,82 +29382,82 @@ msgstr "由 \"%2$s\" 指定的複寫槽 \"%1$s\" 在主伺服器上不存在"
 #. translator: first %s is a connection option; second %s is a GUC
 #. variable name
 #.
-#: replication/logical/slotsync.c:1214
+#: replication/logical/slotsync.c:1237
 #, c-format
 msgid "replication slot synchronization requires \"%s\" to be specified in \"%s\""
 msgstr "複寫槽同步需要在 \"%2$s\" 中指定 \"%1$s\""
 
-#: replication/logical/slotsync.c:1233
+#: replication/logical/slotsync.c:1256
 #, c-format
 msgid "replication slot synchronization requires \"effective_wal_level\" >= \"logical\" on the primary"
 msgstr "複寫槽同步需要主伺服器的 \"effective_wal_level\" >= \"logical\""
 
-#: replication/logical/slotsync.c:1234
+#: replication/logical/slotsync.c:1257
 #, c-format
 msgid "To enable logical decoding on primary, set \"wal_level\" >= \"logical\" or create at least one logical slot when \"wal_level\" = \"replica\"."
 msgstr "要在主伺服器上啟用邏輯解碼，設定 \"wal_level\" >= \"logical\"，或在 \"wal_level\" = \"replica\" 時建立至少一個邏輯槽。"
 
 # fe-auth.c:655
 #. translator: %s is a GUC variable name
-#: replication/logical/slotsync.c:1250 replication/logical/slotsync.c:1278
+#: replication/logical/slotsync.c:1273 replication/logical/slotsync.c:1301
 #, c-format
 msgid "replication slot synchronization requires \"%s\" to be set"
 msgstr "複寫槽同步需要設定 \"%s\""
 
 #. translator: %s is a GUC variable name
-#: replication/logical/slotsync.c:1264
+#: replication/logical/slotsync.c:1287
 #, c-format
 msgid "replication slot synchronization requires \"%s\" to be enabled"
 msgstr "複寫槽同步需要啟用 \"%s\""
 
 #. translator: %s is a GUC variable name
-#: replication/logical/slotsync.c:1321
+#: replication/logical/slotsync.c:1344
 #, c-format
 msgid "replication slot synchronization worker will stop because \"%s\" is disabled"
 msgstr "複寫槽同步工作行程將停止，因為 \"%s\" 已停用"
 
-#: replication/logical/slotsync.c:1339
+#: replication/logical/slotsync.c:1362
 #, c-format
 msgid "replication slot synchronization worker will restart because of a parameter change"
 msgstr "複寫槽同步工作行程將因參數變更而重新啟動"
 
-#: replication/logical/slotsync.c:1364
+#: replication/logical/slotsync.c:1387
 #, c-format
 msgid "replication slot synchronization will stop because of a parameter change"
 msgstr "複寫槽同步將因參數變更而停止"
 
-#: replication/logical/slotsync.c:1400
+#: replication/logical/slotsync.c:1423
 #, c-format
 msgid "replication slot synchronization worker will stop because promotion is triggered"
 msgstr "複寫槽同步工作行程將停止，因為已觸發升級"
 
-#: replication/logical/slotsync.c:1414
+#: replication/logical/slotsync.c:1437
 #, c-format
 msgid "replication slot synchronization will stop because promotion is triggered"
 msgstr "複寫槽同步將停止，因為已觸發升級"
 
-#: replication/logical/slotsync.c:1534
+#: replication/logical/slotsync.c:1557
 #, c-format
 msgid "replication slot synchronization worker will not start because promotion was triggered"
 msgstr "複寫槽同步工作行程不會啟動，因為已觸發升級"
 
-#: replication/logical/slotsync.c:1546
+#: replication/logical/slotsync.c:1569
 #, c-format
 msgid "replication slot synchronization will not start because promotion was triggered"
 msgstr "複寫槽同步不會啟動，因為已觸發升級"
 
 # tcop/postgres.c:2042
-#: replication/logical/slotsync.c:1555
+#: replication/logical/slotsync.c:1578
 #, c-format
 msgid "cannot synchronize replication slots concurrently"
 msgstr "不能並行同步複寫槽"
 
-#: replication/logical/slotsync.c:1675
+#: replication/logical/slotsync.c:1698
 #, c-format
 msgid "slot sync worker started"
 msgstr "槽同步工作行程已啟動"
 
-#: replication/logical/slotsync.c:1737 replication/slotfuncs.c:962
+#: replication/logical/slotsync.c:1760 replication/slotfuncs.c:962
 #, c-format
 msgid "synchronization worker \"%s\" could not connect to the primary server: %s"
 msgstr "同步工作行程 \"%s\" 無法連線到主伺服器: %s"
@@ -29622,174 +29638,174 @@ msgstr "無法偵測衝突，因為領導者應用工作行程已結束"
 
 # tcop/postgres.c:334 tcop/postgres.c:346 tcop/postgres.c:357
 # tcop/postgres.c:369 tcop/postgres.c:3162
-#: replication/logical/worker.c:3925
+#: replication/logical/worker.c:3928
 #, c-format
 msgid "invalid logical replication message type \"??? (%d)\""
 msgstr "無效的邏輯複寫訊息型別 \"??? (%d)\""
 
-#: replication/logical/worker.c:4098
+#: replication/logical/worker.c:4101
 #, c-format
 msgid "data stream from publisher has ended"
 msgstr "來自發布伺服器的資料流已結束"
 
 # tcop/postgres.c:2032
-#: replication/logical/worker.c:4301
+#: replication/logical/worker.c:4304
 #, c-format
 msgid "terminating logical replication worker due to timeout"
 msgstr "由於逾時，正在終止邏輯複寫工作行程"
 
-#: replication/logical/worker.c:4873
+#: replication/logical/worker.c:4876
 #, c-format
 msgid "logical replication worker for subscription \"%s\" has stopped retaining the information for detecting conflicts"
 msgstr "訂閱 \"%s\" 的邏輯複寫工作行程已停止保留用於偵測衝突的資訊"
 
-#: replication/logical/worker.c:4875
+#: replication/logical/worker.c:4878
 #, c-format
 msgid "Retention is stopped because the apply process has not caught up with the publisher within the configured max_retention_duration."
 msgstr "已停止保留，因為應用行程未在設定的 max_retention_duration 內追趕上發布伺服器。"
 
-#: replication/logical/worker.c:4900
+#: replication/logical/worker.c:4903
 #, c-format
 msgid "logical replication worker for subscription \"%s\" will resume retaining the information for detecting conflicts"
 msgstr "訂閱 \"%s\" 的邏輯複寫工作行程將恢復保留用於偵測衝突的資訊"
 
-#: replication/logical/worker.c:4903
+#: replication/logical/worker.c:4906
 #, c-format
 msgid "Retention is re-enabled because the apply process has caught up with the publisher within the configured max_retention_duration."
 msgstr "已重新啟用保留，因為應用行程已在設定的 max_retention_duration 內追趕上發布伺服器。"
 
-#: replication/logical/worker.c:4904
+#: replication/logical/worker.c:4907
 #, c-format
 msgid "Retention is re-enabled because max_retention_duration has been set to unlimited."
 msgstr "已重新啟用保留，因為 max_retention_duration 已設為無限制。"
 
-#: replication/logical/worker.c:5121
+#: replication/logical/worker.c:5124
 #, c-format
 msgid "logical replication worker for subscription \"%s\" will stop because the subscription was removed"
 msgstr "訂閱 \"%s\" 的邏輯複寫工作行程將停止，因為該訂閱已刪除"
 
-#: replication/logical/worker.c:5135
+#: replication/logical/worker.c:5138
 #, c-format
 msgid "logical replication worker for subscription \"%s\" will stop because the subscription was disabled"
 msgstr "訂閱 \"%s\" 的邏輯複寫工作行程將停止，因為該訂閱已停用"
 
-#: replication/logical/worker.c:5173
+#: replication/logical/worker.c:5176
 #, c-format
 msgid "logical replication parallel apply worker for subscription \"%s\" will stop because of a parameter change"
 msgstr "訂閱 \"%s\" 的邏輯複寫並行應用工作行程將因參數變更而停止"
 
-#: replication/logical/worker.c:5177
+#: replication/logical/worker.c:5180
 #, c-format
 msgid "logical replication worker for subscription \"%s\" will restart because of a parameter change"
 msgstr "訂閱 \"%s\" 的邏輯複寫工作行程將因參數變更而重新啟動"
 
-#: replication/logical/worker.c:5191
+#: replication/logical/worker.c:5194
 #, c-format
 msgid "logical replication parallel apply worker for subscription \"%s\" will stop because the subscription owner's superuser privileges have been revoked"
 msgstr "訂閱 \"%s\" 的邏輯複寫並行應用工作行程將停止，因為訂閱擁有者的超級使用者權限已被撤銷"
 
-#: replication/logical/worker.c:5195
+#: replication/logical/worker.c:5198
 #, c-format
 msgid "logical replication worker for subscription \"%s\" will restart because the subscription owner's superuser privileges have been revoked"
 msgstr "訂閱 \"%s\" 的邏輯複寫工作行程將重新啟動，因為訂閱擁有者的超級使用者權限已被撤銷"
 
-#: replication/logical/worker.c:5746
+#: replication/logical/worker.c:5749
 #, c-format
 msgid "subscription has no replication slot set"
 msgstr "訂閱未設定複寫槽"
 
-#: replication/logical/worker.c:5771
+#: replication/logical/worker.c:5774
 #, c-format
 msgid "apply worker for subscription \"%s\" could not connect to the publisher: %s"
 msgstr "訂閱 \"%s\" 的應用工作行程無法連線到發布伺服器: %s"
 
-#: replication/logical/worker.c:5893
+#: replication/logical/worker.c:5896
 #, c-format
 msgid "logical replication worker for subscription %u will not start because the subscription was removed during startup"
 msgstr "訂閱 %u 的邏輯複寫工作行程不會啟動，因為訂閱在啟動期間已刪除"
 
-#: replication/logical/worker.c:5906
+#: replication/logical/worker.c:5909
 #, c-format
 msgid "logical replication worker for subscription \"%s\" will not start because the subscription was disabled during startup"
 msgstr "訂閱 \"%s\" 的邏輯複寫工作行程不會啟動，因為訂閱在啟動期間已停用"
 
-#: replication/logical/worker.c:5942
+#: replication/logical/worker.c:5945
 #, c-format
 msgid "logical replication worker for subscription \"%s\" will restart because the option %s was enabled during startup"
 msgstr "訂閱 \"%s\" 的邏輯複寫工作行程將重新啟動，因為選項 %s 在啟動期間已被啟用"
 
-#: replication/logical/worker.c:5985
+#: replication/logical/worker.c:5988
 #, c-format
 msgid "logical replication table synchronization worker for subscription \"%s\", table \"%s\" has started"
 msgstr "訂閱 \"%s\", 資料表 \"%s\" 的邏輯複寫資料表同步工作行程已啟動"
 
-#: replication/logical/worker.c:5990
+#: replication/logical/worker.c:5993
 #, c-format
 msgid "logical replication sequence synchronization worker for subscription \"%s\" has started"
 msgstr "訂閱 \"%s\" 的邏輯複寫序列同步工作行程已啟動"
 
-#: replication/logical/worker.c:5994
+#: replication/logical/worker.c:5997
 #, c-format
 msgid "logical replication apply worker for subscription \"%s\" has started"
 msgstr "訂閱 \"%s\" 的邏輯複寫應用工作行程已啟動"
 
-#: replication/logical/worker.c:6135
+#: replication/logical/worker.c:6138
 #, c-format
 msgid "subscription \"%s\" has been disabled because of an error"
 msgstr "訂閱 \"%s\" 已因錯誤而被停用"
 
-#: replication/logical/worker.c:6192
+#: replication/logical/worker.c:6195
 #, c-format
 msgid "logical replication starts skipping transaction at LSN %X/%08X"
 msgstr "邏輯複寫開始跳過 LSN 為 %X/%08X 的交易"
 
-#: replication/logical/worker.c:6206
+#: replication/logical/worker.c:6209
 #, c-format
 msgid "logical replication completed skipping transaction at LSN %X/%08X"
 msgstr "邏輯複寫已完成跳過 LSN 為 %X/%08X 的交易"
 
 # describe.c:221
-#: replication/logical/worker.c:6294
+#: replication/logical/worker.c:6297
 #, c-format
 msgid "skip-LSN of subscription \"%s\" cleared"
 msgstr "訂閱 \"%s\" 的 skip-LSN 已清除"
 
-#: replication/logical/worker.c:6295
+#: replication/logical/worker.c:6298
 #, c-format
 msgid "Remote transaction's finish WAL location (LSN) %X/%08X did not match skip-LSN %X/%08X."
 msgstr "遠端交易的結束 WAL 位置 (LSN) %X/%08X 與 skip-LSN %X/%08X 不符。"
 
-#: replication/logical/worker.c:6323
+#: replication/logical/worker.c:6326
 #, c-format
 msgid "processing remote data for replication origin \"%s\" during message type \"%s\""
 msgstr "正在為複寫來源 \"%s\" 處理遠端資料，訊息型別為 \"%s\""
 
-#: replication/logical/worker.c:6327
+#: replication/logical/worker.c:6330
 #, c-format
 msgid "processing remote data for replication origin \"%s\" during message type \"%s\" in transaction %u"
 msgstr "正在為複寫來源 \"%s\" 處理遠端資料，訊息型別為 \"%s\"，交易為 %u"
 
-#: replication/logical/worker.c:6332
+#: replication/logical/worker.c:6335
 #, c-format
 msgid "processing remote data for replication origin \"%s\" during message type \"%s\" in transaction %u, finished at %X/%08X"
 msgstr "正在為複寫來源 \"%s\" 處理遠端資料，訊息型別為 \"%s\"，交易為 %u，結束於 %X/%08X"
 
-#: replication/logical/worker.c:6343
+#: replication/logical/worker.c:6346
 #, c-format
 msgid "processing remote data for replication origin \"%s\" during message type \"%s\" for replication target relation \"%s.%s\" in transaction %u"
 msgstr "正在為複寫來源 \"%s\" 處理遠端資料，訊息型別為 \"%s\"，複寫目標為關聯 \"%s.%s\"，交易為 %u"
 
-#: replication/logical/worker.c:6350
+#: replication/logical/worker.c:6353
 #, c-format
 msgid "processing remote data for replication origin \"%s\" during message type \"%s\" for replication target relation \"%s.%s\" in transaction %u, finished at %X/%08X"
 msgstr "正在為複寫來源 \"%s\" 處理遠端資料，訊息型別為 \"%s\"，複寫目標為關聯 \"%s.%s\"，交易為 %u，結束於 %X/%08X"
 
-#: replication/logical/worker.c:6361
+#: replication/logical/worker.c:6364
 #, c-format
 msgid "processing remote data for replication origin \"%s\" during message type \"%s\" for replication target relation \"%s.%s\" column \"%s\" in transaction %u"
 msgstr "正在為複寫來源 \"%s\" 處理遠端資料，訊息型別為 \"%s\"，複寫目標為關聯 \"%s.%s\" 的欄位 \"%s\"，交易為 %u"
 
-#: replication/logical/worker.c:6369
+#: replication/logical/worker.c:6372
 #, c-format
 msgid "processing remote data for replication origin \"%s\" during message type \"%s\" for replication target relation \"%s.%s\" column \"%s\" in transaction %u, finished at %X/%08X"
 msgstr "正在為複寫來源 \"%s\" 處理遠端資料，訊息型別為 \"%s\"，複寫目標為關聯 \"%s.%s\" 的欄位 \"%s\"，交易為 %u，結束於 %X/%08X"
@@ -29919,7 +29935,7 @@ msgid "cannot enable failover for a replication slot created on the standby"
 msgstr "不能為在待命伺服器上建立的複寫槽啟用容錯移轉"
 
 # commands/tablecmds.c:730
-#: replication/slot.c:420 replication/slot.c:996
+#: replication/slot.c:420 replication/slot.c:1004
 #, c-format
 msgid "cannot enable failover for a temporary replication slot"
 msgstr "不能為暫存複寫槽啟用容錯移轉"
@@ -29956,7 +29972,7 @@ msgstr "不能取得複寫槽 \"%s\""
 msgid "The slot is reserved for conflict detection and can only be acquired by logical replication launcher."
 msgstr "此槽保留用於衝突偵測，只能由邏輯複寫啟動行程取得。"
 
-#: replication/slot.c:719 replication/slot.c:1594
+#: replication/slot.c:719 replication/slot.c:1602
 #, c-format
 msgid "replication slot \"%s\" is active for PID %d"
 msgstr "複寫槽 \"%s\" 正用於 PID %d"
@@ -29981,203 +29997,203 @@ msgstr "已取得邏輯複寫槽 \"%s\""
 msgid "acquired physical replication slot \"%s\""
 msgstr "已取得實體複寫槽 \"%s\""
 
-#: replication/slot.c:844
+#: replication/slot.c:852
 #, c-format
 msgid "released logical replication slot \"%s\""
 msgstr "已釋放邏輯複寫槽 \"%s\""
 
-#: replication/slot.c:846
+#: replication/slot.c:854
 #, c-format
 msgid "released physical replication slot \"%s\""
 msgstr "已釋放實體複寫槽 \"%s\""
 
-#: replication/slot.c:928
+#: replication/slot.c:936
 #, c-format
 msgid "cannot drop replication slot \"%s\""
 msgstr "不能刪除複寫槽 \"%s\""
 
 # commands/tablecmds.c:2189
-#: replication/slot.c:961
+#: replication/slot.c:969
 #, c-format
 msgid "cannot use %s with a physical replication slot"
 msgstr "不能將 %s 與實體複寫槽一起使用"
 
-#: replication/slot.c:973
+#: replication/slot.c:981
 #, c-format
 msgid "cannot alter replication slot \"%s\""
 msgstr "不能修改複寫槽 \"%s\""
 
-#: replication/slot.c:983
+#: replication/slot.c:991
 #, c-format
 msgid "cannot enable failover for a replication slot on the standby"
 msgstr "不能為待命伺服器上的複寫槽啟用容錯移轉"
 
 # commands/tablespace.c:610
-#: replication/slot.c:1141 replication/slot.c:2431 replication/slot.c:2824
+#: replication/slot.c:1149 replication/slot.c:2439 replication/slot.c:2832
 #, c-format
 msgid "could not remove directory \"%s\""
 msgstr "無法刪除目錄 \"%s\""
 
-#: replication/slot.c:1673
+#: replication/slot.c:1681
 #, c-format
 msgid "replication slots can only be used if \"%s\" > 0"
 msgstr "只有 \"%s\" > 0 時才能使用複寫槽"
 
-#: replication/slot.c:1679
+#: replication/slot.c:1687
 #, c-format
 msgid "REPACK can only be used if \"%s\" > 0"
 msgstr "只有 \"%s\" > 0 時才能使用 REPACK"
 
-#: replication/slot.c:1685
+#: replication/slot.c:1693
 #, c-format
 msgid "replication slots can only be used if \"wal_level\" >= \"replica\""
 msgstr "只有 \"wal_level\" >= \"replica\" 時才能使用複寫槽"
 
 # catalog/aclchk.c:1264
-#: replication/slot.c:1697
+#: replication/slot.c:1705
 #, c-format
 msgid "permission denied to use replication slots"
 msgstr "權限不足，無法使用複寫槽"
 
-#: replication/slot.c:1698
+#: replication/slot.c:1706
 #, c-format
 msgid "Only roles with the %s attribute may use replication slots."
 msgstr "只有具有 %s 屬性的角色才能使用複寫槽。"
 
-#: replication/slot.c:1810
+#: replication/slot.c:1818
 #, c-format
 msgid "The slot's restart_lsn %X/%08X exceeds the limit by %<PRIu64> byte."
 msgid_plural "The slot's restart_lsn %X/%08X exceeds the limit by %<PRIu64> bytes."
 msgstr[0] "槽的 restart_lsn %X/%08X 超出限制 %<PRIu64> 位元組。"
 
-#: replication/slot.c:1821
+#: replication/slot.c:1829
 #, c-format
 msgid "The slot conflicted with xid horizon %u."
 msgstr "該槽與 xid 界限 %u 發生衝突。"
 
-#: replication/slot.c:1826
+#: replication/slot.c:1834
 msgid "Logical decoding on standby requires the primary server to either set \"wal_level\" >= \"logical\" or have at least one logical slot when \"wal_level\" = \"replica\"."
 msgstr "待命伺服器上的邏輯解碼需要主伺服器設定 \"wal_level\" >= \"logical\"，或在 \"wal_level\" = \"replica\" 時擁有至少一個邏輯槽。"
 
 #. translator: %s is a GUC variable name
-#: replication/slot.c:1832
+#: replication/slot.c:1840
 #, c-format
 msgid "The slot's idle time of %lds exceeds the configured \"%s\" duration of %ds."
 msgstr "槽的閒置時間為 %ld 秒，超過 \"%s\" 設定的 %d 秒時長。"
 
 # tcop/postgres.c:2032
-#: replication/slot.c:1846
+#: replication/slot.c:1854
 #, c-format
 msgid "terminating process %d to release replication slot \"%s\""
 msgstr "正在終止行程 %d 以釋放複寫槽 \"%s\""
 
-#: replication/slot.c:1848
+#: replication/slot.c:1856
 #, c-format
 msgid "invalidating obsolete replication slot \"%s\""
 msgstr "正在使過時的複寫槽 \"%s\" 失效"
 
 # access/transam/xlog.c:2019
-#: replication/slot.c:2762
+#: replication/slot.c:2770
 #, c-format
 msgid "replication slot file \"%s\" has wrong magic number: %u instead of %u"
 msgstr "複寫槽檔案 \"%s\" 的魔數不正確: %u 而非 %u"
 
-#: replication/slot.c:2769
+#: replication/slot.c:2777
 #, c-format
 msgid "replication slot file \"%s\" has unsupported version %u"
 msgstr "複寫槽檔案 \"%s\" 使用不支援的版本 %u"
 
-#: replication/slot.c:2776
+#: replication/slot.c:2784
 #, c-format
 msgid "replication slot file \"%s\" has corrupted length %u"
 msgstr "複寫槽檔案 \"%s\" 的長度欄位損毀: %u"
 
-#: replication/slot.c:2812
+#: replication/slot.c:2820
 #, c-format
 msgid "checksum mismatch for replication slot file \"%s\": is %u, should be %u"
 msgstr "複寫槽檔案 \"%s\" 的檢查碼不符: 實際為 %u，預期為 %u"
 
-#: replication/slot.c:2848
+#: replication/slot.c:2856
 #, c-format
 msgid "logical replication slot \"%s\" exists, but \"wal_level\" < \"replica\""
 msgstr "邏輯複寫槽 \"%s\" 存在，但 \"wal_level\" < \"replica\""
 
-#: replication/slot.c:2850 replication/slot.c:2872
+#: replication/slot.c:2858 replication/slot.c:2880
 #, c-format
 msgid "Change \"wal_level\" to be \"replica\" or higher."
 msgstr "將 \"wal_level\" 變更為 \"replica\" 或更高層級。"
 
-#: replication/slot.c:2863
+#: replication/slot.c:2871
 #, c-format
 msgid "logical replication slot \"%s\" exists on the standby, but \"hot_standby\" = \"off\""
 msgstr "待命伺服器上存在邏輯複寫槽 \"%s\"，但 \"hot_standby\" = \"off\""
 
-#: replication/slot.c:2865
+#: replication/slot.c:2873
 #, c-format
 msgid "Change \"hot_standby\" to be \"on\"."
 msgstr "將 \"hot_standby\" 變更為 \"on\"。"
 
-#: replication/slot.c:2870
+#: replication/slot.c:2878
 #, c-format
 msgid "physical replication slot \"%s\" exists, but \"wal_level\" < \"replica\""
 msgstr "實體複寫槽 \"%s\" 存在，但 \"wal_level\" < \"replica\""
 
-#: replication/slot.c:2925
+#: replication/slot.c:2933
 #, c-format
 msgid "too many replication slots active before shutdown"
 msgstr "停止前作用中的複寫槽過多"
 
-#: replication/slot.c:2926
+#: replication/slot.c:2934
 #, c-format
 msgid "Increase \"max_replication_slots\" and try again."
 msgstr "增大 \"max_replication_slots\" 後重試。"
 
-#: replication/slot.c:3163
+#: replication/slot.c:3171
 #, c-format
 msgid "replication slot \"%s\" specified in parameter \"%s\" does not exist"
 msgstr "參數 \"%2$s\" 指定的複寫槽 \"%1$s\" 不存在"
 
-#: replication/slot.c:3165 replication/slot.c:3199 replication/slot.c:3214
+#: replication/slot.c:3173 replication/slot.c:3207 replication/slot.c:3222
 #, c-format
 msgid "Logical replication is waiting on the standby associated with replication slot \"%s\"."
 msgstr "邏輯複寫正在等待與複寫槽 \"%s\" 關聯的待命伺服器。"
 
-#: replication/slot.c:3167
+#: replication/slot.c:3175
 #, c-format
 msgid "Create the replication slot \"%s\" or amend parameter \"%s\"."
 msgstr "建立複寫槽 \"%s\"，或修正參數 \"%s\"。"
 
-#: replication/slot.c:3177
+#: replication/slot.c:3185
 #, c-format
 msgid "cannot specify logical replication slot \"%s\" in parameter \"%s\""
 msgstr "不能在參數 \"%2$s\" 中指定邏輯複寫槽 \"%1$s\""
 
-#: replication/slot.c:3179
+#: replication/slot.c:3187
 #, c-format
 msgid "Logical replication is waiting for correction on replication slot \"%s\"."
 msgstr "邏輯複寫正在等待複寫槽 \"%s\" 的問題被糾正。"
 
-#: replication/slot.c:3181
+#: replication/slot.c:3189
 #, c-format
 msgid "Remove the logical replication slot \"%s\" from parameter \"%s\"."
 msgstr "從參數 \"%2$s\" 中移除邏輯複寫槽 \"%1$s\"。"
 
-#: replication/slot.c:3197
+#: replication/slot.c:3205
 #, c-format
 msgid "physical replication slot \"%s\" specified in parameter \"%s\" has been invalidated"
 msgstr "參數 \"%2$s\" 指定的實體複寫槽 \"%1$s\" 已失效"
 
-#: replication/slot.c:3201
+#: replication/slot.c:3209
 #, c-format
 msgid "Drop and recreate the replication slot \"%s\", or amend parameter \"%s\"."
 msgstr "刪除並重新建立複寫槽 \"%s\"，或修正參數 \"%s\"。"
 
-#: replication/slot.c:3212
+#: replication/slot.c:3220
 #, c-format
 msgid "replication slot \"%s\" specified in parameter \"%s\" does not have active_pid"
 msgstr "參數 \"%2$s\" 指定的複寫槽 \"%1$s\" 沒有 active_pid"
 
-#: replication/slot.c:3216
+#: replication/slot.c:3224
 #, c-format
 msgid "Start the standby associated with the replication slot \"%s\", or amend parameter \"%s\"."
 msgstr "啟動與複寫槽 \"%s\" 關聯的待命伺服器，或修正參數 \"%s\"。"
@@ -32116,13 +32132,13 @@ msgstr "共享記憶體佇列中的訊息大小 %zu 無效"
 msgid "out of shared memory"
 msgstr "共享記憶體用盡"
 
-#: storage/ipc/shmem.c:383
+#: storage/ipc/shmem.c:377
 #, c-format
 msgid "shared memory struct \"%s\" is already registered"
 msgstr "共享記憶體結構 \"%s\" 已註冊"
 
 # utils/adt/array_userfuncs.c:50
-#: storage/ipc/shmem.c:552
+#: storage/ipc/shmem.c:546
 #, c-format
 msgid "could not create ShmemIndex entry for data structure \"%s\""
 msgstr "無法為資料結構 \"%s\" 建立 ShmemIndex 項目"
@@ -32130,23 +32146,23 @@ msgstr "無法為資料結構 \"%s\" 建立 ShmemIndex 項目"
 # storage/buffer/buf_table.c:93 storage/freespace/freespace.c:1014
 # storage/ipc/shmem.c:185 storage/ipc/shmem.c:246 storage/ipc/shmem.c:386
 # storage/lmgr/lock.c:561 storage/lmgr/lock.c:624 storage/lmgr/proc.c:179
-#: storage/ipc/shmem.c:569
+#: storage/ipc/shmem.c:563
 #, c-format
 msgid "not enough shared memory for data structure \"%s\" (%zd bytes requested)"
 msgstr "沒有足夠的共享記憶體給資料結構 \"%s\"(需要 %zd 位元組)"
 
 # utils/adt/array_userfuncs.c:50
-#: storage/ipc/shmem.c:623
+#: storage/ipc/shmem.c:617
 #, c-format
 msgid "could not find ShmemIndex entry for data structure \"%s\""
 msgstr "無法找到資料結構 \"%s\" 的 ShmemIndex 項目"
 
-#: storage/ipc/shmem.c:639 storage/ipc/shmem.c:1033
+#: storage/ipc/shmem.c:633 storage/ipc/shmem.c:1029
 #, c-format
 msgid "cannot attach to shared memory struct \"%s\" because it was not fully initialized"
 msgstr "不能附接到共享記憶體結構 \"%s\"，因為它尚未完全初始化"
 
-#: storage/ipc/shmem.c:647
+#: storage/ipc/shmem.c:641
 #, c-format
 msgid "shared memory struct \"%s\" was created with different size: existing %zu, requested %zd"
 msgstr "共享記憶體結構 \"%s\" 建立時的大小不同: 現有大小為 %zu，請求大小為 %zd"
@@ -32154,17 +32170,17 @@ msgstr "共享記憶體結構 \"%s\" 建立時的大小不同: 現有大小為 %
 # storage/buffer/buf_table.c:93 storage/freespace/freespace.c:1014
 # storage/ipc/shmem.c:185 storage/ipc/shmem.c:246 storage/ipc/shmem.c:386
 # storage/lmgr/lock.c:561 storage/lmgr/lock.c:624 storage/lmgr/proc.c:179
-#: storage/ipc/shmem.c:722 storage/ipc/shmem.c:820
+#: storage/ipc/shmem.c:716 storage/ipc/shmem.c:816
 #, c-format
 msgid "out of shared memory (%zu bytes requested)"
 msgstr "共享記憶體不足 (請求 %zu 位元組)"
 
-#: storage/ipc/shmem.c:1041
+#: storage/ipc/shmem.c:1037
 #, c-format
 msgid "cannot attach to shared memory struct \"%s\" because it does not exist"
 msgstr "不能附接到共享記憶體結構 \"%s\"，因為它不存在"
 
-#: storage/ipc/shmem.c:1043
+#: storage/ipc/shmem.c:1039
 #, c-format
 msgid "SHMEM_ATTACH_UNKNOWN_SIZE can only be used to attach to an existing shared memory structure."
 msgstr "SHMEM_ATTACH_UNKNOWN_SIZE 只能用於附接到現有的共享記憶體結構。"
@@ -33370,24 +33386,24 @@ msgid "disconnection: session time: %d:%02d:%02d.%03d user=%s database=%s host=%
 msgstr "中斷連線: 工作階段時間: %d:%02d:%02d.%03d 使用者=%s 資料庫=%s 主機=%s%s%s"
 
 # tcop/pquery.c:448
-#: tcop/pquery.c:638
+#: tcop/pquery.c:642
 #, c-format
 msgid "bind message has %d result formats but query has %d columns"
 msgstr "繫結訊息有 %d 個結果格式，但查詢有 %d 個欄位"
 
 # tcop/pquery.c:771
-#: tcop/pquery.c:936 tcop/pquery.c:1681
+#: tcop/pquery.c:940 tcop/pquery.c:1685
 #, c-format
 msgid "cursor can only scan forward"
 msgstr "游標只能向前掃描"
 
 # tcop/pquery.c:772
-#: tcop/pquery.c:937 tcop/pquery.c:1682
+#: tcop/pquery.c:941 tcop/pquery.c:1686
 #, c-format
 msgid "Declare it with SCROLL option to enable backward scan."
 msgstr "以 SCROLL 選項宣告它，啟用逆向掃描。"
 
-#: tcop/pquery.c:1004
+#: tcop/pquery.c:1008
 msgid "query result type does not match portal result type"
 msgstr "查詢結果型別與 portal 結果型別不符"
 
@@ -37390,7 +37406,7 @@ msgstr "不合適的型別名稱"
 # utils/adt/ri_triggers.c:337 utils/adt/ri_triggers.c:2743
 # utils/adt/ri_triggers.c:3248 utils/adt/ri_triggers.c:3285
 #: utils/adt/ri_triggers.c:389 utils/adt/ri_triggers.c:1870
-#: utils/adt/ri_triggers.c:3513
+#: utils/adt/ri_triggers.c:3522
 #, c-format
 msgid "insert or update on table \"%s\" violates foreign key constraint \"%s\""
 msgstr "資料表 \"%s\" 的插入或更新違反外來鍵限制 \"%s\""
@@ -37444,53 +37460,53 @@ msgstr "最可能的原因是規則已重寫查詢。"
 
 # utils/adt/ri_triggers.c:337 utils/adt/ri_triggers.c:2743
 # utils/adt/ri_triggers.c:3248 utils/adt/ri_triggers.c:3285
-#: utils/adt/ri_triggers.c:3503
+#: utils/adt/ri_triggers.c:3512
 #, c-format
 msgid "removing partition \"%s\" violates foreign key constraint \"%s\""
 msgstr "分離分割 \"%s\" 違反外來鍵條件約束 \"%s\""
 
 # utils/adt/ri_triggers.c:3296
-#: utils/adt/ri_triggers.c:3506 utils/adt/ri_triggers.c:3545
+#: utils/adt/ri_triggers.c:3515 utils/adt/ri_triggers.c:3554
 #, c-format
 msgid "Key (%s)=(%s) is still referenced from table \"%s\"."
 msgstr "索引鍵 (%s)=(%s) 仍被資料表 \"%s\" 參考。"
 
 # utils/adt/ri_triggers.c:3287
-#: utils/adt/ri_triggers.c:3517
+#: utils/adt/ri_triggers.c:3526
 #, c-format
 msgid "Key (%s)=(%s) is not present in table \"%s\"."
 msgstr "索引鍵 (%s)=(%s) 沒有出現在資料表 \"%s\"。"
 
 # utils/adt/ri_triggers.c:3287
-#: utils/adt/ri_triggers.c:3520
+#: utils/adt/ri_triggers.c:3529
 #, c-format
 msgid "Key is not present in table \"%s\"."
 msgstr "資料表 \"%s\" 中不存在索引鍵。"
 
-#: utils/adt/ri_triggers.c:3526
+#: utils/adt/ri_triggers.c:3535
 #, c-format
 msgid "update or delete on table \"%s\" violates RESTRICT setting of foreign key constraint \"%s\" on table \"%s\""
 msgstr "對資料表 \"%1$s\" 的更新或刪除違反資料表 \"%3$s\" 上外來鍵條件約束 \"%2$s\" 的 RESTRICT 設定"
 
 # utils/adt/ri_triggers.c:3296
-#: utils/adt/ri_triggers.c:3531
+#: utils/adt/ri_triggers.c:3540
 #, c-format
 msgid "Key (%s)=(%s) is referenced from table \"%s\"."
 msgstr "索引鍵 (%s)=(%s) 被資料表 \"%s\" 引用。"
 
 # utils/adt/ri_triggers.c:3296
-#: utils/adt/ri_triggers.c:3534
+#: utils/adt/ri_triggers.c:3543
 #, c-format
 msgid "Key is referenced from table \"%s\"."
 msgstr "索引鍵被資料表 \"%s\" 引用。"
 
-#: utils/adt/ri_triggers.c:3540
+#: utils/adt/ri_triggers.c:3549
 #, c-format
 msgid "update or delete on table \"%s\" violates foreign key constraint \"%s\" on table \"%s\""
 msgstr "資料表 \"%s\" 的更新或刪除違反外來鍵限制 \"%s\" (於資料表 \"%s\")"
 
 # utils/adt/ri_triggers.c:3296
-#: utils/adt/ri_triggers.c:3548
+#: utils/adt/ri_triggers.c:3557
 #, c-format
 msgid "Key is still referenced from table \"%s\"."
 msgstr "索引鍵仍被資料表 \"%s\" 引用。"
@@ -37810,19 +37826,25 @@ msgstr "tsquery 中的運算元太長: \"%s\""
 msgid "word is too long in tsquery: \"%s\""
 msgstr "tsquery 中的字詞太長: \"%s\""
 
+# parser/parse_expr.c:614
+#: utils/adt/tsquery.c:643
+#, c-format
+msgid "tsquery is too complex"
+msgstr "tsquery 查詢過於複雜"
+
 # access/transam/xlog.c:2771
-#: utils/adt/tsquery.c:713 utils/adt/tsvector_parser.c:147
+#: utils/adt/tsquery.c:717 utils/adt/tsvector_parser.c:147
 #, c-format
 msgid "syntax error in tsquery: \"%s\""
 msgstr "tsquery 中有語法錯誤: \"%s\""
 
-#: utils/adt/tsquery.c:879
+#: utils/adt/tsquery.c:883
 #, c-format
 msgid "text-search query doesn't contain lexemes: \"%s\""
 msgstr "文字搜尋查詢未包含詞素: \"%s\""
 
 # storage/freespace/freespace.c:341
-#: utils/adt/tsquery.c:890 utils/adt/tsquery_util.c:339
+#: utils/adt/tsquery.c:894 utils/adt/tsquery_util.c:339
 #: utils/adt/tsquery_util.c:383
 #, c-format
 msgid "tsquery is too large"
@@ -40090,18 +40112,18 @@ msgid "cannot have more than %d runs for an external sort"
 msgstr "外部排序的有序段數量不能超過 %d"
 
 # utils/sort/tuplesort.c:2082
-#: utils/sort/tuplesortvariants.c:1688
+#: utils/sort/tuplesortvariants.c:1698
 #, c-format
 msgid "could not create unique index \"%s\""
 msgstr "無法建立唯一索引 \"%s\""
 
 # commands/user.c:1396
-#: utils/sort/tuplesortvariants.c:1690
+#: utils/sort/tuplesortvariants.c:1700
 #, c-format
 msgid "Key %s is duplicated."
 msgstr "鍵值 %s 重複。"
 
-#: utils/sort/tuplesortvariants.c:1691
+#: utils/sort/tuplesortvariants.c:1701
 #, c-format
 msgid "Duplicate keys exist."
 msgstr "存在重複的索引鍵。"

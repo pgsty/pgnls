@@ -7,7 +7,7 @@
 [![Review Workbench](https://img.shields.io/badge/Review_Workbench-pgsql.cc%2Fnls-2f6fa3?style=for-the-badge&logo=postgresql&logoColor=white)](https://pgsql.cc/nls)
 
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14--19-336791?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-[![Messages](https://img.shields.io/badge/messages-67%2C501-informational)](https://pgsql.cc/nls)
+[![Messages](https://img.shields.io/badge/messages-67%2C510-informational)](https://pgsql.cc/nls)
 [![Translated](https://img.shields.io/badge/translated-100%25-brightgreen)](https://pgsql.cc/nls)
 [![Fuzzy](https://img.shields.io/badge/fuzzy-0-brightgreen)](https://pgsql.cc/nls)
 [![msgfmt](https://img.shields.io/badge/msgfmt-clean-brightgreen)](https://www.gnu.org/software/gettext/)
@@ -15,7 +15,7 @@
 
 </div>
 
-**162 files and 67,501 messages per language; 324 files and 135,002 messages in total.** Both languages are 100% translated, with zero fuzzy and zero untranslated entries — every file clean under `msgfmt --check --check-format`.
+**162 files and 67,510 messages per language; 324 files and 135,020 messages in total.** Both languages are 100% translated, with zero fuzzy and zero untranslated entries — every file clean under `msgfmt --check --check-format`.
 
 The initial `zh_CN` baseline from `pgtranslation/messages.git` dated from 2019; its headers still read `Project-Id-Version: postgres (PostgreSQL) 12`. Across PostgreSQL 14 – 19 it carried a reviewed translation for 77.1% of messages; of the remaining 15,475, some 11,770 were fuzzy entries that babel matched by similarity and 3,705 were empty. This repository is a complete set rebuilt from the current templates, with terminology held to a single glossary shared across all catalogs and all six branches, and every message verified against its English original. How that was done is spelled out in [How this was made](#how-this-was-made).
 
@@ -27,10 +27,10 @@ Every message is browsable at **<https://pgsql.cc/nls>** — the English origina
 
 | Upstream branch | PG | Catalogs | Messages | Initial upstream | Here | Workbench | Issue | Download |
 |:---|:---:|---:|---:|---:|:---:|:---:|:---:|:---:|
-| [`master`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/master) | 19 | 28 | 12,645 | 65.3% | **100%** | [browse](https://pgsql.cc/nls/?v=19) | [#8123](https://redmine.postgresql.org/issues/8123) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260918/pg-messages-zh_CN-master-20260918.tar.gz) |
-| [`REL_18_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_18_STABLE) | 18 | 28 | 12,099 | 69.9% | **100%** | [browse](https://pgsql.cc/nls/?v=18) | [#8118](https://redmine.postgresql.org/issues/8118) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260918/pg-messages-zh_CN-REL_18_STABLE-20260918.tar.gz) |
-| [`REL_17_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_17_STABLE) | 17 | 28 | 11,510 | 74.9% | **100%** | [browse](https://pgsql.cc/nls/?v=17) | [#8119](https://redmine.postgresql.org/issues/8119) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260918/pg-messages-zh_CN-REL_17_STABLE-20260918.tar.gz) |
-| [`REL_16_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_16_STABLE) | 16 | 26 | 10,657 | 79.0% | **100%** | [browse](https://pgsql.cc/nls/?v=16) | [#8120](https://redmine.postgresql.org/issues/8120) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260918/pg-messages-zh_CN-REL_16_STABLE-20260918.tar.gz) |
+| [`master`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/master) | 19 | 28 | 12,649 | 65.3% | **100%** | [browse](https://pgsql.cc/nls/?v=19) | [#8123](https://redmine.postgresql.org/issues/8123) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260918/pg-messages-zh_CN-master-20260918.tar.gz) |
+| [`REL_18_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_18_STABLE) | 18 | 28 | 12,101 | 69.9% | **100%** | [browse](https://pgsql.cc/nls/?v=18) | [#8118](https://redmine.postgresql.org/issues/8118) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260918/pg-messages-zh_CN-REL_18_STABLE-20260918.tar.gz) |
+| [`REL_17_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_17_STABLE) | 17 | 28 | 11,512 | 74.9% | **100%** | [browse](https://pgsql.cc/nls/?v=17) | [#8119](https://redmine.postgresql.org/issues/8119) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260918/pg-messages-zh_CN-REL_17_STABLE-20260918.tar.gz) |
+| [`REL_16_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_16_STABLE) | 16 | 26 | 10,658 | 79.0% | **100%** | [browse](https://pgsql.cc/nls/?v=16) | [#8120](https://redmine.postgresql.org/issues/8120) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260918/pg-messages-zh_CN-REL_16_STABLE-20260918.tar.gz) |
 | [`REL_15_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_15_STABLE) | 15 | 26 | 10,464 | 85.7% | **100%** | [browse](https://pgsql.cc/nls/?v=15) | [#8121](https://redmine.postgresql.org/issues/8121) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260918/pg-messages-zh_CN-REL_15_STABLE-20260918.tar.gz) |
 | [`REL_14_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_14_STABLE) | 14 | 26 | 10,126 | 91.8% | **100%** | [browse](https://pgsql.cc/nls/?v=14) | [#8122](https://redmine.postgresql.org/issues/8122) | [`tar.gz`](https://github.com/pgsty/pgnls/releases/download/20260918/pg-messages-zh_CN-REL_14_STABLE-20260918.tar.gz) |
 
@@ -93,7 +93,7 @@ Each view of the catalogs lives on its own branch:
 
 | Branch | Holds | Sync |
 |:---|:---|:---|
-| `main` | this curated set, exported from the review database | manual |
+| `main` | curated catalogs with reviewed upstream updates | manual |
 | `message` | the raw state of [`pgtranslation/messages.git`](https://git.postgresql.org/git/pgtranslation/messages.git), verbatim | `bin/sync-message.sh` on that branch |
 | `babel` | the aligned view `babel.postgresql.org` serves — the raw catalogs merged against each branch's current POT — as dated snapshots | `bin/sync-babel.sh` on that branch |
 
@@ -101,7 +101,7 @@ The two views differ by design: translations on shared msgids are
 byte-identical, but the aligned view carries the day's msgid sets (new strings
 empty, reworded ones fuzzy-matched, dropped ones as `#~`) while the raw one
 keeps each translator's last word. `main` also carries the curated `zh_TW/`
-catalogs: 67,501 messages across the same six branches, all translated.
+catalogs: 67,510 messages across the same six branches, all translated.
 
 ## Usage
 
@@ -203,7 +203,7 @@ the long version; [`ref/errata.md`](ref/errata.md) has the known defects.
 
 ## File handling
 
-- **Templates** — the babel `po-{14..19}-branch` snapshot checked on 2026-09-30. Both languages carry the snapshot's per-file `POT-Creation-Date` and active-message source references (`#:`). `make fetch-upstream && make diff` tells you at any time whether `zh_CN/` still matches the current upstream POT entry for entry.
+- **Templates** — the babel `po-{14..19}-branch` snapshot checked on 2026-10-08, built by Babel on 2026-10-07. Both languages carry the snapshot's per-file `POT-Creation-Date` and active-message source references (`#:`). `make fetch-upstream && make diff` tells you at any time whether `zh_CN/` still matches the current upstream POT entry for entry.
 - **Only what should change** — translation edits affect `msgstr` values, `fuzzy` flags, and `#|` previous-message comments. Explicit template refreshes synchronize `POT-Creation-Date` and source references (`#:`) while preserving translations and `PO-Revision-Date`. Extracted comments (`#.`), `msgctxt`, other flags, entry order and obsolete `#~` entries are preserved byte for byte.
 - **Plurals** — normalised to the Chinese standard `nplurals=1; plural=0;`. The existing headers disagree: `postgres` and `psql` declared 1, nine directories declared 2, and `libpq` and `initdb` carried plural entries with no `Plural-Forms` header at all. `pg_dump`'s circular foreign-key warning uses the number-neutral wording `以下表涉及循环外键约束:` so the single Chinese plural form covers both self-references within one table and cycles among multiple tables.
 - **Consistency** — one glossary governs the whole set, so similar English strings read consistently across every catalog and every branch, which is what makes six branches reviewable as one body of work rather than six.
