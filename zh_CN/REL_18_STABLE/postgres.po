@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 12\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-10-07 06:37+0000\n"
+"POT-Creation-Date: 2026-10-08 22:36+0000\n"
 "PO-Revision-Date: 2019-06-05 18:00+0800\n"
 "Last-Translator: Jie Zhang <zhangjie2@cn.fujitsu.com>\n"
 "Language-Team: Chinese (Simplified) <zhangjie2@cn.fujitsu.com>\n"
@@ -1489,123 +1489,123 @@ msgstr "无法将文件\"%s\"截断为%u:%m"
 msgid "could not write to file \"%s\": %m"
 msgstr "无法写入文件 \"%s\": %m"
 
-#: access/heap/vacuumlazy.c:815
+#: access/heap/vacuumlazy.c:806
 #, fuzzy, c-format
 #| msgid "aggressively vacuuming \"%s.%s\""
 msgid "aggressively vacuuming \"%s.%s.%s\""
 msgstr "正在积极清理\"%s.%s\""
 
-#: access/heap/vacuumlazy.c:820
+#: access/heap/vacuumlazy.c:811
 #, fuzzy, c-format
 #| msgid "vacuuming \"%s.%s\""
 msgid "vacuuming \"%s.%s.%s\""
 msgstr "正在清理 (vacuum)  \"%s.%s\""
 
-#: access/heap/vacuumlazy.c:988
+#: access/heap/vacuumlazy.c:979
 #, fuzzy, c-format
 #| msgid "automatic vacuum of table \"%s.%s.%s\": index scans: %d\n"
 msgid "finished vacuuming \"%s.%s.%s\": index scans: %d\n"
 msgstr "自动清理表\"%s.%s.%s\"：索引扫描：%d\n"
 
-#: access/heap/vacuumlazy.c:999
+#: access/heap/vacuumlazy.c:990
 #, c-format
 msgid "automatic aggressive vacuum to prevent wraparound of table \"%s.%s.%s\": index scans: %d\n"
 msgstr "自动积极的清理，防止表\"%s.%s.%s\"的包围：索引扫描：%d\n"
 
-#: access/heap/vacuumlazy.c:1001
+#: access/heap/vacuumlazy.c:992
 #, fuzzy, c-format
 #| msgid "automatic aggressive vacuum to prevent wraparound of table \"%s.%s.%s\": index scans: %d\n"
 msgid "automatic vacuum to prevent wraparound of table \"%s.%s.%s\": index scans: %d\n"
 msgstr "自动积极的清理，防止表\"%s.%s.%s\"的包围：索引扫描：%d\n"
 
-#: access/heap/vacuumlazy.c:1006
+#: access/heap/vacuumlazy.c:997
 #, c-format
 msgid "automatic aggressive vacuum of table \"%s.%s.%s\": index scans: %d\n"
 msgstr "自动积极的清理表\"%s.%s.%s\"：索引扫描：%d\n"
 
-#: access/heap/vacuumlazy.c:1008
+#: access/heap/vacuumlazy.c:999
 #, c-format
 msgid "automatic vacuum of table \"%s.%s.%s\": index scans: %d\n"
 msgstr "自动清理表\"%s.%s.%s\"：索引扫描：%d\n"
 
-#: access/heap/vacuumlazy.c:1015
+#: access/heap/vacuumlazy.c:1006
 #, fuzzy, c-format
 #| msgid "pages: %u removed, %u remain, %u skipped due to pins, %u skipped frozen\n"
 msgid "pages: %u removed, %u remain, %u scanned (%.2f%% of total), %u eagerly scanned\n"
 msgstr "页面：%u 被移除，%u 保留，%u 由于被占用而跳过，%u 被跳过的已被冻结\n"
 
-#: access/heap/vacuumlazy.c:1024
+#: access/heap/vacuumlazy.c:1015
 #, fuzzy, c-format
 #| msgid "tuples: %.0f removed, %.0f remain, %.0f are dead but not yet removable, oldest xmin: %u\n"
 msgid "tuples: %<PRId64> removed, %<PRId64> remain, %<PRId64> are dead but not yet removable\n"
 msgstr "元组：%.0f被移除，%.0f保留，%.0f已经死亡但还不能被移除,最老xmin: %u\n"
 
-#: access/heap/vacuumlazy.c:1030
+#: access/heap/vacuumlazy.c:1021
 #, c-format
 msgid "tuples missed: %<PRId64> dead from %u pages not removed due to cleanup lock contention\n"
 msgstr ""
 
-#: access/heap/vacuumlazy.c:1036
+#: access/heap/vacuumlazy.c:1027
 #, c-format
 msgid "removable cutoff: %u, which was %d XIDs old when operation ended\n"
 msgstr ""
 
-#: access/heap/vacuumlazy.c:1043
+#: access/heap/vacuumlazy.c:1034
 #, c-format
 msgid "new relfrozenxid: %u, which is %d XIDs ahead of previous value\n"
 msgstr ""
 
-#: access/heap/vacuumlazy.c:1051
+#: access/heap/vacuumlazy.c:1042
 #, c-format
 msgid "new relminmxid: %u, which is %d MXIDs ahead of previous value\n"
 msgstr ""
 
-#: access/heap/vacuumlazy.c:1054
+#: access/heap/vacuumlazy.c:1045
 #, c-format
 msgid "frozen: %u pages from table (%.2f%% of total) had %<PRId64> tuples frozen\n"
 msgstr ""
 
-#: access/heap/vacuumlazy.c:1062
+#: access/heap/vacuumlazy.c:1053
 #, c-format
 msgid "visibility map: %u pages set all-visible, %u pages set all-frozen (%u were all-visible)\n"
 msgstr ""
 
-#: access/heap/vacuumlazy.c:1070
+#: access/heap/vacuumlazy.c:1061
 #, fuzzy
 #| msgid "index \"%s\" not found"
 msgid "index scan not needed: "
 msgstr "索引\"%s\"没有找到"
 
-#: access/heap/vacuumlazy.c:1072
+#: access/heap/vacuumlazy.c:1063
 #, fuzzy
 #| msgid "index \"%s\" was reindexed"
 msgid "index scan needed: "
 msgstr "索引\"%s\"已被重新索引"
 
-#: access/heap/vacuumlazy.c:1074
+#: access/heap/vacuumlazy.c:1065
 #, c-format
 msgid "%u pages from table (%.2f%% of total) had %<PRId64> dead item identifiers removed\n"
 msgstr ""
 
-#: access/heap/vacuumlazy.c:1079
+#: access/heap/vacuumlazy.c:1070
 msgid "index scan bypassed: "
 msgstr ""
 
-#: access/heap/vacuumlazy.c:1081
+#: access/heap/vacuumlazy.c:1072
 msgid "index scan bypassed by failsafe: "
 msgstr ""
 
-#: access/heap/vacuumlazy.c:1083
+#: access/heap/vacuumlazy.c:1074
 #, c-format
 msgid "%u pages from table (%.2f%% of total) have %<PRId64> dead item identifiers\n"
 msgstr ""
 
-#: access/heap/vacuumlazy.c:1098
+#: access/heap/vacuumlazy.c:1089
 #, c-format
 msgid "index \"%s\": pages: %u in total, %u newly deleted, %u currently deleted, %u reusable\n"
 msgstr ""
 
-#: access/heap/vacuumlazy.c:1113 commands/analyze.c:817
+#: access/heap/vacuumlazy.c:1104 commands/analyze.c:817
 #, fuzzy, c-format
 #| msgid "Time: %.3f ms\n"
 msgid "delay time: %.3f ms\n"

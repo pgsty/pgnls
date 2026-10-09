@@ -1,17 +1,15 @@
-# LANGUAGE message translation file for pg_basebackup
+# Simplified Chinese message translation file for pg_basebackup
 # Copyright (C) 2019 PostgreSQL Global Development Group
-# This file is distributed under the same license as the pg_basebackup (PostgreSQL) package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2019.
+# This file is distributed under the same license as the PostgreSQL package.
+# Ruohang Feng <rh@vonng.com>, 2026.
 #
-# Recalibrated and completed via the pgsql.cc NLS review workbench.
-# Feng Ruohang <rh@vonng.com>, 2026.
 msgid ""
 msgstr ""
-"Project-Id-Version: PostgreSQL 19\n"
+"Project-Id-Version: pg_basebackup (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-10-07 19:21+0000\n"
+"POT-Creation-Date: 2026-10-08 22:20+0000\n"
 "PO-Revision-Date: 2026-09-17 16:00+0800\n"
-"Last-Translator: Feng Ruohang <rh@vonng.com>\n"
+"Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -325,6 +323,11 @@ msgstr "无法初始化压缩库"
 #, c-format
 msgid "could not decompress data: %s"
 msgstr "无法解压缩数据: %s"
+
+#: ../../fe_utils/astreamer_gzip.c:343 walmethods.c:755
+#, c-format
+msgid "could not reset compression stream"
+msgstr "无法重置压缩流"
 
 #: ../../fe_utils/astreamer_lz4.c:97
 #, c-format
@@ -2772,10 +2775,6 @@ msgstr "无法删除复制槽 \"%s\": 实际为 %d 行和 %d 个字段，预期�
 #: walmethods.c:726 walmethods.c:1269
 msgid "could not compress data"
 msgstr "无法压缩数据"
-
-#: walmethods.c:755
-msgid "could not reset compression stream"
-msgstr "无法重置压缩流"
 
 #: walmethods.c:892
 msgid "implementation error: tar files can't have more than one open file"
