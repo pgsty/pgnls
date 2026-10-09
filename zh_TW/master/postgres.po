@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-10-08 04:19+0000\n"
-"PO-Revision-Date: 2026-10-08 16:06+0800\n"
+"POT-Creation-Date: 2026-10-08 22:18+0000\n"
+"PO-Revision-Date: 2026-10-09 12:11+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
@@ -142,7 +142,7 @@ msgstr "無法讀取檔案 \"%1$s\": 應讀取 %3$zu，實際讀取 %2$d"
 #: access/transam/xlog.c:3387 access/transam/xlog.c:3581
 #: access/transam/xlog.c:3586 access/transam/xlog.c:3722
 #: access/transam/xlog.c:4404 access/transam/xlog.c:5376
-#: commands/copyfrom.c:1953 commands/copyto.c:758 libpq/be-fsstubs.c:475
+#: commands/copyfrom.c:1953 commands/copyto.c:774 libpq/be-fsstubs.c:475
 #: libpq/be-fsstubs.c:545 replication/logical/origin.c:724
 #: replication/logical/origin.c:862 replication/logical/reorderbuffer.c:5483
 #: replication/logical/snapbuild.c:1740 replication/logical/snapbuild.c:1866
@@ -330,7 +330,7 @@ msgid "could not resolve path \"%s\" to absolute form: %m"
 msgstr "無法將路徑 \"%s\" 解析為絕對路徑: %m"
 
 #: ../common/exec.c:364 commands/collationcmds.c:877 commands/copyfrom.c:1887
-#: commands/copyto.c:1170 libpq/be-secure-common.c:66
+#: commands/copyto.c:1186 libpq/be-secure-common.c:66
 #, c-format
 msgid "could not execute command \"%s\": %m"
 msgstr "無法執行指令 \"%s\": %m"
@@ -412,7 +412,7 @@ msgstr "無法同步檔案 \"%s\" 所在的檔案系統: %m"
 #: access/transam/xlogarchive.c:112 access/transam/xlogarchive.c:236
 #: backup/basebackup.c:363 backup/basebackup.c:559 backup/basebackup.c:630
 #: backup/walsummary.c:247 catalog/pg_tablespace.c:67 commands/copyfrom.c:1913
-#: commands/copyto.c:1216 commands/extension.c:4014 commands/tablespace.c:817
+#: commands/copyto.c:1232 commands/extension.c:4014 commands/tablespace.c:817
 #: commands/tablespace.c:906 postmaster/pgarch.c:685
 #: replication/logical/snapbuild.c:1590 replication/logical/snapbuild.c:2117
 #: storage/file/fd.c:1956 storage/file/fd.c:2044 storage/file/fd.c:3614
@@ -4787,126 +4787,126 @@ msgid "could not write to file \"%s\": %m"
 msgstr "無法寫入檔案 \"%s\": %m"
 
 # commands/vacuum.c:1160 commands/vacuumlazy.c:205
-#: access/heap/vacuumlazy.c:846
+#: access/heap/vacuumlazy.c:837
 #, c-format
 msgid "aggressively vacuuming \"%s.%s.%s\""
 msgstr "正在對 \"%s.%s.%s\" 執行積極清理"
 
 # commands/vacuum.c:1160 commands/vacuumlazy.c:205
-#: access/heap/vacuumlazy.c:851
+#: access/heap/vacuumlazy.c:842
 #, c-format
 msgid "vacuuming \"%s.%s.%s\""
 msgstr "正在清理 \"%s.%s.%s\""
 
-#: access/heap/vacuumlazy.c:1037
+#: access/heap/vacuumlazy.c:1028
 #, c-format
 msgid "finished vacuuming \"%s.%s.%s\": index scans: %d\n"
 msgstr "已完成對 \"%s.%s.%s\" 的清理: 索引掃描次數: %d\n"
 
-#: access/heap/vacuumlazy.c:1048
+#: access/heap/vacuumlazy.c:1039
 #, c-format
 msgid "automatic aggressive vacuum to prevent wraparound of table \"%s.%s.%s\": index scans: %d\n"
 msgstr "為防止 ID 回繞而對資料表 \"%s.%s.%s\" 執行的自動積極清理: 索引掃描次數: %d\n"
 
-#: access/heap/vacuumlazy.c:1050
+#: access/heap/vacuumlazy.c:1041
 #, c-format
 msgid "automatic vacuum to prevent wraparound of table \"%s.%s.%s\": index scans: %d\n"
 msgstr "為防止 ID 回繞而對資料表 \"%s.%s.%s\" 執行的自動清理: 索引掃描次數: %d\n"
 
-#: access/heap/vacuumlazy.c:1055
+#: access/heap/vacuumlazy.c:1046
 #, c-format
 msgid "automatic aggressive vacuum of table \"%s.%s.%s\": index scans: %d\n"
 msgstr "對資料表 \"%s.%s.%s\" 執行的自動積極清理: 索引掃描次數: %d\n"
 
-#: access/heap/vacuumlazy.c:1057
+#: access/heap/vacuumlazy.c:1048
 #, c-format
 msgid "automatic vacuum of table \"%s.%s.%s\": index scans: %d\n"
 msgstr "對資料表 \"%s.%s.%s\" 執行的自動清理: 索引掃描次數: %d\n"
 
-#: access/heap/vacuumlazy.c:1064
+#: access/heap/vacuumlazy.c:1055
 #, c-format
 msgid "pages: %u removed, %u remain, %u scanned (%.2f%% of total), %u eagerly scanned\n"
 msgstr "頁面: 已移除 %u, 剩餘 %u, 已掃描 %u (佔總數的 %.2f%%), 積極掃描 %u\n"
 
-#: access/heap/vacuumlazy.c:1073
+#: access/heap/vacuumlazy.c:1064
 #, c-format
 msgid "tuples: %<PRId64> removed, %<PRId64> remain, %<PRId64> are dead but not yet removable\n"
 msgstr "元組: 已移除 %<PRId64>, 剩餘 %<PRId64>, 已死但尚不可移除 %<PRId64>\n"
 
-#: access/heap/vacuumlazy.c:1079
+#: access/heap/vacuumlazy.c:1070
 #, c-format
 msgid "tuples missed: %<PRId64> dead from %u pages not removed due to cleanup lock contention\n"
 msgstr "遺漏的元組: %<PRId64> 個死元組因清理鎖定爭用未被移除，涉及 %u 個頁面\n"
 
-#: access/heap/vacuumlazy.c:1085
+#: access/heap/vacuumlazy.c:1076
 #, c-format
 msgid "removable cutoff: %u, which was %d XIDs old when operation ended\n"
 msgstr "可移除截止點: %u，操作結束時其年齡為 %d 個 XID\n"
 
-#: access/heap/vacuumlazy.c:1092
+#: access/heap/vacuumlazy.c:1083
 #, c-format
 msgid "new relfrozenxid: %u, which is %d XIDs ahead of previous value\n"
 msgstr "新的 relfrozenxid: %u，比先前值前進 %d 個 XID\n"
 
-#: access/heap/vacuumlazy.c:1100
+#: access/heap/vacuumlazy.c:1091
 #, c-format
 msgid "new relminmxid: %u, which is %d MXIDs ahead of previous value\n"
 msgstr "新的 relminmxid: %u，比先前值前進 %d 個 MXID\n"
 
-#: access/heap/vacuumlazy.c:1103
+#: access/heap/vacuumlazy.c:1094
 #, c-format
 msgid "frozen: %u pages from table (%.2f%% of total) had %<PRId64> tuples frozen\n"
 msgstr "凍結: 資料表中 %u 個頁面 (佔總數的 %.2f%%) 中的 %<PRId64> 個元組被凍結\n"
 
-#: access/heap/vacuumlazy.c:1111
+#: access/heap/vacuumlazy.c:1102
 #, c-format
 msgid "visibility map: %u pages set all-visible, %u pages set all-frozen (%u were all-visible)\n"
 msgstr "可見性對應: %u 個頁面設為全可見, %u 個頁面設為全凍結 (其中 %u 個頁面原為全可見)\n"
 
 # utils/adt/date.c:2510 utils/adt/timestamp.c:3793 utils/adt/timestamp.c:3942
-#: access/heap/vacuumlazy.c:1119
+#: access/heap/vacuumlazy.c:1110
 msgid "index scan not needed: "
 msgstr "無需索引掃描: "
 
-#: access/heap/vacuumlazy.c:1121
+#: access/heap/vacuumlazy.c:1112
 msgid "index scan needed: "
 msgstr "需要索引掃描: "
 
-#: access/heap/vacuumlazy.c:1123
+#: access/heap/vacuumlazy.c:1114
 #, c-format
 msgid "%u pages from table (%.2f%% of total) had %<PRId64> dead item identifiers removed\n"
 msgstr "資料表中 %u 個頁面 (佔總數的 %.2f%%) 中的 %<PRId64> 個死項目識別字已移除\n"
 
-#: access/heap/vacuumlazy.c:1128
+#: access/heap/vacuumlazy.c:1119
 msgid "index scan bypassed: "
 msgstr "已跳過索引掃描: "
 
-#: access/heap/vacuumlazy.c:1130
+#: access/heap/vacuumlazy.c:1121
 msgid "index scan bypassed by failsafe: "
 msgstr "安全保護機制已跳過索引掃描: "
 
-#: access/heap/vacuumlazy.c:1132
+#: access/heap/vacuumlazy.c:1123
 #, c-format
 msgid "%u pages from table (%.2f%% of total) have %<PRId64> dead item identifiers\n"
 msgstr "資料表中 %u 個頁面 (佔總數的 %.2f%%) 含有 %<PRId64> 個死項目識別字\n"
 
-#: access/heap/vacuumlazy.c:1142
+#: access/heap/vacuumlazy.c:1133
 #, c-format
 msgid "parallel workers: index vacuum: %d planned, %d launched in total\n"
 msgstr "並行工作行程: 索引清理: 計畫 %d 個, 共啟動 %d 個\n"
 
-#: access/heap/vacuumlazy.c:1148
+#: access/heap/vacuumlazy.c:1139
 #, c-format
 msgid "parallel workers: index cleanup: %d planned, %d launched\n"
 msgstr "並行工作行程: 索引收尾清理: 計畫 %d 個, 已啟動 %d 個\n"
 
-#: access/heap/vacuumlazy.c:1160
+#: access/heap/vacuumlazy.c:1151
 #, c-format
 msgid "index \"%s\": pages: %u in total, %u newly deleted, %u currently deleted, %u reusable\n"
 msgstr "索引 \"%s\": 頁面: 總計 %u, 新刪除 %u, 目前已刪除 %u, 可重複使用 %u\n"
 
 # common.c:930
-#: access/heap/vacuumlazy.c:1175 commands/analyze.c:851
+#: access/heap/vacuumlazy.c:1166 commands/analyze.c:851
 #, c-format
 msgid "delay time: %.3f ms\n"
 msgstr "延遲時間: %.3f ms\n"
@@ -11712,7 +11712,7 @@ msgstr[0] "在 %<PRIu64> 筆資料中，有欄位因資料型別不相容而被�
 # commands/copy.c:952
 #. translator: first %s is the name of a COPY option, e.g. FORCE_NOT_NULL
 #. translator: %s is the name of a COPY option, e.g. FORCE_NOT_NULL
-#: commands/copyfrom.c:1617 commands/copyfrom.c:1677 commands/copyto.c:1117
+#: commands/copyfrom.c:1617 commands/copyfrom.c:1677 commands/copyto.c:1133
 #, c-format
 msgid "%s column \"%s\" not referenced by COPY"
 msgstr "%s 指定的欄位 \"%s\" 未被 COPY 引用"
@@ -11729,18 +11729,18 @@ msgid "COPY FROM instructs the PostgreSQL server process to read a file. You may
 msgstr "COPY FROM 會讓 PostgreSQL 伺服器行程讀取檔案。可以考慮使用客戶端功能，例如 psql 的 \\copy。"
 
 # commands/copy.c:1040 commands/copy.c:1103
-#: commands/copyfrom.c:1919 commands/copyto.c:1222
+#: commands/copyfrom.c:1919 commands/copyto.c:1238
 #, c-format
 msgid "\"%s\" is a directory"
 msgstr "\"%s\" 是目錄"
 
 # access/transam/xlog.c:3154 access/transam/xlog.c:3341
-#: commands/copyfrom.c:1977 commands/copyto.c:732 libpq/be-secure-common.c:90
+#: commands/copyfrom.c:1977 commands/copyto.c:748 libpq/be-secure-common.c:90
 #, c-format
 msgid "could not close pipe to external command: %m"
 msgstr "無法關閉對外部命令的管道: %m"
 
-#: commands/copyfrom.c:1992 commands/copyto.c:737
+#: commands/copyfrom.c:1992 commands/copyto.c:753
 #, c-format
 msgid "program \"%s\" failed"
 msgstr "程式 \"%s\" 失敗"
@@ -11973,119 +11973,119 @@ msgid "incorrect binary data format"
 msgstr "不正確的二進位資料格式"
 
 # commands/copy.c:312
-#: commands/copyto.c:636
+#: commands/copyto.c:652
 #, c-format
 msgid "could not write to COPY program: %m"
 msgstr "無法向 COPY 程式寫入資料: %m"
 
 # commands/copy.c:312
-#: commands/copyto.c:641
+#: commands/copyto.c:657
 #, c-format
 msgid "could not write to COPY file: %m"
 msgstr "無法寫入 COPY 檔: %m"
 
 # commands/copy.c:1053
-#: commands/copyto.c:817
+#: commands/copyto.c:833
 #, c-format
 msgid "cannot copy from view \"%s\""
 msgstr "不能使用 COPY 從檢視表 \"%s\" 讀取資料"
 
-#: commands/copyto.c:819 commands/copyto.c:834 commands/copyto.c:861
+#: commands/copyto.c:835 commands/copyto.c:850 commands/copyto.c:877
 #, c-format
 msgid "Try the COPY (SELECT ...) TO variant."
 msgstr "嘗試 COPY (SELECT ...) TO 形式。"
 
 # commands/copy.c:1053
-#: commands/copyto.c:825
+#: commands/copyto.c:841
 #, c-format
 msgid "cannot copy from unpopulated materialized view \"%s\""
 msgstr "不能使用 COPY 從尚未填入資料的實體化檢視表 \"%s\" 讀取"
 
-#: commands/copyto.c:827 executor/execUtils.c:786
+#: commands/copyto.c:843 executor/execUtils.c:786
 #, c-format
 msgid "Use the REFRESH MATERIALIZED VIEW command."
 msgstr "使用 REFRESH MATERIALIZED VIEW 命令。"
 
 # commands/copy.c:1053
-#: commands/copyto.c:832 commands/copyto.c:858
+#: commands/copyto.c:848 commands/copyto.c:874
 #, c-format
 msgid "cannot copy from foreign table \"%s\""
 msgstr "不能使用 COPY 從外部資料表 \"%s\" 讀取資料"
 
 # commands/copy.c:1058
-#: commands/copyto.c:838
+#: commands/copyto.c:854
 #, c-format
 msgid "cannot copy from sequence \"%s\""
 msgstr "不能使用 COPY 從序列 \"%s\" 讀取資料"
 
 # catalog/namespace.c:200 utils/adt/regproc.c:837
-#: commands/copyto.c:859
+#: commands/copyto.c:875
 #, c-format
 msgid "Partition \"%s\" is a foreign table in partitioned table \"%s\"."
 msgstr "分割 \"%s\" 是分割資料表 \"%s\" 中的外部資料表。"
 
 # commands/copy.c:1063
-#: commands/copyto.c:872
+#: commands/copyto.c:888
 #, c-format
 msgid "cannot copy from non-table relation \"%s\""
 msgstr "不能使用 COPY 從非資料表關聯 \"%s\" 讀取資料"
 
 # rewrite/rewriteDefine.c:257
-#: commands/copyto.c:930
+#: commands/copyto.c:946
 #, c-format
 msgid "DO INSTEAD NOTHING rules are not supported for COPY"
 msgstr "COPY 不支援 DO INSTEAD NOTHING 規則"
 
-#: commands/copyto.c:944
+#: commands/copyto.c:960
 #, c-format
 msgid "conditional DO INSTEAD rules are not supported for COPY"
 msgstr "COPY 不支援帶條件的 DO INSTEAD 規則"
 
 # commands/dbcommands.c:138
-#: commands/copyto.c:948
+#: commands/copyto.c:964
 #, c-format
 msgid "DO ALSO rules are not supported for COPY"
 msgstr "COPY 不支援 DO ALSO 規則"
 
-#: commands/copyto.c:953
+#: commands/copyto.c:969
 #, c-format
 msgid "multi-statement DO INSTEAD rules are not supported for COPY"
 msgstr "COPY 不支援多敘述 DO INSTEAD 規則"
 
 # utils/adt/formatting.c:1154
-#: commands/copyto.c:963
+#: commands/copyto.c:979
 #, c-format
 msgid "COPY (SELECT INTO) is not supported"
 msgstr "不支援 COPY (SELECT INTO)"
 
-#: commands/copyto.c:969
+#: commands/copyto.c:985
 #, c-format
 msgid "COPY query must not be a utility command"
 msgstr "COPY 查詢不得是工具命令"
 
-#: commands/copyto.c:985
+#: commands/copyto.c:1001
 #, c-format
 msgid "COPY query must have a RETURNING clause"
 msgstr "COPY 查詢必須有 RETURNING 子句"
 
-#: commands/copyto.c:1014
+#: commands/copyto.c:1030
 #, c-format
 msgid "relation referenced by COPY statement has changed"
 msgstr "COPY 敘述引用的關聯已變更"
 
 # commands/copy.c:1085
-#: commands/copyto.c:1187
+#: commands/copyto.c:1203
 #, c-format
 msgid "relative path not allowed for COPY to file"
 msgstr "COPY 至檔案不允許相對路徑"
 
 # commands/copy.c:1094
-#: commands/copyto.c:1206
+#: commands/copyto.c:1222
 #, c-format
 msgid "could not open file \"%s\" for writing: %m"
 msgstr "無法開啟檔案 \"%s\" 以寫入: %m"
 
-#: commands/copyto.c:1209
+#: commands/copyto.c:1225
 #, c-format
 msgid "COPY TO instructs the PostgreSQL server process to write a file. You may want a client-side facility such as psql's \\copy."
 msgstr "COPY TO 會讓 PostgreSQL 伺服器行程寫入檔案。可以考慮使用客戶端功能，例如 psql 的 \\copy。"
@@ -22766,7 +22766,7 @@ msgid "If ssl_sni is enabled then add configuration to file \"%s\", else file \"
 msgstr "如果已啟用 ssl_sni，向檔案 \"%s\" 新增組態；否則向檔案 \"%s\" 新增組態。"
 
 # libpq/be-secure.c:649
-#: libpq/be-secure-openssl.c:403 libpq/be-secure-openssl.c:649
+#: libpq/be-secure-openssl.c:403 libpq/be-secure-openssl.c:651
 #, c-format
 msgid "could not create SSL context: %s"
 msgstr "無法建立 SSL 上下文: %s"
@@ -22812,245 +22812,250 @@ msgstr "無法設定 TLSv1.2 加密套件列表 (沒有可用的有效加密套�
 msgid "could not set the TLSv1.3 cipher suites (no valid ciphers available)"
 msgstr "無法設定 TLSv1.3 加密套件 (沒有可用的有效加密套件)"
 
-#: libpq/be-secure-openssl.c:605
-#, c-format
-msgid "SSL configuration not reloaded, SNI remains %s"
-msgstr "未重新載入 SSL 組態，SNI 仍為 %s"
-
 #: libpq/be-secure-openssl.c:606
 #, c-format
-msgid "The SSL configuration failed to reload, previous configuration and SNI state will remain active."
+msgid "SSL configuration not reloaded, SNI remains on"
+msgstr "未重新載入 SSL 組態，SNI 仍為啟用狀態"
+
+#: libpq/be-secure-openssl.c:607
+#, c-format
+msgid "SSL configuration not reloaded, SNI remains off"
+msgstr "未重新載入 SSL 組態，SNI 仍為停用狀態"
+
+#: libpq/be-secure-openssl.c:608
+#, c-format
+msgid "The SSL configuration failed to reload; the previous configuration and SNI state will remain active."
 msgstr "SSL 組態重新載入失敗。將繼續使用原有組態和 SNI 狀態。"
 
-#: libpq/be-secure-openssl.c:670
+#: libpq/be-secure-openssl.c:672
 #, c-format
 msgid "SNI is enabled; installed TLS init hook will be ignored"
 msgstr "已啟用 SNI；已安裝的 TLS 初始化掛鉤將被忽略"
 
 #. translator: first %s is a GUC, second %s contains a filename
-#: libpq/be-secure-openssl.c:672
+#: libpq/be-secure-openssl.c:674
 #, c-format
 msgid "TLS init hooks are incompatible with SNI. Set \"%s\" to \"off\" to make use of the hook that is currently installed, or remove the hook and use per-host passphrase commands in \"%s\"."
 msgstr "TLS 初始化掛鉤與 SNI 不相容。將 \"%s\" 設定為 \"off\" 以使用目前安裝的掛鉤，或移除該掛鉤並使用 \"%s\" 中按主機設定的通關密語命令。"
 
 # libpq/be-secure.c:659
-#: libpq/be-secure-openssl.c:724
+#: libpq/be-secure-openssl.c:726
 #, c-format
 msgid "could not load server certificate file \"%s\": %s"
 msgstr "無法載入伺服器憑證檔 \"%s\": %s"
 
-#: libpq/be-secure-openssl.c:748
+#: libpq/be-secure-openssl.c:750
 #, c-format
 msgid "private key file \"%s\" cannot be reloaded because it requires a passphrase"
 msgstr "不能重新載入私鑰檔案 \"%s\"，因為它需要通關密語"
 
 # libpq/be-secure.c:689
-#: libpq/be-secure-openssl.c:753
+#: libpq/be-secure-openssl.c:755
 #, c-format
 msgid "could not load private key file \"%s\": %s"
 msgstr "無法載入私鑰檔 \"%s\": %s"
 
 # libpq/be-secure.c:694
-#: libpq/be-secure-openssl.c:762
+#: libpq/be-secure-openssl.c:764
 #, c-format
 msgid "check of private key failed: %s"
 msgstr "檢查私鑰失敗: %s"
 
 # libpq/be-secure.c:714
-#: libpq/be-secure-openssl.c:779
+#: libpq/be-secure-openssl.c:781
 #, c-format
 msgid "could not load root certificate file \"%s\": %s"
 msgstr "無法載入根憑證檔 \"%s\": %s"
 
 # libpq/be-secure.c:714
-#: libpq/be-secure-openssl.c:818
+#: libpq/be-secure-openssl.c:820
 #, c-format
 msgid "could not load SSL certificate revocation list file \"%s\": %s"
 msgstr "無法載入 SSL 憑證撤銷清單檔案 \"%s\": %s"
 
 # libpq/be-secure.c:714
-#: libpq/be-secure-openssl.c:826
+#: libpq/be-secure-openssl.c:828
 #, c-format
 msgid "could not load SSL certificate revocation list directory \"%s\": %s"
 msgstr "無法載入 SSL 憑證撤銷清單目錄 \"%s\": %s"
 
-#: libpq/be-secure-openssl.c:834
+#: libpq/be-secure-openssl.c:836
 #, c-format
 msgid "could not load SSL certificate revocation list file \"%s\" or directory \"%s\": %s"
 msgstr "無法載入 SSL 憑證撤銷清單檔案 \"%1$s\" 或目錄 \"%2$s\": %3$s"
 
 # libpq/be-secure.c:789
-#: libpq/be-secure-openssl.c:884
+#: libpq/be-secure-openssl.c:886
 #, c-format
 msgid "could not initialize SSL connection: SSL context not set up"
 msgstr "無法初始化 SSL 連線: 未設定 SSL 上下文"
 
 # libpq/be-secure.c:789
-#: libpq/be-secure-openssl.c:898
+#: libpq/be-secure-openssl.c:900
 #, c-format
 msgid "could not initialize SSL connection: %s"
 msgstr "無法初始化 SSL 連線: %s"
 
 # libpq/be-secure.c:798
-#: libpq/be-secure-openssl.c:906
+#: libpq/be-secure-openssl.c:908
 #, c-format
 msgid "could not set SSL socket: %s"
 msgstr "無法設定 SSL socket: %s"
 
 # libpq/be-secure.c:807
-#: libpq/be-secure-openssl.c:998
+#: libpq/be-secure-openssl.c:1000
 #, c-format
 msgid "could not accept SSL connection: %m"
 msgstr "無法接受 SSL 連線: %m"
 
 # libpq/be-secure.c:807
-#: libpq/be-secure-openssl.c:1002 libpq/be-secure-openssl.c:1060
+#: libpq/be-secure-openssl.c:1004 libpq/be-secure-openssl.c:1062
 #, c-format
 msgid "could not accept SSL connection: EOF detected"
 msgstr "無法接受 SSL 連線: 發現 EOF"
 
 # libpq/be-secure.c:807
-#: libpq/be-secure-openssl.c:1043
+#: libpq/be-secure-openssl.c:1045
 #, c-format
 msgid "could not accept SSL connection: %s"
 msgstr "無法接受 SSL 連線: %s"
 
-#: libpq/be-secure-openssl.c:1047
+#: libpq/be-secure-openssl.c:1049
 #, c-format
 msgid "This may indicate that the client does not support any SSL protocol version between %s and %s."
 msgstr "這可能表示客戶端不支援 %s 到 %s 之間的任何 SSL 協定版本。"
 
 # libpq/be-secure.c:303 libpq/be-secure.c:396
-#: libpq/be-secure-openssl.c:1065 libpq/be-secure-openssl.c:1280
-#: libpq/be-secure-openssl.c:1350
+#: libpq/be-secure-openssl.c:1067 libpq/be-secure-openssl.c:1282
+#: libpq/be-secure-openssl.c:1352
 #, c-format
 msgid "unrecognized SSL error code: %d"
 msgstr "無法識別的 SSL 錯誤碼: %d"
 
-#: libpq/be-secure-openssl.c:1093
+#: libpq/be-secure-openssl.c:1095
 #, c-format
 msgid "received SSL connection request with unexpected ALPN protocol"
 msgstr "收到的 SSL 連線請求包含非預期的 ALPN 協定"
 
-#: libpq/be-secure-openssl.c:1137
+#: libpq/be-secure-openssl.c:1139
 #, c-format
 msgid "SSL certificate's common name contains embedded null"
 msgstr "SSL 憑證的一般名稱包含內嵌的空字元"
 
-#: libpq/be-secure-openssl.c:1183
+#: libpq/be-secure-openssl.c:1185
 #, c-format
 msgid "SSL certificate's distinguished name contains embedded null"
 msgstr "SSL 憑證的可分辨名稱包含內嵌的空字元"
 
 # libpq/be-secure.c:294 libpq/be-secure.c:387
-#: libpq/be-secure-openssl.c:1269 libpq/be-secure-openssl.c:1334
+#: libpq/be-secure-openssl.c:1271 libpq/be-secure-openssl.c:1336
 #, c-format
 msgid "SSL error: %s"
 msgstr "SSL 錯誤: %s"
 
-#: libpq/be-secure-openssl.c:1517
+#: libpq/be-secure-openssl.c:1519
 #, c-format
 msgid "could not open DH parameters file \"%s\": %m"
 msgstr "無法開啟 DH 參數檔案 \"%s\": %m"
 
 # libpq/be-secure.c:689
-#: libpq/be-secure-openssl.c:1529
+#: libpq/be-secure-openssl.c:1531
 #, c-format
 msgid "could not load DH parameters file: %s"
 msgstr "無法載入 DH 參數檔案: %s"
 
 # utils/misc/guc.c:3792
-#: libpq/be-secure-openssl.c:1539
+#: libpq/be-secure-openssl.c:1541
 #, c-format
 msgid "invalid DH parameters: %s"
 msgstr "無效的 DH 參數: %s"
 
 # commands/define.c:279
-#: libpq/be-secure-openssl.c:1548
+#: libpq/be-secure-openssl.c:1550
 #, c-format
 msgid "invalid DH parameters: p is not prime"
 msgstr "無效的 DH 參數: p 不是質數"
 
-#: libpq/be-secure-openssl.c:1557
+#: libpq/be-secure-openssl.c:1559
 #, c-format
 msgid "invalid DH parameters: neither suitable generator or safe prime"
 msgstr "無效的 DH 參數: 產生元不合適，且質數不是安全質數"
 
 # libpq/auth.c:378
-#: libpq/be-secure-openssl.c:1703
+#: libpq/be-secure-openssl.c:1705
 #, c-format
 msgid "Client certificate verification failed at depth %d: %s."
 msgstr "客戶端憑證驗證在深度 %d 處失敗: %s。"
 
-#: libpq/be-secure-openssl.c:1740
+#: libpq/be-secure-openssl.c:1742
 #, c-format
 msgid "Failed certificate data (unverified): subject \"%s\", serial number %s, issuer \"%s\"."
 msgstr "驗證失敗的憑證資料 (未經驗證): 主體 \"%s\", 序號 %s, 簽發者 \"%s\"。"
 
 # utils/error/elog.c:1350 utils/error/elog.c:1360
-#: libpq/be-secure-openssl.c:1741
+#: libpq/be-secure-openssl.c:1743
 msgid "unknown"
 msgstr "未知"
 
-#: libpq/be-secure-openssl.c:2068
+#: libpq/be-secure-openssl.c:2070
 #, c-format
 msgid "no hostname provided in callback, and no fallback configured"
 msgstr "回呼中未提供主機名稱，且未設定後備選項"
 
-#: libpq/be-secure-openssl.c:2092
+#: libpq/be-secure-openssl.c:2094
 #, c-format
 msgid "failed to switch to SSL configuration for host, terminating connection"
 msgstr "無法切換到該主機的 SSL 組態，正在終止連線"
 
-#: libpq/be-secure-openssl.c:2128
+#: libpq/be-secure-openssl.c:2130
 #, c-format
 msgid "DH: could not load DH parameters"
 msgstr "DH: 無法載入 DH 參數"
 
 # startup.c:446
-#: libpq/be-secure-openssl.c:2136
+#: libpq/be-secure-openssl.c:2138
 #, c-format
 msgid "DH: could not set DH parameters: %s"
 msgstr "DH: 無法設定 DH 參數: %s"
 
 # libpq/pqcomm.c:509
-#: libpq/be-secure-openssl.c:2165
+#: libpq/be-secure-openssl.c:2167
 #, c-format
 msgid "could not set group names specified in ssl_groups: %s"
 msgstr "無法設定 ssl_groups 中指定的群組名稱: %s"
 
-#: libpq/be-secure-openssl.c:2167
+#: libpq/be-secure-openssl.c:2169
 msgid "No valid groups found"
 msgstr "未找到有效群組"
 
-#: libpq/be-secure-openssl.c:2168
+#: libpq/be-secure-openssl.c:2170
 #, c-format
 msgid "Ensure that each group name is spelled correctly and supported by the installed version of OpenSSL."
 msgstr "確保每個群組名稱拼寫正確，且受已安裝的 OpenSSL 版本支援。"
 
 # libpq/be-secure.c:303 libpq/be-secure.c:396
-#: libpq/be-secure-openssl.c:2213
+#: libpq/be-secure-openssl.c:2215
 msgid "no SSL error reported"
 msgstr "未回報 SSL 錯誤"
 
 # libpq/be-secure.c:294 libpq/be-secure.c:387
-#: libpq/be-secure-openssl.c:2231
+#: libpq/be-secure-openssl.c:2233
 #, c-format
 msgid "SSL error code %lu"
 msgstr "SSL 錯誤碼 %lu"
 
-#: libpq/be-secure-openssl.c:2388
+#: libpq/be-secure-openssl.c:2390
 #, c-format
 msgid "could not create BIO"
 msgstr "無法建立 BIO"
 
-#: libpq/be-secure-openssl.c:2398
+#: libpq/be-secure-openssl.c:2400
 #, c-format
 msgid "could not get NID for ASN1_OBJECT object"
 msgstr "無法取得 ASN1_OBJECT 物件的 NID"
 
 # fe-secure.c:932
-#: libpq/be-secure-openssl.c:2406
+#: libpq/be-secure-openssl.c:2408
 #, c-format
 msgid "could not convert NID %d to an ASN1_OBJECT structure"
 msgstr "無法將 NID %d 轉換為 ASN1_OBJECT 結構"

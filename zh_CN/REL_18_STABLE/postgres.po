@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 18\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-10-07 06:37+0000\n"
-"PO-Revision-Date: 2026-10-08 16:06+0800\n"
+"POT-Creation-Date: 2026-10-08 22:36+0000\n"
+"PO-Revision-Date: 2026-10-09 12:11+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
 "Language: zh_CN\n"
@@ -1500,22 +1500,22 @@ msgstr "无法把文件 \"%s\" 截断为 %u: %m"
 msgid "could not write to file \"%s\": %m"
 msgstr "无法写入文件 \"%s\": %m"
 
-#: access/heap/vacuumlazy.c:815
+#: access/heap/vacuumlazy.c:806
 #, c-format
 msgid "aggressively vacuuming \"%s.%s.%s\""
 msgstr "正在对 \"%s.%s.%s\" 执行积极清理"
 
-#: access/heap/vacuumlazy.c:820
+#: access/heap/vacuumlazy.c:811
 #, c-format
 msgid "vacuuming \"%s.%s.%s\""
 msgstr "正在清理 \"%s.%s.%s\""
 
-#: access/heap/vacuumlazy.c:988
+#: access/heap/vacuumlazy.c:979
 #, c-format
 msgid "finished vacuuming \"%s.%s.%s\": index scans: %d\n"
 msgstr "已完成对 \"%s.%s.%s\" 的清理: 索引扫描次数: %d\n"
 
-#: access/heap/vacuumlazy.c:999
+#: access/heap/vacuumlazy.c:990
 #, c-format
 msgid ""
 "automatic aggressive vacuum to prevent wraparound of table \"%s.%s.%s\": "
@@ -1523,109 +1523,109 @@ msgid ""
 msgstr ""
 "为防止 ID 回卷而对表 \"%s.%s.%s\" 执行的自动积极清理: 索引扫描次数: %d\n"
 
-#: access/heap/vacuumlazy.c:1001
+#: access/heap/vacuumlazy.c:992
 #, c-format
 msgid ""
 "automatic vacuum to prevent wraparound of table \"%s.%s.%s\": index scans: "
 "%d\n"
 msgstr "为防止 ID 回卷而对表 \"%s.%s.%s\" 执行的自动清理: 索引扫描次数: %d\n"
 
-#: access/heap/vacuumlazy.c:1006
+#: access/heap/vacuumlazy.c:997
 #, c-format
 msgid "automatic aggressive vacuum of table \"%s.%s.%s\": index scans: %d\n"
 msgstr "对表 \"%s.%s.%s\" 执行的自动积极清理: 索引扫描次数: %d\n"
 
-#: access/heap/vacuumlazy.c:1008
+#: access/heap/vacuumlazy.c:999
 #, c-format
 msgid "automatic vacuum of table \"%s.%s.%s\": index scans: %d\n"
 msgstr "对表 \"%s.%s.%s\" 执行的自动清理: 索引扫描次数: %d\n"
 
-#: access/heap/vacuumlazy.c:1015
+#: access/heap/vacuumlazy.c:1006
 #, c-format
 msgid ""
 "pages: %u removed, %u remain, %u scanned (%.2f%% of total), %u eagerly "
 "scanned\n"
 msgstr "页: 已移除 %u, 剩余 %u, 已扫描 %u（占总数的 %.2f%%）, 提前扫描 %u\n"
 
-#: access/heap/vacuumlazy.c:1024
+#: access/heap/vacuumlazy.c:1015
 #, c-format
 msgid ""
 "tuples: %<PRId64> removed, %<PRId64> remain, %<PRId64> are dead but not yet "
 "removable\n"
 msgstr "元组: 已移除 %<PRId64>, 剩余 %<PRId64>, 已死但尚不可移除 %<PRId64>\n"
 
-#: access/heap/vacuumlazy.c:1030
+#: access/heap/vacuumlazy.c:1021
 #, c-format
 msgid ""
 "tuples missed: %<PRId64> dead from %u pages not removed due to cleanup lock "
 "contention\n"
 msgstr "遗漏的元组: %<PRId64> 个死元组因清理锁争用未被移除，涉及 %u 页\n"
 
-#: access/heap/vacuumlazy.c:1036
+#: access/heap/vacuumlazy.c:1027
 #, c-format
 msgid "removable cutoff: %u, which was %d XIDs old when operation ended\n"
 msgstr "可移除截止点: %u，操作结束时其年龄为 %d 个 XID\n"
 
-#: access/heap/vacuumlazy.c:1043
+#: access/heap/vacuumlazy.c:1034
 #, c-format
 msgid "new relfrozenxid: %u, which is %d XIDs ahead of previous value\n"
 msgstr "新的 relfrozenxid: %u，比先前值前进 %d 个 XID\n"
 
-#: access/heap/vacuumlazy.c:1051
+#: access/heap/vacuumlazy.c:1042
 #, c-format
 msgid "new relminmxid: %u, which is %d MXIDs ahead of previous value\n"
 msgstr "新的 relminmxid: %u，比先前值前进 %d 个 MXID\n"
 
-#: access/heap/vacuumlazy.c:1054
+#: access/heap/vacuumlazy.c:1045
 #, c-format
 msgid ""
 "frozen: %u pages from table (%.2f%% of total) had %<PRId64> tuples frozen\n"
 msgstr "冻结: 表中 %u 页（占总数的 %.2f%%）中的 %<PRId64> 个元组被冻结\n"
 
-#: access/heap/vacuumlazy.c:1062
+#: access/heap/vacuumlazy.c:1053
 #, c-format
 msgid ""
 "visibility map: %u pages set all-visible, %u pages set all-frozen (%u were "
 "all-visible)\n"
 msgstr "可见性映射: %u 页设为全可见, %u 页设为全冻结（其中 %u 页原为全可见）\n"
 
-#: access/heap/vacuumlazy.c:1070
+#: access/heap/vacuumlazy.c:1061
 msgid "index scan not needed: "
 msgstr "无需索引扫描: "
 
-#: access/heap/vacuumlazy.c:1072
+#: access/heap/vacuumlazy.c:1063
 msgid "index scan needed: "
 msgstr "需要索引扫描: "
 
-#: access/heap/vacuumlazy.c:1074
+#: access/heap/vacuumlazy.c:1065
 #, c-format
 msgid ""
 "%u pages from table (%.2f%% of total) had %<PRId64> dead item identifiers "
 "removed\n"
 msgstr "表中 %u 页（占总数的 %.2f%%）中的 %<PRId64> 个死项标识符已移除\n"
 
-#: access/heap/vacuumlazy.c:1079
+#: access/heap/vacuumlazy.c:1070
 msgid "index scan bypassed: "
 msgstr "已跳过索引扫描: "
 
-#: access/heap/vacuumlazy.c:1081
+#: access/heap/vacuumlazy.c:1072
 msgid "index scan bypassed by failsafe: "
 msgstr "安全保护机制已跳过索引扫描: "
 
-#: access/heap/vacuumlazy.c:1083
+#: access/heap/vacuumlazy.c:1074
 #, c-format
 msgid ""
 "%u pages from table (%.2f%% of total) have %<PRId64> dead item identifiers\n"
 msgstr "表中 %u 页（占总数的 %.2f%%）含有 %<PRId64> 个死项标识符\n"
 
-#: access/heap/vacuumlazy.c:1098
+#: access/heap/vacuumlazy.c:1089
 #, c-format
 msgid ""
 "index \"%s\": pages: %u in total, %u newly deleted, %u currently deleted, %u "
 "reusable\n"
 msgstr "索引 \"%s\": 页: 总计 %u, 新删除 %u, 当前已删除 %u, 可复用 %u\n"
 
-#: access/heap/vacuumlazy.c:1113 commands/analyze.c:817
+#: access/heap/vacuumlazy.c:1104 commands/analyze.c:817
 #, c-format
 msgid "delay time: %.3f ms\n"
 msgstr "延迟时间: %.3f ms\n"
