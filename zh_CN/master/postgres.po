@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-10-08 22:18+0000\n"
-"PO-Revision-Date: 2026-10-09 12:11+0800\n"
+"POT-Creation-Date: 2026-10-12 09:18+0000\n"
+"PO-Revision-Date: 2026-10-12 23:47+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
 "Language: zh_CN\n"
@@ -125,7 +125,7 @@ msgstr "无法读取文件 \"%1$s\": 应读取 %3$zu，实际读取 %2$d"
 #: access/transam/twophase.c:1379 access/transam/twophase.c:1805
 #: access/transam/xlog.c:3387 access/transam/xlog.c:3581
 #: access/transam/xlog.c:3586 access/transam/xlog.c:3722
-#: access/transam/xlog.c:4404 access/transam/xlog.c:5376
+#: access/transam/xlog.c:4404 access/transam/xlog.c:5384
 #: commands/copyfrom.c:1953 commands/copyto.c:774 libpq/be-fsstubs.c:475
 #: libpq/be-fsstubs.c:545 replication/logical/origin.c:724
 #: replication/logical/origin.c:862 replication/logical/reorderbuffer.c:5483
@@ -187,7 +187,7 @@ msgstr "无法打开文件 \"%s\": %m"
 
 #: ../common/controldata_utils.c:247 ../common/controldata_utils.c:250
 #: access/transam/twophase.c:1778 access/transam/twophase.c:1787
-#: access/transam/xlog.c:9504 access/transam/xlogfuncs.c:718
+#: access/transam/xlog.c:9512 access/transam/xlogfuncs.c:718
 #: backup/basebackup_server.c:173 backup/basebackup_server.c:266
 #: backup/walsummary.c:304 postmaster/postmaster.c:4163
 #: postmaster/syslogger.c:1542 postmaster/syslogger.c:1555
@@ -203,7 +203,7 @@ msgstr "无法写入文件 \"%s\": %m"
 #: access/transam/timeline.c:433 access/transam/timeline.c:507
 #: access/transam/twophase.c:1799 access/transam/xlog.c:3377
 #: access/transam/xlog.c:3575 access/transam/xlog.c:4397
-#: access/transam/xlog.c:8897 access/transam/xlog.c:8941
+#: access/transam/xlog.c:8905 access/transam/xlog.c:8949
 #: backup/basebackup_server.c:207 commands/dbcommands.c:519
 #: replication/logical/snapbuild.c:1733 replication/slot.c:2627
 #: replication/slot.c:2739 storage/file/fd.c:821 storage/file/fd.c:3901
@@ -4655,12 +4655,12 @@ msgstr "索引不能容纳大于缓冲页的值。"
 msgid "invalid overflow block number %u"
 msgstr "无效的溢出块编号 %u"
 
-#: access/hash/hashovfl.c:285 access/hash/hashpage.c:454
+#: access/hash/hashovfl.c:285 access/hash/hashpage.c:455
 #, c-format
 msgid "out of overflow pages in hash index \"%s\""
 msgstr "哈希索引 \"%s\" 的溢出页已耗尽"
 
-#: access/hash/hashsearch.c:314
+#: access/hash/hashsearch.c:376
 #, c-format
 msgid "hash indexes do not support whole-index scans"
 msgstr "哈希索引不支持全索引扫描"
@@ -4777,7 +4777,7 @@ msgstr "无法写入文件 \"%1$s\"，应写入 %3$d，实际写入 %2$d: %m"
 #: access/heap/rewriteheap.c:980 access/heap/rewriteheap.c:1097
 #: access/transam/timeline.c:330 access/transam/timeline.c:482
 #: access/transam/xlog.c:3302 access/transam/xlog.c:3510
-#: access/transam/xlog.c:4376 access/transam/xlog.c:9493
+#: access/transam/xlog.c:4376 access/transam/xlog.c:9501
 #: access/transam/xlogfuncs.c:712 backup/basebackup_server.c:149
 #: backup/basebackup_server.c:242 commands/dbcommands.c:499
 #: postmaster/launch_backend.c:332 postmaster/postmaster.c:4150
@@ -6119,77 +6119,77 @@ msgstr "列表语法无效。"
 msgid "Unrecognized key word: \"%s\"."
 msgstr "无法识别的关键字: \"%s\"。"
 
-#: access/transam/xlog.c:5263
+#: access/transam/xlog.c:5271
 #, c-format
 msgid "could not write bootstrap write-ahead log file: %m"
 msgstr "无法写入引导预写日志文件: %m"
 
-#: access/transam/xlog.c:5271
+#: access/transam/xlog.c:5279
 #, c-format
 msgid "could not fsync bootstrap write-ahead log file: %m"
 msgstr "无法对引导预写日志文件执行 fsync: %m"
 
-#: access/transam/xlog.c:5277
+#: access/transam/xlog.c:5285
 #, c-format
 msgid "could not close bootstrap write-ahead log file: %m"
 msgstr "无法关闭引导预写日志文件: %m"
 
-#: access/transam/xlog.c:5498
+#: access/transam/xlog.c:5506
 #, c-format
 msgid ""
 "WAL was generated with \"wal_level=minimal\", cannot continue recovering"
 msgstr "WAL 是在 \"wal_level=minimal\" 下生成的，不能继续恢复"
 
-#: access/transam/xlog.c:5499
+#: access/transam/xlog.c:5507
 #, c-format
 msgid ""
 "This happens if you temporarily set \"wal_level=minimal\" on the server."
 msgstr "如果曾在服务器上临时设置 \"wal_level=minimal\"，就会发生这种情况。"
 
-#: access/transam/xlog.c:5500
+#: access/transam/xlog.c:5508
 #, c-format
 msgid ""
 "Use a backup taken after setting \"wal_level\" to higher than \"minimal\"."
 msgstr "使用将 \"wal_level\" 设置为高于 \"minimal\" 后制作的备份。"
 
-#: access/transam/xlog.c:5566
+#: access/transam/xlog.c:5574
 #, c-format
 msgid "control file contains invalid checkpoint location"
 msgstr "控制文件包含无效的检查点位置"
 
-#: access/transam/xlog.c:5577
+#: access/transam/xlog.c:5585
 #, c-format
 msgid "database system was shut down at %s"
 msgstr "数据库系统上次关闭时间为 %s"
 
-#: access/transam/xlog.c:5584
+#: access/transam/xlog.c:5592
 #, c-format
 msgid "database system was shut down in recovery at %s"
 msgstr "数据库系统于 %s 在恢复期间关闭"
 
-#: access/transam/xlog.c:5591
+#: access/transam/xlog.c:5599
 #, c-format
 msgid "database system shutdown was interrupted; last known up at %s"
 msgstr "数据库系统的关闭过程被中断；上次已知运行时间为 %s"
 
-#: access/transam/xlog.c:5598
+#: access/transam/xlog.c:5606
 #, c-format
 msgid "database system was interrupted while in recovery at %s"
 msgstr "数据库系统于 %s 在恢复期间中断"
 
-#: access/transam/xlog.c:5601
+#: access/transam/xlog.c:5609
 #, c-format
 msgid ""
 "This probably means that some data is corrupted and you will have to use the "
 "last backup for recovery."
 msgstr "这可能意味着部分数据已损坏，必须使用最近的备份进行恢复。"
 
-#: access/transam/xlog.c:5607
+#: access/transam/xlog.c:5615
 #, c-format
 msgid "database system was interrupted while in recovery at log time %s"
 msgstr "数据库系统在恢复期间中断，当时的日志时间为 %s"
 
-#: access/transam/xlog.c:5610
+#: access/transam/xlog.c:5618
 #, c-format
 msgid ""
 "If this has occurred more than once some data might be corrupted and you "
@@ -6197,61 +6197,61 @@ msgid ""
 msgstr ""
 "如果这种情况多次发生，部分数据可能已损坏，您可能需要选择更早的恢复目标。"
 
-#: access/transam/xlog.c:5616
+#: access/transam/xlog.c:5624
 #, c-format
 msgid "database system was interrupted; last known up at %s"
 msgstr "数据库系统曾中断；上次已知运行时间为 %s"
 
-#: access/transam/xlog.c:5624
+#: access/transam/xlog.c:5632
 #, c-format
 msgid "control file contains invalid database cluster state"
 msgstr "控制文件包含无效的数据库集簇状态"
 
-#: access/transam/xlog.c:6016
+#: access/transam/xlog.c:6024
 #, c-format
 msgid "WAL ends before end of online backup"
 msgstr "WAL 在在线备份结束之前结束"
 
-#: access/transam/xlog.c:6017
+#: access/transam/xlog.c:6025
 #, c-format
 msgid ""
 "All WAL generated while online backup was taken must be available at "
 "recovery."
 msgstr "恢复时必须具备在线备份期间生成的所有 WAL。"
 
-#: access/transam/xlog.c:6021
+#: access/transam/xlog.c:6029
 #, c-format
 msgid "WAL ends before consistent recovery point"
 msgstr "WAL 在到达一致恢复点之前结束"
 
-#: access/transam/xlog.c:6067
+#: access/transam/xlog.c:6075
 #, c-format
 msgid "selected new timeline ID: %u"
 msgstr "已选择的新时间线 ID: %u"
 
-#: access/transam/xlog.c:6100
+#: access/transam/xlog.c:6108
 #, c-format
 msgid "archive recovery complete"
 msgstr "归档恢复完毕"
 
-#: access/transam/xlog.c:6756
+#: access/transam/xlog.c:6764
 #, c-format
 msgid "shutting down"
 msgstr "正在关闭"
 
 #. translator: the placeholder shows checkpoint options
-#: access/transam/xlog.c:6817
+#: access/transam/xlog.c:6825
 #, c-format
 msgid "restartpoint starting:%s"
 msgstr "重启点开始:%s"
 
 #. translator: the placeholder shows checkpoint options
-#: access/transam/xlog.c:6822
+#: access/transam/xlog.c:6830
 #, c-format
 msgid "checkpoint starting:%s"
 msgstr "检查点开始:%s"
 
-#: access/transam/xlog.c:6880
+#: access/transam/xlog.c:6888
 #, c-format
 msgid ""
 "restartpoint complete:%s: wrote %d buffers (%.1f%%), wrote %d SLRU buffers; "
@@ -6264,7 +6264,7 @@ msgstr ""
 "total=%ld.%03d s; sync files=%d, longest=%ld.%03d s, average=%ld.%03d s; "
 "distance=%d kB, estimate=%d kB; lsn=%X/%08X, redo lsn=%X/%08X"
 
-#: access/transam/xlog.c:6905
+#: access/transam/xlog.c:6913
 #, c-format
 msgid ""
 "checkpoint complete:%s: wrote %d buffers (%.1f%%), wrote %d SLRU buffers; %d "
@@ -6277,82 +6277,82 @@ msgstr ""
 "total=%ld.%03d s; sync files=%d, longest=%ld.%03d s, average=%ld.%03d s; "
 "distance=%d kB, estimate=%d kB; lsn=%X/%08X, redo lsn=%X/%08X"
 
-#: access/transam/xlog.c:7406
+#: access/transam/xlog.c:7414
 #, c-format
 msgid ""
 "concurrent write-ahead log activity while database system is shutting down"
 msgstr "数据库系统关闭期间发生并发预写日志活动"
 
-#: access/transam/xlog.c:7991
+#: access/transam/xlog.c:7999
 #, c-format
 msgid "recovery restart point at %X/%08X"
 msgstr "恢复重启点位于 %X/%08X"
 
-#: access/transam/xlog.c:7993
+#: access/transam/xlog.c:8001
 #, c-format
 msgid "Last completed transaction was at log time %s."
 msgstr "最后一个已完成事务对应的日志时间为 %s。"
 
-#: access/transam/xlog.c:8257
+#: access/transam/xlog.c:8265
 #, c-format
 msgid "restore point \"%s\" created at %X/%08X"
 msgstr "已在 %2$X/%3$08X 处创建恢复点 \"%1$s\""
 
-#: access/transam/xlog.c:8488
+#: access/transam/xlog.c:8496
 #, c-format
 msgid "online backup was canceled, recovery cannot continue"
 msgstr "在线备份操作已取消，恢复操作不能继续"
 
-#: access/transam/xlog.c:8541
+#: access/transam/xlog.c:8549
 #, c-format
 msgid "unexpected timeline ID %u (should be %u) in shutdown checkpoint record"
 msgstr "关闭检查点记录中出现意外的时间线 ID %u（应为 %u）"
 
-#: access/transam/xlog.c:8602
+#: access/transam/xlog.c:8610
 #, c-format
 msgid "unexpected timeline ID %u (should be %u) in online checkpoint record"
 msgstr "在线检查点记录中出现意外的时间线 ID %u（应为 %u）"
 
-#: access/transam/xlog.c:8639
+#: access/transam/xlog.c:8647
 #, c-format
 msgid "unexpected timeline ID %u (should be %u) in end-of-recovery record"
 msgstr "恢复结束记录中出现意外的时间线 ID %u（应为 %u）"
 
-#: access/transam/xlog.c:8946
+#: access/transam/xlog.c:8954
 #, c-format
 msgid "could not fsync write-through file \"%s\": %m"
 msgstr "无法对直写文件 \"%s\" 执行 fsync: %m"
 
-#: access/transam/xlog.c:8951
+#: access/transam/xlog.c:8959
 #, c-format
 msgid "could not fdatasync file \"%s\": %m"
 msgstr "无法对文件 \"%s\" 执行 fdatasync: %m"
 
-#: access/transam/xlog.c:9027 access/transam/xlog.c:9357
+#: access/transam/xlog.c:9035 access/transam/xlog.c:9365
 #, c-format
 msgid "WAL level not sufficient for making an online backup"
 msgstr "WAL 的级别不能满足在线备份的要求"
 
-#: access/transam/xlog.c:9028 access/transam/xlog.c:9358
+#: access/transam/xlog.c:9036 access/transam/xlog.c:9366
 #: access/transam/xlogfuncs.c:279 commands/subscriptioncmds.c:3299
 #, c-format
 msgid ""
 "\"wal_level\" must be set to \"replica\" or \"logical\" at server start."
 msgstr "服务器启动时必须将 \"wal_level\" 设为 \"replica\" 或 \"logical\"。"
 
-#: access/transam/xlog.c:9033
+#: access/transam/xlog.c:9041
 #, c-format
 msgid "backup label too long (max %d bytes)"
 msgstr "备份标签名过长（最大为 %d 字节）"
 
-#: access/transam/xlog.c:9148
+#: access/transam/xlog.c:9156
 #, c-format
 msgid ""
 "WAL generated with \"full_page_writes=off\" was replayed since last "
 "restartpoint"
 msgstr "自上一个重启点以来，重放过在 \"full_page_writes=off\" 下生成的 WAL"
 
-#: access/transam/xlog.c:9150 access/transam/xlog.c:9446
+#: access/transam/xlog.c:9158 access/transam/xlog.c:9454
 #, c-format
 msgid ""
 "This means that the backup being taken on the standby is corrupt and should "
@@ -6362,49 +6362,49 @@ msgstr ""
 "这意味着正在备库上制作的备份已损坏，不宜使用。在主库上启用 "
 "\"full_page_writes\" 并运行 CHECKPOINT，然后重试在线备份。"
 
-#: access/transam/xlog.c:9230 backup/basebackup.c:1418
+#: access/transam/xlog.c:9238 backup/basebackup.c:1418
 #: catalog/pg_tablespace.c:80
 #, c-format
 msgid "could not read symbolic link \"%s\": %m"
 msgstr "无法读取符号链接 \"%s\": %m"
 
-#: access/transam/xlog.c:9237 backup/basebackup.c:1423
+#: access/transam/xlog.c:9245 backup/basebackup.c:1423
 #: catalog/pg_tablespace.c:85
 #, c-format
 msgid "symbolic link \"%s\" target is too long"
 msgstr "符号链接 \"%s\" 的目标过长"
 
-#: access/transam/xlog.c:9396 backup/basebackup.c:1282
+#: access/transam/xlog.c:9404 backup/basebackup.c:1282
 #, c-format
 msgid "the standby was promoted during online backup"
 msgstr "备库在在线备份期间被提升为主库"
 
-#: access/transam/xlog.c:9397 backup/basebackup.c:1283
+#: access/transam/xlog.c:9405 backup/basebackup.c:1283
 #, c-format
 msgid ""
 "This means that the backup being taken is corrupt and should not be used. "
 "Try taking another online backup."
 msgstr "这意味着正在制作的备份已损坏，不宜使用。尝试重新制作在线备份。"
 
-#: access/transam/xlog.c:9444
+#: access/transam/xlog.c:9452
 #, c-format
 msgid ""
 "WAL generated with \"full_page_writes=off\" was replayed during online backup"
 msgstr "在线备份期间重放过在 \"full_page_writes=off\" 下生成的 WAL"
 
-#: access/transam/xlog.c:9560
+#: access/transam/xlog.c:9568
 #, c-format
 msgid "base backup done, waiting for required WAL segments to be archived"
 msgstr "基础备份完成，正在等待所需的 WAL 段归档"
 
-#: access/transam/xlog.c:9574
+#: access/transam/xlog.c:9582
 #, c-format
 msgid ""
 "still waiting for all required WAL segments to be archived (%d seconds "
 "elapsed)"
 msgstr "仍在等待所有所需的 WAL 段归档（已过去 %d 秒）"
 
-#: access/transam/xlog.c:9576
+#: access/transam/xlog.c:9584
 #, c-format
 msgid ""
 "Check that your \"archive_command\" is executing properly.  You can safely "
@@ -6414,19 +6414,19 @@ msgstr ""
 "检查 \"archive_command\" 是否正常执行。可以安全取消此次备份，但如果未具备所有"
 "必需的 WAL 段，该数据库备份将无法使用。"
 
-#: access/transam/xlog.c:9583
+#: access/transam/xlog.c:9591
 #, c-format
 msgid "all required WAL segments have been archived"
 msgstr "所有所需的 WAL 段均已归档"
 
-#: access/transam/xlog.c:9587
+#: access/transam/xlog.c:9595
 #, c-format
 msgid ""
 "WAL archiving is not enabled; you must ensure that all required WAL segments "
 "are copied through other means to complete the backup"
 msgstr "未启用 WAL 归档；必须通过其他方式复制所有必需的 WAL 段，才能完成备份"
 
-#: access/transam/xlog.c:9626
+#: access/transam/xlog.c:9634
 #, c-format
 msgid "aborting backup due to backend exiting before pg_backup_stop was called"
 msgstr "由于后端进程在调用 pg_backup_stop 之前退出，正在中止备份"
@@ -10326,7 +10326,7 @@ msgid ""
 "\"multirange_type_name\" attribute."
 msgstr "您可以使用 \"multirange_type_name\" 属性手动指定多范围类型名称。"
 
-#: catalog/storage.c:549 storage/buffer/bufmgr.c:8889
+#: catalog/storage.c:549 storage/buffer/bufmgr.c:8895
 #, c-format
 msgid "invalid page in block %u of relation \"%s\""
 msgstr "关系 \"%2$s\" 的块 %1$u 中有无效页"
@@ -22483,7 +22483,7 @@ msgid "attribute \"%s\" of relation \"%s\" does not match parent's collation"
 msgstr ""
 "关系 \"%2$s\" 的属性 \"%1$s\" 的排序规则与父关系中对应属性的排序规则不匹配"
 
-#: optimizer/util/clauses.c:5865
+#: optimizer/util/clauses.c:5887
 #, c-format
 msgid "SQL function \"%s\" during inlining"
 msgstr "SQL 函数 \"%s\" 在内联期间"
@@ -22504,12 +22504,12 @@ msgid "constraint in ON CONFLICT clause has no associated index"
 msgstr "ON CONFLICT 子句中的约束没有关联的索引"
 
 #. translator: %s is an ON CONFLICT clause
-#: optimizer/util/plancat.c:1008
+#: optimizer/util/plancat.c:1010
 #, c-format
 msgid "%s not supported with exclusion constraints"
 msgstr "%s 不支持排他约束"
 
-#: optimizer/util/plancat.c:1165
+#: optimizer/util/plancat.c:1190
 #, c-format
 msgid ""
 "there is no unique or exclusion constraint matching the ON CONFLICT "
@@ -29828,39 +29828,39 @@ msgstr "正在代替进程 %d 完成 I/O"
 msgid "I/O worker executing I/O on behalf of process %d"
 msgstr "I/O 工作进程正在代替进程 %d 执行 I/O"
 
-#: storage/aio/read_stream.c:787 storage/buffer/bufmgr.c:798
-#: storage/buffer/bufmgr.c:1296 storage/buffer/bufmgr.c:1392
-#: storage/buffer/bufmgr.c:2781
+#: storage/aio/read_stream.c:787 storage/buffer/bufmgr.c:800
+#: storage/buffer/bufmgr.c:1298 storage/buffer/bufmgr.c:1394
+#: storage/buffer/bufmgr.c:2783
 #, c-format
 msgid "cannot access temporary tables of other sessions"
 msgstr "不能访问其他会话的临时表"
 
-#: storage/buffer/bufmgr.c:2902 storage/buffer/localbuf.c:403
+#: storage/buffer/bufmgr.c:2904 storage/buffer/localbuf.c:403
 #, c-format
 msgid "cannot extend relation %s beyond %u blocks"
 msgstr "不能将关系 %s 扩展到超过 %u 块"
 
-#: storage/buffer/bufmgr.c:2966
+#: storage/buffer/bufmgr.c:2968
 #, c-format
 msgid "unexpected data beyond EOF in block %u of relation \"%s\""
 msgstr "在关系 \"%2$s\" 的块 %1$u 处发现 EOF 之后的意外数据"
 
-#: storage/buffer/bufmgr.c:7493
+#: storage/buffer/bufmgr.c:7499
 #, c-format
 msgid "could not write block %u of %s"
 msgstr "无法写入 %2$s 的块 %1$u"
 
-#: storage/buffer/bufmgr.c:7497
+#: storage/buffer/bufmgr.c:7503
 #, c-format
 msgid "Multiple failures --- write error might be permanent."
 msgstr "多次失败 --- 写入错误可能是永久性的。"
 
-#: storage/buffer/bufmgr.c:7514 storage/buffer/bufmgr.c:7529
+#: storage/buffer/bufmgr.c:7520 storage/buffer/bufmgr.c:7535
 #, c-format
 msgid "writing block %u of relation \"%s\""
 msgstr "正在写入关系 \"%2$s\" 的块 %1$u"
 
-#: storage/buffer/bufmgr.c:8868
+#: storage/buffer/bufmgr.c:8874
 #, c-format
 msgid ""
 "zeroing %u page(s) and ignoring %u checksum failure(s) among blocks %u..%u "
@@ -29869,63 +29869,63 @@ msgstr ""
 "正在将关系 \"%5$s\" 的块 %3$u..%4$u 中的 %1$u 页清零，并忽略 %2$u 次校验和失"
 "败"
 
-#: storage/buffer/bufmgr.c:8871 storage/buffer/bufmgr.c:8899
+#: storage/buffer/bufmgr.c:8877 storage/buffer/bufmgr.c:8905
 #, c-format
 msgid "Block %u held the first zeroed page."
 msgstr "块 %u 包含第一个被清零的页。"
 
-#: storage/buffer/bufmgr.c:8873
+#: storage/buffer/bufmgr.c:8879
 #, c-format
 msgid "See server log for details about the other %d invalid block."
 msgid_plural "See server log for details about the other %d invalid blocks."
 msgstr[0] "其他 %d 个无效块的详情参阅服务器日志。"
 
-#: storage/buffer/bufmgr.c:8890
+#: storage/buffer/bufmgr.c:8896
 #, c-format
 msgid "%u invalid pages among blocks %u..%u of relation \"%s\""
 msgstr "关系 \"%4$s\" 的块 %2$u..%3$u 中有 %1$u 个无效页"
 
-#: storage/buffer/bufmgr.c:8891
+#: storage/buffer/bufmgr.c:8897
 #, c-format
 msgid "Block %u held the first invalid page."
 msgstr "块 %u 包含第一个无效页。"
 
-#: storage/buffer/bufmgr.c:8892
+#: storage/buffer/bufmgr.c:8898
 #, c-format
 msgid "See server log for the other %u invalid block(s)."
 msgstr "参阅服务器日志，了解其他 %u 个无效块的情况。"
 
-#: storage/buffer/bufmgr.c:8897
+#: storage/buffer/bufmgr.c:8903
 #, c-format
 msgid "invalid page in block %u of relation \"%s\"; zeroing out page"
 msgstr "关系 \"%2$s\" 的块 %1$u 中存在无效页；正在将该页清零"
 
-#: storage/buffer/bufmgr.c:8898
+#: storage/buffer/bufmgr.c:8904
 #, c-format
 msgid "zeroing out %u invalid pages among blocks %u..%u of relation \"%s\""
 msgstr "正在将关系 \"%4$s\" 的块 %2$u..%3$u 中的 %1$u 个无效页清零"
 
-#: storage/buffer/bufmgr.c:8900
+#: storage/buffer/bufmgr.c:8906
 #, c-format
 msgid "See server log for the other %u zeroed block(s)."
 msgstr "参阅服务器日志，了解其他 %u 个被清零的块的情况。"
 
-#: storage/buffer/bufmgr.c:8905
+#: storage/buffer/bufmgr.c:8911
 #, c-format
 msgid "ignoring checksum failure in block %u of relation \"%s\""
 msgstr "正在忽略关系 \"%2$s\" 的块 %1$u 中的校验和失败"
 
-#: storage/buffer/bufmgr.c:8906
+#: storage/buffer/bufmgr.c:8912
 #, c-format
 msgid "ignoring %u checksum failures among blocks %u..%u of relation \"%s\""
 msgstr "正在忽略关系 \"%4$s\" 的块 %2$u..%3$u 中的 %1$u 次校验和失败"
 
-#: storage/buffer/bufmgr.c:8907
+#: storage/buffer/bufmgr.c:8913
 #, c-format
 msgid "Block %u held the first ignored page."
 msgstr "块 %u 包含第一个被忽略的页。"
 
-#: storage/buffer/bufmgr.c:8908
+#: storage/buffer/bufmgr.c:8914
 #, c-format
 msgid "See server log for the other %u ignored block(s)."
 msgstr "参阅服务器日志，了解其他 %u 个被忽略的块的情况。"
