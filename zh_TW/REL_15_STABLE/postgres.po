@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 15\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-10-10 15:56+0000\n"
-"PO-Revision-Date: 2026-10-13 00:27+0800\n"
+"POT-Creation-Date: 2026-10-14 18:57+0000\n"
+"PO-Revision-Date: 2026-10-15 10:22+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
@@ -89,10 +89,10 @@ msgstr "無法開啟檔案 \"%s\" 以讀取: %m"
 #: access/transam/xlogrecovery.c:1331 access/transam/xlogrecovery.c:1368
 #: access/transam/xlogrecovery.c:1428 backup/basebackup.c:1835
 #: commands/extension.c:3541 libpq/hba.c:505 replication/logical/origin.c:729
-#: replication/logical/origin.c:765 replication/logical/reorderbuffer.c:5116
+#: replication/logical/origin.c:765 replication/logical/reorderbuffer.c:5229
 #: replication/logical/snapbuild.c:1970 replication/logical/snapbuild.c:2012
 #: replication/logical/snapbuild.c:2039 replication/slot.c:1884
-#: replication/slot.c:1925 replication/walsender.c:672
+#: replication/slot.c:1925 replication/walsender.c:675
 #: storage/file/buffile.c:463 storage/file/copydir.c:195
 #: utils/adt/genfile.c:197 utils/adt/misc.c:856 utils/cache/relmapper.c:816
 #, c-format
@@ -108,7 +108,7 @@ msgstr "無法讀取檔案 \"%s\": %m"
 #: backup/basebackup.c:1839 replication/logical/origin.c:734
 #: replication/logical/origin.c:773 replication/logical/snapbuild.c:1975
 #: replication/logical/snapbuild.c:2017 replication/logical/snapbuild.c:2044
-#: replication/slot.c:1888 replication/slot.c:1929 replication/walsender.c:677
+#: replication/slot.c:1888 replication/slot.c:1929 replication/walsender.c:680
 #: utils/cache/relmapper.c:820
 #, c-format
 msgid "could not read file \"%s\": read %d of %zu"
@@ -127,9 +127,9 @@ msgstr "無法讀取檔案 \"%1$s\": 應讀取 %3$zu，實際讀取 %2$d"
 #: access/transam/xlog.c:4735 commands/copyfrom.c:1585 commands/copyto.c:327
 #: libpq/be-fsstubs.c:455 libpq/be-fsstubs.c:525
 #: replication/logical/origin.c:667 replication/logical/origin.c:806
-#: replication/logical/reorderbuffer.c:5174
+#: replication/logical/reorderbuffer.c:5287
 #: replication/logical/snapbuild.c:1879 replication/logical/snapbuild.c:2052
-#: replication/slot.c:1773 replication/slot.c:1936 replication/walsender.c:687
+#: replication/slot.c:1773 replication/slot.c:1936 replication/walsender.c:690
 #: storage/file/copydir.c:218 storage/file/copydir.c:223 storage/file/fd.c:742
 #: storage/file/fd.c:3635 storage/file/fd.c:3741 utils/cache/relmapper.c:831
 #: utils/cache/relmapper.c:968
@@ -162,15 +162,15 @@ msgstr "位元組順序可能不一致\n用於儲存 pg_control 檔案的位元�
 #: access/transam/timeline.c:348 access/transam/twophase.c:1305
 #: access/transam/xlog.c:2941 access/transam/xlog.c:3123
 #: access/transam/xlog.c:3162 access/transam/xlog.c:3354
-#: access/transam/xlog.c:4009 access/transam/xlogrecovery.c:4271
-#: access/transam/xlogrecovery.c:4374 access/transam/xlogutils.c:876
+#: access/transam/xlog.c:4009 access/transam/xlogrecovery.c:4272
+#: access/transam/xlogrecovery.c:4375 access/transam/xlogutils.c:876
 #: backup/basebackup.c:522 backup/basebackup.c:1515 postmaster/syslogger.c:1560
-#: replication/logical/origin.c:719 replication/logical/reorderbuffer.c:3769
-#: replication/logical/reorderbuffer.c:4320
-#: replication/logical/reorderbuffer.c:5096
+#: replication/logical/origin.c:719 replication/logical/reorderbuffer.c:3882
+#: replication/logical/reorderbuffer.c:4433
+#: replication/logical/reorderbuffer.c:5209
 #: replication/logical/snapbuild.c:1834 replication/logical/snapbuild.c:1941
-#: replication/slot.c:1856 replication/walsender.c:645
-#: replication/walsender.c:2749 storage/file/copydir.c:161
+#: replication/slot.c:1856 replication/walsender.c:648
+#: replication/walsender.c:2759 storage/file/copydir.c:161
 #: storage/file/fd.c:717 storage/file/fd.c:3392 storage/file/fd.c:3622
 #: storage/file/fd.c:3712 storage/smgr/md.c:541 utils/cache/relmapper.c:795
 #: utils/cache/relmapper.c:912 utils/error/elog.c:1953
@@ -244,7 +244,7 @@ msgstr "無法對檔案 \"%s\" 執行 fsync: %m"
 #: postmaster/postmaster.c:4185 postmaster/postmaster.c:5564
 #: postmaster/postmaster.c:5935
 #: replication/libpqwalreceiver/libpqwalreceiver.c:313
-#: replication/logical/logical.c:276 replication/walsender.c:715
+#: replication/logical/logical.c:276 replication/walsender.c:718
 #: storage/buffer/localbuf.c:442 storage/file/fd.c:889 storage/file/fd.c:1431
 #: storage/file/fd.c:1592 storage/file/fd.c:2406 storage/ipc/procarray.c:1463
 #: storage/ipc/procarray.c:2292 storage/ipc/procarray.c:2299
@@ -835,8 +835,8 @@ msgstr "索引 \"%s\" 不是有效的"
 #: access/brin/brin_bloom.c:754 access/brin/brin_bloom.c:796
 #: access/brin/brin_minmax_multi.c:2977 access/brin/brin_minmax_multi.c:3120
 #: statistics/dependencies.c:663 statistics/dependencies.c:716
-#: statistics/mcv.c:1484 statistics/mcv.c:1515 statistics/mvdistinct.c:344
-#: statistics/mvdistinct.c:397 utils/adt/pseudotypes.c:43
+#: statistics/mcv.c:1484 statistics/mcv.c:1515 statistics/mvdistinct.c:357
+#: statistics/mvdistinct.c:410 utils/adt/pseudotypes.c:43
 #: utils/adt/pseudotypes.c:77 utils/adt/pseudotypes.c:252
 #, c-format
 msgid "cannot accept a value of type %s"
@@ -1401,7 +1401,7 @@ msgstr "無法寫入檔案 \"%s\": %m"
 #: access/heap/rewriteheap.c:1249 access/transam/twophase.c:1713
 #: access/transam/xlogarchive.c:119 access/transam/xlogarchive.c:436
 #: postmaster/postmaster.c:1158 postmaster/syslogger.c:1537
-#: replication/logical/origin.c:575 replication/logical/reorderbuffer.c:4589
+#: replication/logical/origin.c:575 replication/logical/reorderbuffer.c:4702
 #: replication/logical/snapbuild.c:1793 replication/logical/snapbuild.c:2213
 #: replication/slot.c:1840 storage/file/fd.c:792 storage/file/fd.c:3260
 #: storage/file/fd.c:3322 storage/file/reinit.c:262 storage/ipc/dsm.c:317
@@ -2295,7 +2295,7 @@ msgid "calculated CRC checksum does not match value stored in file \"%s\""
 msgstr "計算得到的 CRC 檢查碼與檔案 \"%s\" 中儲存的值不相符"
 
 #: access/transam/twophase.c:1415 access/transam/xlogrecovery.c:594
-#: replication/logical/logical.c:277 replication/walsender.c:716
+#: replication/logical/logical.c:277 replication/walsender.c:719
 #, c-format
 msgid "Failed while allocating a WAL reading processor."
 msgstr "配置 WAL 讀取處理器時失敗。"
@@ -2573,7 +2573,7 @@ msgid "could not write to log file %s at offset %u, length %zu: %m"
 msgstr "無法向日誌檔案 %s 的位移 %u 處寫入長度為 %zu 的資料: %m"
 
 #: access/transam/xlog.c:3468 access/transam/xlogutils.c:871
-#: replication/walsender.c:2743
+#: replication/walsender.c:2753
 #, c-format
 msgid "requested WAL segment %s has already been removed"
 msgstr "要求的 WAL 片段 %s 已被刪除"
@@ -3651,267 +3651,267 @@ msgstr "pg_tblspc/ 中的所有目錄項都應是符號連結。"
 msgid "Remove those directories, or set allow_in_place_tablespaces to ON transiently to let recovery complete."
 msgstr "刪除這些目錄，或暫時將 allow_in_place_tablespaces 設為 ON，以使復原完成。"
 
-#: access/transam/xlogrecovery.c:2162
+#: access/transam/xlogrecovery.c:2163
 #, c-format
 msgid "completed backup recovery with redo LSN %X/%X and end LSN %X/%X"
 msgstr "備份復原已完成，redo LSN 為 %X/%X，結束 LSN 為 %X/%X"
 
-#: access/transam/xlogrecovery.c:2192
+#: access/transam/xlogrecovery.c:2193
 #, c-format
 msgid "consistent recovery state reached at %X/%X"
 msgstr "在 %X/%X 處達到一致的復原狀態"
 
 # access/transam/xlog.c:4276
 #. translator: %s is a WAL record description
-#: access/transam/xlogrecovery.c:2230
+#: access/transam/xlogrecovery.c:2231
 #, c-format
 msgid "WAL redo at %X/%X for %s"
 msgstr "在 %X/%X 處重做 WAL: %s"
 
 # access/transam/xlog.c:5017
-#: access/transam/xlogrecovery.c:2326
+#: access/transam/xlogrecovery.c:2327
 #, c-format
 msgid "unexpected previous timeline ID %u (current timeline ID %u) in checkpoint record"
 msgstr "檢查點記錄中出現非預期的前一時間軸 ID %u (目前時間軸 ID 為 %u)"
 
 # access/transam/xlog.c:5017
-#: access/transam/xlogrecovery.c:2335
+#: access/transam/xlogrecovery.c:2336
 #, c-format
 msgid "unexpected timeline ID %u (after %u) in checkpoint record"
 msgstr "檢查點記錄中非預期的時間軸 ID %u (在 %u 之後)"
 
-#: access/transam/xlogrecovery.c:2351
+#: access/transam/xlogrecovery.c:2352
 #, c-format
 msgid "unexpected timeline ID %u in checkpoint record, before reaching minimum recovery point %X/%X on timeline %u"
 msgstr "尚未達到時間軸 %4$u 上的最小復原點 %2$X/%3$X，檢查點記錄中卻出現非預期的時間軸 ID %1$u"
 
 # access/transam/xlog.c:3950
-#: access/transam/xlogrecovery.c:2535 access/transam/xlogrecovery.c:2811
+#: access/transam/xlogrecovery.c:2536 access/transam/xlogrecovery.c:2812
 #, c-format
 msgid "recovery stopping after reaching consistency"
 msgstr "達到一致性後停止復原"
 
 # access/transam/xlog.c:3965
-#: access/transam/xlogrecovery.c:2556
+#: access/transam/xlogrecovery.c:2557
 #, c-format
 msgid "recovery stopping before WAL location (LSN) \"%X/%X\""
 msgstr "復原在 WAL 位置 (LSN) \"%X/%X\" 之前停止"
 
 # access/transam/xlog.c:3954
-#: access/transam/xlogrecovery.c:2646
+#: access/transam/xlogrecovery.c:2647
 #, c-format
 msgid "recovery stopping before commit of transaction %u, time %s"
 msgstr "復原在交易 %u 提交前停止, 時間 %s"
 
 # access/transam/xlog.c:3965
-#: access/transam/xlogrecovery.c:2653
+#: access/transam/xlogrecovery.c:2654
 #, c-format
 msgid "recovery stopping before abort of transaction %u, time %s"
 msgstr "復原在交易 %u 中止前停止, 時間 %s"
 
 # access/transam/xlog.c:3961
-#: access/transam/xlogrecovery.c:2706
+#: access/transam/xlogrecovery.c:2707
 #, c-format
 msgid "recovery stopping at restore point \"%s\", time %s"
 msgstr "復原在還原點 \"%s\" 停止, 時間 %s"
 
 # access/transam/xlog.c:3961
-#: access/transam/xlogrecovery.c:2724
+#: access/transam/xlogrecovery.c:2725
 #, c-format
 msgid "recovery stopping after WAL location (LSN) \"%X/%X\""
 msgstr "復原在 WAL 位置 (LSN) \"%X/%X\" 之後停止"
 
 # access/transam/xlog.c:3950
-#: access/transam/xlogrecovery.c:2791
+#: access/transam/xlogrecovery.c:2792
 #, c-format
 msgid "recovery stopping after commit of transaction %u, time %s"
 msgstr "復原在交易 %u 提交後停止, 時間 %s"
 
 # access/transam/xlog.c:3961
-#: access/transam/xlogrecovery.c:2799
+#: access/transam/xlogrecovery.c:2800
 #, c-format
 msgid "recovery stopping after abort of transaction %u, time %s"
 msgstr "復原在交易 %u 中止後停止, 時間 %s"
 
 # access/transam/xlog.c:3596
-#: access/transam/xlogrecovery.c:2880
+#: access/transam/xlogrecovery.c:2881
 #, c-format
 msgid "pausing at the end of recovery"
 msgstr "在復原結束處暫停"
 
-#: access/transam/xlogrecovery.c:2881
+#: access/transam/xlogrecovery.c:2882
 #, c-format
 msgid "Execute pg_wal_replay_resume() to promote."
 msgstr "執行 pg_wal_replay_resume() 以進行升級。"
 
-#: access/transam/xlogrecovery.c:2884 access/transam/xlogrecovery.c:4732
+#: access/transam/xlogrecovery.c:2885 access/transam/xlogrecovery.c:4733
 #, c-format
 msgid "recovery has paused"
 msgstr "復原已被暫停"
 
-#: access/transam/xlogrecovery.c:2885
+#: access/transam/xlogrecovery.c:2886
 #, c-format
 msgid "Execute pg_wal_replay_resume() to continue."
 msgstr "執行 pg_wal_replay_resume() 以繼續。"
 
 # access/transam/xlog.c:2684
-#: access/transam/xlogrecovery.c:3151
+#: access/transam/xlogrecovery.c:3152
 #, c-format
 msgid "unexpected timeline ID %u in log segment %s, offset %u"
 msgstr "日誌片段 %2$s 中出現非預期的時間軸 ID %1$u，位移 %3$u"
 
 # access/transam/xlog.c:2539
-#: access/transam/xlogrecovery.c:3356
+#: access/transam/xlogrecovery.c:3357
 #, c-format
 msgid "could not read from log segment %s, offset %u: %m"
 msgstr "無法從日誌片段 %s 的位移 %u 處讀取: %m"
 
 # access/transam/xlog.c:2539
-#: access/transam/xlogrecovery.c:3362
+#: access/transam/xlogrecovery.c:3363
 #, c-format
 msgid "could not read from log segment %s, offset %u: read %d of %zu"
 msgstr "無法從日誌片段 %1$s 的位移 %2$u 處讀取: 應讀取 %4$zu，實際讀取 %3$d"
 
 # access/transam/xlog.c:4528
-#: access/transam/xlogrecovery.c:4023
+#: access/transam/xlogrecovery.c:4024
 #, c-format
 msgid "invalid primary checkpoint link in control file"
 msgstr "控制檔中有無效的主要檢查點連結"
 
 # access/transam/xlog.c:4536
-#: access/transam/xlogrecovery.c:4027
+#: access/transam/xlogrecovery.c:4028
 #, c-format
 msgid "invalid checkpoint link in backup_label file"
 msgstr "backup_label 檔案中有無效的檢查點連結"
 
 # access/transam/xlog.c:4550
-#: access/transam/xlogrecovery.c:4045
+#: access/transam/xlogrecovery.c:4046
 #, c-format
 msgid "invalid primary checkpoint record"
 msgstr "無效的主要檢查點記錄"
 
 # access/transam/xlog.c:4558
-#: access/transam/xlogrecovery.c:4049
+#: access/transam/xlogrecovery.c:4050
 #, c-format
 msgid "invalid checkpoint record"
 msgstr "無效的檢查點記錄"
 
 # access/transam/xlog.c:4569
-#: access/transam/xlogrecovery.c:4060
+#: access/transam/xlogrecovery.c:4061
 #, c-format
 msgid "invalid resource manager ID in primary checkpoint record"
 msgstr "主要檢查點記錄中的資源管理員 ID 無效"
 
 # access/transam/xlog.c:4577
-#: access/transam/xlogrecovery.c:4064
+#: access/transam/xlogrecovery.c:4065
 #, c-format
 msgid "invalid resource manager ID in checkpoint record"
 msgstr "檢查點記錄中有無效的資源管理員 ID"
 
 # access/transam/xlog.c:4589
-#: access/transam/xlogrecovery.c:4077
+#: access/transam/xlogrecovery.c:4078
 #, c-format
 msgid "invalid xl_info in primary checkpoint record"
 msgstr "主要檢查點記錄中有無效的 xl_info"
 
 # access/transam/xlog.c:4597
-#: access/transam/xlogrecovery.c:4081
+#: access/transam/xlogrecovery.c:4082
 #, c-format
 msgid "invalid xl_info in checkpoint record"
 msgstr "檢查點記錄中有無效的 xl_info"
 
 # access/transam/xlog.c:4608
-#: access/transam/xlogrecovery.c:4092
+#: access/transam/xlogrecovery.c:4093
 #, c-format
 msgid "invalid length of primary checkpoint record"
 msgstr "主要檢查點記錄的長度無效"
 
 # access/transam/xlog.c:4616
-#: access/transam/xlogrecovery.c:4096
+#: access/transam/xlogrecovery.c:4097
 #, c-format
 msgid "invalid length of checkpoint record"
 msgstr "無效的檢查點記錄長度"
 
 # access/transam/xlog.c:4057
-#: access/transam/xlogrecovery.c:4152
+#: access/transam/xlogrecovery.c:4153
 #, c-format
 msgid "new timeline %u is not a child of database system timeline %u"
 msgstr "新時間軸 %u 不是資料庫系統時間軸 %u 的後繼時間軸"
 
-#: access/transam/xlogrecovery.c:4166
+#: access/transam/xlogrecovery.c:4167
 #, c-format
 msgid "new timeline %u forked off current database system timeline %u before current recovery point %X/%X"
 msgstr "新時間軸 %1$u 在目前復原點 %3$X/%4$X 之前就從目前資料庫系統的時間軸 %2$u 分叉"
 
 # access/transam/xlog.c:3660
-#: access/transam/xlogrecovery.c:4185
+#: access/transam/xlogrecovery.c:4186
 #, c-format
 msgid "new target timeline is %u"
 msgstr "新的目標時間軸是 %u"
 
 # postmaster/postmaster.c:1825
-#: access/transam/xlogrecovery.c:4388
+#: access/transam/xlogrecovery.c:4389
 #, c-format
 msgid "WAL receiver process shutdown requested"
 msgstr "已請求關閉 WAL 接收行程"
 
 # postmaster/postmaster.c:1789
-#: access/transam/xlogrecovery.c:4451
+#: access/transam/xlogrecovery.c:4452
 #, c-format
 msgid "received promote request"
 msgstr "收到升級要求"
 
 # catalog/dependency.c:1697
-#: access/transam/xlogrecovery.c:4464
+#: access/transam/xlogrecovery.c:4465
 #, c-format
 msgid "promote trigger file found: %s"
 msgstr "已找到升級觸發檔案: %s"
 
 # access/transam/xlog.c:1936 access/transam/xlog.c:2038
 # access/transam/xlog.c:5291
-#: access/transam/xlogrecovery.c:4472
+#: access/transam/xlogrecovery.c:4473
 #, c-format
 msgid "could not stat promote trigger file \"%s\": %m"
 msgstr "無法取得升級觸發檔案 \"%s\" 的狀態: %m"
 
-#: access/transam/xlogrecovery.c:4723
+#: access/transam/xlogrecovery.c:4724
 #, c-format
 msgid "hot standby is not possible because of insufficient parameter settings"
 msgstr "參數設定不足，無法使用熱備援"
 
-#: access/transam/xlogrecovery.c:4724 access/transam/xlogrecovery.c:4751
-#: access/transam/xlogrecovery.c:4781
+#: access/transam/xlogrecovery.c:4725 access/transam/xlogrecovery.c:4752
+#: access/transam/xlogrecovery.c:4782
 #, c-format
 msgid "%s = %d is a lower setting than on the primary server, where its value was %d."
 msgstr "%s = %d 的設定低於主伺服器當時使用的值 %d。"
 
-#: access/transam/xlogrecovery.c:4733
+#: access/transam/xlogrecovery.c:4734
 #, c-format
 msgid "If recovery is unpaused, the server will shut down."
 msgstr "如果取消復原暫停，伺服器將停止。"
 
-#: access/transam/xlogrecovery.c:4734
+#: access/transam/xlogrecovery.c:4735
 #, c-format
 msgid "You can then restart the server after making the necessary configuration changes."
 msgstr "之後，您可以在完成必要的組態變更後重新啟動伺服器。"
 
-#: access/transam/xlogrecovery.c:4745
+#: access/transam/xlogrecovery.c:4746
 #, c-format
 msgid "promotion is not possible because of insufficient parameter settings"
 msgstr "參數設定不足，無法升級"
 
 # utils/misc/guc.c:1798
-#: access/transam/xlogrecovery.c:4755
+#: access/transam/xlogrecovery.c:4756
 #, c-format
 msgid "Restart the server after making the necessary configuration changes."
 msgstr "在完成必要的組態變更後重新啟動伺服器。"
 
-#: access/transam/xlogrecovery.c:4779
+#: access/transam/xlogrecovery.c:4780
 #, c-format
 msgid "recovery aborted because of insufficient parameter settings"
 msgstr "參數設定不足，復原已中止"
 
-#: access/transam/xlogrecovery.c:4785
+#: access/transam/xlogrecovery.c:4786
 #, c-format
 msgid "You can restart the server after making the necessary configuration changes."
 msgstr "您可以在完成必要的組態變更後重新啟動伺服器。"
@@ -7503,8 +7503,8 @@ msgstr "定序屬性 \"%s\" 無法辨識"
 #: replication/pgoutput/pgoutput.c:319 replication/pgoutput/pgoutput.c:342
 #: replication/pgoutput/pgoutput.c:360 replication/pgoutput/pgoutput.c:370
 #: replication/pgoutput/pgoutput.c:380 replication/pgoutput/pgoutput.c:390
-#: replication/walsender.c:1015 replication/walsender.c:1037
-#: replication/walsender.c:1047
+#: replication/walsender.c:1021 replication/walsender.c:1043
+#: replication/walsender.c:1053
 #, c-format
 msgid "conflicting or redundant options"
 msgstr "選項衝突或重覆"
@@ -18835,7 +18835,7 @@ msgid "unnamed portal with parameters: %s"
 msgstr "未命名 portal 的參數: %s"
 
 # executor/nodeMergejoin.c:1491 optimizer/path/joinpath.c:839
-#: optimizer/path/joinrels.c:855
+#: optimizer/path/joinrels.c:876
 #, c-format
 msgid "FULL JOIN is only supported with merge-joinable or hash-joinable join conditions"
 msgstr "FULL JOIN 只在聯結條件可用於合併聯結或雜湊聯結時才受支援"
@@ -23458,33 +23458,33 @@ msgstr "邏輯複寫目標關聯 \"%s.%s\" 不存在"
 # commands/tablespace.c:668 commands/tablespace.c:674
 # postmaster/postmaster.c:3430 utils/init/miscinit.c:832
 # utils/init/miscinit.c:841 utils/misc/guc.c:4934 utils/misc/guc.c:4998
-#: replication/logical/reorderbuffer.c:3999
+#: replication/logical/reorderbuffer.c:4112
 #, c-format
 msgid "could not write to data file for XID %u: %m"
 msgstr "無法寫入 XID 為 %u 的資料檔案: %m"
 
 # access/transam/xlog.c:3176
-#: replication/logical/reorderbuffer.c:4345
-#: replication/logical/reorderbuffer.c:4370
+#: replication/logical/reorderbuffer.c:4458
+#: replication/logical/reorderbuffer.c:4483
 #, c-format
 msgid "could not read from reorderbuffer spill file: %m"
 msgstr "無法讀取重排序緩衝區的溢寫檔案: %m"
 
 # utils/sort/logtape.c:221
-#: replication/logical/reorderbuffer.c:4349
-#: replication/logical/reorderbuffer.c:4374
+#: replication/logical/reorderbuffer.c:4462
+#: replication/logical/reorderbuffer.c:4487
 #, c-format
 msgid "could not read from reorderbuffer spill file: read %d instead of %u bytes"
 msgstr "無法讀取重排序緩衝區的溢寫檔案: 已讀取 %d 位元組，預期為 %u 位元組"
 
 # utils/error/elog.c:1128
-#: replication/logical/reorderbuffer.c:4624
+#: replication/logical/reorderbuffer.c:4737
 #, c-format
 msgid "could not remove file \"%s\" during removal of pg_replslot/%s/xid*: %m"
 msgstr "刪除 pg_replslot/%2$s/xid* 時無法刪除檔案 \"%1$s\": %m"
 
 # utils/sort/logtape.c:221
-#: replication/logical/reorderbuffer.c:5123
+#: replication/logical/reorderbuffer.c:5236
 #, c-format
 msgid "could not read from file \"%s\": read %d instead of %d bytes"
 msgstr "無法讀取檔案 \"%s\": 已讀取 %d 位元組，預期為 %d 位元組"
@@ -24131,7 +24131,7 @@ msgstr "正在從主伺服器取得時間軸 %u 的歷史檔案"
 msgid "could not write to log segment %s at offset %u, length %lu: %m"
 msgstr "無法向日誌片段 %s 的位移 %u 處寫入長度為 %lu 的資料: %m"
 
-#: replication/walsender.c:535
+#: replication/walsender.c:538
 #, c-format
 msgid "cannot use %s with a logical replication slot"
 msgstr "不能將 %s 與邏輯複寫槽一起使用"
@@ -24141,7 +24141,7 @@ msgstr "不能將 %s 與邏輯複寫槽一起使用"
 # access/transam/xlog.c:2930 libpq/hba.c:911 libpq/hba.c:935
 # utils/error/elog.c:1118 utils/init/miscinit.c:783 utils/init/miscinit.c:889
 # utils/misc/database.c:68
-#: replication/walsender.c:652 storage/smgr/md.c:1382
+#: replication/walsender.c:655 storage/smgr/md.c:1382
 #, c-format
 msgid "could not seek to end of file \"%s\": %m"
 msgstr "無法定位至檔案 \"%s\" 的結尾: %m"
@@ -24151,33 +24151,33 @@ msgstr "無法定位至檔案 \"%s\" 的結尾: %m"
 # access/transam/xlog.c:2930 libpq/hba.c:911 libpq/hba.c:935
 # utils/error/elog.c:1118 utils/init/miscinit.c:783 utils/init/miscinit.c:889
 # utils/misc/database.c:68
-#: replication/walsender.c:656
+#: replication/walsender.c:659
 #, c-format
 msgid "could not seek to beginning of file \"%s\": %m"
 msgstr "無法定位到檔案 \"%s\" 的起始位置: %m"
 
-#: replication/walsender.c:733
+#: replication/walsender.c:736
 #, c-format
 msgid "cannot use a logical replication slot for physical replication"
 msgstr "不能將邏輯複寫槽用於實體複寫"
 
-#: replication/walsender.c:799
+#: replication/walsender.c:802
 #, c-format
 msgid "requested starting point %X/%X on timeline %u is not in this server's history"
 msgstr "請求的起點 %X/%X (時間軸 %u) 不在此伺服器的歷史中"
 
-#: replication/walsender.c:802
+#: replication/walsender.c:805
 #, c-format
 msgid "This server's history forked from timeline %u at %X/%X."
 msgstr "此伺服器的歷史在 %2$X/%3$X 處從時間軸 %1$u 分叉。"
 
-#: replication/walsender.c:846
+#: replication/walsender.c:849
 #, c-format
 msgid "requested starting point %X/%X is ahead of the WAL flush position of this server %X/%X"
 msgstr "請求的起點 %X/%X 超前於此伺服器的 WAL 排清位置 %X/%X"
 
 # utils/misc/guc.c:3792
-#: replication/walsender.c:1029
+#: replication/walsender.c:1035
 #, c-format
 msgid "unrecognized value for CREATE_REPLICATION_SLOT option \"%s\": \"%s\""
 msgstr "CREATE_REPLICATION_SLOT 選項 \"%s\" 的值無法識別: \"%s\""
@@ -24185,7 +24185,7 @@ msgstr "CREATE_REPLICATION_SLOT 選項 \"%s\" 的值無法識別: \"%s\""
 #  translator: %s represents an SQL statement name
 # access/transam/xact.c:2183
 #. translator: %s is a CREATE_REPLICATION_SLOT statement
-#: replication/walsender.c:1114
+#: replication/walsender.c:1120
 #, c-format
 msgid "%s must not be called inside a transaction"
 msgstr "%s 不得在交易區塊中呼叫"
@@ -24193,20 +24193,20 @@ msgstr "%s 不得在交易區塊中呼叫"
 #  translator: %s represents an SQL statement name
 # access/transam/xact.c:2183
 #. translator: %s is a CREATE_REPLICATION_SLOT statement
-#: replication/walsender.c:1124
+#: replication/walsender.c:1130
 #, c-format
 msgid "%s must be called inside a transaction"
 msgstr "%s 必須在交易區塊中呼叫"
 
 #. translator: %s is a CREATE_REPLICATION_SLOT statement
-#: replication/walsender.c:1130
+#: replication/walsender.c:1136
 #, c-format
 msgid "%s must be called in REPEATABLE READ isolation mode transaction"
 msgstr "%s 必須在隔離層級為 REPEATABLE READ 的交易中呼叫"
 
 # commands/variable.c:483
 #. translator: %s is a CREATE_REPLICATION_SLOT statement
-#: replication/walsender.c:1136
+#: replication/walsender.c:1142
 #, c-format
 msgid "%s must be called before any query"
 msgstr "%s 必須在任何查詢之前呼叫"
@@ -24214,46 +24214,46 @@ msgstr "%s 必須在任何查詢之前呼叫"
 #  translator: %s is a SQL statement name
 # executor/functions.c:117
 #. translator: %s is a CREATE_REPLICATION_SLOT statement
-#: replication/walsender.c:1142
+#: replication/walsender.c:1148
 #, c-format
 msgid "%s must not be called in a subtransaction"
 msgstr "%s 不得在子交易中呼叫"
 
 # commands/copy.c:1063
-#: replication/walsender.c:1285
+#: replication/walsender.c:1291
 #, c-format
 msgid "cannot read from logical replication slot \"%s\""
 msgstr "不能從邏輯複寫槽 \"%s\" 讀取"
 
-#: replication/walsender.c:1287
+#: replication/walsender.c:1293
 #, c-format
 msgid "This slot has been invalidated because it exceeded the maximum reserved size."
 msgstr "此槽已因超出最大保留大小而失效。"
 
 # tcop/postgres.c:2032
-#: replication/walsender.c:1297
+#: replication/walsender.c:1303
 #, c-format
 msgid "terminating walsender process after promotion"
 msgstr "升級後正在終止 WAL 發送行程"
 
-#: replication/walsender.c:1724
+#: replication/walsender.c:1732
 #, c-format
 msgid "cannot execute new commands while WAL sender is in stopping mode"
 msgstr "當 WAL 發送行程處於停止模式時，不能執行新命令"
 
-#: replication/walsender.c:1759
+#: replication/walsender.c:1770
 #, c-format
 msgid "cannot execute SQL commands in WAL sender for physical replication"
 msgstr "用於實體複寫的 WAL 發送行程中不能執行 SQL 命令"
 
-#: replication/walsender.c:1792
+#: replication/walsender.c:1803
 #, c-format
 msgid "received replication command: %s"
 msgstr "收到的複寫命令: %s"
 
 # tcop/fastpath.c:304 tcop/postgres.c:845 tcop/postgres.c:1166
 # tcop/postgres.c:1650
-#: replication/walsender.c:1800 tcop/fastpath.c:208 tcop/postgres.c:1083
+#: replication/walsender.c:1811 tcop/fastpath.c:208 tcop/postgres.c:1083
 #: tcop/postgres.c:1441 tcop/postgres.c:1693 tcop/postgres.c:2174
 #: tcop/postgres.c:2607 tcop/postgres.c:2685
 #, c-format
@@ -24263,26 +24263,26 @@ msgstr "目前交易已中止，忽略指令直到交易區塊結尾"
 # commands/copy.c:403 commands/copy.c:421 commands/copy.c:425
 # commands/copy.c:486 commands/copy.c:535 tcop/fastpath.c:291
 # tcop/postgres.c:284 tcop/postgres.c:307
-#: replication/walsender.c:1942 replication/walsender.c:1977
+#: replication/walsender.c:1952 replication/walsender.c:1987
 #, c-format
 msgid "unexpected EOF on standby connection"
 msgstr "待命伺服器連線出現非預期 EOF"
 
 # tcop/postgres.c:334 tcop/postgres.c:346 tcop/postgres.c:357
 # tcop/postgres.c:369 tcop/postgres.c:3162
-#: replication/walsender.c:1965
+#: replication/walsender.c:1975
 #, c-format
 msgid "invalid standby message type \"%c\""
 msgstr "無效的待命伺服器訊息型別 \"%c\""
 
 # utils/adt/regproc.c:1209
-#: replication/walsender.c:2054
+#: replication/walsender.c:2064
 #, c-format
 msgid "unexpected message type \"%c\""
 msgstr "非預期的訊息型別 \"%c\""
 
 # tcop/postgres.c:2032
-#: replication/walsender.c:2474
+#: replication/walsender.c:2484
 #, c-format
 msgid "terminating walsender process due to replication timeout"
 msgstr "因複寫逾時，正在結束 WAL 發送行程"
