@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-10-21 19:48+0000\n"
-"PO-Revision-Date: 2026-10-22 07:56+0800\n"
+"POT-Creation-Date: 2026-10-22 07:48+0000\n"
+"PO-Revision-Date: 2026-10-22 21:15+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
@@ -15771,7 +15771,7 @@ msgstr "訂閱已建立，但尚未連線"
 msgid "To initiate replication, you must manually create the replication slot, enable the subscription, and alter the subscription to refresh publications."
 msgstr "要啟動複寫，必須手動建立複寫槽、啟用訂閱，並修改訂閱以重新整理發布。"
 
-#: commands/subscriptioncmds.c:1379 replication/logical/sequencesync.c:519
+#: commands/subscriptioncmds.c:1379 replication/logical/sequencesync.c:535
 #, c-format
 msgid "cannot synchronize sequences if the publisher is running a version earlier than PostgreSQL 19"
 msgstr "發布伺服器執行的版本早於 PostgreSQL 19 時，不能同步序列"
@@ -29257,64 +29257,69 @@ msgstr "刪除 %2$s/%3$s/xid* 時無法刪除檔案 \"%1$s\": %m"
 msgid "could not read from file \"%s\": read %d instead of %d bytes"
 msgstr "無法讀取檔案 \"%s\": 已讀取 %d 位元組，預期為 %d 位元組"
 
-#: replication/logical/sequencesync.c:197
+#: replication/logical/sequencesync.c:178
+#, c-format
+msgid "synchronizing sequence \"%s.%s\" for subscription \"%s\""
+msgstr "正在為訂閱 \"%3$s\" 同步序列 \"%1$s.%2$s\""
+
+#: replication/logical/sequencesync.c:213
 #, c-format
 msgid "mismatched or renamed sequence on subscriber (%s)"
 msgid_plural "mismatched or renamed sequences on subscriber (%s)"
 msgstr[0] "訂閱伺服器上的序列不符或已重新命名 (%s)"
 
-#: replication/logical/sequencesync.c:216
+#: replication/logical/sequencesync.c:232
 #, c-format
 msgid "insufficient privileges on subscriber sequence (%s)"
 msgid_plural "insufficient privileges on subscriber sequences (%s)"
 msgstr[0] "訂閱伺服器上序列的權限不足 (%s)"
 
-#: replication/logical/sequencesync.c:221
+#: replication/logical/sequencesync.c:237
 #, c-format
 msgid "Grant UPDATE on the sequence to the subscription owner on the subscriber."
 msgid_plural "Grant UPDATE on the sequences to the subscription owner on the subscriber."
 msgstr[0] "在訂閱伺服器上將序列的 UPDATE 權限授予訂閱擁有者。"
 
-#: replication/logical/sequencesync.c:233
+#: replication/logical/sequencesync.c:249
 #, c-format
 msgid "insufficient privileges on publisher sequence (%s)"
 msgid_plural "insufficient privileges on publisher sequences (%s)"
 msgstr[0] "發布伺服器上序列的權限不足 (%s)"
 
-#: replication/logical/sequencesync.c:237
+#: replication/logical/sequencesync.c:253
 #, c-format
 msgid "Grant SELECT on the sequence to the role used for the replication connection on the publisher."
 msgid_plural "Grant SELECT on the sequences to the role used for the replication connection on the publisher."
 msgstr[0] "在發布伺服器上將序列的 SELECT 權限授予用於複寫連線的角色。"
 
-#: replication/logical/sequencesync.c:249
+#: replication/logical/sequencesync.c:265
 #, c-format
 msgid "missing sequence on publisher (%s)"
 msgid_plural "missing sequences on publisher (%s)"
 msgstr[0] "發布伺服器上缺少序列 (%s)"
 
 # libpq/auth.c:378
-#: replication/logical/sequencesync.c:257
+#: replication/logical/sequencesync.c:273
 #, c-format
 msgid "logical replication sequence synchronization failed for subscription \"%s\""
 msgstr "訂閱 \"%s\" 的邏輯複寫序列同步失敗"
 
-#: replication/logical/sequencesync.c:617
+#: replication/logical/sequencesync.c:633
 #, c-format
 msgid "could not fetch sequence information from the publisher: %s"
 msgstr "無法從發布伺服器取得序列資訊: %s"
 
-#: replication/logical/sequencesync.c:700
+#: replication/logical/sequencesync.c:730
 #, c-format
 msgid "skip synchronization of sequence \"%s.%s\" because it has been dropped concurrently"
 msgstr "跳過序列 \"%s.%s\" 的同步，因為它已被並行刪除"
 
-#: replication/logical/sequencesync.c:714
+#: replication/logical/sequencesync.c:744
 #, c-format
 msgid "skip synchronization of sequence \"%s.%s\" because it is no longer part of subscription \"%s\""
 msgstr "跳過序列 \"%s.%s\" 的同步，因為它已不再屬於訂閱 \"%s\""
 
-#: replication/logical/sequencesync.c:885
+#: replication/logical/sequencesync.c:915
 #, c-format
 msgid "sequencesync worker for subscription \"%s\" could not connect to the publisher: %s"
 msgstr "訂閱 \"%s\" 的序列同步工作行程無法連線到發布伺服器: %s"

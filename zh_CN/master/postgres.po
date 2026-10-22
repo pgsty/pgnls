@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-10-21 19:48+0000\n"
-"PO-Revision-Date: 2026-10-22 07:56+0800\n"
+"POT-Creation-Date: 2026-10-22 07:48+0000\n"
+"PO-Revision-Date: 2026-10-22 21:15+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
 "Language: zh_CN\n"
@@ -14812,7 +14812,7 @@ msgid ""
 "enable the subscription, and alter the subscription to refresh publications."
 msgstr "要启动复制，必须手动创建复制槽、启用订阅，并修改订阅以刷新发布。"
 
-#: commands/subscriptioncmds.c:1379 replication/logical/sequencesync.c:519
+#: commands/subscriptioncmds.c:1379 replication/logical/sequencesync.c:535
 #, c-format
 msgid ""
 "cannot synchronize sequences if the publisher is running a version earlier "
@@ -27408,19 +27408,24 @@ msgstr "删除 %2$s/%3$s/xid* 时无法删除文件 \"%1$s\": %m"
 msgid "could not read from file \"%s\": read %d instead of %d bytes"
 msgstr "无法读取文件 \"%s\": 已读取 %d 字节，预期为 %d 字节"
 
-#: replication/logical/sequencesync.c:197
+#: replication/logical/sequencesync.c:178
+#, c-format
+msgid "synchronizing sequence \"%s.%s\" for subscription \"%s\""
+msgstr "正在为订阅 \"%3$s\" 同步序列 \"%1$s.%2$s\""
+
+#: replication/logical/sequencesync.c:213
 #, c-format
 msgid "mismatched or renamed sequence on subscriber (%s)"
 msgid_plural "mismatched or renamed sequences on subscriber (%s)"
 msgstr[0] "订阅服务器上的序列不匹配或已重命名（%s）"
 
-#: replication/logical/sequencesync.c:216
+#: replication/logical/sequencesync.c:232
 #, c-format
 msgid "insufficient privileges on subscriber sequence (%s)"
 msgid_plural "insufficient privileges on subscriber sequences (%s)"
 msgstr[0] "对订阅服务器上的序列权限不足（%s）"
 
-#: replication/logical/sequencesync.c:221
+#: replication/logical/sequencesync.c:237
 #, c-format
 msgid ""
 "Grant UPDATE on the sequence to the subscription owner on the subscriber."
@@ -27428,13 +27433,13 @@ msgid_plural ""
 "Grant UPDATE on the sequences to the subscription owner on the subscriber."
 msgstr[0] "在订阅服务器上向订阅所有者授予相关序列的 UPDATE 权限。"
 
-#: replication/logical/sequencesync.c:233
+#: replication/logical/sequencesync.c:249
 #, c-format
 msgid "insufficient privileges on publisher sequence (%s)"
 msgid_plural "insufficient privileges on publisher sequences (%s)"
 msgstr[0] "对发布服务器上的序列权限不足（%s）"
 
-#: replication/logical/sequencesync.c:237
+#: replication/logical/sequencesync.c:253
 #, c-format
 msgid ""
 "Grant SELECT on the sequence to the role used for the replication connection "
@@ -27444,36 +27449,36 @@ msgid_plural ""
 "connection on the publisher."
 msgstr[0] "在发布服务器上向复制连接所用角色授予相关序列的 SELECT 权限。"
 
-#: replication/logical/sequencesync.c:249
+#: replication/logical/sequencesync.c:265
 #, c-format
 msgid "missing sequence on publisher (%s)"
 msgid_plural "missing sequences on publisher (%s)"
 msgstr[0] "发布服务器上缺少序列（%s）"
 
-#: replication/logical/sequencesync.c:257
+#: replication/logical/sequencesync.c:273
 #, c-format
 msgid ""
 "logical replication sequence synchronization failed for subscription \"%s\""
 msgstr "订阅 \"%s\" 的逻辑复制序列同步失败"
 
-#: replication/logical/sequencesync.c:617
+#: replication/logical/sequencesync.c:633
 #, c-format
 msgid "could not fetch sequence information from the publisher: %s"
 msgstr "无法从发布服务器获取序列信息: %s"
 
-#: replication/logical/sequencesync.c:700
+#: replication/logical/sequencesync.c:730
 #, c-format
 msgid ""
 "skip synchronization of sequence \"%s.%s\" because it has been dropped "
 "concurrently"
 msgstr "跳过序列 \"%s.%s\" 的同步，因为它已被并发删除"
 
-#: replication/logical/sequencesync.c:714
+#: replication/logical/sequencesync.c:744
 #, c-format
 msgid "skip synchronization of sequence \"%s.%s\" because it is no longer part of subscription \"%s\""
 msgstr "跳过序列 \"%s.%s\" 的同步，因为它已不再属于订阅 \"%s\""
 
-#: replication/logical/sequencesync.c:885
+#: replication/logical/sequencesync.c:915
 #, c-format
 msgid ""
 "sequencesync worker for subscription \"%s\" could not connect to the "
