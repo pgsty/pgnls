@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: psql (PostgreSQL) 18\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-10-14 21:37+0000\n"
-"PO-Revision-Date: 2026-10-15 10:22+0800\n"
+"POT-Creation-Date: 2026-10-21 20:07+0000\n"
+"PO-Revision-Date: 2026-10-22 07:56+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
 "Language: zh_CN\n"
@@ -2782,7 +2782,7 @@ msgstr ""
 "psql 是 PostgreSQL 的交互式终端。\n"
 "\n"
 
-#: help.c:61 help.c:389 help.c:476 help.c:525
+#: help.c:61 help.c:390 help.c:477 help.c:526
 msgid "Usage:\n"
 msgstr "用法:\n"
 
@@ -3120,8 +3120,8 @@ msgstr ""
 "                         每 SEC 秒执行一次查询，最多执行 N 次，\n"
 "                         返回行数少于 MIN 时停止\n"
 
-#: help.c:181 help.c:189 help.c:201 help.c:211 help.c:218 help.c:276 help.c:284
-#: help.c:304 help.c:317 help.c:326 help.c:332
+#: help.c:181 help.c:189 help.c:201 help.c:211 help.c:218 help.c:277 help.c:285
+#: help.c:305 help.c:318 help.c:327 help.c:333
 msgid "\n"
 msgstr "\n"
 
@@ -3262,85 +3262,89 @@ msgid "  \\d[Sx+]                list tables, views, and sequences\n"
 msgstr "  \\d[Sx+]                列出表、视图和序列\n"
 
 #: help.c:223
-msgid "  \\d[S+]   NAME          describe table, view, sequence, or index\n"
-msgstr "  \\d[S+]   NAME          描述表、视图、序列或索引\n"
+msgid "  \\d[Sx+]  NAME          describe table, view, sequence, or index\n"
+msgstr "  \\d[Sx+]  NAME          描述表、视图、序列或索引\n"
 
 #: help.c:224
+msgid "                         (x applies only to sequences)\n"
+msgstr "                         （x 仅适用于序列）\n"
+
+#: help.c:225
 msgid "  \\da[Sx]  [PATTERN]     list aggregates\n"
 msgstr "  \\da[Sx]  [PATTERN]     列出聚合函数\n"
 
-#: help.c:225
+#: help.c:226
 msgid "  \\dA[x+]  [PATTERN]     list access methods\n"
 msgstr "  \\dA[x+]  [PATTERN]     列出访问方法\n"
 
-#: help.c:226
+#: help.c:227
 msgid "  \\dAc[x+] [AMPTRN [TYPEPTRN]]  list operator classes\n"
 msgstr "  \\dAc[x+] [AMPTRN [TYPEPTRN]]  列出操作符类\n"
 
-#: help.c:227
+#: help.c:228
 msgid "  \\dAf[x+] [AMPTRN [TYPEPTRN]]  list operator families\n"
 msgstr "  \\dAf[x+] [AMPTRN [TYPEPTRN]]  列出操作符族\n"
 
-#: help.c:228
+#: help.c:229
 msgid "  \\dAo[x+] [AMPTRN [OPFPTRN]]   list operators of operator families\n"
 msgstr "  \\dAo[x+] [AMPTRN [OPFPTRN]]   列出操作符族中的操作符\n"
 
-#: help.c:229
+#: help.c:230
 msgid ""
 "  \\dAp[x+] [AMPTRN [OPFPTRN]]   list support functions of operator "
 "families\n"
 msgstr "  \\dAp[x+] [AMPTRN [OPFPTRN]]   列出操作符族中的支持函数\n"
 
-#: help.c:230
+#: help.c:231
 msgid "  \\db[x+]  [PATTERN]     list tablespaces\n"
 msgstr "  \\db[x+]  [PATTERN]     列出表空间\n"
 
-#: help.c:231
+#: help.c:232
 msgid "  \\dc[Sx+] [PATTERN]     list conversions\n"
 msgstr "  \\dc[Sx+] [PATTERN]     列出编码转换\n"
 
-#: help.c:232
+#: help.c:233
 msgid "  \\dconfig[x+] [PATTERN] list configuration parameters\n"
 msgstr "  \\dconfig[x+] [PATTERN] 列出配置参数\n"
 
-#: help.c:233
+#: help.c:234
 msgid "  \\dC[x+]  [PATTERN]     list casts\n"
 msgstr "  \\dC[x+]  [PATTERN]     列出类型转换\n"
 
-#: help.c:234
+#: help.c:235
 msgid ""
 "  \\dd[Sx]  [PATTERN]     show object descriptions not displayed elsewhere\n"
 msgstr "  \\dd[Sx]  [PATTERN]     显示未在其他位置显示的对象描述\n"
 
-#: help.c:235
+#: help.c:236
 msgid "  \\dD[Sx+] [PATTERN]     list domains\n"
 msgstr "  \\dD[Sx+] [PATTERN]     列出域\n"
 
-#: help.c:236
+#: help.c:237
 msgid "  \\ddp[x]  [PATTERN]     list default privileges\n"
 msgstr "  \\ddp[x]  [PATTERN]     列出默认权限\n"
 
-#: help.c:237
+#: help.c:238
 msgid "  \\dE[Sx+] [PATTERN]     list foreign tables\n"
 msgstr "  \\dE[Sx+] [PATTERN]     列出外部表\n"
 
-#: help.c:238
+#: help.c:239
 msgid "  \\des[x+] [PATTERN]     list foreign servers\n"
 msgstr "  \\des[x+] [PATTERN]     列出外部服务器\n"
 
-#: help.c:239
+#: help.c:240
 msgid "  \\det[x+] [PATTERN]     list foreign tables\n"
 msgstr "  \\det[x+] [PATTERN]     列出外部表\n"
 
-#: help.c:240
+#: help.c:241
 msgid "  \\deu[x+] [PATTERN]     list user mappings\n"
 msgstr "  \\deu[x+] [PATTERN]     列出用户映射\n"
 
-#: help.c:241
+#: help.c:242
 msgid "  \\dew[x+] [PATTERN]     list foreign-data wrappers\n"
 msgstr "  \\dew[x+] [PATTERN]     列出外部数据包装器\n"
 
-#: help.c:242
+#: help.c:243
 msgid ""
 "  \\df[anptw][Sx+] [FUNCPTRN [TYPEPTRN ...]]\n"
 "                         list [only agg/normal/procedure/trigger/window] "
@@ -3349,47 +3353,47 @@ msgstr ""
 "  \\df[anptw][Sx+] [FUNCPTRN [TYPEPTRN ...]]\n"
 "                         列出函数 [仅聚合/普通/过程/触发器/窗口]\n"
 
-#: help.c:244
+#: help.c:245
 msgid "  \\dF[x+]  [PATTERN]     list text search configurations\n"
 msgstr "  \\dF[x+]  [PATTERN]     列出文本搜索配置\n"
 
-#: help.c:245
+#: help.c:246
 msgid "  \\dFd[x+] [PATTERN]     list text search dictionaries\n"
 msgstr "  \\dFd[x+] [PATTERN]     列出文本搜索字典\n"
 
-#: help.c:246
+#: help.c:247
 msgid "  \\dFp[x+] [PATTERN]     list text search parsers\n"
 msgstr "  \\dFp[x+] [PATTERN]     列出文本搜索解析器\n"
 
-#: help.c:247
+#: help.c:248
 msgid "  \\dFt[x+] [PATTERN]     list text search templates\n"
 msgstr "  \\dFt[x+] [PATTERN]     列出文本搜索模板\n"
 
-#: help.c:248
+#: help.c:249
 msgid "  \\dg[Sx+] [PATTERN]     list roles\n"
 msgstr "  \\dg[Sx+] [PATTERN]     列出角色\n"
 
-#: help.c:249
+#: help.c:250
 msgid "  \\di[Sx+] [PATTERN]     list indexes\n"
 msgstr "  \\di[Sx+] [PATTERN]     列出索引\n"
 
-#: help.c:250
+#: help.c:251
 msgid "  \\dl[x+]                list large objects, same as \\lo_list\n"
 msgstr "  \\dl[x+]                列出大对象，与 \\lo_list 相同\n"
 
-#: help.c:251
+#: help.c:252
 msgid "  \\dL[Sx+] [PATTERN]     list procedural languages\n"
 msgstr "  \\dL[Sx+] [PATTERN]     列出过程语言\n"
 
-#: help.c:252
+#: help.c:253
 msgid "  \\dm[Sx+] [PATTERN]     list materialized views\n"
 msgstr "  \\dm[Sx+] [PATTERN]     列出物化视图\n"
 
-#: help.c:253
+#: help.c:254
 msgid "  \\dn[Sx+] [PATTERN]     list schemas\n"
 msgstr "  \\dn[Sx+] [PATTERN]     列出模式\n"
 
-#: help.c:254
+#: help.c:255
 msgid ""
 "  \\do[Sx+] [OPPTRN [TYPEPTRN [TYPEPTRN]]]\n"
 "                         list operators\n"
@@ -3397,22 +3401,22 @@ msgstr ""
 "  \\do[Sx+] [OPPTRN [TYPEPTRN [TYPEPTRN]]]\n"
 "                         列出操作符\n"
 
-#: help.c:256
+#: help.c:257
 msgid "  \\dO[Sx+] [PATTERN]     list collations\n"
 msgstr "  \\dO[Sx+] [PATTERN]     列出排序规则\n"
 
-#: help.c:257
+#: help.c:258
 msgid ""
 "  \\dp[Sx]  [PATTERN]     list table, view, and sequence access privileges\n"
 msgstr "  \\dp[Sx]  [PATTERN]     列出表、视图和序列的访问权限\n"
 
-#: help.c:258
+#: help.c:259
 msgid ""
 "  \\dP[itnx+] [PATTERN]   list [only index/table] partitioned relations "
 "[n=nested]\n"
 msgstr "  \\dP[itnx+] [PATTERN]   列出 [仅索引/表] 分区关系 [n=嵌套]\n"
 
-#: help.c:259
+#: help.c:260
 msgid ""
 "  \\drds[x] [ROLEPTRN [DBPTRN]]\n"
 "                         list per-database role settings\n"
@@ -3420,75 +3424,75 @@ msgstr ""
 "  \\drds[x] [ROLEPTRN [DBPTRN]]\n"
 "                         列出按数据库设置的角色配置\n"
 
-#: help.c:261
+#: help.c:262
 msgid "  \\drg[Sx] [PATTERN]     list role grants\n"
 msgstr "  \\drg[Sx] [PATTERN]     列出角色授权\n"
 
-#: help.c:262
+#: help.c:263
 msgid "  \\dRp[x+] [PATTERN]     list replication publications\n"
 msgstr "  \\dRp[x+] [PATTERN]     列出复制发布\n"
 
-#: help.c:263
+#: help.c:264
 msgid "  \\dRs[x+] [PATTERN]     list replication subscriptions\n"
 msgstr "  \\dRs[x+] [PATTERN]     列出复制订阅\n"
 
-#: help.c:264
+#: help.c:265
 msgid "  \\ds[Sx+] [PATTERN]     list sequences\n"
 msgstr "  \\ds[Sx+] [PATTERN]     列出序列\n"
 
-#: help.c:265
+#: help.c:266
 msgid "  \\dt[Sx+] [PATTERN]     list tables\n"
 msgstr "  \\dt[Sx+] [PATTERN]     列出表\n"
 
-#: help.c:266
+#: help.c:267
 msgid "  \\dT[Sx+] [PATTERN]     list data types\n"
 msgstr "  \\dT[Sx+] [PATTERN]     列出数据类型\n"
 
-#: help.c:267
+#: help.c:268
 msgid "  \\du[Sx+] [PATTERN]     list roles\n"
 msgstr "  \\du[Sx+] [PATTERN]     列出角色\n"
 
-#: help.c:268
+#: help.c:269
 msgid "  \\dv[Sx+] [PATTERN]     list views\n"
 msgstr "  \\dv[Sx+] [PATTERN]     列出视图\n"
 
-#: help.c:269
+#: help.c:270
 msgid "  \\dx[x+]  [PATTERN]     list extensions\n"
 msgstr "  \\dx[x+]  [PATTERN]     列出扩展\n"
 
-#: help.c:270
+#: help.c:271
 msgid "  \\dX[x]   [PATTERN]     list extended statistics\n"
 msgstr "  \\dX[x]   [PATTERN]     列出扩展统计信息\n"
 
-#: help.c:271
+#: help.c:272
 msgid "  \\dy[x+]  [PATTERN]     list event triggers\n"
 msgstr "  \\dy[x+]  [PATTERN]     列出事件触发器\n"
 
-#: help.c:272
+#: help.c:273
 msgid "  \\l[x+]   [PATTERN]     list databases\n"
 msgstr "  \\l[x+]   [PATTERN]     列出数据库\n"
 
-#: help.c:273
+#: help.c:274
 msgid "  \\sf[+]   FUNCNAME      show a function's definition\n"
 msgstr "  \\sf[+]   FUNCNAME      显示函数定义\n"
 
-#: help.c:274
+#: help.c:275
 msgid "  \\sv[+]   VIEWNAME      show a view's definition\n"
 msgstr "  \\sv[+]   VIEWNAME      显示视图定义\n"
 
-#: help.c:275
+#: help.c:276
 msgid "  \\z[Sx]   [PATTERN]     same as \\dp\n"
 msgstr "  \\z[Sx]   [PATTERN]     与 \\dp 相同\n"
 
-#: help.c:278
+#: help.c:279
 msgid "Large Objects\n"
 msgstr "大对象\n"
 
-#: help.c:279
+#: help.c:280
 msgid "  \\lo_export LOBOID FILE write large object to file\n"
 msgstr "  \\lo_export LOBOID FILE 将大对象写入文件\n"
 
-#: help.c:280
+#: help.c:281
 msgid ""
 "  \\lo_import FILE [COMMENT]\n"
 "                         read large object from file\n"
@@ -3496,39 +3500,39 @@ msgstr ""
 "  \\lo_import FILE [COMMENT]\n"
 "                         从文件读取大对象\n"
 
-#: help.c:282
+#: help.c:283
 msgid "  \\lo_list[x+]           list large objects\n"
 msgstr "  \\lo_list[x+]           列出大对象\n"
 
-#: help.c:283
+#: help.c:284
 msgid "  \\lo_unlink LOBOID      delete a large object\n"
 msgstr "  \\lo_unlink LOBOID      删除大对象\n"
 
-#: help.c:286
+#: help.c:287
 msgid "Formatting\n"
 msgstr "格式化\n"
 
-#: help.c:287
+#: help.c:288
 msgid ""
 "  \\a                     toggle between unaligned and aligned output mode\n"
 msgstr "  \\a                     在非对齐模式和对齐模式之间切换\n"
 
-#: help.c:288
+#: help.c:289
 msgid "  \\C [STRING]            set table title, or unset if none\n"
 msgstr "  \\C [STRING]            设置表格标题，不带参数时清除标题\n"
 
-#: help.c:289
+#: help.c:290
 msgid ""
 "  \\f [STRING]            show or set field separator for unaligned query "
 "output\n"
 msgstr "  \\f [STRING]            显示或设置非对齐模式查询输出的字段分隔符\n"
 
-#: help.c:290
+#: help.c:291
 #, c-format
 msgid "  \\H                     toggle HTML output mode (currently %s)\n"
 msgstr "  \\H                     切换 HTML 输出模式（当前为 %s）\n"
 
-#: help.c:292
+#: help.c:293
 msgid ""
 "  \\pset [NAME [VALUE]]   set table output option\n"
 "                         (border|columns|csv_fieldsep|expanded|fieldsep|\n"
@@ -3546,31 +3550,31 @@ msgstr ""
 "                         unicode_border_linestyle|unicode_column_linestyle|\n"
 "                         unicode_header_linestyle|xheader_width)\n"
 
-#: help.c:299
+#: help.c:300
 #, c-format
 msgid "  \\t [on|off]            show only rows (currently %s)\n"
 msgstr "  \\t [on|off]            只显示行（当前为 %s）\n"
 
-#: help.c:301
+#: help.c:302
 msgid ""
 "  \\T [STRING]            set HTML <table> tag attributes, or unset if none\n"
 msgstr ""
 "  \\T [STRING]            设置 HTML <table> 标签属性，不带参数时清除设置\n"
 
-#: help.c:302
+#: help.c:303
 #, c-format
 msgid "  \\x [on|off|auto]       toggle expanded output (currently %s)\n"
 msgstr "  \\x [on|off|auto]       切换扩展输出模式（当前为 %s）\n"
 
-#: help.c:303
+#: help.c:304
 msgid "auto"
 msgstr "自动"
 
-#: help.c:306
+#: help.c:307
 msgid "Connection\n"
 msgstr "连接\n"
 
-#: help.c:308
+#: help.c:309
 #, c-format
 msgid ""
 "  \\c[onnect] {[DBNAME|- USER|- HOST|- PORT|-] | conninfo}\n"
@@ -3579,7 +3583,7 @@ msgstr ""
 "  \\c[onnect] {[DBNAME|- USER|- HOST|- PORT|-] | conninfo}\n"
 "                         连接到新数据库（当前为 \"%s\"）\n"
 
-#: help.c:312
+#: help.c:313
 msgid ""
 "  \\c[onnect] {[DBNAME|- USER|- HOST|- PORT|-] | conninfo}\n"
 "                         connect to new database (currently no connection)\n"
@@ -3587,73 +3591,73 @@ msgstr ""
 "  \\c[onnect] {[DBNAME|- USER|- HOST|- PORT|-] | conninfo}\n"
 "                         连接到新数据库（当前无连接）\n"
 
-#: help.c:314
+#: help.c:315
 msgid ""
 "  \\conninfo              display information about current connection\n"
 msgstr "  \\conninfo              显示当前连接的相关信息\n"
 
-#: help.c:315
+#: help.c:316
 msgid "  \\encoding [ENCODING]   show or set client encoding\n"
 msgstr "  \\encoding [ENCODING]   显示或设置客户端编码\n"
 
-#: help.c:316
+#: help.c:317
 msgid "  \\password [USERNAME]   securely change the password for a user\n"
 msgstr "  \\password [USERNAME]   安全地为用户更改密码\n"
 
-#: help.c:319
+#: help.c:320
 msgid "Operating System\n"
 msgstr "操作系统\n"
 
-#: help.c:320
+#: help.c:321
 msgid "  \\cd [DIR]              change the current working directory\n"
 msgstr "  \\cd [DIR]              更改目前的工作目录\n"
 
-#: help.c:321
+#: help.c:322
 msgid "  \\getenv PSQLVAR ENVVAR fetch environment variable\n"
 msgstr "  \\getenv PSQLVAR ENVVAR 获取环境变量\n"
 
-#: help.c:322
+#: help.c:323
 msgid "  \\setenv NAME [VALUE]   set or unset environment variable\n"
 msgstr "  \\setenv NAME [VALUE]   设置或取消设置环境变量\n"
 
-#: help.c:323
+#: help.c:324
 #, c-format
 msgid "  \\timing [on|off]       toggle timing of commands (currently %s)\n"
 msgstr "  \\timing [on|off]       切换命令计时（当前为 %s）\n"
 
-#: help.c:325
+#: help.c:326
 msgid ""
 "  \\! [COMMAND]           execute command in shell or start interactive "
 "shell\n"
 msgstr "  \\! [COMMAND]           在 shell 中执行命令或启动交互式 shell\n"
 
-#: help.c:328
+#: help.c:329
 msgid "Variables\n"
 msgstr "变量\n"
 
-#: help.c:329
+#: help.c:330
 msgid "  \\prompt [TEXT] NAME    prompt user to set internal variable\n"
 msgstr "  \\prompt [TEXT] NAME    提示用户设置内部变量\n"
 
-#: help.c:330
+#: help.c:331
 msgid ""
 "  \\set [NAME [VALUE]]    set internal variable, or list all if no "
 "parameters\n"
 msgstr "  \\set [NAME [VALUE]]    设置内部变量，若无参数则列出全部变量\n"
 
-#: help.c:331
+#: help.c:332
 msgid "  \\unset NAME            unset (delete) internal variable\n"
 msgstr "  \\unset NAME            取消设置（删除）内部变量\n"
 
-#: help.c:334
+#: help.c:335
 msgid "Extended Query Protocol\n"
 msgstr "扩展查询协议\n"
 
-#: help.c:335
+#: help.c:336
 msgid "  \\bind [PARAM]...       set query parameters\n"
 msgstr "  \\bind [PARAM]...       设置查询参数\n"
 
-#: help.c:336
+#: help.c:337
 msgid ""
 "  \\bind_named STMT_NAME [PARAM]...\n"
 "                         set query parameters for an existing prepared "
@@ -3662,7 +3666,7 @@ msgstr ""
 "  \\bind_named STMT_NAME [PARAM]...\n"
 "                         设置已有预备语句的查询参数\n"
 
-#: help.c:338
+#: help.c:339
 msgid ""
 "  \\close_prepared STMT_NAME\n"
 "                         close an existing prepared statement\n"
@@ -3670,47 +3674,47 @@ msgstr ""
 "  \\close_prepared STMT_NAME\n"
 "                         关闭已有预备语句\n"
 
-#: help.c:340
+#: help.c:341
 msgid "  \\endpipeline           exit pipeline mode\n"
 msgstr "  \\endpipeline           退出流水线模式\n"
 
-#: help.c:341
+#: help.c:342
 msgid "  \\flush                 flush output data to the server\n"
 msgstr "  \\flush                 将输出数据刷新到服务器\n"
 
-#: help.c:342
+#: help.c:343
 msgid ""
 "  \\flushrequest          send request to the server to flush its output "
 "buffer\n"
 msgstr "  \\flushrequest          请求服务器刷新其输出缓冲区\n"
 
-#: help.c:343
+#: help.c:344
 msgid ""
 "  \\getresults [NUM_RES]  read NUM_RES pending results, or all if no "
 "argument\n"
 msgstr ""
 "  \\getresults [NUM_RES]  读取 NUM_RES 个待处理结果，不带参数时读取全部\n"
 
-#: help.c:344
+#: help.c:345
 msgid "  \\parse STMT_NAME       create a prepared statement\n"
 msgstr "  \\parse STMT_NAME       创建预备语句\n"
 
-#: help.c:345
+#: help.c:346
 msgid ""
 "  \\sendpipeline          send an extended query to an ongoing pipeline\n"
 msgstr "  \\sendpipeline          向正在进行的流水线发送扩展查询\n"
 
-#: help.c:346
+#: help.c:347
 msgid "  \\startpipeline         enter pipeline mode\n"
 msgstr "  \\startpipeline         进入流水线模式\n"
 
-#: help.c:347
+#: help.c:348
 msgid ""
 "  \\syncpipeline          add a synchronisation point to an ongoing "
 "pipeline\n"
 msgstr "  \\syncpipeline          向正在进行的流水线添加同步点\n"
 
-#: help.c:386
+#: help.c:387
 msgid ""
 "List of specially treated variables\n"
 "\n"
@@ -3718,11 +3722,11 @@ msgstr ""
 "特殊处理变量列表\n"
 "\n"
 
-#: help.c:388
+#: help.c:389
 msgid "psql variables:\n"
 msgstr "psql 变量:\n"
 
-#: help.c:390
+#: help.c:391
 msgid ""
 "  psql --set=NAME=VALUE\n"
 "  or \\set NAME VALUE inside psql\n"
@@ -3732,7 +3736,7 @@ msgstr ""
 "  或在 psql 中执行 \\set NAME VALUE\n"
 "\n"
 
-#: help.c:392
+#: help.c:393
 msgid ""
 "  AUTOCOMMIT\n"
 "    if set, successful SQL commands are automatically committed\n"
@@ -3740,7 +3744,7 @@ msgstr ""
 "  AUTOCOMMIT\n"
 "    设置后，成功的 SQL 命令会自动提交\n"
 
-#: help.c:394
+#: help.c:395
 msgid ""
 "  COMP_KEYWORD_CASE\n"
 "    determines the case used to complete SQL key words\n"
@@ -3750,7 +3754,7 @@ msgstr ""
 "    决定 SQL 关键字补全所用的大小写\n"
 "    [lower, upper, preserve-lower, preserve-upper]\n"
 
-#: help.c:397
+#: help.c:398
 msgid ""
 "  DBNAME\n"
 "    the currently connected database name\n"
@@ -3758,7 +3762,7 @@ msgstr ""
 "  DBNAME\n"
 "    当前已连接的数据库名\n"
 
-#: help.c:399
+#: help.c:400
 msgid ""
 "  ECHO\n"
 "    controls what input is written to standard output\n"
@@ -3768,7 +3772,7 @@ msgstr ""
 "    控制将哪些输入写入标准输出\n"
 "    [all, errors, none, queries]\n"
 
-#: help.c:402
+#: help.c:403
 msgid ""
 "  ECHO_HIDDEN\n"
 "    if set, display internal queries executed by backslash commands;\n"
@@ -3778,7 +3782,7 @@ msgstr ""
 "    设置后显示反斜杠命令执行的内部查询；\n"
 "    设为 \"noexec\" 时只显示而不执行\n"
 
-#: help.c:405
+#: help.c:406
 msgid ""
 "  ENCODING\n"
 "    current client character set encoding\n"
@@ -3786,7 +3790,7 @@ msgstr ""
 "  ENCODING\n"
 "    当前的客户端字符集编码\n"
 
-#: help.c:407
+#: help.c:408
 msgid ""
 "  ERROR\n"
 "    \"true\" if last query failed, else \"false\"\n"
@@ -3794,7 +3798,7 @@ msgstr ""
 "  ERROR\n"
 "    上次查询失败时为 \"true\"，否则为 \"false\"\n"
 
-#: help.c:409
+#: help.c:410
 msgid ""
 "  FETCH_COUNT\n"
 "    the number of result rows to fetch and display at a time (0 = "
@@ -3803,7 +3807,7 @@ msgstr ""
 "  FETCH_COUNT\n"
 "    每次获取并显示的结果行数（0 = 无限制）\n"
 
-#: help.c:411
+#: help.c:412
 msgid ""
 "  HIDE_TABLEAM\n"
 "    if set, table access methods are not displayed\n"
@@ -3811,7 +3815,7 @@ msgstr ""
 "  HIDE_TABLEAM\n"
 "    如果设置，则不显示表访问方法\n"
 
-#: help.c:413
+#: help.c:414
 msgid ""
 "  HIDE_TOAST_COMPRESSION\n"
 "    if set, compression methods are not displayed\n"
@@ -3819,7 +3823,7 @@ msgstr ""
 "  HIDE_TOAST_COMPRESSION\n"
 "    如果设置，则不显示压缩方法\n"
 
-#: help.c:415
+#: help.c:416
 msgid ""
 "  HISTCONTROL\n"
 "    controls command history [ignorespace, ignoredups, ignoreboth]\n"
@@ -3827,7 +3831,7 @@ msgstr ""
 "  HISTCONTROL\n"
 "    控制命令历史记录 [ignorespace, ignoredups, ignoreboth]\n"
 
-#: help.c:417
+#: help.c:418
 msgid ""
 "  HISTFILE\n"
 "    file name used to store the command history\n"
@@ -3835,7 +3839,7 @@ msgstr ""
 "  HISTFILE\n"
 "    用来存储命令历史记录的文件名\n"
 
-#: help.c:419
+#: help.c:420
 msgid ""
 "  HISTSIZE\n"
 "    maximum number of commands to store in the command history\n"
@@ -3843,7 +3847,7 @@ msgstr ""
 "  HISTSIZE\n"
 "    保存在命令历史记录中的最大命令数\n"
 
-#: help.c:421
+#: help.c:422
 msgid ""
 "  HOST\n"
 "    the currently connected database server host\n"
@@ -3851,7 +3855,7 @@ msgstr ""
 "  HOST\n"
 "    当前已连接的数据库服务器主机\n"
 
-#: help.c:423
+#: help.c:424
 msgid ""
 "  IGNOREEOF\n"
 "    number of EOFs needed to terminate an interactive session\n"
@@ -3859,7 +3863,7 @@ msgstr ""
 "  IGNOREEOF\n"
 "    终止交互式会话所需的 EOF 数\n"
 
-#: help.c:425
+#: help.c:426
 msgid ""
 "  LASTOID\n"
 "    value of the last affected OID\n"
@@ -3867,7 +3871,7 @@ msgstr ""
 "  LASTOID\n"
 "    最后一个受影响的 OID 的值\n"
 
-#: help.c:427
+#: help.c:428
 msgid ""
 "  LAST_ERROR_MESSAGE\n"
 "  LAST_ERROR_SQLSTATE\n"
@@ -3878,7 +3882,7 @@ msgstr ""
 "  LAST_ERROR_SQLSTATE\n"
 "    最近错误的消息和 SQLSTATE，无错误时分别为空字符串和 \"00000\"\n"
 
-#: help.c:430
+#: help.c:431
 msgid ""
 "  ON_ERROR_ROLLBACK\n"
 "    if set, an error doesn't stop a transaction (uses implicit savepoints)\n"
@@ -3886,7 +3890,7 @@ msgstr ""
 "  ON_ERROR_ROLLBACK\n"
 "    设置后，错误不会停止事务（使用隐式保存点）\n"
 
-#: help.c:432
+#: help.c:433
 msgid ""
 "  ON_ERROR_STOP\n"
 "    stop batch execution after error\n"
@@ -3894,7 +3898,7 @@ msgstr ""
 "  ON_ERROR_STOP\n"
 "    发生错误后停止批量执行\n"
 
-#: help.c:434
+#: help.c:435
 msgid ""
 "  PORT\n"
 "    server port of the current connection\n"
@@ -3902,7 +3906,7 @@ msgstr ""
 "  PORT\n"
 "    当前连接的服务器端口\n"
 
-#: help.c:436
+#: help.c:437
 msgid ""
 "  PROMPT1\n"
 "    specifies the standard psql prompt\n"
@@ -3910,7 +3914,7 @@ msgstr ""
 "  PROMPT1\n"
 "    指定标准的 psql 提示符\n"
 
-#: help.c:438
+#: help.c:439
 msgid ""
 "  PROMPT2\n"
 "    specifies the prompt used when a statement continues from a previous "
@@ -3919,7 +3923,7 @@ msgstr ""
 "  PROMPT2\n"
 "    指定在语句跨行时使用的提示符\n"
 
-#: help.c:440
+#: help.c:441
 msgid ""
 "  PROMPT3\n"
 "    specifies the prompt used during COPY ... FROM STDIN\n"
@@ -3927,7 +3931,7 @@ msgstr ""
 "  PROMPT3\n"
 "    指定 COPY ... FROM STDIN 期间使用的提示符\n"
 
-#: help.c:442
+#: help.c:443
 msgid ""
 "  QUIET\n"
 "    run quietly (same as -q option)\n"
@@ -3935,7 +3939,7 @@ msgstr ""
 "  QUIET\n"
 "    静默运行（和 -q 选项相同）\n"
 
-#: help.c:444
+#: help.c:445
 msgid ""
 "  ROW_COUNT\n"
 "    number of rows returned or affected by last query, or 0\n"
@@ -3943,7 +3947,7 @@ msgstr ""
 "  ROW_COUNT\n"
 "    上一个查询返回或影响的行数，或 0\n"
 
-#: help.c:446
+#: help.c:447
 msgid ""
 "  SERVER_VERSION_NAME\n"
 "  SERVER_VERSION_NUM\n"
@@ -3953,7 +3957,7 @@ msgstr ""
 "  SERVER_VERSION_NUM\n"
 "    服务器版本（短字符串或数值格式）\n"
 
-#: help.c:449
+#: help.c:450
 msgid ""
 "  SHELL_ERROR\n"
 "    \"true\" if the last shell command failed, \"false\" if it succeeded\n"
@@ -3961,7 +3965,7 @@ msgstr ""
 "  SHELL_ERROR\n"
 "    上次 shell 命令失败时为 \"true\"，成功时为 \"false\"\n"
 
-#: help.c:451
+#: help.c:452
 msgid ""
 "  SHELL_EXIT_CODE\n"
 "    exit status of the last shell command\n"
@@ -3969,7 +3973,7 @@ msgstr ""
 "  SHELL_EXIT_CODE\n"
 "    上次 shell 命令的退出状态\n"
 
-#: help.c:453
+#: help.c:454
 msgid ""
 "  SHOW_ALL_RESULTS\n"
 "    show all results of a combined query (\\;) instead of only the last\n"
@@ -3977,7 +3981,7 @@ msgstr ""
 "  SHOW_ALL_RESULTS\n"
 "    显示组合查询（\\;）的全部结果，而不仅是最后一个\n"
 
-#: help.c:455
+#: help.c:456
 msgid ""
 "  SHOW_CONTEXT\n"
 "    controls display of message context fields [never, errors, always]\n"
@@ -3985,7 +3989,7 @@ msgstr ""
 "  SHOW_CONTEXT\n"
 "    控制消息上下文字段的显示 [never, errors, always]\n"
 
-#: help.c:457
+#: help.c:458
 msgid ""
 "  SINGLELINE\n"
 "    if set, end of line terminates SQL commands (same as -S option)\n"
@@ -3993,7 +3997,7 @@ msgstr ""
 "  SINGLELINE\n"
 "    设置后，行末终止 SQL 命令（与 -S 选项相同）\n"
 
-#: help.c:459
+#: help.c:460
 msgid ""
 "  SINGLESTEP\n"
 "    single-step mode (same as -s option)\n"
@@ -4001,7 +4005,7 @@ msgstr ""
 "  SINGLESTEP\n"
 "    单步模式（与 -s 选项相同）\n"
 
-#: help.c:461
+#: help.c:462
 msgid ""
 "  SQLSTATE\n"
 "    SQLSTATE of last query, or \"00000\" if no error\n"
@@ -4009,7 +4013,7 @@ msgstr ""
 "  SQLSTATE\n"
 "    最近查询的 SQLSTATE，无错误时为 \"00000\"\n"
 
-#: help.c:463
+#: help.c:464
 msgid ""
 "  USER\n"
 "    the currently connected database user\n"
@@ -4017,7 +4021,7 @@ msgstr ""
 "  USER\n"
 "    当前已连接的数据库用户\n"
 
-#: help.c:465
+#: help.c:466
 msgid ""
 "  VERBOSITY\n"
 "    controls verbosity of error reports [default, verbose, terse, sqlstate]\n"
@@ -4025,7 +4029,7 @@ msgstr ""
 "  VERBOSITY\n"
 "    控制错误报告的详细程度 [default, verbose, terse, sqlstate]\n"
 
-#: help.c:467
+#: help.c:468
 msgid ""
 "  VERSION\n"
 "  VERSION_NAME\n"
@@ -4037,7 +4041,7 @@ msgstr ""
 "  VERSION_NUM\n"
 "    psql 版本（详细字符串、短字符串或数值格式）\n"
 
-#: help.c:471
+#: help.c:472
 #, c-format
 msgid ""
 "  WATCH_INTERVAL\n"
@@ -4046,7 +4050,7 @@ msgstr ""
 "  WATCH_INTERVAL\n"
 "    \\watch 两次执行之间等待的秒数（默认为 %s）\n"
 
-#: help.c:475
+#: help.c:476
 msgid ""
 "\n"
 "Display settings:\n"
@@ -4054,7 +4058,7 @@ msgstr ""
 "\n"
 "显示设置:\n"
 
-#: help.c:477
+#: help.c:478
 msgid ""
 "  psql --pset=NAME[=VALUE]\n"
 "  or \\pset NAME [VALUE] inside psql\n"
@@ -4064,7 +4068,7 @@ msgstr ""
 "  或在 psql 中执行 \\pset NAME [VALUE]\n"
 "\n"
 
-#: help.c:479
+#: help.c:480
 msgid ""
 "  border\n"
 "    border style (number)\n"
@@ -4072,7 +4076,7 @@ msgstr ""
 "  border\n"
 "    边框样式（数字）\n"
 
-#: help.c:481
+#: help.c:482
 msgid ""
 "  columns\n"
 "    target width for the wrapped format\n"
@@ -4080,7 +4084,7 @@ msgstr ""
 "  columns\n"
 "    wrapped 格式的目标宽度\n"
 
-#: help.c:483
+#: help.c:484
 #, c-format
 msgid ""
 "  csv_fieldsep\n"
@@ -4089,7 +4093,7 @@ msgstr ""
 "  csv_fieldsep\n"
 "    CSV 输出格式的字段分隔符（默认为 \"%c\"）\n"
 
-#: help.c:486
+#: help.c:487
 msgid ""
 "  expanded (or x)\n"
 "    expanded output [on, off, auto]\n"
@@ -4097,7 +4101,7 @@ msgstr ""
 "  expanded（或 x）\n"
 "    扩展输出 [on, off, auto]\n"
 
-#: help.c:488
+#: help.c:489
 #, c-format
 msgid ""
 "  fieldsep\n"
@@ -4106,7 +4110,7 @@ msgstr ""
 "  fieldsep\n"
 "    非对齐输出的字段分隔符（默认为 \"%s\"）\n"
 
-#: help.c:491
+#: help.c:492
 msgid ""
 "  fieldsep_zero\n"
 "    set field separator for unaligned output to a zero byte\n"
@@ -4114,7 +4118,7 @@ msgstr ""
 "  fieldsep_zero\n"
 "    将非对齐输出的字段分隔符设为空字节\n"
 
-#: help.c:493
+#: help.c:494
 msgid ""
 "  footer\n"
 "    enable or disable display of the table footer [on, off]\n"
@@ -4122,7 +4126,7 @@ msgstr ""
 "  footer\n"
 "    启用或禁用表格页脚的显示 [on, off]\n"
 
-#: help.c:495
+#: help.c:496
 msgid ""
 "  format\n"
 "    set output format [unaligned, aligned, wrapped, html, asciidoc, ...]\n"
@@ -4130,7 +4134,7 @@ msgstr ""
 "  format\n"
 "    设置输出格式 [unaligned, aligned, wrapped, html, asciidoc, ...]\n"
 
-#: help.c:497
+#: help.c:498
 msgid ""
 "  linestyle\n"
 "    set the border line drawing style [ascii, old-ascii, unicode]\n"
@@ -4138,7 +4142,7 @@ msgstr ""
 "  linestyle\n"
 "    设置边框线型 [ascii, old-ascii, unicode]\n"
 
-#: help.c:499
+#: help.c:500
 msgid ""
 "  null\n"
 "    set the string to be printed in place of a null value\n"
@@ -4146,7 +4150,7 @@ msgstr ""
 "  null\n"
 "    设置用于替代 NULL 值的打印字符串\n"
 
-#: help.c:501
+#: help.c:502
 msgid ""
 "  numericlocale\n"
 "    enable display of a locale-specific character to separate groups of "
@@ -4155,7 +4159,7 @@ msgstr ""
 "  numericlocale\n"
 "    启用数字分组分隔符显示，分隔符由区域设置决定\n"
 
-#: help.c:503
+#: help.c:504
 msgid ""
 "  pager\n"
 "    control when an external pager is used [yes, no, always]\n"
@@ -4163,7 +4167,7 @@ msgstr ""
 "  pager\n"
 "    控制何时使用外部分页器 [yes, no, always]\n"
 
-#: help.c:505
+#: help.c:506
 msgid ""
 "  recordsep\n"
 "    record (line) separator for unaligned output\n"
@@ -4171,7 +4175,7 @@ msgstr ""
 "  recordsep\n"
 "    用于非对齐输出中的记录（行）分隔符\n"
 
-#: help.c:507
+#: help.c:508
 msgid ""
 "  recordsep_zero\n"
 "    set record separator for unaligned output to a zero byte\n"
@@ -4179,7 +4183,7 @@ msgstr ""
 "  recordsep_zero\n"
 "    将非对齐输出的记录分隔符设为空字节\n"
 
-#: help.c:509
+#: help.c:510
 msgid ""
 "  tableattr (or T)\n"
 "    specify attributes for table tag in html format, or proportional\n"
@@ -4189,7 +4193,7 @@ msgstr ""
 "    指定 html 格式中表格标签的属性\n"
 "    或者 latex-longtable 格式中左对齐数据类型的比例列宽\n"
 
-#: help.c:512
+#: help.c:513
 msgid ""
 "  title\n"
 "    set the table title for subsequently printed tables\n"
@@ -4197,7 +4201,7 @@ msgstr ""
 "  title\n"
 "    为后续打印的表格设置标题\n"
 
-#: help.c:514
+#: help.c:515
 msgid ""
 "  tuples_only\n"
 "    if set, only actual table data is shown\n"
@@ -4205,7 +4209,7 @@ msgstr ""
 "  tuples_only\n"
 "    设置后，只显示实际的表格数据\n"
 
-#: help.c:516
+#: help.c:517
 msgid ""
 "  unicode_border_linestyle\n"
 "  unicode_column_linestyle\n"
@@ -4217,7 +4221,7 @@ msgstr ""
 "  unicode_header_linestyle\n"
 "    设置 Unicode 线型 [single, double]\n"
 
-#: help.c:520
+#: help.c:521
 msgid ""
 "  xheader_width\n"
 "    set the maximum width of the header for expanded output\n"
@@ -4227,7 +4231,7 @@ msgstr ""
 "    设置扩展输出标题的最大宽度\n"
 "    [full, column, page, 整数值]\n"
 
-#: help.c:524
+#: help.c:525
 msgid ""
 "\n"
 "Environment variables:\n"
@@ -4235,7 +4239,7 @@ msgstr ""
 "\n"
 "环境变量:\n"
 
-#: help.c:528
+#: help.c:529
 msgid ""
 "  NAME=VALUE [NAME=VALUE] psql ...\n"
 "  or \\setenv NAME [VALUE] inside psql\n"
@@ -4245,7 +4249,7 @@ msgstr ""
 "  或在 psql 中执行 \\setenv NAME [VALUE]\n"
 "\n"
 
-#: help.c:530
+#: help.c:531
 msgid ""
 "  set NAME=VALUE\n"
 "  psql ...\n"
@@ -4257,7 +4261,7 @@ msgstr ""
 "  或在 psql 中执行 \\setenv NAME [VALUE]\n"
 "\n"
 
-#: help.c:533
+#: help.c:534
 msgid ""
 "  COLUMNS\n"
 "    number of columns for wrapped format\n"
@@ -4265,7 +4269,7 @@ msgstr ""
 "  COLUMNS\n"
 "    wrapped 格式的显示列数\n"
 
-#: help.c:535
+#: help.c:536
 msgid ""
 "  PGAPPNAME\n"
 "    same as the application_name connection parameter\n"
@@ -4273,7 +4277,7 @@ msgstr ""
 "  PGAPPNAME\n"
 "    与 application_name 连接参数相同\n"
 
-#: help.c:537
+#: help.c:538
 msgid ""
 "  PGDATABASE\n"
 "    same as the dbname connection parameter\n"
@@ -4281,7 +4285,7 @@ msgstr ""
 "  PGDATABASE\n"
 "    与 dbname 连接参数相同\n"
 
-#: help.c:539
+#: help.c:540
 msgid ""
 "  PGHOST\n"
 "    same as the host connection parameter\n"
@@ -4289,7 +4293,7 @@ msgstr ""
 "  PGHOST\n"
 "    与 host 连接参数相同\n"
 
-#: help.c:541
+#: help.c:542
 msgid ""
 "  PGPASSFILE\n"
 "    password file name\n"
@@ -4297,7 +4301,7 @@ msgstr ""
 "  PGPASSFILE\n"
 "    密码文件名\n"
 
-#: help.c:543
+#: help.c:544
 msgid ""
 "  PGPASSWORD\n"
 "    connection password (not recommended)\n"
@@ -4305,7 +4309,7 @@ msgstr ""
 "  PGPASSWORD\n"
 "    连接密码（不推荐）\n"
 
-#: help.c:545
+#: help.c:546
 msgid ""
 "  PGPORT\n"
 "    same as the port connection parameter\n"
@@ -4313,7 +4317,7 @@ msgstr ""
 "  PGPORT\n"
 "    与 port 连接参数相同\n"
 
-#: help.c:547
+#: help.c:548
 msgid ""
 "  PGUSER\n"
 "    same as the user connection parameter\n"
@@ -4321,7 +4325,7 @@ msgstr ""
 "  PGUSER\n"
 "    与 user 连接参数相同\n"
 
-#: help.c:549
+#: help.c:550
 msgid ""
 "  PSQL_EDITOR, EDITOR, VISUAL\n"
 "    editor used by the \\e, \\ef, and \\ev commands\n"
@@ -4329,7 +4333,7 @@ msgstr ""
 "  PSQL_EDITOR, EDITOR, VISUAL\n"
 "    \\e, \\ef 和 \\ev 命令使用的编辑器\n"
 
-#: help.c:551
+#: help.c:552
 msgid ""
 "  PSQL_EDITOR_LINENUMBER_ARG\n"
 "    how to specify a line number when invoking the editor\n"
@@ -4337,7 +4341,7 @@ msgstr ""
 "  PSQL_EDITOR_LINENUMBER_ARG\n"
 "    调用编辑器时如何指定行号\n"
 
-#: help.c:553
+#: help.c:554
 msgid ""
 "  PSQL_HISTORY\n"
 "    alternative location for the command history file\n"
@@ -4345,7 +4349,7 @@ msgstr ""
 "  PSQL_HISTORY\n"
 "    命令历史记录文件的替代位置\n"
 
-#: help.c:555
+#: help.c:556
 msgid ""
 "  PSQL_PAGER, PAGER\n"
 "    name of external pager program\n"
@@ -4353,7 +4357,7 @@ msgstr ""
 "  PSQL_PAGER, PAGER\n"
 "    外部分页器程序的名称\n"
 
-#: help.c:558
+#: help.c:559
 msgid ""
 "  PSQL_WATCH_PAGER\n"
 "    name of external pager program used for \\watch\n"
@@ -4361,7 +4365,7 @@ msgstr ""
 "  PSQL_WATCH_PAGER\n"
 "    用于 \\watch 的外部分页器程序名称\n"
 
-#: help.c:561
+#: help.c:562
 msgid ""
 "  PSQLRC\n"
 "    alternative location for the user's .psqlrc file\n"
@@ -4369,7 +4373,7 @@ msgstr ""
 "  PSQLRC\n"
 "    用户的 .psqlrc 文件的替代位置\n"
 
-#: help.c:563
+#: help.c:564
 msgid ""
 "  SHELL\n"
 "    shell used by the \\! command\n"
@@ -4377,7 +4381,7 @@ msgstr ""
 "  SHELL\n"
 "    \\! 命令使用的 shell\n"
 
-#: help.c:565
+#: help.c:566
 msgid ""
 "  TMPDIR\n"
 "    directory for temporary files\n"
@@ -4385,11 +4389,11 @@ msgstr ""
 "  TMPDIR\n"
 "    临时文件的目录\n"
 
-#: help.c:625
+#: help.c:626
 msgid "Available help:\n"
 msgstr "可用的帮助:\n"
 
-#: help.c:720
+#: help.c:721
 #, c-format
 msgid ""
 "Command:     %s\n"
@@ -4408,7 +4412,7 @@ msgstr ""
 "URL: %s\n"
 "\n"
 
-#: help.c:743
+#: help.c:744
 #, c-format
 msgid ""
 "No help available for \"%s\".\n"

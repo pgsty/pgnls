@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 17\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-10-14 20:24+0000\n"
+"POT-Creation-Date: 2026-10-21 18:24+0000\n"
 "PO-Revision-Date: 2026-10-15 10:22+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
@@ -237,7 +237,7 @@ msgstr "无法对文件 \"%s\" 执行 fsync: %m"
 #: utils/hash/dynahash.c:1100 utils/mb/mbutils.c:410 utils/mb/mbutils.c:438
 #: utils/mb/mbutils.c:823 utils/mb/mbutils.c:850 utils/misc/guc.c:649
 #: utils/misc/guc.c:674 utils/misc/guc.c:1062 utils/misc/guc.c:4508
-#: utils/misc/tzparser.c:477 utils/mmgr/aset.c:451 utils/mmgr/bump.c:183
+#: utils/misc/tzparser.c:477 utils/mmgr/aset.c:505 utils/mmgr/bump.c:183
 #: utils/mmgr/dsa.c:707 utils/mmgr/dsa.c:729 utils/mmgr/dsa.c:810
 #: utils/mmgr/generation.c:215 utils/mmgr/mcxt.c:1160 utils/mmgr/slab.c:370
 #, c-format
@@ -281,7 +281,7 @@ msgid "could not resolve path \"%s\" to absolute form: %m"
 msgstr "无法将路径 \"%s\" 解析为绝对路径格式: %m"
 
 #: ../common/exec.c:382 commands/collationcmds.c:876 commands/copyfrom.c:1723
-#: commands/copyto.c:654 libpq/be-secure-common.c:59
+#: commands/copyto.c:659 libpq/be-secure-common.c:59
 #, c-format
 msgid "could not execute command \"%s\": %m"
 msgstr "无法执行命令 \"%s\": %m"
@@ -336,7 +336,7 @@ msgstr "无法同步文件 \"%s\" 所在的文件系统: %m"
 #: ../common/file_utils.c:570 access/transam/twophase.c:1322
 #: access/transam/xlogarchive.c:111 access/transam/xlogarchive.c:235
 #: backup/basebackup.c:355 backup/basebackup.c:553 backup/basebackup.c:624
-#: backup/walsummary.c:247 commands/copyfrom.c:1749 commands/copyto.c:700
+#: backup/walsummary.c:247 commands/copyfrom.c:1749 commands/copyto.c:705
 #: commands/extension.c:3657 commands/tablespace.c:811
 #: commands/tablespace.c:900 postmaster/pgarch.c:680
 #: replication/logical/snapbuild.c:1757 replication/logical/snapbuild.c:2260
@@ -1417,7 +1417,7 @@ msgstr "并行操作期间不能删除元组"
 msgid "attempted to delete invisible tuple"
 msgstr "试图删除不可见元组"
 
-#: access/heap/heapam.c:3414 access/heap/heapam.c:6950 access/index/genam.c:818
+#: access/heap/heapam.c:3414 access/heap/heapam.c:6961 access/index/genam.c:818
 #, c-format
 msgid "cannot update tuples during a parallel operation"
 msgstr "并行操作期间不能更新元组"
@@ -1427,13 +1427,13 @@ msgstr "并行操作期间不能更新元组"
 msgid "attempted to update invisible tuple"
 msgstr "试图更新不可见元组"
 
-#: access/heap/heapam.c:5222 access/heap/heapam.c:5260
-#: access/heap/heapam.c:5550 access/heap/heapam_handler.c:468
+#: access/heap/heapam.c:5233 access/heap/heapam.c:5271
+#: access/heap/heapam.c:5561 access/heap/heapam_handler.c:468
 #, c-format
 msgid "could not obtain lock on row in relation \"%s\""
 msgstr "无法获取关系 \"%s\" 中行的锁"
 
-#: access/heap/heapam.c:6704 commands/trigger.c:3441
+#: access/heap/heapam.c:6715 commands/trigger.c:3441
 #: executor/nodeModifyTable.c:2399 executor/nodeModifyTable.c:2490
 #, c-format
 msgid ""
@@ -2499,122 +2499,122 @@ msgstr ""
 "为避免 XID 分配失败，在该数据库中执行全库 VACUUM。\n"
 "您可能还需要提交或回滚旧的预备事务，或删除过期的复制槽。"
 
-#: access/transam/xact.c:649
+#: access/transam/xact.c:650
 #, c-format
 msgid "cannot assign transaction IDs during a parallel operation"
 msgstr "并行操作期间不能分配事务 ID"
 
-#: access/transam/xact.c:840
+#: access/transam/xact.c:841
 #, c-format
 msgid "cannot modify data in a parallel worker"
 msgstr "不能在并行工作进程中修改数据"
 
-#: access/transam/xact.c:1115
+#: access/transam/xact.c:1116
 #, c-format
 msgid "cannot start commands during a parallel operation"
 msgstr "并行操作期间不能启动命令"
 
-#: access/transam/xact.c:1123
+#: access/transam/xact.c:1124
 #, c-format
 msgid "cannot have more than 2^32-2 commands in a transaction"
 msgstr "事务中的命令数不能超过 2^32-2"
 
-#: access/transam/xact.c:1674
+#: access/transam/xact.c:1675
 #, c-format
 msgid "maximum number of committed subtransactions (%d) exceeded"
 msgstr "超过已提交子事务的最大数量（%d）"
 
-#: access/transam/xact.c:2571
+#: access/transam/xact.c:2578
 #, c-format
 msgid "cannot PREPARE a transaction that has operated on temporary objects"
 msgstr "不能对已操作过临时对象的事务执行 PREPARE"
 
-#: access/transam/xact.c:2581
+#: access/transam/xact.c:2588
 #, c-format
 msgid "cannot PREPARE a transaction that has exported snapshots"
 msgstr "不能对已导出快照的事务执行 PREPARE"
 
 #. translator: %s represents an SQL statement name
-#: access/transam/xact.c:3603
+#: access/transam/xact.c:3610
 #, c-format
 msgid "%s cannot run inside a transaction block"
 msgstr "%s 不能在事务块中运行"
 
 #. translator: %s represents an SQL statement name
-#: access/transam/xact.c:3613
+#: access/transam/xact.c:3620
 #, c-format
 msgid "%s cannot run inside a subtransaction"
 msgstr "%s 不能在子事务中运行"
 
 #. translator: %s represents an SQL statement name
-#: access/transam/xact.c:3623
+#: access/transam/xact.c:3630
 #, c-format
 msgid "%s cannot be executed within a pipeline"
 msgstr "不能在流水线中执行 %s"
 
 #. translator: %s represents an SQL statement name
-#: access/transam/xact.c:3633
+#: access/transam/xact.c:3640
 #, c-format
 msgid "%s cannot be executed from a function"
 msgstr "不能从函数中执行 %s"
 
 #. translator: %s represents an SQL statement name
-#: access/transam/xact.c:3704 access/transam/xact.c:4029
-#: access/transam/xact.c:4108 access/transam/xact.c:4231
-#: access/transam/xact.c:4382 access/transam/xact.c:4451
-#: access/transam/xact.c:4562
+#: access/transam/xact.c:3711 access/transam/xact.c:4036
+#: access/transam/xact.c:4115 access/transam/xact.c:4238
+#: access/transam/xact.c:4389 access/transam/xact.c:4458
+#: access/transam/xact.c:4569
 #, c-format
 msgid "%s can only be used in transaction blocks"
 msgstr "%s 只能在事务块中使用"
 
-#: access/transam/xact.c:3915
+#: access/transam/xact.c:3922
 #, c-format
 msgid "there is already a transaction in progress"
 msgstr "已有事务在运行中"
 
-#: access/transam/xact.c:4034 access/transam/xact.c:4113
-#: access/transam/xact.c:4236
+#: access/transam/xact.c:4041 access/transam/xact.c:4120
+#: access/transam/xact.c:4243
 #, c-format
 msgid "there is no transaction in progress"
 msgstr "没有事务在运行中"
 
-#: access/transam/xact.c:4124
+#: access/transam/xact.c:4131
 #, c-format
 msgid "cannot commit during a parallel operation"
 msgstr "并行操作期间不能提交"
 
-#: access/transam/xact.c:4247
+#: access/transam/xact.c:4254
 #, c-format
 msgid "cannot abort during a parallel operation"
 msgstr "并行操作期间不能中止"
 
-#: access/transam/xact.c:4346
+#: access/transam/xact.c:4353
 #, c-format
 msgid "cannot define savepoints during a parallel operation"
 msgstr "并行操作期间不能定义保存点"
 
-#: access/transam/xact.c:4433
+#: access/transam/xact.c:4440
 #, c-format
 msgid "cannot release savepoints during a parallel operation"
 msgstr "并行操作期间不能释放保存点"
 
-#: access/transam/xact.c:4443 access/transam/xact.c:4494
-#: access/transam/xact.c:4554 access/transam/xact.c:4603
+#: access/transam/xact.c:4450 access/transam/xact.c:4501
+#: access/transam/xact.c:4561 access/transam/xact.c:4610
 #, c-format
 msgid "savepoint \"%s\" does not exist"
 msgstr "保存点 \"%s\" 不存在"
 
-#: access/transam/xact.c:4500 access/transam/xact.c:4609
+#: access/transam/xact.c:4507 access/transam/xact.c:4616
 #, c-format
 msgid "savepoint \"%s\" does not exist within current savepoint level"
 msgstr "当前保存点级别中不存在保存点 \"%s\""
 
-#: access/transam/xact.c:4542
+#: access/transam/xact.c:4549
 #, c-format
 msgid "cannot rollback to savepoints during a parallel operation"
 msgstr "并行操作期间不能回滚到保存点"
 
-#: access/transam/xact.c:5388
+#: access/transam/xact.c:5395
 #, c-format
 msgid "cannot have more than 2^32-1 subtransactions in a transaction"
 msgstr "事务中的子事务数不能超过 2^32-1"
@@ -7725,7 +7725,7 @@ msgstr[0] "因数据类型不兼容已跳过 %llu 行"
 
 #. translator: first %s is the name of a COPY option, e.g. FORCE_NOT_NULL
 #. translator: %s is the name of a COPY option, e.g. FORCE_NOT_NULL
-#: commands/copyfrom.c:1448 commands/copyfrom.c:1491 commands/copyto.c:601
+#: commands/copyfrom.c:1448 commands/copyfrom.c:1491 commands/copyto.c:606
 #, c-format
 msgid "%s column \"%s\" not referenced by COPY"
 msgstr "%s 指定的列 \"%s\" 未被 COPY 引用"
@@ -7745,7 +7745,7 @@ msgstr ""
 "COPY FROM 会让 PostgreSQL 服务器进程读取文件。可以考虑使用客户端功能，例如 "
 "psql 的 \\copy。"
 
-#: commands/copyfrom.c:1755 commands/copyto.c:706
+#: commands/copyfrom.c:1755 commands/copyto.c:711
 #, c-format
 msgid "\"%s\" is a directory"
 msgstr "\"%s\" 是目录"
@@ -7991,57 +7991,57 @@ msgstr "不能从分区表 \"%s\" 拷贝"
 msgid "cannot copy from non-table relation \"%s\""
 msgstr "不能使用 COPY 从非表关系 \"%s\" 读取数据"
 
-#: commands/copyto.c:460
+#: commands/copyto.c:465
 #, c-format
 msgid "DO INSTEAD NOTHING rules are not supported for COPY"
 msgstr "COPY 不支持 DO INSTEAD NOTHING 规则"
 
-#: commands/copyto.c:474
+#: commands/copyto.c:479
 #, c-format
 msgid "conditional DO INSTEAD rules are not supported for COPY"
 msgstr "COPY 不支持带条件的 DO INSTEAD 规则"
 
-#: commands/copyto.c:478
+#: commands/copyto.c:483
 #, c-format
 msgid "DO ALSO rules are not supported for COPY"
 msgstr "COPY 不支持 DO ALSO 规则"
 
-#: commands/copyto.c:483
+#: commands/copyto.c:488
 #, c-format
 msgid "multi-statement DO INSTEAD rules are not supported for COPY"
 msgstr "COPY 不支持多语句 DO INSTEAD 规则"
 
-#: commands/copyto.c:493
+#: commands/copyto.c:498
 #, c-format
 msgid "COPY (SELECT INTO) is not supported"
 msgstr "不支持 COPY (SELECT INTO)"
 
-#: commands/copyto.c:499
+#: commands/copyto.c:504
 #, c-format
 msgid "COPY query must not be a utility command"
 msgstr "COPY 查询不得是工具命令"
 
-#: commands/copyto.c:515
+#: commands/copyto.c:520
 #, c-format
 msgid "COPY query must have a RETURNING clause"
 msgstr "COPY 查询必须有 RETURNING 子句"
 
-#: commands/copyto.c:544
+#: commands/copyto.c:549
 #, c-format
 msgid "relation referenced by COPY statement has changed"
 msgstr "COPY 语句引用的关系已更改"
 
-#: commands/copyto.c:671
+#: commands/copyto.c:676
 #, c-format
 msgid "relative path not allowed for COPY to file"
 msgstr "COPY 到文件时不允许使用相对路径"
 
-#: commands/copyto.c:690
+#: commands/copyto.c:695
 #, c-format
 msgid "could not open file \"%s\" for writing: %m"
 msgstr "无法打开文件 \"%s\" 进行写入: %m"
 
-#: commands/copyto.c:693
+#: commands/copyto.c:698
 #, c-format
 msgid ""
 "COPY TO instructs the PostgreSQL server process to write a file. You may "
@@ -15116,7 +15116,7 @@ msgstr "无法向共享内存队列发送元组"
 msgid "user mapping not found for user \"%s\", server \"%s\""
 msgstr "未找到用户 \"%s\" 在服务器 \"%s\" 上的用户映射"
 
-#: foreign/foreign.c:336 optimizer/plan/createplan.c:7163
+#: foreign/foreign.c:336 optimizer/plan/createplan.c:7177
 #: optimizer/util/plancat.c:540
 #, c-format
 msgid "access to non-system foreign table is restricted"
@@ -17694,7 +17694,7 @@ msgid ""
 "conditions"
 msgstr "FULL JOIN 仅支持可用于归并连接或哈希连接的连接条件"
 
-#: optimizer/plan/createplan.c:7185 parser/parse_merge.c:203
+#: optimizer/plan/createplan.c:7199 parser/parse_merge.c:203
 #: rewrite/rewriteHandler.c:1717
 #, c-format
 msgid "cannot execute MERGE on relation \"%s\""
@@ -17772,7 +17772,7 @@ msgstr "无法实现 %s"
 msgid "SQL function \"%s\" during inlining"
 msgstr "SQL 函数 \"%s\" 在内联期间"
 
-#: optimizer/util/plancat.c:153
+#: commands/copyto.c:416 optimizer/util/plancat.c:153 utils/adt/tid.c:324
 #, c-format
 msgid "cannot access temporary or unlogged relations during recovery"
 msgstr "恢复期间不能访问临时关系或不记录 WAL 的关系"
@@ -26238,7 +26238,7 @@ msgstr "尚未实现固定长度数组的切片"
 #: utils/adt/arrayfuncs.c:6133 utils/adt/arrayfuncs.c:6144
 #: utils/adt/json.c:1433 utils/adt/json.c:1505 utils/adt/jsonb.c:1317
 #: utils/adt/jsonb.c:1401 utils/adt/jsonfuncs.c:4710 utils/adt/jsonfuncs.c:4863
-#: utils/adt/jsonfuncs.c:4974 utils/adt/jsonfuncs.c:5022
+#: utils/adt/jsonfuncs.c:4976 utils/adt/jsonfuncs.c:5024
 #, c-format
 msgid "wrong number of array subscripts"
 msgstr "数组下标数量错误"
@@ -26402,8 +26402,8 @@ msgstr "不支持从 %s 到 ASCII 的编码转换"
 #: utils/adt/numeric.c:7463 utils/adt/numeric.c:8410 utils/adt/numutils.c:356
 #: utils/adt/numutils.c:618 utils/adt/numutils.c:880 utils/adt/numutils.c:919
 #: utils/adt/numutils.c:941 utils/adt/numutils.c:1005 utils/adt/numutils.c:1027
-#: utils/adt/pg_lsn.c:73 utils/adt/tid.c:72 utils/adt/tid.c:80
-#: utils/adt/tid.c:94 utils/adt/tid.c:103 utils/adt/timestamp.c:510
+#: utils/adt/pg_lsn.c:73 utils/adt/tid.c:73 utils/adt/tid.c:81
+#: utils/adt/tid.c:95 utils/adt/tid.c:104 utils/adt/timestamp.c:510
 #: utils/adt/uuid.c:140 utils/adt/xid8funcs.c:323
 #, c-format
 msgid "invalid input syntax for type %s: \"%s\""
@@ -27494,12 +27494,12 @@ msgstr "不能从标量中删除"
 msgid "cannot delete from object using integer index"
 msgstr "不能使用整数下标从对象中删除"
 
-#: utils/adt/jsonfuncs.c:4868 utils/adt/jsonfuncs.c:5027
+#: utils/adt/jsonfuncs.c:4868 utils/adt/jsonfuncs.c:5029
 #, c-format
 msgid "cannot set path in scalar"
 msgstr "不能在标量中设置路径"
 
-#: utils/adt/jsonfuncs.c:4909 utils/adt/jsonfuncs.c:4951
+#: utils/adt/jsonfuncs.c:4909 utils/adt/jsonfuncs.c:4953
 #, c-format
 msgid ""
 "null_value_treatment must be \"delete_key\", \"return_target\", "
@@ -27526,60 +27526,60 @@ msgid ""
 "SQL NULL is not passed."
 msgstr "要避免此问题，更改 null_value_treatment 参数，或确保不传入 SQL NULL。"
 
-#: utils/adt/jsonfuncs.c:4979
+#: utils/adt/jsonfuncs.c:4981
 #, c-format
 msgid "cannot delete path in scalar"
 msgstr "不能在标量中删除路径"
 
-#: utils/adt/jsonfuncs.c:5193
+#: utils/adt/jsonfuncs.c:5195
 #, c-format
 msgid "path element at position %d is null"
 msgstr "位置 %d 的路径元素为 NULL"
 
-#: utils/adt/jsonfuncs.c:5212 utils/adt/jsonfuncs.c:5243
-#: utils/adt/jsonfuncs.c:5316
+#: utils/adt/jsonfuncs.c:5214 utils/adt/jsonfuncs.c:5245
+#: utils/adt/jsonfuncs.c:5318
 #, c-format
 msgid "cannot replace existing key"
 msgstr "不能替换已有的键"
 
-#: utils/adt/jsonfuncs.c:5213 utils/adt/jsonfuncs.c:5244
+#: utils/adt/jsonfuncs.c:5215 utils/adt/jsonfuncs.c:5246
 #, c-format
 msgid "The path assumes key is a composite object, but it is a scalar value."
 msgstr "该路径假定键对应的值为复合对象，但实际为标量值。"
 
-#: utils/adt/jsonfuncs.c:5317
+#: utils/adt/jsonfuncs.c:5319
 #, c-format
 msgid "Try using the function jsonb_set to replace key value."
 msgstr "尝试使用 jsonb_set 来替换键值。"
 
-#: utils/adt/jsonfuncs.c:5421
+#: utils/adt/jsonfuncs.c:5423
 #, c-format
 msgid "path element at position %d is not an integer: \"%s\""
 msgstr "位置 %d 的路径元素不是整数: \"%s\""
 
-#: utils/adt/jsonfuncs.c:5438
+#: utils/adt/jsonfuncs.c:5440
 #, c-format
 msgid "path element at position %d is out of range: %d"
 msgstr "位置 %d 的路径元素超出范围: %d"
 
-#: utils/adt/jsonfuncs.c:5590
+#: utils/adt/jsonfuncs.c:5592
 #, c-format
 msgid "wrong flag type, only arrays and scalars are allowed"
 msgstr "错误的标志类型，只允许数组和标量"
 
-#: utils/adt/jsonfuncs.c:5597
+#: utils/adt/jsonfuncs.c:5599
 #, c-format
 msgid "flag array element is not a string"
 msgstr "标志数组元素不是字符串"
 
-#: utils/adt/jsonfuncs.c:5598 utils/adt/jsonfuncs.c:5620
+#: utils/adt/jsonfuncs.c:5600 utils/adt/jsonfuncs.c:5622
 #, c-format
 msgid ""
 "Possible values are: \"string\", \"numeric\", \"boolean\", \"key\", and "
 "\"all\"."
 msgstr "可能的值有: \"string\", \"numeric\", \"boolean\", \"key\" 和 \"all\"。"
 
-#: utils/adt/jsonfuncs.c:5618
+#: utils/adt/jsonfuncs.c:5620
 #, c-format
 msgid "wrong flag in flag array: \"%s\""
 msgstr "标志数组中的标志错误: \"%s\""
@@ -28593,8 +28593,8 @@ msgstr "多个函数名为 \"%s\""
 msgid "more than one operator named %s"
 msgstr "多个操作符名为 %s"
 
-#: utils/adt/regproc.c:675 utils/adt/regproc.c:2029 utils/adt/ruleutils.c:10528
-#: utils/adt/ruleutils.c:10741
+#: utils/adt/regproc.c:675 utils/adt/regproc.c:2029 utils/adt/ruleutils.c:10560
+#: utils/adt/ruleutils.c:10773
 #, c-format
 msgid "too many arguments"
 msgstr "参数过多"
@@ -33015,7 +33015,7 @@ msgstr "时区文件 \"%s\" 的第 %d 行过长"
 msgid "@INCLUDE without file name in time zone file \"%s\", line %d"
 msgstr "时区文件 \"%s\" 的第 %d 行中，@INCLUDE 后缺少文件名"
 
-#: utils/mmgr/aset.c:452 utils/mmgr/bump.c:184 utils/mmgr/generation.c:216
+#: utils/mmgr/aset.c:506 utils/mmgr/bump.c:184 utils/mmgr/generation.c:216
 #: utils/mmgr/slab.c:371
 #, c-format
 msgid "Failed while creating memory context \"%s\"."
