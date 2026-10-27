@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-10-22 07:48+0000\n"
+"POT-Creation-Date: 2026-10-26 22:48+0000\n"
 "PO-Revision-Date: 2026-09-23 23:11+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
@@ -101,7 +101,7 @@ msgstr "無法開啟檔案 \"%s\" 以讀取: %m"
 # access/transam/xlog.c:5583
 #: ../common/controldata_utils.c:109 ../common/controldata_utils.c:111
 #: access/transam/timeline.c:144 access/transam/timeline.c:363
-#: access/transam/twophase.c:1367 access/transam/xlog.c:3541
+#: access/transam/twophase.c:1368 access/transam/xlog.c:3541
 #: access/transam/xlog.c:4434 access/transam/xlogrecovery.c:1206
 #: access/transam/xlogrecovery.c:1304 access/transam/xlogrecovery.c:1341
 #: access/transam/xlogrecovery.c:1408 backup/basebackup.c:2128
@@ -137,7 +137,7 @@ msgstr "無法讀取檔案 \"%1$s\": 應讀取 %3$zu，實際讀取 %2$d"
 #: access/heap/rewriteheap.c:1144 access/heap/rewriteheap.c:1249
 #: access/transam/slru.c:1157 access/transam/timeline.c:393
 #: access/transam/timeline.c:439 access/transam/timeline.c:513
-#: access/transam/twophase.c:1379 access/transam/twophase.c:1805
+#: access/transam/twophase.c:1380 access/transam/twophase.c:1810
 #: access/transam/xlog.c:3387 access/transam/xlog.c:3581
 #: access/transam/xlog.c:3586 access/transam/xlog.c:3722
 #: access/transam/xlog.c:4404 access/transam/xlog.c:5384
@@ -181,7 +181,7 @@ msgstr ""
 #: ../common/file_utils.c:428 ../common/file_utils.c:502
 #: access/heap/rewriteheap.c:1232 access/transam/slru.c:1111
 #: access/transam/timeline.c:112 access/transam/timeline.c:252
-#: access/transam/timeline.c:349 access/transam/twophase.c:1323
+#: access/transam/timeline.c:349 access/transam/twophase.c:1324
 #: access/transam/xlog.c:3277 access/transam/xlog.c:3457
 #: access/transam/xlog.c:3496 access/transam/xlog.c:3689
 #: access/transam/xlog.c:4424 access/transam/xlogrecovery.c:4286
@@ -206,7 +206,7 @@ msgstr "無法開啟檔案 \"%s\": %m"
 
 # access/transam/xlog.c:5319 access/transam/xlog.c:5439
 #: ../common/controldata_utils.c:247 ../common/controldata_utils.c:250
-#: access/transam/twophase.c:1778 access/transam/twophase.c:1787
+#: access/transam/twophase.c:1783 access/transam/twophase.c:1792
 #: access/transam/xlog.c:9512 access/transam/xlogfuncs.c:718
 #: backup/basebackup_server.c:173 backup/basebackup_server.c:266
 #: backup/walsummary.c:304 postmaster/postmaster.c:4163
@@ -223,7 +223,7 @@ msgstr "無法寫入檔案 \"%s\": %m"
 #: access/heap/rewriteheap.c:928 access/heap/rewriteheap.c:1138
 #: access/heap/rewriteheap.c:1243 access/transam/slru.c:1150
 #: access/transam/timeline.c:433 access/transam/timeline.c:507
-#: access/transam/twophase.c:1799 access/transam/xlog.c:3377
+#: access/transam/twophase.c:1804 access/transam/xlog.c:3377
 #: access/transam/xlog.c:3575 access/transam/xlog.c:4397
 #: access/transam/xlog.c:8905 access/transam/xlog.c:8949
 #: backup/basebackup_server.c:207 commands/dbcommands.c:519
@@ -262,7 +262,7 @@ msgstr "無法對檔案 \"%s\" 執行 fsync: %m"
 #: ../common/jsonapi.c:2459 ../common/md5_common.c:156
 #: ../common/parse_manifest.c:157 ../common/parse_manifest.c:852
 #: ../common/psprintf.c:140 ../common/scram-common.c:268 ../port/path.c:846
-#: ../port/path.c:883 ../port/path.c:900 access/transam/twophase.c:1432
+#: ../port/path.c:883 ../port/path.c:900 access/transam/twophase.c:1433
 #: access/transam/xlogrecovery.c:518 lib/dshash.c:257 libpq/auth.c:1391
 #: libpq/auth.c:1435 libpq/auth.c:2006 libpq/be-secure-gssapi.c:539
 #: libpq/be-secure-gssapi.c:719 postmaster/bgworker.c:372
@@ -276,8 +276,8 @@ msgstr "無法對檔案 \"%s\" 執行 fsync: %m"
 #: storage/ipc/procarray.c:2679 storage/ipc/procarray.c:3400
 #: utils/activity/pgstat_shmem.c:552 utils/adt/pg_locale.c:491
 #: utils/adt/pg_locale.c:565 utils/adt/pg_locale_icu.c:568
-#: utils/adt/pg_locale_libc.c:551 utils/adt/pg_locale_libc.c:650
-#: utils/adt/pg_locale_libc.c:737 utils/fmgr/dfmgr.c:234
+#: utils/adt/pg_locale_libc.c:555 utils/adt/pg_locale_libc.c:654
+#: utils/adt/pg_locale_libc.c:741 utils/fmgr/dfmgr.c:234
 #: utils/hash/dynahash.c:535 utils/hash/dynahash.c:615
 #: utils/hash/dynahash.c:1031 utils/mb/mbutils.c:410 utils/mb/mbutils.c:438
 #: utils/mb/mbutils.c:825 utils/mb/mbutils.c:852 utils/misc/guc.c:646
@@ -407,7 +407,7 @@ msgstr "無法同步檔案 \"%s\" 所在的檔案系統: %m"
 # access/transam/xlog.c:1936 access/transam/xlog.c:2038
 # access/transam/xlog.c:5291
 #: ../common/file_utils.c:123 ../common/file_utils.c:588
-#: ../common/file_utils.c:592 access/transam/twophase.c:1335
+#: ../common/file_utils.c:592 access/transam/twophase.c:1336
 #: access/transam/xlogarchive.c:112 access/transam/xlogarchive.c:236
 #: backup/basebackup.c:363 backup/basebackup.c:559 backup/basebackup.c:630
 #: backup/walsummary.c:247 catalog/pg_tablespace.c:67 commands/copyfrom.c:1913
@@ -448,11 +448,11 @@ msgstr "無法讀取目錄 \"%s\": %m"
 # access/transam/xlog.c:3037 access/transam/xlog.c:3819
 # access/transam/xlog.c:3862 commands/user.c:282 commands/user.c:412
 # postmaster/pgarch.c:597
-#: ../common/file_utils.c:520 access/transam/xlogarchive.c:390
-#: postmaster/pgarch.c:839 postmaster/syslogger.c:1579
-#: replication/logical/snapbuild.c:1752 replication/slot.c:1116
-#: replication/slot.c:2510 replication/slot.c:2659 storage/file/fd.c:839
-#: utils/time/snapmgr.c:1315
+#: ../common/file_utils.c:520 access/transam/twophase.c:1819
+#: access/transam/xlogarchive.c:390 postmaster/pgarch.c:839
+#: postmaster/syslogger.c:1579 replication/logical/snapbuild.c:1752
+#: replication/slot.c:1116 replication/slot.c:2510 replication/slot.c:2659
+#: storage/file/fd.c:839 utils/time/snapmgr.c:1315
 #, c-format
 msgid "could not rename file \"%s\" to \"%s\": %m"
 msgstr "無法將檔案 \"%s\" 重新命名為 \"%s\": %m"
@@ -820,10 +820,11 @@ msgstr "無法從子行程取得結束碼: 錯誤碼 %lu"
 # access/transam/xlog.c:1944 access/transam/xlog.c:5453
 # access/transam/xlog.c:5607 postmaster/postmaster.c:3504
 #: ../common/rmtree.c:97 access/heap/rewriteheap.c:1217
-#: access/transam/twophase.c:1738 access/transam/xlogarchive.c:120
-#: access/transam/xlogarchive.c:400 backup/walsummary.c:254
-#: postmaster/postmaster.c:1083 postmaster/syslogger.c:1508
-#: replication/logical/origin.c:632 replication/logical/reorderbuffer.c:5015
+#: access/transam/twophase.c:1739 access/transam/twophase.c:1943
+#: access/transam/xlogarchive.c:120 access/transam/xlogarchive.c:400
+#: backup/walsummary.c:254 postmaster/postmaster.c:1083
+#: postmaster/syslogger.c:1508 replication/logical/origin.c:632
+#: replication/logical/reorderbuffer.c:5015
 #: replication/logical/snapbuild.c:1633 replication/logical/snapbuild.c:2089
 #: replication/slot.c:2713 storage/file/fd.c:879 storage/file/fd.c:3428
 #: storage/file/fd.c:3490 storage/file/reinit.c:261 storage/ipc/dsm.c:353
@@ -5598,73 +5599,73 @@ msgid "requested timeline %u is not in this server's history"
 msgstr "請求的時間軸 %u 不在此伺服器的歷史中"
 
 # commands/tablespace.c:268
-#: access/transam/twophase.c:374
+#: access/transam/twophase.c:375
 #, c-format
 msgid "transaction identifier \"%s\" is too long"
 msgstr "交易識別字 \"%s\" 太長"
 
 # large_obj.c:55
-#: access/transam/twophase.c:381
+#: access/transam/twophase.c:382
 #, c-format
 msgid "prepared transactions are disabled"
 msgstr "預備交易已停用"
 
-#: access/transam/twophase.c:382
+#: access/transam/twophase.c:383
 #, c-format
 msgid "Set \"max_prepared_transactions\" to a nonzero value."
 msgstr "將 \"max_prepared_transactions\" 設為非零值。"
 
 # catalog/heap.c:747 catalog/index.c:527 commands/tablecmds.c:1471
-#: access/transam/twophase.c:401
+#: access/transam/twophase.c:402
 #, c-format
 msgid "transaction identifier \"%s\" is already in use"
 msgstr "交易識別字 \"%s\" 已在使用中"
 
-#: access/transam/twophase.c:410 access/transam/twophase.c:2583
+#: access/transam/twophase.c:411 access/transam/twophase.c:2611
 #, c-format
 msgid "maximum number of prepared transactions reached"
 msgstr "達到預備交易數目上限"
 
-#: access/transam/twophase.c:411 access/transam/twophase.c:2584
+#: access/transam/twophase.c:412 access/transam/twophase.c:2612
 #, c-format
 msgid "Increase \"max_prepared_transactions\" (currently %d)."
 msgstr "增大 \"max_prepared_transactions\" (目前為 %d)。"
 
-#: access/transam/twophase.c:588
+#: access/transam/twophase.c:589
 #, c-format
 msgid "prepared transaction with identifier \"%s\" is busy"
 msgstr "識別字為 \"%s\" 的預備交易忙碌中"
 
 # commands/dbcommands.c:192
-#: access/transam/twophase.c:594
+#: access/transam/twophase.c:595
 #, c-format
 msgid "permission denied to finish prepared transaction"
 msgstr "權限不足，無法完成預備交易"
 
 # utils/misc/guc.c:3901
-#: access/transam/twophase.c:595
+#: access/transam/twophase.c:596
 #, c-format
 msgid "Must be superuser or the user that prepared the transaction."
 msgstr "必須是超級使用者或預備該交易的使用者。"
 
 # commands/dbcommands.c:192
-#: access/transam/twophase.c:606
+#: access/transam/twophase.c:607
 #, c-format
 msgid "prepared transaction belongs to another database"
 msgstr "預備交易屬於另一個資料庫"
 
-#: access/transam/twophase.c:607
+#: access/transam/twophase.c:608
 #, c-format
 msgid "Connect to the database where the transaction was prepared to finish it."
 msgstr "連線至要完成之預備交易所在的資料庫。"
 
 # commands/conversioncmds.c:73
-#: access/transam/twophase.c:622
+#: access/transam/twophase.c:623
 #, c-format
 msgid "prepared transaction with identifier \"%s\" does not exist"
 msgstr "識別字為 \"%s\" 的預備交易不存在"
 
-#: access/transam/twophase.c:1183
+#: access/transam/twophase.c:1184
 #, c-format
 msgid "two-phase state file maximum length exceeded"
 msgstr "超過兩階段狀態檔最大長度"
@@ -5674,23 +5675,23 @@ msgstr "超過兩階段狀態檔最大長度"
 # commands/tablespace.c:668 commands/tablespace.c:674
 # postmaster/postmaster.c:3430 utils/init/miscinit.c:832
 # utils/init/miscinit.c:841 utils/misc/guc.c:4934 utils/misc/guc.c:4998
-#: access/transam/twophase.c:1343
+#: access/transam/twophase.c:1344
 #, c-format
 msgid "incorrect size of file \"%s\": %lld byte"
 msgid_plural "incorrect size of file \"%s\": %lld bytes"
 msgstr[0] "檔案 \"%s\" 的大小不正確: %lld 位元組"
 
-#: access/transam/twophase.c:1352
+#: access/transam/twophase.c:1353
 #, c-format
 msgid "incorrect alignment of CRC offset for file \"%s\""
 msgstr "檔案 \"%s\" 的 CRC 位移對齊不正確"
 
-#: access/transam/twophase.c:1370
+#: access/transam/twophase.c:1371
 #, c-format
 msgid "could not read file \"%s\": read %d of %lld"
 msgstr "無法讀取檔案 \"%1$s\": 應讀取 %3$lld，實際讀取 %2$d"
 
-#: access/transam/twophase.c:1385
+#: access/transam/twophase.c:1386
 #, c-format
 msgid "invalid magic number stored in file \"%s\""
 msgstr "檔案 \"%s\" 中儲存的魔數無效"
@@ -5698,18 +5699,18 @@ msgstr "檔案 \"%s\" 中儲存的魔數無效"
 # access/transam/xlog.c:5414 access/transam/xlog.c:5535
 # access/transam/xlog.c:5541 access/transam/xlog.c:5572
 # access/transam/xlog.c:5578
-#: access/transam/twophase.c:1391
+#: access/transam/twophase.c:1392
 #, c-format
 msgid "invalid size stored in file \"%s\""
 msgstr "檔案 \"%s\" 中儲存的大小無效"
 
 # fe-secure.c:848
-#: access/transam/twophase.c:1403
+#: access/transam/twophase.c:1404
 #, c-format
 msgid "calculated CRC checksum does not match value stored in file \"%s\""
 msgstr "計算得到的 CRC 檢查碼與檔案 \"%s\" 中儲存的值不相符"
 
-#: access/transam/twophase.c:1433 access/transam/xlogrecovery.c:519
+#: access/transam/twophase.c:1434 access/transam/xlogrecovery.c:519
 #: postmaster/walsummarizer.c:1035 replication/logical/logical.c:288
 #: replication/walsender.c:864
 #, c-format
@@ -5717,18 +5718,18 @@ msgid "Failed while allocating a WAL reading processor."
 msgstr "配置 WAL 讀取處理器時失敗。"
 
 # libpq/be-fsstubs.c:421
-#: access/transam/twophase.c:1443
+#: access/transam/twophase.c:1444
 #, c-format
 msgid "could not read two-phase state from WAL at %X/%08X: %s"
 msgstr "無法從 %X/%08X 處的 WAL 讀取兩階段狀態: %s"
 
 # libpq/be-fsstubs.c:421
-#: access/transam/twophase.c:1448
+#: access/transam/twophase.c:1449
 #, c-format
 msgid "could not read two-phase state from WAL at %X/%08X"
 msgstr "無法從 %X/%08X 處的 WAL 讀取兩階段狀態"
 
-#: access/transam/twophase.c:1456
+#: access/transam/twophase.c:1457
 #, c-format
 msgid "expected two-phase state data is not present in WAL at %X/%08X"
 msgstr "%X/%08X 處的 WAL 中不存在預期的兩階段狀態資料"
@@ -5737,67 +5738,67 @@ msgstr "%X/%08X 處的 WAL 中不存在預期的兩階段狀態資料"
 # access/transam/xlog.c:1646 access/transam/xlog.c:2911
 # access/transam/xlog.c:5308 access/transam/xlog.c:5426
 # postmaster/postmaster.c:3366
-#: access/transam/twophase.c:1766
+#: access/transam/twophase.c:1771
 #, c-format
 msgid "could not recreate file \"%s\": %m"
 msgstr "無法重新建立檔案 \"%s\": %m"
 
-#: access/transam/twophase.c:1893
+#: access/transam/twophase.c:1908
 #, c-format
 msgid "%u two-phase state file was written for a long-running prepared transaction"
 msgid_plural "%u two-phase state files were written for long-running prepared transactions"
 msgstr[0] "已為長時間處於預備狀態的交易寫入 %u 個兩階段狀態檔"
 
 # access/transam/xlog.c:3965
-#: access/transam/twophase.c:2120
+#: access/transam/twophase.c:2148
 #, c-format
 msgid "recovering prepared transaction %u of epoch %u from shared memory"
 msgstr "正在從共享記憶體復原交易 %u (紀元 %u) 的預備狀態"
 
-#: access/transam/twophase.c:2216
+#: access/transam/twophase.c:2244
 #, c-format
 msgid "removing stale two-phase state file for transaction %u of epoch %u"
 msgstr "正在刪除交易 %u (紀元 %u) 遺留的兩階段狀態檔"
 
-#: access/transam/twophase.c:2224
+#: access/transam/twophase.c:2252
 #, c-format
 msgid "removing stale two-phase state from memory for transaction %u of epoch %u"
 msgstr "正在從記憶體移除交易 %u (紀元 %u) 遺留的兩階段狀態"
 
-#: access/transam/twophase.c:2238
+#: access/transam/twophase.c:2266
 #, c-format
 msgid "removing future two-phase state file for transaction %u of epoch %u"
 msgstr "正在刪除未來交易 %u (紀元 %u) 的兩階段狀態檔"
 
-#: access/transam/twophase.c:2246
+#: access/transam/twophase.c:2274
 #, c-format
 msgid "removing future two-phase state from memory for transaction %u of epoch %u"
 msgstr "正在從記憶體移除未來交易 %u (紀元 %u) 的兩階段狀態"
 
-#: access/transam/twophase.c:2272
+#: access/transam/twophase.c:2300
 #, c-format
 msgid "corrupted two-phase state file for transaction %u of epoch %u"
 msgstr "交易 %u (紀元 %u) 的兩階段狀態檔已損毀"
 
-#: access/transam/twophase.c:2278
+#: access/transam/twophase.c:2306
 #, c-format
 msgid "corrupted two-phase state in memory for transaction %u of epoch %u"
 msgstr "交易 %u (紀元 %u) 在記憶體中的兩階段狀態已損毀"
 
 # access/transam/xlog.c:1944 access/transam/xlog.c:5453
 # access/transam/xlog.c:5607 postmaster/postmaster.c:3504
-#: access/transam/twophase.c:2566
+#: access/transam/twophase.c:2594
 #, c-format
 msgid "could not recover two-phase state file for transaction %u"
 msgstr "無法復原交易 %u 的兩階段狀態檔"
 
-#: access/transam/twophase.c:2568
+#: access/transam/twophase.c:2596
 #, c-format
 msgid "Two-phase state file has been found in WAL record %X/%08X, but this transaction has already been restored from disk."
 msgstr "已在 WAL 記錄 %X/%08X 中找到兩階段狀態檔案，但此交易已從磁碟還原。"
 
 # utils/fmgr/dfmgr.c:107 utils/fmgr/dfmgr.c:209 utils/fmgr/dfmgr.c:263
-#: access/transam/twophase.c:2576 storage/file/fd.c:515 utils/fmgr/dfmgr.c:214
+#: access/transam/twophase.c:2604 storage/file/fd.c:515 utils/fmgr/dfmgr.c:214
 #, c-format
 msgid "could not access file \"%s\": %m"
 msgstr "無法存取檔案 \"%s\": %m"
@@ -9084,7 +9085,7 @@ msgid "cannot create relations in temporary schemas of other sessions"
 msgstr "不能在其他工作階段的暫存 schema 中建立關聯"
 
 # command.c:1148
-#: catalog/namespace.c:861 parser/parse_utilcmd.c:4272
+#: catalog/namespace.c:861 parser/parse_utilcmd.c:4274
 #, c-format
 msgid "cannot create temporary relation in non-temporary schema"
 msgstr "不能在非暫存 schema 中建立暫存關聯"
@@ -11071,49 +11072,49 @@ msgstr "跳過 \"%s.%s\" 繼承樹的分析: 此繼承樹不包含子資料表"
 msgid "skipping analyze of \"%s.%s\" inheritance tree --- this inheritance tree contains no analyzable child tables"
 msgstr "跳過 \"%s.%s\" 繼承樹的分析: 此繼承樹不包含可分析的子資料表"
 
-#: commands/async.c:631
+#: commands/async.c:632
 #, c-format
 msgid "Could not access async queue at page %<PRId64>, offset %d."
 msgstr "無法存取非同步佇列頁面 %<PRId64> 位移 %d 處。"
 
-#: commands/async.c:915
+#: commands/async.c:916
 #, c-format
 msgid "channel name cannot be empty"
 msgstr "通道名稱不能為空"
 
 # utils/mb/encnames.c:445
-#: commands/async.c:921
+#: commands/async.c:922
 #, c-format
 msgid "channel name too long"
 msgstr "通道名稱過長"
 
 # utils/adt/acl.c:109 utils/adt/name.c:90
-#: commands/async.c:926
+#: commands/async.c:927
 #, c-format
 msgid "payload string too long"
 msgstr "負載資料字串過長"
 
-#: commands/async.c:1166
+#: commands/async.c:1152
 #, c-format
 msgid "cannot PREPARE a transaction that has executed LISTEN, UNLISTEN, or NOTIFY"
 msgstr "不能對已執行 LISTEN, UNLISTEN 或 NOTIFY 的交易執行 PREPARE"
 
-#: commands/async.c:1355
+#: commands/async.c:1341
 #, c-format
 msgid "too many notifications in the NOTIFY queue"
 msgstr "有太多通知在 NOTIFY 佇列"
 
-#: commands/async.c:2237
+#: commands/async.c:2223
 #, c-format
 msgid "NOTIFY queue is %.0f%% full"
 msgstr "NOTIFY 佇列已經 %.0f%% 滿"
 
-#: commands/async.c:2239
+#: commands/async.c:2225
 #, c-format
 msgid "The server process with PID %d is among those with the oldest transactions."
 msgstr "PID 為 %d 的伺服器行程是持有最早交易的行程之一。"
 
-#: commands/async.c:2242
+#: commands/async.c:2228
 #, c-format
 msgid "The NOTIFY queue cannot be emptied until that process ends its current transaction."
 msgstr "該行程結束目前交易以前，不能清空 NOTIFY 佇列。"
@@ -18075,7 +18076,7 @@ msgid "Another index \"%s\" is already attached for partition \"%s\"."
 msgstr "已為分割 \"%2$s\" 附加另一個索引 \"%1$s\"。"
 
 # access/transam/xlog.c:4550
-#: commands/tablecmds.c:22569
+#: commands/tablecmds.c:22574
 #, c-format
 msgid "invalid primary key definition"
 msgstr "無效的主索引鍵定義"
@@ -18087,30 +18088,30 @@ msgstr "無效的主索引鍵定義"
 # parser/parse_relation.c:1647 parser/parse_relation.c:1705
 # parser/parse_relation.c:1919 parser/parse_type.c:94
 # utils/adt/ruleutils.c:1300
-#: commands/tablecmds.c:22570
+#: commands/tablecmds.c:22575
 #, c-format
 msgid "Column \"%s\" of relation \"%s\" is not marked NOT NULL."
 msgstr "關聯 \"%2$s\" 的欄位 \"%1$s\" 未標記為 NOT NULL。"
 
-#: commands/tablecmds.c:22705
+#: commands/tablecmds.c:22710
 #, c-format
 msgid "column data type %s does not support compression"
 msgstr "欄位的資料型別 %s 不支援壓縮"
 
 # fe-connect.c:2675
-#: commands/tablecmds.c:22712
+#: commands/tablecmds.c:22717
 #, c-format
 msgid "invalid compression method \"%s\""
 msgstr "無效的壓縮方法 \"%s\""
 
 # commands/tablecmds.c:3360
-#: commands/tablecmds.c:22738
+#: commands/tablecmds.c:22743
 #, c-format
 msgid "invalid storage type \"%s\""
 msgstr "不合法的儲存型別 \"%s\""
 
 # commands/tablecmds.c:3391
-#: commands/tablecmds.c:22748
+#: commands/tablecmds.c:22753
 #, c-format
 msgid "column data type %s can only have storage PLAIN"
 msgstr "欄位資料型別 %s 只能使用 PLAIN 儲存方式"
@@ -20717,7 +20718,7 @@ msgid "custom scan \"%s\" does not support MarkPos"
 msgstr "自訂掃描 \"%s\" 不支援 MarkPos"
 
 # executor/nodeHashjoin.c:641 executor/nodeHashjoin.c:648
-#: executor/nodeHashjoin.c:1379 executor/nodeHashjoin.c:1409
+#: executor/nodeHashjoin.c:1395 executor/nodeHashjoin.c:1425
 #, c-format
 msgid "could not rewind hash-join temporary file"
 msgstr "無法將雜湊聯結暫存檔的位置重設到開頭"
@@ -21871,19 +21872,19 @@ msgstr "驗證方法 \"%2$s\" 必須設定參數 \"%1$s\""
 #: libpq/be-secure-common.c:262 libpq/be-secure-common.c:272
 #: libpq/be-secure-common.c:289 libpq/be-secure-common.c:306
 #: libpq/be-secure-common.c:334 libpq/be-secure-common.c:344
-#: libpq/be-secure-openssl.c:273 libpq/be-secure-openssl.c:287
-#: libpq/be-secure-openssl.c:312 libpq/hba.c:327 libpq/hba.c:662
-#: libpq/hba.c:1247 libpq/hba.c:1267 libpq/hba.c:1290 libpq/hba.c:1303
-#: libpq/hba.c:1356 libpq/hba.c:1384 libpq/hba.c:1392 libpq/hba.c:1404
-#: libpq/hba.c:1425 libpq/hba.c:1438 libpq/hba.c:1463 libpq/hba.c:1490
-#: libpq/hba.c:1502 libpq/hba.c:1561 libpq/hba.c:1581 libpq/hba.c:1595
-#: libpq/hba.c:1615 libpq/hba.c:1626 libpq/hba.c:1641 libpq/hba.c:1660
-#: libpq/hba.c:1676 libpq/hba.c:1688 libpq/hba.c:1754 libpq/hba.c:1767
-#: libpq/hba.c:1789 libpq/hba.c:1801 libpq/hba.c:1819 libpq/hba.c:1869
-#: libpq/hba.c:1913 libpq/hba.c:1924 libpq/hba.c:1940 libpq/hba.c:1982
-#: libpq/hba.c:2028 libpq/hba.c:2045 libpq/hba.c:2058 libpq/hba.c:2070
-#: libpq/hba.c:2089 libpq/hba.c:2175 libpq/hba.c:2193 libpq/hba.c:2302
-#: libpq/hba.c:2324 tsearch/ts_locale.c:192
+#: libpq/be-secure-openssl.c:274 libpq/be-secure-openssl.c:288
+#: libpq/be-secure-openssl.c:313 libpq/be-secure-openssl.c:2106 libpq/hba.c:327
+#: libpq/hba.c:662 libpq/hba.c:1247 libpq/hba.c:1267 libpq/hba.c:1290
+#: libpq/hba.c:1303 libpq/hba.c:1356 libpq/hba.c:1384 libpq/hba.c:1392
+#: libpq/hba.c:1404 libpq/hba.c:1425 libpq/hba.c:1438 libpq/hba.c:1463
+#: libpq/hba.c:1490 libpq/hba.c:1502 libpq/hba.c:1561 libpq/hba.c:1581
+#: libpq/hba.c:1595 libpq/hba.c:1615 libpq/hba.c:1626 libpq/hba.c:1641
+#: libpq/hba.c:1660 libpq/hba.c:1676 libpq/hba.c:1688 libpq/hba.c:1754
+#: libpq/hba.c:1767 libpq/hba.c:1789 libpq/hba.c:1801 libpq/hba.c:1819
+#: libpq/hba.c:1869 libpq/hba.c:1913 libpq/hba.c:1924 libpq/hba.c:1940
+#: libpq/hba.c:1982 libpq/hba.c:2028 libpq/hba.c:2045 libpq/hba.c:2058
+#: libpq/hba.c:2070 libpq/hba.c:2089 libpq/hba.c:2175 libpq/hba.c:2193
+#: libpq/hba.c:2302 libpq/hba.c:2324 tsearch/ts_locale.c:192
 #, c-format
 msgid "line %d of configuration file \"%s\""
 msgstr "組態檔 \"%2$s\" 的第 %1$d 行"
@@ -22772,338 +22773,344 @@ msgid "GSSAPI size check error"
 msgstr "GSSAPI 大小檢查錯誤"
 
 # input.c:213
-#: libpq/be-secure-openssl.c:220
+#: libpq/be-secure-openssl.c:221
 #, c-format
 msgid "ssl_sni is not supported with LibreSSL"
 msgstr "LibreSSL 不支援 ssl_sni"
 
-#: libpq/be-secure-openssl.c:237
+#: libpq/be-secure-openssl.c:238
 #, c-format
 msgid "could not load file \"%s\": %s"
 msgstr "無法載入檔案 \"%s\": %s"
 
 # commands/typecmds.c:637
-#: libpq/be-secure-openssl.c:272
+#: libpq/be-secure-openssl.c:273
 #, c-format
 msgid "multiple default hosts specified"
 msgstr "指定多個預設主機"
 
-#: libpq/be-secure-openssl.c:286
+#: libpq/be-secure-openssl.c:287
 #, c-format
 msgid "multiple no_sni hosts specified"
 msgstr "指定多個 no_sni 主機"
 
-#: libpq/be-secure-openssl.c:310
+#: libpq/be-secure-openssl.c:311
 #, c-format
 msgid "multiple entries for host \"%s\" specified"
 msgstr "為主機 \"%s\" 指定多個項目"
 
 # guc-file.l:151 libpq/hba.c:1044
-#: libpq/be-secure-openssl.c:380
+#: libpq/be-secure-openssl.c:391
 #, c-format
 msgid "no SSL configurations loaded"
 msgstr "未載入任何 SSL 組態"
 
 # guc-file.l:151 libpq/hba.c:1044
 #. translator: The two %s contain filenames
-#: libpq/be-secure-openssl.c:382
+#: libpq/be-secure-openssl.c:393
 #, c-format
 msgid "If ssl_sni is enabled then add configuration to file \"%s\", else file \"%s\"."
 msgstr "如果已啟用 ssl_sni，向檔案 \"%s\" 新增組態；否則向檔案 \"%s\" 新增組態。"
 
 # libpq/be-secure.c:649
-#: libpq/be-secure-openssl.c:403 libpq/be-secure-openssl.c:651
+#: libpq/be-secure-openssl.c:414 libpq/be-secure-openssl.c:662
 #, c-format
 msgid "could not create SSL context: %s"
 msgstr "無法建立 SSL 上下文: %s"
 
 # tcop/postgres.c:2262
 #. translator: first %s is a GUC option name, second %s is its value
-#: libpq/be-secure-openssl.c:438 libpq/be-secure-openssl.c:461
+#: libpq/be-secure-openssl.c:449 libpq/be-secure-openssl.c:472
 #, c-format
 msgid "\"%s\" setting \"%s\" not supported by this build"
 msgstr "此建置版本不支援將 \"%s\" 設定為 \"%s\""
 
 # port/win32/security.c:39
-#: libpq/be-secure-openssl.c:448
+#: libpq/be-secure-openssl.c:459
 #, c-format
 msgid "could not set minimum SSL protocol version"
 msgstr "無法設定最低 SSL 協定版本"
 
 # port/win32/security.c:39
-#: libpq/be-secure-openssl.c:471
+#: libpq/be-secure-openssl.c:482
 #, c-format
 msgid "could not set maximum SSL protocol version"
 msgstr "無法設定最高 SSL 協定版本"
 
 # port/win32/security.c:39
-#: libpq/be-secure-openssl.c:488
+#: libpq/be-secure-openssl.c:499
 #, c-format
 msgid "could not set SSL protocol version range"
 msgstr "無法設定 SSL 協定版本範圍"
 
 # commands/cluster.c:326
-#: libpq/be-secure-openssl.c:489
+#: libpq/be-secure-openssl.c:500
 #, c-format
 msgid "\"%s\" cannot be higher than \"%s\"."
 msgstr "\"%s\" 不能高於 \"%s\"。"
 
-#: libpq/be-secure-openssl.c:542
+#: libpq/be-secure-openssl.c:553
 #, c-format
 msgid "could not set the TLSv1.2 cipher list (no valid ciphers available)"
 msgstr "無法設定 TLSv1.2 加密套件列表 (沒有可用的有效加密套件)"
 
-#: libpq/be-secure-openssl.c:557
+#: libpq/be-secure-openssl.c:568
 #, c-format
 msgid "could not set the TLSv1.3 cipher suites (no valid ciphers available)"
 msgstr "無法設定 TLSv1.3 加密套件 (沒有可用的有效加密套件)"
 
-#: libpq/be-secure-openssl.c:606
+#: libpq/be-secure-openssl.c:617
 #, fuzzy, c-format
 #| msgid "SSL configuration was not reloaded"
 msgid "SSL configuration not reloaded, SNI remains on"
 msgstr "未重新載入 SSL 組態"
 
-#: libpq/be-secure-openssl.c:607
+#: libpq/be-secure-openssl.c:618
 #, fuzzy, c-format
 #| msgid "SSL configuration was not reloaded"
 msgid "SSL configuration not reloaded, SNI remains off"
 msgstr "未重新載入 SSL 組態"
 
-#: libpq/be-secure-openssl.c:608
+#: libpq/be-secure-openssl.c:619
 #, c-format
 msgid "The SSL configuration failed to reload; the previous configuration and SNI state will remain active."
 msgstr ""
 
-#: libpq/be-secure-openssl.c:672
+#: libpq/be-secure-openssl.c:683
 #, c-format
 msgid "SNI is enabled; installed TLS init hook will be ignored"
 msgstr "已啟用 SNI；已安裝的 TLS 初始化掛鉤將被忽略"
 
 #. translator: first %s is a GUC, second %s contains a filename
-#: libpq/be-secure-openssl.c:674
+#: libpq/be-secure-openssl.c:685
 #, c-format
 msgid "TLS init hooks are incompatible with SNI. Set \"%s\" to \"off\" to make use of the hook that is currently installed, or remove the hook and use per-host passphrase commands in \"%s\"."
 msgstr "TLS 初始化掛鉤與 SNI 不相容。將 \"%s\" 設定為 \"off\" 以使用目前安裝的掛鉤，或移除該掛鉤並使用 \"%s\" 中按主機設定的通關密語命令。"
 
 # libpq/be-secure.c:659
-#: libpq/be-secure-openssl.c:726
+#: libpq/be-secure-openssl.c:737
 #, c-format
 msgid "could not load server certificate file \"%s\": %s"
 msgstr "無法載入伺服器憑證檔 \"%s\": %s"
 
-#: libpq/be-secure-openssl.c:750
+#: libpq/be-secure-openssl.c:761
 #, c-format
 msgid "private key file \"%s\" cannot be reloaded because it requires a passphrase"
 msgstr "不能重新載入私鑰檔案 \"%s\"，因為它需要通關密語"
 
 # libpq/be-secure.c:689
-#: libpq/be-secure-openssl.c:755
+#: libpq/be-secure-openssl.c:766
 #, c-format
 msgid "could not load private key file \"%s\": %s"
 msgstr "無法載入私鑰檔 \"%s\": %s"
 
 # libpq/be-secure.c:694
-#: libpq/be-secure-openssl.c:764
+#: libpq/be-secure-openssl.c:775
 #, c-format
 msgid "check of private key failed: %s"
 msgstr "檢查私鑰失敗: %s"
 
 # libpq/be-secure.c:714
-#: libpq/be-secure-openssl.c:781
+#: libpq/be-secure-openssl.c:792
 #, c-format
 msgid "could not load root certificate file \"%s\": %s"
 msgstr "無法載入根憑證檔 \"%s\": %s"
 
 # libpq/be-secure.c:714
-#: libpq/be-secure-openssl.c:820
+#: libpq/be-secure-openssl.c:831
 #, c-format
 msgid "could not load SSL certificate revocation list file \"%s\": %s"
 msgstr "無法載入 SSL 憑證撤銷清單檔案 \"%s\": %s"
 
 # libpq/be-secure.c:714
-#: libpq/be-secure-openssl.c:828
+#: libpq/be-secure-openssl.c:839
 #, c-format
 msgid "could not load SSL certificate revocation list directory \"%s\": %s"
 msgstr "無法載入 SSL 憑證撤銷清單目錄 \"%s\": %s"
 
-#: libpq/be-secure-openssl.c:836
+#: libpq/be-secure-openssl.c:847
 #, c-format
 msgid "could not load SSL certificate revocation list file \"%s\" or directory \"%s\": %s"
 msgstr "無法載入 SSL 憑證撤銷清單檔案 \"%1$s\" 或目錄 \"%2$s\": %3$s"
 
 # libpq/be-secure.c:789
-#: libpq/be-secure-openssl.c:886
+#: libpq/be-secure-openssl.c:897
 #, c-format
 msgid "could not initialize SSL connection: SSL context not set up"
 msgstr "無法初始化 SSL 連線: 未設定 SSL 上下文"
 
 # libpq/be-secure.c:789
-#: libpq/be-secure-openssl.c:900
+#: libpq/be-secure-openssl.c:911
 #, c-format
 msgid "could not initialize SSL connection: %s"
 msgstr "無法初始化 SSL 連線: %s"
 
 # libpq/be-secure.c:798
-#: libpq/be-secure-openssl.c:908
+#: libpq/be-secure-openssl.c:919
 #, c-format
 msgid "could not set SSL socket: %s"
 msgstr "無法設定 SSL socket: %s"
 
 # libpq/be-secure.c:807
-#: libpq/be-secure-openssl.c:1000
+#: libpq/be-secure-openssl.c:1011
 #, c-format
 msgid "could not accept SSL connection: %m"
 msgstr "無法接受 SSL 連線: %m"
 
 # libpq/be-secure.c:807
-#: libpq/be-secure-openssl.c:1004 libpq/be-secure-openssl.c:1062
+#: libpq/be-secure-openssl.c:1015 libpq/be-secure-openssl.c:1073
 #, c-format
 msgid "could not accept SSL connection: EOF detected"
 msgstr "無法接受 SSL 連線: 發現 EOF"
 
 # libpq/be-secure.c:807
-#: libpq/be-secure-openssl.c:1045
+#: libpq/be-secure-openssl.c:1056
 #, c-format
 msgid "could not accept SSL connection: %s"
 msgstr "無法接受 SSL 連線: %s"
 
-#: libpq/be-secure-openssl.c:1049
+#: libpq/be-secure-openssl.c:1060
 #, c-format
 msgid "This may indicate that the client does not support any SSL protocol version between %s and %s."
 msgstr "這可能表示客戶端不支援 %s 到 %s 之間的任何 SSL 協定版本。"
 
 # libpq/be-secure.c:303 libpq/be-secure.c:396
-#: libpq/be-secure-openssl.c:1067 libpq/be-secure-openssl.c:1282
-#: libpq/be-secure-openssl.c:1352
+#: libpq/be-secure-openssl.c:1078 libpq/be-secure-openssl.c:1293
+#: libpq/be-secure-openssl.c:1363
 #, c-format
 msgid "unrecognized SSL error code: %d"
 msgstr "無法識別的 SSL 錯誤碼: %d"
 
-#: libpq/be-secure-openssl.c:1095
+#: libpq/be-secure-openssl.c:1106
 #, c-format
 msgid "received SSL connection request with unexpected ALPN protocol"
 msgstr "收到的 SSL 連線請求包含非預期的 ALPN 協定"
 
-#: libpq/be-secure-openssl.c:1139
+#: libpq/be-secure-openssl.c:1150
 #, c-format
 msgid "SSL certificate's common name contains embedded null"
 msgstr "SSL 憑證的一般名稱包含內嵌的空字元"
 
-#: libpq/be-secure-openssl.c:1185
+#: libpq/be-secure-openssl.c:1196
 #, c-format
 msgid "SSL certificate's distinguished name contains embedded null"
 msgstr "SSL 憑證的可分辨名稱包含內嵌的空字元"
 
 # libpq/be-secure.c:294 libpq/be-secure.c:387
-#: libpq/be-secure-openssl.c:1271 libpq/be-secure-openssl.c:1336
+#: libpq/be-secure-openssl.c:1282 libpq/be-secure-openssl.c:1347
 #, c-format
 msgid "SSL error: %s"
 msgstr "SSL 錯誤: %s"
 
-#: libpq/be-secure-openssl.c:1519
+#: libpq/be-secure-openssl.c:1530
 #, c-format
 msgid "could not open DH parameters file \"%s\": %m"
 msgstr "無法開啟 DH 參數檔案 \"%s\": %m"
 
 # libpq/be-secure.c:689
-#: libpq/be-secure-openssl.c:1531
+#: libpq/be-secure-openssl.c:1542
 #, c-format
 msgid "could not load DH parameters file: %s"
 msgstr "無法載入 DH 參數檔案: %s"
 
 # utils/misc/guc.c:3792
-#: libpq/be-secure-openssl.c:1541
+#: libpq/be-secure-openssl.c:1552
 #, c-format
 msgid "invalid DH parameters: %s"
 msgstr "無效的 DH 參數: %s"
 
 # commands/define.c:279
-#: libpq/be-secure-openssl.c:1550
+#: libpq/be-secure-openssl.c:1561
 #, c-format
 msgid "invalid DH parameters: p is not prime"
 msgstr "無效的 DH 參數: p 不是質數"
 
-#: libpq/be-secure-openssl.c:1559
+#: libpq/be-secure-openssl.c:1570
 #, c-format
 msgid "invalid DH parameters: neither suitable generator or safe prime"
 msgstr "無效的 DH 參數: 產生元不合適，且質數不是安全質數"
 
 # libpq/auth.c:378
-#: libpq/be-secure-openssl.c:1705
+#: libpq/be-secure-openssl.c:1716
 #, c-format
 msgid "Client certificate verification failed at depth %d: %s."
 msgstr "客戶端憑證驗證在深度 %d 處失敗: %s。"
 
-#: libpq/be-secure-openssl.c:1742
+#: libpq/be-secure-openssl.c:1753
 #, c-format
 msgid "Failed certificate data (unverified): subject \"%s\", serial number %s, issuer \"%s\"."
 msgstr "驗證失敗的憑證資料 (未經驗證): 主體 \"%s\", 序號 %s, 簽發者 \"%s\"。"
 
 # utils/error/elog.c:1350 utils/error/elog.c:1360
-#: libpq/be-secure-openssl.c:1743
+#: libpq/be-secure-openssl.c:1754
 msgid "unknown"
 msgstr "未知"
 
-#: libpq/be-secure-openssl.c:2070
+#: libpq/be-secure-openssl.c:2081
 #, c-format
 msgid "no hostname provided in callback, and no fallback configured"
 msgstr "回呼中未提供主機名稱，且未設定後備選項"
 
-#: libpq/be-secure-openssl.c:2094
+#: libpq/be-secure-openssl.c:2105
+#, fuzzy, c-format
+#| msgid "failed to switch to SSL configuration for host, terminating connection"
+msgid "SSL configuration for host could not be loaded, terminating connection"
+msgstr "無法切換到該主機的 SSL 組態，正在終止連線"
+
+#: libpq/be-secure-openssl.c:2116
 #, c-format
 msgid "failed to switch to SSL configuration for host, terminating connection"
 msgstr "無法切換到該主機的 SSL 組態，正在終止連線"
 
-#: libpq/be-secure-openssl.c:2130
+#: libpq/be-secure-openssl.c:2152
 #, c-format
 msgid "DH: could not load DH parameters"
 msgstr "DH: 無法載入 DH 參數"
 
 # startup.c:446
-#: libpq/be-secure-openssl.c:2138
+#: libpq/be-secure-openssl.c:2160
 #, c-format
 msgid "DH: could not set DH parameters: %s"
 msgstr "DH: 無法設定 DH 參數: %s"
 
 # libpq/pqcomm.c:509
-#: libpq/be-secure-openssl.c:2167
+#: libpq/be-secure-openssl.c:2189
 #, c-format
 msgid "could not set group names specified in ssl_groups: %s"
 msgstr "無法設定 ssl_groups 中指定的群組名稱: %s"
 
-#: libpq/be-secure-openssl.c:2169
+#: libpq/be-secure-openssl.c:2191
 msgid "No valid groups found"
 msgstr "未找到有效群組"
 
-#: libpq/be-secure-openssl.c:2170
+#: libpq/be-secure-openssl.c:2192
 #, c-format
 msgid "Ensure that each group name is spelled correctly and supported by the installed version of OpenSSL."
 msgstr "確保每個群組名稱拼寫正確，且受已安裝的 OpenSSL 版本支援。"
 
 # libpq/be-secure.c:303 libpq/be-secure.c:396
-#: libpq/be-secure-openssl.c:2215
+#: libpq/be-secure-openssl.c:2237
 msgid "no SSL error reported"
 msgstr "未回報 SSL 錯誤"
 
 # libpq/be-secure.c:294 libpq/be-secure.c:387
-#: libpq/be-secure-openssl.c:2233
+#: libpq/be-secure-openssl.c:2255
 #, c-format
 msgid "SSL error code %lu"
 msgstr "SSL 錯誤碼 %lu"
 
-#: libpq/be-secure-openssl.c:2390
+#: libpq/be-secure-openssl.c:2412
 #, c-format
 msgid "could not create BIO"
 msgstr "無法建立 BIO"
 
-#: libpq/be-secure-openssl.c:2400
+#: libpq/be-secure-openssl.c:2422
 #, c-format
 msgid "could not get NID for ASN1_OBJECT object"
 msgstr "無法取得 ASN1_OBJECT 物件的 NID"
 
 # fe-secure.c:932
-#: libpq/be-secure-openssl.c:2408
+#: libpq/be-secure-openssl.c:2430
 #, c-format
 msgid "could not convert NID %d to an ASN1_OBJECT structure"
 msgstr "無法將 NID %d 轉換為 ASN1_OBJECT 結構"
@@ -27275,7 +27282,7 @@ msgid "misplaced NOT ENFORCED clause"
 msgstr "NOT ENFORCED 子句位置錯誤"
 
 # parser/analyze.c:2978
-#: parser/parse_utilcmd.c:4262
+#: parser/parse_utilcmd.c:4264
 #, c-format
 msgid "CREATE specifies a schema (%s) different from the one being created (%s)"
 msgstr "CREATE 指定的 schema (%s) 不同於正在建立的 schema (%s)"
@@ -27283,84 +27290,84 @@ msgstr "CREATE 指定的 schema (%s) 不同於正在建立的 schema (%s)"
 # commands/comment.c:341 commands/indexcmds.c:136 commands/indexcmds.c:937
 # commands/lockcmds.c:68 commands/tablecmds.c:541 commands/tablecmds.c:2594
 # commands/trigger.c:141 commands/trigger.c:546 tcop/utility.c:78
-#: parser/parse_utilcmd.c:4462
+#: parser/parse_utilcmd.c:4464
 #, c-format
 msgid "\"%s\" is not a partitioned table"
 msgstr "\"%s\" 不是分割資料表"
 
-#: parser/parse_utilcmd.c:4469
+#: parser/parse_utilcmd.c:4471
 #, c-format
 msgid "table \"%s\" is not partitioned"
 msgstr "資料表 \"%s\" 未分割"
 
 # access/hash/hashutil.c:127
-#: parser/parse_utilcmd.c:4476
+#: parser/parse_utilcmd.c:4478
 #, c-format
 msgid "index \"%s\" is not partitioned"
 msgstr "索引 \"%s\" 未分割"
 
-#: parser/parse_utilcmd.c:4516
+#: parser/parse_utilcmd.c:4518
 #, c-format
 msgid "a hash-partitioned table may not have a default partition"
 msgstr "雜湊分割資料表不得有預設分割"
 
-#: parser/parse_utilcmd.c:4533
+#: parser/parse_utilcmd.c:4535
 #, c-format
 msgid "invalid bound specification for a hash partition"
 msgstr "雜湊分割的界限設定無效"
 
 # utils/adt/varlena.c:2016
-#: parser/parse_utilcmd.c:4539 partitioning/partbounds.c:4794
+#: parser/parse_utilcmd.c:4541 partitioning/partbounds.c:4794
 #, c-format
 msgid "modulus for hash partition must be an integer value greater than zero"
 msgstr "雜湊分割的模數必須是大於零的整數"
 
 # gram.y:5585
-#: parser/parse_utilcmd.c:4546 partitioning/partbounds.c:4802
+#: parser/parse_utilcmd.c:4548 partitioning/partbounds.c:4802
 #, c-format
 msgid "remainder for hash partition must be less than modulus"
 msgstr "雜湊分割的餘數必須小於模數"
 
-#: parser/parse_utilcmd.c:4559
+#: parser/parse_utilcmd.c:4561
 #, c-format
 msgid "invalid bound specification for a list partition"
 msgstr "清單分割的界限設定無效"
 
-#: parser/parse_utilcmd.c:4612
+#: parser/parse_utilcmd.c:4614
 #, c-format
 msgid "invalid bound specification for a range partition"
 msgstr "範圍分割的界限設定無效"
 
 # commands/indexcmds.c:119
-#: parser/parse_utilcmd.c:4618
+#: parser/parse_utilcmd.c:4620
 #, c-format
 msgid "FROM must specify exactly one value per partitioning column"
 msgstr "FROM 必須為每個分割欄位指定且僅指定一個值"
 
 # commands/indexcmds.c:119
-#: parser/parse_utilcmd.c:4622
+#: parser/parse_utilcmd.c:4624
 #, c-format
 msgid "TO must specify exactly one value per partitioning column"
 msgstr "TO 必須為每個分割欄位指定且僅指定一個值"
 
 # commands/copy.c:805
-#: parser/parse_utilcmd.c:4738
+#: parser/parse_utilcmd.c:4740
 #, c-format
 msgid "cannot specify NULL in range bound"
 msgstr "範圍界限中不能指定 NULL"
 
-#: parser/parse_utilcmd.c:4786
+#: parser/parse_utilcmd.c:4788
 #, c-format
 msgid "every bound following MAXVALUE must also be MAXVALUE"
 msgstr "MAXVALUE 後面的每個界限值也必須是 MAXVALUE"
 
-#: parser/parse_utilcmd.c:4793
+#: parser/parse_utilcmd.c:4795
 #, c-format
 msgid "every bound following MINVALUE must also be MINVALUE"
 msgstr "MINVALUE 後面的每個界限值也必須是 MINVALUE"
 
 # commands/tablecmds.c:2850
-#: parser/parse_utilcmd.c:4836
+#: parser/parse_utilcmd.c:4838
 #, c-format
 msgid "specified value cannot be cast to type %s for column \"%s\""
 msgstr "不能將指定的值轉換為欄位 \"%2$s\" 的型別 %1$s"
@@ -27478,7 +27485,7 @@ msgstr "分割索引鍵的第 %d 個欄位型別為 \"%s\"，但提供的值型�
 
 # access/transam/slru.c:967 commands/tablespace.c:577
 # commands/tablespace.c:721
-#: port/pg_sema.c:211 port/pg_shmem.c:719 port/posix_sema.c:211
+#: port/pg_sema.c:215 port/pg_shmem.c:719 port/posix_sema.c:215
 #: port/sysv_sema.c:347 port/sysv_shmem.c:719
 #, c-format
 msgid "could not stat data directory \"%s\": %m"
@@ -37145,52 +37152,52 @@ msgid "could not open ICU converter for encoding \"%s\": %s"
 msgstr "無法為編碼 \"%s\" 開啟 ICU 轉換器: %s"
 
 # commands/tablespace.c:386 commands/tablespace.c:483
-#: utils/adt/pg_locale_libc.c:908
+#: utils/adt/pg_locale_libc.c:912
 #, c-format
 msgid "collations with different collate and ctype values are not supported on this platform"
 msgstr "這個平臺不支援 collate 和 ctype 值不同的定序"
 
 # utils/init/miscinit.c:519
-#: utils/adt/pg_locale_libc.c:1041
+#: utils/adt/pg_locale_libc.c:1045
 #, c-format
 msgid "could not load locale \"%s\""
 msgstr "無法載入區域 \"%s\""
 
-#: utils/adt/pg_locale_libc.c:1066
+#: utils/adt/pg_locale_libc.c:1070
 #, c-format
 msgid "could not get collation version for locale \"%s\": error code %lu"
 msgstr "無法取得區域 \"%s\" 的定序版本: 錯誤碼 %lu"
 
 #  translator: first %s is name of a SQL construct, eg CASE
 # parser/parse_coerce.c:933
-#: utils/adt/pg_locale_libc.c:1127 utils/adt/pg_locale_libc.c:1140
+#: utils/adt/pg_locale_libc.c:1131 utils/adt/pg_locale_libc.c:1144
 #, c-format
 msgid "could not convert string to UTF-16: error code %lu"
 msgstr "無法將字串轉換為 UTF-16: 錯誤碼 %lu"
 
-#: utils/adt/pg_locale_libc.c:1149
+#: utils/adt/pg_locale_libc.c:1153
 #, c-format
 msgid "could not compare Unicode strings: %m"
 msgstr "無法比較 Unicode 字串: %m"
 
 # utils/init/miscinit.c:519
-#: utils/adt/pg_locale_libc.c:1191
+#: utils/adt/pg_locale_libc.c:1195
 #, c-format
 msgid "could not create locale \"%s\": %m"
 msgstr "無法建立區域 \"%s\": %m"
 
-#: utils/adt/pg_locale_libc.c:1194
+#: utils/adt/pg_locale_libc.c:1198
 #, c-format
 msgid "The operating system could not find any locale data for the locale name \"%s\"."
 msgstr "作業系統無法找到區域名稱 \"%s\" 對應的任何區域資料。"
 
 # utils/adt/oracle_compat.c:99 utils/adt/oracle_compat.c:138
-#: utils/adt/pg_locale_libc.c:1366
+#: utils/adt/pg_locale_libc.c:1370
 #, c-format
 msgid "invalid multibyte character for locale"
 msgstr "區域的多位元組字元無效"
 
-#: utils/adt/pg_locale_libc.c:1367
+#: utils/adt/pg_locale_libc.c:1371
 #, c-format
 msgid "The server's LC_CTYPE locale is probably incompatible with the database encoding."
 msgstr "伺服器的 LC_CTYPE 區域可能與資料庫編碼不相容。"
@@ -37439,8 +37446,8 @@ msgid "more than one operator named %s"
 msgstr "有超過一個運算子被命名為 %s"
 
 # utils/adt/regproc.c:644 utils/adt/regproc.c:1276
-#: utils/adt/regproc.c:683 utils/adt/regproc.c:2154 utils/adt/ruleutils.c:10926
-#: utils/adt/ruleutils.c:11139
+#: utils/adt/regproc.c:683 utils/adt/regproc.c:2154 utils/adt/ruleutils.c:10920
+#: utils/adt/ruleutils.c:11133
 #, c-format
 msgid "too many arguments"
 msgstr "參數過多"

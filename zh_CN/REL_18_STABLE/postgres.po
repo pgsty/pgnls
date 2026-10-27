@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 12\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-10-22 06:06+0000\n"
+"POT-Creation-Date: 2026-10-26 20:36+0000\n"
 "PO-Revision-Date: 2019-06-05 18:00+0800\n"
 "Last-Translator: Jie Zhang <zhangjie2@cn.fujitsu.com>\n"
 "Language-Team: Chinese (Simplified) <zhangjie2@cn.fujitsu.com>\n"
@@ -96,7 +96,7 @@ msgstr "为了读取, 无法打开文件 \"%s\": %m"
 
 #: ../common/controldata_utils.c:108 ../common/controldata_utils.c:110
 #: access/transam/timeline.c:143 access/transam/timeline.c:362
-#: access/transam/twophase.c:1354 access/transam/xlog.c:3474
+#: access/transam/twophase.c:1355 access/transam/xlog.c:3474
 #: access/transam/xlog.c:4365 access/transam/xlogrecovery.c:1272
 #: access/transam/xlogrecovery.c:1370 access/transam/xlogrecovery.c:1407
 #: access/transam/xlogrecovery.c:1474 backup/basebackup.c:2126
@@ -125,8 +125,8 @@ msgstr "无法读取文件\"%1$s\"：读取了%3$zu中的%2$d"
 #: ../common/controldata_utils.c:277 ../common/controldata_utils.c:280
 #: access/heap/rewriteheap.c:1141 access/heap/rewriteheap.c:1246
 #: access/transam/timeline.c:392 access/transam/timeline.c:438
-#: access/transam/timeline.c:512 access/transam/twophase.c:1366
-#: access/transam/twophase.c:1784 access/transam/xlog.c:3320
+#: access/transam/timeline.c:512 access/transam/twophase.c:1367
+#: access/transam/twophase.c:1789 access/transam/xlog.c:3320
 #: access/transam/xlog.c:3514 access/transam/xlog.c:3519
 #: access/transam/xlog.c:3655 access/transam/xlog.c:4335
 #: access/transam/xlog.c:5307 commands/copyfrom.c:1929 commands/copyto.c:598
@@ -165,7 +165,7 @@ msgstr ""
 #: ../common/file_utils.c:428 ../common/file_utils.c:502
 #: access/heap/rewriteheap.c:1229 access/transam/timeline.c:111
 #: access/transam/timeline.c:251 access/transam/timeline.c:348
-#: access/transam/twophase.c:1310 access/transam/xlog.c:3210
+#: access/transam/twophase.c:1311 access/transam/xlog.c:3210
 #: access/transam/xlog.c:3390 access/transam/xlog.c:3429
 #: access/transam/xlog.c:3622 access/transam/xlog.c:4355
 #: access/transam/xlogrecovery.c:4325 access/transam/xlogrecovery.c:4426
@@ -189,7 +189,7 @@ msgid "could not open file \"%s\": %m"
 msgstr "无法打开文件 \"%s\": %m"
 
 #: ../common/controldata_utils.c:246 ../common/controldata_utils.c:249
-#: access/transam/twophase.c:1757 access/transam/twophase.c:1766
+#: access/transam/twophase.c:1762 access/transam/twophase.c:1771
 #: access/transam/xlog.c:9334 access/transam/xlogfuncs.c:699
 #: backup/basebackup_server.c:173 backup/basebackup_server.c:266
 #: backup/walsummary.c:304 postmaster/postmaster.c:4100
@@ -203,7 +203,7 @@ msgstr "无法写入文件 \"%s\": %m"
 #: ../common/file_utils.c:440 ../common/file_utils.c:510
 #: access/heap/rewriteheap.c:925 access/heap/rewriteheap.c:1135
 #: access/heap/rewriteheap.c:1240 access/transam/timeline.c:432
-#: access/transam/timeline.c:506 access/transam/twophase.c:1778
+#: access/transam/timeline.c:506 access/transam/twophase.c:1783
 #: access/transam/xlog.c:3310 access/transam/xlog.c:3508
 #: access/transam/xlog.c:4328 access/transam/xlog.c:8720
 #: access/transam/xlog.c:8764 backup/basebackup_server.c:207
@@ -222,7 +222,7 @@ msgstr "无法 fsync 文件 \"%s\": %m"
 #: ../common/jsonapi.c:2459 ../common/md5_common.c:156
 #: ../common/parse_manifest.c:157 ../common/parse_manifest.c:852
 #: ../common/psprintf.c:140 ../common/scram-common.c:268 ../port/path.c:846
-#: ../port/path.c:883 ../port/path.c:900 access/transam/twophase.c:1419
+#: ../port/path.c:883 ../port/path.c:900 access/transam/twophase.c:1420
 #: access/transam/xlogrecovery.c:586 lib/dshash.c:253 libpq/auth.c:1353
 #: libpq/auth.c:1397 libpq/auth.c:1959 libpq/be-secure-gssapi.c:537
 #: libpq/be-secure-gssapi.c:717 postmaster/bgworker.c:355
@@ -342,7 +342,7 @@ msgid "could not synchronize file system for file \"%s\": %m"
 msgstr "无法为文件 \"%s\" 同步文件系统: %m"
 
 #: ../common/file_utils.c:123 ../common/file_utils.c:588
-#: ../common/file_utils.c:592 access/transam/twophase.c:1322
+#: ../common/file_utils.c:592 access/transam/twophase.c:1323
 #: access/transam/xlogarchive.c:111 access/transam/xlogarchive.c:235
 #: backup/basebackup.c:357 backup/basebackup.c:555 backup/basebackup.c:626
 #: backup/walsummary.c:247 commands/copyfrom.c:1889 commands/copyto.c:984
@@ -376,11 +376,11 @@ msgstr "无法打开目录 \"%s\": %m"
 msgid "could not read directory \"%s\": %m"
 msgstr "无法读取目录 \"%s\": %m"
 
-#: ../common/file_utils.c:520 access/transam/xlogarchive.c:389
-#: postmaster/pgarch.c:836 postmaster/syslogger.c:1560
-#: replication/logical/snapbuild.c:1748 replication/slot.c:1037
-#: replication/slot.c:2309 replication/slot.c:2458 storage/file/fd.c:838
-#: utils/time/snapmgr.c:1313
+#: ../common/file_utils.c:520 access/transam/twophase.c:1798
+#: access/transam/xlogarchive.c:389 postmaster/pgarch.c:836
+#: postmaster/syslogger.c:1560 replication/logical/snapbuild.c:1748
+#: replication/slot.c:1037 replication/slot.c:2309 replication/slot.c:2458
+#: storage/file/fd.c:838 utils/time/snapmgr.c:1313
 #, c-format
 msgid "could not rename file \"%s\" to \"%s\": %m"
 msgstr "无法把文件 \"%s\" 重命名为 \"%s\": %m"
@@ -753,10 +753,11 @@ msgid "could not get exit code from subprocess: error code %lu"
 msgstr "无法从子进程获取退出码: 错误码 %lu"
 
 #: ../common/rmtree.c:97 access/heap/rewriteheap.c:1214
-#: access/transam/twophase.c:1717 access/transam/xlogarchive.c:119
-#: access/transam/xlogarchive.c:399 backup/walsummary.c:254
-#: postmaster/postmaster.c:1069 postmaster/syslogger.c:1489
-#: replication/logical/origin.c:614 replication/logical/reorderbuffer.c:4983
+#: access/transam/twophase.c:1718 access/transam/twophase.c:1922
+#: access/transam/xlogarchive.c:119 access/transam/xlogarchive.c:399
+#: backup/walsummary.c:254 postmaster/postmaster.c:1069
+#: postmaster/syslogger.c:1489 replication/logical/origin.c:614
+#: replication/logical/reorderbuffer.c:4983
 #: replication/logical/snapbuild.c:1629 replication/logical/snapbuild.c:2085
 #: replication/slot.c:2512 storage/file/fd.c:878 storage/file/fd.c:3443
 #: storage/file/fd.c:3505 storage/file/reinit.c:261 storage/ipc/dsm.c:343
@@ -2247,74 +2248,74 @@ msgstr "Timeline ID 必须小于子 timeline 的 ID."
 msgid "requested timeline %u is not in this server's history"
 msgstr "服务器上没有起始时间表 %u"
 
-#: access/transam/twophase.c:368
+#: access/transam/twophase.c:369
 #, c-format
 msgid "transaction identifier \"%s\" is too long"
 msgstr "事务标示符 \"%s\" 太长"
 
-#: access/transam/twophase.c:375
+#: access/transam/twophase.c:376
 #, c-format
 msgid "prepared transactions are disabled"
 msgstr "禁用已准备好的事务"
 
-#: access/transam/twophase.c:376
+#: access/transam/twophase.c:377
 #, fuzzy, c-format
 #| msgid "Set max_prepared_transactions to a nonzero value."
 msgid "Set \"max_prepared_transactions\" to a nonzero value."
 msgstr "将max_prepared_transactions设置为一个非零值"
 
-#: access/transam/twophase.c:395
+#: access/transam/twophase.c:396
 #, c-format
 msgid "transaction identifier \"%s\" is already in use"
 msgstr "事务标示符\"%s\"已经在使用"
 
-#: access/transam/twophase.c:404 access/transam/twophase.c:2531
+#: access/transam/twophase.c:405 access/transam/twophase.c:2559
 #, c-format
 msgid "maximum number of prepared transactions reached"
 msgstr "已经达到已准备好事务的最大数量"
 
-#: access/transam/twophase.c:405 access/transam/twophase.c:2532
+#: access/transam/twophase.c:406 access/transam/twophase.c:2560
 #, fuzzy, c-format
 #| msgid "Increase max_prepared_transactions (currently %d)."
 msgid "Increase \"max_prepared_transactions\" (currently %d)."
 msgstr "增加max_prepared_transactions的值(当前值是%d)."
 
-#: access/transam/twophase.c:580
+#: access/transam/twophase.c:581
 #, c-format
 msgid "prepared transaction with identifier \"%s\" is busy"
 msgstr "标示符为\"%s\"的事务处于繁忙状态."
 
-#: access/transam/twophase.c:586
+#: access/transam/twophase.c:587
 #, c-format
 msgid "permission denied to finish prepared transaction"
 msgstr "完成已准备好事务的权限不够"
 
-#: access/transam/twophase.c:587
+#: access/transam/twophase.c:588
 #, c-format
 msgid "Must be superuser or the user that prepared the transaction."
 msgstr "必须是超级用户或者是准备好事务的用户"
 
-#: access/transam/twophase.c:598
+#: access/transam/twophase.c:599
 #, c-format
 msgid "prepared transaction belongs to another database"
 msgstr "已准备好的事务属于另一个数据库"
 
-#: access/transam/twophase.c:599
+#: access/transam/twophase.c:600
 #, c-format
 msgid "Connect to the database where the transaction was prepared to finish it."
 msgstr "连接到带有准备好完成事务的数据库"
 
-#: access/transam/twophase.c:614
+#: access/transam/twophase.c:615
 #, c-format
 msgid "prepared transaction with identifier \"%s\" does not exist"
 msgstr "带有标示符\"%s\" 已准备好事务不存在"
 
-#: access/transam/twophase.c:1175
+#: access/transam/twophase.c:1176
 #, c-format
 msgid "two-phase state file maximum length exceeded"
 msgstr "超过两阶段状态文件的最大长度"
 
-#: access/transam/twophase.c:1330
+#: access/transam/twophase.c:1331
 #, fuzzy, c-format
 #| msgid "incorrect size of file \"%s\": %zu byte"
 #| msgid_plural "incorrect size of file \"%s\": %zu bytes"
@@ -2322,112 +2323,112 @@ msgid "incorrect size of file \"%s\": %lld byte"
 msgid_plural "incorrect size of file \"%s\": %lld bytes"
 msgstr[0] "无法写入文件 \"%s\": %zu字节"
 
-#: access/transam/twophase.c:1339
+#: access/transam/twophase.c:1340
 #, c-format
 msgid "incorrect alignment of CRC offset for file \"%s\""
 msgstr "文件\"%s\"的CRC偏移对齐不正确"
 
-#: access/transam/twophase.c:1357
+#: access/transam/twophase.c:1358
 #, c-format
 msgid "could not read file \"%s\": read %d of %lld"
 msgstr "无法读取文件\"%1$s\"：读取了%3$lld中的%2$d"
 
-#: access/transam/twophase.c:1372
+#: access/transam/twophase.c:1373
 #, c-format
 msgid "invalid magic number stored in file \"%s\""
 msgstr "文件\"%s\"中存储的magic number无效"
 
-#: access/transam/twophase.c:1378
+#: access/transam/twophase.c:1379
 #, c-format
 msgid "invalid size stored in file \"%s\""
 msgstr "文件\"%s\"中存储的大小无效"
 
-#: access/transam/twophase.c:1390
+#: access/transam/twophase.c:1391
 #, c-format
 msgid "calculated CRC checksum does not match value stored in file \"%s\""
 msgstr "计算得到的 CRC 校验与存储在文件\"%s\"中的值不匹配"
 
-#: access/transam/twophase.c:1420 access/transam/xlogrecovery.c:587
+#: access/transam/twophase.c:1421 access/transam/xlogrecovery.c:587
 #: postmaster/walsummarizer.c:1039 replication/logical/logical.c:280
 #: replication/walsender.c:829
 #, c-format
 msgid "Failed while allocating a WAL reading processor."
 msgstr "分配WAL读取处理器失败."
 
-#: access/transam/twophase.c:1430
+#: access/transam/twophase.c:1431
 #, fuzzy, c-format
 #| msgid "could not read two-phase state from WAL at %X/%X"
 msgid "could not read two-phase state from WAL at %X/%X: %s"
 msgstr "无法从 %X/%X 位置的 WAL 读取两阶段状态"
 
-#: access/transam/twophase.c:1435
+#: access/transam/twophase.c:1436
 #, c-format
 msgid "could not read two-phase state from WAL at %X/%X"
 msgstr "无法从 %X/%X 位置的 WAL 读取两阶段状态"
 
-#: access/transam/twophase.c:1443
+#: access/transam/twophase.c:1444
 #, c-format
 msgid "expected two-phase state data is not present in WAL at %X/%X"
 msgstr "预期的两阶段状态数据没有出现在 WAL 的 %X/%X 位置上"
 
-#: access/transam/twophase.c:1745
+#: access/transam/twophase.c:1750
 #, c-format
 msgid "could not recreate file \"%s\": %m"
 msgstr "无法重新创建文件 \"%s\": %m"
 
-#: access/transam/twophase.c:1872
+#: access/transam/twophase.c:1887
 #, c-format
 msgid "%u two-phase state file was written for a long-running prepared transaction"
 msgid_plural "%u two-phase state files were written for long-running prepared transactions"
 msgstr[0] "为长时间运行的准备好事务写了 %u 个两阶段状态文件"
 
-#: access/transam/twophase.c:2107
+#: access/transam/twophase.c:2135
 #, c-format
 msgid "recovering prepared transaction %u from shared memory"
 msgstr "正在从共享内存中恢复已准备事务%u"
 
-#: access/transam/twophase.c:2200
+#: access/transam/twophase.c:2228
 #, c-format
 msgid "removing stale two-phase state file for transaction %u"
 msgstr "正在删除事务%u无用的两阶段提交状态文件"
 
-#: access/transam/twophase.c:2207
+#: access/transam/twophase.c:2235
 #, c-format
 msgid "removing stale two-phase state from memory for transaction %u"
 msgstr "正在从内存中删除事务%u的无用的两阶段提交状态"
 
-#: access/transam/twophase.c:2220
+#: access/transam/twophase.c:2248
 #, c-format
 msgid "removing future two-phase state file for transaction %u"
 msgstr "正在删除事务%u的未来两阶段状态文件"
 
-#: access/transam/twophase.c:2227
+#: access/transam/twophase.c:2255
 #, c-format
 msgid "removing future two-phase state from memory for transaction %u"
 msgstr "正在从内存中删除事务%u的未来两阶段提交状态"
 
-#: access/transam/twophase.c:2252
+#: access/transam/twophase.c:2280
 #, c-format
 msgid "corrupted two-phase state file for transaction %u"
 msgstr "事务%u的两阶段状态文件已损坏"
 
-#: access/transam/twophase.c:2257
+#: access/transam/twophase.c:2285
 #, c-format
 msgid "corrupted two-phase state in memory for transaction %u"
 msgstr "事务%u的内存中的两阶段状态已损坏"
 
-#: access/transam/twophase.c:2514
+#: access/transam/twophase.c:2542
 #, fuzzy, c-format
 #| msgid "corrupted two-phase state file for transaction %u"
 msgid "could not recover two-phase state file for transaction %u"
 msgstr "事务%u的两阶段状态文件已损坏"
 
-#: access/transam/twophase.c:2516
+#: access/transam/twophase.c:2544
 #, c-format
 msgid "Two-phase state file has been found in WAL record %X/%X, but this transaction has already been restored from disk."
 msgstr ""
 
-#: access/transam/twophase.c:2524 storage/file/fd.c:514 utils/fmgr/dfmgr.c:214
+#: access/transam/twophase.c:2552 storage/file/fd.c:514 utils/fmgr/dfmgr.c:214
 #, c-format
 msgid "could not access file \"%s\": %m"
 msgstr "无法访问文件 \"%s\": %m"
@@ -12888,36 +12889,36 @@ msgstr "索引\"%s\"属于表\"%s\"中的约束，但不存在索引\"%s\"的约
 msgid "Another index is already attached for partition \"%s\"."
 msgstr "已经为分区\"%s\"附加了另一个索引."
 
-#: commands/tablecmds.c:22025
+#: commands/tablecmds.c:22030
 #, fuzzy, c-format
 #| msgid "invalid primary checkpoint record"
 msgid "invalid primary key definition"
 msgstr "无效的主 checkpoint 记录"
 
-#: commands/tablecmds.c:22026
+#: commands/tablecmds.c:22031
 #, fuzzy, c-format
 #| msgid "Column \"%s\" of relation \"%s\" is not already NOT NULL."
 msgid "Column \"%s\" of relation \"%s\" is not marked NOT NULL."
 msgstr "关系 \"%2$s\" 的属性 \"%1$s\" 不是空的."
 
-#: commands/tablecmds.c:22161
+#: commands/tablecmds.c:22166
 #, fuzzy, c-format
 #| msgid "this build does not support compression"
 msgid "column data type %s does not support compression"
 msgstr "这个编译版本不支持压缩"
 
-#: commands/tablecmds.c:22168
+#: commands/tablecmds.c:22173
 #, fuzzy, c-format
 #| msgid "invalid compression level \"%s\""
 msgid "invalid compression method \"%s\""
 msgstr "无效的压缩级别值: \"%s\""
 
-#: commands/tablecmds.c:22194
+#: commands/tablecmds.c:22199
 #, c-format
 msgid "invalid storage type \"%s\""
 msgstr "无效存储类型 \"%s\""
 
-#: commands/tablecmds.c:22204
+#: commands/tablecmds.c:22209
 #, c-format
 msgid "column data type %s can only have storage PLAIN"
 msgstr "字段数据类型 %s 只能存储为明文 (PLAIN)"
@@ -21193,7 +21194,7 @@ msgstr "分区键的列%d的类型为\"%s\"，但提供的值的类型为\"%s\""
 msgid "column %d of the partition key has type \"%s\", but supplied value is of type \"%s\""
 msgstr "分区键的列%d的类型为\"%s\"，但提供的值的类型为\"%s\""
 
-#: port/pg_sema.c:209 port/pg_shmem.c:717 port/posix_sema.c:209
+#: port/pg_sema.c:213 port/pg_shmem.c:717 port/posix_sema.c:213
 #: port/sysv_sema.c:343 port/sysv_shmem.c:717
 #, c-format
 msgid "could not stat data directory \"%s\": %m"
@@ -29629,8 +29630,8 @@ msgstr "多个函数名为 \"%s\""
 msgid "more than one operator named %s"
 msgstr "多个操作符名为 %s"
 
-#: utils/adt/regproc.c:675 utils/adt/regproc.c:2029 utils/adt/ruleutils.c:10878
-#: utils/adt/ruleutils.c:11091
+#: utils/adt/regproc.c:675 utils/adt/regproc.c:2029 utils/adt/ruleutils.c:10872
+#: utils/adt/ruleutils.c:11085
 #, c-format
 msgid "too many arguments"
 msgstr "太多参数"

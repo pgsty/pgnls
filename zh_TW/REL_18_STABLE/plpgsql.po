@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 9.1\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-10-22 05:58+0000\n"
+"POT-Creation-Date: 2026-10-26 20:28+0000\n"
 "PO-Revision-Date: 2013-09-03 23:25-0400\n"
 "Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
 "Language-Team: EnterpriseDB translation team <dev-escalations@enterprisedb.com>\n"
@@ -21,67 +21,67 @@ msgstr ""
 msgid "PL/pgSQL functions cannot accept type %s"
 msgstr "PL/pgSQL 函式無法接受型別 %s"
 
-#: pl_comp.c:421
+#: pl_comp.c:422
 #, c-format
 msgid "could not determine actual return type for polymorphic function \"%s\""
 msgstr "無法判斷多型函式 \"%s\" 實際傳回型別"
 
-#: pl_comp.c:451
+#: pl_comp.c:452
 #, c-format
 msgid "trigger functions can only be called as triggers"
 msgstr "觸發函式只能當做觸發呼叫"
 
-#: pl_comp.c:455 pl_handler.c:480
+#: pl_comp.c:456 pl_handler.c:480
 #, c-format
 msgid "PL/pgSQL functions cannot return type %s"
 msgstr "PL/pgSQL 函式無法傳回型別 %s"
 
-#: pl_comp.c:495
+#: pl_comp.c:496
 #, c-format
 msgid "trigger functions cannot have declared arguments"
 msgstr "觸發函式不能有宣告過的參數"
 
-#: pl_comp.c:496
+#: pl_comp.c:497
 #, c-format
 msgid "The arguments of the trigger can be accessed through TG_NARGS and TG_ARGV instead."
 msgstr "觸發程序的參數可以改透過 TG_NARGS 和 TG_ARGV 存取。"
 
-#: pl_comp.c:629
+#: pl_comp.c:630
 #, fuzzy, c-format
 #| msgid "trigger functions cannot have declared arguments"
 msgid "event trigger functions cannot have declared arguments"
 msgstr "觸發函式不能有宣告過的參數"
 
-#: pl_comp.c:906
+#: pl_comp.c:907
 #, c-format
 msgid "compilation of PL/pgSQL function \"%s\" near line %d"
 msgstr "編譯 PL/pgSQL 函式 \"%s\"，靠近行 %d"
 
 # commands/copy.c:2716 parser/parse_target.c:648 parser/parse_target.c:658
-#: pl_comp.c:929
+#: pl_comp.c:930
 #, c-format
 msgid "parameter name \"%s\" used more than once"
 msgstr "多次使用參數名稱 \"%s\""
 
 # parser/parse_relation.c:510 parser/parse_relation.c:609
-#: pl_comp.c:1043
+#: pl_comp.c:1044
 #, c-format
 msgid "column reference \"%s\" is ambiguous"
 msgstr "資料行參考 \"%s\" 模稜兩可"
 
-#: pl_comp.c:1045
+#: pl_comp.c:1046
 #, c-format
 msgid "It could refer to either a PL/pgSQL variable or a table column."
 msgstr "可能參考到 PL/pgSQL 變數或資料表欄位。"
 
-#: pl_comp.c:1222 pl_exec.c:5238 pl_exec.c:5411 pl_exec.c:5498 pl_exec.c:5589
+#: pl_comp.c:1223 pl_exec.c:5238 pl_exec.c:5411 pl_exec.c:5498 pl_exec.c:5589
 #: pl_exec.c:6786
 #, c-format
 msgid "record \"%s\" has no field \"%s\""
 msgstr "紀錄 \"%s\" 沒有欄位 \"%s\""
 
 # tcop/utility.c:77
-#: pl_comp.c:1541 pl_gram.y:665 pl_gram.y:680 pl_gram.y:706
+#: pl_comp.c:1542 pl_gram.y:665 pl_gram.y:680 pl_gram.y:706
 #, c-format
 msgid "variable \"%s\" does not exist"
 msgstr "變數 \"%s\" 不存在"
@@ -93,37 +93,37 @@ msgstr "變數 \"%s\" 不存在"
 # parser/parse_relation.c:1647 parser/parse_relation.c:1705
 # parser/parse_relation.c:1919 parser/parse_type.c:94
 # utils/adt/ruleutils.c:1300
-#: pl_comp.c:1630
+#: pl_comp.c:1631
 #, c-format
 msgid "column \"%s\" of relation \"%s\" does not exist"
 msgstr "欄位\"%s\"於relation \"%s\"不存在"
 
 # catalog/namespace.c:200 utils/adt/regproc.c:837
-#: pl_comp.c:1683
+#: pl_comp.c:1684
 #, c-format
 msgid "relation \"%s\" does not exist"
 msgstr "關聯 \"%s\"不存在"
 
 # access/heap/heapam.c:628 access/heap/heapam.c:663 access/heap/heapam.c:698
 # catalog/aclchk.c:293
-#: pl_comp.c:1690 pl_comp.c:1728
+#: pl_comp.c:1691 pl_comp.c:1729
 #, fuzzy, c-format
 #| msgid "\"%s\" is not a composite type"
 msgid "relation \"%s\" does not have a composite type"
 msgstr "\"%s\" 不是複合型別"
 
-#: pl_comp.c:1794
+#: pl_comp.c:1795
 #, c-format
 msgid "variable \"%s\" has pseudo-type %s"
 msgstr "變數 \"%s\" 具有處擬型別 %s"
 
-#: pl_comp.c:1983
+#: pl_comp.c:1984
 #, c-format
 msgid "type \"%s\" is only a shell"
 msgstr "型別 \"%s\" 只是殼"
 
 # utils/cache/typcache.c:414
-#: pl_comp.c:2065 pl_exec.c:7087
+#: pl_comp.c:2066 pl_exec.c:7087
 #, c-format
 msgid "type %s is not composite"
 msgstr "型別 %s 不是複合"
@@ -131,12 +131,12 @@ msgstr "型別 %s 不是複合"
 # parser/parse_coerce.c:1208 parser/parse_coerce.c:1225
 # parser/parse_coerce.c:1279 parser/parse_expr.c:794 parser/parse_expr.c:1350
 # parser/parse_expr.c:1389 parser/parse_oper.c:920
-#: pl_comp.c:2101
+#: pl_comp.c:2102
 #, c-format
 msgid "could not find array type for data type %s"
 msgstr "找不到資料型別 %s 的陣列型別"
 
-#: pl_comp.c:2140 pl_comp.c:2189
+#: pl_comp.c:2141 pl_comp.c:2190
 #, c-format
 msgid "unrecognized exception condition \"%s\""
 msgstr "無法辨識的例外條件 \"%s\""
