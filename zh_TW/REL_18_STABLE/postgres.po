@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 18\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-10-22 06:07+0000\n"
+"POT-Creation-Date: 2026-10-26 20:37+0000\n"
 "PO-Revision-Date: 2026-10-22 21:58+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
@@ -102,7 +102,7 @@ msgstr "無法開啟檔案 \"%s\" 以讀取: %m"
 # access/transam/xlog.c:5583
 #: ../common/controldata_utils.c:108 ../common/controldata_utils.c:110
 #: access/transam/timeline.c:143 access/transam/timeline.c:362
-#: access/transam/twophase.c:1354 access/transam/xlog.c:3474
+#: access/transam/twophase.c:1355 access/transam/xlog.c:3474
 #: access/transam/xlog.c:4365 access/transam/xlogrecovery.c:1272
 #: access/transam/xlogrecovery.c:1370 access/transam/xlogrecovery.c:1407
 #: access/transam/xlogrecovery.c:1474 backup/basebackup.c:2126
@@ -137,8 +137,8 @@ msgstr "無法讀取檔案 \"%1$s\": 應讀取 %3$zu，實際讀取 %2$d"
 #: ../common/controldata_utils.c:277 ../common/controldata_utils.c:280
 #: access/heap/rewriteheap.c:1141 access/heap/rewriteheap.c:1246
 #: access/transam/timeline.c:392 access/transam/timeline.c:438
-#: access/transam/timeline.c:512 access/transam/twophase.c:1366
-#: access/transam/twophase.c:1784 access/transam/xlog.c:3320
+#: access/transam/timeline.c:512 access/transam/twophase.c:1367
+#: access/transam/twophase.c:1789 access/transam/xlog.c:3320
 #: access/transam/xlog.c:3514 access/transam/xlog.c:3519
 #: access/transam/xlog.c:3655 access/transam/xlog.c:4335
 #: access/transam/xlog.c:5307 commands/copyfrom.c:1929 commands/copyto.c:598
@@ -182,7 +182,7 @@ msgstr ""
 #: ../common/file_utils.c:428 ../common/file_utils.c:502
 #: access/heap/rewriteheap.c:1229 access/transam/timeline.c:111
 #: access/transam/timeline.c:251 access/transam/timeline.c:348
-#: access/transam/twophase.c:1310 access/transam/xlog.c:3210
+#: access/transam/twophase.c:1311 access/transam/xlog.c:3210
 #: access/transam/xlog.c:3390 access/transam/xlog.c:3429
 #: access/transam/xlog.c:3622 access/transam/xlog.c:4355
 #: access/transam/xlogrecovery.c:4325 access/transam/xlogrecovery.c:4426
@@ -207,7 +207,7 @@ msgstr "無法開啟檔案 \"%s\": %m"
 
 # access/transam/xlog.c:5319 access/transam/xlog.c:5439
 #: ../common/controldata_utils.c:246 ../common/controldata_utils.c:249
-#: access/transam/twophase.c:1757 access/transam/twophase.c:1766
+#: access/transam/twophase.c:1762 access/transam/twophase.c:1771
 #: access/transam/xlog.c:9334 access/transam/xlogfuncs.c:699
 #: backup/basebackup_server.c:173 backup/basebackup_server.c:266
 #: backup/walsummary.c:304 postmaster/postmaster.c:4100
@@ -223,7 +223,7 @@ msgstr "無法寫入檔案 \"%s\": %m"
 #: ../common/file_utils.c:440 ../common/file_utils.c:510
 #: access/heap/rewriteheap.c:925 access/heap/rewriteheap.c:1135
 #: access/heap/rewriteheap.c:1240 access/transam/timeline.c:432
-#: access/transam/timeline.c:506 access/transam/twophase.c:1778
+#: access/transam/timeline.c:506 access/transam/twophase.c:1783
 #: access/transam/xlog.c:3310 access/transam/xlog.c:3508
 #: access/transam/xlog.c:4328 access/transam/xlog.c:8720
 #: access/transam/xlog.c:8764 backup/basebackup_server.c:207
@@ -262,7 +262,7 @@ msgstr "無法對檔案 \"%s\" 執行 fsync: %m"
 #: ../common/jsonapi.c:2459 ../common/md5_common.c:156
 #: ../common/parse_manifest.c:157 ../common/parse_manifest.c:852
 #: ../common/psprintf.c:140 ../common/scram-common.c:268 ../port/path.c:846
-#: ../port/path.c:883 ../port/path.c:900 access/transam/twophase.c:1419
+#: ../port/path.c:883 ../port/path.c:900 access/transam/twophase.c:1420
 #: access/transam/xlogrecovery.c:586 lib/dshash.c:253 libpq/auth.c:1353
 #: libpq/auth.c:1397 libpq/auth.c:1959 libpq/be-secure-gssapi.c:537
 #: libpq/be-secure-gssapi.c:717 postmaster/bgworker.c:355
@@ -407,7 +407,7 @@ msgstr "無法同步檔案 \"%s\" 所在的檔案系統: %m"
 # access/transam/xlog.c:1936 access/transam/xlog.c:2038
 # access/transam/xlog.c:5291
 #: ../common/file_utils.c:123 ../common/file_utils.c:588
-#: ../common/file_utils.c:592 access/transam/twophase.c:1322
+#: ../common/file_utils.c:592 access/transam/twophase.c:1323
 #: access/transam/xlogarchive.c:111 access/transam/xlogarchive.c:235
 #: backup/basebackup.c:357 backup/basebackup.c:555 backup/basebackup.c:626
 #: backup/walsummary.c:247 commands/copyfrom.c:1889 commands/copyto.c:984
@@ -448,11 +448,11 @@ msgstr "無法讀取目錄 \"%s\": %m"
 # access/transam/xlog.c:3037 access/transam/xlog.c:3819
 # access/transam/xlog.c:3862 commands/user.c:282 commands/user.c:412
 # postmaster/pgarch.c:597
-#: ../common/file_utils.c:520 access/transam/xlogarchive.c:389
-#: postmaster/pgarch.c:836 postmaster/syslogger.c:1560
-#: replication/logical/snapbuild.c:1748 replication/slot.c:1037
-#: replication/slot.c:2309 replication/slot.c:2458 storage/file/fd.c:838
-#: utils/time/snapmgr.c:1313
+#: ../common/file_utils.c:520 access/transam/twophase.c:1798
+#: access/transam/xlogarchive.c:389 postmaster/pgarch.c:836
+#: postmaster/syslogger.c:1560 replication/logical/snapbuild.c:1748
+#: replication/slot.c:1037 replication/slot.c:2309 replication/slot.c:2458
+#: storage/file/fd.c:838 utils/time/snapmgr.c:1313
 #, c-format
 msgid "could not rename file \"%s\" to \"%s\": %m"
 msgstr "無法將檔案 \"%s\" 重新命名為 \"%s\": %m"
@@ -820,10 +820,11 @@ msgstr "無法從子行程取得結束碼: 錯誤碼 %lu"
 # access/transam/xlog.c:1944 access/transam/xlog.c:5453
 # access/transam/xlog.c:5607 postmaster/postmaster.c:3504
 #: ../common/rmtree.c:97 access/heap/rewriteheap.c:1214
-#: access/transam/twophase.c:1717 access/transam/xlogarchive.c:119
-#: access/transam/xlogarchive.c:399 backup/walsummary.c:254
-#: postmaster/postmaster.c:1069 postmaster/syslogger.c:1489
-#: replication/logical/origin.c:614 replication/logical/reorderbuffer.c:4983
+#: access/transam/twophase.c:1718 access/transam/twophase.c:1922
+#: access/transam/xlogarchive.c:119 access/transam/xlogarchive.c:399
+#: backup/walsummary.c:254 postmaster/postmaster.c:1069
+#: postmaster/syslogger.c:1489 replication/logical/origin.c:614
+#: replication/logical/reorderbuffer.c:4983
 #: replication/logical/snapbuild.c:1629 replication/logical/snapbuild.c:2085
 #: replication/slot.c:2512 storage/file/fd.c:878 storage/file/fd.c:3443
 #: storage/file/fd.c:3505 storage/file/reinit.c:261 storage/ipc/dsm.c:343
@@ -2400,73 +2401,73 @@ msgid "requested timeline %u is not in this server's history"
 msgstr "請求的時間軸 %u 不在此伺服器的歷史中"
 
 # commands/tablespace.c:268
-#: access/transam/twophase.c:368
+#: access/transam/twophase.c:369
 #, c-format
 msgid "transaction identifier \"%s\" is too long"
 msgstr "交易識別字 \"%s\" 太長"
 
 # large_obj.c:55
-#: access/transam/twophase.c:375
+#: access/transam/twophase.c:376
 #, c-format
 msgid "prepared transactions are disabled"
 msgstr "預備交易已停用"
 
-#: access/transam/twophase.c:376
+#: access/transam/twophase.c:377
 #, c-format
 msgid "Set \"max_prepared_transactions\" to a nonzero value."
 msgstr "將 \"max_prepared_transactions\" 設為非零值。"
 
 # catalog/heap.c:747 catalog/index.c:527 commands/tablecmds.c:1471
-#: access/transam/twophase.c:395
+#: access/transam/twophase.c:396
 #, c-format
 msgid "transaction identifier \"%s\" is already in use"
 msgstr "交易識別字 \"%s\" 已在使用中"
 
-#: access/transam/twophase.c:404 access/transam/twophase.c:2531
+#: access/transam/twophase.c:405 access/transam/twophase.c:2559
 #, c-format
 msgid "maximum number of prepared transactions reached"
 msgstr "達到預備交易數目上限"
 
-#: access/transam/twophase.c:405 access/transam/twophase.c:2532
+#: access/transam/twophase.c:406 access/transam/twophase.c:2560
 #, c-format
 msgid "Increase \"max_prepared_transactions\" (currently %d)."
 msgstr "增大 \"max_prepared_transactions\" (目前為 %d)。"
 
-#: access/transam/twophase.c:580
+#: access/transam/twophase.c:581
 #, c-format
 msgid "prepared transaction with identifier \"%s\" is busy"
 msgstr "識別字為 \"%s\" 的預備交易忙碌中"
 
 # commands/dbcommands.c:192
-#: access/transam/twophase.c:586
+#: access/transam/twophase.c:587
 #, c-format
 msgid "permission denied to finish prepared transaction"
 msgstr "權限不足，無法完成預備交易"
 
 # utils/misc/guc.c:3901
-#: access/transam/twophase.c:587
+#: access/transam/twophase.c:588
 #, c-format
 msgid "Must be superuser or the user that prepared the transaction."
 msgstr "必須是超級使用者或預備該交易的使用者。"
 
 # commands/dbcommands.c:192
-#: access/transam/twophase.c:598
+#: access/transam/twophase.c:599
 #, c-format
 msgid "prepared transaction belongs to another database"
 msgstr "預備交易屬於另一個資料庫"
 
-#: access/transam/twophase.c:599
+#: access/transam/twophase.c:600
 #, c-format
 msgid "Connect to the database where the transaction was prepared to finish it."
 msgstr "連線至要完成之預備交易所在的資料庫。"
 
 # commands/conversioncmds.c:73
-#: access/transam/twophase.c:614
+#: access/transam/twophase.c:615
 #, c-format
 msgid "prepared transaction with identifier \"%s\" does not exist"
 msgstr "識別字為 \"%s\" 的預備交易不存在"
 
-#: access/transam/twophase.c:1175
+#: access/transam/twophase.c:1176
 #, c-format
 msgid "two-phase state file maximum length exceeded"
 msgstr "超過兩階段狀態檔最大長度"
@@ -2476,23 +2477,23 @@ msgstr "超過兩階段狀態檔最大長度"
 # commands/tablespace.c:668 commands/tablespace.c:674
 # postmaster/postmaster.c:3430 utils/init/miscinit.c:832
 # utils/init/miscinit.c:841 utils/misc/guc.c:4934 utils/misc/guc.c:4998
-#: access/transam/twophase.c:1330
+#: access/transam/twophase.c:1331
 #, c-format
 msgid "incorrect size of file \"%s\": %lld byte"
 msgid_plural "incorrect size of file \"%s\": %lld bytes"
 msgstr[0] "檔案 \"%s\" 的大小不正確: %lld 位元組"
 
-#: access/transam/twophase.c:1339
+#: access/transam/twophase.c:1340
 #, c-format
 msgid "incorrect alignment of CRC offset for file \"%s\""
 msgstr "檔案 \"%s\" 的 CRC 位移對齊不正確"
 
-#: access/transam/twophase.c:1357
+#: access/transam/twophase.c:1358
 #, c-format
 msgid "could not read file \"%s\": read %d of %lld"
 msgstr "無法讀取檔案 \"%1$s\": 應讀取 %3$lld，實際讀取 %2$d"
 
-#: access/transam/twophase.c:1372
+#: access/transam/twophase.c:1373
 #, c-format
 msgid "invalid magic number stored in file \"%s\""
 msgstr "檔案 \"%s\" 中儲存的魔數無效"
@@ -2500,18 +2501,18 @@ msgstr "檔案 \"%s\" 中儲存的魔數無效"
 # access/transam/xlog.c:5414 access/transam/xlog.c:5535
 # access/transam/xlog.c:5541 access/transam/xlog.c:5572
 # access/transam/xlog.c:5578
-#: access/transam/twophase.c:1378
+#: access/transam/twophase.c:1379
 #, c-format
 msgid "invalid size stored in file \"%s\""
 msgstr "檔案 \"%s\" 中儲存的大小無效"
 
 # fe-secure.c:848
-#: access/transam/twophase.c:1390
+#: access/transam/twophase.c:1391
 #, c-format
 msgid "calculated CRC checksum does not match value stored in file \"%s\""
 msgstr "計算得到的 CRC 檢查碼與檔案 \"%s\" 中儲存的值不相符"
 
-#: access/transam/twophase.c:1420 access/transam/xlogrecovery.c:587
+#: access/transam/twophase.c:1421 access/transam/xlogrecovery.c:587
 #: postmaster/walsummarizer.c:1039 replication/logical/logical.c:280
 #: replication/walsender.c:829
 #, c-format
@@ -2519,18 +2520,18 @@ msgid "Failed while allocating a WAL reading processor."
 msgstr "配置 WAL 讀取處理器時失敗。"
 
 # libpq/be-fsstubs.c:421
-#: access/transam/twophase.c:1430
+#: access/transam/twophase.c:1431
 #, c-format
 msgid "could not read two-phase state from WAL at %X/%X: %s"
 msgstr "無法從 %X/%X 處的 WAL 讀取兩階段狀態: %s"
 
 # libpq/be-fsstubs.c:421
-#: access/transam/twophase.c:1435
+#: access/transam/twophase.c:1436
 #, c-format
 msgid "could not read two-phase state from WAL at %X/%X"
 msgstr "無法從 %X/%X 處的 WAL 讀取兩階段狀態"
 
-#: access/transam/twophase.c:1443
+#: access/transam/twophase.c:1444
 #, c-format
 msgid "expected two-phase state data is not present in WAL at %X/%X"
 msgstr "%X/%X 處的 WAL 中不存在預期的兩階段狀態資料"
@@ -2539,71 +2540,71 @@ msgstr "%X/%X 處的 WAL 中不存在預期的兩階段狀態資料"
 # access/transam/xlog.c:1646 access/transam/xlog.c:2911
 # access/transam/xlog.c:5308 access/transam/xlog.c:5426
 # postmaster/postmaster.c:3366
-#: access/transam/twophase.c:1745
+#: access/transam/twophase.c:1750
 #, c-format
 msgid "could not recreate file \"%s\": %m"
 msgstr "無法重新建立檔案 \"%s\": %m"
 
-#: access/transam/twophase.c:1872
+#: access/transam/twophase.c:1887
 #, c-format
 msgid "%u two-phase state file was written for a long-running prepared transaction"
 msgid_plural "%u two-phase state files were written for long-running prepared transactions"
 msgstr[0] "已為長時間處於預備狀態的交易寫入 %u 個兩階段狀態檔"
 
 # access/transam/xlog.c:3965
-#: access/transam/twophase.c:2107
+#: access/transam/twophase.c:2135
 #, c-format
 msgid "recovering prepared transaction %u from shared memory"
 msgstr "正在從共用記憶體復原交易 %u 的預備狀態"
 
 # access/transam/xlog.c:2163
-#: access/transam/twophase.c:2200
+#: access/transam/twophase.c:2228
 #, c-format
 msgid "removing stale two-phase state file for transaction %u"
 msgstr "正在刪除交易 %u 遺留的兩階段狀態檔案"
 
 # access/transam/xlog.c:2163
-#: access/transam/twophase.c:2207
+#: access/transam/twophase.c:2235
 #, c-format
 msgid "removing stale two-phase state from memory for transaction %u"
 msgstr "正在從記憶體移除交易 %u 遺留的兩階段狀態"
 
 # access/transam/xlog.c:2163
-#: access/transam/twophase.c:2220
+#: access/transam/twophase.c:2248
 #, c-format
 msgid "removing future two-phase state file for transaction %u"
 msgstr "正在刪除未來交易 %u 的兩階段狀態檔案"
 
 # access/transam/xlog.c:2163
-#: access/transam/twophase.c:2227
+#: access/transam/twophase.c:2255
 #, c-format
 msgid "removing future two-phase state from memory for transaction %u"
 msgstr "正在從記憶體移除未來交易 %u 的兩階段狀態"
 
-#: access/transam/twophase.c:2252
+#: access/transam/twophase.c:2280
 #, c-format
 msgid "corrupted two-phase state file for transaction %u"
 msgstr "交易 %u 的兩階段狀態檔案已損毀"
 
-#: access/transam/twophase.c:2257
+#: access/transam/twophase.c:2285
 #, c-format
 msgid "corrupted two-phase state in memory for transaction %u"
 msgstr "交易 %u 在記憶體中的兩階段狀態已損毀"
 
 # access/transam/xlog.c:1944 access/transam/xlog.c:5453
 # access/transam/xlog.c:5607 postmaster/postmaster.c:3504
-#: access/transam/twophase.c:2514
+#: access/transam/twophase.c:2542
 #, c-format
 msgid "could not recover two-phase state file for transaction %u"
 msgstr "無法復原交易 %u 的兩階段狀態檔"
 
-#: access/transam/twophase.c:2516
+#: access/transam/twophase.c:2544
 #, c-format
 msgid "Two-phase state file has been found in WAL record %X/%X, but this transaction has already been restored from disk."
 msgstr "已在 WAL 記錄 %X/%X 中找到兩階段狀態檔案，但此交易已從磁碟還原。"
 
 # utils/fmgr/dfmgr.c:107 utils/fmgr/dfmgr.c:209 utils/fmgr/dfmgr.c:263
-#: access/transam/twophase.c:2524 storage/file/fd.c:514 utils/fmgr/dfmgr.c:214
+#: access/transam/twophase.c:2552 storage/file/fd.c:514 utils/fmgr/dfmgr.c:214
 #, c-format
 msgid "could not access file \"%s\": %m"
 msgstr "無法存取檔案 \"%s\": %m"
@@ -14274,7 +14275,7 @@ msgid "Another index is already attached for partition \"%s\"."
 msgstr "已為分割 \"%s\" 附加另一個索引。"
 
 # access/transam/xlog.c:4550
-#: commands/tablecmds.c:22025
+#: commands/tablecmds.c:22030
 #, c-format
 msgid "invalid primary key definition"
 msgstr "無效的主索引鍵定義"
@@ -14286,30 +14287,30 @@ msgstr "無效的主索引鍵定義"
 # parser/parse_relation.c:1647 parser/parse_relation.c:1705
 # parser/parse_relation.c:1919 parser/parse_type.c:94
 # utils/adt/ruleutils.c:1300
-#: commands/tablecmds.c:22026
+#: commands/tablecmds.c:22031
 #, c-format
 msgid "Column \"%s\" of relation \"%s\" is not marked NOT NULL."
 msgstr "關聯 \"%2$s\" 的欄位 \"%1$s\" 未標記為 NOT NULL。"
 
-#: commands/tablecmds.c:22161
+#: commands/tablecmds.c:22166
 #, c-format
 msgid "column data type %s does not support compression"
 msgstr "欄位的資料型別 %s 不支援壓縮"
 
 # fe-connect.c:2675
-#: commands/tablecmds.c:22168
+#: commands/tablecmds.c:22173
 #, c-format
 msgid "invalid compression method \"%s\""
 msgstr "無效的壓縮方法 \"%s\""
 
 # commands/tablecmds.c:3360
-#: commands/tablecmds.c:22194
+#: commands/tablecmds.c:22199
 #, c-format
 msgid "invalid storage type \"%s\""
 msgstr "不合法的儲存型別 \"%s\""
 
 # commands/tablecmds.c:3391
-#: commands/tablecmds.c:22204
+#: commands/tablecmds.c:22209
 #, c-format
 msgid "column data type %s can only have storage PLAIN"
 msgstr "欄位資料型別 %s 只能使用 PLAIN 儲存方式"
@@ -23382,7 +23383,7 @@ msgstr "分割索引鍵的第 %d 個欄位型別為 \"%s\"，但提供的值型�
 
 # access/transam/slru.c:967 commands/tablespace.c:577
 # commands/tablespace.c:721
-#: port/pg_sema.c:209 port/pg_shmem.c:717 port/posix_sema.c:209
+#: port/pg_sema.c:213 port/pg_shmem.c:717 port/posix_sema.c:213
 #: port/sysv_sema.c:343 port/sysv_shmem.c:717
 #, c-format
 msgid "could not stat data directory \"%s\": %m"
@@ -32504,8 +32505,8 @@ msgid "more than one operator named %s"
 msgstr "有超過一個運算子被命名為 %s"
 
 # utils/adt/regproc.c:644 utils/adt/regproc.c:1276
-#: utils/adt/regproc.c:675 utils/adt/regproc.c:2029 utils/adt/ruleutils.c:10878
-#: utils/adt/ruleutils.c:11091
+#: utils/adt/regproc.c:675 utils/adt/regproc.c:2029 utils/adt/ruleutils.c:10872
+#: utils/adt/ruleutils.c:11085
 #, c-format
 msgid "too many arguments"
 msgstr "參數過多"

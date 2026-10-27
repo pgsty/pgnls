@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plpgsql (PostgreSQL) 15\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-10-22 06:51+0000\n"
+"POT-Creation-Date: 2026-10-26 19:21+0000\n"
 "PO-Revision-Date: 2026-10-22 21:58+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
@@ -23,101 +23,101 @@ msgstr ""
 msgid "PL/pgSQL functions cannot accept type %s"
 msgstr "PL/pgSQL 函数不能接受类型为 %s 的参数"
 
-#: pl_comp.c:530
+#: pl_comp.c:531
 #, c-format
 msgid "could not determine actual return type for polymorphic function \"%s\""
 msgstr "无法确定多态函数 \"%s\" 的实际返回类型"
 
-#: pl_comp.c:560
+#: pl_comp.c:561
 #, c-format
 msgid "trigger functions can only be called as triggers"
 msgstr "触发器函数只能以触发器的形式调用"
 
-#: pl_comp.c:564 pl_handler.c:480
+#: pl_comp.c:565 pl_handler.c:480
 #, c-format
 msgid "PL/pgSQL functions cannot return type %s"
 msgstr "PL/pgSQL 函数不能返回类型 %s"
 
-#: pl_comp.c:604
+#: pl_comp.c:605
 #, c-format
 msgid "trigger functions cannot have declared arguments"
 msgstr "触发器函数不能声明参数"
 
-#: pl_comp.c:605
+#: pl_comp.c:606
 #, c-format
 msgid ""
 "The arguments of the trigger can be accessed through TG_NARGS and TG_ARGV "
 "instead."
 msgstr "触发器的参数可以通过 TG_NARGS 和 TG_ARGV 进行访问。"
 
-#: pl_comp.c:738
+#: pl_comp.c:739
 #, c-format
 msgid "event trigger functions cannot have declared arguments"
 msgstr "事件触发器函数不能声明参数"
 
-#: pl_comp.c:1002
+#: pl_comp.c:1003
 #, c-format
 msgid "compilation of PL/pgSQL function \"%s\" near line %d"
 msgstr "编译 PL/pgSQL 函数 \"%s\" 时（第 %d 行附近）"
 
-#: pl_comp.c:1025
+#: pl_comp.c:1026
 #, c-format
 msgid "parameter name \"%s\" used more than once"
 msgstr "多次使用参数名 \"%s\""
 
-#: pl_comp.c:1139
+#: pl_comp.c:1140
 #, c-format
 msgid "column reference \"%s\" is ambiguous"
 msgstr "列引用 \"%s\" 存在歧义"
 
-#: pl_comp.c:1141
+#: pl_comp.c:1142
 #, c-format
 msgid "It could refer to either a PL/pgSQL variable or a table column."
 msgstr "它既可能引用 PL/pgSQL 变量，也可能引用表中的列。"
 
-#: pl_comp.c:1324 pl_exec.c:5238 pl_exec.c:5411 pl_exec.c:5498 pl_exec.c:5589
+#: pl_comp.c:1325 pl_exec.c:5238 pl_exec.c:5411 pl_exec.c:5498 pl_exec.c:5589
 #: pl_exec.c:6621
 #, c-format
 msgid "record \"%s\" has no field \"%s\""
 msgstr "记录 \"%s\" 没有字段 \"%s\""
 
-#: pl_comp.c:1818
+#: pl_comp.c:1819
 #, c-format
 msgid "relation \"%s\" does not exist"
 msgstr "关系 \"%s\" 不存在"
 
-#: pl_comp.c:1825 pl_comp.c:1867
+#: pl_comp.c:1826 pl_comp.c:1868
 #, c-format
 msgid "relation \"%s\" does not have a composite type"
 msgstr "关系 \"%s\" 没有复合类型"
 
-#: pl_comp.c:1933
+#: pl_comp.c:1934
 #, c-format
 msgid "variable \"%s\" has pseudo-type %s"
 msgstr "变量 \"%s\" 具有伪类型 %s"
 
-#: pl_comp.c:2122
+#: pl_comp.c:2123
 #, c-format
 msgid "type \"%s\" is only a shell"
 msgstr "类型 \"%s\" 只是 shell 类型"
 
-#: pl_comp.c:2204 pl_exec.c:6922
+#: pl_comp.c:2205 pl_exec.c:6922
 #, c-format
 msgid "type %s is not composite"
 msgstr "类型 %s 不是复合类型"
 
-#: pl_comp.c:2252 pl_comp.c:2305
+#: pl_comp.c:2253 pl_comp.c:2306
 #, c-format
 msgid "unrecognized exception condition \"%s\""
 msgstr "无法识别的异常条件 \"%s\""
 
-#: pl_comp.c:2500
+#: pl_comp.c:2501
 #, c-format
 msgid "cannot pass more than %d argument to a function"
 msgid_plural "cannot pass more than %d arguments to a function"
 msgstr[0] "不能向函数传递超过 %d 个参数"
 
-#: pl_comp.c:2548
+#: pl_comp.c:2549
 #, c-format
 msgid ""
 "could not determine actual argument type for polymorphic function \"%s\""
