@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-10-26 20:37+0000\n"
+"POT-Creation-Date: 2026-10-28 06:06+0000\n"
 "PO-Revision-Date: 2013-09-03 23:24-0400\n"
 "Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
 "Language-Team: EnterpriseDB translation team <dev-escalations@enterprisedb.com>\n"
@@ -104,7 +104,7 @@ msgstr "無法開啟檔案\"%s\"以讀取: %m"
 #: access/transam/twophase.c:1355 access/transam/xlog.c:3474
 #: access/transam/xlog.c:4365 access/transam/xlogrecovery.c:1272
 #: access/transam/xlogrecovery.c:1370 access/transam/xlogrecovery.c:1407
-#: access/transam/xlogrecovery.c:1474 backup/basebackup.c:2126
+#: access/transam/xlogrecovery.c:1474 backup/basebackup.c:2154
 #: backup/walsummary.c:283 commands/extension.c:3970 libpq/hba.c:769
 #: replication/logical/origin.c:768 replication/logical/origin.c:804
 #: replication/logical/reorderbuffer.c:5508
@@ -185,8 +185,8 @@ msgstr ""
 #: access/transam/xlog.c:3390 access/transam/xlog.c:3429
 #: access/transam/xlog.c:3622 access/transam/xlog.c:4355
 #: access/transam/xlogrecovery.c:4325 access/transam/xlogrecovery.c:4426
-#: access/transam/xlogutils.c:849 backup/basebackup.c:549
-#: backup/basebackup.c:1598 backup/walsummary.c:220 libpq/hba.c:626
+#: access/transam/xlogutils.c:849 backup/basebackup.c:562
+#: backup/basebackup.c:1615 backup/walsummary.c:220 libpq/hba.c:626
 #: postmaster/syslogger.c:1512 postmaster/walsummarizer.c:1617
 #: replication/logical/origin.c:758 replication/logical/reorderbuffer.c:4161
 #: replication/logical/reorderbuffer.c:4715
@@ -413,7 +413,7 @@ msgstr "無法建立伺服器檔案\"%s\": %m"
 #: ../common/file_utils.c:123 ../common/file_utils.c:588
 #: ../common/file_utils.c:592 access/transam/twophase.c:1323
 #: access/transam/xlogarchive.c:111 access/transam/xlogarchive.c:235
-#: backup/basebackup.c:357 backup/basebackup.c:555 backup/basebackup.c:626
+#: backup/basebackup.c:568 backup/basebackup.c:639 backup/basebackup.c:1627
 #: backup/walsummary.c:247 commands/copyfrom.c:1889 commands/copyto.c:984
 #: commands/extension.c:3949 commands/tablespace.c:811
 #: commands/tablespace.c:900 postmaster/pgarch.c:682
@@ -700,7 +700,7 @@ msgstr "無法解碼檔案名稱"
 msgid "file size is not an integer"
 msgstr "檔案大小不是整數"
 
-#: ../common/parse_manifest.c:699 backup/basebackup.c:869
+#: ../common/parse_manifest.c:699 backup/basebackup.c:882
 #, c-format
 msgid "unrecognized checksum algorithm: \"%s\""
 msgstr "無法識別的檢查碼演算法: \" %s\""
@@ -3435,22 +3435,22 @@ msgid "This means that the backup being taken on the standby is corrupt and shou
 msgstr ""
 
 # commands/tablespace.c:355 commands/tablespace.c:984
-#: access/transam/xlog.c:9060 backup/basebackup.c:1417 utils/adt/misc.c:354
+#: access/transam/xlog.c:9060 backup/basebackup.c:1430 utils/adt/misc.c:354
 #, c-format
 msgid "could not read symbolic link \"%s\": %m"
 msgstr "無法讀取符號連結 \"%s\": %m"
 
-#: access/transam/xlog.c:9067 backup/basebackup.c:1422 utils/adt/misc.c:359
+#: access/transam/xlog.c:9067 backup/basebackup.c:1435 utils/adt/misc.c:359
 #, c-format
 msgid "symbolic link \"%s\" target is too long"
 msgstr "符號連結 \"%s\" 的目標太長"
 
-#: access/transam/xlog.c:9226 backup/basebackup.c:1281
+#: access/transam/xlog.c:9226 backup/basebackup.c:1294
 #, c-format
 msgid "the standby was promoted during online backup"
 msgstr ""
 
-#: access/transam/xlog.c:9227 backup/basebackup.c:1282
+#: access/transam/xlog.c:9227 backup/basebackup.c:1295
 #, c-format
 msgid "This means that the backup being taken is corrupt and should not be used. Try taking another online backup."
 msgstr ""
@@ -3552,7 +3552,7 @@ msgid "could not write archive status file \"%s\": %m"
 msgstr "無法寫入備份狀態檔\"%s\": %m"
 
 # access/transam/xlog.c:5297
-#: access/transam/xlogfuncs.c:70 backup/basebackup.c:996
+#: access/transam/xlogfuncs.c:70 backup/basebackup.c:1009
 #, fuzzy, c-format
 #| msgid "a backup is already in progress"
 msgid "a backup is already in progress in this session"
@@ -4505,161 +4505,168 @@ msgstr "要求的時間軸 %u 不是資料庫系統時間軸 %u 的子系"
 msgid "could not rewind temporary file"
 msgstr "無法開啟暫存檔\n"
 
-#: backup/basebackup.c:481
+#: backup/basebackup.c:365 utils/misc/pg_controldata.c:50
+#: utils/misc/pg_controldata.c:90 utils/misc/pg_controldata.c:181
+#: utils/misc/pg_controldata.c:222
+#, c-format
+msgid "calculated CRC checksum does not match value stored in file"
+msgstr ""
+
+#: backup/basebackup.c:494
 #, fuzzy, c-format
 #| msgid "could not find any WAL file"
 msgid "could not find any WAL files"
 msgstr "找不到任何 WAL 檔"
 
-#: backup/basebackup.c:496 backup/basebackup.c:511 backup/basebackup.c:520
+#: backup/basebackup.c:509 backup/basebackup.c:524 backup/basebackup.c:533
 #, fuzzy, c-format
 #| msgid "could not find file \"%s\": %m"
 msgid "could not find WAL file \"%s\""
 msgstr "找不到檔案 \"%s\": %m"
 
 # utils/adt/rowtypes.c:178 utils/adt/rowtypes.c:186
-#: backup/basebackup.c:562 backup/basebackup.c:587
+#: backup/basebackup.c:575 backup/basebackup.c:600
 #, fuzzy, c-format
 #| msgid "unexpected empty file \"%s\""
 msgid "unexpected WAL file size \"%s\""
 msgstr "非預期的空檔 \"%s\""
 
-#: backup/basebackup.c:657
+#: backup/basebackup.c:670
 #, fuzzy, c-format
 #| msgid "checksums verified in file \"%s\""
 msgid "%lld total checksum verification failure"
 msgid_plural "%lld total checksum verification failures"
 msgstr[0] "檔案 \"%s\" 中已驗證檢查碼"
 
-#: backup/basebackup.c:664
+#: backup/basebackup.c:677
 #, fuzzy, c-format
 #| msgid "checksums verified in file \"%s\""
 msgid "checksum verification failure during base backup"
 msgstr "檔案 \"%s\" 中已驗證檢查碼"
 
-#: backup/basebackup.c:732 backup/basebackup.c:741 backup/basebackup.c:752
-#: backup/basebackup.c:769 backup/basebackup.c:778 backup/basebackup.c:787
-#: backup/basebackup.c:802 backup/basebackup.c:819 backup/basebackup.c:828
-#: backup/basebackup.c:840 backup/basebackup.c:864 backup/basebackup.c:878
-#: backup/basebackup.c:889 backup/basebackup.c:900 backup/basebackup.c:913
+#: backup/basebackup.c:745 backup/basebackup.c:754 backup/basebackup.c:765
+#: backup/basebackup.c:782 backup/basebackup.c:791 backup/basebackup.c:800
+#: backup/basebackup.c:815 backup/basebackup.c:832 backup/basebackup.c:841
+#: backup/basebackup.c:853 backup/basebackup.c:877 backup/basebackup.c:891
+#: backup/basebackup.c:902 backup/basebackup.c:913 backup/basebackup.c:926
 #, c-format
 msgid "duplicate option \"%s\""
 msgstr "選項重複 \"%s\""
 
-#: backup/basebackup.c:760
+#: backup/basebackup.c:773
 #, fuzzy, c-format
 #| msgid "unrecognized constraint type: %c"
 msgid "unrecognized checkpoint type: \"%s\""
 msgstr "無法識別的約束類型: %c"
 
-#: backup/basebackup.c:792
+#: backup/basebackup.c:805
 #, c-format
 msgid "incremental backups cannot be taken unless WAL summarization is enabled"
 msgstr ""
 
 # utils/misc/guc.c:3519
-#: backup/basebackup.c:808
+#: backup/basebackup.c:821
 #, c-format
 msgid "%d is outside the valid range for parameter \"%s\" (%d .. %d)"
 msgstr "%d 超出參數 \"%s\" 的有效範圍 (%d .. %d)"
 
-#: backup/basebackup.c:853
+#: backup/basebackup.c:866
 #, fuzzy, c-format
 #| msgid "unrecognized role option \"%s\""
 msgid "unrecognized manifest option: \"%s\""
 msgstr "無法辨識的 role 選項 \"%s\""
 
 # access/transam/xlog.c:3720
-#: backup/basebackup.c:904
+#: backup/basebackup.c:917
 #, c-format
 msgid "unrecognized compression algorithm: \"%s\""
 msgstr "無法識別的壓縮演算法: \" %s \""
 
-#: backup/basebackup.c:920
+#: backup/basebackup.c:933
 #, fuzzy, c-format
 #| msgid "unrecognized role option \"%s\""
 msgid "unrecognized base backup option: \"%s\""
 msgstr "無法辨識的 role 選項 \"%s\""
 
-#: backup/basebackup.c:931
+#: backup/basebackup.c:944
 #, fuzzy, c-format
 #| msgid "manifest checksum mismatch"
 msgid "manifest checksums require a backup manifest"
 msgstr "清單檢查碼不一致"
 
-#: backup/basebackup.c:940
+#: backup/basebackup.c:953
 #, fuzzy, c-format
 #| msgid "--no-slot cannot be used with slot name"
 msgid "target detail cannot be used without target"
 msgstr "--no-slot 不能與插槽名稱一同使用"
 
 # commands/indexcmds.c:623
-#: backup/basebackup.c:949 backup/basebackup_target.c:218
+#: backup/basebackup.c:962 backup/basebackup_target.c:218
 #, fuzzy, c-format
 #| msgid "operator class \"%s\" does not accept data type %s"
 msgid "target \"%s\" does not accept a target detail"
 msgstr "運算子類別 \"%s\" 不接受資料型別 %s"
 
-#: backup/basebackup.c:960
+#: backup/basebackup.c:973
 #, fuzzy, c-format
 #| msgid "%s cannot be specified unless locale provider \"%s\" is chosen"
 msgid "compression detail cannot be specified unless compression is enabled"
 msgstr "除非選擇了語言提供者 \"%2$s\"，否則不能指定 %1$s"
 
 # fe-connect.c:2675
-#: backup/basebackup.c:973
+#: backup/basebackup.c:986
 #, c-format
 msgid "invalid compression specification: %s"
 msgstr "無效的壓縮規格: %s"
 
-#: backup/basebackup.c:1023
+#: backup/basebackup.c:1036
 #, c-format
 msgid "must UPLOAD_MANIFEST before performing an incremental BASE_BACKUP"
 msgstr ""
 
 # access/transam/slru.c:967 commands/tablespace.c:577
 # commands/tablespace.c:721
-#: backup/basebackup.c:1156 backup/basebackup.c:1358
+#: backup/basebackup.c:1169 backup/basebackup.c:1371
 #, c-format
 msgid "could not stat file or directory \"%s\": %m"
 msgstr "無法取得檔案或目錄 \"%s\" 的狀態: %m"
 
 # access/transam/xlog.c:2163
-#: backup/basebackup.c:1544
+#: backup/basebackup.c:1557
 #, c-format
 msgid "skipping special file \"%s\""
 msgstr "略過特殊檔案 \"%s\""
 
-#: backup/basebackup.c:1751
+#: backup/basebackup.c:1779
 #, c-format
 msgid "could not verify checksum in file \"%s\", block %u: read buffer size %d and page size %d differ"
 msgstr ""
 
-#: backup/basebackup.c:1813
+#: backup/basebackup.c:1841
 #, c-format
 msgid "file \"%s\" has a total of %d checksum verification failure"
 msgid_plural "file \"%s\" has a total of %d checksum verification failures"
 msgstr[0] ""
 
-#: backup/basebackup.c:1918
+#: backup/basebackup.c:1946
 #, fuzzy, c-format
 #| msgid "checksum verification failed in file \"%s\", block %u: calculated checksum %X but block contains %X"
 msgid "checksum verification failed in file \"%s\", block %u: calculated %X but expected %X"
 msgstr "在檔案 \"%s\" 驗證檢查碼失敗，區塊 %u: 算得檢查碼 %X 但是區塊為 %X"
 
-#: backup/basebackup.c:1925
+#: backup/basebackup.c:1953
 #, c-format
 msgid "further checksum verification failures in file \"%s\" will not be reported"
 msgstr ""
 
 # utils/mb/encnames.c:445
-#: backup/basebackup.c:2050
+#: backup/basebackup.c:2078
 #, fuzzy, c-format
 #| msgid "file name too long: \"%s\""
 msgid "file name too long for tar format: \"%s\""
 msgstr "檔案名稱過長: \"%s\""
 
-#: backup/basebackup.c:2056
+#: backup/basebackup.c:2084
 #, c-format
 msgid "symbolic link target too long for tar format: file name \"%s\", target \"%s\""
 msgstr ""
@@ -4668,7 +4675,7 @@ msgstr ""
 # access/transam/xlog.c:5397 access/transam/xlog.c:5448
 # access/transam/xlog.c:5520 access/transam/xlog.c:5545
 # access/transam/xlog.c:5583
-#: backup/basebackup.c:2130
+#: backup/basebackup.c:2158
 #, fuzzy, c-format
 #| msgid "could not read file \"%s\": read %d of %zu"
 msgid "could not read file \"%s\": read %zd of %zu"
@@ -5080,8 +5087,8 @@ msgstr ""
 # parser/parse_relation.c:1647 parser/parse_relation.c:1705
 # parser/parse_relation.c:1919 parser/parse_type.c:94
 # utils/adt/ruleutils.c:1300
-#: catalog/aclchk.c:1577 catalog/catalog.c:684 catalog/heap.c:2670
-#: catalog/heap.c:2992 catalog/objectaddress.c:1528
+#: catalog/aclchk.c:1577 catalog/catalog.c:684 catalog/heap.c:2680
+#: catalog/heap.c:3002 catalog/objectaddress.c:1528
 #: catalog/pg_publication.c:574 commands/analyze.c:388 commands/copy.c:1042
 #: commands/sequence.c:1655 commands/tablecmds.c:7783 commands/tablecmds.c:7957
 #: commands/tablecmds.c:8158 commands/tablecmds.c:8294
@@ -5871,7 +5878,7 @@ msgstr "複合型別 %s 不能成為自己的成員"
 msgid "virtual generated column \"%s\" cannot have a user-defined type"
 msgstr "資料行 \"%s\" 的預設值無法轉換為型別 %s"
 
-#: catalog/heap.c:688 catalog/heap.c:3350
+#: catalog/heap.c:688 catalog/heap.c:3360
 #, c-format
 msgid "Virtual generated columns that make use of user-defined types are not yet supported."
 msgstr ""
@@ -5936,65 +5943,70 @@ msgstr "必須是超級使用者才能在 binary 升級模式連線"
 msgid "cannot add NO INHERIT constraint to partitioned table \"%s\""
 msgstr "無法新增欄位至 typed 資料表"
 
+#: catalog/heap.c:2290 parser/parse_utilcmd.c:759 parser/parse_utilcmd.c:1077
+#, c-format
+msgid "not-null constraints on partitioned tables cannot be NO INHERIT"
+msgstr ""
+
 # commands/tablecmds.c:3455
-#: catalog/heap.c:2359 catalog/heap.c:2633
+#: catalog/heap.c:2369 catalog/heap.c:2643
 #, fuzzy, c-format
 #| msgid "cannot drop inherited constraint \"%s\" of relation \"%s\""
 msgid "too many check constraints on relation \"%s\""
 msgstr "無法捨棄繼承的限制 \"%s\" (屬於關係 \"%s\")"
 
 # catalog/heap.c:1640
-#: catalog/heap.c:2566
+#: catalog/heap.c:2576
 #, c-format
 msgid "check constraint \"%s\" already exists"
 msgstr "check constraint \"%s\"已經存在"
 
 # parser/parse_target.c:268 parser/parse_target.c:501
-#: catalog/heap.c:2675 catalog/heap.c:2998
+#: catalog/heap.c:2685 catalog/heap.c:3008
 #, fuzzy, c-format
 #| msgid "cannot assign to system column \"%s\""
 msgid "cannot add not-null constraint on system column \"%s\""
 msgstr "無法指派給系統資料行 \"%s\""
 
 # catalog/heap.c:1631 commands/tablecmds.c:3692
-#: catalog/heap.c:2703 catalog/heap.c:2829 catalog/heap.c:3082
+#: catalog/heap.c:2713 catalog/heap.c:2839 catalog/heap.c:3092
 #: catalog/index.c:922 catalog/pg_constraint.c:1028 commands/tablecmds.c:9857
 #, c-format
 msgid "constraint \"%s\" for relation \"%s\" already exists"
 msgstr "限制 \"%s\" (適用於關係 \"%s\") 已存在"
 
 # commands/tablecmds.c:3455
-#: catalog/heap.c:2836
+#: catalog/heap.c:2846
 #, fuzzy, c-format
 #| msgid "cannot drop inherited constraint \"%s\" of relation \"%s\""
 msgid "constraint \"%s\" conflicts with non-inherited constraint on relation \"%s\""
 msgstr "無法捨棄繼承的限制 \"%s\" (屬於關係 \"%s\")"
 
 # commands/tablecmds.c:3455
-#: catalog/heap.c:2847
+#: catalog/heap.c:2857
 #, fuzzy, c-format
 #| msgid "cannot drop inherited constraint \"%s\" of relation \"%s\""
 msgid "constraint \"%s\" conflicts with inherited constraint on relation \"%s\""
 msgstr "無法捨棄繼承的限制 \"%s\" (屬於關係 \"%s\")"
 
 # catalog/namespace.c:200 utils/adt/regproc.c:837
-#: catalog/heap.c:2857
+#: catalog/heap.c:2867
 #, fuzzy, c-format
 #| msgid "relation \"%s\" is not a parent of relation \"%s\""
 msgid "constraint \"%s\" conflicts with NOT VALID constraint on relation \"%s\""
 msgstr "關係 \"%s\" 不是關係 \"%s\" 的父系"
 
-#: catalog/heap.c:2869
+#: catalog/heap.c:2879
 #, c-format
 msgid "constraint \"%s\" conflicts with NOT ENFORCED constraint on relation \"%s\""
 msgstr ""
 
-#: catalog/heap.c:2874
+#: catalog/heap.c:2884
 #, c-format
 msgid "merging constraint \"%s\" with inherited definition"
 msgstr "正在合併限制 \"%s\" 與繼承的定義"
 
-#: catalog/heap.c:2898 catalog/pg_constraint.c:806 catalog/pg_constraint.c:1157
+#: catalog/heap.c:2908 catalog/pg_constraint.c:806 catalog/pg_constraint.c:1157
 #: commands/tablecmds.c:3197 commands/tablecmds.c:3517
 #: commands/tablecmds.c:7318 commands/tablecmds.c:7995
 #: commands/tablecmds.c:17650 commands/tablecmds.c:17832
@@ -6004,78 +6016,78 @@ msgid "too many inheritance parents"
 msgstr "命令列參數過多"
 
 # parser/analyze.c:948 parser/analyze.c:958
-#: catalog/heap.c:3017 parser/parse_utilcmd.c:2669
+#: catalog/heap.c:3027 parser/parse_utilcmd.c:2669
 #, fuzzy, c-format
 #| msgid "conflicting NULL/NOT NULL declarations for column \"%s\" of table \"%s\""
 msgid "conflicting NO INHERIT declaration for not-null constraint on column \"%s\""
 msgstr "資料行 \"%s\" (屬於資料表 \"%s\") 的 NULL/NOT NULL 宣告相衝突 "
 
-#: catalog/heap.c:3031
+#: catalog/heap.c:3041
 #, c-format
 msgid "conflicting not-null constraint names \"%s\" and \"%s\""
 msgstr ""
 
-#: catalog/heap.c:3061
+#: catalog/heap.c:3071
 #, c-format
 msgid "cannot define not-null constraint with NO INHERIT on column \"%s\""
 msgstr ""
 
 # executor/execMain.c:1731
-#: catalog/heap.c:3063
+#: catalog/heap.c:3073
 #, fuzzy, c-format
 #| msgid "null value in column \"%s\" violates not-null constraint"
 msgid "The column has an inherited not-null constraint."
 msgstr "資料行 \"%s\" 中的 Null 值違反非 Null 限制"
 
 # parser/parse_clause.c:539
-#: catalog/heap.c:3257
+#: catalog/heap.c:3267
 #, fuzzy, c-format
 #| msgid "cannot use aggregate function in function expression in FROM"
 msgid "cannot use generated column \"%s\" in column generation expression"
 msgstr "FROM 的函式運算式中不可使用彙總函式"
 
-#: catalog/heap.c:3259
+#: catalog/heap.c:3269
 #, c-format
 msgid "A generated column cannot reference another generated column."
 msgstr ""
 
 # catalog/heap.c:1809
-#: catalog/heap.c:3265
+#: catalog/heap.c:3275
 #, fuzzy, c-format
 #| msgid "cannot use aggregate function in default expression"
 msgid "cannot use whole-row variable in column generation expression"
 msgstr "預設值expression中不能使用aggregate function"
 
-#: catalog/heap.c:3266
+#: catalog/heap.c:3276
 #, c-format
 msgid "This would cause the generated column to depend on its own value."
 msgstr ""
 
-#: catalog/heap.c:3333
+#: catalog/heap.c:3343
 #, fuzzy, c-format
 #| msgid "reading user-defined functions"
 msgid "generation expression uses user-defined function"
 msgstr "讀取使用者自定函數"
 
-#: catalog/heap.c:3334
+#: catalog/heap.c:3344
 #, c-format
 msgid "Virtual generated columns that make use of user-defined functions are not yet supported."
 msgstr ""
 
-#: catalog/heap.c:3349
+#: catalog/heap.c:3359
 #, fuzzy, c-format
 #| msgid "reading user-defined types"
 msgid "generation expression uses user-defined type"
 msgstr "讀取使用者自定資料型別"
 
-#: catalog/heap.c:3401
+#: catalog/heap.c:3411
 #, fuzzy, c-format
 #| msgid "relation \"%s\" is not a table"
 msgid "generation expression is not immutable"
 msgstr "關係 \"%s\" 不是資料表"
 
 # catalog/heap.c:1827 rewrite/rewriteHandler.c:646
-#: catalog/heap.c:3433 rewrite/rewriteHandler.c:1321
+#: catalog/heap.c:3443 rewrite/rewriteHandler.c:1321
 #, c-format
 msgid "column \"%s\" is of type %s but default expression is of type %s"
 msgstr "欄位\"%s\"是型別 %s，但是預設值expression是型別 %s"
@@ -6083,7 +6095,7 @@ msgstr "欄位\"%s\"是型別 %s，但是預設值expression是型別 %s"
 # catalog/heap.c:1832 parser/analyze.c:2689 parser/parse_node.c:247
 # parser/parse_target.c:362 parser/parse_target.c:570
 # parser/parse_target.c:579 rewrite/rewriteHandler.c:651
-#: catalog/heap.c:3438 commands/prepare.c:334 parser/analyze.c:2922
+#: catalog/heap.c:3448 commands/prepare.c:334 parser/analyze.c:2922
 #: parser/parse_target.c:595 parser/parse_target.c:885
 #: parser/parse_target.c:895 rewrite/rewriteHandler.c:1326
 #, c-format
@@ -6091,33 +6103,33 @@ msgid "You will need to rewrite or cast the expression."
 msgstr "您需要重寫或轉換運算式。"
 
 # catalog/heap.c:1601
-#: catalog/heap.c:3485
+#: catalog/heap.c:3495
 #, c-format
 msgid "only table \"%s\" can be referenced in check constraint"
 msgstr "只有資料表\"%s\"可以在check constraint中被參照"
 
-#: catalog/heap.c:3791
+#: catalog/heap.c:3801
 #, c-format
 msgid "unsupported ON COMMIT and foreign key combination"
 msgstr "不支援的 ON COMMIT 和外鍵組合"
 
-#: catalog/heap.c:3792
+#: catalog/heap.c:3802
 #, c-format
 msgid "Table \"%s\" references \"%s\", but they do not have the same ON COMMIT setting."
 msgstr "資料表 \"%s\" 參考 \"%s\"，但它們沒有相同 ON COMMIT 設定。"
 
 # catalog/heap.c:2093
-#: catalog/heap.c:3797
+#: catalog/heap.c:3807
 #, c-format
 msgid "cannot truncate a table referenced in a foreign key constraint"
 msgstr "無法截斷外鍵限制中參考的資料表"
 
-#: catalog/heap.c:3798
+#: catalog/heap.c:3808
 #, c-format
 msgid "Table \"%s\" references \"%s\"."
 msgstr "資料表 \"%s\" 參考 \"%s\"。"
 
-#: catalog/heap.c:3800
+#: catalog/heap.c:3810
 #, c-format
 msgid "Truncate table \"%s\" at the same time, or use TRUNCATE ... CASCADE."
 msgstr "同時截斷資料表 \"%s\"，或使用 TRUNCATE... CASCADE。"
@@ -6192,7 +6204,7 @@ msgid "pg_class index OID value not set when in binary upgrade mode"
 msgstr "必須是超級使用者才能在 binary 升級模式連線"
 
 # commands/dbcommands.c:201
-#: catalog/index.c:960 utils/cache/relcache.c:3797
+#: catalog/index.c:960 utils/cache/relcache.c:3798
 #, fuzzy, c-format
 #| msgid "must be superuser to connect in binary upgrade mode"
 msgid "index relfilenumber value not set when in binary upgrade mode"
@@ -24689,11 +24701,6 @@ msgstr "序列陣列未實作"
 msgid "conflicting NULL/NOT NULL declarations for column \"%s\" of table \"%s\""
 msgstr "資料行 \"%s\" (屬於資料表 \"%s\") 的 NULL/NOT NULL 宣告相衝突 "
 
-#: parser/parse_utilcmd.c:759 parser/parse_utilcmd.c:1077
-#, c-format
-msgid "not-null constraints on partitioned tables cannot be NO INHERIT"
-msgstr ""
-
 # parser/analyze.c:948 parser/analyze.c:958
 #: parser/parse_utilcmd.c:773 parser/parse_utilcmd.c:808
 #, fuzzy, c-format
@@ -35023,8 +35030,8 @@ msgid "more than one operator named %s"
 msgstr "有一個以上的operator被命名為 %s"
 
 # utils/adt/regproc.c:644 utils/adt/regproc.c:1276
-#: utils/adt/regproc.c:675 utils/adt/regproc.c:2029 utils/adt/ruleutils.c:10872
-#: utils/adt/ruleutils.c:11085
+#: utils/adt/regproc.c:675 utils/adt/regproc.c:2029 utils/adt/ruleutils.c:10916
+#: utils/adt/ruleutils.c:11129
 #, c-format
 msgid "too many arguments"
 msgstr "參數過多"
@@ -36198,34 +36205,34 @@ msgid "operator class \"%s\" of access method %s is missing support function %d 
 msgstr "運算子類別 \"%s\" (適用於存取方法 \"%s\") 已存在於綱要 \"%s\""
 
 # commands/dbcommands.c:201
-#: utils/cache/relcache.c:3807
+#: utils/cache/relcache.c:3808
 #, fuzzy, c-format
 #| msgid "must be superuser to connect in binary upgrade mode"
 msgid "heap relfilenumber value not set when in binary upgrade mode"
 msgstr "必須是超級使用者才能在 binary 升級模式連線"
 
 # commands/dbcommands.c:201
-#: utils/cache/relcache.c:3815
+#: utils/cache/relcache.c:3816
 #, fuzzy, c-format
 #| msgid "must be superuser to connect in binary upgrade mode"
 msgid "unexpected request for new relfilenumber in binary upgrade mode"
 msgstr "必須是超級使用者才能在 binary 升級模式連線"
 
 # utils/cache/relcache.c:3264
-#: utils/cache/relcache.c:6635
+#: utils/cache/relcache.c:6636
 #, c-format
 msgid "could not create relation-cache initialization file \"%s\": %m"
 msgstr "無法建立關係快取初始化檔案 \"%s\":%m"
 
 # utils/cache/relcache.c:3266
-#: utils/cache/relcache.c:6637
+#: utils/cache/relcache.c:6638
 #, c-format
 msgid "Continuing anyway, but there's something wrong."
 msgstr "無論如何繼續執行，但發生錯誤。"
 
 # access/transam/xlog.c:1944 access/transam/xlog.c:5453
 # access/transam/xlog.c:5607 postmaster/postmaster.c:3504
-#: utils/cache/relcache.c:6967
+#: utils/cache/relcache.c:6968
 #, fuzzy, c-format
 #| msgid "could not remove file \"%s\": %m"
 msgid "could not remove cache file \"%s\": %m"
@@ -40369,12 +40376,6 @@ msgstr "選取強制將 WAL 更新寫至磁碟的方法。"
 #, c-format
 msgid "internal error: unrecognized run-time parameter type\n"
 msgstr "內部錯誤: 無法辨識的執行時期參數型別\n"
-
-#: utils/misc/pg_controldata.c:50 utils/misc/pg_controldata.c:90
-#: utils/misc/pg_controldata.c:181 utils/misc/pg_controldata.c:222
-#, c-format
-msgid "calculated CRC checksum does not match value stored in file"
-msgstr ""
 
 #: utils/misc/pg_rusage.c:64
 #, c-format

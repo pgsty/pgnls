@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PostgreSQL 8.4\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-10-26 20:55+0000\n"
+"POT-Creation-Date: 2026-10-28 00:54+0000\n"
 "PO-Revision-Date: 2013-09-03 23:24-0400\n"
 "Last-Translator: Zhenbang Wei <znbang@gmail.com>\n"
 "Language-Team: EnterpriseDB translation team <dev-escalations@enterprisedb.com>\n"
@@ -104,7 +104,7 @@ msgstr "無法開啟檔案\"%s\"以讀取: %m"
 #: access/transam/twophase.c:1355 access/transam/xlog.c:3454
 #: access/transam/xlog.c:4318 access/transam/xlogrecovery.c:1254
 #: access/transam/xlogrecovery.c:1352 access/transam/xlogrecovery.c:1389
-#: access/transam/xlogrecovery.c:1456 backup/basebackup.c:2121
+#: access/transam/xlogrecovery.c:1456 backup/basebackup.c:2149
 #: backup/walsummary.c:283 commands/extension.c:3678 libpq/hba.c:764
 #: replication/logical/origin.c:745 replication/logical/origin.c:781
 #: replication/logical/reorderbuffer.c:5375
@@ -184,8 +184,8 @@ msgstr ""
 #: access/transam/xlog.c:3370 access/transam/xlog.c:3409
 #: access/transam/xlog.c:3602 access/transam/xlog.c:4308
 #: access/transam/xlogrecovery.c:4292 access/transam/xlogrecovery.c:4395
-#: access/transam/xlogutils.c:860 backup/basebackup.c:547
-#: backup/basebackup.c:1596 backup/walsummary.c:220 libpq/hba.c:624
+#: access/transam/xlogutils.c:860 backup/basebackup.c:560
+#: backup/basebackup.c:1613 backup/walsummary.c:220 libpq/hba.c:624
 #: postmaster/syslogger.c:1511 postmaster/walsummarizer.c:1614
 #: replication/logical/origin.c:735 replication/logical/reorderbuffer.c:4028
 #: replication/logical/reorderbuffer.c:4582
@@ -411,7 +411,7 @@ msgstr "無法建立伺服器檔案\"%s\": %m"
 #: ../common/file_utils.c:120 ../common/file_utils.c:566
 #: ../common/file_utils.c:570 access/transam/twophase.c:1323
 #: access/transam/xlogarchive.c:111 access/transam/xlogarchive.c:235
-#: backup/basebackup.c:355 backup/basebackup.c:553 backup/basebackup.c:624
+#: backup/basebackup.c:566 backup/basebackup.c:637 backup/basebackup.c:1625
 #: backup/walsummary.c:247 commands/copyfrom.c:1749 commands/copyto.c:705
 #: commands/extension.c:3657 commands/tablespace.c:811
 #: commands/tablespace.c:900 postmaster/pgarch.c:680
@@ -692,7 +692,7 @@ msgstr "無法解碼檔案名稱"
 msgid "file size is not an integer"
 msgstr "檔案大小不是整數"
 
-#: ../common/parse_manifest.c:699 backup/basebackup.c:867
+#: ../common/parse_manifest.c:699 backup/basebackup.c:880
 #, c-format
 msgid "unrecognized checksum algorithm: \"%s\""
 msgstr "無法識別的檢查碼演算法: \" %s\""
@@ -3462,12 +3462,12 @@ msgid "This means that the backup being taken on the standby is corrupt and shou
 msgstr ""
 
 # commands/tablespace.c:355 commands/tablespace.c:984
-#: access/transam/xlog.c:9064 backup/basebackup.c:1415 utils/adt/misc.c:354
+#: access/transam/xlog.c:9064 backup/basebackup.c:1428 utils/adt/misc.c:354
 #, c-format
 msgid "could not read symbolic link \"%s\": %m"
 msgstr "無法讀取符號連結 \"%s\": %m"
 
-#: access/transam/xlog.c:9071 backup/basebackup.c:1420 utils/adt/misc.c:359
+#: access/transam/xlog.c:9071 backup/basebackup.c:1433 utils/adt/misc.c:359
 #, c-format
 msgid "symbolic link \"%s\" target is too long"
 msgstr "符號連結 \"%s\" 的目標太長"
@@ -3478,12 +3478,12 @@ msgstr "符號連結 \"%s\" 的目標太長"
 msgid "wal_level must be set to \"replica\" or \"logical\" at server start."
 msgstr "伺服器啟動時必須把 wal_level 設為 \"archive\" 或 \"hot_standby\"。"
 
-#: access/transam/xlog.c:9230 backup/basebackup.c:1279
+#: access/transam/xlog.c:9230 backup/basebackup.c:1292
 #, c-format
 msgid "the standby was promoted during online backup"
 msgstr ""
 
-#: access/transam/xlog.c:9231 backup/basebackup.c:1280
+#: access/transam/xlog.c:9231 backup/basebackup.c:1293
 #, c-format
 msgid "This means that the backup being taken is corrupt and should not be used. Try taking another online backup."
 msgstr ""
@@ -3585,7 +3585,7 @@ msgid "could not write archive status file \"%s\": %m"
 msgstr "無法寫入備份狀態檔\"%s\": %m"
 
 # access/transam/xlog.c:5297
-#: access/transam/xlogfuncs.c:69 backup/basebackup.c:994
+#: access/transam/xlogfuncs.c:69 backup/basebackup.c:1007
 #, fuzzy, c-format
 #| msgid "a backup is already in progress"
 msgid "a backup is already in progress in this session"
@@ -4536,161 +4536,168 @@ msgstr "要求的時間軸 %u 不是資料庫系統時間軸 %u 的子系"
 msgid "could not rewind temporary file"
 msgstr "無法開啟暫存檔\n"
 
-#: backup/basebackup.c:479
+#: backup/basebackup.c:363 utils/misc/pg_controldata.c:50
+#: utils/misc/pg_controldata.c:90 utils/misc/pg_controldata.c:181
+#: utils/misc/pg_controldata.c:222
+#, c-format
+msgid "calculated CRC checksum does not match value stored in file"
+msgstr ""
+
+#: backup/basebackup.c:492
 #, fuzzy, c-format
 #| msgid "could not find any WAL file"
 msgid "could not find any WAL files"
 msgstr "找不到任何 WAL 檔"
 
-#: backup/basebackup.c:494 backup/basebackup.c:509 backup/basebackup.c:518
+#: backup/basebackup.c:507 backup/basebackup.c:522 backup/basebackup.c:531
 #, fuzzy, c-format
 #| msgid "could not find file \"%s\": %m"
 msgid "could not find WAL file \"%s\""
 msgstr "找不到檔案 \"%s\": %m"
 
 # utils/adt/rowtypes.c:178 utils/adt/rowtypes.c:186
-#: backup/basebackup.c:560 backup/basebackup.c:585
+#: backup/basebackup.c:573 backup/basebackup.c:598
 #, fuzzy, c-format
 #| msgid "unexpected empty file \"%s\""
 msgid "unexpected WAL file size \"%s\""
 msgstr "非預期的空檔 \"%s\""
 
-#: backup/basebackup.c:655
+#: backup/basebackup.c:668
 #, fuzzy, c-format
 #| msgid "checksums verified in file \"%s\""
 msgid "%lld total checksum verification failure"
 msgid_plural "%lld total checksum verification failures"
 msgstr[0] "檔案 \"%s\" 中已驗證檢查碼"
 
-#: backup/basebackup.c:662
+#: backup/basebackup.c:675
 #, fuzzy, c-format
 #| msgid "checksums verified in file \"%s\""
 msgid "checksum verification failure during base backup"
 msgstr "檔案 \"%s\" 中已驗證檢查碼"
 
-#: backup/basebackup.c:730 backup/basebackup.c:739 backup/basebackup.c:750
-#: backup/basebackup.c:767 backup/basebackup.c:776 backup/basebackup.c:785
-#: backup/basebackup.c:800 backup/basebackup.c:817 backup/basebackup.c:826
-#: backup/basebackup.c:838 backup/basebackup.c:862 backup/basebackup.c:876
-#: backup/basebackup.c:887 backup/basebackup.c:898 backup/basebackup.c:911
+#: backup/basebackup.c:743 backup/basebackup.c:752 backup/basebackup.c:763
+#: backup/basebackup.c:780 backup/basebackup.c:789 backup/basebackup.c:798
+#: backup/basebackup.c:813 backup/basebackup.c:830 backup/basebackup.c:839
+#: backup/basebackup.c:851 backup/basebackup.c:875 backup/basebackup.c:889
+#: backup/basebackup.c:900 backup/basebackup.c:911 backup/basebackup.c:924
 #, c-format
 msgid "duplicate option \"%s\""
 msgstr "選項重複 \"%s\""
 
-#: backup/basebackup.c:758
+#: backup/basebackup.c:771
 #, fuzzy, c-format
 #| msgid "unrecognized constraint type: %c"
 msgid "unrecognized checkpoint type: \"%s\""
 msgstr "無法識別的約束類型: %c"
 
-#: backup/basebackup.c:790
+#: backup/basebackup.c:803
 #, c-format
 msgid "incremental backups cannot be taken unless WAL summarization is enabled"
 msgstr ""
 
 # utils/misc/guc.c:3519
-#: backup/basebackup.c:806
+#: backup/basebackup.c:819
 #, c-format
 msgid "%d is outside the valid range for parameter \"%s\" (%d .. %d)"
 msgstr "%d 超出參數 \"%s\" 的有效範圍 (%d .. %d)"
 
-#: backup/basebackup.c:851
+#: backup/basebackup.c:864
 #, fuzzy, c-format
 #| msgid "unrecognized role option \"%s\""
 msgid "unrecognized manifest option: \"%s\""
 msgstr "無法辨識的 role 選項 \"%s\""
 
 # access/transam/xlog.c:3720
-#: backup/basebackup.c:902
+#: backup/basebackup.c:915
 #, c-format
 msgid "unrecognized compression algorithm: \"%s\""
 msgstr "無法識別的壓縮演算法: \" %s \""
 
-#: backup/basebackup.c:918
+#: backup/basebackup.c:931
 #, fuzzy, c-format
 #| msgid "unrecognized role option \"%s\""
 msgid "unrecognized base backup option: \"%s\""
 msgstr "無法辨識的 role 選項 \"%s\""
 
-#: backup/basebackup.c:929
+#: backup/basebackup.c:942
 #, fuzzy, c-format
 #| msgid "manifest checksum mismatch"
 msgid "manifest checksums require a backup manifest"
 msgstr "清單檢查碼不一致"
 
-#: backup/basebackup.c:938
+#: backup/basebackup.c:951
 #, fuzzy, c-format
 #| msgid "--no-slot cannot be used with slot name"
 msgid "target detail cannot be used without target"
 msgstr "--no-slot 不能與插槽名稱一同使用"
 
 # commands/indexcmds.c:623
-#: backup/basebackup.c:947 backup/basebackup_target.c:218
+#: backup/basebackup.c:960 backup/basebackup_target.c:218
 #, fuzzy, c-format
 #| msgid "operator class \"%s\" does not accept data type %s"
 msgid "target \"%s\" does not accept a target detail"
 msgstr "運算子類別 \"%s\" 不接受資料型別 %s"
 
-#: backup/basebackup.c:958
+#: backup/basebackup.c:971
 #, fuzzy, c-format
 #| msgid "%s cannot be specified unless locale provider \"%s\" is chosen"
 msgid "compression detail cannot be specified unless compression is enabled"
 msgstr "除非選擇了語言提供者 \"%2$s\"，否則不能指定 %1$s"
 
 # fe-connect.c:2675
-#: backup/basebackup.c:971
+#: backup/basebackup.c:984
 #, c-format
 msgid "invalid compression specification: %s"
 msgstr "無效的壓縮規格: %s"
 
-#: backup/basebackup.c:1021
+#: backup/basebackup.c:1034
 #, c-format
 msgid "must UPLOAD_MANIFEST before performing an incremental BASE_BACKUP"
 msgstr ""
 
 # access/transam/slru.c:967 commands/tablespace.c:577
 # commands/tablespace.c:721
-#: backup/basebackup.c:1154 backup/basebackup.c:1356
+#: backup/basebackup.c:1167 backup/basebackup.c:1369
 #, c-format
 msgid "could not stat file or directory \"%s\": %m"
 msgstr "無法取得檔案或目錄 \"%s\" 的狀態: %m"
 
 # access/transam/xlog.c:2163
-#: backup/basebackup.c:1542
+#: backup/basebackup.c:1555
 #, c-format
 msgid "skipping special file \"%s\""
 msgstr "略過特殊檔案 \"%s\""
 
-#: backup/basebackup.c:1749
+#: backup/basebackup.c:1777
 #, c-format
 msgid "could not verify checksum in file \"%s\", block %u: read buffer size %d and page size %d differ"
 msgstr ""
 
-#: backup/basebackup.c:1811
+#: backup/basebackup.c:1839
 #, c-format
 msgid "file \"%s\" has a total of %d checksum verification failure"
 msgid_plural "file \"%s\" has a total of %d checksum verification failures"
 msgstr[0] ""
 
-#: backup/basebackup.c:1915
+#: backup/basebackup.c:1943
 #, fuzzy, c-format
 #| msgid "checksum verification failed in file \"%s\", block %u: calculated checksum %X but block contains %X"
 msgid "checksum verification failed in file \"%s\", block %u: calculated %X but expected %X"
 msgstr "在檔案 \"%s\" 驗證檢查碼失敗，區塊 %u: 算得檢查碼 %X 但是區塊為 %X"
 
-#: backup/basebackup.c:1922
+#: backup/basebackup.c:1950
 #, c-format
 msgid "further checksum verification failures in file \"%s\" will not be reported"
 msgstr ""
 
 # utils/mb/encnames.c:445
-#: backup/basebackup.c:2046
+#: backup/basebackup.c:2074
 #, fuzzy, c-format
 #| msgid "file name too long: \"%s\""
 msgid "file name too long for tar format: \"%s\""
 msgstr "檔案名稱過長: \"%s\""
 
-#: backup/basebackup.c:2051
+#: backup/basebackup.c:2079
 #, c-format
 msgid "symbolic link target too long for tar format: file name \"%s\", target \"%s\""
 msgstr ""
@@ -4699,7 +4706,7 @@ msgstr ""
 # access/transam/xlog.c:5397 access/transam/xlog.c:5448
 # access/transam/xlog.c:5520 access/transam/xlog.c:5545
 # access/transam/xlog.c:5583
-#: backup/basebackup.c:2125
+#: backup/basebackup.c:2153
 #, fuzzy, c-format
 #| msgid "could not read file \"%s\": read %d of %zu"
 msgid "could not read file \"%s\": read %zd of %zu"
@@ -33575,8 +33582,8 @@ msgid "more than one operator named %s"
 msgstr "有一個以上的operator被命名為 %s"
 
 # utils/adt/regproc.c:644 utils/adt/regproc.c:1276
-#: utils/adt/regproc.c:675 utils/adt/regproc.c:2029 utils/adt/ruleutils.c:10560
-#: utils/adt/ruleutils.c:10773
+#: utils/adt/regproc.c:675 utils/adt/regproc.c:2029 utils/adt/ruleutils.c:10604
+#: utils/adt/ruleutils.c:10817
 #, c-format
 msgid "too many arguments"
 msgstr "參數過多"
@@ -38459,12 +38466,6 @@ msgstr ""
 #, c-format
 msgid "internal error: unrecognized run-time parameter type\n"
 msgstr "內部錯誤: 無法辨識的執行時期參數型別\n"
-
-#: utils/misc/pg_controldata.c:50 utils/misc/pg_controldata.c:90
-#: utils/misc/pg_controldata.c:181 utils/misc/pg_controldata.c:222
-#, c-format
-msgid "calculated CRC checksum does not match value stored in file"
-msgstr ""
 
 #: utils/misc/pg_rusage.c:64
 #, c-format
