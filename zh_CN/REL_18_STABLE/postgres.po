@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 18\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-10-26 20:36+0000\n"
-"PO-Revision-Date: 2026-10-22 21:58+0800\n"
+"POT-Creation-Date: 2026-10-28 06:06+0000\n"
+"PO-Revision-Date: 2026-10-28 14:28+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
 "Language: zh_CN\n"
@@ -95,7 +95,7 @@ msgstr "无法打开文件 \"%s\" 进行读取: %m"
 #: access/transam/twophase.c:1355 access/transam/xlog.c:3474
 #: access/transam/xlog.c:4365 access/transam/xlogrecovery.c:1272
 #: access/transam/xlogrecovery.c:1370 access/transam/xlogrecovery.c:1407
-#: access/transam/xlogrecovery.c:1474 backup/basebackup.c:2126
+#: access/transam/xlogrecovery.c:1474 backup/basebackup.c:2154
 #: backup/walsummary.c:283 commands/extension.c:3970 libpq/hba.c:769
 #: replication/logical/origin.c:768 replication/logical/origin.c:804
 #: replication/logical/reorderbuffer.c:5508
@@ -166,8 +166,8 @@ msgstr ""
 #: access/transam/xlog.c:3390 access/transam/xlog.c:3429
 #: access/transam/xlog.c:3622 access/transam/xlog.c:4355
 #: access/transam/xlogrecovery.c:4325 access/transam/xlogrecovery.c:4426
-#: access/transam/xlogutils.c:849 backup/basebackup.c:549
-#: backup/basebackup.c:1598 backup/walsummary.c:220 libpq/hba.c:626
+#: access/transam/xlogutils.c:849 backup/basebackup.c:562
+#: backup/basebackup.c:1615 backup/walsummary.c:220 libpq/hba.c:626
 #: postmaster/syslogger.c:1512 postmaster/walsummarizer.c:1617
 #: replication/logical/origin.c:758 replication/logical/reorderbuffer.c:4161
 #: replication/logical/reorderbuffer.c:4715
@@ -337,7 +337,7 @@ msgstr "无法同步文件 \"%s\" 所在的文件系统: %m"
 #: ../common/file_utils.c:123 ../common/file_utils.c:588
 #: ../common/file_utils.c:592 access/transam/twophase.c:1323
 #: access/transam/xlogarchive.c:111 access/transam/xlogarchive.c:235
-#: backup/basebackup.c:357 backup/basebackup.c:555 backup/basebackup.c:626
+#: backup/basebackup.c:568 backup/basebackup.c:639 backup/basebackup.c:1627
 #: backup/walsummary.c:247 commands/copyfrom.c:1889 commands/copyto.c:984
 #: commands/extension.c:3949 commands/tablespace.c:811
 #: commands/tablespace.c:900 postmaster/pgarch.c:682
@@ -599,7 +599,7 @@ msgstr "无法解码文件名"
 msgid "file size is not an integer"
 msgstr "文件大小不是整数"
 
-#: ../common/parse_manifest.c:699 backup/basebackup.c:869
+#: ../common/parse_manifest.c:699 backup/basebackup.c:882
 #, c-format
 msgid "unrecognized checksum algorithm: \"%s\""
 msgstr "无法识别的校验和算法: \"%s\""
@@ -3068,22 +3068,22 @@ msgstr ""
 "这意味着正在备库上制作的备份已损坏，不宜使用。在主库上启用 "
 "\"full_page_writes\" 并运行 CHECKPOINT，然后重试在线备份。"
 
-#: access/transam/xlog.c:9060 backup/basebackup.c:1417 utils/adt/misc.c:354
+#: access/transam/xlog.c:9060 backup/basebackup.c:1430 utils/adt/misc.c:354
 #, c-format
 msgid "could not read symbolic link \"%s\": %m"
 msgstr "无法读取符号链接 \"%s\": %m"
 
-#: access/transam/xlog.c:9067 backup/basebackup.c:1422 utils/adt/misc.c:359
+#: access/transam/xlog.c:9067 backup/basebackup.c:1435 utils/adt/misc.c:359
 #, c-format
 msgid "symbolic link \"%s\" target is too long"
 msgstr "符号链接 \"%s\" 的目标过长"
 
-#: access/transam/xlog.c:9226 backup/basebackup.c:1281
+#: access/transam/xlog.c:9226 backup/basebackup.c:1294
 #, c-format
 msgid "the standby was promoted during online backup"
 msgstr "备库在在线备份期间被提升为主库"
 
-#: access/transam/xlog.c:9227 backup/basebackup.c:1282
+#: access/transam/xlog.c:9227 backup/basebackup.c:1295
 #, c-format
 msgid ""
 "This means that the backup being taken is corrupt and should not be used. "
@@ -3173,7 +3173,7 @@ msgstr "无法创建归档状态文件 \"%s\": %m"
 msgid "could not write archive status file \"%s\": %m"
 msgstr "无法写入归档状态文件 \"%s\": %m"
 
-#: access/transam/xlogfuncs.c:70 backup/basebackup.c:996
+#: access/transam/xlogfuncs.c:70 backup/basebackup.c:1009
 #, c-format
 msgid "a backup is already in progress in this session"
 msgstr "此会话中已有备份在运行中"
@@ -4064,112 +4064,112 @@ msgstr "在时间线 %2$u 的历史中找不到起始时间线 %1$u"
 msgid "could not rewind temporary file"
 msgstr "无法将临时文件的位置重置到开头"
 
-#: backup/basebackup.c:481
+#: backup/basebackup.c:494
 #, c-format
 msgid "could not find any WAL files"
 msgstr "无法找到任何 WAL 文件"
 
-#: backup/basebackup.c:496 backup/basebackup.c:511 backup/basebackup.c:520
+#: backup/basebackup.c:509 backup/basebackup.c:524 backup/basebackup.c:533
 #, c-format
 msgid "could not find WAL file \"%s\""
 msgstr "无法找到 WAL 文件 \"%s\""
 
-#: backup/basebackup.c:562 backup/basebackup.c:587
+#: backup/basebackup.c:575 backup/basebackup.c:600
 #, c-format
 msgid "unexpected WAL file size \"%s\""
 msgstr "WAL 文件 \"%s\" 的大小不符合预期"
 
-#: backup/basebackup.c:657
+#: backup/basebackup.c:670
 #, c-format
 msgid "%lld total checksum verification failure"
 msgid_plural "%lld total checksum verification failures"
 msgstr[0] "校验和验证总计失败 %lld 次"
 
-#: backup/basebackup.c:664
+#: backup/basebackup.c:677
 #, c-format
 msgid "checksum verification failure during base backup"
 msgstr "基础备份期间的校验和验证失败"
 
-#: backup/basebackup.c:732 backup/basebackup.c:741 backup/basebackup.c:752
-#: backup/basebackup.c:769 backup/basebackup.c:778 backup/basebackup.c:787
-#: backup/basebackup.c:802 backup/basebackup.c:819 backup/basebackup.c:828
-#: backup/basebackup.c:840 backup/basebackup.c:864 backup/basebackup.c:878
-#: backup/basebackup.c:889 backup/basebackup.c:900 backup/basebackup.c:913
+#: backup/basebackup.c:745 backup/basebackup.c:754 backup/basebackup.c:765
+#: backup/basebackup.c:782 backup/basebackup.c:791 backup/basebackup.c:800
+#: backup/basebackup.c:815 backup/basebackup.c:832 backup/basebackup.c:841
+#: backup/basebackup.c:853 backup/basebackup.c:877 backup/basebackup.c:891
+#: backup/basebackup.c:902 backup/basebackup.c:913 backup/basebackup.c:926
 #, c-format
 msgid "duplicate option \"%s\""
 msgstr "重复指定选项 \"%s\""
 
-#: backup/basebackup.c:760
+#: backup/basebackup.c:773
 #, c-format
 msgid "unrecognized checkpoint type: \"%s\""
 msgstr "无法识别的检查点类型: \"%s\""
 
-#: backup/basebackup.c:792
+#: backup/basebackup.c:805
 #, c-format
 msgid "incremental backups cannot be taken unless WAL summarization is enabled"
 msgstr "未启用 WAL 摘要生成时不能进行增量备份"
 
-#: backup/basebackup.c:808
+#: backup/basebackup.c:821
 #, c-format
 msgid "%d is outside the valid range for parameter \"%s\" (%d .. %d)"
 msgstr "%d 超出参数 \"%s\" 的有效范围（%d .. %d）"
 
-#: backup/basebackup.c:853
+#: backup/basebackup.c:866
 #, c-format
 msgid "unrecognized manifest option: \"%s\""
 msgstr "无法识别的清单选项: \"%s\""
 
-#: backup/basebackup.c:904
+#: backup/basebackup.c:917
 #, c-format
 msgid "unrecognized compression algorithm: \"%s\""
 msgstr "无法识别的压缩算法: \"%s\""
 
-#: backup/basebackup.c:920
+#: backup/basebackup.c:933
 #, c-format
 msgid "unrecognized base backup option: \"%s\""
 msgstr "无法识别的基础备份选项: \"%s\""
 
-#: backup/basebackup.c:931
+#: backup/basebackup.c:944
 #, c-format
 msgid "manifest checksums require a backup manifest"
 msgstr "清单校验和需要备份清单"
 
-#: backup/basebackup.c:940
+#: backup/basebackup.c:953
 #, c-format
 msgid "target detail cannot be used without target"
 msgstr "未指定目标时不能使用目标附加参数"
 
-#: backup/basebackup.c:949 backup/basebackup_target.c:218
+#: backup/basebackup.c:962 backup/basebackup_target.c:218
 #, c-format
 msgid "target \"%s\" does not accept a target detail"
 msgstr "目标 \"%s\" 不接受目标附加参数"
 
-#: backup/basebackup.c:960
+#: backup/basebackup.c:973
 #, c-format
 msgid "compression detail cannot be specified unless compression is enabled"
 msgstr "未启用压缩时不能指定压缩附加参数"
 
-#: backup/basebackup.c:973
+#: backup/basebackup.c:986
 #, c-format
 msgid "invalid compression specification: %s"
 msgstr "压缩设置无效: %s"
 
-#: backup/basebackup.c:1023
+#: backup/basebackup.c:1036
 #, c-format
 msgid "must UPLOAD_MANIFEST before performing an incremental BASE_BACKUP"
 msgstr "执行增量 BASE_BACKUP 之前必须先执行 UPLOAD_MANIFEST"
 
-#: backup/basebackup.c:1156 backup/basebackup.c:1358
+#: backup/basebackup.c:1169 backup/basebackup.c:1371
 #, c-format
 msgid "could not stat file or directory \"%s\": %m"
 msgstr "无法获取文件或目录 \"%s\" 的状态: %m"
 
-#: backup/basebackup.c:1544
+#: backup/basebackup.c:1557
 #, c-format
 msgid "skipping special file \"%s\""
 msgstr "正在跳过特殊文件 \"%s\""
 
-#: backup/basebackup.c:1751
+#: backup/basebackup.c:1779
 #, c-format
 msgid ""
 "could not verify checksum in file \"%s\", block %u: read buffer size %d and "
@@ -4177,37 +4177,37 @@ msgid ""
 msgstr ""
 "无法验证文件 \"%s\" 中块 %u 的校验和: 读取缓冲区大小 %d 与页面大小 %d 不同"
 
-#: backup/basebackup.c:1813
+#: backup/basebackup.c:1841
 #, c-format
 msgid "file \"%s\" has a total of %d checksum verification failure"
 msgid_plural "file \"%s\" has a total of %d checksum verification failures"
 msgstr[0] "文件 \"%s\" 中共有 %d 次校验和验证失败"
 
-#: backup/basebackup.c:1918
+#: backup/basebackup.c:1946
 #, c-format
 msgid ""
 "checksum verification failed in file \"%s\", block %u: calculated %X but "
 "expected %X"
 msgstr "文件 \"%s\" 中块 %u 的校验和验证失败: 计算值为 %X，预期为 %X"
 
-#: backup/basebackup.c:1925
+#: backup/basebackup.c:1953
 #, c-format
 msgid ""
 "further checksum verification failures in file \"%s\" will not be reported"
 msgstr "将不会报告文件 \"%s\" 中的进一步校验和验证失败"
 
-#: backup/basebackup.c:2050
+#: backup/basebackup.c:2078
 #, c-format
 msgid "file name too long for tar format: \"%s\""
 msgstr "文件名对于 tar 格式过长: \"%s\""
 
-#: backup/basebackup.c:2056
+#: backup/basebackup.c:2084
 #, c-format
 msgid ""
 "symbolic link target too long for tar format: file name \"%s\", target \"%s\""
 msgstr "符号链接目标对于 tar 格式过长: 文件名 \"%s\", 目标 \"%s\""
 
-#: backup/basebackup.c:2130
+#: backup/basebackup.c:2158
 #, c-format
 msgid "could not read file \"%s\": read %zd of %zu"
 msgstr "无法读取文件 \"%1$s\": 应读取 %3$zu，实际读取 %2$zd"
@@ -4566,8 +4566,8 @@ msgstr "权限不足，无法更改默认权限"
 msgid "cannot use IN SCHEMA clause when using %s"
 msgstr "使用 %s 时不能使用 IN SCHEMA 子句"
 
-#: catalog/aclchk.c:1577 catalog/catalog.c:684 catalog/heap.c:2670
-#: catalog/heap.c:2992 catalog/objectaddress.c:1528
+#: catalog/aclchk.c:1577 catalog/catalog.c:684 catalog/heap.c:2680
+#: catalog/heap.c:3002 catalog/objectaddress.c:1528
 #: catalog/pg_publication.c:574 commands/analyze.c:388 commands/copy.c:1042
 #: commands/sequence.c:1655 commands/tablecmds.c:7783 commands/tablecmds.c:7957
 #: commands/tablecmds.c:8158 commands/tablecmds.c:8294
@@ -5208,7 +5208,7 @@ msgstr "复合类型 %s 不能成为其自身的成员"
 msgid "virtual generated column \"%s\" cannot have a user-defined type"
 msgstr "虚拟生成列 \"%s\" 不能使用用户定义类型"
 
-#: catalog/heap.c:688 catalog/heap.c:3350
+#: catalog/heap.c:688 catalog/heap.c:3360
 #, c-format
 msgid ""
 "Virtual generated columns that make use of user-defined types are not yet "
@@ -5268,57 +5268,57 @@ msgstr "二进制升级模式下未设置 relfilenumber 值"
 msgid "cannot add NO INHERIT constraint to partitioned table \"%s\""
 msgstr "不能向分区表 \"%s\" 添加 NO INHERIT 约束"
 
-#: catalog/heap.c:2359 catalog/heap.c:2633
+#: catalog/heap.c:2369 catalog/heap.c:2643
 #, c-format
 msgid "too many check constraints on relation \"%s\""
 msgstr "关系 \"%s\" 的检查约束过多"
 
-#: catalog/heap.c:2566
+#: catalog/heap.c:2576
 #, c-format
 msgid "check constraint \"%s\" already exists"
 msgstr "检查约束 \"%s\" 已存在"
 
-#: catalog/heap.c:2675 catalog/heap.c:2998
+#: catalog/heap.c:2685 catalog/heap.c:3008
 #, c-format
 msgid "cannot add not-null constraint on system column \"%s\""
 msgstr "不能在系统列 \"%s\" 上添加非空约束"
 
-#: catalog/heap.c:2703 catalog/heap.c:2829 catalog/heap.c:3082
+#: catalog/heap.c:2713 catalog/heap.c:2839 catalog/heap.c:3092
 #: catalog/index.c:922 catalog/pg_constraint.c:1028 commands/tablecmds.c:9857
 #, c-format
 msgid "constraint \"%s\" for relation \"%s\" already exists"
 msgstr "关系 \"%2$s\" 的约束 \"%1$s\" 已存在"
 
-#: catalog/heap.c:2836
+#: catalog/heap.c:2846
 #, c-format
 msgid ""
 "constraint \"%s\" conflicts with non-inherited constraint on relation \"%s\""
 msgstr "约束 \"%s\" 与关系 \"%s\" 上的不可继承的约束冲突"
 
-#: catalog/heap.c:2847
+#: catalog/heap.c:2857
 #, c-format
 msgid ""
 "constraint \"%s\" conflicts with inherited constraint on relation \"%s\""
 msgstr "约束 \"%s\" 与关系 \"%s\" 上的继承约束冲突"
 
-#: catalog/heap.c:2857
+#: catalog/heap.c:2867
 #, c-format
 msgid ""
 "constraint \"%s\" conflicts with NOT VALID constraint on relation \"%s\""
 msgstr "约束 \"%s\" 与关系 \"%s\" 上的 NOT VALID 约束冲突"
 
-#: catalog/heap.c:2869
+#: catalog/heap.c:2879
 #, c-format
 msgid ""
 "constraint \"%s\" conflicts with NOT ENFORCED constraint on relation \"%s\""
 msgstr "约束 \"%s\" 与关系 \"%s\" 上的 NOT ENFORCED 约束冲突"
 
-#: catalog/heap.c:2874
+#: catalog/heap.c:2884
 #, c-format
 msgid "merging constraint \"%s\" with inherited definition"
 msgstr "正在将约束 \"%s\" 与继承的定义合并"
 
-#: catalog/heap.c:2898 catalog/pg_constraint.c:806 catalog/pg_constraint.c:1157
+#: catalog/heap.c:2908 catalog/pg_constraint.c:806 catalog/pg_constraint.c:1157
 #: commands/tablecmds.c:3197 commands/tablecmds.c:3517
 #: commands/tablecmds.c:7318 commands/tablecmds.c:7995
 #: commands/tablecmds.c:17650 commands/tablecmds.c:17832
@@ -5326,109 +5326,109 @@ msgstr "正在将约束 \"%s\" 与继承的定义合并"
 msgid "too many inheritance parents"
 msgstr "继承父对象过多"
 
-#: catalog/heap.c:3017 parser/parse_utilcmd.c:2669
+#: catalog/heap.c:3027 parser/parse_utilcmd.c:2669
 #, c-format
 msgid ""
 "conflicting NO INHERIT declaration for not-null constraint on column \"%s\""
 msgstr "列 \"%s\" 的非空约束存在冲突的 NO INHERIT 声明"
 
-#: catalog/heap.c:3031
+#: catalog/heap.c:3041
 #, c-format
 msgid "conflicting not-null constraint names \"%s\" and \"%s\""
 msgstr "非空约束名称 \"%s\" 和 \"%s\" 冲突"
 
-#: catalog/heap.c:3061
+#: catalog/heap.c:3071
 #, c-format
 msgid "cannot define not-null constraint with NO INHERIT on column \"%s\""
 msgstr "不能在列 \"%s\" 上定义带 NO INHERIT 的非空约束"
 
-#: catalog/heap.c:3063
+#: catalog/heap.c:3073
 #, c-format
 msgid "The column has an inherited not-null constraint."
 msgstr "该列具有继承的非空约束。"
 
-#: catalog/heap.c:3257
+#: catalog/heap.c:3267
 #, c-format
 msgid "cannot use generated column \"%s\" in column generation expression"
 msgstr "列生成表达式中不能使用生成列 \"%s\""
 
-#: catalog/heap.c:3259
+#: catalog/heap.c:3269
 #, c-format
 msgid "A generated column cannot reference another generated column."
 msgstr "生成列不能引用其他生成列。"
 
-#: catalog/heap.c:3265
+#: catalog/heap.c:3275
 #, c-format
 msgid "cannot use whole-row variable in column generation expression"
 msgstr "列生成表达式中不能使用整行变量"
 
-#: catalog/heap.c:3266
+#: catalog/heap.c:3276
 #, c-format
 msgid "This would cause the generated column to depend on its own value."
 msgstr "这会导致生成列依赖其自身的值。"
 
-#: catalog/heap.c:3333
+#: catalog/heap.c:3343
 #, c-format
 msgid "generation expression uses user-defined function"
 msgstr "生成表达式使用用户定义函数"
 
-#: catalog/heap.c:3334
+#: catalog/heap.c:3344
 #, c-format
 msgid ""
 "Virtual generated columns that make use of user-defined functions are not "
 "yet supported."
 msgstr "尚不支持使用用户定义函数的虚拟生成列。"
 
-#: catalog/heap.c:3349
+#: catalog/heap.c:3359
 #, c-format
 msgid "generation expression uses user-defined type"
 msgstr "生成表达式使用用户定义类型"
 
-#: catalog/heap.c:3401
+#: catalog/heap.c:3411
 #, c-format
 msgid "generation expression is not immutable"
 msgstr "生成表达式不是不可变的"
 
-#: catalog/heap.c:3433 rewrite/rewriteHandler.c:1321
+#: catalog/heap.c:3443 rewrite/rewriteHandler.c:1321
 #, c-format
 msgid "column \"%s\" is of type %s but default expression is of type %s"
 msgstr "列 \"%s\" 的类型为 %s，但默认表达式的类型为 %s"
 
-#: catalog/heap.c:3438 commands/prepare.c:334 parser/analyze.c:2922
+#: catalog/heap.c:3448 commands/prepare.c:334 parser/analyze.c:2922
 #: parser/parse_target.c:595 parser/parse_target.c:885
 #: parser/parse_target.c:895 rewrite/rewriteHandler.c:1326
 #, c-format
 msgid "You will need to rewrite or cast the expression."
 msgstr "你需要重写表达式或对其进行类型转换。"
 
-#: catalog/heap.c:3485
+#: catalog/heap.c:3495
 #, c-format
 msgid "only table \"%s\" can be referenced in check constraint"
 msgstr "检查约束中只能引用表 \"%s\""
 
-#: catalog/heap.c:3791
+#: catalog/heap.c:3801
 #, c-format
 msgid "unsupported ON COMMIT and foreign key combination"
 msgstr "不支持此 ON COMMIT 设置与外键的组合"
 
-#: catalog/heap.c:3792
+#: catalog/heap.c:3802
 #, c-format
 msgid ""
 "Table \"%s\" references \"%s\", but they do not have the same ON COMMIT "
 "setting."
 msgstr "表 \"%s\" 引用表 \"%s\"，但是它们没有相同的 ON COMMIT 设置。"
 
-#: catalog/heap.c:3797
+#: catalog/heap.c:3807
 #, c-format
 msgid "cannot truncate a table referenced in a foreign key constraint"
 msgstr "不能截断被外键约束引用的表"
 
-#: catalog/heap.c:3798
+#: catalog/heap.c:3808
 #, c-format
 msgid "Table \"%s\" references \"%s\"."
 msgstr "表 \"%s\" 引用 \"%s\"。"
 
-#: catalog/heap.c:3800
+#: catalog/heap.c:3810
 #, c-format
 msgid "Truncate table \"%s\" at the same time, or use TRUNCATE ... CASCADE."
 msgstr "同时截断表 \"%s\"，或者使用 TRUNCATE ... CASCADE。"
@@ -5489,7 +5489,7 @@ msgstr "关系 \"%s\" 已存在，跳过"
 msgid "pg_class index OID value not set when in binary upgrade mode"
 msgstr "二进制升级模式下未设置索引的 pg_class OID 值"
 
-#: catalog/index.c:960 utils/cache/relcache.c:3797
+#: catalog/index.c:960 utils/cache/relcache.c:3798
 #, c-format
 msgid "index relfilenumber value not set when in binary upgrade mode"
 msgstr "二进制升级模式下未设置索引的 relfilenumber 值"
@@ -20883,7 +20883,7 @@ msgid ""
 "conflicting NULL/NOT NULL declarations for column \"%s\" of table \"%s\""
 msgstr "表 \"%2$s\" 的列 \"%1$s\" 的 NULL/NOT NULL 声明冲突"
 
-#: parser/parse_utilcmd.c:759 parser/parse_utilcmd.c:1077
+#: catalog/heap.c:2290 parser/parse_utilcmd.c:759 parser/parse_utilcmd.c:1077
 #, c-format
 msgid "not-null constraints on partitioned tables cannot be NO INHERIT"
 msgstr "分区表上的非空约束不能为 NO INHERIT"
@@ -29850,8 +29850,8 @@ msgstr "多个函数名为 \"%s\""
 msgid "more than one operator named %s"
 msgstr "多个操作符名为 %s"
 
-#: utils/adt/regproc.c:675 utils/adt/regproc.c:2029 utils/adt/ruleutils.c:10872
-#: utils/adt/ruleutils.c:11085
+#: utils/adt/regproc.c:675 utils/adt/regproc.c:2029 utils/adt/ruleutils.c:10916
+#: utils/adt/ruleutils.c:11129
 #, c-format
 msgid "too many arguments"
 msgstr "参数过多"
@@ -30824,27 +30824,27 @@ msgid ""
 "type %s"
 msgstr "访问方法 %2$s 的操作符类 \"%1$s\" 缺少类型 %4$s 的支持函数 %3$d"
 
-#: utils/cache/relcache.c:3807
+#: utils/cache/relcache.c:3808
 #, c-format
 msgid "heap relfilenumber value not set when in binary upgrade mode"
 msgstr "二进制升级模式下未设置堆的 relfilenumber 值"
 
-#: utils/cache/relcache.c:3815
+#: utils/cache/relcache.c:3816
 #, c-format
 msgid "unexpected request for new relfilenumber in binary upgrade mode"
 msgstr "二进制升级模式下出现意外的新 relfilenumber 请求"
 
-#: utils/cache/relcache.c:6635
+#: utils/cache/relcache.c:6636
 #, c-format
 msgid "could not create relation-cache initialization file \"%s\": %m"
 msgstr "无法创建关系缓存初始化文件 \"%s\": %m"
 
-#: utils/cache/relcache.c:6637
+#: utils/cache/relcache.c:6638
 #, c-format
 msgid "Continuing anyway, but there's something wrong."
 msgstr "仍然继续，但存在某些问题。"
 
-#: utils/cache/relcache.c:6967
+#: utils/cache/relcache.c:6968
 #, c-format
 msgid "could not remove cache file \"%s\": %m"
 msgstr "无法删除缓存文件 \"%s\": %m"
@@ -34551,8 +34551,9 @@ msgstr "选择执行异步 I/O 的方法。"
 msgid "internal error: unrecognized run-time parameter type\n"
 msgstr "内部错误: 无法识别的运行时参数类型\n"
 
-#: utils/misc/pg_controldata.c:50 utils/misc/pg_controldata.c:90
-#: utils/misc/pg_controldata.c:181 utils/misc/pg_controldata.c:222
+#: backup/basebackup.c:365 utils/misc/pg_controldata.c:50
+#: utils/misc/pg_controldata.c:90 utils/misc/pg_controldata.c:181
+#: utils/misc/pg_controldata.c:222
 #, c-format
 msgid "calculated CRC checksum does not match value stored in file"
 msgstr "计算得到的 CRC 校验和与文件中存储的值不匹配"

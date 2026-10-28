@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 17\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-10-26 20:54+0000\n"
-"PO-Revision-Date: 2026-10-22 21:58+0800\n"
+"POT-Creation-Date: 2026-10-28 00:53+0000\n"
+"PO-Revision-Date: 2026-10-28 14:28+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
 "Language: zh_CN\n"
@@ -95,7 +95,7 @@ msgstr "无法打开文件 \"%s\" 进行读取: %m"
 #: access/transam/twophase.c:1355 access/transam/xlog.c:3454
 #: access/transam/xlog.c:4318 access/transam/xlogrecovery.c:1254
 #: access/transam/xlogrecovery.c:1352 access/transam/xlogrecovery.c:1389
-#: access/transam/xlogrecovery.c:1456 backup/basebackup.c:2121
+#: access/transam/xlogrecovery.c:1456 backup/basebackup.c:2149
 #: backup/walsummary.c:283 commands/extension.c:3678 libpq/hba.c:764
 #: replication/logical/origin.c:745 replication/logical/origin.c:781
 #: replication/logical/reorderbuffer.c:5375
@@ -165,8 +165,8 @@ msgstr ""
 #: access/transam/xlog.c:3370 access/transam/xlog.c:3409
 #: access/transam/xlog.c:3602 access/transam/xlog.c:4308
 #: access/transam/xlogrecovery.c:4292 access/transam/xlogrecovery.c:4395
-#: access/transam/xlogutils.c:860 backup/basebackup.c:547
-#: backup/basebackup.c:1596 backup/walsummary.c:220 libpq/hba.c:624
+#: access/transam/xlogutils.c:860 backup/basebackup.c:560
+#: backup/basebackup.c:1613 backup/walsummary.c:220 libpq/hba.c:624
 #: postmaster/syslogger.c:1511 postmaster/walsummarizer.c:1614
 #: replication/logical/origin.c:735 replication/logical/reorderbuffer.c:4028
 #: replication/logical/reorderbuffer.c:4582
@@ -335,7 +335,7 @@ msgstr "无法同步文件 \"%s\" 所在的文件系统: %m"
 #: ../common/file_utils.c:120 ../common/file_utils.c:566
 #: ../common/file_utils.c:570 access/transam/twophase.c:1323
 #: access/transam/xlogarchive.c:111 access/transam/xlogarchive.c:235
-#: backup/basebackup.c:355 backup/basebackup.c:553 backup/basebackup.c:624
+#: backup/basebackup.c:566 backup/basebackup.c:637 backup/basebackup.c:1625
 #: backup/walsummary.c:247 commands/copyfrom.c:1749 commands/copyto.c:705
 #: commands/extension.c:3657 commands/tablespace.c:811
 #: commands/tablespace.c:900 postmaster/pgarch.c:680
@@ -593,7 +593,7 @@ msgstr "无法解码文件名"
 msgid "file size is not an integer"
 msgstr "文件大小不是整数"
 
-#: ../common/parse_manifest.c:699 backup/basebackup.c:867
+#: ../common/parse_manifest.c:699 backup/basebackup.c:880
 #, c-format
 msgid "unrecognized checksum algorithm: \"%s\""
 msgstr "无法识别的校验和算法: \"%s\""
@@ -3109,12 +3109,12 @@ msgstr ""
 "这意味着正在备库上制作的备份已损坏，不宜使用。在主库上启用 "
 "\"full_page_writes\" 并运行 CHECKPOINT，然后重试在线备份。"
 
-#: access/transam/xlog.c:9064 backup/basebackup.c:1415 utils/adt/misc.c:354
+#: access/transam/xlog.c:9064 backup/basebackup.c:1428 utils/adt/misc.c:354
 #, c-format
 msgid "could not read symbolic link \"%s\": %m"
 msgstr "无法读取符号链接 \"%s\": %m"
 
-#: access/transam/xlog.c:9071 backup/basebackup.c:1420 utils/adt/misc.c:359
+#: access/transam/xlog.c:9071 backup/basebackup.c:1433 utils/adt/misc.c:359
 #, c-format
 msgid "symbolic link \"%s\" target is too long"
 msgstr "符号链接 \"%s\" 的目标过长"
@@ -3124,12 +3124,12 @@ msgstr "符号链接 \"%s\" 的目标过长"
 msgid "wal_level must be set to \"replica\" or \"logical\" at server start."
 msgstr "wal_level 必须在服务器启动的时候被设置为 \"replica\" 或 \"logical\"。"
 
-#: access/transam/xlog.c:9230 backup/basebackup.c:1279
+#: access/transam/xlog.c:9230 backup/basebackup.c:1292
 #, c-format
 msgid "the standby was promoted during online backup"
 msgstr "备库在在线备份期间被提升为主库"
 
-#: access/transam/xlog.c:9231 backup/basebackup.c:1280
+#: access/transam/xlog.c:9231 backup/basebackup.c:1293
 #, c-format
 msgid ""
 "This means that the backup being taken is corrupt and should not be used. "
@@ -3219,7 +3219,7 @@ msgstr "无法创建归档状态文件 \"%s\": %m"
 msgid "could not write archive status file \"%s\": %m"
 msgstr "无法写入归档状态文件 \"%s\": %m"
 
-#: access/transam/xlogfuncs.c:69 backup/basebackup.c:994
+#: access/transam/xlogfuncs.c:69 backup/basebackup.c:1007
 #, c-format
 msgid "a backup is already in progress in this session"
 msgstr "此会话中已有备份在运行中"
@@ -4109,112 +4109,112 @@ msgstr "在时间线 %2$u 的历史中找不到起始时间线 %1$u"
 msgid "could not rewind temporary file"
 msgstr "无法将临时文件的位置重置到开头"
 
-#: backup/basebackup.c:479
+#: backup/basebackup.c:492
 #, c-format
 msgid "could not find any WAL files"
 msgstr "无法找到任何 WAL 文件"
 
-#: backup/basebackup.c:494 backup/basebackup.c:509 backup/basebackup.c:518
+#: backup/basebackup.c:507 backup/basebackup.c:522 backup/basebackup.c:531
 #, c-format
 msgid "could not find WAL file \"%s\""
 msgstr "无法找到 WAL 文件 \"%s\""
 
-#: backup/basebackup.c:560 backup/basebackup.c:585
+#: backup/basebackup.c:573 backup/basebackup.c:598
 #, c-format
 msgid "unexpected WAL file size \"%s\""
 msgstr "WAL 文件 \"%s\" 的大小不符合预期"
 
-#: backup/basebackup.c:655
+#: backup/basebackup.c:668
 #, c-format
 msgid "%lld total checksum verification failure"
 msgid_plural "%lld total checksum verification failures"
 msgstr[0] "校验和验证总计失败 %lld 次"
 
-#: backup/basebackup.c:662
+#: backup/basebackup.c:675
 #, c-format
 msgid "checksum verification failure during base backup"
 msgstr "基础备份期间的校验和验证失败"
 
-#: backup/basebackup.c:730 backup/basebackup.c:739 backup/basebackup.c:750
-#: backup/basebackup.c:767 backup/basebackup.c:776 backup/basebackup.c:785
-#: backup/basebackup.c:800 backup/basebackup.c:817 backup/basebackup.c:826
-#: backup/basebackup.c:838 backup/basebackup.c:862 backup/basebackup.c:876
-#: backup/basebackup.c:887 backup/basebackup.c:898 backup/basebackup.c:911
+#: backup/basebackup.c:743 backup/basebackup.c:752 backup/basebackup.c:763
+#: backup/basebackup.c:780 backup/basebackup.c:789 backup/basebackup.c:798
+#: backup/basebackup.c:813 backup/basebackup.c:830 backup/basebackup.c:839
+#: backup/basebackup.c:851 backup/basebackup.c:875 backup/basebackup.c:889
+#: backup/basebackup.c:900 backup/basebackup.c:911 backup/basebackup.c:924
 #, c-format
 msgid "duplicate option \"%s\""
 msgstr "重复指定选项 \"%s\""
 
-#: backup/basebackup.c:758
+#: backup/basebackup.c:771
 #, c-format
 msgid "unrecognized checkpoint type: \"%s\""
 msgstr "无法识别的检查点类型: \"%s\""
 
-#: backup/basebackup.c:790
+#: backup/basebackup.c:803
 #, c-format
 msgid "incremental backups cannot be taken unless WAL summarization is enabled"
 msgstr "未启用 WAL 摘要生成时不能进行增量备份"
 
-#: backup/basebackup.c:806
+#: backup/basebackup.c:819
 #, c-format
 msgid "%d is outside the valid range for parameter \"%s\" (%d .. %d)"
 msgstr "%d 超出参数 \"%s\" 的有效范围（%d .. %d）"
 
-#: backup/basebackup.c:851
+#: backup/basebackup.c:864
 #, c-format
 msgid "unrecognized manifest option: \"%s\""
 msgstr "无法识别的清单选项: \"%s\""
 
-#: backup/basebackup.c:902
+#: backup/basebackup.c:915
 #, c-format
 msgid "unrecognized compression algorithm: \"%s\""
 msgstr "无法识别的压缩算法: \"%s\""
 
-#: backup/basebackup.c:918
+#: backup/basebackup.c:931
 #, c-format
 msgid "unrecognized base backup option: \"%s\""
 msgstr "无法识别的基础备份选项: \"%s\""
 
-#: backup/basebackup.c:929
+#: backup/basebackup.c:942
 #, c-format
 msgid "manifest checksums require a backup manifest"
 msgstr "清单校验和需要备份清单"
 
-#: backup/basebackup.c:938
+#: backup/basebackup.c:951
 #, c-format
 msgid "target detail cannot be used without target"
 msgstr "未指定目标时不能使用目标附加参数"
 
-#: backup/basebackup.c:947 backup/basebackup_target.c:218
+#: backup/basebackup.c:960 backup/basebackup_target.c:218
 #, c-format
 msgid "target \"%s\" does not accept a target detail"
 msgstr "目标 \"%s\" 不接受目标附加参数"
 
-#: backup/basebackup.c:958
+#: backup/basebackup.c:971
 #, c-format
 msgid "compression detail cannot be specified unless compression is enabled"
 msgstr "未启用压缩时不能指定压缩附加参数"
 
-#: backup/basebackup.c:971
+#: backup/basebackup.c:984
 #, c-format
 msgid "invalid compression specification: %s"
 msgstr "压缩设置无效: %s"
 
-#: backup/basebackup.c:1021
+#: backup/basebackup.c:1034
 #, c-format
 msgid "must UPLOAD_MANIFEST before performing an incremental BASE_BACKUP"
 msgstr "执行增量 BASE_BACKUP 之前必须先执行 UPLOAD_MANIFEST"
 
-#: backup/basebackup.c:1154 backup/basebackup.c:1356
+#: backup/basebackup.c:1167 backup/basebackup.c:1369
 #, c-format
 msgid "could not stat file or directory \"%s\": %m"
 msgstr "无法获取文件或目录 \"%s\" 的状态: %m"
 
-#: backup/basebackup.c:1542
+#: backup/basebackup.c:1555
 #, c-format
 msgid "skipping special file \"%s\""
 msgstr "正在跳过特殊文件 \"%s\""
 
-#: backup/basebackup.c:1749
+#: backup/basebackup.c:1777
 #, c-format
 msgid ""
 "could not verify checksum in file \"%s\", block %u: read buffer size %d and "
@@ -4222,37 +4222,37 @@ msgid ""
 msgstr ""
 "无法验证文件 \"%s\" 中块 %u 的校验和: 读取缓冲区大小 %d 与页面大小 %d 不同"
 
-#: backup/basebackup.c:1811
+#: backup/basebackup.c:1839
 #, c-format
 msgid "file \"%s\" has a total of %d checksum verification failure"
 msgid_plural "file \"%s\" has a total of %d checksum verification failures"
 msgstr[0] "文件 \"%s\" 中共有 %d 次校验和验证失败"
 
-#: backup/basebackup.c:1915
+#: backup/basebackup.c:1943
 #, c-format
 msgid ""
 "checksum verification failed in file \"%s\", block %u: calculated %X but "
 "expected %X"
 msgstr "文件 \"%s\" 中块 %u 的校验和验证失败: 计算值为 %X，预期为 %X"
 
-#: backup/basebackup.c:1922
+#: backup/basebackup.c:1950
 #, c-format
 msgid ""
 "further checksum verification failures in file \"%s\" will not be reported"
 msgstr "将不会报告文件 \"%s\" 中的进一步校验和验证失败"
 
-#: backup/basebackup.c:2046
+#: backup/basebackup.c:2074
 #, c-format
 msgid "file name too long for tar format: \"%s\""
 msgstr "文件名对于 tar 格式过长: \"%s\""
 
-#: backup/basebackup.c:2051
+#: backup/basebackup.c:2079
 #, c-format
 msgid ""
 "symbolic link target too long for tar format: file name \"%s\", target \"%s\""
 msgstr "符号链接目标对于 tar 格式过长: 文件名 \"%s\", 目标 \"%s\""
 
-#: backup/basebackup.c:2125
+#: backup/basebackup.c:2153
 #, c-format
 msgid "could not read file \"%s\": read %zd of %zu"
 msgstr "无法读取文件 \"%1$s\": 应读取 %3$zu，实际读取 %2$zd"
@@ -28594,8 +28594,8 @@ msgstr "多个函数名为 \"%s\""
 msgid "more than one operator named %s"
 msgstr "多个操作符名为 %s"
 
-#: utils/adt/regproc.c:675 utils/adt/regproc.c:2029 utils/adt/ruleutils.c:10560
-#: utils/adt/ruleutils.c:10773
+#: utils/adt/regproc.c:675 utils/adt/regproc.c:2029 utils/adt/ruleutils.c:10604
+#: utils/adt/ruleutils.c:10817
 #, c-format
 msgid "too many arguments"
 msgstr "参数过多"
@@ -32917,8 +32917,9 @@ msgstr ""
 msgid "internal error: unrecognized run-time parameter type\n"
 msgstr "内部错误: 无法识别的运行时参数类型\n"
 
-#: utils/misc/pg_controldata.c:50 utils/misc/pg_controldata.c:90
-#: utils/misc/pg_controldata.c:181 utils/misc/pg_controldata.c:222
+#: backup/basebackup.c:363 utils/misc/pg_controldata.c:50
+#: utils/misc/pg_controldata.c:90 utils/misc/pg_controldata.c:181
+#: utils/misc/pg_controldata.c:222
 #, c-format
 msgid "calculated CRC checksum does not match value stored in file"
 msgstr "计算得到的 CRC 校验和与文件中存储的值不匹配"
