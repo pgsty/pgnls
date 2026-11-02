@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libpq (PostgreSQL) 14\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-10-28 01:05+0000\n"
+"POT-Creation-Date: 2026-10-31 13:07+0000\n"
 "PO-Revision-Date: 2021-08-15 16:25+0800\n"
 "Last-Translator: Jie Zhang <zhangjie2@fujitsu.com>\n"
 "Language-Team: Chinese (Simplified) <zhangjie2@fujitsu.com>\n"
@@ -77,15 +77,15 @@ msgstr "无法生成nonce\n"
 
 #: fe-auth-scram.c:375 fe-auth-scram.c:448 fe-auth-scram.c:600
 #: fe-auth-scram.c:620 fe-auth-scram.c:644 fe-auth-scram.c:658
-#: fe-auth-scram.c:704 fe-auth-scram.c:740 fe-auth-scram.c:914 fe-auth.c:296
-#: fe-auth.c:369 fe-auth.c:403 fe-auth.c:618 fe-auth.c:729 fe-auth.c:1210
-#: fe-auth.c:1375 fe-connect.c:926 fe-connect.c:1760 fe-connect.c:1922
-#: fe-connect.c:3292 fe-connect.c:4493 fe-connect.c:5158 fe-connect.c:5427
-#: fe-connect.c:5545 fe-connect.c:5792 fe-connect.c:5872 fe-connect.c:5970
-#: fe-connect.c:6221 fe-connect.c:6248 fe-connect.c:6324 fe-connect.c:6347
-#: fe-connect.c:6371 fe-connect.c:6406 fe-connect.c:6492 fe-connect.c:6500
-#: fe-connect.c:6857 fe-connect.c:7007 fe-exec.c:528 fe-exec.c:1329
-#: fe-exec.c:3152 fe-exec.c:4190 fe-exec.c:4383 fe-gssapi-common.c:109
+#: fe-auth-scram.c:704 fe-auth-scram.c:740 fe-auth-scram.c:914 fe-auth.c:298
+#: fe-auth.c:371 fe-auth.c:405 fe-auth.c:620 fe-auth.c:731 fe-auth.c:1212
+#: fe-auth.c:1377 fe-connect.c:926 fe-connect.c:1760 fe-connect.c:1922
+#: fe-connect.c:3299 fe-connect.c:4504 fe-connect.c:5169 fe-connect.c:5438
+#: fe-connect.c:5556 fe-connect.c:5803 fe-connect.c:5883 fe-connect.c:5981
+#: fe-connect.c:6232 fe-connect.c:6259 fe-connect.c:6335 fe-connect.c:6358
+#: fe-connect.c:6382 fe-connect.c:6417 fe-connect.c:6503 fe-connect.c:6511
+#: fe-connect.c:6868 fe-connect.c:7018 fe-exec.c:528 fe-exec.c:1329
+#: fe-exec.c:3152 fe-exec.c:4190 fe-exec.c:4383 fe-gssapi-common.c:106
 #: fe-lobj.c:870 fe-protocol3.c:206 fe-protocol3.c:230 fe-protocol3.c:253
 #: fe-protocol3.c:270 fe-protocol3.c:350 fe-protocol3.c:717 fe-protocol3.c:956
 #: fe-protocol3.c:1780 fe-protocol3.c:2191 fe-secure-common.c:110
@@ -165,224 +165,224 @@ msgstr "无法生成随机salt"
 msgid "out of memory allocating GSSAPI buffer (%d)"
 msgstr "在分配GSSAPI缓冲区(%d)时内存用尽\n"
 
-#: fe-auth.c:138
+#: fe-auth.c:140
 msgid "GSSAPI continuation error"
 msgstr "GSSAPI连续出现错误"
 
-#: fe-auth.c:168 fe-auth.c:397 fe-gssapi-common.c:97 fe-secure-common.c:99
+#: fe-auth.c:170 fe-auth.c:399 fe-gssapi-common.c:94 fe-secure-common.c:99
 #: fe-secure-common.c:173
 #, fuzzy, c-format
 #| msgid "host name must be specified\n"
 msgid "host name must be specified"
 msgstr "必须指定主机名\n"
 
-#: fe-auth.c:174
+#: fe-auth.c:176
 #, fuzzy, c-format
 #| msgid "duplicate GSS authentication request\n"
 msgid "duplicate GSS authentication request"
 msgstr "重复的GSS认证请求\n"
 
-#: fe-auth.c:238
+#: fe-auth.c:240
 #, fuzzy, c-format
 #| msgid "out of memory allocating SSPI buffer (%d)\n"
 msgid "out of memory allocating SSPI buffer (%d)"
 msgstr "在分配SSPI缓冲区(%d)时内存用尽\n"
 
-#: fe-auth.c:285
+#: fe-auth.c:287
 msgid "SSPI continuation error"
 msgstr "SSPI连续出现错误"
 
-#: fe-auth.c:359
+#: fe-auth.c:361
 #, fuzzy, c-format
 #| msgid "duplicate SSPI authentication request\n"
 msgid "duplicate SSPI authentication request"
 msgstr "重复的SSPI认证请求\n"
 
-#: fe-auth.c:384
+#: fe-auth.c:386
 msgid "could not acquire SSPI credentials"
 msgstr "无法获得SSPI证书"
 
-#: fe-auth.c:437
+#: fe-auth.c:439
 #, fuzzy, c-format
 #| msgid "channel binding required, but SSL not in use\n"
 msgid "channel binding required, but SSL not in use"
 msgstr "需要通道绑定，但未使用SSL\n"
 
-#: fe-auth.c:443
+#: fe-auth.c:445
 #, fuzzy, c-format
 #| msgid "duplicate SASL authentication request\n"
 msgid "duplicate SASL authentication request"
 msgstr "重复的SASL认证请求\n"
 
-#: fe-auth.c:501
+#: fe-auth.c:503
 #, fuzzy, c-format
 #| msgid "channel binding is required, but client does not support it\n"
 msgid "channel binding is required, but client does not support it"
 msgstr "通道绑定是必需的，但客户端不支持它\n"
 
-#: fe-auth.c:517
+#: fe-auth.c:519
 #, fuzzy, c-format
 #| msgid "server offered SCRAM-SHA-256-PLUS authentication over a non-SSL connection\n"
 msgid "server offered SCRAM-SHA-256-PLUS authentication over a non-SSL connection"
 msgstr "服务器通过非SSL连接提供了SCRAM-SHA-256-PLUS身份验证\n"
 
-#: fe-auth.c:531
+#: fe-auth.c:533
 #, fuzzy, c-format
 #| msgid "none of the server's SASL authentication mechanisms are supported\n"
 msgid "none of the server's SASL authentication mechanisms are supported"
 msgstr "不支持服务器的SASL身份验证机制\n"
 
-#: fe-auth.c:538
+#: fe-auth.c:540
 #, fuzzy, c-format
 #| msgid "channel binding is required, but server did not offer an authentication method that supports channel binding\n"
 msgid "channel binding is required, but server did not offer an authentication method that supports channel binding"
 msgstr "需要通道绑定，但服务器未提供支持通道绑定的身份验证方法\n"
 
-#: fe-auth.c:641
+#: fe-auth.c:643
 #, fuzzy, c-format
 #| msgid "out of memory allocating SASL buffer (%d)\n"
 msgid "out of memory allocating SASL buffer (%d)"
 msgstr "在分配SASL缓冲区(%d)时内存用尽\n"
 
-#: fe-auth.c:665
+#: fe-auth.c:667
 #, fuzzy, c-format
 #| msgid "AuthenticationSASLFinal received from server, but SASL authentication was not completed\n"
 msgid "AuthenticationSASLFinal received from server, but SASL authentication was not completed"
 msgstr "从服务器接收到AuthenticationSASLFinal，但未完成SASL身份验证\n"
 
-#: fe-auth.c:675
+#: fe-auth.c:677
 #, c-format
 msgid "no client response found after SASL exchange success"
 msgstr ""
 
-#: fe-auth.c:738 fe-auth.c:745 fe-auth.c:1358 fe-auth.c:1369
+#: fe-auth.c:740 fe-auth.c:747 fe-auth.c:1360 fe-auth.c:1371
 #, fuzzy, c-format
 #| msgid "could not perform MD5 encryption of password"
 msgid "could not encrypt password: %s"
 msgstr "无法执行口令的MD5加密"
 
-#: fe-auth.c:773
+#: fe-auth.c:775
 msgid "server requested a cleartext password"
 msgstr ""
 
-#: fe-auth.c:775
+#: fe-auth.c:777
 msgid "server requested a hashed password"
 msgstr ""
 
-#: fe-auth.c:778
+#: fe-auth.c:780
 #, fuzzy
 #| msgid "duplicate SSPI authentication request\n"
 msgid "server requested GSSAPI authentication"
 msgstr "重复的SSPI认证请求\n"
 
-#: fe-auth.c:780
+#: fe-auth.c:782
 #, fuzzy
 #| msgid "duplicate SSPI authentication request\n"
 msgid "server requested SSPI authentication"
 msgstr "重复的SSPI认证请求\n"
 
-#: fe-auth.c:784
+#: fe-auth.c:786
 #, fuzzy
 #| msgid "duplicate SASL authentication request\n"
 msgid "server requested SASL authentication"
 msgstr "重复的SASL认证请求\n"
 
-#: fe-auth.c:787
+#: fe-auth.c:789
 #, fuzzy
 #| msgid "multiple values specified for authentication type"
 msgid "server requested an unknown authentication type"
 msgstr "认证类型指定了多个值"
 
-#: fe-auth.c:820
+#: fe-auth.c:822
 #, fuzzy, c-format
 #| msgid "%s: server did not start in time\n"
 msgid "server did not request an SSL certificate"
 msgstr "%s: 服务没有及时启动\n"
 
-#: fe-auth.c:825
+#: fe-auth.c:827
 #, fuzzy, c-format
 #| msgid "connection requires a valid client certificate"
 msgid "server accepted connection without a valid SSL certificate"
 msgstr "连接中需要一个有效的客户端认证"
 
-#: fe-auth.c:879
+#: fe-auth.c:881
 #, fuzzy
 #| msgid "server did not promote within %d seconds"
 msgid "server did not complete authentication"
 msgstr "服务器在%d秒内未升级"
 
-#: fe-auth.c:913
+#: fe-auth.c:915
 #, fuzzy, c-format
 #| msgid "authentication method \"%s\" requires argument \"%s\" to be set"
 msgid "authentication method requirement \"%s\" failed: %s"
 msgstr "在认证方法\"%s\"需要设置参数\"%s\" "
 
-#: fe-auth.c:936
+#: fe-auth.c:938
 #, fuzzy, c-format
 #| msgid "channel binding required, but server authenticated client without channel binding\n"
 msgid "channel binding required, but server authenticated client without channel binding"
 msgstr "需要通道绑定，但服务器验证的客户端没有通道绑定\n"
 
-#: fe-auth.c:941
+#: fe-auth.c:943
 #, fuzzy, c-format
 #| msgid "channel binding required but not supported by server's authentication request\n"
 msgid "channel binding required but not supported by server's authentication request"
 msgstr "服务器的身份验证请求需要但不支持通道绑定\n"
 
-#: fe-auth.c:975
+#: fe-auth.c:977
 #, fuzzy, c-format
 #| msgid "Kerberos 4 authentication not supported\n"
 msgid "Kerberos 4 authentication not supported"
 msgstr "不支持 Kerberos 4 认证\n"
 
-#: fe-auth.c:979
+#: fe-auth.c:981
 #, fuzzy, c-format
 #| msgid "Kerberos 5 authentication not supported\n"
 msgid "Kerberos 5 authentication not supported"
 msgstr "不支持 Kerberos 5 认证\n"
 
-#: fe-auth.c:1049
+#: fe-auth.c:1051
 #, fuzzy, c-format
 #| msgid "GSSAPI authentication not supported\n"
 msgid "GSSAPI authentication not supported"
 msgstr "不支持GSSAPI认证\n"
 
-#: fe-auth.c:1080
+#: fe-auth.c:1082
 #, fuzzy, c-format
 #| msgid "SSPI authentication not supported\n"
 msgid "SSPI authentication not supported"
 msgstr "不支持SSPI认证\n"
 
-#: fe-auth.c:1087
+#: fe-auth.c:1089
 #, fuzzy, c-format
 #| msgid "Crypt authentication not supported\n"
 msgid "Crypt authentication not supported"
 msgstr "不支持Crypt认证\n"
 
-#: fe-auth.c:1151
+#: fe-auth.c:1153
 #, fuzzy, c-format
 #| msgid "authentication method %u not supported\n"
 msgid "authentication method %u not supported"
 msgstr "不支持 %u 认证方式\n"
 
-#: fe-auth.c:1197
+#: fe-auth.c:1199
 #, c-format
 msgid "user name lookup failure: error code %lu"
 msgstr "用户名查找失败：错误代码是%lu"
 
-#: fe-auth.c:1321
+#: fe-auth.c:1323
 #, fuzzy, c-format
 #| msgid "unexpected shape of result set returned for SHOW\n"
 msgid "unexpected shape of result set returned for SHOW"
 msgstr "SHOW出现意外的结果状态\n"
 
-#: fe-auth.c:1329
+#: fe-auth.c:1331
 #, fuzzy, c-format
 #| msgid "password_encryption value too long\n"
 msgid "password_encryption value too long"
 msgstr "密码_加密值太长\n"
 
-#: fe-auth.c:1379
+#: fe-auth.c:1381
 #, fuzzy, c-format
 #| msgid "unrecognized password encryption algorithm \"%s\"\n"
 msgid "unrecognized password encryption algorithm \"%s\""
@@ -588,330 +588,330 @@ msgstr "无法获得对等(peer)证书:%s\n"
 msgid "requirepeer specifies \"%s\", but actual peer user name is \"%s\""
 msgstr "期望对方用户指定值为 \"%s\",  但实际的对方用户名为 \"%s\"\n"
 
-#: fe-connect.c:3222
+#: fe-connect.c:3229
 #, fuzzy, c-format
 #| msgid "could not send GSSAPI negotiation packet: %s\n"
 msgid "could not send GSSAPI negotiation packet: %s"
 msgstr "无法发送 GSSAPI 握手包: %s\n"
 
-#: fe-connect.c:3234
+#: fe-connect.c:3241
 #, fuzzy, c-format
 #| msgid "GSSAPI encryption required but was impossible (possibly no credential cache, no server support, or using a local socket)\n"
 msgid "GSSAPI encryption required but was impossible (possibly no credential cache, no server support, or using a local socket)"
 msgstr "需要GSSAPI加密，但不可能（可能没有凭据缓存、服务器不支持或使用本地套接字）\n"
 
-#: fe-connect.c:3275
+#: fe-connect.c:3282
 #, fuzzy, c-format
 #| msgid "could not send SSL negotiation packet: %s\n"
 msgid "could not send SSL negotiation packet: %s"
 msgstr "无法发送 SSL 握手包: %s\n"
 
-#: fe-connect.c:3304
+#: fe-connect.c:3311
 #, fuzzy, c-format
 #| msgid "could not send startup packet: %s\n"
 msgid "could not send startup packet: %s"
 msgstr "无法发送启动包: %s\n"
 
-#: fe-connect.c:3379
+#: fe-connect.c:3386
 #, fuzzy, c-format
 #| msgid "server does not support SSL, but SSL was required\n"
 msgid "server does not support SSL, but SSL was required"
 msgstr "服务器不支持 SSL, 但是要求使用 SSL\n"
 
-#: fe-connect.c:3396
+#: fe-connect.c:3403
 #, c-format
 msgid "server sent an error response during SSL exchange"
 msgstr ""
 
-#: fe-connect.c:3401
+#: fe-connect.c:3408
 #, fuzzy, c-format
 #| msgid "received invalid response to SSL negotiation: %c\n"
 msgid "received invalid response to SSL negotiation: %c"
 msgstr "收到对 SSL 握手的无效响应: %c\n"
 
-#: fe-connect.c:3421
+#: fe-connect.c:3428
 #, fuzzy, c-format
 #| msgid "received copy data after EOF marker"
 msgid "received unencrypted data after SSL response"
 msgstr "在EOF标志后收到了复制数据"
 
-#: fe-connect.c:3501
+#: fe-connect.c:3508
 #, fuzzy, c-format
 #| msgid "server doesn't support GSSAPI encryption, but it was required\n"
 msgid "server doesn't support GSSAPI encryption, but it was required"
 msgstr "服务器不支持 GSSAPI, 但这是必须的\n"
 
-#: fe-connect.c:3512
+#: fe-connect.c:3519
 #, fuzzy, c-format
 #| msgid "received invalid response to GSSAPI negotiation: %c\n"
 msgid "received invalid response to GSSAPI negotiation: %c"
 msgstr "收到对 GSSAPI 握手的无效响应: %c\n"
 
-#: fe-connect.c:3530
+#: fe-connect.c:3537
 #, c-format
 msgid "received unencrypted data after GSSAPI encryption response"
 msgstr ""
 
-#: fe-connect.c:3595
+#: fe-connect.c:3602
 #, fuzzy, c-format
 #| msgid "expected authentication request from server, but received %c\n"
 msgid "expected authentication request from server, but received %c"
 msgstr "期待来自服务器的认证请求, 却收到 %c\n"
 
-#: fe-connect.c:3622 fe-connect.c:3791
+#: fe-connect.c:3629 fe-connect.c:3798
 #, fuzzy, c-format
 #| msgid "invalid authentication method \"%s\""
 msgid "received invalid authentication request"
 msgstr "无效认证方法\"%s\""
 
-#: fe-connect.c:3627 fe-connect.c:3776
+#: fe-connect.c:3634 fe-connect.c:3783
 #, fuzzy, c-format
 #| msgid "received invalid response to SSL negotiation: %c\n"
 msgid "received invalid protocol negotiation message"
 msgstr "收到对 SSL 握手的无效响应: %c\n"
 
-#: fe-connect.c:3645 fe-connect.c:3699
+#: fe-connect.c:3652 fe-connect.c:3706
 #, fuzzy, c-format
 #| msgid "invalid string in message"
 msgid "received invalid error message"
 msgstr "信息中的无效字串"
 
-#: fe-connect.c:3862
+#: fe-connect.c:3869
 #, fuzzy, c-format
 #| msgid "unexpected message from server during startup\n"
 msgid "unexpected message from server during startup"
 msgstr "启动过程中收到来自服务器的非预期信息\n"
 
-#: fe-connect.c:3953
+#: fe-connect.c:3960
 #, fuzzy, c-format
 #| msgid "session is read-only\n"
 msgid "session is read-only"
 msgstr "会话是只读的\n"
 
-#: fe-connect.c:3955
+#: fe-connect.c:3962
 #, fuzzy, c-format
 #| msgid "session is not read-only\n"
 msgid "session is not read-only"
 msgstr "会话不是只读的\n"
 
-#: fe-connect.c:4008
+#: fe-connect.c:4015
 #, fuzzy, c-format
 #| msgid "server is in hot standby mode\n"
 msgid "server is in hot standby mode"
 msgstr "服务器处于热备份模式\n"
 
-#: fe-connect.c:4010
+#: fe-connect.c:4017
 #, fuzzy, c-format
 #| msgid "server is not in hot standby mode\n"
 msgid "server is not in hot standby mode"
 msgstr "服务器不处于热备份模式\n"
 
-#: fe-connect.c:4126 fe-connect.c:4176
+#: fe-connect.c:4133 fe-connect.c:4183
 #, fuzzy, c-format
 #| msgid "\"%s\" failed\n"
 msgid "\"%s\" failed"
 msgstr "\"%s\" 失败\n"
 
-#: fe-connect.c:4190
+#: fe-connect.c:4197
 #, fuzzy, c-format
 #| msgid "invalid connection state %d, probably indicative of memory corruption\n"
 msgid "invalid connection state %d, probably indicative of memory corruption"
 msgstr "无效的连接状态 %d, 这可能表示内存出现问题\n"
 
-#: fe-connect.c:5171
+#: fe-connect.c:5182
 #, fuzzy, c-format
 #| msgid "invalid LDAP URL \"%s\": scheme must be ldap://\n"
 msgid "invalid LDAP URL \"%s\": scheme must be ldap://"
 msgstr "无效LDAP URL\"%s\": 模式必须是ldap://\n"
 
-#: fe-connect.c:5186
+#: fe-connect.c:5197
 #, fuzzy, c-format
 #| msgid "invalid LDAP URL \"%s\": missing distinguished name\n"
 msgid "invalid LDAP URL \"%s\": missing distinguished name"
 msgstr "无效LDAP URL \"%s\": 丢失可区分的名称\n"
 
-#: fe-connect.c:5198 fe-connect.c:5256
+#: fe-connect.c:5209 fe-connect.c:5267
 #, fuzzy, c-format
 #| msgid "invalid LDAP URL \"%s\": must have exactly one attribute\n"
 msgid "invalid LDAP URL \"%s\": must have exactly one attribute"
 msgstr "无效LDAP URL \"%s\": 只能有一个属性\n"
 
-#: fe-connect.c:5210 fe-connect.c:5272
+#: fe-connect.c:5221 fe-connect.c:5283
 #, fuzzy, c-format
 #| msgid "invalid LDAP URL \"%s\": must have search scope (base/one/sub)\n"
 msgid "invalid LDAP URL \"%s\": must have search scope (base/one/sub)"
 msgstr "无效LDAP URL \"%s\": 必须有搜索范围(base/one/sub)\n"
 
-#: fe-connect.c:5222
+#: fe-connect.c:5233
 #, fuzzy, c-format
 #| msgid "invalid LDAP URL \"%s\": no filter\n"
 msgid "invalid LDAP URL \"%s\": no filter"
 msgstr "无效的 LDAP URL \"%s\": 没有过滤器\n"
 
-#: fe-connect.c:5244
+#: fe-connect.c:5255
 #, fuzzy, c-format
 #| msgid "invalid LDAP URL \"%s\": invalid port number\n"
 msgid "invalid LDAP URL \"%s\": invalid port number"
 msgstr "无效LDAP URL \"%s\": 无效端口号\n"
 
-#: fe-connect.c:5281
+#: fe-connect.c:5292
 #, fuzzy, c-format
 #| msgid "could not create LDAP structure\n"
 msgid "could not create LDAP structure"
 msgstr "无法创建LDAP结构\n"
 
-#: fe-connect.c:5356
+#: fe-connect.c:5367
 #, fuzzy, c-format
 #| msgid "lookup on LDAP server failed: %s\n"
 msgid "lookup on LDAP server failed: %s"
 msgstr "在LDAP服务器上的查找失败: %s\n"
 
-#: fe-connect.c:5366
+#: fe-connect.c:5377
 #, fuzzy, c-format
 #| msgid "more than one entry found on LDAP lookup\n"
 msgid "more than one entry found on LDAP lookup"
 msgstr "在LDAP搜索上找到多个入口\n"
 
-#: fe-connect.c:5368 fe-connect.c:5379
+#: fe-connect.c:5379 fe-connect.c:5390
 #, fuzzy, c-format
 #| msgid "no entry found on LDAP lookup\n"
 msgid "no entry found on LDAP lookup"
 msgstr "在LDAP查找上没有发现入口\n"
 
-#: fe-connect.c:5389 fe-connect.c:5401
+#: fe-connect.c:5400 fe-connect.c:5412
 #, fuzzy, c-format
 #| msgid "attribute has no values on LDAP lookup\n"
 msgid "attribute has no values on LDAP lookup"
 msgstr "在LDAP查找上的属性没有值\n"
 
-#: fe-connect.c:5415
+#: fe-connect.c:5426
 #, fuzzy, c-format
 #| msgid "bit string length exceeds the maximum allowed (%d)"
 msgid "connection info string size exceeds the maximum allowed (%d)"
 msgstr "位字符串长度超过了最大允许值(%d)"
 
-#: fe-connect.c:5466 fe-connect.c:5485 fe-connect.c:6009
+#: fe-connect.c:5477 fe-connect.c:5496 fe-connect.c:6020
 #, fuzzy, c-format
 #| msgid "missing \"=\" after \"%s\" in connection info string\n"
 msgid "missing \"=\" after \"%s\" in connection info string"
 msgstr "在联接信息字串里的 \"%s\" 后面缺少 \"=\"\n"
 
-#: fe-connect.c:5556 fe-connect.c:6192 fe-connect.c:6990
+#: fe-connect.c:5567 fe-connect.c:6203 fe-connect.c:7001
 #, fuzzy, c-format
 #| msgid "invalid connection option \"%s\"\n"
 msgid "invalid connection option \"%s\""
 msgstr "非法联接选项 \"%s\"\n"
 
-#: fe-connect.c:5571 fe-connect.c:6057
+#: fe-connect.c:5582 fe-connect.c:6068
 #, fuzzy, c-format
 #| msgid "unterminated quoted string in connection info string\n"
 msgid "unterminated quoted string in connection info string"
 msgstr "联接信息字串中未结束的引号字串\n"
 
-#: fe-connect.c:5651
+#: fe-connect.c:5662
 #, fuzzy, c-format
 #| msgid "definition of service \"%s\" not found\n"
 msgid "definition of service \"%s\" not found"
 msgstr "错误：没有找到服务\"%s\"的定义\n"
 
-#: fe-connect.c:5677
+#: fe-connect.c:5688
 #, fuzzy, c-format
 #| msgid "service file \"%s\" not found\n"
 msgid "service file \"%s\" not found"
 msgstr "错误：没有找到服务文件\"%s\"\n"
 
-#: fe-connect.c:5690
+#: fe-connect.c:5701
 #, fuzzy, c-format
 #| msgid "line %d too long in service file \"%s\"\n"
 msgid "line %d too long in service file \"%s\""
 msgstr "在服务文件\"%2$s\"中的第%1$d行的长度太长\n"
 
-#: fe-connect.c:5761 fe-connect.c:5804
+#: fe-connect.c:5772 fe-connect.c:5815
 #, fuzzy, c-format
 #| msgid "syntax error in service file \"%s\", line %d\n"
 msgid "syntax error in service file \"%s\", line %d"
 msgstr "在服务文件\"%s\"的第%d行出现语法错误\n"
 
-#: fe-connect.c:5772
+#: fe-connect.c:5783
 #, fuzzy, c-format
 #| msgid "nested service specifications not supported in service file \"%s\", line %d\n"
 msgid "nested service specifications not supported in service file \"%s\", line %d"
 msgstr "在服务文件\"%s\"的第%d行出现不支持的嵌套服务说明\n"
 
-#: fe-connect.c:6511
+#: fe-connect.c:6522
 #, fuzzy, c-format
 #| msgid "invalid URI propagated to internal parser routine: \"%s\"\n"
 msgid "invalid URI propagated to internal parser routine: \"%s\""
 msgstr "无效的URI传入内部解析器处理程序: \"%s\"\n"
 
-#: fe-connect.c:6588
+#: fe-connect.c:6599
 #, fuzzy, c-format
 #| msgid "end of string reached when looking for matching \"]\" in IPv6 host address in URI: \"%s\"\n"
 msgid "end of string reached when looking for matching \"]\" in IPv6 host address in URI: \"%s\""
 msgstr "在 URI: \"%s\"中的IPv6主机地址里查找匹配符\"]\"时遇到了字符串结束符\n"
 
-#: fe-connect.c:6595
+#: fe-connect.c:6606
 #, fuzzy, c-format
 #| msgid "IPv6 host address may not be empty in URI: \"%s\"\n"
 msgid "IPv6 host address may not be empty in URI: \"%s\""
 msgstr "URI:\"%s\"中的IPv6主机地址可能不为空\n"
 
-#: fe-connect.c:6610
+#: fe-connect.c:6621
 #, fuzzy, c-format
 #| msgid "unexpected character \"%c\" at position %d in URI (expected \":\" or \"/\"): \"%s\"\n"
 msgid "unexpected character \"%c\" at position %d in URI (expected \":\" or \"/\"): \"%s\""
 msgstr "非预期的字符\"%c\"出现在在位置%d, URI (expected \":\" or \"/\"):\"%s\"\n"
 
-#: fe-connect.c:6739
+#: fe-connect.c:6750
 #, fuzzy, c-format
 #| msgid "extra key/value separator \"=\" in URI query parameter: \"%s\"\n"
 msgid "extra key/value separator \"=\" in URI query parameter: \"%s\""
 msgstr "遇到多余的键/值分隔符\"=\"在URI查询参数里: \"%s\"\n"
 
-#: fe-connect.c:6759
+#: fe-connect.c:6770
 #, fuzzy, c-format
 #| msgid "missing key/value separator \"=\" in URI query parameter: \"%s\"\n"
 msgid "missing key/value separator \"=\" in URI query parameter: \"%s\""
 msgstr "缺少相应的键/值分隔符\"=\"在URI查询参数里: \"%s\"\n"
 
-#: fe-connect.c:6811
+#: fe-connect.c:6822
 #, fuzzy, c-format
 #| msgid "invalid URI query parameter: \"%s\"\n"
 msgid "invalid URI query parameter: \"%s\""
 msgstr "无效的URI查询参数: \"%s\"\n"
 
-#: fe-connect.c:6885
+#: fe-connect.c:6896
 #, fuzzy, c-format
 #| msgid "invalid percent-encoded token: \"%s\"\n"
 msgid "invalid percent-encoded token: \"%s\""
 msgstr "无效的百分号编码令牌: \"%s\"\n"
 
-#: fe-connect.c:6895
+#: fe-connect.c:6906
 #, fuzzy, c-format
 #| msgid "forbidden value %%00 in percent-encoded value: \"%s\"\n"
 msgid "forbidden value %%00 in percent-encoded value: \"%s\""
 msgstr "在百分值编码的值: \"%s\"里禁止使用 %%00\n"
 
-#: fe-connect.c:7261
+#: fe-connect.c:7272
 msgid "connection pointer is NULL\n"
 msgstr "联接指针是 NULL\n"
 
-#: fe-connect.c:7269 fe-exec.c:716 fe-exec.c:978 fe-exec.c:3341
+#: fe-connect.c:7280 fe-exec.c:716 fe-exec.c:978 fe-exec.c:3341
 #: fe-protocol3.c:971 fe-protocol3.c:1004
 msgid "out of memory\n"
 msgstr "内存不足\n"
 
-#: fe-connect.c:7560
+#: fe-connect.c:7571
 #, c-format
 msgid "WARNING: password file \"%s\" is not a plain file\n"
 msgstr "警告: 口令文件\"%s\"不是普通文本文件\n"
 
-#: fe-connect.c:7569
+#: fe-connect.c:7580
 #, c-format
 msgid "WARNING: password file \"%s\" has group or world access; permissions should be u=rw (0600) or less\n"
 msgstr "警告: 口令文件\"%s\"的访问权限过大; 权限应设置 为 u=rw (0600)或更少\n"
 
-#: fe-connect.c:7676
+#: fe-connect.c:7687
 #, fuzzy, c-format
 #| msgid "password retrieved from file \"%s\"\n"
 msgid "password retrieved from file \"%s\""
@@ -1110,7 +1110,7 @@ msgstr "数组的大小超过了最大允许值(%d)"
 msgid "escaped bytea size exceeds the maximum allowed (%zu)"
 msgstr "数组的大小超过了最大允许值(%d)"
 
-#: fe-gssapi-common.c:122
+#: fe-gssapi-common.c:119
 msgid "GSSAPI name import error"
 msgstr "GSSAPI名称导入错误"
 

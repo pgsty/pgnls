@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 12\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-10-28 01:10+0000\n"
+"POT-Creation-Date: 2026-10-31 13:12+0000\n"
 "PO-Revision-Date: 2019-06-05 18:00+0800\n"
 "Last-Translator: Jie Zhang <zhangjie2@cn.fujitsu.com>\n"
 "Language-Team: Chinese (Simplified) <zhangjie2@cn.fujitsu.com>\n"
@@ -92,7 +92,7 @@ msgstr "为了读取, 无法打开文件 \"%s\": %m"
 #: access/transam/twophase.c:1348 access/transam/xlog.c:3193
 #: access/transam/xlog.c:3996 access/transam/xlogrecovery.c:1241
 #: access/transam/xlogrecovery.c:1333 access/transam/xlogrecovery.c:1370
-#: access/transam/xlogrecovery.c:1430 backup/basebackup.c:1881
+#: access/transam/xlogrecovery.c:1430 backup/basebackup.c:1882
 #: commands/extension.c:3620 libpq/hba.c:769 replication/logical/origin.c:745
 #: replication/logical/origin.c:781 replication/logical/reorderbuffer.c:5319
 #: replication/logical/snapbuild.c:2127 replication/slot.c:2039
@@ -105,7 +105,7 @@ msgstr "无法读取文件 \"%s\": %m"
 
 #: ../common/controldata_utils.c:102 ../common/controldata_utils.c:105
 #: access/transam/xlog.c:3198 access/transam/xlog.c:4001
-#: backup/basebackup.c:1885 replication/logical/origin.c:750
+#: backup/basebackup.c:1886 replication/logical/origin.c:750
 #: replication/logical/origin.c:789 replication/logical/snapbuild.c:2132
 #: replication/slot.c:2043 replication/slot.c:2084 replication/walsender.c:668
 #: utils/cache/relmapper.c:834
@@ -127,8 +127,8 @@ msgstr "无法读取文件\"%1$s\"：读取了%3$zu中的%2$d"
 #: replication/logical/reorderbuffer.c:5371
 #: replication/logical/snapbuild.c:1894 replication/logical/snapbuild.c:2018
 #: replication/slot.c:1928 replication/slot.c:2091 replication/walsender.c:678
-#: storage/file/copydir.c:208 storage/file/copydir.c:213 storage/file/fd.c:782
-#: storage/file/fd.c:3700 storage/file/fd.c:3806 utils/cache/relmapper.c:842
+#: storage/file/copydir.c:208 storage/file/copydir.c:213 storage/file/fd.c:785
+#: storage/file/fd.c:3703 storage/file/fd.c:3809 utils/cache/relmapper.c:842
 #: utils/cache/relmapper.c:957
 #, c-format
 msgid "could not close file \"%s\": %m"
@@ -160,7 +160,7 @@ msgstr ""
 #: access/transam/xlog.c:3148 access/transam/xlog.c:3341
 #: access/transam/xlog.c:3986 access/transam/xlogrecovery.c:4242
 #: access/transam/xlogrecovery.c:4345 access/transam/xlogutils.c:862
-#: backup/basebackup.c:553 backup/basebackup.c:1540 libpq/hba.c:629
+#: backup/basebackup.c:554 backup/basebackup.c:1541 libpq/hba.c:629
 #: postmaster/syslogger.c:1560 replication/logical/origin.c:735
 #: replication/logical/reorderbuffer.c:3975
 #: replication/logical/reorderbuffer.c:4526
@@ -168,8 +168,8 @@ msgstr ""
 #: replication/logical/snapbuild.c:1849 replication/logical/snapbuild.c:1959
 #: replication/slot.c:2011 replication/walsender.c:636
 #: replication/walsender.c:2819 storage/file/copydir.c:151
-#: storage/file/fd.c:757 storage/file/fd.c:3457 storage/file/fd.c:3687
-#: storage/file/fd.c:3777 storage/smgr/md.c:674 utils/cache/relmapper.c:819
+#: storage/file/fd.c:760 storage/file/fd.c:3460 storage/file/fd.c:3690
+#: storage/file/fd.c:3780 storage/smgr/md.c:674 utils/cache/relmapper.c:819
 #: utils/cache/relmapper.c:936 utils/error/elog.c:2119
 #: utils/init/miscinit.c:1582 utils/init/miscinit.c:1716
 #: utils/init/miscinit.c:1793 utils/misc/guc.c:4656 utils/misc/guc.c:4706
@@ -197,8 +197,8 @@ msgstr "无法写入文件 \"%s\": %m"
 #: access/transam/xlog.c:3959 access/transam/xlog.c:8255
 #: access/transam/xlog.c:8300 backup/basebackup_server.c:209
 #: commands/dbcommands.c:515 replication/logical/snapbuild.c:1887
-#: replication/slot.c:1912 replication/slot.c:2021 storage/file/fd.c:774
-#: storage/file/fd.c:3798 storage/smgr/md.c:1151 storage/smgr/md.c:1196
+#: replication/slot.c:1912 replication/slot.c:2021 storage/file/fd.c:777
+#: storage/file/fd.c:3801 storage/smgr/md.c:1151 storage/smgr/md.c:1196
 #: storage/sync/sync.c:451 utils/misc/guc.c:4426
 #, c-format
 msgid "could not fsync file \"%s\": %m"
@@ -219,8 +219,8 @@ msgstr "无法 fsync 文件 \"%s\": %m"
 #: postmaster/postmaster.c:5875
 #: replication/libpqwalreceiver/libpqwalreceiver.c:374
 #: replication/logical/logical.c:279 replication/walsender.c:706
-#: storage/buffer/localbuf.c:601 storage/file/fd.c:866 storage/file/fd.c:1397
-#: storage/file/fd.c:1558 storage/file/fd.c:2478 storage/ipc/procarray.c:1461
+#: storage/buffer/localbuf.c:601 storage/file/fd.c:869 storage/file/fd.c:1400
+#: storage/file/fd.c:1561 storage/file/fd.c:2481 storage/ipc/procarray.c:1461
 #: storage/ipc/procarray.c:2243 storage/ipc/procarray.c:2250
 #: storage/ipc/procarray.c:2754 storage/ipc/procarray.c:3390
 #: utils/activity/pgstat_shmem.c:510 utils/adt/formatting.c:1693
@@ -317,11 +317,11 @@ msgstr "无效的大对象写请求大小: %d"
 #: ../common/file_utils.c:87 ../common/file_utils.c:447
 #: ../common/file_utils.c:451 access/transam/twophase.c:1316
 #: access/transam/xlogarchive.c:112 access/transam/xlogarchive.c:236
-#: backup/basebackup.c:559 backup/basebackup.c:630 backup/basebackup.c:1552
+#: backup/basebackup.c:560 backup/basebackup.c:631 backup/basebackup.c:1553
 #: commands/copyfrom.c:1697 commands/copyto.c:711 commands/extension.c:3599
 #: commands/tablespace.c:816 commands/tablespace.c:905 postmaster/pgarch.c:590
-#: replication/logical/snapbuild.c:1745 storage/file/fd.c:1922
-#: storage/file/fd.c:2008 storage/file/fd.c:3511 utils/adt/dbsize.c:106
+#: replication/logical/snapbuild.c:1745 storage/file/fd.c:1925
+#: storage/file/fd.c:2011 storage/file/fd.c:3514 utils/adt/dbsize.c:106
 #: utils/adt/dbsize.c:258 utils/adt/dbsize.c:338 utils/adt/genfile.c:483
 #: utils/adt/genfile.c:658 utils/adt/misc.c:340
 #, c-format
@@ -330,14 +330,14 @@ msgstr "无法取文件 \"%s\" 的状态: %m"
 
 #: ../common/file_utils.c:162 ../common/pgfnames.c:48 ../common/rmtree.c:63
 #: commands/tablespace.c:740 commands/tablespace.c:750
-#: postmaster/postmaster.c:1567 storage/file/fd.c:2880
+#: postmaster/postmaster.c:1567 storage/file/fd.c:2883
 #: storage/file/reinit.c:126 utils/adt/misc.c:256 utils/misc/tzparser.c:338
 #, c-format
 msgid "could not open directory \"%s\": %m"
 msgstr "无法打开目录 \"%s\": %m"
 
 #: ../common/file_utils.c:196 ../common/pgfnames.c:69 ../common/rmtree.c:104
-#: storage/file/fd.c:2892
+#: storage/file/fd.c:2895
 #, c-format
 msgid "could not read directory \"%s\": %m"
 msgstr "无法读取目录 \"%s\": %m"
@@ -346,7 +346,7 @@ msgstr "无法读取目录 \"%s\": %m"
 #: access/transam/xlogarchive.c:390 postmaster/pgarch.c:746
 #: postmaster/syslogger.c:1608 replication/logical/snapbuild.c:1906
 #: replication/slot.c:762 replication/slot.c:1795 replication/slot.c:1944
-#: storage/file/fd.c:792 utils/time/snapmgr.c:1324
+#: storage/file/fd.c:795 utils/time/snapmgr.c:1324
 #, c-format
 msgid "could not rename file \"%s\" to \"%s\": %m"
 msgstr "无法把文件 \"%s\" 重命名为 \"%s\": %m"
@@ -537,8 +537,8 @@ msgstr "无法从子进程得到退出码: 错误码 %lu"
 #: postmaster/postmaster.c:1144 postmaster/syslogger.c:1537
 #: replication/logical/origin.c:591 replication/logical/reorderbuffer.c:4795
 #: replication/logical/snapbuild.c:1787 replication/logical/snapbuild.c:2221
-#: replication/slot.c:1995 storage/file/fd.c:832 storage/file/fd.c:3325
-#: storage/file/fd.c:3387 storage/file/reinit.c:262 storage/ipc/dsm.c:316
+#: replication/slot.c:1995 storage/file/fd.c:835 storage/file/fd.c:3328
+#: storage/file/fd.c:3390 storage/file/reinit.c:262 storage/ipc/dsm.c:316
 #: storage/smgr/md.c:383 storage/smgr/md.c:442 storage/sync/sync.c:248
 #: utils/time/snapmgr.c:1643
 #, c-format
@@ -546,8 +546,8 @@ msgid "could not remove file \"%s\": %m"
 msgstr "无法删除文件 \"%s\": %m"
 
 #: ../common/rmtree.c:122 commands/tablespace.c:779 commands/tablespace.c:792
-#: commands/tablespace.c:827 commands/tablespace.c:917 storage/file/fd.c:3317
-#: storage/file/fd.c:3726
+#: commands/tablespace.c:827 commands/tablespace.c:917 storage/file/fd.c:3320
+#: storage/file/fd.c:3729
 #, c-format
 msgid "could not remove directory \"%s\": %m"
 msgstr "无法删除目录 \"%s\": %m"
@@ -2740,22 +2740,22 @@ msgstr "使用full_page_writes=off产生的WAL日志自最后一次重启点，�
 msgid "This means that the backup being taken on the standby is corrupt and should not be used. Enable full_page_writes and run CHECKPOINT on the primary, and then try an online backup again."
 msgstr "这意味着备用节点上的备份已经损坏，不应该使用。启用 full_page_writes并在主节点上运行CHECKPOINT，然后再试着执行联机备份."
 
-#: access/transam/xlog.c:8591 backup/basebackup.c:1374 utils/adt/misc.c:354
+#: access/transam/xlog.c:8591 backup/basebackup.c:1375 utils/adt/misc.c:354
 #, c-format
 msgid "could not read symbolic link \"%s\": %m"
 msgstr "无法读取符号链接 \"%s\": %m"
 
-#: access/transam/xlog.c:8598 backup/basebackup.c:1379 utils/adt/misc.c:359
+#: access/transam/xlog.c:8598 backup/basebackup.c:1380 utils/adt/misc.c:359
 #, c-format
 msgid "symbolic link \"%s\" target is too long"
 msgstr "符号链接 \"%s\" 目标超长"
 
-#: access/transam/xlog.c:8757 backup/basebackup.c:1237
+#: access/transam/xlog.c:8757 backup/basebackup.c:1238
 #, c-format
 msgid "the standby was promoted during online backup"
 msgstr "联机备份期间，备用节点已提升为主节点"
 
-#: access/transam/xlog.c:8758 backup/basebackup.c:1238
+#: access/transam/xlog.c:8758 backup/basebackup.c:1239
 #, c-format
 msgid "This means that the backup being taken is corrupt and should not be used. Try taking another online backup."
 msgstr "这意味着备用节点上的备份已经损坏，不应该使用. 请尝试再次执行联机备份."
@@ -2835,7 +2835,7 @@ msgstr "无法创建归档状态文件 \"%s\": %m"
 msgid "could not write archive status file \"%s\": %m"
 msgstr "无法写入归档状态文件 \"%s\": %m"
 
-#: access/transam/xlogfuncs.c:75 backup/basebackup.c:985
+#: access/transam/xlogfuncs.c:75 backup/basebackup.c:986
 #, c-format
 msgid "a backup is already in progress in this session"
 msgstr "这个会话中已经有一个备份在运行中"
@@ -3673,150 +3673,150 @@ msgstr "无法打开临时文件"
 msgid "calculated CRC checksum does not match value stored in file"
 msgstr "计算得到的 CRC 校验与存储在文件中的值不匹配"
 
-#: backup/basebackup.c:485
+#: backup/basebackup.c:486
 #, c-format
 msgid "could not find any WAL files"
 msgstr "无法找到任何WAL文件"
 
-#: backup/basebackup.c:500 backup/basebackup.c:515 backup/basebackup.c:524
+#: backup/basebackup.c:501 backup/basebackup.c:516 backup/basebackup.c:525
 #, c-format
 msgid "could not find WAL file \"%s\""
 msgstr "找不到WAL文件\"%s\""
 
-#: backup/basebackup.c:566 backup/basebackup.c:591
+#: backup/basebackup.c:567 backup/basebackup.c:592
 #, c-format
 msgid "unexpected WAL file size \"%s\""
 msgstr "意外的WAL文件大小\"%s\""
 
-#: backup/basebackup.c:660
+#: backup/basebackup.c:661
 #, fuzzy, c-format
 #| msgid "%s total checksum verification failures"
 msgid "%lld total checksum verification failure"
 msgid_plural "%lld total checksum verification failures"
 msgstr[0] "%s 校验和验证失败总数"
 
-#: backup/basebackup.c:667
+#: backup/basebackup.c:668
 #, c-format
 msgid "checksum verification failure during base backup"
 msgstr "基础备份期间的校验和验证失败"
 
-#: backup/basebackup.c:734 backup/basebackup.c:743 backup/basebackup.c:754
-#: backup/basebackup.c:771 backup/basebackup.c:780 backup/basebackup.c:791
-#: backup/basebackup.c:808 backup/basebackup.c:817 backup/basebackup.c:829
-#: backup/basebackup.c:853 backup/basebackup.c:867 backup/basebackup.c:878
-#: backup/basebackup.c:889 backup/basebackup.c:902
+#: backup/basebackup.c:735 backup/basebackup.c:744 backup/basebackup.c:755
+#: backup/basebackup.c:772 backup/basebackup.c:781 backup/basebackup.c:792
+#: backup/basebackup.c:809 backup/basebackup.c:818 backup/basebackup.c:830
+#: backup/basebackup.c:854 backup/basebackup.c:868 backup/basebackup.c:879
+#: backup/basebackup.c:890 backup/basebackup.c:903
 #, c-format
 msgid "duplicate option \"%s\""
 msgstr "重复选项 \"%s\""
 
-#: backup/basebackup.c:762
+#: backup/basebackup.c:763
 #, fuzzy, c-format
 #| msgid "unrecognized object type \"%s\""
 msgid "unrecognized checkpoint type: \"%s\""
 msgstr "无法识别的对象类型\"%s\""
 
-#: backup/basebackup.c:797
+#: backup/basebackup.c:798
 #, c-format
 msgid "%d is outside the valid range for parameter \"%s\" (%d .. %d)"
 msgstr "%d 超出了参数 \"%s\" (%d .. %d) 的有效范围"
 
-#: backup/basebackup.c:842
+#: backup/basebackup.c:843
 #, fuzzy, c-format
 #| msgid "unrecognized column option \"%s\""
 msgid "unrecognized manifest option: \"%s\""
 msgstr "无法识别的列选项\"%s\""
 
-#: backup/basebackup.c:858
+#: backup/basebackup.c:859
 #, c-format
 msgid "unrecognized checksum algorithm: \"%s\""
 msgstr "无法识别的校验和算法: \"%s\""
 
-#: backup/basebackup.c:893
+#: backup/basebackup.c:894
 #, fuzzy, c-format
 #| msgid "unrecognized checksum algorithm: \"%s\""
 msgid "unrecognized compression algorithm: \"%s\""
 msgstr "无法识别的校验和算法: \"%s\""
 
-#: backup/basebackup.c:909
+#: backup/basebackup.c:910
 #, fuzzy, c-format
 #| msgid "unrecognized column option \"%s\""
 msgid "unrecognized base backup option: \"%s\""
 msgstr "无法识别的列选项\"%s\""
 
-#: backup/basebackup.c:920
+#: backup/basebackup.c:921
 #, fuzzy, c-format
 #| msgid "manifest checksum mismatch"
 msgid "manifest checksums require a backup manifest"
 msgstr "清单校验和不匹配"
 
-#: backup/basebackup.c:929
+#: backup/basebackup.c:930
 #, fuzzy, c-format
 #| msgid "--no-slot cannot be used with slot name"
 msgid "target detail cannot be used without target"
 msgstr "--no-slot 不能与槽名称一起使用"
 
-#: backup/basebackup.c:938 backup/basebackup_target.c:218
+#: backup/basebackup.c:939 backup/basebackup_target.c:218
 #, fuzzy, c-format
 #| msgid "operator class \"%s\" does not accept data type %s"
 msgid "target \"%s\" does not accept a target detail"
 msgstr "操作符表 \"%s\" 不能处理数据类型 %s"
 
-#: backup/basebackup.c:949
+#: backup/basebackup.c:950
 #, c-format
 msgid "compression detail cannot be specified unless compression is enabled"
 msgstr ""
 
-#: backup/basebackup.c:962
+#: backup/basebackup.c:963
 #, fuzzy, c-format
 #| msgid "invalid compression code: %d"
 msgid "invalid compression specification: %s"
 msgstr "无效的压缩码: %d"
 
-#: backup/basebackup.c:1131 backup/basebackup.c:1317
+#: backup/basebackup.c:1132 backup/basebackup.c:1318
 #, c-format
 msgid "could not stat file or directory \"%s\": %m"
 msgstr "无法统计文件或目录\"%s\": %m"
 
-#: backup/basebackup.c:1453
+#: backup/basebackup.c:1454
 #, c-format
 msgid "skipping special file \"%s\""
 msgstr "跳过特殊文件 \"%s\""
 
-#: backup/basebackup.c:1581
+#: backup/basebackup.c:1582
 #, c-format
 msgid "invalid segment number %d in file \"%s\""
 msgstr "文件\"%2$s\"中的段号%1$d无效"
 
-#: backup/basebackup.c:1613
+#: backup/basebackup.c:1614
 #, fuzzy, c-format
 #| msgid "cannot verify checksum in file \"%s\", block %d: read buffer size %d and page size %d differ"
 msgid "could not verify checksum in file \"%s\", block %u: read buffer size %d and page size %d differ"
 msgstr "无法验证文件\"%s\"、块%d中的校验和：读取缓冲区大小%d和页大小%d不同"
 
-#: backup/basebackup.c:1697
+#: backup/basebackup.c:1698
 #, fuzzy, c-format
 #| msgid "checksum verification failed in file \"%s\", block %d: calculated %X but expected %X"
 msgid "checksum verification failed in file \"%s\", block %u: calculated %X but expected %X"
 msgstr "校验和验证在文件\"%s\"中失败，块%d :计算的为%X，但应为%X"
 
-#: backup/basebackup.c:1704
+#: backup/basebackup.c:1705
 #, c-format
 msgid "further checksum verification failures in file \"%s\" will not be reported"
 msgstr "将不会报告文件 \"%s\"中的进一步校验和验证失败。"
 
-#: backup/basebackup.c:1760
+#: backup/basebackup.c:1761
 #, fuzzy, c-format
 #| msgid "file \"%s\" has a total of %d checksum verification failures"
 msgid "file \"%s\" has a total of %d checksum verification failure"
 msgid_plural "file \"%s\" has a total of %d checksum verification failures"
 msgstr[0] "文件\"%s\"总共有%d个校验和验证失败"
 
-#: backup/basebackup.c:1806
+#: backup/basebackup.c:1807
 #, c-format
 msgid "file name too long for tar format: \"%s\""
 msgstr "文件名对于tar格式超长：\"%s\""
 
-#: backup/basebackup.c:1811
+#: backup/basebackup.c:1812
 #, c-format
 msgid "symbolic link target too long for tar format: file name \"%s\", target \"%s\""
 msgstr "符号链接目标对于tar格式过长：文件名是\"%s\"，目标是\"%s\""
@@ -4546,7 +4546,7 @@ msgid "parameter ACL with OID %u does not exist"
 msgstr "OID 为 %u 的操作符不存在"
 
 #: catalog/aclchk.c:3645 commands/collationcmds.c:813
-#: commands/publicationcmds.c:1751
+#: commands/publicationcmds.c:1751 utils/adt/xml.c:3178 utils/adt/xml.c:3631
 #, c-format
 msgid "schema with OID %u does not exist"
 msgstr "OID 为 %u 的模式不存在"
@@ -4936,7 +4936,7 @@ msgstr "关系 \"%s\" 已经存在, 跳过"
 msgid "pg_class index OID value not set when in binary upgrade mode"
 msgstr "当处于二进制升级模式时没有设置pg_class的索引OID值"
 
-#: catalog/index.c:946 utils/cache/relcache.c:3750
+#: catalog/index.c:946 utils/cache/relcache.c:3751
 #, fuzzy, c-format
 #| msgid "pg_enum OID value not set when in binary upgrade mode"
 msgid "index relfilenumber value not set when in binary upgrade mode"
@@ -9739,7 +9739,7 @@ msgstr "只有有超级用户权限的用户才能创建过程语言"
 
 #: commands/publicationcmds.c:136 postmaster/postmaster.c:1209
 #: postmaster/postmaster.c:1307 replication/logical/logical.c:209
-#: storage/file/fd.c:3911 utils/init/miscinit.c:1867
+#: storage/file/fd.c:3914 utils/init/miscinit.c:1867
 #, c-format
 msgid "invalid list syntax in parameter \"%s\""
 msgstr "在参数\"%s\"中列表语法无效"
@@ -14452,7 +14452,7 @@ msgstr "没有找到对于\"%s\"的用户映射"
 msgid "access to non-system foreign table is restricted"
 msgstr ""
 
-#: foreign/foreign.c:657 storage/file/fd.c:3931
+#: foreign/foreign.c:657 storage/file/fd.c:3934
 #, c-format
 msgid "invalid option \"%s\""
 msgstr "无效选项 \"%s\""
@@ -17001,7 +17001,7 @@ msgstr "可扩展节点类型 \"%s\" 已存在"
 msgid "ExtensibleNodeMethods \"%s\" was not registered"
 msgstr "ExtensibleNodeMethods \"%s\" 没有注册"
 
-#: nodes/makefuncs.c:153 nodes/makefuncs.c:179 statistics/extended_stats.c:2325
+#: nodes/makefuncs.c:153 nodes/makefuncs.c:179 statistics/extended_stats.c:2349
 #, fuzzy, c-format
 #| msgid "\"%s\" is not a composite type"
 msgid "relation \"%s\" does not have a composite type"
@@ -22765,7 +22765,7 @@ msgstr "未识别Snowball参数: \"%s\""
 msgid "missing Language parameter"
 msgstr "缺少语言参数"
 
-#: statistics/extended_stats.c:179
+#: statistics/extended_stats.c:112
 #, c-format
 msgid "statistics object \"%s.%s\" could not be computed for relation \"%s.%s\""
 msgstr "无法为关系\"%3$s.%4$s\"计算统计对象\"%1$s.%2$s\""
@@ -22870,7 +22870,7 @@ msgstr "无法删除文件 \"%s\": %m"
 msgid "could not truncate file \"%s\": %m"
 msgstr "无法截断文件 \"%s\": %m"
 
-#: storage/file/fd.c:537 storage/file/fd.c:609 storage/file/fd.c:645
+#: storage/file/fd.c:537 storage/file/fd.c:609 storage/file/fd.c:648
 #, c-format
 msgid "could not flush dirty data: %m"
 msgstr "无法刷出脏数据：%m"
@@ -22885,122 +22885,122 @@ msgstr "无法确定脏数据的尺寸：%m"
 msgid "could not munmap() while flushing data: %m"
 msgstr "在刷写数据时不能 munmap()：%m"
 
-#: storage/file/fd.c:937
+#: storage/file/fd.c:940
 #, c-format
 msgid "getrlimit failed: %m"
 msgstr "函数getrlimit执行失败: %m"
 
-#: storage/file/fd.c:1027
+#: storage/file/fd.c:1030
 #, c-format
 msgid "insufficient file descriptors available to start server process"
 msgstr "启动服务器进程的有效文件描述符不足"
 
-#: storage/file/fd.c:1028
+#: storage/file/fd.c:1031
 #, fuzzy, c-format
 #| msgid "System allows %d, we need at least %d."
 msgid "System allows %d, server needs at least %d."
 msgstr "系统允许 %d, 我们至少需要 %d."
 
-#: storage/file/fd.c:1116 storage/file/fd.c:2565 storage/file/fd.c:2674
-#: storage/file/fd.c:2825
+#: storage/file/fd.c:1119 storage/file/fd.c:2568 storage/file/fd.c:2677
+#: storage/file/fd.c:2828
 #, c-format
 msgid "out of file descriptors: %m; release and retry"
 msgstr "超出文件描述符: %m; 释放再重试"
 
-#: storage/file/fd.c:1490
+#: storage/file/fd.c:1493
 #, c-format
 msgid "temporary file: path \"%s\", size %lu"
 msgstr "临时文件: 路径 \"%s\", 大小%lu"
 
-#: storage/file/fd.c:1629
+#: storage/file/fd.c:1632
 #, c-format
 msgid "cannot create temporary directory \"%s\": %m"
 msgstr "无法创建临时目录 \"%s\": %m"
 
-#: storage/file/fd.c:1636
+#: storage/file/fd.c:1639
 #, c-format
 msgid "cannot create temporary subdirectory \"%s\": %m"
 msgstr "无法创建临时子目录\"%s\": %m"
 
-#: storage/file/fd.c:1833
+#: storage/file/fd.c:1836
 #, c-format
 msgid "could not create temporary file \"%s\": %m"
 msgstr "无法创建临时文件\"%s\": %m"
 
-#: storage/file/fd.c:1869
+#: storage/file/fd.c:1872
 #, c-format
 msgid "could not open temporary file \"%s\": %m"
 msgstr "无法打开临时文件 \"%s\": %m"
 
-#: storage/file/fd.c:1910
+#: storage/file/fd.c:1913
 #, fuzzy, c-format
 #| msgid "cannot unlink temporary file \"%s\": %m"
 msgid "could not unlink temporary file \"%s\": %m"
 msgstr "无法取消链接临时文件 \"%s\": %m"
 
-#: storage/file/fd.c:1998
+#: storage/file/fd.c:2001
 #, c-format
 msgid "could not delete file \"%s\": %m"
 msgstr "无法删除文件 \"%s\": %m"
 
-#: storage/file/fd.c:2185
+#: storage/file/fd.c:2188
 #, c-format
 msgid "temporary file size exceeds temp_file_limit (%dkB)"
 msgstr "临时文件大小超过最大允许值temp_file_limit(%dkB)"
 
-#: storage/file/fd.c:2541 storage/file/fd.c:2600
+#: storage/file/fd.c:2544 storage/file/fd.c:2603
 #, c-format
 msgid "exceeded maxAllocatedDescs (%d) while trying to open file \"%s\""
 msgstr "试图打开文件 \"%2$s\"超出了最大描述符范围值 (%1$d)"
 
-#: storage/file/fd.c:2645
+#: storage/file/fd.c:2648
 #, c-format
 msgid "exceeded maxAllocatedDescs (%d) while trying to execute command \"%s\""
 msgstr "试图执行命令 \"%2$s\"时，超出了最大描述符范围值 (%1$d)"
 
-#: storage/file/fd.c:2801
+#: storage/file/fd.c:2804
 #, c-format
 msgid "exceeded maxAllocatedDescs (%d) while trying to open directory \"%s\""
 msgstr "试图打开目录 \"%2$s\"时，超出了最大描述符范围值 (%1$d)"
 
-#: storage/file/fd.c:3331
+#: storage/file/fd.c:3334
 #, c-format
 msgid "unexpected file found in temporary-files directory: \"%s\""
 msgstr "在临时文件目录中发现意外文件: \"%s\""
 
-#: storage/file/fd.c:3449
+#: storage/file/fd.c:3452
 #, c-format
 msgid "syncing data directory (syncfs), elapsed time: %ld.%02d s, current path: %s"
 msgstr ""
 
-#: storage/file/fd.c:3463
+#: storage/file/fd.c:3466
 #, fuzzy, c-format
 #| msgid "could not create temporary file \"%s\": %m"
 msgid "could not synchronize file system for file \"%s\": %m"
 msgstr "无法创建临时文件\"%s\": %m"
 
-#: storage/file/fd.c:3676
+#: storage/file/fd.c:3679
 #, c-format
 msgid "syncing data directory (pre-fsync), elapsed time: %ld.%02d s, current path: %s"
 msgstr ""
 
-#: storage/file/fd.c:3708
+#: storage/file/fd.c:3711
 #, c-format
 msgid "syncing data directory (fsync), elapsed time: %ld.%02d s, current path: %s"
 msgstr ""
 
-#: storage/file/fd.c:3897
+#: storage/file/fd.c:3900
 #, fuzzy, c-format
 #| msgid "Direct I/O is not supported on this platform.\n"
 msgid "debug_io_direct is not supported on this platform."
 msgstr "此平台不支持直接I/O.\n"
 
-#: storage/file/fd.c:3944
+#: storage/file/fd.c:3947
 #, c-format
 msgid "debug_io_direct is not supported for WAL because XLOG_BLCKSZ is too small"
 msgstr ""
 
-#: storage/file/fd.c:3951
+#: storage/file/fd.c:3954
 #, c-format
 msgid "debug_io_direct is not supported for data because BLCKSZ is too small"
 msgstr ""
@@ -27749,47 +27749,47 @@ msgstr "无效的查询"
 msgid "portal \"%s\" does not return tuples"
 msgstr "入口 \"%s\" 不存在"
 
-#: utils/adt/xml.c:4346
+#: utils/adt/xml.c:4372
 #, c-format
 msgid "invalid array for XML namespace mapping"
 msgstr "对于XML命名空间映射的无效数组"
 
-#: utils/adt/xml.c:4347
+#: utils/adt/xml.c:4373
 #, c-format
 msgid "The array must be two-dimensional with length of the second axis equal to 2."
 msgstr "数组必须是第二个坐标轴等于2的两维数组"
 
-#: utils/adt/xml.c:4371
+#: utils/adt/xml.c:4397
 #, c-format
 msgid "empty XPath expression"
 msgstr "空的XPath表达式"
 
-#: utils/adt/xml.c:4423
+#: utils/adt/xml.c:4449
 #, c-format
 msgid "neither namespace name nor URI may be null"
 msgstr "URI或者命名空间名称不可为空."
 
-#: utils/adt/xml.c:4430
+#: utils/adt/xml.c:4456
 #, c-format
 msgid "could not register XML namespace with name \"%s\" and URI \"%s\""
 msgstr "无法以名称\"%s\"和URI\"%s\"来注册XML命名空间"
 
-#: utils/adt/xml.c:4779
+#: utils/adt/xml.c:4805
 #, c-format
 msgid "DEFAULT namespace is not supported"
 msgstr "不支持默认命名空间"
 
-#: utils/adt/xml.c:4808
+#: utils/adt/xml.c:4834
 #, c-format
 msgid "row path filter must not be empty string"
 msgstr "行路径筛选器不能为空字符串"
 
-#: utils/adt/xml.c:4842
+#: utils/adt/xml.c:4868
 #, c-format
 msgid "column path filter must not be empty string"
 msgstr "列路径筛选器不能为空字符串"
 
-#: utils/adt/xml.c:4989
+#: utils/adt/xml.c:5015
 #, c-format
 msgid "more than one value returned by column XPath expression"
 msgstr "列XPath表达式返回了多个值"
@@ -27825,29 +27825,29 @@ msgstr "访问方法%2$s的运算符类\"%1$s\"缺少类型%4$s的支持函数%3
 msgid "cached plan must not change result type"
 msgstr "已缓冲的计划不能改变结果类型"
 
-#: utils/cache/relcache.c:3760
+#: utils/cache/relcache.c:3761
 #, fuzzy, c-format
 #| msgid "pg_enum OID value not set when in binary upgrade mode"
 msgid "heap relfilenumber value not set when in binary upgrade mode"
 msgstr "当处于二进制升级模式时没有设置pg_enum OID值"
 
-#: utils/cache/relcache.c:3768
+#: utils/cache/relcache.c:3769
 #, fuzzy, c-format
 #| msgid "must be superuser to connect in binary upgrade mode"
 msgid "unexpected request for new relfilenumber in binary upgrade mode"
 msgstr "只有超级用户才能以二进制升级模式进行连接"
 
-#: utils/cache/relcache.c:6516
+#: utils/cache/relcache.c:6517
 #, c-format
 msgid "could not create relation-cache initialization file \"%s\": %m"
 msgstr "无法创建 relation-cache 初始化文件 \"%s\": %m"
 
-#: utils/cache/relcache.c:6518
+#: utils/cache/relcache.c:6519
 #, c-format
 msgid "Continuing anyway, but there's something wrong."
 msgstr "仍继续, 但肯定有些错误存在."
 
-#: utils/cache/relcache.c:6840
+#: utils/cache/relcache.c:6841
 #, c-format
 msgid "could not remove cache file \"%s\": %m"
 msgstr "无法删除缓存文件 \"%s\": %m"
