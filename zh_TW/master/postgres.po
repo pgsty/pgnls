@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-10-28 05:48+0000\n"
-"PO-Revision-Date: 2026-10-28 14:28+0800\n"
+"POT-Creation-Date: 2026-11-01 22:18+0000\n"
+"PO-Revision-Date: 2026-11-02 12:33+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
@@ -17250,6 +17250,12 @@ msgstr "不能將繼承條件約束 \"%s\" 標記為 %s"
 msgid "The matching constraint on parent table \"%s\" is %s."
 msgstr "父資料表 \"%s\" 上對應的條件約束為 %s。"
 
+# utils/init/miscinit.c:900
+#: commands/tablecmds.c:12686
+#, c-format
+msgid "You may need to use %s on table \"%s\" first."
+msgstr "可能需要先在資料表 \"%2$s\" 上使用 %1$s。"
+
 # commands/tablecmds.c:2807
 #: commands/tablecmds.c:12735
 #, c-format
@@ -17628,7 +17634,7 @@ msgstr "子資料表 \"%s\" 有檢查限制 \"%s\" 的不同定義"
 msgid "constraint \"%s\" conflicts with non-inherited constraint on child table \"%s\""
 msgstr "條件約束 \"%1$s\" 與子資料表 \"%2$s\" 上的不可繼承條件約束衝突"
 
-#: commands/tablecmds.c:18370
+#: commands/tablecmds.c:12684 commands/tablecmds.c:18385
 #, c-format
 msgid "constraint \"%s\" conflicts with NOT VALID constraint on child table \"%s\""
 msgstr "條件約束 \"%s\" 與子資料表 \"%s\" 上的 NOT VALID 條件約束衝突"

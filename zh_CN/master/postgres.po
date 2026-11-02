@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-10-28 05:47+0000\n"
-"PO-Revision-Date: 2026-10-28 14:28+0800\n"
+"POT-Creation-Date: 2026-11-01 22:18+0000\n"
+"PO-Revision-Date: 2026-11-02 12:33+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
 "Language: zh_CN\n"
@@ -16155,6 +16155,11 @@ msgstr "不能将继承约束 \"%s\" 标记为 %s"
 msgid "The matching constraint on parent table \"%s\" is %s."
 msgstr "父表 \"%s\" 上对应的约束为 %s。"
 
+#: commands/tablecmds.c:12686
+#, c-format
+msgid "You may need to use %s on table \"%s\" first."
+msgstr "可能需要先在表 \"%2$s\" 上使用 %1$s。"
+
 #: commands/tablecmds.c:12735
 #, c-format
 msgid "constraint must be altered on child tables too"
@@ -16489,7 +16494,7 @@ msgid ""
 "\"%s\""
 msgstr "约束 \"%1$s\" 与子表 \"%2$s\" 上的不可继承的约束冲突"
 
-#: commands/tablecmds.c:18370
+#: commands/tablecmds.c:12684 commands/tablecmds.c:18385
 #, c-format
 msgid ""
 "constraint \"%s\" conflicts with NOT VALID constraint on child table \"%s\""
