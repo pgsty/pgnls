@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-01 22:18+0000\n"
-"PO-Revision-Date: 2026-11-02 12:33+0800\n"
+"POT-Creation-Date: 2026-11-03 15:48+0000\n"
+"PO-Revision-Date: 2026-11-04 08:45+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
@@ -7574,6 +7574,11 @@ msgstr "清單需要初始時間軸 %u 從 %X/%08X 開始的 WAL，但該時間�
 #, c-format
 msgid "manifest requires WAL from continuation timeline %u starting at %X/%08X, but that timeline begins at %X/%08X"
 msgstr "清單需要後續時間軸 %u 從 %X/%08X 開始的 WAL，但該時間軸始於 %X/%08X"
+
+#: backup/basebackup_incremental.c:438
+#, c-format
+msgid "manifest requires WAL from final timeline %u ending at %X/%08X, but this server switched timelines at %X/%08X"
+msgstr "清單需要最終時間軸 %u 截至 %X/%08X 的 WAL，但此伺服器已在 %X/%08X 處切換時間軸"
 
 #: backup/basebackup_incremental.c:432
 #, c-format
