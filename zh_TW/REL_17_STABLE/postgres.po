@@ -105,7 +105,7 @@ msgstr "無法開啟檔案 \"%s\" 以讀取: %m"
 #: access/transam/twophase.c:1355 access/transam/xlog.c:3454
 #: access/transam/xlog.c:4318 access/transam/xlogrecovery.c:1254
 #: access/transam/xlogrecovery.c:1352 access/transam/xlogrecovery.c:1389
-#: access/transam/xlogrecovery.c:1456 backup/basebackup.c:2149
+#: access/transam/xlogrecovery.c:1456 backup/basebackup.c:2150
 #: backup/walsummary.c:283 commands/extension.c:3678 libpq/hba.c:764
 #: replication/logical/origin.c:745 replication/logical/origin.c:781
 #: replication/logical/reorderbuffer.c:5375
@@ -147,8 +147,8 @@ msgstr "無法讀取檔案 \"%1$s\": 應讀取 %3$zu，實際讀取 %2$d"
 #: replication/logical/reorderbuffer.c:5427
 #: replication/logical/snapbuild.c:1906 replication/logical/snapbuild.c:2030
 #: replication/slot.c:2179 replication/slot.c:2343 replication/walsender.c:691
-#: storage/file/copydir.c:208 storage/file/copydir.c:213 storage/file/fd.c:828
-#: storage/file/fd.c:3753 storage/file/fd.c:3859 utils/cache/relmapper.c:841
+#: storage/file/copydir.c:208 storage/file/copydir.c:213 storage/file/fd.c:831
+#: storage/file/fd.c:3756 storage/file/fd.c:3862 utils/cache/relmapper.c:841
 #: utils/cache/relmapper.c:956
 #, c-format
 msgid "could not close file \"%s\": %m"
@@ -184,9 +184,9 @@ msgstr ""
 #: access/transam/twophase.c:1311 access/transam/xlog.c:3207
 #: access/transam/xlog.c:3370 access/transam/xlog.c:3409
 #: access/transam/xlog.c:3602 access/transam/xlog.c:4308
-#: access/transam/xlogrecovery.c:4292 access/transam/xlogrecovery.c:4395
-#: access/transam/xlogutils.c:860 backup/basebackup.c:560
-#: backup/basebackup.c:1613 backup/walsummary.c:220 libpq/hba.c:624
+#: access/transam/xlogrecovery.c:4297 access/transam/xlogrecovery.c:4400
+#: access/transam/xlogutils.c:860 backup/basebackup.c:561
+#: backup/basebackup.c:1614 backup/walsummary.c:220 libpq/hba.c:624
 #: postmaster/syslogger.c:1511 postmaster/walsummarizer.c:1614
 #: replication/logical/origin.c:735 replication/logical/reorderbuffer.c:4028
 #: replication/logical/reorderbuffer.c:4582
@@ -194,8 +194,8 @@ msgstr ""
 #: replication/logical/snapbuild.c:1861 replication/logical/snapbuild.c:1971
 #: replication/slot.c:2263 replication/walsender.c:649
 #: replication/walsender.c:3140 storage/file/copydir.c:151
-#: storage/file/fd.c:803 storage/file/fd.c:3510 storage/file/fd.c:3740
-#: storage/file/fd.c:3830 storage/smgr/md.c:672 utils/cache/relmapper.c:818
+#: storage/file/fd.c:806 storage/file/fd.c:3513 storage/file/fd.c:3743
+#: storage/file/fd.c:3833 storage/smgr/md.c:672 utils/cache/relmapper.c:818
 #: utils/cache/relmapper.c:935 utils/error/elog.c:2124
 #: utils/init/miscinit.c:1581 utils/init/miscinit.c:1715
 #: utils/init/miscinit.c:1792 utils/misc/guc.c:4782 utils/misc/guc.c:4832
@@ -226,8 +226,8 @@ msgstr "無法寫入檔案 \"%s\": %m"
 #: access/transam/xlog.c:4281 access/transam/xlog.c:8713
 #: access/transam/xlog.c:8758 backup/basebackup_server.c:207
 #: commands/dbcommands.c:514 replication/logical/snapbuild.c:1899
-#: replication/slot.c:2163 replication/slot.c:2273 storage/file/fd.c:820
-#: storage/file/fd.c:3851 storage/smgr/md.c:1345 storage/smgr/md.c:1390
+#: replication/slot.c:2163 replication/slot.c:2273 storage/file/fd.c:823
+#: storage/file/fd.c:3854 storage/smgr/md.c:1345 storage/smgr/md.c:1390
 #: storage/sync/sync.c:446 utils/misc/guc.c:4530
 #, c-format
 msgid "could not fsync file \"%s\": %m"
@@ -269,8 +269,8 @@ msgstr "無法對檔案 \"%s\" 執行 fsync: %m"
 #: postmaster/walsummarizer.c:1035
 #: replication/libpqwalreceiver/libpqwalreceiver.c:400
 #: replication/logical/logical.c:279 replication/walsender.c:856
-#: storage/buffer/localbuf.c:606 storage/file/fd.c:912 storage/file/fd.c:1443
-#: storage/file/fd.c:1604 storage/file/fd.c:2531 storage/ipc/procarray.c:1465
+#: storage/buffer/localbuf.c:606 storage/file/fd.c:915 storage/file/fd.c:1446
+#: storage/file/fd.c:1607 storage/file/fd.c:2534 storage/ipc/procarray.c:1465
 #: storage/ipc/procarray.c:2219 storage/ipc/procarray.c:2226
 #: storage/ipc/procarray.c:2736 storage/ipc/procarray.c:3440
 #: utils/activity/pgstat_shmem.c:511 utils/adt/formatting.c:1728
@@ -397,7 +397,7 @@ msgid "invalid memory allocation request size %zu * %zu\n"
 msgstr "無效的記憶體配置請求大小 %zu * %zu\n"
 
 # libpq/be-fsstubs.c:484
-#: ../common/file_utils.c:76 storage/file/fd.c:3516
+#: ../common/file_utils.c:76 storage/file/fd.c:3519
 #, c-format
 msgid "could not synchronize file system for file \"%s\": %m"
 msgstr "無法同步檔案 \"%s\" 所在的檔案系統: %m"
@@ -407,12 +407,12 @@ msgstr "無法同步檔案 \"%s\" 所在的檔案系統: %m"
 #: ../common/file_utils.c:120 ../common/file_utils.c:566
 #: ../common/file_utils.c:570 access/transam/twophase.c:1323
 #: access/transam/xlogarchive.c:111 access/transam/xlogarchive.c:235
-#: backup/basebackup.c:566 backup/basebackup.c:637 backup/basebackup.c:1625
+#: backup/basebackup.c:567 backup/basebackup.c:638 backup/basebackup.c:1626
 #: backup/walsummary.c:247 commands/copyfrom.c:1749 commands/copyto.c:705
 #: commands/extension.c:3657 commands/tablespace.c:811
 #: commands/tablespace.c:900 postmaster/pgarch.c:680
 #: replication/logical/snapbuild.c:1757 replication/logical/snapbuild.c:2260
-#: storage/file/fd.c:1968 storage/file/fd.c:2054 storage/file/fd.c:3564
+#: storage/file/fd.c:1971 storage/file/fd.c:2057 storage/file/fd.c:3567
 #: utils/adt/dbsize.c:105 utils/adt/dbsize.c:257 utils/adt/dbsize.c:337
 #: utils/adt/genfile.c:437 utils/adt/genfile.c:612 utils/adt/misc.c:340
 #, c-format
@@ -429,7 +429,7 @@ msgstr "此建置版本不支援同步方法 \"%s\""
 #: ../common/file_utils.c:151 ../common/file_utils.c:281
 #: ../common/pgfnames.c:48 ../common/rmtree.c:63 commands/tablespace.c:735
 #: commands/tablespace.c:745 postmaster/postmaster.c:1471
-#: storage/file/fd.c:2933 storage/file/reinit.c:126 utils/adt/misc.c:256
+#: storage/file/fd.c:2936 storage/file/reinit.c:126 utils/adt/misc.c:256
 #: utils/misc/tzparser.c:339
 #, c-format
 msgid "could not open directory \"%s\": %m"
@@ -438,7 +438,7 @@ msgstr "無法開啟目錄 \"%s\": %m"
 # access/transam/slru.c:967 commands/tablespace.c:577
 # commands/tablespace.c:721
 #: ../common/file_utils.c:169 ../common/file_utils.c:315
-#: ../common/pgfnames.c:69 ../common/rmtree.c:106 storage/file/fd.c:2945
+#: ../common/pgfnames.c:69 ../common/rmtree.c:106 storage/file/fd.c:2948
 #, c-format
 msgid "could not read directory \"%s\": %m"
 msgstr "無法讀取目錄 \"%s\": %m"
@@ -450,7 +450,7 @@ msgstr "無法讀取目錄 \"%s\": %m"
 #: access/transam/xlogarchive.c:389 postmaster/pgarch.c:834
 #: postmaster/syslogger.c:1559 replication/logical/snapbuild.c:1918
 #: replication/slot.c:975 replication/slot.c:2046 replication/slot.c:2195
-#: storage/file/fd.c:838 utils/time/snapmgr.c:1295
+#: storage/file/fd.c:841 utils/time/snapmgr.c:1295
 #, c-format
 msgid "could not rename file \"%s\" to \"%s\": %m"
 msgstr "無法將檔案 \"%s\" 重新命名為 \"%s\": %m"
@@ -671,7 +671,7 @@ msgstr "無法解碼檔案名稱"
 msgid "file size is not an integer"
 msgstr "檔案大小不是整數"
 
-#: ../common/parse_manifest.c:699 backup/basebackup.c:880
+#: ../common/parse_manifest.c:699 backup/basebackup.c:881
 #, c-format
 msgid "unrecognized checksum algorithm: \"%s\""
 msgstr "無法識別的檢查碼演算法: \"%s\""
@@ -820,8 +820,8 @@ msgstr "無法從子行程取得結束碼: 錯誤碼 %lu"
 #: postmaster/syslogger.c:1488 replication/logical/origin.c:591
 #: replication/logical/reorderbuffer.c:4851
 #: replication/logical/snapbuild.c:1799 replication/logical/snapbuild.c:2233
-#: replication/slot.c:2247 storage/file/fd.c:878 storage/file/fd.c:3378
-#: storage/file/fd.c:3440 storage/file/reinit.c:261 storage/ipc/dsm.c:343
+#: replication/slot.c:2247 storage/file/fd.c:881 storage/file/fd.c:3381
+#: storage/file/fd.c:3443 storage/file/reinit.c:261 storage/ipc/dsm.c:343
 #: storage/smgr/md.c:381 storage/smgr/md.c:440 storage/sync/sync.c:243
 #: utils/time/snapmgr.c:1626
 #, c-format
@@ -830,8 +830,8 @@ msgstr "無法刪除檔案 \"%s\": %m"
 
 # commands/tablespace.c:610
 #: ../common/rmtree.c:124 commands/tablespace.c:774 commands/tablespace.c:787
-#: commands/tablespace.c:822 commands/tablespace.c:912 storage/file/fd.c:3370
-#: storage/file/fd.c:3779
+#: commands/tablespace.c:822 commands/tablespace.c:912 storage/file/fd.c:3373
+#: storage/file/fd.c:3782
 #, c-format
 msgid "could not remove directory \"%s\": %m"
 msgstr "無法刪除目錄 \"%s\": %m"
@@ -1054,7 +1054,7 @@ msgstr "索引 \"%s\" 不是有效的"
 
 # utils/adt/pseudotypes.c:94
 #: access/brin/brin_bloom.c:785 access/brin/brin_bloom.c:827
-#: access/brin/brin_minmax_multi.c:2984 access/brin/brin_minmax_multi.c:3121
+#: access/brin/brin_minmax_multi.c:3011 access/brin/brin_minmax_multi.c:3148
 #: statistics/dependencies.c:661 statistics/dependencies.c:714
 #: statistics/mcv.c:1480 statistics/mcv.c:1511 statistics/mvdistinct.c:356
 #: statistics/mvdistinct.c:409 utils/adt/pseudotypes.c:40
@@ -1990,7 +1990,7 @@ msgstr "tid (%u, %u) 對關聯 \"%s\" 無效"
 msgid "\"%s\" cannot be empty."
 msgstr "\"%s\" 不能為空。"
 
-#: access/table/tableamapi.c:116 access/transam/xlogrecovery.c:4924
+#: access/table/tableamapi.c:116 access/transam/xlogrecovery.c:4929
 #, c-format
 msgid "\"%s\" is too long (maximum %d characters)."
 msgstr "\"%s\" 過長 (最多 %d 個字元)。"
@@ -2040,117 +2040,117 @@ msgstr "確保已在主伺服器上啟用組態參數 \"%s\"。"
 msgid "Make sure the configuration parameter \"%s\" is set."
 msgstr "確保已啟用組態參數 \"%s\"。"
 
-#: access/transam/multixact.c:1260
+#: access/transam/multixact.c:1272
 #, c-format
 msgid "database is not accepting commands that assign new MultiXactIds to avoid wraparound data loss in database \"%s\""
 msgstr "資料庫不再接受指派新 MultiXactId 的命令，以避免資料庫 \"%s\" 因回繞而遺失資料"
 
-#: access/transam/multixact.c:1262 access/transam/multixact.c:1269
-#: access/transam/multixact.c:1293 access/transam/multixact.c:1302
+#: access/transam/multixact.c:1274 access/transam/multixact.c:1281
+#: access/transam/multixact.c:1305 access/transam/multixact.c:1314
 #, c-format
 msgid ""
 "Execute a database-wide VACUUM in that database.\n"
 "You might also need to commit or roll back old prepared transactions."
 msgstr "在該資料庫中執行全資料庫 VACUUM。\n您可能還需要提交或回復舊的預備交易。"
 
-#: access/transam/multixact.c:1267
+#: access/transam/multixact.c:1279
 #, c-format
 msgid "database is not accepting commands that assign new MultiXactIds to avoid wraparound data loss in database with OID %u"
 msgstr "資料庫不再接受指派新 MultiXactId 的命令，以避免 OID 為 %u 的資料庫因回繞而遺失資料"
 
 # utils/init/postinit.c:130
-#: access/transam/multixact.c:1288 access/transam/multixact.c:2644
+#: access/transam/multixact.c:1300 access/transam/multixact.c:2656
 #, c-format
 msgid "database \"%s\" must be vacuumed before %u more MultiXactId is used"
 msgid_plural "database \"%s\" must be vacuumed before %u more MultiXactIds are used"
 msgstr[0] "資料庫 \"%s\" 必須在再用 %u 個 MultiXactId 之前進行清理"
 
 # utils/init/postinit.c:130
-#: access/transam/multixact.c:1297 access/transam/multixact.c:2653
+#: access/transam/multixact.c:1309 access/transam/multixact.c:2665
 #, c-format
 msgid "database with OID %u must be vacuumed before %u more MultiXactId is used"
 msgid_plural "database with OID %u must be vacuumed before %u more MultiXactIds are used"
 msgstr[0] "OID 為 %u 的資料庫必須在再用 %u 個 MultiXactId 之前進行清理"
 
 # tcop/postgres.c:2093
-#: access/transam/multixact.c:1361
+#: access/transam/multixact.c:1373
 #, c-format
 msgid "multixact \"members\" limit exceeded"
 msgstr "超過多重交易 \"成員\" 的限制"
 
-#: access/transam/multixact.c:1362
+#: access/transam/multixact.c:1374
 #, c-format
 msgid "This command would create a multixact with %u members, but the remaining space is only enough for %u member."
 msgid_plural "This command would create a multixact with %u members, but the remaining space is only enough for %u members."
 msgstr[0] "此命令將建立包含 %u 個成員的多重交易，但剩餘空間僅夠容納 %u 個成員。"
 
-#: access/transam/multixact.c:1367
+#: access/transam/multixact.c:1379
 #, c-format
 msgid "Execute a database-wide VACUUM in database with OID %u with reduced \"vacuum_multixact_freeze_min_age\" and \"vacuum_multixact_freeze_table_age\" settings."
 msgstr "在 OID 為 %u 的資料庫中，使用調低的 \"vacuum_multixact_freeze_min_age\" 和 \"vacuum_multixact_freeze_table_age\" 設定執行全資料庫 VACUUM。"
 
 # utils/init/postinit.c:130
-#: access/transam/multixact.c:1398
+#: access/transam/multixact.c:1410
 #, c-format
 msgid "database with OID %u must be vacuumed before %d more multixact member is used"
 msgid_plural "database with OID %u must be vacuumed before %d more multixact members are used"
 msgstr[0] "必須在再使用 %2$d 個多重交易成員之前清理 OID 為 %1$u 的資料庫"
 
-#: access/transam/multixact.c:1403
+#: access/transam/multixact.c:1415
 #, c-format
 msgid "Execute a database-wide VACUUM in that database with reduced \"vacuum_multixact_freeze_min_age\" and \"vacuum_multixact_freeze_table_age\" settings."
 msgstr "在該資料庫中，使用調低的 \"vacuum_multixact_freeze_min_age\" 和 \"vacuum_multixact_freeze_table_age\" 設定執行全資料庫 VACUUM。"
 
-#: access/transam/multixact.c:1542
+#: access/transam/multixact.c:1554
 #, c-format
 msgid "MultiXactId %u does no longer exist -- apparent wraparound"
 msgstr "MultiXactId %u 已不存在，似乎已發生回繞"
 
 # access/transam/slru.c:862
-#: access/transam/multixact.c:1548
+#: access/transam/multixact.c:1560
 #, c-format
 msgid "MultiXactId %u has not been created yet -- apparent wraparound"
 msgstr "MultiXactId %u 尚未建立，似乎已發生回繞"
 
-#: access/transam/multixact.c:1641
+#: access/transam/multixact.c:1653
 #, c-format
 msgid "MultiXact %u has invalid next offset"
 msgstr "MultiXact %u 的下一個位移無效"
 
-#: access/transam/multixact.c:2649 access/transam/multixact.c:2658
+#: access/transam/multixact.c:2661 access/transam/multixact.c:2670
 #, c-format
 msgid ""
 "To avoid MultiXactId assignment failures, execute a database-wide VACUUM in that database.\n"
 "You might also need to commit or roll back old prepared transactions."
 msgstr "為避免 MultiXactId 指派失敗，在該資料庫中執行全資料庫 VACUUM。\n您可能還需要提交或回復舊的預備交易。"
 
-#: access/transam/multixact.c:2941
+#: access/transam/multixact.c:2953
 #, c-format
 msgid "MultiXact member wraparound protections are disabled because oldest checkpointed MultiXact %u does not exist on disk"
 msgstr "已停用 MultiXact 成員回繞保護，因為檢查點中記錄的最早 MultiXact %u 在磁碟上不存在"
 
-#: access/transam/multixact.c:2963
+#: access/transam/multixact.c:2975
 #, c-format
 msgid "MultiXact member wraparound protections are now enabled"
 msgstr "MultiXact 成員回繞保護現已啟用"
 
-#: access/transam/multixact.c:3354
+#: access/transam/multixact.c:3366
 #, c-format
 msgid "oldest MultiXact %u not found, earliest MultiXact %u, skipping truncation"
 msgstr "未找到最舊的 MultiXact %u，最早的 MultiXact 為 %u，跳過截斷"
 
-#: access/transam/multixact.c:3372
+#: access/transam/multixact.c:3384
 #, c-format
 msgid "cannot truncate up to MultiXact %u because it does not exist on disk, skipping truncation"
 msgstr "不能截斷至 MultiXact %u，因為它在磁碟上不存在；跳過截斷"
 
-#: access/transam/multixact.c:3389
+#: access/transam/multixact.c:3401
 #, c-format
 msgid "cannot truncate up to MultiXact %u because it has invalid offset, skipping truncation"
 msgstr "不能截斷至 MultiXact %u，因為其位移無效；跳過截斷"
 
 # utils/init/miscinit.c:429
-#: access/transam/multixact.c:3726
+#: access/transam/multixact.c:3738
 #, c-format
 msgid "invalid MultiXactId: %u"
 msgstr "無效的 MultiXactId: %u"
@@ -2403,12 +2403,12 @@ msgstr "將 \"max_prepared_transactions\" 設為非零值。"
 msgid "transaction identifier \"%s\" is already in use"
 msgstr "交易識別字 \"%s\" 已在使用中"
 
-#: access/transam/twophase.c:405 access/transam/twophase.c:2560
+#: access/transam/twophase.c:405 access/transam/twophase.c:2573
 #, c-format
 msgid "maximum number of prepared transactions reached"
 msgstr "達到預備交易數目上限"
 
-#: access/transam/twophase.c:406 access/transam/twophase.c:2561
+#: access/transam/twophase.c:406 access/transam/twophase.c:2574
 #, c-format
 msgid "Increase \"max_prepared_transactions\" (currently %d)."
 msgstr "增大 \"max_prepared_transactions\" (目前為 %d)。"
@@ -2573,18 +2573,18 @@ msgstr "交易 %u 在記憶體中的兩階段狀態已損毀"
 
 # access/transam/xlog.c:1944 access/transam/xlog.c:5453
 # access/transam/xlog.c:5607 postmaster/postmaster.c:3504
-#: access/transam/twophase.c:2543
+#: access/transam/twophase.c:2556
 #, c-format
 msgid "could not recover two-phase state file for transaction %u"
 msgstr "無法復原交易 %u 的兩階段狀態檔"
 
-#: access/transam/twophase.c:2545
+#: access/transam/twophase.c:2558
 #, c-format
 msgid "Two-phase state file has been found in WAL record %X/%X, but this transaction has already been restored from disk."
 msgstr "已在 WAL 記錄 %X/%X 中找到兩階段狀態檔案，但此交易已從磁碟還原。"
 
 # utils/fmgr/dfmgr.c:107 utils/fmgr/dfmgr.c:209 utils/fmgr/dfmgr.c:263
-#: access/transam/twophase.c:2553 storage/file/fd.c:514 utils/fmgr/dfmgr.c:209
+#: access/transam/twophase.c:2566 storage/file/fd.c:514 utils/fmgr/dfmgr.c:209
 #, c-format
 msgid "could not access file \"%s\": %m"
 msgstr "無法存取檔案 \"%s\": %m"
@@ -3231,12 +3231,12 @@ msgid "This means that the backup being taken on the standby is corrupt and shou
 msgstr "這意味著正在待命伺服器上製作的備份已損毀，不宜使用。在主伺服器上啟用 \"full_page_writes\" 並執行 CHECKPOINT，然後重試線上備份。"
 
 # commands/tablespace.c:355 commands/tablespace.c:984
-#: access/transam/xlog.c:9064 backup/basebackup.c:1428 utils/adt/misc.c:354
+#: access/transam/xlog.c:9064 backup/basebackup.c:1429 utils/adt/misc.c:354
 #, c-format
 msgid "could not read symbolic link \"%s\": %m"
 msgstr "無法讀取符號連結 \"%s\": %m"
 
-#: access/transam/xlog.c:9071 backup/basebackup.c:1433 utils/adt/misc.c:359
+#: access/transam/xlog.c:9071 backup/basebackup.c:1434 utils/adt/misc.c:359
 #, c-format
 msgid "symbolic link \"%s\" target is too long"
 msgstr "符號連結 \"%s\" 的目標太長"
@@ -3246,12 +3246,12 @@ msgstr "符號連結 \"%s\" 的目標太長"
 msgid "wal_level must be set to \"replica\" or \"logical\" at server start."
 msgstr "wal_level 必須在伺服器啟動的時候被設定為 \"replica\" 或 \"logical\"。"
 
-#: access/transam/xlog.c:9230 backup/basebackup.c:1292
+#: access/transam/xlog.c:9230 backup/basebackup.c:1293
 #, c-format
 msgid "the standby was promoted during online backup"
 msgstr "待命伺服器在線上備份期間被升級"
 
-#: access/transam/xlog.c:9231 backup/basebackup.c:1293
+#: access/transam/xlog.c:9231 backup/basebackup.c:1294
 #, c-format
 msgid "This means that the backup being taken is corrupt and should not be used. Try taking another online backup."
 msgstr "這意味著正在製作的備份已損毀，不宜使用。嘗試重新製作線上備份。"
@@ -3347,7 +3347,7 @@ msgid "could not write archive status file \"%s\": %m"
 msgstr "無法寫入封存狀態檔 \"%s\": %m"
 
 # access/transam/xlog.c:5297
-#: access/transam/xlogfuncs.c:69 backup/basebackup.c:1007
+#: access/transam/xlogfuncs.c:69 backup/basebackup.c:1008
 #, c-format
 msgid "a backup is already in progress in this session"
 msgstr "此工作階段中已有備份正在進行"
@@ -3947,199 +3947,199 @@ msgid "unexpected timeline ID %u in checkpoint record, before reaching minimum r
 msgstr "尚未達到時間軸 %4$u 上的最小復原點 %2$X/%3$X，檢查點記錄中卻出現非預期的時間軸 ID %1$u"
 
 # access/transam/xlog.c:3950
-#: access/transam/xlogrecovery.c:2609 access/transam/xlogrecovery.c:2885
+#: access/transam/xlogrecovery.c:2614 access/transam/xlogrecovery.c:2890
 #, c-format
 msgid "recovery stopping after reaching consistency"
 msgstr "達到一致性後停止復原"
 
 # access/transam/xlog.c:3965
-#: access/transam/xlogrecovery.c:2630
+#: access/transam/xlogrecovery.c:2635
 #, c-format
 msgid "recovery stopping before WAL location (LSN) \"%X/%X\""
 msgstr "復原在 WAL 位置 (LSN) \"%X/%X\" 之前停止"
 
 # access/transam/xlog.c:3954
-#: access/transam/xlogrecovery.c:2720
+#: access/transam/xlogrecovery.c:2725
 #, c-format
 msgid "recovery stopping before commit of transaction %u, time %s"
 msgstr "復原在交易 %u 提交前停止, 時間 %s"
 
 # access/transam/xlog.c:3965
-#: access/transam/xlogrecovery.c:2727
+#: access/transam/xlogrecovery.c:2732
 #, c-format
 msgid "recovery stopping before abort of transaction %u, time %s"
 msgstr "復原在交易 %u 中止前停止, 時間 %s"
 
 # access/transam/xlog.c:3961
-#: access/transam/xlogrecovery.c:2780
+#: access/transam/xlogrecovery.c:2785
 #, c-format
 msgid "recovery stopping at restore point \"%s\", time %s"
 msgstr "復原在還原點 \"%s\" 停止, 時間 %s"
 
 # access/transam/xlog.c:3961
-#: access/transam/xlogrecovery.c:2798
+#: access/transam/xlogrecovery.c:2803
 #, c-format
 msgid "recovery stopping after WAL location (LSN) \"%X/%X\""
 msgstr "復原在 WAL 位置 (LSN) \"%X/%X\" 之後停止"
 
 # access/transam/xlog.c:3950
-#: access/transam/xlogrecovery.c:2865
+#: access/transam/xlogrecovery.c:2870
 #, c-format
 msgid "recovery stopping after commit of transaction %u, time %s"
 msgstr "復原在交易 %u 提交後停止, 時間 %s"
 
 # access/transam/xlog.c:3961
-#: access/transam/xlogrecovery.c:2873
+#: access/transam/xlogrecovery.c:2878
 #, c-format
 msgid "recovery stopping after abort of transaction %u, time %s"
 msgstr "復原在交易 %u 中止後停止, 時間 %s"
 
 # access/transam/xlog.c:3596
-#: access/transam/xlogrecovery.c:2954
+#: access/transam/xlogrecovery.c:2959
 #, c-format
 msgid "pausing at the end of recovery"
 msgstr "在復原結束處暫停"
 
-#: access/transam/xlogrecovery.c:2955
+#: access/transam/xlogrecovery.c:2960
 #, c-format
 msgid "Execute pg_wal_replay_resume() to promote."
 msgstr "執行 pg_wal_replay_resume() 以進行升級。"
 
-#: access/transam/xlogrecovery.c:2958 access/transam/xlogrecovery.c:4733
+#: access/transam/xlogrecovery.c:2963 access/transam/xlogrecovery.c:4738
 #, c-format
 msgid "recovery has paused"
 msgstr "復原已被暫停"
 
-#: access/transam/xlogrecovery.c:2959
+#: access/transam/xlogrecovery.c:2964
 #, c-format
 msgid "Execute pg_wal_replay_resume() to continue."
 msgstr "執行 pg_wal_replay_resume() 以繼續。"
 
-#: access/transam/xlogrecovery.c:3222
+#: access/transam/xlogrecovery.c:3227
 #, c-format
 msgid "unexpected timeline ID %u in WAL segment %s, LSN %X/%X, offset %u"
 msgstr "WAL 片段 %2$s 中出現非預期的時間軸 ID %1$u, LSN %3$X/%4$X, 位移 %5$u"
 
 # access/transam/xlog.c:2539
-#: access/transam/xlogrecovery.c:3430
+#: access/transam/xlogrecovery.c:3435
 #, c-format
 msgid "could not read from WAL segment %s, LSN %X/%X, offset %u: %m"
 msgstr "無法從 WAL 片段 %s 讀取, LSN %X/%X, 位移 %u: %m"
 
-#: access/transam/xlogrecovery.c:3437
+#: access/transam/xlogrecovery.c:3442
 #, c-format
 msgid "could not read from WAL segment %s, LSN %X/%X, offset %u: read %d of %zu"
 msgstr "無法從 WAL 片段 %1$s 讀取, LSN %2$X/%3$X, 位移 %4$u: 應讀取 %6$zu，實際讀取 %5$d"
 
 # access/transam/xlog.c:4558
-#: access/transam/xlogrecovery.c:4089
+#: access/transam/xlogrecovery.c:4094
 #, c-format
 msgid "invalid checkpoint location"
 msgstr "無效的檢查點位置"
 
 # access/transam/xlog.c:4558
-#: access/transam/xlogrecovery.c:4099
+#: access/transam/xlogrecovery.c:4104
 #, c-format
 msgid "invalid checkpoint record"
 msgstr "無效的檢查點記錄"
 
 # access/transam/xlog.c:4577
-#: access/transam/xlogrecovery.c:4105
+#: access/transam/xlogrecovery.c:4110
 #, c-format
 msgid "invalid resource manager ID in checkpoint record"
 msgstr "檢查點記錄中有無效的資源管理員 ID"
 
 # access/transam/xlog.c:4597
-#: access/transam/xlogrecovery.c:4113
+#: access/transam/xlogrecovery.c:4118
 #, c-format
 msgid "invalid xl_info in checkpoint record"
 msgstr "檢查點記錄中有無效的 xl_info"
 
 # access/transam/xlog.c:4616
-#: access/transam/xlogrecovery.c:4119
+#: access/transam/xlogrecovery.c:4124
 #, c-format
 msgid "invalid length of checkpoint record"
 msgstr "無效的檢查點記錄長度"
 
 # access/transam/xlog.c:4057
-#: access/transam/xlogrecovery.c:4173
+#: access/transam/xlogrecovery.c:4178
 #, c-format
 msgid "new timeline %u is not a child of database system timeline %u"
 msgstr "新時間軸 %u 不是資料庫系統時間軸 %u 的後繼時間軸"
 
-#: access/transam/xlogrecovery.c:4187
+#: access/transam/xlogrecovery.c:4192
 #, c-format
 msgid "new timeline %u forked off current database system timeline %u before current recovery point %X/%X"
 msgstr "新時間軸 %1$u 在目前復原點 %3$X/%4$X 之前就從目前資料庫系統的時間軸 %2$u 分叉"
 
 # access/transam/xlog.c:3660
-#: access/transam/xlogrecovery.c:4206
+#: access/transam/xlogrecovery.c:4211
 #, c-format
 msgid "new target timeline is %u"
 msgstr "新的目標時間軸是 %u"
 
 # postmaster/postmaster.c:1825
-#: access/transam/xlogrecovery.c:4409
+#: access/transam/xlogrecovery.c:4414
 #, c-format
 msgid "WAL receiver process shutdown requested"
 msgstr "已請求關閉 WAL 接收行程"
 
 # postmaster/postmaster.c:1789
-#: access/transam/xlogrecovery.c:4469
+#: access/transam/xlogrecovery.c:4474
 #, c-format
 msgid "received promote request"
 msgstr "收到升級要求"
 
-#: access/transam/xlogrecovery.c:4724
+#: access/transam/xlogrecovery.c:4729
 #, c-format
 msgid "hot standby is not possible because of insufficient parameter settings"
 msgstr "參數設定不足，無法使用熱備援"
 
-#: access/transam/xlogrecovery.c:4725 access/transam/xlogrecovery.c:4752
-#: access/transam/xlogrecovery.c:4782
+#: access/transam/xlogrecovery.c:4730 access/transam/xlogrecovery.c:4757
+#: access/transam/xlogrecovery.c:4787
 #, c-format
 msgid "%s = %d is a lower setting than on the primary server, where its value was %d."
 msgstr "%s = %d 的設定低於主伺服器當時使用的值 %d。"
 
-#: access/transam/xlogrecovery.c:4734
+#: access/transam/xlogrecovery.c:4739
 #, c-format
 msgid "If recovery is unpaused, the server will shut down."
 msgstr "如果取消復原暫停，伺服器將停止。"
 
-#: access/transam/xlogrecovery.c:4735
+#: access/transam/xlogrecovery.c:4740
 #, c-format
 msgid "You can then restart the server after making the necessary configuration changes."
 msgstr "之後，您可以在完成必要的組態變更後重新啟動伺服器。"
 
-#: access/transam/xlogrecovery.c:4746
+#: access/transam/xlogrecovery.c:4751
 #, c-format
 msgid "promotion is not possible because of insufficient parameter settings"
 msgstr "參數設定不足，無法升級"
 
 # utils/misc/guc.c:1798
-#: access/transam/xlogrecovery.c:4756
+#: access/transam/xlogrecovery.c:4761
 #, c-format
 msgid "Restart the server after making the necessary configuration changes."
 msgstr "在完成必要的組態變更後重新啟動伺服器。"
 
-#: access/transam/xlogrecovery.c:4780
+#: access/transam/xlogrecovery.c:4785
 #, c-format
 msgid "recovery aborted because of insufficient parameter settings"
 msgstr "參數設定不足，復原已中止"
 
-#: access/transam/xlogrecovery.c:4786
+#: access/transam/xlogrecovery.c:4791
 #, c-format
 msgid "You can restart the server after making the necessary configuration changes."
 msgstr "您可以在完成必要的組態變更後重新啟動伺服器。"
 
 # commands/vacuum.c:2258 commands/vacuumlazy.c:489 commands/vacuumlazy.c:770
 # nodes/print.c:86 storage/lmgr/deadlock.c:888 tcop/postgres.c:3285
-#: access/transam/xlogrecovery.c:4806 access/transam/xlogrecovery.c:4808
+#: access/transam/xlogrecovery.c:4811 access/transam/xlogrecovery.c:4813
 #: catalog/dependency.c:1153 catalog/dependency.c:1160
 #: catalog/dependency.c:1171 commands/tablecmds.c:1468
 #: commands/tablecmds.c:15190 commands/tablespace.c:467 commands/user.c:1302
-#: commands/vacuum.c:213 commands/view.c:441 executor/execExprInterp.c:4726
-#: executor/execExprInterp.c:4734 libpq/auth.c:332
+#: commands/vacuum.c:213 commands/view.c:441 executor/execExprInterp.c:4740
+#: executor/execExprInterp.c:4748 libpq/auth.c:332
 #: replication/logical/applyparallelworker.c:1057 replication/slot.c:261
 #: replication/slot.c:2512 replication/slot.c:2514 replication/syncrep.c:1078
 #: storage/lmgr/deadlock.c:1134 storage/lmgr/proc.c:1468 utils/misc/guc.c:3169
@@ -4150,30 +4150,30 @@ msgstr "您可以在完成必要的組態變更後重新啟動伺服器。"
 msgid "%s"
 msgstr "%s"
 
-#: access/transam/xlogrecovery.c:4839
+#: access/transam/xlogrecovery.c:4844
 #, c-format
 msgid "multiple recovery targets specified"
 msgstr "已指定多個復原目標"
 
-#: access/transam/xlogrecovery.c:4840
+#: access/transam/xlogrecovery.c:4845
 #, c-format
 msgid "At most one of \"recovery_target\", \"recovery_target_lsn\", \"recovery_target_name\", \"recovery_target_time\", \"recovery_target_xid\" may be set."
 msgstr "\"recovery_target\", \"recovery_target_lsn\", \"recovery_target_name\", \"recovery_target_time\", \"recovery_target_xid\" 最多只能設定一個。"
 
-#: access/transam/xlogrecovery.c:4851
+#: access/transam/xlogrecovery.c:4856
 #, c-format
 msgid "The only allowed value is \"immediate\"."
 msgstr "唯一允許的值是 \"immediate\"。"
 
 # utils/adt/timestamp.c:98 utils/adt/timestamp.c:339
-#: access/transam/xlogrecovery.c:5003 utils/adt/timestamp.c:202
+#: access/transam/xlogrecovery.c:5008 utils/adt/timestamp.c:202
 #: utils/adt/timestamp.c:455
 #, c-format
 msgid "timestamp out of range: \"%s\""
 msgstr "timestamp 超出範圍: \"%s\""
 
 # access/transam/xlog.c:3655
-#: access/transam/xlogrecovery.c:5048
+#: access/transam/xlogrecovery.c:5053
 #, c-format
 msgid "\"recovery_target_timeline\" is not a valid number."
 msgstr "參數 \"recovery_target_timeline\" 的值不是有效數字。"
@@ -4240,147 +4240,147 @@ msgstr "在時間軸 %2$u 的歷史中找不到起始時間軸 %1$u"
 msgid "could not rewind temporary file"
 msgstr "無法將暫存檔的位置重設至開頭"
 
-#: backup/basebackup.c:492
+#: backup/basebackup.c:493
 #, c-format
 msgid "could not find any WAL files"
 msgstr "找不到任何 WAL 檔案"
 
-#: backup/basebackup.c:507 backup/basebackup.c:522 backup/basebackup.c:531
+#: backup/basebackup.c:508 backup/basebackup.c:523 backup/basebackup.c:532
 #, c-format
 msgid "could not find WAL file \"%s\""
 msgstr "找不到 WAL 檔案 \"%s\""
 
 # utils/adt/rowtypes.c:178 utils/adt/rowtypes.c:186
-#: backup/basebackup.c:573 backup/basebackup.c:598
+#: backup/basebackup.c:574 backup/basebackup.c:599
 #, c-format
 msgid "unexpected WAL file size \"%s\""
 msgstr "WAL 檔案 \"%s\" 的大小不符預期"
 
-#: backup/basebackup.c:668
+#: backup/basebackup.c:669
 #, c-format
 msgid "%lld total checksum verification failure"
 msgid_plural "%lld total checksum verification failures"
 msgstr[0] "共有 %lld 次檢查碼驗證失敗"
 
-#: backup/basebackup.c:675
+#: backup/basebackup.c:676
 #, c-format
 msgid "checksum verification failure during base backup"
 msgstr "基準備份期間的檢查碼驗證失敗"
 
-#: backup/basebackup.c:743 backup/basebackup.c:752 backup/basebackup.c:763
-#: backup/basebackup.c:780 backup/basebackup.c:789 backup/basebackup.c:798
-#: backup/basebackup.c:813 backup/basebackup.c:830 backup/basebackup.c:839
-#: backup/basebackup.c:851 backup/basebackup.c:875 backup/basebackup.c:889
-#: backup/basebackup.c:900 backup/basebackup.c:911 backup/basebackup.c:924
+#: backup/basebackup.c:744 backup/basebackup.c:753 backup/basebackup.c:764
+#: backup/basebackup.c:781 backup/basebackup.c:790 backup/basebackup.c:799
+#: backup/basebackup.c:814 backup/basebackup.c:831 backup/basebackup.c:840
+#: backup/basebackup.c:852 backup/basebackup.c:876 backup/basebackup.c:890
+#: backup/basebackup.c:901 backup/basebackup.c:912 backup/basebackup.c:925
 #, c-format
 msgid "duplicate option \"%s\""
 msgstr "選項重複 \"%s\""
 
-#: backup/basebackup.c:771
+#: backup/basebackup.c:772
 #, c-format
 msgid "unrecognized checkpoint type: \"%s\""
 msgstr "無法識別的檢查點型別: \"%s\""
 
-#: backup/basebackup.c:803
+#: backup/basebackup.c:804
 #, c-format
 msgid "incremental backups cannot be taken unless WAL summarization is enabled"
 msgstr "未啟用 WAL 摘要產生時不能進行增量備份"
 
 # utils/misc/guc.c:3519
-#: backup/basebackup.c:819
+#: backup/basebackup.c:820
 #, c-format
 msgid "%d is outside the valid range for parameter \"%s\" (%d .. %d)"
 msgstr "%d 超出參數 \"%s\" 的有效範圍 (%d .. %d)"
 
-#: backup/basebackup.c:864
+#: backup/basebackup.c:865
 #, c-format
 msgid "unrecognized manifest option: \"%s\""
 msgstr "無法識別的清單選項: \"%s\""
 
 # access/transam/xlog.c:3720
-#: backup/basebackup.c:915
+#: backup/basebackup.c:916
 #, c-format
 msgid "unrecognized compression algorithm: \"%s\""
 msgstr "無法識別的壓縮演算法: \"%s\""
 
-#: backup/basebackup.c:931
+#: backup/basebackup.c:932
 #, c-format
 msgid "unrecognized base backup option: \"%s\""
 msgstr "無法識別的基準備份選項: \"%s\""
 
-#: backup/basebackup.c:942
+#: backup/basebackup.c:943
 #, c-format
 msgid "manifest checksums require a backup manifest"
 msgstr "清單檢查碼需要備份清單"
 
-#: backup/basebackup.c:951
+#: backup/basebackup.c:952
 #, c-format
 msgid "target detail cannot be used without target"
 msgstr "未指定目標時不能使用目標附加參數"
 
 # commands/indexcmds.c:623
-#: backup/basebackup.c:960 backup/basebackup_target.c:218
+#: backup/basebackup.c:961 backup/basebackup_target.c:218
 #, c-format
 msgid "target \"%s\" does not accept a target detail"
 msgstr "目標 \"%s\" 不接受目標附加參數"
 
-#: backup/basebackup.c:971
+#: backup/basebackup.c:972
 #, c-format
 msgid "compression detail cannot be specified unless compression is enabled"
 msgstr "未啟用壓縮時不能指定壓縮附加參數"
 
 # fe-connect.c:2675
-#: backup/basebackup.c:984
+#: backup/basebackup.c:985
 #, c-format
 msgid "invalid compression specification: %s"
 msgstr "無效的壓縮設定: %s"
 
-#: backup/basebackup.c:1034
+#: backup/basebackup.c:1035
 #, c-format
 msgid "must UPLOAD_MANIFEST before performing an incremental BASE_BACKUP"
 msgstr "執行增量 BASE_BACKUP 之前必須先執行 UPLOAD_MANIFEST"
 
 # access/transam/slru.c:967 commands/tablespace.c:577
 # commands/tablespace.c:721
-#: backup/basebackup.c:1167 backup/basebackup.c:1369
+#: backup/basebackup.c:1168 backup/basebackup.c:1370
 #, c-format
 msgid "could not stat file or directory \"%s\": %m"
 msgstr "無法取得檔案或目錄 \"%s\" 的狀態: %m"
 
 # access/transam/xlog.c:2163
-#: backup/basebackup.c:1555
+#: backup/basebackup.c:1556
 #, c-format
 msgid "skipping special file \"%s\""
 msgstr "略過特殊檔案 \"%s\""
 
-#: backup/basebackup.c:1777
+#: backup/basebackup.c:1778
 #, c-format
 msgid "could not verify checksum in file \"%s\", block %u: read buffer size %d and page size %d differ"
 msgstr "無法驗證檔案 \"%s\" 中區塊 %u 的檢查碼: 讀取緩衝區大小 %d 與頁面大小 %d 不同"
 
-#: backup/basebackup.c:1839
+#: backup/basebackup.c:1840
 #, c-format
 msgid "file \"%s\" has a total of %d checksum verification failure"
 msgid_plural "file \"%s\" has a total of %d checksum verification failures"
 msgstr[0] "檔案 \"%s\" 總共有 %d 次檢查碼驗證失敗"
 
-#: backup/basebackup.c:1943
+#: backup/basebackup.c:1944
 #, c-format
 msgid "checksum verification failed in file \"%s\", block %u: calculated %X but expected %X"
 msgstr "檔案 \"%s\" 中區塊 %u 的檢查碼驗證失敗: 計算值為 %X，預期為 %X"
 
-#: backup/basebackup.c:1950
+#: backup/basebackup.c:1951
 #, c-format
 msgid "further checksum verification failures in file \"%s\" will not be reported"
 msgstr "將不會回報檔案 \"%s\" 中的進一步檢查碼驗證失敗"
 
 # utils/mb/encnames.c:445
-#: backup/basebackup.c:2074
+#: backup/basebackup.c:2075
 #, c-format
 msgid "file name too long for tar format: \"%s\""
 msgstr "檔案名稱對於 tar 格式過長: \"%s\""
 
-#: backup/basebackup.c:2079
+#: backup/basebackup.c:2080
 #, c-format
 msgid "symbolic link target too long for tar format: file name \"%s\", target \"%s\""
 msgstr "符號連結目標對於 tar 格式過長: 檔案名稱 \"%s\", 目標 \"%s\""
@@ -4389,7 +4389,7 @@ msgstr "符號連結目標對於 tar 格式過長: 檔案名稱 \"%s\", 目標 \
 # access/transam/xlog.c:5397 access/transam/xlog.c:5448
 # access/transam/xlog.c:5520 access/transam/xlog.c:5545
 # access/transam/xlog.c:5583
-#: backup/basebackup.c:2153
+#: backup/basebackup.c:2154
 #, c-format
 msgid "could not read file \"%s\": read %zd of %zu"
 msgstr "無法讀取檔案 \"%1$s\": 應讀取 %3$zu，實際讀取 %2$zd"
@@ -4405,22 +4405,22 @@ msgstr "此建置版本不支援 gzip 壓縮"
 msgid "could not initialize compression library"
 msgstr "無法初始化壓縮程式庫"
 
-#: backup/basebackup_incremental.c:294
+#: backup/basebackup_incremental.c:295
 #, c-format
 msgid "manifest contains no required WAL ranges"
 msgstr "清單不包含所需的 WAL 範圍"
 
-#: backup/basebackup_incremental.c:349
+#: backup/basebackup_incremental.c:350
 #, c-format
 msgid "timeline %u found in manifest, but not in this server's history"
 msgstr "清單中有時間軸 %u，但該時間軸不在此伺服器的歷史中"
 
-#: backup/basebackup_incremental.c:414
+#: backup/basebackup_incremental.c:415
 #, c-format
 msgid "manifest requires WAL from initial timeline %u starting at %X/%X, but that timeline begins at %X/%X"
 msgstr "清單需要初始時間軸 %u 從 %X/%X 開始的 WAL，但該時間軸始於 %X/%X"
 
-#: backup/basebackup_incremental.c:424
+#: backup/basebackup_incremental.c:425
 #, c-format
 msgid "manifest requires WAL from continuation timeline %u starting at %X/%X, but that timeline begins at %X/%X"
 msgstr "清單需要後續時間軸 %u 從 %X/%X 開始的 WAL，但該時間軸始於 %X/%X"
@@ -4430,42 +4430,42 @@ msgstr "清單需要後續時間軸 %u 從 %X/%X 開始的 WAL，但該時間軸
 msgid "manifest requires WAL from final timeline %u ending at %X/%08X, but this server switched timelines at %X/%08X"
 msgstr "清單需要最終時間軸 %u 截至 %X/%08X 的 WAL，但此伺服器已在 %X/%08X 處切換時間軸"
 
-#: backup/basebackup_incremental.c:435
+#: backup/basebackup_incremental.c:449
 #, c-format
 msgid "manifest requires WAL from final timeline %u ending at %X/%X, but this backup starts at %X/%X"
 msgstr "清單需要最終時間軸 %u 截至 %X/%X 的 WAL，但本次備份始於 %X/%X"
 
-#: backup/basebackup_incremental.c:439
+#: backup/basebackup_incremental.c:453
 #, c-format
 msgid "This can happen for incremental backups on a standby if there was little activity since the previous backup."
 msgstr "如果自上一次備份以來活動很少，在待命伺服器上進行增量備份時可能會出現這種情況。"
 
-#: backup/basebackup_incremental.c:446
+#: backup/basebackup_incremental.c:460
 #, c-format
 msgid "manifest requires WAL from non-final timeline %u ending at %X/%X, but this server switched timelines at %X/%X"
 msgstr "清單需要非最終時間軸 %u 截至 %X/%X 的 WAL，但此伺服器已在 %X/%X 處切換時間軸"
 
-#: backup/basebackup_incremental.c:527
+#: backup/basebackup_incremental.c:541
 #, c-format
 msgid "WAL summaries are required on timeline %u from %X/%X to %X/%X, but no summaries for that timeline and LSN range exist"
 msgstr "需要時間軸 %u 上從 %X/%X 到 %X/%X 的 WAL 摘要，但該時間軸和 LSN 範圍沒有摘要"
 
-#: backup/basebackup_incremental.c:534
+#: backup/basebackup_incremental.c:548
 #, c-format
 msgid "WAL summaries are required on timeline %u from %X/%X to %X/%X, but the summaries for that timeline and LSN range are incomplete"
 msgstr "需要時間軸 %u 上從 %X/%X 到 %X/%X 的 WAL 摘要，但該時間軸和 LSN 範圍的摘要不完整"
 
-#: backup/basebackup_incremental.c:538
+#: backup/basebackup_incremental.c:552
 #, c-format
 msgid "The first unsummarized LSN in this range is %X/%X."
 msgstr "此範圍內第一個尚無摘要覆蓋的 LSN 為 %X/%X。"
 
-#: backup/basebackup_incremental.c:956
+#: backup/basebackup_incremental.c:976
 #, c-format
 msgid "backup manifest version 1 does not support incremental backup"
 msgstr "備份清單版本 1 不支援增量備份"
 
-#: backup/basebackup_incremental.c:974
+#: backup/basebackup_incremental.c:994
 #, c-format
 msgid "system identifier in backup manifest is %llu, but database system identifier is %llu"
 msgstr "備份清單中的系統識別碼為 %llu，但資料庫系統識別碼為 %llu"
@@ -5328,7 +5328,7 @@ msgstr "OID 為 %u 的參數 ACL 不存在"
 
 # catalog/aclchk.c:1689 catalog/aclchk.c:2001
 #: catalog/aclchk.c:3723 commands/collationcmds.c:853
-#: commands/publicationcmds.c:1744
+#: commands/publicationcmds.c:1744 utils/adt/xml.c:3198 utils/adt/xml.c:3651
 #, c-format
 msgid "schema with OID %u does not exist"
 msgstr "OID 為 %u 的 schema 不存在"
@@ -5764,7 +5764,7 @@ msgid "pg_class index OID value not set when in binary upgrade mode"
 msgstr "二進位升級模式下未設定索引的 pg_class OID 值"
 
 # commands/dbcommands.c:201
-#: catalog/index.c:958 utils/cache/relcache.c:3809
+#: catalog/index.c:958 utils/cache/relcache.c:3810
 #, c-format
 msgid "index relfilenumber value not set when in binary upgrade mode"
 msgstr "二進位升級模式下未設定索引的 relfilenumber 值"
@@ -7842,7 +7842,7 @@ msgstr "定序屬性 \"%s\" 無法辨識"
 # commands/user.c:1364
 #: commands/collationcmds.c:123 commands/collationcmds.c:129
 #: commands/define.c:388 commands/tablecmds.c:8180
-#: replication/pgoutput/pgoutput.c:315 replication/pgoutput/pgoutput.c:338
+#: replication/pgoutput/pgoutput.c:316 replication/pgoutput/pgoutput.c:338
 #: replication/pgoutput/pgoutput.c:356 replication/pgoutput/pgoutput.c:366
 #: replication/pgoutput/pgoutput.c:376 replication/pgoutput/pgoutput.c:386
 #: replication/pgoutput/pgoutput.c:398 replication/walsender.c:1192
@@ -11280,8 +11280,8 @@ msgstr "不能在安全受限操作中建立 WITH HOLD 游標"
 
 # commands/portalcmds.c:182 commands/portalcmds.c:229
 #: commands/portalcmds.c:189 commands/portalcmds.c:242
-#: executor/execCurrent.c:70 tcop/pquery.c:398 utils/adt/xml.c:2937
-#: utils/adt/xml.c:3107
+#: executor/execCurrent.c:70 tcop/pquery.c:398 utils/adt/xml.c:2938
+#: utils/adt/xml.c:3108
 #, c-format
 msgid "cursor \"%s\" does not exist"
 msgstr "游標 \"%s\" 不存在"
@@ -15723,8 +15723,8 @@ msgid "no value found for parameter %d"
 msgstr "未發現參數 %d 的值"
 
 #: executor/execExpr.c:642 executor/execExpr.c:649 executor/execExpr.c:655
-#: executor/execExprInterp.c:4922 executor/execExprInterp.c:4939
-#: executor/execExprInterp.c:5038 executor/nodeModifyTable.c:204
+#: executor/execExprInterp.c:4936 executor/execExprInterp.c:4953
+#: executor/execExprInterp.c:5052 executor/nodeModifyTable.c:204
 #: executor/nodeModifyTable.c:223 executor/nodeModifyTable.c:240
 #: executor/nodeModifyTable.c:250 executor/nodeModifyTable.c:260
 #, c-format
@@ -15742,7 +15742,7 @@ msgstr "查詢的欄位過多。"
 msgid "Query provides a value for a dropped column at ordinal position %d."
 msgstr "查詢在序數位置 %d 提供已捨棄欄位的值。"
 
-#: executor/execExpr.c:656 executor/execExprInterp.c:4940
+#: executor/execExpr.c:656 executor/execExprInterp.c:4954
 #: executor/nodeModifyTable.c:251
 #, c-format
 msgid "Table has type %s at ordinal position %d, but query expects %s."
@@ -15779,7 +15779,7 @@ msgstr[0] "不能將超過 %d 個參數傳遞至函式"
 # executor/execQual.c:1211 executor/execQual.c:3445 executor/functions.c:666
 # executor/functions.c:705 utils/fmgr/funcapi.c:39
 #: executor/execExpr.c:2680 executor/execSRF.c:738 executor/functions.c:1068
-#: utils/adt/jsonfuncs.c:4054 utils/fmgr/funcapi.c:89 utils/fmgr/funcapi.c:143
+#: utils/adt/jsonfuncs.c:4073 utils/fmgr/funcapi.c:89 utils/fmgr/funcapi.c:143
 #, c-format
 msgid "set-valued function called in context that cannot accept a set"
 msgstr "在不能接受集合的情境中呼叫傳回集合的函式"
@@ -15900,18 +15900,18 @@ msgid "no SQL/JSON item found for specified path"
 msgstr "未找到指定路徑對應的 SQL/JSON 項"
 
 #. translator: first %s is a SQL/JSON clause (e.g. ON ERROR)
-#: executor/execExprInterp.c:4723 executor/execExprInterp.c:4731
+#: executor/execExprInterp.c:4737 executor/execExprInterp.c:4745
 #, c-format
 msgid "could not coerce %s expression (%s) to the RETURNING type"
 msgstr "無法將 %s 運算式 (%s) 轉換為 RETURNING 型別"
 
-#: executor/execExprInterp.c:4923
+#: executor/execExprInterp.c:4937
 #, c-format
 msgid "Table row contains %d attribute, but query expects %d."
 msgid_plural "Table row contains %d attributes, but query expects %d."
 msgstr[0] "資料表資料列包含 %d 個屬性，但是查詢預期 %d 個。"
 
-#: executor/execExprInterp.c:5039 executor/execSRF.c:977
+#: executor/execExprInterp.c:5053 executor/execSRF.c:977
 #, c-format
 msgid "Physical storage mismatch on dropped attribute at ordinal position %d."
 msgstr "序數位置 %d 上已捨棄之屬性的實體儲存不符。"
@@ -16495,8 +16495,8 @@ msgstr "TABLESAMPLE REPEATABLE 參數不能為 NULL"
 
 # executor/nodeSubplan.c:294 executor/nodeSubplan.c:336
 # executor/nodeSubplan.c:972
-#: executor/nodeSubplan.c:306 executor/nodeSubplan.c:332
-#: executor/nodeSubplan.c:386 executor/nodeSubplan.c:1158
+#: executor/nodeSubplan.c:305 executor/nodeSubplan.c:331
+#: executor/nodeSubplan.c:385 executor/nodeSubplan.c:1159
 #, c-format
 msgid "more than one row returned by a subquery used as an expression"
 msgstr "用作運算式的子查詢傳回超過一個資料列"
@@ -16665,7 +16665,7 @@ msgid "user mapping not found for user \"%s\", server \"%s\""
 msgstr "未找到使用者 \"%1$s\" 在伺服器 \"%2$s\" 上的使用者映射"
 
 # commands/comment.c:928
-#: foreign/foreign.c:336 optimizer/plan/createplan.c:7177
+#: foreign/foreign.c:336 optimizer/plan/createplan.c:7202
 #: optimizer/util/plancat.c:540
 #, c-format
 msgid "access to non-system foreign table is restricted"
@@ -19452,7 +19452,7 @@ msgstr "ExtensibleNodeMethods \"%s\" 未註冊"
 
 # access/heap/heapam.c:628 access/heap/heapam.c:663 access/heap/heapam.c:698
 # catalog/aclchk.c:293
-#: nodes/makefuncs.c:152 nodes/makefuncs.c:178 statistics/extended_stats.c:2300
+#: nodes/makefuncs.c:152 nodes/makefuncs.c:178 statistics/extended_stats.c:2324
 #, c-format
 msgid "relation \"%s\" does not have a composite type"
 msgstr "關聯 \"%s\" 沒有複合型別"
@@ -19486,7 +19486,7 @@ msgid "FULL JOIN is only supported with merge-joinable or hash-joinable join con
 msgstr "FULL JOIN 只在聯結條件可用於合併聯結或雜湊聯結時才受支援"
 
 # executor/execMain.c:820
-#: optimizer/plan/createplan.c:7199 parser/parse_merge.c:203
+#: optimizer/plan/createplan.c:7224 parser/parse_merge.c:203
 #: rewrite/rewriteHandler.c:1717
 #, c-format
 msgid "cannot execute MERGE on relation \"%s\""
@@ -20290,7 +20290,7 @@ msgstr "WITH ORDINALITY 不能與欄位定義清單一起使用"
 msgid "Put the column definition list inside ROWS FROM()."
 msgstr "將欄位定義清單放在 ROWS FROM() 內。"
 
-#: parser/parse_clause.c:762 parser/parse_jsontable.c:295
+#: parser/parse_clause.c:762 parser/parse_jsontable.c:301
 #, c-format
 msgid "only one FOR ORDINALITY column is allowed"
 msgstr "只允許一個 FOR ORDINALITY 欄位"
@@ -21786,7 +21786,7 @@ msgstr "欄位產生運算式中不允許使用傳回集合的函式"
 msgid "Only EMPTY [ ARRAY ] or ERROR is allowed in the top-level ON ERROR clause."
 msgstr "頂層 ON ERROR 子句中只允許使用 EMPTY [ ARRAY ] 或 ERROR。"
 
-#: parser/parse_jsontable.c:189 parser/parse_jsontable.c:203
+#: parser/parse_jsontable.c:195 parser/parse_jsontable.c:209
 #, c-format
 msgid "duplicate JSON_TABLE column or path name: %s"
 msgstr "重複的 JSON_TABLE 欄位名稱或路徑名稱: %s"
@@ -24682,13 +24682,13 @@ msgstr "正在為複寫來源 \"%s\" 處理遠端資料，訊息型別為 \"%s\"
 msgid "processing remote data for replication origin \"%s\" during message type \"%s\" for replication target relation \"%s.%s\" column \"%s\" in transaction %u, finished at %X/%X"
 msgstr "正在為複寫來源 \"%s\" 處理遠端資料，訊息型別為 \"%s\"，複寫目標為關聯 \"%s.%s\" 的欄位 \"%s\"，交易為 %u，結束於 %X/%X"
 
-#: replication/pgoutput/pgoutput.c:323
+#: replication/pgoutput/pgoutput.c:324
 #, c-format
 msgid "invalid proto_version"
 msgstr "無效的 proto_version"
 
 # utils/adt/float.c:1508 utils/adt/float.c:1538
-#: replication/pgoutput/pgoutput.c:328
+#: replication/pgoutput/pgoutput.c:329
 #, c-format
 msgid "proto_version \"%s\" out of range"
 msgstr "proto_version \"%s\" 超出範圍"
@@ -26028,7 +26028,7 @@ msgstr "無法辨識的 Snowball 參數: \"%s\""
 msgid "missing Language parameter"
 msgstr "缺少 Language 參數"
 
-#: statistics/extended_stats.c:176
+#: statistics/extended_stats.c:109
 #, c-format
 msgid "statistics object \"%s.%s\" could not be computed for relation \"%s.%s\""
 msgstr "無法為關聯 \"%3$s.%4$s\" 計算統計資訊物件 \"%1$s.%2$s\""
@@ -26145,7 +26145,7 @@ msgstr "無法截斷檔案 \"%s\": %m"
 
 # access/transam/slru.c:930 commands/tablespace.c:529
 # commands/tablespace.c:694 utils/adt/misc.c:174
-#: storage/file/fd.c:583 storage/file/fd.c:655 storage/file/fd.c:691
+#: storage/file/fd.c:583 storage/file/fd.c:655 storage/file/fd.c:694
 #, c-format
 msgid "could not flush dirty data: %m"
 msgstr "無法寫出髒資料: %m"
@@ -26162,61 +26162,61 @@ msgid "could not munmap() while flushing data: %m"
 msgstr "寫出緩衝資料時無法執行 munmap(): %m"
 
 # fe-misc.c:991
-#: storage/file/fd.c:983
+#: storage/file/fd.c:986
 #, c-format
 msgid "getrlimit failed: %m"
 msgstr "getrlimit 失敗: %m"
 
 # storage/file/fd.c:355
-#: storage/file/fd.c:1073
+#: storage/file/fd.c:1076
 #, c-format
 msgid "insufficient file descriptors available to start server process"
 msgstr "檔案描述符不足，無法啟動伺服器行程"
 
 # storage/file/fd.c:356
-#: storage/file/fd.c:1074
+#: storage/file/fd.c:1077
 #, c-format
 msgid "System allows %d, server needs at least %d."
 msgstr "系統允許 %d，伺服器至少需要 %d。"
 
 # storage/file/fd.c:397 storage/file/fd.c:1180 storage/file/fd.c:1295
-#: storage/file/fd.c:1162 storage/file/fd.c:2618 storage/file/fd.c:2727
-#: storage/file/fd.c:2878
+#: storage/file/fd.c:1165 storage/file/fd.c:2621 storage/file/fd.c:2730
+#: storage/file/fd.c:2881
 #, c-format
 msgid "out of file descriptors: %m; release and retry"
 msgstr "檔案描述符已耗盡: %m；嘗試釋放後重試"
 
-#: storage/file/fd.c:1536
+#: storage/file/fd.c:1539
 #, c-format
 msgid "temporary file: path \"%s\", size %lu"
 msgstr "暫存檔: 路徑 \"%s\", 大小 %lu"
 
 # command.c:1148
-#: storage/file/fd.c:1675
+#: storage/file/fd.c:1678
 #, c-format
 msgid "cannot create temporary directory \"%s\": %m"
 msgstr "無法建立暫存目錄 \"%s\": %m"
 
 # command.c:1148
-#: storage/file/fd.c:1682
+#: storage/file/fd.c:1685
 #, c-format
 msgid "cannot create temporary subdirectory \"%s\": %m"
 msgstr "無法建立暫存子目錄 \"%s\": %m"
 
 # command.c:1148
-#: storage/file/fd.c:1879
+#: storage/file/fd.c:1882
 #, c-format
 msgid "could not create temporary file \"%s\": %m"
 msgstr "無法建立暫存檔案 \"%s\": %m"
 
 # command.c:1148
-#: storage/file/fd.c:1915
+#: storage/file/fd.c:1918
 #, c-format
 msgid "could not open temporary file \"%s\": %m"
 msgstr "無法開啟暫存檔 \"%s\": %m"
 
 # command.c:1148
-#: storage/file/fd.c:1956
+#: storage/file/fd.c:1959
 #, c-format
 msgid "could not unlink temporary file \"%s\": %m"
 msgstr "無法刪除暫存檔案 \"%s\": %m"
@@ -26225,75 +26225,75 @@ msgstr "無法刪除暫存檔案 \"%s\": %m"
 # access/transam/xlog.c:1646 access/transam/xlog.c:2911
 # access/transam/xlog.c:5308 access/transam/xlog.c:5426
 # postmaster/postmaster.c:3366
-#: storage/file/fd.c:2044
+#: storage/file/fd.c:2047
 #, c-format
 msgid "could not delete file \"%s\": %m"
 msgstr "無法刪除檔案 \"%s\": %m"
 
 # access/nbtree/nbtinsert.c:404 access/nbtree/nbtsort.c:499
-#: storage/file/fd.c:2234
+#: storage/file/fd.c:2237
 #, c-format
 msgid "temporary file size exceeds temp_file_limit (%dkB)"
 msgstr "暫存檔案大小超過 temp_file_limit（%d kB）"
 
-#: storage/file/fd.c:2594 storage/file/fd.c:2653
+#: storage/file/fd.c:2597 storage/file/fd.c:2656
 #, c-format
 msgid "exceeded maxAllocatedDescs (%d) while trying to open file \"%s\""
 msgstr "嘗試開啟檔案 \"%2$s\" 時超過 maxAllocatedDescs (%1$d)"
 
-#: storage/file/fd.c:2698
+#: storage/file/fd.c:2701
 #, c-format
 msgid "exceeded maxAllocatedDescs (%d) while trying to execute command \"%s\""
 msgstr "嘗試執行命令 \"%2$s\" 時超過 maxAllocatedDescs (%1$d)"
 
-#: storage/file/fd.c:2854
+#: storage/file/fd.c:2857
 #, c-format
 msgid "exceeded maxAllocatedDescs (%d) while trying to open directory \"%s\""
 msgstr "嘗試開啟目錄 \"%2$s\" 時超過 maxAllocatedDescs (%1$d)"
 
 # command.c:1148
-#: storage/file/fd.c:3384
+#: storage/file/fd.c:3387
 #, c-format
 msgid "unexpected file found in temporary-files directory: \"%s\""
 msgstr "在暫存檔案目錄中發現非預期檔案: \"%s\""
 
-#: storage/file/fd.c:3502
+#: storage/file/fd.c:3505
 #, c-format
 msgid "syncing data directory (syncfs), elapsed time: %ld.%02d s, current path: %s"
 msgstr "正在同步資料目錄 (syncfs)，已用時間: %ld.%02d 秒, 目前路徑: %s"
 
-#: storage/file/fd.c:3729
+#: storage/file/fd.c:3732
 #, c-format
 msgid "syncing data directory (pre-fsync), elapsed time: %ld.%02d s, current path: %s"
 msgstr "正在同步資料目錄 (pre-fsync)，已用時間: %ld.%02d 秒, 目前路徑: %s"
 
-#: storage/file/fd.c:3761
+#: storage/file/fd.c:3764
 #, c-format
 msgid "syncing data directory (fsync), elapsed time: %ld.%02d s, current path: %s"
 msgstr "正在同步資料目錄 (fsync)，已用時間: %ld.%02d 秒, 目前路徑: %s"
 
-#: storage/file/fd.c:3950
+#: storage/file/fd.c:3953
 #, c-format
 msgid "\"debug_io_direct\" is not supported on this platform."
 msgstr "此平台不支援 \"debug_io_direct\"。"
 
 # utils/misc/guc.c:5383
-#: storage/file/fd.c:3964
+#: storage/file/fd.c:3967
 #, c-format
 msgid "Invalid list syntax in parameter \"%s\""
 msgstr "參數 \"%s\" 中的清單語法無效"
 
-#: storage/file/fd.c:3984
+#: storage/file/fd.c:3987
 #, c-format
 msgid "Invalid option \"%s\""
 msgstr "選項 \"%s\" 無效"
 
-#: storage/file/fd.c:3997
+#: storage/file/fd.c:4000
 #, c-format
 msgid "\"debug_io_direct\" is not supported for WAL because XLOG_BLCKSZ is too small"
 msgstr "由於 XLOG_BLCKSZ 過小，不支援對 WAL 使用 \"debug_io_direct\""
 
-#: storage/file/fd.c:4004
+#: storage/file/fd.c:4007
 #, c-format
 msgid "\"debug_io_direct\" is not supported for data because BLCKSZ is too small"
 msgstr "由於 BLCKSZ 過小，不支援對資料使用 \"debug_io_direct\""
@@ -28431,8 +28431,8 @@ msgstr "固定長度陣列的切片未實作"
 #: utils/adt/arrayfuncs.c:2915 utils/adt/arrayfuncs.c:6107
 #: utils/adt/arrayfuncs.c:6133 utils/adt/arrayfuncs.c:6144
 #: utils/adt/json.c:1433 utils/adt/json.c:1505 utils/adt/jsonb.c:1317
-#: utils/adt/jsonb.c:1401 utils/adt/jsonfuncs.c:4710 utils/adt/jsonfuncs.c:4863
-#: utils/adt/jsonfuncs.c:4976 utils/adt/jsonfuncs.c:5024
+#: utils/adt/jsonb.c:1401 utils/adt/jsonfuncs.c:4729 utils/adt/jsonfuncs.c:4882
+#: utils/adt/jsonfuncs.c:4995 utils/adt/jsonfuncs.c:5043
 #, c-format
 msgid "wrong number of array subscripts"
 msgstr "陣列下標數目錯誤"
@@ -28728,7 +28728,7 @@ msgstr "date 超出範圍: \"%s\""
 # utils/adt/int.c:1091 utils/adt/int8.c:947 utils/adt/numeric.c:1785
 # utils/adt/numeric.c:1794 utils/adt/varbit.c:1234
 #: utils/adt/date.c:222 utils/adt/date.c:520 utils/adt/date.c:544
-#: utils/adt/rangetypes.c:1584 utils/adt/rangetypes.c:1599 utils/adt/xml.c:2553
+#: utils/adt/rangetypes.c:1584 utils/adt/rangetypes.c:1599 utils/adt/xml.c:2554
 #, c-format
 msgid "date out of range"
 msgstr "date 超出範圍"
@@ -28826,8 +28826,8 @@ msgstr "型別 %2$s 無法識別單位 \"%1$s\""
 #: utils/adt/timestamp.c:6272 utils/adt/timestamp.c:6359
 #: utils/adt/timestamp.c:6400 utils/adt/timestamp.c:6404
 #: utils/adt/timestamp.c:6458 utils/adt/timestamp.c:6462
-#: utils/adt/timestamp.c:6468 utils/adt/timestamp.c:6509 utils/adt/xml.c:2575
-#: utils/adt/xml.c:2582 utils/adt/xml.c:2602 utils/adt/xml.c:2609
+#: utils/adt/timestamp.c:6468 utils/adt/timestamp.c:6509 utils/adt/xml.c:2576
+#: utils/adt/xml.c:2583 utils/adt/xml.c:2603 utils/adt/xml.c:2610
 #, c-format
 msgid "timestamp out of range"
 msgstr "timestamp 超過範圍"
@@ -29852,14 +29852,14 @@ msgstr "指派操作中的 jsonb 下標不得為 NULL"
 # parser/parse_expr.c:1654
 #: utils/adt/jsonfuncs.c:583 utils/adt/jsonfuncs.c:830
 #: utils/adt/jsonfuncs.c:2439 utils/adt/jsonfuncs.c:3015
-#: utils/adt/jsonfuncs.c:3948 utils/adt/jsonfuncs.c:4295
+#: utils/adt/jsonfuncs.c:3967 utils/adt/jsonfuncs.c:4314
 #, c-format
 msgid "cannot call %s on a scalar"
 msgstr "不能在純量上呼叫 %s"
 
 # utils/adt/pseudotypes.c:121 utils/adt/pseudotypes.c:149
 #: utils/adt/jsonfuncs.c:588 utils/adt/jsonfuncs.c:815
-#: utils/adt/jsonfuncs.c:3017 utils/adt/jsonfuncs.c:3935
+#: utils/adt/jsonfuncs.c:3017 utils/adt/jsonfuncs.c:3954
 #, c-format
 msgid "cannot call %s on an array"
 msgstr "不能在陣列上呼叫 %s"
@@ -29907,7 +29907,7 @@ msgstr "不能從純量中擷取元素"
 msgid "cannot extract elements from an object"
 msgstr "不能從物件中擷取元素"
 
-#: utils/adt/jsonfuncs.c:2424 utils/adt/jsonfuncs.c:4173
+#: utils/adt/jsonfuncs.c:2424 utils/adt/jsonfuncs.c:4192
 #, c-format
 msgid "cannot call %s on a non-array"
 msgstr "不能在非陣列上呼叫 %s"
@@ -29949,134 +29949,134 @@ msgstr "JSON 陣列格式錯誤"
 
 # commands/define.c:233
 #. translator: %s is a function name, eg json_to_record
-#: utils/adt/jsonfuncs.c:3647
+#: utils/adt/jsonfuncs.c:3666
 #, c-format
 msgid "first argument of %s must be a row type"
 msgstr "%s 的第一個引數必須是資料列型別"
 
 # parser/analyze.c:3137 tcop/postgres.c:1194
 #. translator: %s is a function name, eg json_to_record
-#: utils/adt/jsonfuncs.c:3671
+#: utils/adt/jsonfuncs.c:3690
 #, c-format
 msgid "could not determine row type for result of %s"
 msgstr "無法確定 %s 結果的資料列型別"
 
-#: utils/adt/jsonfuncs.c:3673
+#: utils/adt/jsonfuncs.c:3692
 #, c-format
 msgid "Provide a non-null record argument, or call the function in the FROM clause using a column definition list."
 msgstr "提供不為 NULL 的 record 引數，或在 FROM 子句中使用欄位定義清單呼叫該函式。"
 
-#: utils/adt/jsonfuncs.c:4059 utils/fmgr/funcapi.c:94
+#: utils/adt/jsonfuncs.c:4078 utils/fmgr/funcapi.c:94
 #, c-format
 msgid "materialize mode required, but it is not allowed in this context"
 msgstr "需要物化模式，但此上下文不允許該模式"
 
 # commands/define.c:197
-#: utils/adt/jsonfuncs.c:4190 utils/adt/jsonfuncs.c:4274
+#: utils/adt/jsonfuncs.c:4209 utils/adt/jsonfuncs.c:4293
 #, c-format
 msgid "argument of %s must be an array of objects"
 msgstr "%s 的引數必須是物件陣列"
 
-#: utils/adt/jsonfuncs.c:4223
+#: utils/adt/jsonfuncs.c:4242
 #, c-format
 msgid "cannot call %s on an object"
 msgstr "不能在物件上呼叫 %s"
 
 # rewrite/rewriteHandler.c:1374
-#: utils/adt/jsonfuncs.c:4656 utils/adt/jsonfuncs.c:4715
-#: utils/adt/jsonfuncs.c:4795
+#: utils/adt/jsonfuncs.c:4675 utils/adt/jsonfuncs.c:4734
+#: utils/adt/jsonfuncs.c:4814
 #, c-format
 msgid "cannot delete from scalar"
 msgstr "不能從純量中刪除"
 
 # rewrite/rewriteHandler.c:1374
-#: utils/adt/jsonfuncs.c:4800
+#: utils/adt/jsonfuncs.c:4819
 #, c-format
 msgid "cannot delete from object using integer index"
 msgstr "不能使用整數下標從物件中刪除"
 
 # rewrite/rewriteHandler.c:1362
-#: utils/adt/jsonfuncs.c:4868 utils/adt/jsonfuncs.c:5029
+#: utils/adt/jsonfuncs.c:4887 utils/adt/jsonfuncs.c:5048
 #, c-format
 msgid "cannot set path in scalar"
 msgstr "不能在純量中設定路徑"
 
-#: utils/adt/jsonfuncs.c:4909 utils/adt/jsonfuncs.c:4953
+#: utils/adt/jsonfuncs.c:4928 utils/adt/jsonfuncs.c:4972
 #, c-format
 msgid "null_value_treatment must be \"delete_key\", \"return_target\", \"use_json_null\", or \"raise_exception\""
 msgstr "null_value_treatment 必須為 \"delete_key\", \"return_target\", \"use_json_null\" 或 \"raise_exception\""
 
 # commands/user.c:1115
-#: utils/adt/jsonfuncs.c:4922
+#: utils/adt/jsonfuncs.c:4941
 #, c-format
 msgid "JSON value must not be null"
 msgstr "JSON 值不得為 SQL NULL"
 
-#: utils/adt/jsonfuncs.c:4923
+#: utils/adt/jsonfuncs.c:4942
 #, c-format
 msgid "Exception was raised because null_value_treatment is \"raise_exception\"."
 msgstr "因為 null_value_treatment 為 \"raise_exception\"，所以已拋出例外。"
 
-#: utils/adt/jsonfuncs.c:4924
+#: utils/adt/jsonfuncs.c:4943
 #, c-format
 msgid "To avoid, either change the null_value_treatment argument or ensure that an SQL NULL is not passed."
 msgstr "要避免此問題，變更 null_value_treatment 引數，或確保不傳入 SQL NULL。"
 
 # rewrite/rewriteHandler.c:1374
-#: utils/adt/jsonfuncs.c:4981
+#: utils/adt/jsonfuncs.c:5000
 #, c-format
 msgid "cannot delete path in scalar"
 msgstr "不能在純量中刪除路徑"
 
-#: utils/adt/jsonfuncs.c:5195
+#: utils/adt/jsonfuncs.c:5214
 #, c-format
 msgid "path element at position %d is null"
 msgstr "位置 %d 的路徑元素為 NULL"
 
-#: utils/adt/jsonfuncs.c:5214 utils/adt/jsonfuncs.c:5245
-#: utils/adt/jsonfuncs.c:5318
+#: utils/adt/jsonfuncs.c:5233 utils/adt/jsonfuncs.c:5264
+#: utils/adt/jsonfuncs.c:5337
 #, c-format
 msgid "cannot replace existing key"
 msgstr "不能替換既有的鍵"
 
-#: utils/adt/jsonfuncs.c:5215 utils/adt/jsonfuncs.c:5246
+#: utils/adt/jsonfuncs.c:5234 utils/adt/jsonfuncs.c:5265
 #, c-format
 msgid "The path assumes key is a composite object, but it is a scalar value."
 msgstr "該路徑假定鍵對應的值為複合物件，但實際為純量值。"
 
-#: utils/adt/jsonfuncs.c:5319
+#: utils/adt/jsonfuncs.c:5338
 #, c-format
 msgid "Try using the function jsonb_set to replace key value."
 msgstr "嘗試使用 jsonb_set 來替換鍵值。"
 
-#: utils/adt/jsonfuncs.c:5423
+#: utils/adt/jsonfuncs.c:5442
 #, c-format
 msgid "path element at position %d is not an integer: \"%s\""
 msgstr "位置 %d 的路徑元素不是整數: \"%s\""
 
 # fe-exec.c:1922
-#: utils/adt/jsonfuncs.c:5440
+#: utils/adt/jsonfuncs.c:5459
 #, c-format
 msgid "path element at position %d is out of range: %d"
 msgstr "位置 %d 的路徑元素超出範圍: %d"
 
-#: utils/adt/jsonfuncs.c:5592
+#: utils/adt/jsonfuncs.c:5611
 #, c-format
 msgid "wrong flag type, only arrays and scalars are allowed"
 msgstr "錯誤的旗標型別，只允許陣列和純量"
 
 # commands/typecmds.c:173
-#: utils/adt/jsonfuncs.c:5599
+#: utils/adt/jsonfuncs.c:5618
 #, c-format
 msgid "flag array element is not a string"
 msgstr "旗標陣列元素不是字串"
 
-#: utils/adt/jsonfuncs.c:5600 utils/adt/jsonfuncs.c:5622
+#: utils/adt/jsonfuncs.c:5619 utils/adt/jsonfuncs.c:5641
 #, c-format
 msgid "Possible values are: \"string\", \"numeric\", \"boolean\", \"key\", and \"all\"."
 msgstr "可能的值有: \"string\", \"numeric\", \"boolean\", \"key\" 和 \"all\"。"
 
-#: utils/adt/jsonfuncs.c:5620
+#: utils/adt/jsonfuncs.c:5639
 #, c-format
 msgid "wrong flag in flag array: \"%s\""
 msgstr "旗標陣列中的旗標錯誤: \"%s\""
@@ -32065,151 +32065,151 @@ msgstr "XML 註解無效"
 msgid "not an XML document"
 msgstr "不是 XML 文件"
 
-#: utils/adt/xml.c:1020 utils/adt/xml.c:1043
+#: utils/adt/xml.c:1021 utils/adt/xml.c:1044
 #, c-format
 msgid "invalid XML processing instruction"
 msgstr "XML 處理指示無效"
 
-#: utils/adt/xml.c:1021
+#: utils/adt/xml.c:1022
 #, c-format
 msgid "XML processing instruction target name cannot be \"%s\"."
 msgstr "XML 處理指示目標名稱不可以是 \"%s\"。"
 
-#: utils/adt/xml.c:1044
+#: utils/adt/xml.c:1045
 #, c-format
 msgid "XML processing instruction cannot contain \"?>\"."
 msgstr "XML 處理指示不可以包含 \"?>\"。"
 
 # utils/adt/geo_ops.c:910 utils/adt/geo_ops.c:977 utils/adt/geo_ops.c:992
 # utils/adt/geo_ops.c:1004
-#: utils/adt/xml.c:1123
+#: utils/adt/xml.c:1124
 #, c-format
 msgid "xmlvalidate is not implemented"
 msgstr "xmlvalidate 未實作"
 
-#: utils/adt/xml.c:1179
+#: utils/adt/xml.c:1180
 #, c-format
 msgid "could not initialize XML library"
 msgstr "無法初始化 XML 程式庫"
 
-#: utils/adt/xml.c:1180
+#: utils/adt/xml.c:1181
 #, c-format
 msgid "libxml2 has incompatible char type: sizeof(char)=%zu, sizeof(xmlChar)=%zu."
 msgstr "libxml2 有不相容的 char 型別: sizeof(char)=%zu, sizeof(xmlChar)=%zu。"
 
-#: utils/adt/xml.c:1266
+#: utils/adt/xml.c:1267
 #, c-format
 msgid "could not set up XML error handler"
 msgstr "無法設定 XML 錯誤處理函式"
 
-#: utils/adt/xml.c:1267
+#: utils/adt/xml.c:1268
 #, c-format
 msgid "This probably indicates that the version of libxml2 being used is not compatible with the libxml2 header files that PostgreSQL was built with."
 msgstr "這可能表明正在使用的 libxml2 版本與建置 PostgreSQL 時使用的 libxml2 標頭檔案不相容。"
 
 # utils/adt/network.c:105
-#: utils/adt/xml.c:2283
+#: utils/adt/xml.c:2284
 msgid "Invalid character value."
 msgstr "字元值無效。"
 
-#: utils/adt/xml.c:2286
+#: utils/adt/xml.c:2287
 msgid "Space required."
 msgstr "需要空格。"
 
-#: utils/adt/xml.c:2289
+#: utils/adt/xml.c:2290
 msgid "standalone accepts only 'yes' or 'no'."
 msgstr "standalone 只接受 'yes' 或 'no'。"
 
-#: utils/adt/xml.c:2292
+#: utils/adt/xml.c:2293
 msgid "Malformed declaration: missing version."
 msgstr "宣告格式不正確: 遺漏版本。"
 
-#: utils/adt/xml.c:2295
+#: utils/adt/xml.c:2296
 msgid "Missing encoding in text declaration."
 msgstr "文字宣告中遺漏編碼。"
 
-#: utils/adt/xml.c:2298
+#: utils/adt/xml.c:2299
 msgid "Parsing XML declaration: '?>' expected."
 msgstr "正在解析 XML 宣告: 預期是 '?>'。"
 
 # libpq/be-secure.c:303 libpq/be-secure.c:396
-#: utils/adt/xml.c:2301
+#: utils/adt/xml.c:2302
 #, c-format
 msgid "Unrecognized libxml error code: %d."
 msgstr "無法辨識的 libxml 錯誤碼: %d。"
 
-#: utils/adt/xml.c:2554
+#: utils/adt/xml.c:2555
 #, c-format
 msgid "XML does not support infinite date values."
 msgstr "XML 不支援無限日期值。"
 
-#: utils/adt/xml.c:2576 utils/adt/xml.c:2603
+#: utils/adt/xml.c:2577 utils/adt/xml.c:2604
 #, c-format
 msgid "XML does not support infinite timestamp values."
 msgstr "XML 不支援無限時標值。"
 
 # utils/init/miscinit.c:429
-#: utils/adt/xml.c:3019
+#: utils/adt/xml.c:3020
 #, c-format
 msgid "invalid query"
 msgstr "查詢無效"
 
 # tcop/postgres.c:1581 tcop/postgres.c:1780
-#: utils/adt/xml.c:3111
+#: utils/adt/xml.c:3112
 #, c-format
 msgid "portal \"%s\" does not return tuples"
 msgstr "portal \"%s\" 不傳回元組"
 
-#: utils/adt/xml.c:4365
+#: utils/adt/xml.c:4392
 #, c-format
 msgid "invalid array for XML namespace mapping"
 msgstr "XML 命名空間對應的陣列無效"
 
-#: utils/adt/xml.c:4366
+#: utils/adt/xml.c:4393
 #, c-format
 msgid "The array must be two-dimensional with length of the second axis equal to 2."
 msgstr "陣列必須是第二個軸長等於 2 的二維陣列。"
 
 # commands/typecmds.c:637
-#: utils/adt/xml.c:4390
+#: utils/adt/xml.c:4417
 #, c-format
 msgid "empty XPath expression"
 msgstr "空的 XPath 運算式"
 
-#: utils/adt/xml.c:4442
+#: utils/adt/xml.c:4469
 #, c-format
 msgid "neither namespace name nor URI may be null"
 msgstr "命名空間名稱和 URI 都不可以是 NULL"
 
 # fe-connect.c:946
-#: utils/adt/xml.c:4449
+#: utils/adt/xml.c:4476
 #, c-format
 msgid "could not register XML namespace with name \"%s\" and URI \"%s\""
 msgstr "無法註冊名稱為 \"%s\" 且 URI 為 \"%s\" 的 XML 命名空間"
 
 # gram.y:5016
-#: utils/adt/xml.c:4798
+#: utils/adt/xml.c:4825
 #, c-format
 msgid "DEFAULT namespace is not supported"
 msgstr "不支援 DEFAULT 命名空間"
 
 # commands/portalcmds.c:54 commands/portalcmds.c:174
 # commands/portalcmds.c:219
-#: utils/adt/xml.c:4827
+#: utils/adt/xml.c:4854
 #, c-format
 msgid "row path filter must not be empty string"
 msgstr "資料列路徑篩選器不得為空字串"
 
 # commands/portalcmds.c:54 commands/portalcmds.c:174
 # commands/portalcmds.c:219
-#: utils/adt/xml.c:4861
+#: utils/adt/xml.c:4888
 #, c-format
 msgid "column path filter must not be empty string"
 msgstr "欄位路徑篩選器不得為空字串"
 
 # executor/nodeSubplan.c:294 executor/nodeSubplan.c:336
 # executor/nodeSubplan.c:972
-#: utils/adt/xml.c:5008
+#: utils/adt/xml.c:5035
 #, c-format
 msgid "more than one value returned by column XPath expression"
 msgstr "欄位 XPath 運算式傳回多個值"
@@ -32252,32 +32252,32 @@ msgid "cached plan must not change result type"
 msgstr "快取計畫不可變更結果型別"
 
 # commands/dbcommands.c:201
-#: utils/cache/relcache.c:3819
+#: utils/cache/relcache.c:3820
 #, c-format
 msgid "heap relfilenumber value not set when in binary upgrade mode"
 msgstr "二進位升級模式下未設定堆積的 relfilenumber 值"
 
 # commands/dbcommands.c:201
-#: utils/cache/relcache.c:3827
+#: utils/cache/relcache.c:3828
 #, c-format
 msgid "unexpected request for new relfilenumber in binary upgrade mode"
 msgstr "二進位升級模式下出現非預期的新 relfilenumber 請求"
 
 # utils/cache/relcache.c:3264
-#: utils/cache/relcache.c:6557
+#: utils/cache/relcache.c:6558
 #, c-format
 msgid "could not create relation-cache initialization file \"%s\": %m"
 msgstr "無法建立關聯快取初始化檔案 \"%s\": %m"
 
 # utils/cache/relcache.c:3266
-#: utils/cache/relcache.c:6559
+#: utils/cache/relcache.c:6560
 #, c-format
 msgid "Continuing anyway, but there's something wrong."
 msgstr "仍然繼續執行，但存在某些問題。"
 
 # access/transam/xlog.c:1944 access/transam/xlog.c:5453
 # access/transam/xlog.c:5607 postmaster/postmaster.c:3504
-#: utils/cache/relcache.c:6889
+#: utils/cache/relcache.c:6890
 #, c-format
 msgid "could not remove cache file \"%s\": %m"
 msgstr "無法刪除快取檔案 \"%s\": %m"
