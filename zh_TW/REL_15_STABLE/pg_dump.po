@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_dump (PostgreSQL) 15\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-03 17:04+0000\n"
-"PO-Revision-Date: 2026-11-04 08:45+0800\n"
+"POT-Creation-Date: 2026-11-09 21:55+0000\n"
+"PO-Revision-Date: 2026-11-10 09:59+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
@@ -398,50 +398,55 @@ msgstr "無法解析數字陣列 \"%s\": 數字中有無效字元"
 msgid "could not parse numeric array \"%s\": too few numbers"
 msgstr "無法解析數字陣列 \"%s\": 數字過少"
 
-#: compress_io.c:111
+#: compress_io.c:113
 #, c-format
 msgid "invalid compression code: %d"
 msgstr "無效的壓縮碼: %d"
 
-#: compress_io.c:134 compress_io.c:170 compress_io.c:188 compress_io.c:504
-#: compress_io.c:547
+#: compress_io.c:136 compress_io.c:172 compress_io.c:190 compress_io.c:506
+#: compress_io.c:584
 #, c-format
 msgid "not built with zlib support"
 msgstr "建置時未包含 zlib 支援"
 
-#: compress_io.c:236 compress_io.c:333
+#: compress_io.c:238 compress_io.c:335
 #, c-format
 msgid "could not initialize compression library: %s"
 msgstr "無法初始化壓縮程式庫: %s"
 
-#: compress_io.c:256
+#: compress_io.c:258
 #, c-format
 msgid "could not close compression stream: %s"
 msgstr "無法關閉壓縮串流: %s"
 
-#: compress_io.c:273
+#: compress_io.c:275
 #, c-format
 msgid "could not compress data: %s"
 msgstr "無法壓縮資料: %s"
 
-#: compress_io.c:349 compress_io.c:364
+#: compress_io.c:351 compress_io.c:366
 #, c-format
 msgid "could not uncompress data: %s"
 msgstr "無法解壓縮資料: %s"
 
-#: compress_io.c:371
+#: compress_io.c:373
 #, c-format
 msgid "could not close compression library: %s"
 msgstr "無法關閉壓縮程式庫: %s"
 
+#: compress_io.c:533 compress_io.c:552
+#, c-format
+msgid "\"%s\" is not a regular file"
+msgstr "檔案 \"%s\" 不是一般檔案"
+
 # input.c:210
-#: compress_io.c:584 compress_io.c:621
+#: compress_io.c:621 compress_io.c:658
 #, c-format
 msgid "could not read from input file: %s"
 msgstr "無法從輸入檔讀取: %s"
 
 # input.c:210
-#: compress_io.c:623 pg_backup_custom.c:643 pg_backup_directory.c:553
+#: compress_io.c:660 pg_backup_custom.c:643 pg_backup_directory.c:557
 #: pg_backup_tar.c:726 pg_backup_tar.c:749
 #, c-format
 msgid "could not read from input file: end of file"
@@ -671,7 +676,7 @@ msgstr "無法建立大型物件 %u: %s"
 
 # fe-lobj.c:410
 # fe-lobj.c:495
-#: pg_backup_archiver.c:1397 pg_dump.c:3686
+#: pg_backup_archiver.c:1397 pg_dump.c:3693
 #, c-format
 msgid "could not open large object %u: %s"
 msgstr "無法開啟大型物件 %u: %s"
@@ -694,14 +699,14 @@ msgid "could not find entry for ID %d"
 msgstr "找不到 ID 為 %d 的項目"
 
 #: pg_backup_archiver.c:1511 pg_backup_directory.c:222
-#: pg_backup_directory.c:599
+#: pg_backup_directory.c:603
 #, c-format
 msgid "could not close TOC file: %m"
 msgstr "無法關閉 TOC 檔: %m"
 
-#: pg_backup_archiver.c:1625 pg_backup_custom.c:156 pg_backup_directory.c:332
-#: pg_backup_directory.c:586 pg_backup_directory.c:649
-#: pg_backup_directory.c:668 pg_dumpall.c:495
+#: pg_backup_archiver.c:1625 pg_backup_custom.c:156 pg_backup_directory.c:334
+#: pg_backup_directory.c:590 pg_backup_directory.c:653
+#: pg_backup_directory.c:672 pg_dumpall.c:495
 #, c-format
 msgid "could not open output file \"%s\": %m"
 msgstr "無法開啟輸出檔 \"%s\": %m"
@@ -774,7 +779,7 @@ msgid "directory \"%s\" does not appear to be a valid archive (\"toc.dat\" does 
 msgstr "目錄 \"%s\" 似乎不是有效的封存檔(\"toc.dat\" 不存在)"
 
 #: pg_backup_archiver.c:2198 pg_backup_custom.c:173 pg_backup_custom.c:807
-#: pg_backup_directory.c:207 pg_backup_directory.c:395
+#: pg_backup_directory.c:207 pg_backup_directory.c:397
 #, c-format
 msgid "could not open input file \"%s\": %m"
 msgstr "無法開啟輸入檔 \"%s\": %m"
@@ -819,12 +824,12 @@ msgstr "無法關閉輸入檔: %m"
 msgid "unrecognized file format \"%d\""
 msgstr "無法辨識的檔案格式 \"%d\""
 
-#: pg_backup_archiver.c:2465 pg_backup_archiver.c:4553
+#: pg_backup_archiver.c:2465 pg_backup_archiver.c:4572
 #, c-format
 msgid "finished item %d %s %s"
 msgstr "已完成項目 %d %s %s"
 
-#: pg_backup_archiver.c:2469 pg_backup_archiver.c:4566
+#: pg_backup_archiver.c:2469 pg_backup_archiver.c:4585
 #, c-format
 msgid "worker process failed: exit code %d"
 msgstr "工作行程失敗: 結束碼 %d"
@@ -840,144 +845,154 @@ msgstr "項目 ID %d 超出範圍 - 可能是 TOC 損壞"
 msgid "restoring tables WITH OIDS is not supported anymore"
 msgstr "不再支援還原 WITH OIDS 的資料表"
 
+#: pg_backup_archiver.c:2700
+#, c-format
+msgid "dependency ID \"%s\" out of range -- perhaps a corrupt TOC"
+msgstr "相依性 ID \"%s\" 超出範圍；可能是 TOC 已損壞"
+
 # utils/adt/encode.c:55 utils/adt/encode.c:91
-#: pg_backup_archiver.c:2752
+#: pg_backup_archiver.c:2765
 #, c-format
 msgid "unrecognized encoding \"%s\""
 msgstr "無法識別的編碼 \"%s\""
 
-#: pg_backup_archiver.c:2758
+#: pg_backup_archiver.c:2771
 #, c-format
 msgid "invalid ENCODING item: %s"
 msgstr "無效的 ENCODING 項目: %s"
 
-#: pg_backup_archiver.c:2776
+#: pg_backup_archiver.c:2789
 #, c-format
 msgid "invalid STDSTRINGS item: %s"
 msgstr "無效的 STDSTRINGS 項目: %s"
 
-#: pg_backup_archiver.c:2801
+#: pg_backup_archiver.c:2814
 #, c-format
 msgid "schema \"%s\" not found"
 msgstr "找不到 schema \"%s\""
 
 # utils/adt/date.c:2510 utils/adt/timestamp.c:3793 utils/adt/timestamp.c:3942
-#: pg_backup_archiver.c:2808
+#: pg_backup_archiver.c:2821
 #, c-format
 msgid "table \"%s\" not found"
 msgstr "找不到資料表 \"%s\""
 
 # utils/adt/date.c:2510 utils/adt/timestamp.c:3793 utils/adt/timestamp.c:3942
-#: pg_backup_archiver.c:2815
+#: pg_backup_archiver.c:2828
 #, c-format
 msgid "index \"%s\" not found"
 msgstr "找不到索引 \"%s\""
 
 # utils/adt/date.c:2510 utils/adt/timestamp.c:3793 utils/adt/timestamp.c:3942
-#: pg_backup_archiver.c:2822
+#: pg_backup_archiver.c:2835
 #, c-format
 msgid "function \"%s\" not found"
 msgstr "找不到函式 \"%s\""
 
 # utils/adt/date.c:2510 utils/adt/timestamp.c:3793 utils/adt/timestamp.c:3942
-#: pg_backup_archiver.c:2829
+#: pg_backup_archiver.c:2842
 #, c-format
 msgid "trigger \"%s\" not found"
 msgstr "找不到觸發器 \"%s\""
 
-#: pg_backup_archiver.c:3275
+#: pg_backup_archiver.c:3288
 #, c-format
 msgid "could not set session user to \"%s\": %s"
 msgstr "無法將工作階段使用者設為 \"%s\": %s"
 
-#: pg_backup_archiver.c:3424
+#: pg_backup_archiver.c:3437
 #, c-format
 msgid "could not set search_path to \"%s\": %s"
 msgstr "無法將 search_path 設定為 \"%s\": %s"
 
 # access/transam/slru.c:930 commands/tablespace.c:529
 # commands/tablespace.c:694 utils/adt/misc.c:174
-#: pg_backup_archiver.c:3486
+#: pg_backup_archiver.c:3499
 #, c-format
 msgid "could not set default_tablespace to %s: %s"
 msgstr "無法將 default_tablespace 設定為 %s: %s"
 
-#: pg_backup_archiver.c:3536
+#: pg_backup_archiver.c:3549
 #, c-format
 msgid "could not set default_table_access_method: %s"
 msgstr "無法設定 default_table_access_method: %s"
 
-#: pg_backup_archiver.c:3630 pg_backup_archiver.c:3795
+#: pg_backup_archiver.c:3629
+#, c-format
+msgid "unexpected DROP statement for object type \"%s\" -- perhaps a corrupt TOC"
+msgstr "物件型別 \"%s\" 出現非預期的 DROP 陳述式；可能是 TOC 已損壞"
+
+#: pg_backup_archiver.c:3649 pg_backup_archiver.c:3814
 #, c-format
 msgid "don't know how to set owner for object type \"%s\""
 msgstr "不知道如何設定物件型別 \"%s\" 的擁有者"
 
-#: pg_backup_archiver.c:3862
+#: pg_backup_archiver.c:3881
 #, c-format
 msgid "did not find magic string in file header"
 msgstr "檔案標頭中找不到魔術字串"
 
-#: pg_backup_archiver.c:3876
+#: pg_backup_archiver.c:3895
 #, c-format
 msgid "unsupported version (%d.%d) in file header"
 msgstr "檔案標頭中的版本不受支援(%d.%d)"
 
-#: pg_backup_archiver.c:3881
+#: pg_backup_archiver.c:3900
 #, c-format
 msgid "sanity check on integer size (%lu) failed"
 msgstr "整數大小(%lu)的完整性檢查失敗"
 
-#: pg_backup_archiver.c:3885
+#: pg_backup_archiver.c:3904
 #, c-format
 msgid "archive was made on a machine with larger integers, some operations might fail"
 msgstr "封存檔是在支援較大整數的電腦上建立的，某些操作可能會失敗"
 
-#: pg_backup_archiver.c:3895
+#: pg_backup_archiver.c:3914
 #, c-format
 msgid "expected format (%d) differs from format found in file (%d)"
 msgstr "預期的格式(%d)與檔案中找到的格式(%d)不同"
 
-#: pg_backup_archiver.c:3910
+#: pg_backup_archiver.c:3929
 #, c-format
 msgid "archive is compressed, but this installation does not support compression -- no data will be available"
 msgstr "封存已壓縮，但此安裝不支援壓縮；將沒有可用資料"
 
-#: pg_backup_archiver.c:3944
+#: pg_backup_archiver.c:3963
 #, c-format
 msgid "invalid creation date in header"
 msgstr "標頭中的建立日期無效"
 
-#: pg_backup_archiver.c:4078
+#: pg_backup_archiver.c:4097
 #, c-format
 msgid "processing item %d %s %s"
 msgstr "處理項目 %d %s %s"
 
-#: pg_backup_archiver.c:4157
+#: pg_backup_archiver.c:4176
 #, c-format
 msgid "entering main parallel loop"
 msgstr "進入主要並行迴圈"
 
-#: pg_backup_archiver.c:4168
+#: pg_backup_archiver.c:4187
 #, c-format
 msgid "skipping item %d %s %s"
 msgstr "跳過項目 %d %s %s"
 
-#: pg_backup_archiver.c:4177
+#: pg_backup_archiver.c:4196
 #, c-format
 msgid "launching item %d %s %s"
 msgstr "啟動項目 %d %s %s"
 
-#: pg_backup_archiver.c:4231
+#: pg_backup_archiver.c:4250
 #, c-format
 msgid "finished main parallel loop"
 msgstr "完成主要並行迴圈"
 
-#: pg_backup_archiver.c:4267
+#: pg_backup_archiver.c:4286
 #, c-format
 msgid "processing missed item %d %s %s"
 msgstr "處理遺漏的項目 %d %s %s"
 
-#: pg_backup_archiver.c:4872
+#: pg_backup_archiver.c:4891
 #, c-format
 msgid "table \"%s\" could not be created, will not restore its data"
 msgstr "無法建立資料表 \"%s\"，將不會還原其資料"
@@ -1150,7 +1165,7 @@ msgid "COPY failed for table \"%s\": %s"
 msgstr "COPY 資料表 \"%s\" 失敗: %s"
 
 # commands/copy.c:453
-#: pg_backup_db.c:522 pg_dump.c:2169
+#: pg_backup_db.c:522 pg_dump.c:2176
 #, c-format
 msgid "unexpected extra results during COPY of table \"%s\""
 msgstr "在 COPY 資料表 \"%s\" 時出現非預期的額外結果"
@@ -1189,62 +1204,68 @@ msgstr "無法關閉目錄 \"%s\": %m"
 msgid "could not create directory \"%s\": %m"
 msgstr "無法建立目錄 \"%s\": %m"
 
-#: pg_backup_directory.c:355 pg_backup_directory.c:497
-#: pg_backup_directory.c:533
+# commands/user.c:209
+#: pg_backup_directory.c:298 pg_backup_directory.c:463
+#, c-format
+msgid "invalid file name in archive: \"%s\""
+msgstr "封存檔中的檔案名稱無效：\"%s\""
+
+#: pg_backup_directory.c:357 pg_backup_directory.c:501
+#: pg_backup_directory.c:537
 #, c-format
 msgid "could not write to output file: %s"
 msgstr "無法寫入輸出檔: %s"
 
-#: pg_backup_directory.c:373
+#: pg_backup_directory.c:375
 #, c-format
 msgid "could not close data file: %m"
 msgstr "無法關閉資料檔: %m"
 
 # access/transam/slru.c:680 access/transam/xlog.c:1567
 # access/transam/xlog.c:1691 access/transam/xlog.c:3013
-#: pg_backup_directory.c:407
+#: pg_backup_directory.c:409
 #, c-format
 msgid "could not close data file \"%s\": %m"
 msgstr "無法關閉資料檔 \"%s\": %m"
 
-#: pg_backup_directory.c:447
+#: pg_backup_directory.c:449
 #, c-format
 msgid "could not open large object TOC file \"%s\" for input: %m"
 msgstr "無法開啟大物件 TOC 檔 \"%s\" 進行輸入: %m"
 
-#: pg_backup_directory.c:458
+#: pg_backup_directory.c:460
 #, c-format
 msgid "invalid line in large object TOC file \"%s\": \"%s\""
 msgstr "大物件 TOC 檔 \"%s\" 中有無效的行: \"%s\""
 
-#: pg_backup_directory.c:467
+#: pg_backup_directory.c:471
 #, c-format
 msgid "error reading large object TOC file \"%s\""
 msgstr "無法讀取大物件 TOC 檔 \"%s\""
 
-#: pg_backup_directory.c:471
+#: pg_backup_directory.c:475
 #, c-format
 msgid "could not close large object TOC file \"%s\": %m"
 msgstr "無法關閉大物件 TOC 檔 \"%s\": %m"
 
-#: pg_backup_directory.c:685
+#: pg_backup_directory.c:689
 #, c-format
 msgid "could not close blob data file: %m"
 msgstr "無法關閉大物件資料檔案: %m"
 
 # postmaster/syslogger.c:703
-#: pg_backup_directory.c:691
+#: pg_backup_directory.c:695
 #, c-format
 msgid "could not write to blobs TOC file"
 msgstr "無法寫入大物件 TOC 檔案"
 
-#: pg_backup_directory.c:705
+#: pg_backup_directory.c:709
 #, c-format
 msgid "could not close blobs TOC file: %m"
 msgstr "無法關閉大物件 TOC 檔案: %m"
 
 # utils/mb/encnames.c:445
-#: pg_backup_directory.c:724
+#: pg_backup_directory.c:728
 #, c-format
 msgid "file name too long: \"%s\""
 msgstr "檔案名稱過長: \"%s\""
@@ -1311,26 +1332,36 @@ msgstr "無法關閉暫存檔: %m"
 msgid "actual file length (%lld) does not match expected (%lld)"
 msgstr "實際檔案長度(%lld)與預期長度(%lld)不一致"
 
-#: pg_backup_tar.c:1084 pg_backup_tar.c:1115
+#: pg_backup_tar.c:1084 pg_backup_tar.c:1126
 #, c-format
 msgid "could not find header for file \"%s\" in tar archive"
 msgstr "在 tar 封存檔中找不到檔案 \"%s\" 的標頭"
 
-#: pg_backup_tar.c:1102
+#: pg_backup_tar.c:1108
+#, c-format
+msgid "tar member \"%s\" precedes \"%s\" -- perhaps a corrupt archive"
+msgstr "tar 成員 \"%s\" 位於 \"%s\" 之前；可能是封存檔已損壞"
+
+#: pg_backup_tar.c:1113
 #, c-format
 msgid "restoring data out of order is not supported in this archive format: \"%s\" is required, but comes before \"%s\" in the archive file."
 msgstr "這種封存檔格式不支援非循序還原資料: 需要的是 \"%s\"，但在封存檔案中卻出現在 \"%s\" 之前。"
 
-#: pg_backup_tar.c:1149
+#: pg_backup_tar.c:1160
 #, c-format
 msgid "incomplete tar header found (%lu byte)"
 msgid_plural "incomplete tar header found (%lu bytes)"
 msgstr[0] "找到不完整的 tar 標頭(%lu 位元組)"
 
-#: pg_backup_tar.c:1188
+#: pg_backup_tar.c:1199
 #, c-format
 msgid "corrupt tar header found in %s (expected %d, computed %d) file position %llu"
 msgstr "在 %s 中發現損壞的 tar 標頭(預期是 %d, 計算得到 %d)，封存檔位置 %llu"
+
+#: pg_backup_tar.c:1208
+#, c-format
+msgid "corrupt tar header found in %s (invalid file length) file position %lld"
+msgstr "在 %s 中發現損壞的 tar 標頭（檔案長度無效），封存檔位置為 %lld"
 
 # commands/variable.c:403
 #: pg_backup_utils.c:54
@@ -1339,7 +1370,7 @@ msgid "unrecognized section name: \"%s\""
 msgstr "無法識別的區段名稱: \"%s\""
 
 # tcop/postgres.c:2636 tcop/postgres.c:2652
-#: pg_backup_utils.c:55 pg_dump.c:634 pg_dump.c:651 pg_dumpall.c:349
+#: pg_backup_utils.c:55 pg_dump.c:638 pg_dump.c:655 pg_dumpall.c:349
 #: pg_dumpall.c:359 pg_dumpall.c:367 pg_dumpall.c:375 pg_dumpall.c:382
 #: pg_dumpall.c:392 pg_dumpall.c:477 pg_restore.c:296 pg_restore.c:312
 #: pg_restore.c:326
@@ -1352,110 +1383,111 @@ msgstr "用 \"%s --help\" 取得更多資訊。"
 msgid "out of on_exit_nicely slots"
 msgstr "on_exit_nicely 槽已用盡"
 
-#: pg_dump.c:649 pg_dumpall.c:357 pg_restore.c:310
+#: pg_dump.c:653 pg_dumpall.c:357 pg_restore.c:310
 #, c-format
 msgid "too many command-line arguments (first is \"%s\")"
 msgstr "命令列參數過多(第一個多餘參數是 \"%s\")"
 
-#: pg_dump.c:668 pg_restore.c:349
+#: pg_dump.c:672 pg_restore.c:349
 #, c-format
 msgid "options -s/--schema-only and -a/--data-only cannot be used together"
 msgstr "無法同時使用選項 -s/--schema-only 和 -a/--data-only"
 
-#: pg_dump.c:671
+#: pg_dump.c:675
 #, c-format
 msgid "options -s/--schema-only and --include-foreign-data cannot be used together"
 msgstr "無法同時使用選項 -s/--schema-only 和 --include-foreign-data"
 
-#: pg_dump.c:674
+#: pg_dump.c:678
 #, c-format
 msgid "option --include-foreign-data is not supported with parallel backup"
 msgstr "選項 --include-foreign-data 不支援並行備份"
 
-#: pg_dump.c:677 pg_restore.c:352
+#: pg_dump.c:681 pg_restore.c:352
 #, c-format
 msgid "options -c/--clean and -a/--data-only cannot be used together"
 msgstr "無法同時使用選項 -c/--clean 和 -a/--data-only"
 
-#: pg_dump.c:680 pg_dumpall.c:387 pg_restore.c:377
+#: pg_dump.c:684 pg_dumpall.c:387 pg_restore.c:377
 #, c-format
 msgid "option --if-exists requires option -c/--clean"
 msgstr "選項 --if-exists 需要選項 -c/--clean"
 
-#: pg_dump.c:687
+#: pg_dump.c:691
 #, c-format
 msgid "option --on-conflict-do-nothing requires option --inserts, --rows-per-insert, or --column-inserts"
 msgstr "選項 --on-conflict-do-nothing 需要選項 --inserts 或 --rows-per-insert 或 --column-inserts"
 
 # access/transam/xlog.c:4111
-#: pg_dump.c:703 pg_dumpall.c:448 pg_restore.c:343
+#: pg_dump.c:709 pg_dumpall.c:448 pg_restore.c:343
 #, c-format
 msgid "could not generate restrict key"
 msgstr "無法產生限制金鑰"
 
 # utils/adt/like.c:453 utils/adt/like_match.c:291 utils/adt/regexp.c:461
-#: pg_dump.c:705 pg_dumpall.c:450 pg_restore.c:345
+#: pg_dump.c:711 pg_dumpall.c:450 pg_restore.c:345
 #, c-format
 msgid "invalid restrict key"
 msgstr "無效的限制金鑰"
 
-#: pg_dump.c:708
+# utils/misc/guc.c:3352
+#: pg_dump.c:714
 #, c-format
-msgid "option --restrict-key can only be used with --format=plain"
-msgstr "選項 --restrict-key 只能與 --format=plain 一起使用"
+msgid "option %s can only be used with %s or %s"
+msgstr "選項 %s 只能與 %s 或 %s 一起使用"
 
-#: pg_dump.c:723
+#: pg_dump.c:730
 #, c-format
 msgid "requested compression not available in this installation -- archive will be uncompressed"
 msgstr "此安裝不支援所請求的壓縮；封存將不壓縮"
 
 # input.c:213
-#: pg_dump.c:736
+#: pg_dump.c:743
 #, c-format
 msgid "parallel backup only supported by the directory format"
 msgstr "並行備份只支援目錄格式"
 
-#: pg_dump.c:782
+#: pg_dump.c:789
 #, c-format
 msgid "last built-in OID is %u"
 msgstr "最後的內建 OID 為 %u"
 
 # describe.c:1542
-#: pg_dump.c:791
+#: pg_dump.c:798
 #, c-format
 msgid "no matching schemas were found"
 msgstr "找不到符合的 schema"
 
 # describe.c:1542
-#: pg_dump.c:805
+#: pg_dump.c:812
 #, c-format
 msgid "no matching tables were found"
 msgstr "找不到符合的資料表"
 
 # describe.c:1542
-#: pg_dump.c:827
+#: pg_dump.c:834
 #, c-format
 msgid "no matching extensions were found"
 msgstr "找不到符合的擴充模組"
 
-#: pg_dump.c:1011
+#: pg_dump.c:1018
 #, c-format
 msgid ""
 "%s dumps a database as a text file or to other formats.\n"
 "\n"
 msgstr "%s 會將資料庫備份為文字檔或其他格式。\n\n"
 
-#: pg_dump.c:1012 pg_dumpall.c:641 pg_restore.c:454
+#: pg_dump.c:1019 pg_dumpall.c:641 pg_restore.c:454
 #, c-format
 msgid "Usage:\n"
 msgstr "用法:\n"
 
-#: pg_dump.c:1013
+#: pg_dump.c:1020
 #, c-format
 msgid "  %s [OPTION]... [DBNAME]\n"
 msgstr "  %s [選項]... [資料庫名稱]\n"
 
-#: pg_dump.c:1015 pg_dumpall.c:644 pg_restore.c:457
+#: pg_dump.c:1022 pg_dumpall.c:644 pg_restore.c:457
 #, c-format
 msgid ""
 "\n"
@@ -1464,180 +1496,180 @@ msgstr ""
 "\n"
 "一般選項:\n"
 
-#: pg_dump.c:1016
+#: pg_dump.c:1023
 #, c-format
 msgid "  -f, --file=FILENAME          output file or directory name\n"
 msgstr "  -f, --file=FILENAME          輸出檔案或目錄的名稱\n"
 
-#: pg_dump.c:1017
+#: pg_dump.c:1024
 #, c-format
 msgid ""
 "  -F, --format=c|d|t|p         output file format (custom, directory, tar,\n"
 "                               plain text (default))\n"
 msgstr "  -F, --format=c|d|t|p         輸出檔案格式(自訂、目錄、tar、純文字(預設))\n"
 
-#: pg_dump.c:1019
+#: pg_dump.c:1026
 #, c-format
 msgid "  -j, --jobs=NUM               use this many parallel jobs to dump\n"
 msgstr "  -j, --jobs=NUM               使用指定數量的並行作業來備份\n"
 
-#: pg_dump.c:1020 pg_dumpall.c:646
+#: pg_dump.c:1027 pg_dumpall.c:646
 #, c-format
 msgid "  -v, --verbose                verbose mode\n"
 msgstr "  -v, --verbose                詳細模式\n"
 
-#: pg_dump.c:1021 pg_dumpall.c:647
+#: pg_dump.c:1028 pg_dumpall.c:647
 #, c-format
 msgid "  -V, --version                output version information, then exit\n"
 msgstr "  -V, --version                顯示版本，然後結束\n"
 
-#: pg_dump.c:1022
+#: pg_dump.c:1029
 #, c-format
 msgid "  -Z, --compress=0-9           compression level for compressed formats\n"
 msgstr "  -Z, --compress=0-9           壓縮格式的壓縮層級\n"
 
-#: pg_dump.c:1023 pg_dumpall.c:648
+#: pg_dump.c:1030 pg_dumpall.c:648
 #, c-format
 msgid "  --lock-wait-timeout=TIMEOUT  fail after waiting TIMEOUT for a table lock\n"
 msgstr "  --lock-wait-timeout=TIMEOUT  等待資料表鎖定超過 TIMEOUT 後失敗\n"
 
-#: pg_dump.c:1024 pg_dumpall.c:675
+#: pg_dump.c:1031 pg_dumpall.c:675
 #, c-format
 msgid "  --no-sync                    do not wait for changes to be written safely to disk\n"
 msgstr "  --no-sync                    不等待變更安全寫入磁碟\n"
 
-#: pg_dump.c:1025 pg_dumpall.c:649
+#: pg_dump.c:1032 pg_dumpall.c:649
 #, c-format
 msgid "  -?, --help                   show this help, then exit\n"
 msgstr "  -?, --help                   顯示說明，然後結束\n"
 
-#: pg_dump.c:1027 pg_dumpall.c:650
+#: pg_dump.c:1034 pg_dumpall.c:650
 #, c-format
 msgid ""
 "\n"
 "Options controlling the output content:\n"
 msgstr "\n控制輸出內容的選項:\n"
 
-#: pg_dump.c:1028 pg_dumpall.c:651
+#: pg_dump.c:1035 pg_dumpall.c:651
 #, c-format
 msgid "  -a, --data-only              dump only the data, not the schema\n"
 msgstr "  -a, --data-only              只備份資料，不含 schema\n"
 
-#: pg_dump.c:1029
+#: pg_dump.c:1036
 #, c-format
 msgid "  -b, --blobs                  include large objects in dump\n"
 msgstr "  -b, --blobs                  在備份中包含大物件\n"
 
-#: pg_dump.c:1030
+#: pg_dump.c:1037
 #, c-format
 msgid "  -B, --no-blobs               exclude large objects in dump\n"
 msgstr "  -B, --no-blobs               從備份中排除大物件\n"
 
-#: pg_dump.c:1031 pg_restore.c:468
+#: pg_dump.c:1038 pg_restore.c:468
 #, c-format
 msgid "  -c, --clean                  clean (drop) database objects before recreating\n"
 msgstr "  -c, --clean                  重建前清理(刪除)資料庫物件\n"
 
-#: pg_dump.c:1032
+#: pg_dump.c:1039
 #, c-format
 msgid "  -C, --create                 include commands to create database in dump\n"
 msgstr "  -C, --create                 在備份中包含建立資料庫的命令\n"
 
-#: pg_dump.c:1033
+#: pg_dump.c:1040
 #, c-format
 msgid "  -e, --extension=PATTERN      dump the specified extension(s) only\n"
 msgstr "  -e, --extension=PATTERN      只備份指定的擴充模組\n"
 
-#: pg_dump.c:1034 pg_dumpall.c:653
+#: pg_dump.c:1041 pg_dumpall.c:653
 #, c-format
 msgid "  -E, --encoding=ENCODING      dump the data in encoding ENCODING\n"
 msgstr "  -E, --encoding=ENCODING      以編碼 ENCODING 備份資料\n"
 
-#: pg_dump.c:1035
+#: pg_dump.c:1042
 #, c-format
 msgid "  -n, --schema=PATTERN         dump the specified schema(s) only\n"
 msgstr "  -n, --schema=PATTERN         只備份指定的 schema\n"
 
-#: pg_dump.c:1036
+#: pg_dump.c:1043
 #, c-format
 msgid "  -N, --exclude-schema=PATTERN do NOT dump the specified schema(s)\n"
 msgstr "  -N, --exclude-schema=PATTERN 不要備份指定的 schema\n"
 
-#: pg_dump.c:1037
+#: pg_dump.c:1044
 #, c-format
 msgid ""
 "  -O, --no-owner               skip restoration of object ownership in\n"
 "                               plain-text format\n"
 msgstr "  -O, --no-owner               在純文字格式跳過還原物件擁有權\n"
 
-#: pg_dump.c:1039 pg_dumpall.c:657
+#: pg_dump.c:1046 pg_dumpall.c:657
 #, c-format
 msgid "  -s, --schema-only            dump only the schema, no data\n"
 msgstr "  -s, --schema-only            只備份 schema，不含資料\n"
 
-#: pg_dump.c:1040
+#: pg_dump.c:1047
 #, c-format
 msgid "  -S, --superuser=NAME         superuser user name to use in plain-text format\n"
 msgstr "  -S, --superuser=NAME         在純文字格式使用的超級使用者名稱\n"
 
-#: pg_dump.c:1041
+#: pg_dump.c:1048
 #, c-format
 msgid "  -t, --table=PATTERN          dump the specified table(s) only\n"
 msgstr "  -t, --table=PATTERN          僅備份指定的資料表\n"
 
-#: pg_dump.c:1042
+#: pg_dump.c:1049
 #, c-format
 msgid "  -T, --exclude-table=PATTERN  do NOT dump the specified table(s)\n"
 msgstr "  -T, --exclude-table=PATTERN  不要備份指定的資料表\n"
 
-#: pg_dump.c:1043 pg_dumpall.c:660
+#: pg_dump.c:1050 pg_dumpall.c:660
 #, c-format
 msgid "  -x, --no-privileges          do not dump privileges (grant/revoke)\n"
 msgstr "  -x, --no-privileges          不要備份權限(grant/revoke)\n"
 
-#: pg_dump.c:1044 pg_dumpall.c:661
+#: pg_dump.c:1051 pg_dumpall.c:661
 #, c-format
 msgid "  --binary-upgrade             for use by upgrade utilities only\n"
 msgstr "  --binary-upgrade             只供升級工具使用\n"
 
-#: pg_dump.c:1045 pg_dumpall.c:662
+#: pg_dump.c:1052 pg_dumpall.c:662
 #, c-format
 msgid "  --column-inserts             dump data as INSERT commands with column names\n"
 msgstr "  --column-inserts             將資料備份為包含欄位名稱的 INSERT 命令\n"
 
-#: pg_dump.c:1046 pg_dumpall.c:663
+#: pg_dump.c:1053 pg_dumpall.c:663
 #, c-format
 msgid "  --disable-dollar-quoting     disable dollar quoting, use SQL standard quoting\n"
 msgstr "  --disable-dollar-quoting     停用錢號引號，使用 SQL 標準引號\n"
 
-#: pg_dump.c:1047 pg_dumpall.c:664 pg_restore.c:485
+#: pg_dump.c:1054 pg_dumpall.c:664 pg_restore.c:485
 #, c-format
 msgid "  --disable-triggers           disable triggers during data-only restore\n"
 msgstr "  --disable-triggers           僅還原資料時停用觸發器\n"
 
-#: pg_dump.c:1048
+#: pg_dump.c:1055
 #, c-format
 msgid ""
 "  --enable-row-security        enable row security (dump only content user has\n"
 "                               access to)\n"
 msgstr "  --enable-row-security        啟用列安全性(只備份使用者有存取權的內容)\n"
 
-#: pg_dump.c:1050
+#: pg_dump.c:1057
 #, c-format
 msgid "  --exclude-table-data=PATTERN do NOT dump data for the specified table(s)\n"
 msgstr "  --exclude-table-data=PATTERN 不要備份指定資料表的資料\n"
 
-#: pg_dump.c:1051 pg_dumpall.c:666
+#: pg_dump.c:1058 pg_dumpall.c:666
 #, c-format
 msgid "  --extra-float-digits=NUM     override default setting for extra_float_digits\n"
 msgstr "  --extra-float-digits=NUM     覆蓋 extra_float_digits 的預設設定\n"
 
-#: pg_dump.c:1052 pg_dumpall.c:667 pg_restore.c:487
+#: pg_dump.c:1059 pg_dumpall.c:667 pg_restore.c:487
 #, c-format
 msgid "  --if-exists                  use IF EXISTS when dropping objects\n"
 msgstr "  --if-exists                  刪除物件時使用 IF EXISTS\n"
 
-#: pg_dump.c:1053
+#: pg_dump.c:1060
 #, c-format
 msgid ""
 "  --include-foreign-data=PATTERN\n"
@@ -1645,99 +1677,99 @@ msgid ""
 "                               servers matching PATTERN\n"
 msgstr "  --include-foreign-data=PATTERN\n                               包含符合 PATTERN 的外部伺服器上的\n                               外部資料表中的資料\n"
 
-#: pg_dump.c:1056 pg_dumpall.c:668
+#: pg_dump.c:1063 pg_dumpall.c:668
 #, c-format
 msgid "  --inserts                    dump data as INSERT commands, rather than COPY\n"
 msgstr "  --inserts                    備份資料為 INSERT 命令，而不是 COPY\n"
 
-#: pg_dump.c:1057 pg_dumpall.c:669
+#: pg_dump.c:1064 pg_dumpall.c:669
 #, c-format
 msgid "  --load-via-partition-root    load partitions via the root table\n"
 msgstr "  --load-via-partition-root    透過根資料表載入分割資料表\n"
 
-#: pg_dump.c:1058 pg_dumpall.c:670
+#: pg_dump.c:1065 pg_dumpall.c:670
 #, c-format
 msgid "  --no-comments                do not dump comments\n"
 msgstr "  --no-comments                不備份註解\n"
 
-#: pg_dump.c:1059 pg_dumpall.c:671
+#: pg_dump.c:1066 pg_dumpall.c:671
 #, c-format
 msgid "  --no-publications            do not dump publications\n"
 msgstr "  --no-publications            不備份發布\n"
 
-#: pg_dump.c:1060 pg_dumpall.c:673
+#: pg_dump.c:1067 pg_dumpall.c:673
 #, c-format
 msgid "  --no-security-labels         do not dump security label assignments\n"
 msgstr "  --no-security-labels         不備份安全性標籤指派\n"
 
-#: pg_dump.c:1061 pg_dumpall.c:674
+#: pg_dump.c:1068 pg_dumpall.c:674
 #, c-format
 msgid "  --no-subscriptions           do not dump subscriptions\n"
 msgstr "  --no-subscriptions           不備份訂閱\n"
 
-#: pg_dump.c:1062 pg_dumpall.c:676
+#: pg_dump.c:1069 pg_dumpall.c:676
 #, c-format
 msgid "  --no-table-access-method     do not dump table access methods\n"
 msgstr "  --no-table-access-method     不備份資料表存取方法\n"
 
-#: pg_dump.c:1063 pg_dumpall.c:677
+#: pg_dump.c:1070 pg_dumpall.c:677
 #, c-format
 msgid "  --no-tablespaces             do not dump tablespace assignments\n"
 msgstr "  --no-tablespaces             不備份表空間指派\n"
 
-#: pg_dump.c:1064 pg_dumpall.c:678
+#: pg_dump.c:1071 pg_dumpall.c:678
 #, c-format
 msgid "  --no-toast-compression       do not dump TOAST compression methods\n"
 msgstr "  --no-toast-compression       不備份 TOAST 壓縮方法\n"
 
-#: pg_dump.c:1065 pg_dumpall.c:679
+#: pg_dump.c:1072 pg_dumpall.c:679
 #, c-format
 msgid "  --no-unlogged-table-data     do not dump unlogged table data\n"
 msgstr "  --no-unlogged-table-data     不備份不記錄 WAL 的資料表的資料\n"
 
-#: pg_dump.c:1066 pg_dumpall.c:680
+#: pg_dump.c:1073 pg_dumpall.c:680
 #, c-format
 msgid "  --on-conflict-do-nothing     add ON CONFLICT DO NOTHING to INSERT commands\n"
 msgstr "  --on-conflict-do-nothing     在 INSERT 命令加上 ON CONFLICT DO NOTHING\n"
 
-#: pg_dump.c:1067 pg_dumpall.c:681
+#: pg_dump.c:1074 pg_dumpall.c:681
 #, c-format
 msgid "  --quote-all-identifiers      quote all identifiers, even if not key words\n"
 msgstr "  --quote-all-identifiers      所有識別名稱加引號，即使不是關鍵字\n"
 
-#: pg_dump.c:1068 pg_dumpall.c:682 pg_restore.c:496
+#: pg_dump.c:1075 pg_dumpall.c:682 pg_restore.c:496
 #, c-format
 msgid "  --restrict-key=RESTRICT_KEY  use provided string as psql \\restrict key\n"
 msgstr "  --restrict-key=RESTRICT_KEY  使用提供的字串作為 psql \\restrict 金鑰\n"
 
-#: pg_dump.c:1069 pg_dumpall.c:683
+#: pg_dump.c:1076 pg_dumpall.c:683
 #, c-format
 msgid "  --rows-per-insert=NROWS      number of rows per INSERT; implies --inserts\n"
 msgstr "  --rows-per-insert=NROWS      每個 INSERT 的資料筆數；隱含啟用 --inserts\n"
 
-#: pg_dump.c:1070
+#: pg_dump.c:1077
 #, c-format
 msgid "  --section=SECTION            dump named section (pre-data, data, or post-data)\n"
 msgstr "  --section=SECTION            備份指定的區段(pre-data, data 或 post-data)\n"
 
-#: pg_dump.c:1071
+#: pg_dump.c:1078
 #, c-format
 msgid "  --serializable-deferrable    wait until the dump can run without anomalies\n"
 msgstr "  --serializable-deferrable    等待備份可在無並行異常的情況下執行\n"
 
-#: pg_dump.c:1072
+#: pg_dump.c:1079
 #, c-format
 msgid "  --snapshot=SNAPSHOT          use given snapshot for the dump\n"
 msgstr "  --snapshot=SNAPSHOT          使用指定的快照進行備份\n"
 
-#: pg_dump.c:1073 pg_restore.c:498
+#: pg_dump.c:1080 pg_restore.c:498
 #, c-format
 msgid ""
 "  --strict-names               require table and/or schema include patterns to\n"
 "                               match at least one entity each\n"
 msgstr "  --strict-names               資料表和/或 schema 的納入模式\n                               必須各自至少符合一個物件\n"
 
-#: pg_dump.c:1075 pg_dumpall.c:684 pg_restore.c:500
+#: pg_dump.c:1082 pg_dumpall.c:684 pg_restore.c:500
 #, c-format
 msgid ""
 "  --use-set-session-authorization\n"
@@ -1745,7 +1777,7 @@ msgid ""
 "                               ALTER OWNER commands to set ownership\n"
 msgstr "  --use-set-session-authorization\n                               使用 SET SESSION AUTHORIZATION 命令而非\n                               ALTER OWNER 命令來設定擁有權\n"
 
-#: pg_dump.c:1079 pg_dumpall.c:688 pg_restore.c:504
+#: pg_dump.c:1086 pg_dumpall.c:688 pg_restore.c:504
 #, c-format
 msgid ""
 "\n"
@@ -1754,42 +1786,42 @@ msgstr ""
 "\n"
 "連線選項:\n"
 
-#: pg_dump.c:1080
+#: pg_dump.c:1087
 #, c-format
 msgid "  -d, --dbname=DBNAME      database to dump\n"
 msgstr "  -d, --dbname=DBNAME      要備份的資料庫\n"
 
-#: pg_dump.c:1081 pg_dumpall.c:690 pg_restore.c:505
+#: pg_dump.c:1088 pg_dumpall.c:690 pg_restore.c:505
 #, c-format
 msgid "  -h, --host=HOSTNAME      database server host or socket directory\n"
 msgstr "  -h, --host=HOSTNAME      資料庫伺服器主機或 socket 目錄\n"
 
-#: pg_dump.c:1082 pg_dumpall.c:692 pg_restore.c:506
+#: pg_dump.c:1089 pg_dumpall.c:692 pg_restore.c:506
 #, c-format
 msgid "  -p, --port=PORT          database server port number\n"
 msgstr "  -p, --port=PORT          資料庫伺服器連接埠\n"
 
-#: pg_dump.c:1083 pg_dumpall.c:693 pg_restore.c:507
+#: pg_dump.c:1090 pg_dumpall.c:693 pg_restore.c:507
 #, c-format
 msgid "  -U, --username=NAME      connect as specified database user\n"
 msgstr "  -U, --username=NAME      以指定的資料庫使用者連線\n"
 
-#: pg_dump.c:1084 pg_dumpall.c:694 pg_restore.c:508
+#: pg_dump.c:1091 pg_dumpall.c:694 pg_restore.c:508
 #, c-format
 msgid "  -w, --no-password        never prompt for password\n"
 msgstr "  -w, --no-password        不詢問密碼\n"
 
-#: pg_dump.c:1085 pg_dumpall.c:695 pg_restore.c:509
+#: pg_dump.c:1092 pg_dumpall.c:695 pg_restore.c:509
 #, c-format
 msgid "  -W, --password           force password prompt (should happen automatically)\n"
 msgstr "  -W, --password           強制提示輸入密碼(應自動提示)\n"
 
-#: pg_dump.c:1086 pg_dumpall.c:696
+#: pg_dump.c:1093 pg_dumpall.c:696
 #, c-format
 msgid "  --role=ROLENAME          do SET ROLE before dump\n"
 msgstr "  --role=ROLENAME          備份之前 SET ROLE\n"
 
-#: pg_dump.c:1088
+#: pg_dump.c:1095
 #, c-format
 msgid ""
 "\n"
@@ -1798,429 +1830,429 @@ msgid ""
 "\n"
 msgstr "\n若未提供資料庫名稱，則使用環境變數 PGDATABASE 的內容。\n\n"
 
-#: pg_dump.c:1090 pg_dumpall.c:700 pg_restore.c:516
+#: pg_dump.c:1097 pg_dumpall.c:700 pg_restore.c:516
 #, c-format
 msgid "Report bugs to <%s>.\n"
 msgstr "回報錯誤至 <%s>。\n"
 
-#: pg_dump.c:1091 pg_dumpall.c:701 pg_restore.c:517
+#: pg_dump.c:1098 pg_dumpall.c:701 pg_restore.c:517
 #, c-format
 msgid "%s home page: <%s>\n"
 msgstr "%s 首頁: <%s>\n"
 
-#: pg_dump.c:1110 pg_dumpall.c:507
+#: pg_dump.c:1117 pg_dumpall.c:507
 #, c-format
 msgid "invalid client encoding \"%s\" specified"
 msgstr "指定的客戶端編碼 \"%s\" 無效"
 
-#: pg_dump.c:1256
+#: pg_dump.c:1263
 #, c-format
 msgid "parallel dumps from standby servers are not supported by this server version"
 msgstr "此伺服器版本不支援來自待命伺服器的並行備份"
 
-#: pg_dump.c:1321
+#: pg_dump.c:1328
 #, c-format
 msgid "invalid output format \"%s\" specified"
 msgstr "指定的輸出格式 \"%s\" 無效"
 
 # catalog/namespace.c:1201 gram.y:2516 gram.y:7422 parser/parse_expr.c:1183
 # parser/parse_target.c:734
-#: pg_dump.c:1362 pg_dump.c:1418 pg_dump.c:1471 pg_dumpall.c:1350
+#: pg_dump.c:1369 pg_dump.c:1425 pg_dump.c:1478 pg_dumpall.c:1350
 #, c-format
 msgid "improper qualified name (too many dotted names): %s"
 msgstr "不合適的限定名稱(以點號分隔的名稱部分過多): %s"
 
 # describe.c:1542
-#: pg_dump.c:1370
+#: pg_dump.c:1377
 #, c-format
 msgid "no matching schemas were found for pattern \"%s\""
 msgstr "找不到符合模式 \"%s\" 的 schema"
 
 # describe.c:1542
-#: pg_dump.c:1423
+#: pg_dump.c:1430
 #, c-format
 msgid "no matching extensions were found for pattern \"%s\""
 msgstr "找不到符合模式 \"%s\" 的擴充模組"
 
-#: pg_dump.c:1476
+#: pg_dump.c:1483
 #, c-format
 msgid "no matching foreign servers were found for pattern \"%s\""
 msgstr "找不到符合模式 \"%s\" 的外部伺服器"
 
 # catalog/namespace.c:1313
-#: pg_dump.c:1539
+#: pg_dump.c:1546
 #, c-format
 msgid "improper relation name (too many dotted names): %s"
 msgstr "不合適的關聯名稱(以點號分隔的名稱部分過多): %s"
 
 # describe.c:1542
-#: pg_dump.c:1550
+#: pg_dump.c:1557
 #, c-format
 msgid "no matching tables were found for pattern \"%s\""
 msgstr "找不到符合模式 \"%s\" 的資料表"
 
 # common.c:636
 # common.c:871
-#: pg_dump.c:1577
+#: pg_dump.c:1584
 #, c-format
 msgid "You are currently not connected to a database."
 msgstr "目前尚未連線至資料庫。"
 
 # catalog/namespace.c:1195 parser/parse_expr.c:1157 parser/parse_target.c:725
-#: pg_dump.c:1580
+#: pg_dump.c:1587
 #, c-format
 msgid "cross-database references are not implemented: %s"
 msgstr "尚未實作跨資料庫參考: %s"
 
-#: pg_dump.c:2040
+#: pg_dump.c:2047
 #, c-format
 msgid "dumping contents of table \"%s.%s\""
 msgstr "備份資料表 \"%s.%s\" 的內容"
 
-#: pg_dump.c:2150
+#: pg_dump.c:2157
 #, c-format
 msgid "Dumping the contents of table \"%s\" failed: PQgetCopyData() failed."
 msgstr "備份資料表 \"%s\" 的內容失敗: PQgetCopyData() 失敗。"
 
-#: pg_dump.c:2151 pg_dump.c:2161
+#: pg_dump.c:2158 pg_dump.c:2168
 #, c-format
 msgid "Error message from server: %s"
 msgstr "伺服器錯誤訊息: %s"
 
-#: pg_dump.c:2152 pg_dump.c:2162
+#: pg_dump.c:2159 pg_dump.c:2169
 #, c-format
 msgid "Command was: %s"
 msgstr "命令是: %s"
 
-#: pg_dump.c:2160
+#: pg_dump.c:2167
 #, c-format
 msgid "Dumping the contents of table \"%s\" failed: PQgetResult() failed."
 msgstr "備份資料表 \"%s\" 的內容失敗: PQgetResult() 失敗。"
 
 # utils/init/miscinit.c:792 utils/misc/guc.c:5074
-#: pg_dump.c:2251
+#: pg_dump.c:2258
 #, c-format
 msgid "wrong number of fields retrieved from table \"%s\""
 msgstr "從資料表 \"%s\" 取得的欄位數不正確"
 
-#: pg_dump.c:2954
+#: pg_dump.c:2961
 #, c-format
 msgid "saving database definition"
 msgstr "儲存資料庫定義"
 
-#: pg_dump.c:3050
+#: pg_dump.c:3057
 #, c-format
 msgid "unrecognized locale provider: %s"
 msgstr "無法識別的區域提供者: %s"
 
-#: pg_dump.c:3396
+#: pg_dump.c:3403
 #, c-format
 msgid "saving encoding = %s"
 msgstr "儲存編碼 = %s"
 
-#: pg_dump.c:3421
+#: pg_dump.c:3428
 #, c-format
 msgid "saving standard_conforming_strings = %s"
 msgstr "正在儲存 standard_conforming_strings = %s"
 
-#: pg_dump.c:3460
+#: pg_dump.c:3467
 #, c-format
 msgid "could not parse result of current_schemas()"
 msgstr "無法解析 current_schemas() 的結果"
 
-#: pg_dump.c:3479
+#: pg_dump.c:3486
 #, c-format
 msgid "saving search_path = %s"
 msgstr "正在儲存 search_path = %s"
 
-#: pg_dump.c:3517
+#: pg_dump.c:3524
 #, c-format
 msgid "reading large objects"
 msgstr "讀取大物件"
 
-#: pg_dump.c:3655
+#: pg_dump.c:3662
 #, c-format
 msgid "saving large objects"
 msgstr "正在儲存大物件"
 
-#: pg_dump.c:3696
+#: pg_dump.c:3703
 #, c-format
 msgid "error reading large object %u: %s"
 msgstr "讀取大物件 %u 時發生錯誤: %s"
 
-#: pg_dump.c:3802
+#: pg_dump.c:3809
 #, c-format
 msgid "reading row-level security policies"
 msgstr "讀取列層級安全政策"
 
 # utils/adt/regproc.c:1209
-#: pg_dump.c:3943
+#: pg_dump.c:3950
 #, c-format
 msgid "unexpected policy command type: %c"
 msgstr "非預期的政策命令型別: %c"
 
-#: pg_dump.c:4393 pg_dump.c:4733 pg_dump.c:11966 pg_dump.c:17895
-#: pg_dump.c:17897 pg_dump.c:18518
+#: pg_dump.c:4400 pg_dump.c:4740 pg_dump.c:12076 pg_dump.c:18012
+#: pg_dump.c:18014 pg_dump.c:18635
 #, c-format
 msgid "could not parse %s array"
 msgstr "無法解析 %s 陣列"
 
 # utils/misc/guc.c:434
-#: pg_dump.c:4601
+#: pg_dump.c:4608
 #, c-format
 msgid "subscriptions not dumped because current user is not a superuser"
 msgstr "未備份訂閱，因為目前使用者不是超級使用者"
 
 # catalog/dependency.c:152
-#: pg_dump.c:5115
+#: pg_dump.c:5153
 #, c-format
 msgid "could not find parent extension for %s %s"
 msgstr "找不到 %s %s 的父擴充模組"
 
 # catalog/aclchk.c:1689 catalog/aclchk.c:2001
-#: pg_dump.c:5260
+#: pg_dump.c:5298
 #, c-format
 msgid "schema with OID %u does not exist"
 msgstr "OID 為 %u 的 schema 不存在"
 
-#: pg_dump.c:6736 pg_dump.c:17154
+#: pg_dump.c:6774 pg_dump.c:17271
 #, c-format
 msgid "failed sanity check, parent table with OID %u of sequence with OID %u not found"
 msgstr "完整性檢查失敗，找不到 OID 為 %u 的父資料表(序列 OID 為 %u)"
 
-#: pg_dump.c:6881
+#: pg_dump.c:6919
 #, c-format
 msgid "failed sanity check, table OID %u appearing in pg_partitioned_table not found"
 msgstr "完整性檢查失敗，找不到 pg_partitioned_table 中所列的 OID 為 %u 的資料表"
 
-#: pg_dump.c:7112 pg_dump.c:7382 pg_dump.c:7853 pg_dump.c:8520 pg_dump.c:8641
-#: pg_dump.c:8795
+#: pg_dump.c:7150 pg_dump.c:7420 pg_dump.c:7891 pg_dump.c:8586 pg_dump.c:8712
+#: pg_dump.c:8866
 #, c-format
 msgid "unrecognized table OID %u"
 msgstr "無法辨識的資料表 OID %u"
 
-#: pg_dump.c:7116
+#: pg_dump.c:7154
 #, c-format
 msgid "unexpected index data for table \"%s\""
 msgstr "非預期的資料表 \"%s\" 索引資料"
 
-#: pg_dump.c:7614
+#: pg_dump.c:7652
 #, c-format
 msgid "failed sanity check, parent table with OID %u of pg_rewrite entry with OID %u not found"
 msgstr "完整性檢查失敗，找不到 OID 為 %u 的父資料表(pg_rewrite 項目 OID 為 %u)"
 
-#: pg_dump.c:7905
+#: pg_dump.c:7943
 #, c-format
 msgid "query produced null referenced table name for foreign key trigger \"%s\" on table \"%s\" (OID of table: %u)"
 msgstr "查詢為資料表 \"%2$s\" 上的外來鍵觸發器 \"%1$s\" 傳回空的參照資料表名（資料表的 OID: %3$u）"
 
-#: pg_dump.c:8524
+#: pg_dump.c:8590
 #, c-format
 msgid "unexpected column data for table \"%s\""
 msgstr "非預期的資料表 \"%s\" 欄位資料"
 
-#: pg_dump.c:8554
+#: pg_dump.c:8621
 #, c-format
 msgid "invalid column numbering in table \"%s\""
 msgstr "資料表 \"%s\" 中的欄位編號無效"
 
 # commands/typecmds.c:637
-#: pg_dump.c:8603
+#: pg_dump.c:8674
 #, c-format
 msgid "finding table default expressions"
 msgstr "尋找資料表的預設運算式"
 
-#: pg_dump.c:8645
+#: pg_dump.c:8716
 #, c-format
 msgid "invalid adnum value %d for table \"%s\""
 msgstr "資料表 \"%2$s\" 的 adnum 值 %1$d 無效"
 
-#: pg_dump.c:8745
+#: pg_dump.c:8816
 #, c-format
 msgid "finding table check constraints"
 msgstr "尋找資料表的檢查條件約束"
 
-#: pg_dump.c:8799
+#: pg_dump.c:8870
 #, c-format
 msgid "expected %d check constraint on table \"%s\" but found %d"
 msgid_plural "expected %d check constraints on table \"%s\" but found %d"
 msgstr[0] "預期在資料表 \"%2$s\" 上有 %1$d 個檢查條件約束，但找到 %3$d 個"
 
-#: pg_dump.c:8803
+#: pg_dump.c:8874
 #, c-format
 msgid "The system catalogs might be corrupted."
 msgstr "系統目錄可能已損毀。"
 
 # catalog/aclchk.c:1917
-#: pg_dump.c:9493
+#: pg_dump.c:9564
 #, c-format
 msgid "role with OID %u does not exist"
 msgstr "OID 為 %u 的角色不存在"
 
-#: pg_dump.c:9605 pg_dump.c:9634
+#: pg_dump.c:9676 pg_dump.c:9705
 #, c-format
 msgid "unsupported pg_init_privs entry: %u %u %d"
 msgstr "不支援的 pg_init_privs 項目: %u %u %d"
 
-#: pg_dump.c:10455
+#: pg_dump.c:10526
 #, c-format
 msgid "typtype of data type \"%s\" appears to be invalid"
 msgstr "資料型別 \"%s\" 的 typtype 似乎無效"
 
-#: pg_dump.c:12033
+#: pg_dump.c:12143
 #, c-format
 msgid "unrecognized provolatile value for function \"%s\""
 msgstr "函式 \"%s\" 的 provolatile 值無法識別"
 
-#: pg_dump.c:12083 pg_dump.c:13946
+#: pg_dump.c:12193 pg_dump.c:14056
 #, c-format
 msgid "unrecognized proparallel value for function \"%s\""
 msgstr "函式 \"%s\" 的 proparallel 值無法識別"
 
 # access/heap/heapam.c:495
-#: pg_dump.c:12215 pg_dump.c:12321 pg_dump.c:12328
+#: pg_dump.c:12325 pg_dump.c:12431 pg_dump.c:12438
 #, c-format
 msgid "could not find function definition for function with OID %u"
 msgstr "找不到 OID 為 %u 的函式定義"
 
-#: pg_dump.c:12254
+#: pg_dump.c:12364
 #, c-format
 msgid "bogus value in pg_cast.castfunc or pg_cast.castmethod field"
 msgstr "pg_cast.castfunc 或 pg_cast.castmethod 欄位的值無效"
 
-#: pg_dump.c:12257
+#: pg_dump.c:12367
 #, c-format
 msgid "bogus value in pg_cast.castmethod field"
 msgstr "pg_cast.castmethod 欄位的值無效"
 
-#: pg_dump.c:12347
+#: pg_dump.c:12457
 #, c-format
 msgid "bogus transform definition, at least one of trffromsql and trftosql should be nonzero"
 msgstr "無效的轉換定義，trffromsql 和 trftosql 至少其中一個應為非零值"
 
-#: pg_dump.c:12364
+#: pg_dump.c:12474
 #, c-format
 msgid "bogus value in pg_transform.trffromsql field"
 msgstr "pg_transform.trffromsql 欄位的值無效"
 
-#: pg_dump.c:12385
+#: pg_dump.c:12495
 #, c-format
 msgid "bogus value in pg_transform.trftosql field"
 msgstr "pg_transform.trftosql 欄位的值無效"
 
 # catalog/pg_proc.c:487
-#: pg_dump.c:12530
+#: pg_dump.c:12640
 #, c-format
 msgid "postfix operators are not supported anymore (operator \"%s\")"
 msgstr "不再支援後置運算子(運算子 \"%s\")"
 
-#: pg_dump.c:12700
+#: pg_dump.c:12810
 #, c-format
 msgid "could not find operator with OID %s"
 msgstr "找不到 OID 為 %s 的運算子"
 
 # parser/parse_type.c:372 parser/parse_type.c:467
-#: pg_dump.c:12768
+#: pg_dump.c:12878
 #, c-format
 msgid "invalid type \"%c\" of access method \"%s\""
 msgstr "存取方法 \"%2$s\" 的型別 \"%1$c\" 無效"
 
 # utils/misc/guc.c:3281 utils/misc/guc.c:3970 utils/misc/guc.c:4006
 # utils/misc/guc.c:4062 utils/misc/guc.c:4399 utils/misc/guc.c:4548
-#: pg_dump.c:13422 pg_dump.c:13475
+#: pg_dump.c:13532 pg_dump.c:13585
 #, c-format
 msgid "unrecognized collation provider: %s"
 msgstr "無法識別的定序提供者: %s"
 
-#: pg_dump.c:13431 pg_dump.c:13440 pg_dump.c:13450 pg_dump.c:13459
+#: pg_dump.c:13541 pg_dump.c:13550 pg_dump.c:13560 pg_dump.c:13569
 #, c-format
 msgid "invalid collation \"%s\""
 msgstr "無效的定序 \"%s\""
 
-#: pg_dump.c:13865
+#: pg_dump.c:13975
 #, c-format
 msgid "unrecognized aggfinalmodify value for aggregate \"%s\""
 msgstr "聚合函式 \"%s\" 的 aggfinalmodify 值無法識別"
 
-#: pg_dump.c:13921
+#: pg_dump.c:14031
 #, c-format
 msgid "unrecognized aggmfinalmodify value for aggregate \"%s\""
 msgstr "聚合函式 \"%s\" 的 aggmfinalmodify 值無法識別"
 
-#: pg_dump.c:14639
+#: pg_dump.c:14749
 #, c-format
 msgid "unrecognized object type in default privileges: %d"
 msgstr "預設權限中有無法識別的物件型別: %d"
 
-#: pg_dump.c:14655
+#: pg_dump.c:14765
 #, c-format
 msgid "could not parse default ACL list (%s)"
 msgstr "無法解析預設 ACL 清單(%s)"
 
-#: pg_dump.c:14737
+#: pg_dump.c:14847
 #, c-format
 msgid "could not parse initial ACL list (%s) or default (%s) for object \"%s\" (%s)"
 msgstr "無法解析物件 \"%3$s\" (%4$s) 的初始 ACL 清單 (%1$s) 或預設 ACL (%2$s)"
 
-#: pg_dump.c:14762
+#: pg_dump.c:14872
 #, c-format
 msgid "could not parse ACL list (%s) or default (%s) for object \"%s\" (%s)"
 msgstr "無法解析物件 \"%3$s\" (%4$s) 的 ACL 清單 (%1$s) 或預設 ACL (%2$s)"
 
-#: pg_dump.c:15300
+#: pg_dump.c:15410
 #, c-format
 msgid "query to obtain definition of view \"%s\" returned no data"
 msgstr "取得檢視表 \"%s\" 定義的查詢未傳回資料"
 
-#: pg_dump.c:15303
+#: pg_dump.c:15413
 #, c-format
 msgid "query to obtain definition of view \"%s\" returned more than one definition"
 msgstr "取得檢視表 \"%s\" 定義的查詢傳回超過一筆定義"
 
-#: pg_dump.c:15310
+#: pg_dump.c:15420
 #, c-format
 msgid "definition of view \"%s\" appears to be empty (length zero)"
 msgstr "檢視表 \"%s\" 的定義似乎是空的(長度為零)"
 
 # commands/dbcommands.c:138
-#: pg_dump.c:15394
+#: pg_dump.c:15504
 #, c-format
 msgid "WITH OIDS is not supported anymore (table \"%s\")"
 msgstr "不再支援 WITH OIDS(資料表 \"%s\")"
 
-#: pg_dump.c:16323
+#: pg_dump.c:16440
 #, c-format
 msgid "invalid column number %d for table \"%s\""
 msgstr "資料表 \"%2$s\" 的欄位編號 %1$d 無效"
 
 # postmaster/pgstat.c:1908
-#: pg_dump.c:16346
+#: pg_dump.c:16463
 #, c-format
 msgid "could not parse index statistic columns"
 msgstr "無法解析索引統計欄位"
 
 # postmaster/pgstat.c:2234
-#: pg_dump.c:16348
+#: pg_dump.c:16465
 #, c-format
 msgid "could not parse index statistic values"
 msgstr "無法解析索引統計值"
 
-#: pg_dump.c:16350
+#: pg_dump.c:16467
 #, c-format
 msgid "mismatched number of columns and values for index statistics"
 msgstr "索引統計欄位和值的數量不一致"
 
-#: pg_dump.c:16640
+#: pg_dump.c:16757
 #, c-format
 msgid "missing index for constraint \"%s\""
 msgstr "缺少條件約束 \"%s\" 的索引"
 
-#: pg_dump.c:16887
+#: pg_dump.c:17004
 #, c-format
 msgid "unrecognized constraint type: %c"
 msgstr "無法識別的條件約束型別: %c"
 
-#: pg_dump.c:16988 pg_dump.c:17218
+#: pg_dump.c:17105 pg_dump.c:17335
 #, c-format
 msgid "query to get data of sequence \"%s\" returned %d row (expected 1)"
 msgid_plural "query to get data of sequence \"%s\" returned %d rows (expected 1)"
@@ -2229,49 +2261,49 @@ msgstr[0] "取得序列 \"%s\" 資料的查詢傳回 %d 筆資料(預期 1 筆)"
 # utils/adt/acl.c:1261 utils/adt/acl.c:1486 utils/adt/acl.c:1698
 # utils/adt/acl.c:1902 utils/adt/acl.c:2106 utils/adt/acl.c:2315
 # utils/adt/acl.c:2516
-#: pg_dump.c:17020
+#: pg_dump.c:17137
 #, c-format
 msgid "unrecognized sequence type: %s"
 msgstr "無法識別的序列型別: %s"
 
 # fe-exec.c:1204
-#: pg_dump.c:17310
+#: pg_dump.c:17427
 #, c-format
 msgid "unexpected tgtype value: %d"
 msgstr "非預期的 tgtype 值: %d"
 
-#: pg_dump.c:17382
+#: pg_dump.c:17499
 #, c-format
 msgid "invalid argument string (%s) for trigger \"%s\" on table \"%s\""
 msgstr "資料表 \"%3$s\" 上的觸發器 \"%2$s\" 的參數字串（%1$s）無效"
 
-#: pg_dump.c:17656
+#: pg_dump.c:17773
 #, c-format
 msgid "query to get rule \"%s\" for table \"%s\" failed: wrong number of rows returned"
 msgstr "取得資料表 \"%2$s\" 的規則 \"%1$s\" 的查詢失敗: 傳回的資料筆數錯誤"
 
 # catalog/dependency.c:152
-#: pg_dump.c:17809
+#: pg_dump.c:17926
 #, c-format
 msgid "could not find referenced extension %u"
 msgstr "找不到被參考的擴充模組 %u"
 
-#: pg_dump.c:17899
+#: pg_dump.c:18016
 #, c-format
 msgid "mismatched number of configurations and conditions for extension"
 msgstr "擴充模組的組態和條件數量不一致"
 
-#: pg_dump.c:18031
+#: pg_dump.c:18148
 #, c-format
 msgid "reading dependency data"
 msgstr "讀取相依性資料"
 
-#: pg_dump.c:18117
+#: pg_dump.c:18234
 #, c-format
 msgid "no referencing object %u %u"
 msgstr "沒有發起參考的物件 %u %u"
 
-#: pg_dump.c:18128
+#: pg_dump.c:18245
 #, c-format
 msgid "no referenced object %u %u"
 msgstr "沒有被參考物件 %u %u"
@@ -3144,4 +3176,3 @@ msgstr "\n若未提供輸入檔名則會使用標準輸入。\n\n"
 #, c-format
 #~ msgid "worker process crashed: status %d\n"
 #~ msgstr "背景工作處理序已損毀: 狀態 %d\n"
-

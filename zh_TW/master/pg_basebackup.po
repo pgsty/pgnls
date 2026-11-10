@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_basebackup (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-03 15:50+0000\n"
-"PO-Revision-Date: 2026-11-04 08:45+0800\n"
+"POT-Creation-Date: 2026-11-09 20:49+0000\n"
+"PO-Revision-Date: 2026-11-10 09:59+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
@@ -398,6 +398,11 @@ msgstr "無法初始化壓縮程式庫"
 #, c-format
 msgid "could not decompress data: %s"
 msgstr "無法解壓縮資料: %s"
+
+#: ../../fe_utils/astreamer_gzip.c:349 walmethods.c:755
+#, c-format
+msgid "could not reset compression stream"
+msgstr "無法重設壓縮串流"
 
 #: ../../fe_utils/astreamer_gzip.c:364 ../../fe_utils/astreamer_lz4.c:407
 #: ../../fe_utils/astreamer_zstd.c:385
@@ -2900,10 +2905,6 @@ msgstr "無法刪除複寫槽 \"%s\": 收到 %d 列和 %d 欄，預期 %d 列和
 msgid "could not compress data"
 msgstr "無法壓縮資料"
 
-#: ../../fe_utils/astreamer_gzip.c:349 walmethods.c:755
-msgid "could not reset compression stream"
-msgstr "無法重設壓縮串流"
-
 #: walmethods.c:892
 msgid "implementation error: tar files can't have more than one open file"
 msgstr "實作錯誤: tar 檔不能有多個已開啟的檔案"
@@ -2932,4 +2933,3 @@ msgstr "無法關閉壓縮串流"
 #, c-format
 #~ msgid "tar file trailer exceeds 2 blocks"
 #~ msgstr "tar 檔的尾部超過 2 個區塊"
-

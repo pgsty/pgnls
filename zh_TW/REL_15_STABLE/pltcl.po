@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pltcl (PostgreSQL) 15\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-03 16:53+0000\n"
-"PO-Revision-Date: 2026-11-04 08:45+0800\n"
+"POT-Creation-Date: 2026-11-09 21:45+0000\n"
+"PO-Revision-Date: 2026-11-10 09:59+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
@@ -19,29 +19,29 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: pltcl.c:467
+#: pltcl.c:478
 msgid "PL/Tcl function to call once when pltcl is first used."
 msgstr "初次使用 pltcl 時呼叫一次的 PL/Tcl 函式。"
 
-#: pltcl.c:474
+#: pltcl.c:485
 msgid "PL/TclU function to call once when pltclu is first used."
 msgstr "初次使用 pltclu 時呼叫一次的 PL/TclU 函式。"
 
 # utils/adt/ri_triggers.c:2921
-#: pltcl.c:641
+#: pltcl.c:652
 #, c-format
 msgid "function \"%s\" is in the wrong language"
 msgstr "函式 \"%s\" 使用錯誤的語言"
 
 # utils/adt/ri_triggers.c:2938
-#: pltcl.c:652
+#: pltcl.c:663
 #, c-format
 msgid "function \"%s\" must not be SECURITY DEFINER"
 msgstr "函式 \"%s\" 不得設為 SECURITY DEFINER"
 
 # utils/adt/acl.c:203
 #. translator: %s is "pltcl.start_proc" or "pltclu.start_proc"
-#: pltcl.c:686
+#: pltcl.c:697
 #, c-format
 msgid "processing %s parameter"
 msgstr "正在處理 %s 參數"
@@ -49,86 +49,86 @@ msgstr "正在處理 %s 參數"
 # executor/execQual.c:866 executor/execQual.c:910 executor/execQual.c:1086
 # executor/execQual.c:1211 executor/execQual.c:3445 executor/functions.c:666
 # executor/functions.c:705 utils/fmgr/funcapi.c:39
-#: pltcl.c:839
+#: pltcl.c:850
 #, c-format
 msgid "set-valued function called in context that cannot accept a set"
 msgstr "在不能接受集合的情境中呼叫傳回集合的函式"
 
-#: pltcl.c:844
+#: pltcl.c:855
 #, c-format
 msgid "materialize mode required, but it is not allowed in this context"
 msgstr "需要物化模式，但此上下文不允許該模式"
 
-#: pltcl.c:1017
+#: pltcl.c:1028
 #, c-format
 msgid "function returning record called in context that cannot accept type record"
 msgstr "在不能接受 record 型別的上下文中呼叫傳回 record 的函式"
 
-#: pltcl.c:1036
+#: pltcl.c:1047
 #, c-format
 msgid "could not parse function return value: %s"
 msgstr "無法解析函式傳回值: %s"
 
 # utils/misc/guc.c:5185
-#: pltcl.c:1303
+#: pltcl.c:1324
 #, c-format
 msgid "could not parse trigger return value: %s"
 msgstr "無法解析觸發器傳回值: %s"
 
 # commands/vacuum.c:2258 commands/vacuumlazy.c:489 commands/vacuumlazy.c:770
 # nodes/print.c:86 storage/lmgr/deadlock.c:888 tcop/postgres.c:3285
-#: pltcl.c:1388 pltcl.c:1822
+#: pltcl.c:1409 pltcl.c:1843
 #, c-format
 msgid "%s"
 msgstr "%s"
 
-#: pltcl.c:1389
+#: pltcl.c:1410
 #, c-format
 msgid ""
 "%s\n"
 "in PL/Tcl function \"%s\""
 msgstr "%s\n於 PL/Tcl 函式 \"%s\""
 
-#: pltcl.c:1554
+#: pltcl.c:1575
 #, c-format
 msgid "trigger functions can only be called as triggers"
 msgstr "觸發器函式只能當做觸發器呼叫"
 
-#: pltcl.c:1558
+#: pltcl.c:1579
 #, c-format
 msgid "PL/Tcl functions cannot return type %s"
 msgstr "PL/Tcl 函式不能傳回型別 %s"
 
-#: pltcl.c:1596
+#: pltcl.c:1617
 #, c-format
 msgid "PL/Tcl functions cannot accept type %s"
 msgstr "PL/Tcl 函式不能接受型別 %s"
 
 # utils/init/miscinit.c:519
-#: pltcl.c:1712
+#: pltcl.c:1733
 #, c-format
 msgid "could not create internal procedure \"%s\": %s"
 msgstr "無法建立內部程序 \"%s\": %s"
 
 # parser/analyze.c:2210
-#: pltcl.c:3217
+#: pltcl.c:3245
 #, c-format
 msgid "column name/value list must have even number of elements"
 msgstr "欄位名稱/值清單須有偶數個元素"
 
-#: pltcl.c:3235
+#: pltcl.c:3263
 #, c-format
 msgid "column name/value list contains nonexistent column name \"%s\""
 msgstr "欄位名稱/值清單包含不存在的欄位名稱 \"%s\""
 
 # commands/tablecmds.c:5425
-#: pltcl.c:3242
+#: pltcl.c:3270
 #, c-format
 msgid "cannot set system attribute \"%s\""
 msgstr "不能設定系統屬性 \"%s\""
 
 # commands/tablecmds.c:4580
-#: pltcl.c:3248
+#: pltcl.c:3276
 #, c-format
 msgid "cannot set generated column \"%s\""
 msgstr "不能設定產生欄位 \"%s\""
@@ -139,4 +139,3 @@ msgstr "不能設定產生欄位 \"%s\""
 # common.c:123
 #~ msgid "out of memory"
 #~ msgstr "記憶體用盡"
-

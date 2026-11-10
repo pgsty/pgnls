@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pgscripts (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-03 15:52+0000\n"
-"PO-Revision-Date: 2026-11-04 08:45+0800\n"
+"POT-Creation-Date: 2026-11-09 20:51+0000\n"
+"PO-Revision-Date: 2026-11-10 09:59+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
@@ -324,18 +324,18 @@ msgid ""
 msgstr "%s 對資料庫中所有先前已叢集化的資料表進行叢集化。\n\n"
 
 #: clusterdb.c:274 createdb.c:300 createuser.c:417 dropdb.c:171 dropuser.c:171
-#: pg_isready.c:226 reindexdb.c:901 vacuumdb.c:351
+#: pg_isready.c:226 reindexdb.c:914 vacuumdb.c:351
 #, c-format
 msgid "Usage:\n"
 msgstr "用法:\n"
 
-#: clusterdb.c:275 reindexdb.c:902 vacuumdb.c:352
+#: clusterdb.c:275 reindexdb.c:915 vacuumdb.c:352
 #, c-format
 msgid "  %s [OPTION]... [DBNAME]\n"
 msgstr "  %s [選項]... [資料庫名稱]\n"
 
 #: clusterdb.c:276 createdb.c:302 createuser.c:419 dropdb.c:173 dropuser.c:173
-#: pg_isready.c:229 reindexdb.c:903 vacuumdb.c:353
+#: pg_isready.c:229 reindexdb.c:916 vacuumdb.c:353
 #, c-format
 msgid ""
 "\n"
@@ -385,7 +385,7 @@ msgid "  -?, --help                show this help, then exit\n"
 msgstr "  -?, --help                顯示說明，然後結束\n"
 
 #: clusterdb.c:285 createdb.c:319 createuser.c:450 dropdb.c:180 dropuser.c:180
-#: pg_isready.c:235 reindexdb.c:918 vacuumdb.c:384
+#: pg_isready.c:235 reindexdb.c:931 vacuumdb.c:384
 #, c-format
 msgid ""
 "\n"
@@ -434,7 +434,7 @@ msgstr ""
 "請參考 SQL 命令 CLUSTER 的說明。\n"
 
 #: clusterdb.c:293 createdb.c:327 createuser.c:456 dropdb.c:187 dropuser.c:186
-#: pg_isready.c:240 reindexdb.c:926 vacuumdb.c:392
+#: pg_isready.c:240 reindexdb.c:939 vacuumdb.c:392
 #, c-format
 msgid ""
 "\n"
@@ -444,12 +444,12 @@ msgstr ""
 "回報錯誤至 <%s>。\n"
 
 #: clusterdb.c:294 createdb.c:328 createuser.c:457 dropdb.c:188 dropuser.c:187
-#: pg_isready.c:241 reindexdb.c:927 vacuumdb.c:393
+#: pg_isready.c:241 reindexdb.c:940 vacuumdb.c:393
 #, c-format
 msgid "%s home page: <%s>\n"
 msgstr "%s 首頁: <%s>\n"
 
-#: common.c:106
+#: common.c:111
 #, c-format
 msgid "query returned %d row instead of one: %s"
 msgid_plural "query returned %d rows instead of one: %s"
@@ -457,24 +457,24 @@ msgstr[0] "查詢傳回 %d 筆資料，而非一筆資料: %s"
 
 #  translator: Make sure the (y/n) prompts match the translation of this.
 #. translator: abbreviation for "yes"
-#: common.c:131
+#: common.c:136
 msgid "y"
 msgstr "y"
 
 #  translator: Make sure the (y/n) prompts match the translation of this.
 #. translator: abbreviation for "no"
-#: common.c:133
+#: common.c:138
 msgid "n"
 msgstr "n"
 
 #. translator: This is a question followed by the translated options for
 #. "yes" and "no".
-#: common.c:143
+#: common.c:148
 #, c-format
 msgid "%s (%s/%s) "
 msgstr "%s (%s/%s) "
 
-#: common.c:164
+#: common.c:169
 #, c-format
 msgid "Please answer \"%s\" or \"%s\".\n"
 msgstr "請回應 \"%s\" 或 \"%s\"。\n"
@@ -514,7 +514,7 @@ msgstr "  %s [選項]... [資料庫名稱] [說明]\n"
 msgid "  -D, --tablespace=TABLESPACE  default tablespace for the database\n"
 msgstr "  -D, --tablespace=TABLESPACE  資料庫預設表空間\n"
 
-#: createdb.c:304 reindexdb.c:907
+#: createdb.c:304 reindexdb.c:920
 #, c-format
 msgid "  -e, --echo                   show the commands being sent to the server\n"
 msgstr "  -e, --echo                   顯示被送到伺服器的命令\n"
@@ -576,42 +576,42 @@ msgstr "  -S, --strategy=STRATEGY      資料庫建立策略 wal_log 或 file_co
 msgid "  -T, --template=TEMPLATE      template database to copy\n"
 msgstr "  -T, --template=TEMPLATE      要複製的樣板資料庫\n"
 
-#: createdb.c:317 reindexdb.c:916
+#: createdb.c:317 reindexdb.c:929
 #, c-format
 msgid "  -V, --version                output version information, then exit\n"
 msgstr "  -V, --version                顯示版本，然後結束\n"
 
-#: createdb.c:318 reindexdb.c:917
+#: createdb.c:318 reindexdb.c:930
 #, c-format
 msgid "  -?, --help                   show this help, then exit\n"
 msgstr "  -?, --help                   顯示說明，然後結束\n"
 
-#: createdb.c:320 reindexdb.c:919
+#: createdb.c:320 reindexdb.c:932
 #, c-format
 msgid "  -h, --host=HOSTNAME          database server host or socket directory\n"
 msgstr "  -h, --host=HOSTNAME          資料庫伺服器主機或 socket 目錄\n"
 
-#: createdb.c:321 reindexdb.c:920
+#: createdb.c:321 reindexdb.c:933
 #, c-format
 msgid "  -p, --port=PORT              database server port\n"
 msgstr "  -p, --port=PORT              資料庫伺服器連接埠\n"
 
-#: createdb.c:322 reindexdb.c:921
+#: createdb.c:322 reindexdb.c:934
 #, c-format
 msgid "  -U, --username=USERNAME      user name to connect as\n"
 msgstr "  -U, --username=USERNAME      用來連線的使用者名稱\n"
 
-#: createdb.c:323 reindexdb.c:922
+#: createdb.c:323 reindexdb.c:935
 #, c-format
 msgid "  -w, --no-password            never prompt for password\n"
 msgstr "  -w, --no-password            不詢問密碼\n"
 
-#: createdb.c:324 reindexdb.c:923
+#: createdb.c:324 reindexdb.c:936
 #, c-format
 msgid "  -W, --password               force password prompt\n"
 msgstr "  -W, --password               要求詢問密碼\n"
 
-#: createdb.c:325 reindexdb.c:924
+#: createdb.c:325 reindexdb.c:937
 #, c-format
 msgid "  --maintenance-db=DBNAME      alternate maintenance database\n"
 msgstr "  --maintenance-db=DBNAME      替代的維護資料庫\n"
@@ -1026,12 +1026,12 @@ msgstr "重建資料庫 \"%s\" 中系統目錄的索引失敗: %s"
 msgid "reindexing of table \"%s\" in database \"%s\" failed: %s"
 msgstr "重建資料庫 \"%2$s\" 中資料表 \"%1$s\" 的索引失敗: %3$s"
 
-#: reindexdb.c:857
+#: reindexdb.c:870
 #, c-format
 msgid "%s: reindexing database \"%s\"\n"
 msgstr "%s: 對資料庫 \"%s\" 進行索引重建\n"
 
-#: reindexdb.c:900
+#: reindexdb.c:913
 #, c-format
 msgid ""
 "%s reindexes a PostgreSQL database.\n"
@@ -1040,62 +1040,62 @@ msgstr ""
 "%s 重建 PostgreSQL 資料庫索引。\n"
 "\n"
 
-#: reindexdb.c:904
+#: reindexdb.c:917
 #, c-format
 msgid "  -a, --all                    reindex all databases\n"
 msgstr "  -a, --all                    對所有資料庫重建索引\n"
 
-#: reindexdb.c:905
+#: reindexdb.c:918
 #, c-format
 msgid "      --concurrently           reindex concurrently\n"
 msgstr "      --concurrently           並行重建索引\n"
 
-#: reindexdb.c:906
+#: reindexdb.c:919
 #, c-format
 msgid "  -d, --dbname=DBNAME          database to reindex\n"
 msgstr "  -d, --dbname=DBNAME          要重建索引的資料庫\n"
 
-#: reindexdb.c:908
+#: reindexdb.c:921
 #, c-format
 msgid "  -i, --index=INDEX            recreate specific index(es) only\n"
 msgstr "  -i, --index=INDEX            僅重新建立指定的索引\n"
 
-#: reindexdb.c:909
+#: reindexdb.c:922
 #, c-format
 msgid "  -j, --jobs=NUM               use this many concurrent connections to reindex\n"
 msgstr "  -j, --jobs=NUM               使用指定數量的並行連線重建索引\n"
 
-#: reindexdb.c:910
+#: reindexdb.c:923
 #, c-format
 msgid "  -q, --quiet                  don't write any messages\n"
 msgstr "  -q, --quiet                  不輸出任何訊息\n"
 
-#: reindexdb.c:911
+#: reindexdb.c:924
 #, c-format
 msgid "  -s, --system                 reindex system catalogs only\n"
 msgstr "  -s, --system                 僅重建系統目錄的索引\n"
 
-#: reindexdb.c:912
+#: reindexdb.c:925
 #, c-format
 msgid "  -S, --schema=SCHEMA          reindex specific schema(s) only\n"
 msgstr "  -S, --schema=SCHEMA          僅對指定的 schema 重建索引\n"
 
-#: reindexdb.c:913
+#: reindexdb.c:926
 #, c-format
 msgid "  -t, --table=TABLE            reindex specific table(s) only\n"
 msgstr "  -t, --table=TABLE            僅對指定的資料表重建索引\n"
 
-#: reindexdb.c:914
+#: reindexdb.c:927
 #, c-format
 msgid "      --tablespace=TABLESPACE  tablespace where indexes are rebuilt\n"
 msgstr "      --tablespace=TABLESPACE  重建索引所在的表空間\n"
 
-#: reindexdb.c:915
+#: reindexdb.c:928
 #, c-format
 msgid "  -v, --verbose                write a lot of output\n"
 msgstr "  -v, --verbose                產生詳細輸出\n"
 
-#: reindexdb.c:925
+#: reindexdb.c:938
 #, c-format
 msgid ""
 "\n"
@@ -1340,12 +1340,12 @@ msgstr "%s: 正在處理資料庫 \"%s\": %s\n"
 msgid "%s: vacuuming database \"%s\"\n"
 msgstr "%s: 清理資料庫 \"%s\"\n"
 
-#: vacuuming.c:1069
+#: vacuuming.c:1075
 #, c-format
 msgid "vacuuming of table \"%s\" in database \"%s\" failed: %s"
 msgstr "清理資料庫 \"%2$s\" 中的資料表 \"%1$s\" 失敗: %3$s"
 
-#: vacuuming.c:1074
+#: vacuuming.c:1080
 #, c-format
 msgid "vacuuming of database \"%s\" failed: %s"
 msgstr "清理資料庫 \"%s\" 失敗: %s"
@@ -1370,7 +1370,7 @@ msgstr "清理資料庫 \"%s\" 失敗: %s"
 # utils/init/miscinit.c:244 utils/misc/guc.c:1898 utils/misc/guc.c:1911
 # utils/misc/guc.c:1924 utils/mmgr/aset.c:337 utils/mmgr/aset.c:503
 # utils/mmgr/aset.c:700 utils/mmgr/aset.c:893 utils/mmgr/portalmem.c:75
-#: vacuuming.c:1090
+#: vacuuming.c:1096
 #, c-format
 msgid "out of memory"
 msgstr "記憶體不足"
@@ -1589,4 +1589,3 @@ msgstr "記憶體不足"
 
 #~ msgid "yes"
 #~ msgstr "是"
-

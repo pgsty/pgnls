@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_basebackup (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-03 15:50+0000\n"
-"PO-Revision-Date: 2026-11-04 08:45+0800\n"
+"POT-Creation-Date: 2026-11-09 20:49+0000\n"
+"PO-Revision-Date: 2026-11-10 09:59+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
 "Language: zh_CN\n"
@@ -327,6 +327,11 @@ msgstr "无法初始化压缩库"
 #, c-format
 msgid "could not decompress data: %s"
 msgstr "无法解压缩数据: %s"
+
+#: ../../fe_utils/astreamer_gzip.c:349 walmethods.c:755
+#, c-format
+msgid "could not reset compression stream"
+msgstr "无法重置压缩流"
 
 #: ../../fe_utils/astreamer_gzip.c:364 ../../fe_utils/astreamer_lz4.c:407
 #: ../../fe_utils/astreamer_zstd.c:385
@@ -2904,10 +2909,6 @@ msgstr ""
 #: walmethods.c:726 walmethods.c:1269
 msgid "could not compress data"
 msgstr "无法压缩数据"
-
-#: ../../fe_utils/astreamer_gzip.c:349 walmethods.c:755
-msgid "could not reset compression stream"
-msgstr "无法重置压缩流"
 
 #: walmethods.c:892
 msgid "implementation error: tar files can't have more than one open file"

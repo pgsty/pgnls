@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_waldump (PostgreSQL) 15\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-03 17:02+0000\n"
-"PO-Revision-Date: 2026-11-04 08:45+0800\n"
+"POT-Creation-Date: 2026-11-09 21:53+0000\n"
+"PO-Revision-Date: 2026-11-10 09:59+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
@@ -357,162 +357,161 @@ msgid "Try \"%s --help\" for more information."
 msgstr "用 \"%s --help\" 取得更多資訊。"
 
 # access/transam/xlog.c:2365 access/transam/xlog.c:2435
-#: xlogreader.c:620
+#: xlogreader.c:623
 #, c-format
 msgid "invalid record offset at %X/%X"
 msgstr "%X/%X 處的記錄位移無效"
 
 # access/transam/xlog.c:2443
-#: xlogreader.c:628
+#: xlogreader.c:631
 #, c-format
 msgid "contrecord is requested by %X/%X"
 msgstr "請求的 %X/%X 處是續接記錄"
 
-#: xlogreader.c:669 xlogreader.c:1144
+#: xlogreader.c:672 xlogreader.c:1147
 #, c-format
 msgid "invalid record length at %X/%X: wanted %u, got %u"
 msgstr "%X/%X 處的記錄長度無效: 預期為 %u，實際為 %u"
 
-#: xlogreader.c:759
+#: xlogreader.c:762
 #, c-format
 msgid "there is no contrecord flag at %X/%X"
 msgstr "位於 %X/%X 沒有續接記錄旗標"
 
-#: xlogreader.c:772
+#: xlogreader.c:775
 #, c-format
 msgid "invalid contrecord length %u (expected %lld) at %X/%X"
 msgstr "位於 %3$X/%4$X 的 contrecord 長度 %1$u 無效(預期為 %2$lld)"
 
 # access/transam/xlog.c:2465
-#: xlogreader.c:1152
+#: xlogreader.c:1155
 #, c-format
 msgid "invalid resource manager ID %u at %X/%X"
 msgstr "位於 %2$X/%3$X 的無效資源管理員 ID %1$u"
 
 # access/transam/xlog.c:2458
-#: xlogreader.c:1165 xlogreader.c:1181
+#: xlogreader.c:1168 xlogreader.c:1184
 #, c-format
 msgid "record with incorrect prev-link %X/%X at %X/%X"
 msgstr "位於 %3$X/%4$X 的記錄有不正確的 prev-link %1$X/%2$X"
 
 # access/transam/xlog.c:2269
-#: xlogreader.c:1219
+#: xlogreader.c:1222
 #, c-format
 msgid "incorrect resource manager data checksum in record at %X/%X"
 msgstr "位於 %X/%X 的記錄中資源管理員資料檢查碼不正確"
 
-#: xlogreader.c:1256
+#: xlogreader.c:1259
 #, c-format
 msgid "invalid magic number %04X in log segment %s, offset %u"
 msgstr "日誌片段 %2$s 中的魔數 %1$04X 無效，位移 %3$u"
 
-#: xlogreader.c:1270 xlogreader.c:1311
+#: xlogreader.c:1273 xlogreader.c:1314
 #, c-format
 msgid "invalid info bits %04X in log segment %s, offset %u"
 msgstr "日誌片段 %2$s 中的資訊位元 %1$04X 無效，位移 %3$u"
 
-#: xlogreader.c:1285
+#: xlogreader.c:1288
 #, c-format
 msgid "WAL file is from different database system: WAL file database system identifier is %llu, pg_control database system identifier is %llu"
 msgstr "WAL 檔案來自不同的資料庫系統：WAL 檔案的資料庫系統識別碼為 %llu，而 pg_control 的資料庫系統識別碼為 %llu"
 
-#: xlogreader.c:1293
+#: xlogreader.c:1296
 #, c-format
 msgid "WAL file is from different database system: incorrect segment size in page header"
 msgstr "WAL 檔案來自不同的資料庫系統: 資料頁標頭中的片段大小不正確"
 
-#: xlogreader.c:1299
+#: xlogreader.c:1302
 #, c-format
 msgid "WAL file is from different database system: incorrect XLOG_BLCKSZ in page header"
 msgstr "WAL 檔案來自不同的資料庫系統: 資料頁標頭中的 XLOG_BLCKSZ 不正確"
 
-#: xlogreader.c:1330
+#: xlogreader.c:1333
 #, c-format
 msgid "unexpected pageaddr %X/%X in log segment %s, offset %u"
 msgstr "日誌片段 %3$s 中出現非預期的 pageaddr %1$X/%2$X，位移 %4$u"
 
-#: xlogreader.c:1355
+#: xlogreader.c:1358
 #, c-format
 msgid "out-of-sequence timeline ID %u (after %u) in log segment %s, offset %u"
 msgstr "日誌片段 %3$s 中的時間軸 ID %1$u 順序錯誤（前一個為 %2$u），位移 %4$u"
 
-#: xlogreader.c:1760
+#: xlogreader.c:1762
 #, c-format
 msgid "out-of-order block_id %u at %X/%X"
 msgstr "%2$X/%3$X 處的 block_id %1$u 順序錯誤"
 
-#: xlogreader.c:1784
+#: xlogreader.c:1786
 #, c-format
 msgid "BKPBLOCK_HAS_DATA set, but no data included at %X/%X"
 msgstr "%X/%X 處已設定 BKPBLOCK_HAS_DATA，但未包含資料"
 
-#: xlogreader.c:1791
+#: xlogreader.c:1793
 #, c-format
 msgid "BKPBLOCK_HAS_DATA not set, but data length is %u at %X/%X"
 msgstr "未設定 BKPBLOCK_HAS_DATA，但在 %2$X/%3$X 的資料長度為 %1$u"
 
-#: xlogreader.c:1827
+#: xlogreader.c:1829
 #, c-format
 msgid "BKPIMAGE_HAS_HOLE set, but hole offset %u length %u block image length %u at %X/%X"
 msgstr "已設定 BKPIMAGE_HAS_HOLE，但 %4$X/%5$X 處的空洞位移為 %1$u，長度為 %2$u，區塊映像長度為 %3$u"
 
-#: xlogreader.c:1843
+#: xlogreader.c:1845
 #, c-format
 msgid "BKPIMAGE_HAS_HOLE not set, but hole offset %u length %u at %X/%X"
 msgstr "未設定 BKPIMAGE_HAS_HOLE，但 %3$X/%4$X 處的空洞位移為 %1$u，長度為 %2$u"
 
-#: xlogreader.c:1857
+#: xlogreader.c:1859
 #, c-format
 msgid "BKPIMAGE_COMPRESSED set, but block image length %u at %X/%X"
 msgstr "已設定 BKPIMAGE_COMPRESSED，但 %2$X/%3$X 處的區塊映像長度為 %1$u"
 
-#: xlogreader.c:1872
+#: xlogreader.c:1874
 #, c-format
 msgid "neither BKPIMAGE_HAS_HOLE nor BKPIMAGE_COMPRESSED set, but block image length is %u at %X/%X"
 msgstr "既未設定 BKPIMAGE_HAS_HOLE，也未設定 BKPIMAGE_COMPRESSED，但 %2$X/%3$X 處的區塊映像長度為 %1$u"
 
-#: xlogreader.c:1888
+#: xlogreader.c:1890
 #, c-format
 msgid "BKPBLOCK_SAME_REL set but no previous rel at %X/%X"
 msgstr "%X/%X 處已設定 BKPBLOCK_SAME_REL，但沒有先前的關聯"
 
-#: xlogreader.c:1900
+#: xlogreader.c:1902
 #, c-format
 msgid "invalid block_id %u at %X/%X"
 msgstr "位於 %2$X/%3$X 的無效 block_id %1$u"
 
-#: xlogreader.c:1967
+#: xlogreader.c:1969
 #, c-format
 msgid "record with invalid length at %X/%X"
 msgstr "位於 %X/%X 的記錄長度無效"
 
-#: xlogreader.c:1992
+#: xlogreader.c:1994
 #, c-format
 msgid "could not locate backup block with ID %d in WAL record"
 msgstr "在 WAL 記錄中找不到具有 ID %d 的備份區塊"
 
-#: xlogreader.c:2076
+#: xlogreader.c:2078
 #, c-format
 msgid "could not restore image at %X/%X with invalid block %d specified"
 msgstr "無法還原 %X/%X 處的映像，因為指定的區塊 %d 無效"
 
-#: xlogreader.c:2083
+#: xlogreader.c:2085
 #, c-format
 msgid "could not restore image at %X/%X with invalid state, block %d"
 msgstr "無法還原 %X/%X 處的映像，狀態無效, 區塊 %d"
 
-#: xlogreader.c:2110 xlogreader.c:2127
+#: xlogreader.c:2112 xlogreader.c:2129
 #, c-format
 msgid "could not restore image at %X/%X compressed with %s not supported by build, block %d"
 msgstr "無法還原 %X/%X 處使用 %s 壓縮的映像，此建置版本不支援該壓縮方式, 區塊 %d"
 
-#: xlogreader.c:2136
+#: xlogreader.c:2138
 #, c-format
 msgid "could not restore image at %X/%X compressed with unknown method, block %d"
 msgstr "無法還原 %X/%X 處使用未知方法壓縮的映像, 區塊 %d"
 
-#: xlogreader.c:2144
+#: xlogreader.c:2146
 #, c-format
 msgid "could not decompress image at %X/%X, block %d"
 msgstr "無法解壓縮 %X/%X 處的映像, 區塊 %d"
-
