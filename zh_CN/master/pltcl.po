@@ -1,15 +1,16 @@
 # Simplified Chinese message translation file for pltcl
-# Copyright (C) 2019 PostgreSQL Global Development Group
+# Copyright (C) 2026 PostgreSQL Global Development Group
 # This file is distributed under the same license as the PostgreSQL package.
+#
 # Dianjin Wang <wangdianjin@gmail.com>, 2024.
-# Ruohang Feng <rh@vonng.com>, 2026.
+# Ruohang Feng (vonng@pigsty) <rh@vonng.com>, 2026.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: pltcl (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-01 22:08+0000\n"
-"PO-Revision-Date: 2026-09-17 16:00+0800\n"
+"POT-Creation-Date: 2026-11-09 20:38+0000\n"
+"PO-Revision-Date: 2026-11-04 08:45+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
 "Language: zh_CN\n"
@@ -18,61 +19,61 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: pltcl.c:472
+#: pltcl.c:483
 msgid "PL/Tcl function to call once when pltcl is first used."
 msgstr "首次使用 pltcl 时调用一次的 PL/Tcl 函数。"
 
-#: pltcl.c:479
+#: pltcl.c:490
 msgid "PL/TclU function to call once when pltclu is first used."
 msgstr "首次使用 pltclu 时调用一次的 PL/TclU 函数。"
 
-#: pltcl.c:646
+#: pltcl.c:657
 #, c-format
 msgid "function \"%s\" is in the wrong language"
 msgstr "函数 \"%s\" 所用语言错误"
 
-#: pltcl.c:657
+#: pltcl.c:668
 #, c-format
 msgid "function \"%s\" must not be SECURITY DEFINER"
 msgstr "函数 \"%s\" 不得为 SECURITY DEFINER"
 
 #. translator: %s is "pltcl.start_proc" or "pltclu.start_proc"
-#: pltcl.c:691
+#: pltcl.c:702
 #, c-format
 msgid "processing %s parameter"
 msgstr "正在处理 %s 参数"
 
-#: pltcl.c:843
+#: pltcl.c:854
 #, c-format
 msgid "set-valued function called in context that cannot accept a set"
 msgstr "在不能接受集合的上下文中调用返回集合的函数"
 
-#: pltcl.c:848
+#: pltcl.c:859
 #, c-format
 msgid "materialize mode required, but it is not allowed in this context"
 msgstr "需要物化模式，但此上下文不允许使用该模式"
 
-#: pltcl.c:1021
+#: pltcl.c:1032
 #, c-format
 msgid "function returning record called in context that cannot accept type record"
 msgstr "在不能接受 record 类型的上下文中调用返回 record 类型的函数"
 
-#: pltcl.c:1040
+#: pltcl.c:1051
 #, c-format
 msgid "could not parse function return value: %s"
 msgstr "无法解析函数返回值: %s"
 
-#: pltcl.c:1306
+#: pltcl.c:1327
 #, c-format
 msgid "could not parse trigger return value: %s"
 msgstr "无法解析触发器返回值: %s"
 
-#: pltcl.c:1406 pltcl.c:1904
+#: pltcl.c:1427 pltcl.c:1925
 #, c-format
 msgid "%s"
 msgstr "%s"
 
-#: pltcl.c:1407
+#: pltcl.c:1428
 #, c-format
 msgid ""
 "%s\n"
@@ -81,42 +82,42 @@ msgstr ""
 "%s\n"
 "在 PL/Tcl 函数 %s 中"
 
-#: pltcl.c:1636
+#: pltcl.c:1657
 #, c-format
 msgid "trigger functions can only be called as triggers"
 msgstr "触发器函数只能以触发器的形式调用"
 
-#: pltcl.c:1640
+#: pltcl.c:1661
 #, c-format
 msgid "PL/Tcl functions cannot return type %s"
 msgstr "PL/Tcl 函数不能返回类型 %s"
 
-#: pltcl.c:1678
+#: pltcl.c:1699
 #, c-format
 msgid "PL/Tcl functions cannot accept type %s"
 msgstr "PL/Tcl 函数不能接受类型为 %s 的参数"
 
-#: pltcl.c:1792
+#: pltcl.c:1813
 #, c-format
 msgid "could not create internal procedure \"%s\": %s"
 msgstr "无法创建内部过程 \"%s\": %s"
 
-#: pltcl.c:3304
+#: pltcl.c:3332
 #, c-format
 msgid "column name/value list must have even number of elements"
 msgstr "列名/值列表必须具有偶数个元素"
 
-#: pltcl.c:3322
+#: pltcl.c:3350
 #, c-format
 msgid "column name/value list contains nonexistent column name \"%s\""
 msgstr "列名/值列表包含不存在的列名 \"%s\""
 
-#: pltcl.c:3329
+#: pltcl.c:3357
 #, c-format
 msgid "cannot set system attribute \"%s\""
 msgstr "不能设置系统属性 \"%s\""
 
-#: pltcl.c:3335
+#: pltcl.c:3363
 #, c-format
 msgid "cannot set generated column \"%s\""
 msgstr "不能设置生成列 \"%s\""
