@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-09 20:48+0000\n"
+"POT-Creation-Date: 2026-11-11 19:48+0000\n"
 "PO-Revision-Date: 2026-11-04 08:45+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
@@ -5451,7 +5451,7 @@ msgid "parallel worker failed to initialize"
 msgstr "並行工作行程初始化失敗"
 
 #: access/transam/parallel.c:762 access/transam/parallel.c:892
-#: commands/repack.c:3963 commands/repack.c:4218
+#: commands/repack.c:3968 commands/repack.c:4223
 #, c-format
 msgid "More details may be available in the server log."
 msgstr "伺服器日誌中可能有更多詳細資訊。"
@@ -10132,7 +10132,7 @@ msgid "This operation is not supported for sequences."
 msgstr "序列不支援此操作。"
 
 # describe.c:117
-#: catalog/pg_class.c:35 commands/repack.c:1030
+#: catalog/pg_class.c:35 commands/repack.c:1031
 #, c-format
 msgid "This operation is not supported for TOAST tables."
 msgstr "TOAST 資料表不支援此操作。"
@@ -10818,13 +10818,13 @@ msgstr "不能重新指派 %s 所擁有物件的所有權，因為資料庫系�
 msgid "permission denied to change owner of database"
 msgstr "權限不足，無法變更資料庫擁有者"
 
-#: catalog/pg_subscription.c:70 commands/repack.c:946
+#: catalog/pg_subscription.c:70 commands/repack.c:947
 #: commands/tablecmds.c:21648 replication/logical/relation.c:252
 #, c-format
 msgid "\"%s\""
 msgstr "\"%s\""
 
-#: catalog/pg_subscription.c:72 commands/repack.c:948
+#: catalog/pg_subscription.c:72 commands/repack.c:949
 #: commands/tablecmds.c:21650 replication/logical/relation.c:254
 #, c-format
 msgid ", \"%s\""
@@ -14897,7 +14897,7 @@ msgstr "運算子屬性 \"%s\" 一旦設定就不能變更"
 # commands/tablecmds.c:1450 commands/tablecmds.c:2606
 # commands/tablecmds.c:3768 commands/tablecmds.c:5376 commands/trigger.c:147
 # commands/trigger.c:552 tcop/utility.c:182 tcop/utility.c:217
-#: commands/policy.c:86 commands/policy.c:379 commands/repack.c:647
+#: commands/policy.c:86 commands/policy.c:379 commands/repack.c:648
 #: commands/statscmds.c:152 commands/tablecmds.c:1854 commands/tablecmds.c:2457
 #: commands/tablecmds.c:3880 commands/tablecmds.c:6865
 #: commands/tablecmds.c:10786 commands/tablecmds.c:20899
@@ -15381,140 +15381,145 @@ msgstr "%s 需要明確指定資料表名稱"
 msgid "cannot execute %s on a shared catalog"
 msgstr "不能對共享系統目錄執行 %s"
 
+#: commands/repack.c:599
+#, c-format
+msgid "Marking an index as clustered on a shared catalog would only take effect in the current database."
+msgstr ""
+
 # commands/cluster.c:394
 #. translator: first %s is name of a SQL command, eg. REPACK
-#: commands/repack.c:614 commands/repack.c:2594
+#: commands/repack.c:615 commands/repack.c:2595
 #, c-format
 msgid "cannot execute %s on temporary tables of other sessions"
 msgstr "不能對其他工作階段的暫存資料表執行 %s"
 
-#: commands/repack.c:649
+#: commands/repack.c:650
 #, c-format
 msgid "System catalogs can only be clustered by the index they're already clustered on, if any, unless \"%s\" is enabled."
 msgstr "除非啟用 \"%s\"，否則系統目錄只能按其已經用於叢集化的索引 (若有) 進行叢集化。"
 
 # commands/cluster.c:326
-#: commands/repack.c:797 commands/tablecmds.c:19834
+#: commands/repack.c:798 commands/tablecmds.c:19834
 #, c-format
 msgid "\"%s\" is not an index for table \"%s\""
 msgstr "\"%s\" 不是資料表 \"%s\" 的索引"
 
-#: commands/repack.c:805
+#: commands/repack.c:806
 #, c-format
 msgid "cannot cluster on index \"%s\" because access method does not support clustering"
 msgstr "不能依索引 \"%s\" 進行叢集化，因為存取方法不支援叢集化"
 
 # commands/cluster.c:339
-#: commands/repack.c:817
+#: commands/repack.c:818
 #, c-format
 msgid "cannot cluster on partial index \"%s\""
 msgstr "不能依部分索引 \"%s\" 進行叢集化"
 
 # commands/cluster.c:339
-#: commands/repack.c:831
+#: commands/repack.c:832
 #, c-format
 msgid "cannot cluster on invalid index \"%s\""
 msgstr "不能依無效索引 \"%s\" 進行叢集化"
 
 # executor/execMain.c:820
-#: commands/repack.c:958 commands/repack.c:996 commands/repack.c:1004
-#: commands/repack.c:1017 commands/repack.c:1028 commands/repack.c:1036
-#: commands/repack.c:1044 commands/repack.c:1057 commands/repack.c:1075
-#: commands/repack.c:1083
+#: commands/repack.c:959 commands/repack.c:997 commands/repack.c:1005
+#: commands/repack.c:1018 commands/repack.c:1029 commands/repack.c:1037
+#: commands/repack.c:1045 commands/repack.c:1058 commands/repack.c:1076
+#: commands/repack.c:1084
 #, c-format
 msgid "cannot execute %s on relation \"%s\""
 msgstr "不能對關聯 \"%2$s\" 執行 %1$s"
 
-#: commands/repack.c:960
+#: commands/repack.c:961
 #, c-format
 msgid "An invalid index cannot be processed correctly: %s."
 msgid_plural "Some invalid indexes cannot be processed correctly: %s."
 msgstr[0] "無效索引不能被正確處理: %s。"
 
 # tcop/utility.c:94
-#: commands/repack.c:964
+#: commands/repack.c:965
 #, c-format
 msgid "Use DROP INDEX or REINDEX."
 msgstr "使用 DROP INDEX 或 REINDEX。"
 
 # utils/misc/guc.c:5753
-#: commands/repack.c:982
+#: commands/repack.c:983
 #, c-format
 msgid "cannot execute %s in this configuration"
 msgstr "目前組態下不能執行 %s"
 
-#: commands/repack.c:984
+#: commands/repack.c:985
 #, c-format
 msgid "This operation requires \"wal_level\" to be set to \"replica\" or higher."
 msgstr "此操作需要將 \"wal_level\" 設定為 \"replica\" 或更高層級。"
 
 # describe.c:117
-#: commands/repack.c:998
+#: commands/repack.c:999
 #, c-format
 msgid "This operation is only supported for the \"heap\" access method."
 msgstr "此操作僅支援 \"heap\" 存取方法。"
 
-#: commands/repack.c:1006
+#: commands/repack.c:1007
 #, c-format
 msgid "This operation is not supported for system catalogs."
 msgstr "系統目錄不支援此操作。"
 
-#: commands/repack.c:1019
+#: commands/repack.c:1020
 #, c-format
 msgid "This operation is not supported for user catalog tables."
 msgstr "使用者目錄資料表不支援此操作。"
 
 # libpq/auth.c:465
-#: commands/repack.c:1038
+#: commands/repack.c:1039
 #, c-format
 msgid "This operation is only supported for permanent relations."
 msgstr "此操作僅支援持久關聯。"
 
-#: commands/repack.c:1059
+#: commands/repack.c:1060
 #, c-format
 msgid "This operation does not support tables with %s."
 msgstr "此操作不支援設定了 %s 的資料表。"
 
 # describe.c:117
-#: commands/repack.c:1078
+#: commands/repack.c:1079
 #, c-format
 msgid "This operation does not support deferrable primary keys."
 msgstr "此操作不支援可延遲的主索引鍵。"
 
-#: commands/repack.c:1079
+#: commands/repack.c:1080
 #, c-format
 msgid "Use ALTER TABLE ... REPLICA IDENTITY USING INDEX to designate another index as replica identity."
 msgstr "使用 ALTER TABLE ... REPLICA IDENTITY USING INDEX 將另一個索引指定為 REPLICA IDENTITY。"
 
 # catalog/namespace.c:200 utils/adt/regproc.c:837
-#: commands/repack.c:1085
+#: commands/repack.c:1086
 #, c-format
 msgid "Relation \"%s\" has no identity index."
 msgstr "關聯 \"%s\" 沒有識別索引。"
 
-#: commands/repack.c:1550
+#: commands/repack.c:1551
 #, c-format
 msgid "repacking \"%s.%s\" using index scan on \"%s\""
 msgstr "正在使用對 \"%3$s\" 的索引掃描重組 \"%1$s.%2$s\""
 
-#: commands/repack.c:1556
+#: commands/repack.c:1557
 #, c-format
 msgid "repacking \"%s.%s\" using sequential scan and sort"
 msgstr "正在使用循序掃描和排序重組 \"%s.%s\""
 
 # commands/analyze.c:198
-#: commands/repack.c:1561
+#: commands/repack.c:1562
 #, c-format
 msgid "repacking \"%s.%s\" in physical order"
 msgstr "正在按實體順序重組 \"%s.%s\""
 
 # commands/vacuum.c:1499 commands/vacuumlazy.c:428
-#: commands/repack.c:1593
+#: commands/repack.c:1594
 #, c-format
 msgid "\"%s.%s\": found %.0f removable, %.0f nonremovable row versions in %u pages"
 msgstr "\"%1$s.%2$s\": 在 %5$u 個頁面中找到 %3$.0f 個可移除、%4$.0f 個不可移除的資料列版本"
 
-#: commands/repack.c:1598
+#: commands/repack.c:1599
 #, c-format
 msgid ""
 "%.0f dead row versions cannot be removed yet.\n"
@@ -15524,49 +15529,49 @@ msgstr ""
 "%s。"
 
 # commands/cluster.c:133
-#: commands/repack.c:2406 commands/repack.c:2674
+#: commands/repack.c:2407 commands/repack.c:2675
 #, c-format
 msgid "there is no previously clustered index for table \"%s\""
 msgstr "資料表 \"%s\" 沒有先前用於叢集化的索引"
 
 #. translator: first %s is name of a SQL command, eg. REPACK
-#: commands/repack.c:2412
+#: commands/repack.c:2413
 #, c-format
 msgid "cannot execute %s on partitioned table \"%s\" USING INDEX with no index name"
 msgstr "對分割資料表 \"%2$s\" 執行 %1$s 時，USING INDEX 不能省略索引名稱"
 
 # commands/tablespace.c:227
-#: commands/repack.c:2539
+#: commands/repack.c:2540
 #, c-format
 msgid "permission denied to execute %s on \"%s\", skipping it"
 msgstr "權限不足，無法對 \"%2$s\" 執行 %1$s，跳過該物件"
 
-#: commands/repack.c:2576 commands/vacuum.c:351
+#: commands/repack.c:2577 commands/vacuum.c:351
 #, c-format
 msgid "ANALYZE option must be specified when a column list is provided"
 msgstr "提供欄位清單時必須指定 ANALYZE 選項"
 
 # commands/cluster.c:147 commands/tablecmds.c:5326
-#: commands/repack.c:2684 commands/tablecmds.c:17762 commands/tablecmds.c:19824
+#: commands/repack.c:2685 commands/tablecmds.c:17762 commands/tablecmds.c:19824
 #, c-format
 msgid "index \"%s\" for table \"%s\" does not exist"
 msgstr "索引 \"%s\" 於資料表 \"%s\" 不存在"
 
 # access/heap/heapam.c:495
-#: commands/repack.c:2893 commands/repack.c:2931
+#: commands/repack.c:2894 commands/repack.c:2932
 #, c-format
 msgid "could not apply concurrent %s on relation \"%s\""
 msgstr "無法對關聯 \"%2$s\" 套用並行的 %1$s"
 
 # postmaster/postmaster.c:2009
-#: commands/repack.c:3870 replication/logical/launcher.c:567
+#: commands/repack.c:3875 replication/logical/launcher.c:567
 #, c-format
 msgid "out of background worker slots"
 msgstr "背景工作行程槽已用盡"
 
 # utils/init/miscinit.c:900
 #. translator: %s is a GUC variable name
-#: commands/repack.c:3871 replication/logical/launcher.c:470
+#: commands/repack.c:3876 replication/logical/launcher.c:470
 #: replication/logical/launcher.c:568 replication/slot.c:1824
 #: replication/slot.c:1844 storage/lmgr/lock.c:1083 storage/lmgr/lock.c:1121
 #: storage/lmgr/lock.c:3042 storage/lmgr/lock.c:4419 storage/lmgr/lock.c:4484
@@ -15576,37 +15581,37 @@ msgstr "背景工作行程槽已用盡"
 msgid "You might need to increase \"%s\"."
 msgstr "可能需要增大 \"%s\"。"
 
-#: commands/repack.c:3962
+#: commands/repack.c:3967
 #, c-format
 msgid "REPACK decoding worker failed to start"
 msgstr "REPACK 解碼工作行程啟動失敗"
 
-#: commands/repack.c:4027
+#: commands/repack.c:4032
 #, c-format
 msgid "postmaster exited during REPACK command"
 msgstr "postmaster 在執行 REPACK 命令期間結束"
 
 # fe-exec.c:859
-#: commands/repack.c:4217
+#: commands/repack.c:4222
 #, c-format
 msgid "lost connection to REPACK decoding worker"
 msgstr "與 REPACK 解碼工作行程的連線已遺失"
 
-#: commands/repack.c:4261 commands/repack.c:4263
+#: commands/repack.c:4266 commands/repack.c:4268
 msgid "REPACK decoding worker"
 msgstr "REPACK 解碼工作行程"
 
-#: commands/repack_worker.c:443 postmaster/walsummarizer.c:1150
+#: commands/repack_worker.c:445 postmaster/walsummarizer.c:1150
 #, c-format
 msgid "could not read WAL from timeline %u at %X/%08X: %s"
 msgstr "無法從時間軸 %u 的 %X/%08X 處讀取 WAL: %s"
 
-#: commands/repack_worker.c:460
+#: commands/repack_worker.c:462
 #, c-format
 msgid "could not read WAL record"
 msgstr "無法讀取 WAL 記錄"
 
-#: commands/repack_worker.c:508
+#: commands/repack_worker.c:510
 #, c-format
 msgid "waiting for WAL failed"
 msgstr "等待 WAL 失敗"
@@ -24315,7 +24320,7 @@ msgstr "ExtensibleNodeMethods \"%s\" 未註冊"
 
 # access/heap/heapam.c:628 access/heap/heapam.c:663 access/heap/heapam.c:698
 # catalog/aclchk.c:293
-#: nodes/makefuncs.c:154 nodes/makefuncs.c:180 statistics/extended_stats.c:2359
+#: nodes/makefuncs.c:154 nodes/makefuncs.c:180 statistics/extended_stats.c:2358
 #, c-format
 msgid "relation \"%s\" does not have a composite type"
 msgstr "關聯 \"%s\" 沒有複合型別"
@@ -36342,18 +36347,18 @@ msgstr "根運算式中不允許使用 @"
 msgid "LAST is allowed only in array subscripts"
 msgstr "只允許在陣列下標中使用 LAST"
 
-#: utils/adt/jsonpath_exec.c:521
+#: utils/adt/jsonpath_exec.c:522
 #, c-format
 msgid "single boolean result is expected"
 msgstr "應為單一布林結果"
 
-#: utils/adt/jsonpath_exec.c:890
+#: utils/adt/jsonpath_exec.c:891
 #, c-format
 msgid "jsonpath wildcard array accessor can only be applied to an array"
 msgstr "jsonpath 萬用字元陣列存取器只能套用到陣列"
 
 # sql_help.h:117
-#: utils/adt/jsonpath_exec.c:913
+#: utils/adt/jsonpath_exec.c:914
 #, c-format
 msgid "jsonpath wildcard member accessor can only be applied to an object"
 msgstr "jsonpath 萬用字元成員存取器只能套用到物件"
@@ -36364,166 +36369,166 @@ msgstr "jsonpath 萬用字元成員存取器只能套用到物件"
 # utils/adt/int8.c:751 utils/adt/int8.c:776 utils/adt/int8.c:796
 # utils/adt/int8.c:816 utils/adt/int8.c:842 utils/adt/int8.c:1010
 # utils/adt/int8.c:1049 utils/adt/numeric.c:1838 utils/adt/varbit.c:1313
-#: utils/adt/jsonpath_exec.c:962
+#: utils/adt/jsonpath_exec.c:963
 #, c-format
 msgid "jsonpath array subscript is out of bounds"
 msgstr "jsonpath 陣列下標越界"
 
-#: utils/adt/jsonpath_exec.c:1014
+#: utils/adt/jsonpath_exec.c:1015
 #, c-format
 msgid "jsonpath array accessor can only be applied to an array"
 msgstr "jsonpath 陣列存取器只能套用到陣列"
 
-#: utils/adt/jsonpath_exec.c:1075
+#: utils/adt/jsonpath_exec.c:1076
 #, c-format
 msgid "JSON object does not contain key \"%s\""
 msgstr "JSON 物件不包含鍵 \"%s\""
 
 # sql_help.h:117
-#: utils/adt/jsonpath_exec.c:1087
+#: utils/adt/jsonpath_exec.c:1088
 #, c-format
 msgid "jsonpath member accessor can only be applied to an object"
 msgstr "jsonpath 成員存取器只能套用到物件"
 
-#: utils/adt/jsonpath_exec.c:1144
+#: utils/adt/jsonpath_exec.c:1145
 #, c-format
 msgid "jsonpath item method .%s() can only be applied to an array"
 msgstr "jsonpath 項目方法 .%s() 只能套用到陣列"
 
-#: utils/adt/jsonpath_exec.c:1195 utils/adt/jsonpath_exec.c:1221
-#: utils/adt/jsonpath_exec.c:1307 utils/adt/jsonpath_exec.c:1332
-#: utils/adt/jsonpath_exec.c:1383 utils/adt/jsonpath_exec.c:1403
-#: utils/adt/jsonpath_exec.c:1464 utils/adt/jsonpath_exec.c:1541
-#: utils/adt/jsonpath_exec.c:1573 utils/adt/jsonpath_exec.c:1597
+#: utils/adt/jsonpath_exec.c:1196 utils/adt/jsonpath_exec.c:1222
+#: utils/adt/jsonpath_exec.c:1308 utils/adt/jsonpath_exec.c:1333
+#: utils/adt/jsonpath_exec.c:1384 utils/adt/jsonpath_exec.c:1404
+#: utils/adt/jsonpath_exec.c:1465 utils/adt/jsonpath_exec.c:1542
+#: utils/adt/jsonpath_exec.c:1574 utils/adt/jsonpath_exec.c:1598
 #, c-format
 msgid "argument \"%s\" of jsonpath item method .%s() is invalid for type %s"
 msgstr "jsonpath 項目方法 .%2$s() 的引數 \"%1$s\" 對型別 %3$s 無效"
 
-#: utils/adt/jsonpath_exec.c:1200 utils/adt/jsonpath_exec.c:1226
-#: utils/adt/jsonpath_exec.c:1439 utils/adt/jsonpath_exec.c:1471
+#: utils/adt/jsonpath_exec.c:1201 utils/adt/jsonpath_exec.c:1227
+#: utils/adt/jsonpath_exec.c:1440 utils/adt/jsonpath_exec.c:1472
 #, c-format
 msgid "NaN or Infinity is not allowed for jsonpath item method .%s()"
 msgstr "jsonpath 項目方法 .%s() 不允許 NaN 或 Infinity"
 
-#: utils/adt/jsonpath_exec.c:1239 utils/adt/jsonpath_exec.c:1340
-#: utils/adt/jsonpath_exec.c:1480 utils/adt/jsonpath_exec.c:1605
+#: utils/adt/jsonpath_exec.c:1240 utils/adt/jsonpath_exec.c:1341
+#: utils/adt/jsonpath_exec.c:1481 utils/adt/jsonpath_exec.c:1606
 #, c-format
 msgid "jsonpath item method .%s() can only be applied to a string or numeric value"
 msgstr "jsonpath 項目方法 .%s() 只能套用到字串或數值"
 
-#: utils/adt/jsonpath_exec.c:1412
+#: utils/adt/jsonpath_exec.c:1413
 #, c-format
 msgid "jsonpath item method .%s() can only be applied to a boolean, string, or numeric value"
 msgstr "jsonpath 項目方法 .%s() 只能套用到布林值、字串或數值"
 
 # utils/adt/numutils.c:111
-#: utils/adt/jsonpath_exec.c:1507
+#: utils/adt/jsonpath_exec.c:1508
 #, c-format
 msgid "precision of jsonpath item method .%s() is out of range for type integer"
 msgstr "jsonpath 項目方法 .%s() 的精確度超出 integer 型別的範圍"
 
 # utils/adt/numutils.c:111
-#: utils/adt/jsonpath_exec.c:1521
+#: utils/adt/jsonpath_exec.c:1522
 #, c-format
 msgid "scale of jsonpath item method .%s() is out of range for type integer"
 msgstr "jsonpath 項目方法 .%s() 的標度超出 integer 型別的範圍"
 
-#: utils/adt/jsonpath_exec.c:1659
+#: utils/adt/jsonpath_exec.c:1660
 #, c-format
 msgid "jsonpath item method .%s() can only be applied to a boolean, string, numeric, or datetime value"
 msgstr "jsonpath 項目方法 .%s() 只能套用到布林值、字串、數值或日期時間值"
 
-#: utils/adt/jsonpath_exec.c:2208
+#: utils/adt/jsonpath_exec.c:2209
 #, c-format
 msgid "left operand of jsonpath operator %s is not a single numeric value"
 msgstr "jsonpath 運算子 %s 的左運算元不是單一數值"
 
-#: utils/adt/jsonpath_exec.c:2219
+#: utils/adt/jsonpath_exec.c:2220
 #, c-format
 msgid "right operand of jsonpath operator %s is not a single numeric value"
 msgstr "jsonpath 運算子 %s 的右運算元不是單一數值"
 
-#: utils/adt/jsonpath_exec.c:2300
+#: utils/adt/jsonpath_exec.c:2301
 #, c-format
 msgid "operand of unary jsonpath operator %s is not a numeric value"
 msgstr "一元 jsonpath 運算子 %s 的運算元不是數值"
 
-#: utils/adt/jsonpath_exec.c:2406
+#: utils/adt/jsonpath_exec.c:2407
 #, c-format
 msgid "jsonpath item method .%s() can only be applied to a numeric value"
 msgstr "jsonpath 項目方法 .%s() 只能套用到數值"
 
-#: utils/adt/jsonpath_exec.c:2451 utils/adt/jsonpath_exec.c:2917
+#: utils/adt/jsonpath_exec.c:2452 utils/adt/jsonpath_exec.c:2918
 #, c-format
 msgid "jsonpath item method .%s() can only be applied to a string"
 msgstr "jsonpath 項目方法 .%s() 只能套用到字串"
 
 # utils/adt/numutils.c:111
-#: utils/adt/jsonpath_exec.c:2544
+#: utils/adt/jsonpath_exec.c:2545
 #, c-format
 msgid "time precision of jsonpath item method .%s() is out of range for type integer"
 msgstr "jsonpath 項目方法 .%s() 的時間精確度超出 integer 型別的範圍"
 
 # commands/typecmds.c:223
-#: utils/adt/jsonpath_exec.c:2578 utils/adt/jsonpath_exec.c:2584
-#: utils/adt/jsonpath_exec.c:2611 utils/adt/jsonpath_exec.c:2639
-#: utils/adt/jsonpath_exec.c:2692 utils/adt/jsonpath_exec.c:2743
-#: utils/adt/jsonpath_exec.c:2814
+#: utils/adt/jsonpath_exec.c:2579 utils/adt/jsonpath_exec.c:2585
+#: utils/adt/jsonpath_exec.c:2612 utils/adt/jsonpath_exec.c:2640
+#: utils/adt/jsonpath_exec.c:2693 utils/adt/jsonpath_exec.c:2744
+#: utils/adt/jsonpath_exec.c:2815
 #, c-format
 msgid "%s format is not recognized: \"%s\""
 msgstr "無法識別 %s 格式: \"%s\""
 
-#: utils/adt/jsonpath_exec.c:2580
+#: utils/adt/jsonpath_exec.c:2581
 #, c-format
 msgid "Use a datetime template argument to specify the input data format."
 msgstr "使用日期時間模板引數指定輸入資料格式。"
 
-#: utils/adt/jsonpath_exec.c:2773 utils/adt/jsonpath_exec.c:2854
+#: utils/adt/jsonpath_exec.c:2774 utils/adt/jsonpath_exec.c:2855
 #, c-format
 msgid "time precision of jsonpath item method .%s() is invalid"
 msgstr "jsonpath 項目方法 .%s() 的時間精確度無效"
 
 # utils/adt/numutils.c:111
-#: utils/adt/jsonpath_exec.c:3026
+#: utils/adt/jsonpath_exec.c:3027
 #, c-format
 msgid "field position of jsonpath item method .%s() is out of range for type integer"
 msgstr "jsonpath 項目方法 .%s() 的欄位位置超出 integer 型別的範圍"
 
-#: utils/adt/jsonpath_exec.c:3032
+#: utils/adt/jsonpath_exec.c:3033
 #, c-format
 msgid "field position of jsonpath item method .%s() must not be zero"
 msgstr "jsonpath 項目方法 .%s() 的欄位位置不得為零"
 
 # sql_help.h:117
-#: utils/adt/jsonpath_exec.c:3105
+#: utils/adt/jsonpath_exec.c:3106
 #, c-format
 msgid "jsonpath item method .%s() can only be applied to an object"
 msgstr "jsonpath 項目方法 .%s() 只能套用到物件"
 
 #  translator: first %s is name of a SQL construct, eg CASE
 # parser/parse_coerce.c:933
-#: utils/adt/jsonpath_exec.c:3393
+#: utils/adt/jsonpath_exec.c:3435
 #, c-format
 msgid "could not convert value of type %s to jsonpath"
 msgstr "無法將型別 %s 的值轉換為 jsonpath"
 
 # startup.c:502
-#: utils/adt/jsonpath_exec.c:3427
+#: utils/adt/jsonpath_exec.c:3470
 #, c-format
 msgid "could not find jsonpath variable \"%s\""
 msgstr "無法找到 jsonpath 變數 \"%s\""
 
-#: utils/adt/jsonpath_exec.c:3480
+#: utils/adt/jsonpath_exec.c:3523
 #, c-format
 msgid "\"vars\" argument is not an object"
 msgstr "\"vars\" 引數不是物件"
 
-#: utils/adt/jsonpath_exec.c:3481
+#: utils/adt/jsonpath_exec.c:3524
 #, c-format
 msgid "Jsonpath parameters should be encoded as key-value pairs of \"vars\" object."
 msgstr "Jsonpath 參數應編碼為 \"vars\" 物件的鍵值對。"
 
-#: utils/adt/jsonpath_exec.c:3753
+#: utils/adt/jsonpath_exec.c:3796
 #, c-format
 msgid "jsonpath array subscript is not a single numeric value"
 msgstr "jsonpath 陣列下標不是單一數值"
@@ -36534,42 +36539,42 @@ msgstr "jsonpath 陣列下標不是單一數值"
 # utils/adt/int8.c:751 utils/adt/int8.c:776 utils/adt/int8.c:796
 # utils/adt/int8.c:816 utils/adt/int8.c:842 utils/adt/int8.c:1010
 # utils/adt/int8.c:1049 utils/adt/numeric.c:1838 utils/adt/varbit.c:1313
-#: utils/adt/jsonpath_exec.c:3768
+#: utils/adt/jsonpath_exec.c:3811
 #, c-format
 msgid "jsonpath array subscript is out of integer range"
 msgstr "jsonpath 陣列下標超出整數範圍"
 
-#: utils/adt/jsonpath_exec.c:3990
+#: utils/adt/jsonpath_exec.c:4033
 #, c-format
 msgid "cannot convert value from %s to %s without time zone usage"
 msgstr "不使用時區就不能將值從 %s 轉換為 %s"
 
-#: utils/adt/jsonpath_exec.c:3992
+#: utils/adt/jsonpath_exec.c:4035
 #, c-format
 msgid "Use *_tz() function for time zone support."
 msgstr "使用 *_tz() 函式以支援時區。"
 
-#: utils/adt/jsonpath_exec.c:4296
+#: utils/adt/jsonpath_exec.c:4339
 #, c-format
 msgid "JSON path expression for column \"%s\" must return single item when no wrapper is requested"
 msgstr "未請求包裝時，欄位 \"%s\" 的 JSON 路徑運算式必須傳回單一項"
 
-#: utils/adt/jsonpath_exec.c:4298 utils/adt/jsonpath_exec.c:4303
+#: utils/adt/jsonpath_exec.c:4341 utils/adt/jsonpath_exec.c:4346
 #, c-format
 msgid "Use the WITH WRAPPER clause to wrap SQL/JSON items into an array."
 msgstr "使用 WITH WRAPPER 子句將 SQL/JSON 項包裝成陣列。"
 
-#: utils/adt/jsonpath_exec.c:4302
+#: utils/adt/jsonpath_exec.c:4345
 #, c-format
 msgid "JSON path expression in JSON_QUERY must return single item when no wrapper is requested"
 msgstr "未請求包裝時，JSON_QUERY 中的 JSON 路徑運算式必須傳回單一項"
 
-#: utils/adt/jsonpath_exec.c:4359 utils/adt/jsonpath_exec.c:4383
+#: utils/adt/jsonpath_exec.c:4402 utils/adt/jsonpath_exec.c:4426
 #, c-format
 msgid "JSON path expression for column \"%s\" must return single scalar item"
 msgstr "欄位 \"%s\" 的 JSON 路徑運算式必須傳回單一純量項"
 
-#: utils/adt/jsonpath_exec.c:4364 utils/adt/jsonpath_exec.c:4388
+#: utils/adt/jsonpath_exec.c:4407 utils/adt/jsonpath_exec.c:4431
 #, c-format
 msgid "JSON path expression in JSON_VALUE must return single scalar item"
 msgstr "JSON_VALUE 中的 JSON 路徑運算式必須傳回單一純量項"
