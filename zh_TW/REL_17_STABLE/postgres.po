@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 17\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-09 21:22+0000\n"
-"PO-Revision-Date: 2026-11-10 09:59+0800\n"
+"POT-Creation-Date: 2026-11-11 19:22+0000\n"
+"PO-Revision-Date: 2026-11-12 07:19+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
@@ -30462,28 +30462,28 @@ msgstr "jsonpath 項目方法 .%s() 只能套用到物件"
 
 #  translator: first %s is name of a SQL construct, eg CASE
 # parser/parse_coerce.c:933
-#: utils/adt/jsonpath_exec.c:3116
+#: utils/adt/jsonpath_exec.c:3157
 #, c-format
 msgid "could not convert value of type %s to jsonpath"
 msgstr "無法將型別 %s 的值轉換為 jsonpath"
 
 # startup.c:502
-#: utils/adt/jsonpath_exec.c:3150
+#: utils/adt/jsonpath_exec.c:3192
 #, c-format
 msgid "could not find jsonpath variable \"%s\""
 msgstr "無法找到 jsonpath 變數 \"%s\""
 
-#: utils/adt/jsonpath_exec.c:3203
+#: utils/adt/jsonpath_exec.c:3245
 #, c-format
 msgid "\"vars\" argument is not an object"
 msgstr "\"vars\" 引數不是物件"
 
-#: utils/adt/jsonpath_exec.c:3204
+#: utils/adt/jsonpath_exec.c:3246
 #, c-format
 msgid "Jsonpath parameters should be encoded as key-value pairs of \"vars\" object."
 msgstr "Jsonpath 參數應編碼為 \"vars\" 物件的鍵值對。"
 
-#: utils/adt/jsonpath_exec.c:3467
+#: utils/adt/jsonpath_exec.c:3509
 #, c-format
 msgid "jsonpath array subscript is not a single numeric value"
 msgstr "jsonpath 陣列下標不是單一數值"
@@ -30494,42 +30494,42 @@ msgstr "jsonpath 陣列下標不是單一數值"
 # utils/adt/int8.c:751 utils/adt/int8.c:776 utils/adt/int8.c:796
 # utils/adt/int8.c:816 utils/adt/int8.c:842 utils/adt/int8.c:1010
 # utils/adt/int8.c:1049 utils/adt/numeric.c:1838 utils/adt/varbit.c:1313
-#: utils/adt/jsonpath_exec.c:3479
+#: utils/adt/jsonpath_exec.c:3521
 #, c-format
 msgid "jsonpath array subscript is out of integer range"
 msgstr "jsonpath 陣列下標超出整數範圍"
 
-#: utils/adt/jsonpath_exec.c:3663
+#: utils/adt/jsonpath_exec.c:3705
 #, c-format
 msgid "cannot convert value from %s to %s without time zone usage"
 msgstr "不使用時區就不能將值從 %s 轉換為 %s"
 
-#: utils/adt/jsonpath_exec.c:3665
+#: utils/adt/jsonpath_exec.c:3707
 #, c-format
 msgid "Use *_tz() function for time zone support."
 msgstr "使用 *_tz() 函式以支援時區。"
 
-#: utils/adt/jsonpath_exec.c:3973
+#: utils/adt/jsonpath_exec.c:4015
 #, c-format
 msgid "JSON path expression for column \"%s\" must return single item when no wrapper is requested"
 msgstr "未請求包裝時，欄位 \"%s\" 的 JSON 路徑運算式必須傳回單一項"
 
-#: utils/adt/jsonpath_exec.c:3975 utils/adt/jsonpath_exec.c:3980
+#: utils/adt/jsonpath_exec.c:4017 utils/adt/jsonpath_exec.c:4022
 #, c-format
 msgid "Use the WITH WRAPPER clause to wrap SQL/JSON items into an array."
 msgstr "使用 WITH WRAPPER 子句將 SQL/JSON 項包裝成陣列。"
 
-#: utils/adt/jsonpath_exec.c:3979
+#: utils/adt/jsonpath_exec.c:4021
 #, c-format
 msgid "JSON path expression in JSON_QUERY must return single item when no wrapper is requested"
 msgstr "未請求包裝時，JSON_QUERY 中的 JSON 路徑運算式必須傳回單一項"
 
-#: utils/adt/jsonpath_exec.c:4037 utils/adt/jsonpath_exec.c:4061
+#: utils/adt/jsonpath_exec.c:4079 utils/adt/jsonpath_exec.c:4103
 #, c-format
 msgid "JSON path expression for column \"%s\" must return single scalar item"
 msgstr "欄位 \"%s\" 的 JSON 路徑運算式必須傳回單一純量項"
 
-#: utils/adt/jsonpath_exec.c:4042 utils/adt/jsonpath_exec.c:4066
+#: utils/adt/jsonpath_exec.c:4084 utils/adt/jsonpath_exec.c:4108
 #, c-format
 msgid "JSON path expression in JSON_VALUE must return single scalar item"
 msgstr "JSON_VALUE 中的 JSON 路徑運算式必須傳回單一純量項"

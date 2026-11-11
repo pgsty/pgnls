@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plperl (PostgreSQL) 15\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-09 21:45+0000\n"
-"PO-Revision-Date: 2026-11-10 09:59+0800\n"
+"POT-Creation-Date: 2026-11-11 18:16+0000\n"
+"PO-Revision-Date: 2026-11-12 07:19+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
@@ -76,13 +76,13 @@ msgstr "在執行 plperl.on_plperl_init 時"
 msgid "while executing plperl.on_plperlu_init"
 msgstr "在執行 plperl.on_plperlu_init 時"
 
-#: plperl.c:1181 plperl.c:1975
+#: plperl.c:1181 plperl.c:2023
 #, c-format
 msgid "Perl hash contains nonexistent column \"%s\""
 msgstr "Perl 雜湊包含不存在的欄位 \"%s\""
 
 # commands/tablecmds.c:5425
-#: plperl.c:1186 plperl.c:1980
+#: plperl.c:1186 plperl.c:2028
 #, c-format
 msgid "cannot set system attribute \"%s\""
 msgstr "不能設定系統屬性 \"%s\""
@@ -118,119 +118,119 @@ msgstr "不能將 Perl 陣列轉換為非陣列型別 %s"
 msgid "cannot convert Perl hash to non-composite type %s"
 msgstr "不能將 Perl 雜湊轉換為非複合型別 %s"
 
-#: plperl.c:1559 plperl.c:3539
+#: plperl.c:1559 plperl.c:3587
 #, c-format
 msgid "function returning record called in context that cannot accept type record"
 msgstr "在不能接受 record 型別的上下文中呼叫傳回 record 的函式"
 
 # utils/cache/lsyscache.c:1720
-#: plperl.c:1620
+#: plperl.c:1639
 #, c-format
 msgid "lookup failed for type %s"
 msgstr "尋找型別 %s 失敗"
 
-#: plperl.c:1942
+#: plperl.c:1990
 #, c-format
 msgid "$_TD->{new} does not exist"
 msgstr "$_TD->{new} 不存在"
 
-#: plperl.c:1949
+#: plperl.c:1997
 #, c-format
 msgid "$_TD->{new} is not a hash reference"
 msgstr "$_TD->{new} 不是雜湊參考"
 
 # commands/tablecmds.c:4580
-#: plperl.c:1985
+#: plperl.c:2033
 #, c-format
 msgid "cannot set generated column \"%s\""
 msgstr "不能設定產生欄位 \"%s\""
 
-#: plperl.c:2252 plperl.c:3074
+#: plperl.c:2300 plperl.c:3122
 #, c-format
 msgid "PL/Perl functions cannot return type %s"
 msgstr "PL/Perl 函式不能傳回型別 %s"
 
-#: plperl.c:2265 plperl.c:3113
+#: plperl.c:2313 plperl.c:3161
 #, c-format
 msgid "PL/Perl functions cannot accept type %s"
 msgstr "PL/Perl 函式不能接受型別 %s"
 
-#: plperl.c:2386
+#: plperl.c:2434
 #, c-format
 msgid "didn't get a CODE reference from compiling function \"%s\""
 msgstr "未從編譯函式 \"%s\" 取得 CODE 參考"
 
-#: plperl.c:2477
+#: plperl.c:2525
 #, c-format
 msgid "didn't get a return item from function"
 msgstr "未從函式取得傳回項目"
 
-#: plperl.c:2524 plperl.c:2594
+#: plperl.c:2572 plperl.c:2642
 #, c-format
 msgid "couldn't fetch $_TD"
 msgstr "無法擷取 $_TD"
 
-#: plperl.c:2548 plperl.c:2614
+#: plperl.c:2596 plperl.c:2662
 #, c-format
 msgid "didn't get a return item from trigger function"
 msgstr "未從觸發器函式取得傳回項目"
 
-#: plperl.c:2663
+#: plperl.c:2711
 #, c-format
 msgid "set-valued function called in context that cannot accept a set"
 msgstr "在不能接受集合的情境中呼叫傳回集合的函式"
 
-#: plperl.c:2668
+#: plperl.c:2716
 #, c-format
 msgid "materialize mode required, but it is not allowed in this context"
 msgstr "需要物化模式，但此上下文不允許該模式"
 
-#: plperl.c:2723
+#: plperl.c:2771
 #, c-format
 msgid "set-returning PL/Perl function must return reference to array or use return_next"
 msgstr "傳回集合的 PL/Perl 函式必須傳回陣列的參考或用 return_next"
 
-#: plperl.c:2829
+#: plperl.c:2877
 #, c-format
 msgid "ignoring modified row in DELETE trigger"
 msgstr "正在忽略 DELETE 觸發器中已修改的列"
 
-#: plperl.c:2837
+#: plperl.c:2885
 #, c-format
 msgid "result of PL/Perl trigger function must be undef, \"SKIP\", or \"MODIFY\""
 msgstr "PL/Perl 觸發器函式的結果必須是 undef, \"SKIP\" 或 \"MODIFY\""
 
-#: plperl.c:3069
+#: plperl.c:3117
 #, c-format
 msgid "trigger functions can only be called as triggers"
 msgstr "觸發器函式只能當做觸發器呼叫"
 
-#: plperl.c:3442
+#: plperl.c:3490
 #, c-format
 msgid "query result has too many rows to fit in a Perl array"
 msgstr "查詢結果的列數過多，無法放入 Perl 陣列中"
 
-#: plperl.c:3516
+#: plperl.c:3564
 #, c-format
 msgid "cannot use return_next in a non-SETOF function"
 msgstr "在非 SETOF 函式中不能使用 return_next"
 
-#: plperl.c:3594
+#: plperl.c:3642
 #, c-format
 msgid "SETOF-composite-returning PL/Perl function must call return_next with reference to hash"
 msgstr "傳回 SETOF 複合型別的 PL/Perl 函式必須以雜湊參考為參數呼叫 return_next"
 
-#: plperl.c:4425
+#: plperl.c:4473
 #, c-format
 msgid "PL/Perl function \"%s\""
 msgstr "PL/Perl 函式 \"%s\""
 
-#: plperl.c:4437
+#: plperl.c:4485
 #, c-format
 msgid "compilation of PL/Perl function \"%s\""
 msgstr "編譯 PL/Perl 函式 \"%s\""
 
-#: plperl.c:4446
+#: plperl.c:4494
 #, c-format
 msgid "PL/Perl anonymous code block"
 msgstr "PL/Perl 匿名程式碼區塊"
