@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 15\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-11 18:23+0000\n"
+"POT-Creation-Date: 2026-11-13 00:23+0000\n"
 "PO-Revision-Date: 2026-10-08 16:06+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
@@ -207,8 +207,8 @@ msgstr "无法对文件 \"%s\" 执行 fsync: %m"
 #: replication/logical/logical.c:268 replication/walsender.c:718
 #: storage/buffer/localbuf.c:442 storage/file/fd.c:892 storage/file/fd.c:1434
 #: storage/file/fd.c:1595 storage/file/fd.c:2409 storage/ipc/procarray.c:1463
-#: storage/ipc/procarray.c:2292 storage/ipc/procarray.c:2299
-#: storage/ipc/procarray.c:2809 storage/ipc/procarray.c:3440
+#: storage/ipc/procarray.c:2292 storage/ipc/procarray.c:2306
+#: storage/ipc/procarray.c:2817 storage/ipc/procarray.c:3448
 #: tcop/postgres.c:3661 utils/activity/pgstat_shmem.c:506
 #: utils/adt/formatting.c:1735 utils/adt/formatting.c:1857
 #: utils/adt/formatting.c:1980 utils/adt/pg_locale.c:454
@@ -810,17 +810,17 @@ msgstr "返回类型 %1$s 与第 %3$d 列的预期类型 %2$s 不匹配。"
 msgid "Number of returned columns (%d) does not match expected column count (%d)."
 msgstr "返回列数（%d）与预期列数（%d）不匹配。"
 
-#: access/common/attmap.c:229 access/common/attmap.c:241
+#: access/common/attmap.c:245 access/common/attmap.c:257
 #, c-format
 msgid "could not convert row type"
 msgstr "无法转换行类型"
 
-#: access/common/attmap.c:230
+#: access/common/attmap.c:246
 #, c-format
 msgid "Attribute \"%s\" of type %s does not match corresponding attribute of type %s."
 msgstr "类型 %2$s 的属性 \"%1$s\" 与类型 %3$s 的对应属性不匹配。"
 
-#: access/common/attmap.c:242
+#: access/common/attmap.c:258
 #, c-format
 msgid "Attribute \"%s\" of type %s does not exist in type %s."
 msgstr "类型 %2$s 的属性 \"%1$s\" 在类型 %3$s 中不存在。"
@@ -2192,96 +2192,96 @@ msgid "cannot PREPARE a transaction that has exported snapshots"
 msgstr "不能对已导出快照的事务执行 PREPARE"
 
 #. translator: %s represents an SQL statement name
-#: access/transam/xact.c:3492
+#: access/transam/xact.c:3510
 #, c-format
 msgid "%s cannot run inside a transaction block"
 msgstr "%s 不能在事务块中运行"
 
 #. translator: %s represents an SQL statement name
-#: access/transam/xact.c:3502
+#: access/transam/xact.c:3520
 #, c-format
 msgid "%s cannot run inside a subtransaction"
 msgstr "%s 不能在子事务中运行"
 
 #. translator: %s represents an SQL statement name
-#: access/transam/xact.c:3512
+#: access/transam/xact.c:3530
 #, c-format
 msgid "%s cannot be executed within a pipeline"
 msgstr "不能在流水线中执行 %s"
 
 #. translator: %s represents an SQL statement name
-#: access/transam/xact.c:3522
+#: access/transam/xact.c:3540
 #, c-format
 msgid "%s cannot be executed from a function"
 msgstr "不能从函数中执行 %s"
 
 #. translator: %s represents an SQL statement name
-#: access/transam/xact.c:3593 access/transam/xact.c:3908
-#: access/transam/xact.c:3987 access/transam/xact.c:4110
-#: access/transam/xact.c:4261 access/transam/xact.c:4330
-#: access/transam/xact.c:4441
+#: access/transam/xact.c:3611 access/transam/xact.c:3926
+#: access/transam/xact.c:4005 access/transam/xact.c:4128
+#: access/transam/xact.c:4279 access/transam/xact.c:4348
+#: access/transam/xact.c:4459
 #, c-format
 msgid "%s can only be used in transaction blocks"
 msgstr "%s 只能在事务块中使用"
 
-#: access/transam/xact.c:3794
+#: access/transam/xact.c:3812
 #, c-format
 msgid "there is already a transaction in progress"
 msgstr "已有事务在运行中"
 
-#: access/transam/xact.c:3913 access/transam/xact.c:3992
-#: access/transam/xact.c:4115
+#: access/transam/xact.c:3931 access/transam/xact.c:4010
+#: access/transam/xact.c:4133
 #, c-format
 msgid "there is no transaction in progress"
 msgstr "没有事务在运行中"
 
-#: access/transam/xact.c:4003
+#: access/transam/xact.c:4021
 #, c-format
 msgid "cannot commit during a parallel operation"
 msgstr "并行操作期间不能提交"
 
-#: access/transam/xact.c:4126
+#: access/transam/xact.c:4144
 #, c-format
 msgid "cannot abort during a parallel operation"
 msgstr "并行操作期间不能中止"
 
-#: access/transam/xact.c:4225
+#: access/transam/xact.c:4243
 #, c-format
 msgid "cannot define savepoints during a parallel operation"
 msgstr "并行操作期间不能定义保存点"
 
-#: access/transam/xact.c:4312
+#: access/transam/xact.c:4330
 #, c-format
 msgid "cannot release savepoints during a parallel operation"
 msgstr "并行操作期间不能释放保存点"
 
-#: access/transam/xact.c:4322 access/transam/xact.c:4373
-#: access/transam/xact.c:4433 access/transam/xact.c:4482
+#: access/transam/xact.c:4340 access/transam/xact.c:4391
+#: access/transam/xact.c:4451 access/transam/xact.c:4500
 #, c-format
 msgid "savepoint \"%s\" does not exist"
 msgstr "保存点 \"%s\" 不存在"
 
-#: access/transam/xact.c:4379 access/transam/xact.c:4488
+#: access/transam/xact.c:4397 access/transam/xact.c:4506
 #, c-format
 msgid "savepoint \"%s\" does not exist within current savepoint level"
 msgstr "当前保存点级别中不存在保存点 \"%s\""
 
-#: access/transam/xact.c:4421
+#: access/transam/xact.c:4439
 #, c-format
 msgid "cannot rollback to savepoints during a parallel operation"
 msgstr "并行操作期间不能回滚到保存点"
 
-#: access/transam/xact.c:4549
+#: access/transam/xact.c:4567
 #, c-format
 msgid "cannot start subtransactions during a parallel operation"
 msgstr "在并行操作期间不能开始子事务"
 
-#: access/transam/xact.c:4617
+#: access/transam/xact.c:4635
 #, c-format
 msgid "cannot commit subtransactions during a parallel operation"
 msgstr "在并行操作期间不能提交子事务"
 
-#: access/transam/xact.c:5266
+#: access/transam/xact.c:5284
 #, c-format
 msgid "cannot have more than 2^32-1 subtransactions in a transaction"
 msgstr "事务中的子事务数不能超过 2^32-1"
@@ -5140,7 +5140,7 @@ msgstr "参数列表的长度必须正好为 %d"
 msgid "must be owner of large object %u"
 msgstr "必须是大对象 %u 的所有者"
 
-#: catalog/objectaddress.c:2548 commands/functioncmds.c:1579
+#: catalog/objectaddress.c:2548 commands/functioncmds.c:1580
 #, c-format
 msgid "must be owner of type %s or type %s"
 msgstr "必须是类型 %s 或类型 %s 的所有者"
@@ -7654,7 +7654,7 @@ msgid "There is %d other session using the database."
 msgid_plural "There are %d other sessions using the database."
 msgstr[0] "有 %d 个其他会话正在使用该数据库。"
 
-#: commands/dbcommands.c:2985 storage/ipc/procarray.c:3864
+#: commands/dbcommands.c:2985 storage/ipc/procarray.c:3872
 #, c-format
 msgid "There is %d prepared transaction using the database."
 msgid_plural "There are %d prepared transactions using the database."
@@ -7708,7 +7708,7 @@ msgstr "%s 的参数必须是类型名"
 msgid "invalid argument for %s: \"%s\""
 msgstr "%s 的参数无效: \"%s\""
 
-#: commands/dropcmds.c:100 commands/functioncmds.c:1407
+#: commands/dropcmds.c:100 commands/functioncmds.c:1408
 #: utils/adt/ruleutils.c:2940
 #, c-format
 msgid "\"%s\" is an aggregate function"
@@ -8411,17 +8411,17 @@ msgstr "函数不能接受集合参数"
 msgid "VARIADIC parameter must be the last input parameter"
 msgstr "VARIADIC 参数必须是最后一个输入参数"
 
-#: commands/functioncmds.c:336
+#: commands/functioncmds.c:339
 #, c-format
 msgid "VARIADIC parameter must be the last parameter"
 msgstr "VARIADIC 参数必须是最后一个参数"
 
-#: commands/functioncmds.c:361
+#: commands/functioncmds.c:364
 #, c-format
 msgid "VARIADIC parameter must be an array"
 msgstr "VARIADIC 参数必须是数组"
 
-#: commands/functioncmds.c:406
+#: commands/functioncmds.c:409
 #, c-format
 msgid "parameter name \"%s\" used more than once"
 msgstr "多次使用参数名 \"%s\""
@@ -8461,12 +8461,12 @@ msgstr "支持函数 %s 必须返回类型 %s"
 msgid "must be superuser to specify a support function"
 msgstr "必须是超级用户才能指定支持函数"
 
-#: commands/functioncmds.c:846 commands/functioncmds.c:1452
+#: commands/functioncmds.c:846 commands/functioncmds.c:1453
 #, c-format
 msgid "COST must be positive"
 msgstr "COST 必须为正数"
 
-#: commands/functioncmds.c:854 commands/functioncmds.c:1460
+#: commands/functioncmds.c:854 commands/functioncmds.c:1461
 #, c-format
 msgid "ROWS must be positive"
 msgstr "ROWS 必须为正数"
@@ -8486,223 +8486,223 @@ msgstr "重复指定函数体"
 msgid "inline SQL function body only valid for language SQL"
 msgstr "内联 SQL 函数体仅对 SQL 语言有效"
 
-#: commands/functioncmds.c:935
+#: commands/functioncmds.c:936
 #, c-format
 msgid "SQL function with unquoted function body cannot have polymorphic arguments"
 msgstr "函数体不带引号的 SQL 函数不能有多态参数"
 
-#: commands/functioncmds.c:961 commands/functioncmds.c:980
+#: commands/functioncmds.c:962 commands/functioncmds.c:981
 #, c-format
 msgid "%s is not yet supported in unquoted SQL function body"
 msgstr "不带引号的 SQL 函数体尚不支持 %s"
 
-#: commands/functioncmds.c:1008
+#: commands/functioncmds.c:1009
 #, c-format
 msgid "only one AS item needed for language \"%s\""
 msgstr "语言 \"%s\" 只需要一个 AS 项"
 
-#: commands/functioncmds.c:1113
+#: commands/functioncmds.c:1114
 #, c-format
 msgid "no language specified"
 msgstr "没有指定语言"
 
-#: commands/functioncmds.c:1121 commands/functioncmds.c:2122
+#: commands/functioncmds.c:1122 commands/functioncmds.c:2123
 #: commands/proclang.c:237
 #, c-format
 msgid "language \"%s\" does not exist"
 msgstr "语言 \"%s\" 不存在"
 
-#: commands/functioncmds.c:1123 commands/functioncmds.c:2124
+#: commands/functioncmds.c:1124 commands/functioncmds.c:2125
 #, c-format
 msgid "Use CREATE EXTENSION to load the language into the database."
 msgstr "使用 CREATE EXTENSION 向数据库加载语言。"
 
-#: commands/functioncmds.c:1158 commands/functioncmds.c:1444
+#: commands/functioncmds.c:1159 commands/functioncmds.c:1445
 #, c-format
 msgid "only superuser can define a leakproof function"
 msgstr "只有超级用户才能定义 LEAKPROOF 函数"
 
-#: commands/functioncmds.c:1209
+#: commands/functioncmds.c:1210
 #, c-format
 msgid "function result type must be %s because of OUT parameters"
 msgstr "因为 OUT 参数，函数的结果类型必须是 %s"
 
-#: commands/functioncmds.c:1222
+#: commands/functioncmds.c:1223
 #, c-format
 msgid "function result type must be specified"
 msgstr "必须指定函数返回结果的类型"
 
-#: commands/functioncmds.c:1276 commands/functioncmds.c:1464
+#: commands/functioncmds.c:1277 commands/functioncmds.c:1465
 #, c-format
 msgid "ROWS is not applicable when function does not return a set"
 msgstr "函数不返回集合时，ROWS 不适用"
 
-#: commands/functioncmds.c:1565
+#: commands/functioncmds.c:1566
 #, c-format
 msgid "source data type %s is a pseudo-type"
 msgstr "源数据类型 %s 是伪类型"
 
-#: commands/functioncmds.c:1571
+#: commands/functioncmds.c:1572
 #, c-format
 msgid "target data type %s is a pseudo-type"
 msgstr "目标数据类型 %s 是伪类型"
 
-#: commands/functioncmds.c:1595
+#: commands/functioncmds.c:1596
 #, c-format
 msgid "cast will be ignored because the source data type is a domain"
 msgstr "类型转换将被忽略，因为源数据类型是域"
 
-#: commands/functioncmds.c:1600
+#: commands/functioncmds.c:1601
 #, c-format
 msgid "cast will be ignored because the target data type is a domain"
 msgstr "类型转换将被忽略，因为目标数据类型是域"
 
-#: commands/functioncmds.c:1625
+#: commands/functioncmds.c:1626
 #, c-format
 msgid "cast function must take one to three arguments"
 msgstr "类型转换函数必须带一到三个参数"
 
-#: commands/functioncmds.c:1629
+#: commands/functioncmds.c:1630
 #, c-format
 msgid "argument of cast function must match or be binary-coercible from source data type"
 msgstr "类型转换函数的参数类型必须与源数据类型相同，或允许从源数据类型进行二进制强制转换"
 
-#: commands/functioncmds.c:1633
+#: commands/functioncmds.c:1634
 #, c-format
 msgid "second argument of cast function must be type %s"
 msgstr "类型转换函数的第二个参数必须为类型 %s"
 
-#: commands/functioncmds.c:1638
+#: commands/functioncmds.c:1639
 #, c-format
 msgid "third argument of cast function must be type %s"
 msgstr "类型转换函数的第三个参数必须为类型 %s"
 
-#: commands/functioncmds.c:1643
+#: commands/functioncmds.c:1644
 #, c-format
 msgid "return data type of cast function must match or be binary-coercible to target data type"
 msgstr "类型转换函数的返回数据类型必须与目标数据类型相同，或能以二进制方式强制转换为目标数据类型"
 
-#: commands/functioncmds.c:1654
+#: commands/functioncmds.c:1655
 #, c-format
 msgid "cast function must not be volatile"
 msgstr "类型转换函数不得为 VOLATILE"
 
-#: commands/functioncmds.c:1659
+#: commands/functioncmds.c:1660
 #, c-format
 msgid "cast function must be a normal function"
 msgstr "类型转换函数必须是普通函数"
 
-#: commands/functioncmds.c:1663
+#: commands/functioncmds.c:1664
 #, c-format
 msgid "cast function must not return a set"
 msgstr "类型转换函数不得返回集合"
 
-#: commands/functioncmds.c:1689
+#: commands/functioncmds.c:1690
 #, c-format
 msgid "must be superuser to create a cast WITHOUT FUNCTION"
 msgstr "必须是超级用户才能创建 WITHOUT FUNCTION 类型转换"
 
-#: commands/functioncmds.c:1704
+#: commands/functioncmds.c:1705
 #, c-format
 msgid "source and target data types are not physically compatible"
 msgstr "源数据类型与目标数据类型的物理表示不兼容"
 
-#: commands/functioncmds.c:1719
+#: commands/functioncmds.c:1720
 #, c-format
 msgid "composite data types are not binary-compatible"
 msgstr "复合数据类型不具备二进制兼容性"
 
-#: commands/functioncmds.c:1725
+#: commands/functioncmds.c:1726
 #, c-format
 msgid "enum data types are not binary-compatible"
 msgstr "枚举数据类型不具备二进制兼容性"
 
-#: commands/functioncmds.c:1731
+#: commands/functioncmds.c:1732
 #, c-format
 msgid "array data types are not binary-compatible"
 msgstr "数组数据类型不具备二进制兼容性"
 
-#: commands/functioncmds.c:1748
+#: commands/functioncmds.c:1749
 #, c-format
 msgid "domain data types must not be marked binary-compatible"
 msgstr "域数据类型不得标为二进制兼容"
 
-#: commands/functioncmds.c:1758
+#: commands/functioncmds.c:1759
 #, c-format
 msgid "source data type and target data type are the same"
 msgstr "源数据类型和目标数据类型相同"
 
-#: commands/functioncmds.c:1791
+#: commands/functioncmds.c:1792
 #, c-format
 msgid "transform function must not be volatile"
 msgstr "转换函数不得为 VOLATILE"
 
-#: commands/functioncmds.c:1795
+#: commands/functioncmds.c:1796
 #, c-format
 msgid "transform function must be a normal function"
 msgstr "转换函数必须是普通函数"
 
-#: commands/functioncmds.c:1799
+#: commands/functioncmds.c:1800
 #, c-format
 msgid "transform function must not return a set"
 msgstr "转换函数不得返回集合"
 
-#: commands/functioncmds.c:1803
+#: commands/functioncmds.c:1804
 #, c-format
 msgid "transform function must take one argument"
 msgstr "转换函数必须带一个参数"
 
-#: commands/functioncmds.c:1807
+#: commands/functioncmds.c:1808
 #, c-format
 msgid "first argument of transform function must be type %s"
 msgstr "转换函数的第一个参数必须为类型 %s"
 
-#: commands/functioncmds.c:1846
+#: commands/functioncmds.c:1847
 #, c-format
 msgid "data type %s is a pseudo-type"
 msgstr "数据类型 %s 是伪类型"
 
-#: commands/functioncmds.c:1852
+#: commands/functioncmds.c:1853
 #, c-format
 msgid "data type %s is a domain"
 msgstr "数据类型 %s 是域"
 
-#: commands/functioncmds.c:1892
+#: commands/functioncmds.c:1893
 #, c-format
 msgid "return data type of FROM SQL function must be %s"
 msgstr "FROM SQL 函数的返回数据类型必须是 %s"
 
-#: commands/functioncmds.c:1918
+#: commands/functioncmds.c:1919
 #, c-format
 msgid "return data type of TO SQL function must be the transform data type"
 msgstr "TO SQL 函数的返回数据类型必须与该转换的数据类型相同"
 
-#: commands/functioncmds.c:1947
+#: commands/functioncmds.c:1948
 #, c-format
 msgid "transform for type %s language \"%s\" already exists"
 msgstr "类型 %s 在语言 \"%s\" 中的转换已存在"
 
-#: commands/functioncmds.c:2034
+#: commands/functioncmds.c:2035
 #, c-format
 msgid "transform for type %s language \"%s\" does not exist"
 msgstr "类型 %s 在语言 \"%s\" 中的转换不存在"
 
-#: commands/functioncmds.c:2058
+#: commands/functioncmds.c:2059
 #, c-format
 msgid "function %s already exists in schema \"%s\""
 msgstr "模式 \"%2$s\" 中已存在函数 %1$s"
 
-#: commands/functioncmds.c:2109
+#: commands/functioncmds.c:2110
 #, c-format
 msgid "no inline code specified"
 msgstr "没有指定内联代码"
 
-#: commands/functioncmds.c:2155
+#: commands/functioncmds.c:2156
 #, c-format
 msgid "language \"%s\" does not support inline code execution"
 msgstr "语言 \"%s\" 不支持执行内联代码"
 
-#: commands/functioncmds.c:2250
+#: commands/functioncmds.c:2251
 #, c-format
 msgid "cannot pass more than %d argument to a procedure"
 msgid_plural "cannot pass more than %d arguments to a procedure"
@@ -22080,17 +22080,17 @@ msgstr "无法关闭共享内存段 \"%s\": %m"
 msgid "could not duplicate handle for \"%s\": %m"
 msgstr "无法复制 \"%s\" 的句柄: %m"
 
-#: storage/ipc/procarray.c:3862
+#: storage/ipc/procarray.c:3870
 #, c-format
 msgid "database \"%s\" is being used by prepared transactions"
 msgstr "数据库 \"%s\" 正被预备事务使用"
 
-#: storage/ipc/procarray.c:3898 storage/ipc/signalfuncs.c:231
+#: storage/ipc/procarray.c:3906 storage/ipc/signalfuncs.c:231
 #, c-format
 msgid "must be a superuser to terminate superuser process"
 msgstr "必须是超级用户才能终止超级用户的进程"
 
-#: storage/ipc/procarray.c:3904 storage/ipc/signalfuncs.c:236
+#: storage/ipc/procarray.c:3912 storage/ipc/signalfuncs.c:236
 #, c-format
 msgid "must be a member of the role whose process is being terminated or member of pg_signal_backend"
 msgstr "必须是被终止进程所属角色的成员，或是 pg_signal_backend 的成员"
@@ -24575,7 +24575,7 @@ msgstr "OID 超出范围"
 msgid "key value must be scalar, not array, composite, or json"
 msgstr "键值必须是标量，不能是数组、复合值或 JSON 值"
 
-#: utils/adt/json.c:900 utils/adt/json.c:910 utils/fmgr/funcapi.c:2112
+#: utils/adt/json.c:900 utils/adt/json.c:910 utils/fmgr/funcapi.c:2116
 #, c-format
 msgid "could not determine data type for argument %d"
 msgstr "无法确定参数 %d 的数据类型"
@@ -25737,7 +25737,7 @@ msgid "more than one operator named %s"
 msgstr "多个操作符名为 %s"
 
 #: utils/adt/regproc.c:715 utils/adt/regproc.c:756 utils/adt/regproc.c:2055
-#: utils/adt/ruleutils.c:10155 utils/adt/ruleutils.c:10324
+#: utils/adt/ruleutils.c:10164 utils/adt/ruleutils.c:10333
 #, c-format
 msgid "too many arguments"
 msgstr "参数过多"
@@ -25923,7 +25923,7 @@ msgstr "表达式包含多个关系的变量"
 msgid "expression contains variables"
 msgstr "表达式包含变量"
 
-#: utils/adt/ruleutils.c:5282
+#: utils/adt/ruleutils.c:5291
 #, c-format
 msgid "rule \"%s\" has unsupported event type %d"
 msgstr "规则 \"%s\" 的事件类型 %d 不受支持"
@@ -26912,17 +26912,17 @@ msgstr "声明为 %s 的参数未包含范围类型，而是包含类型 %s"
 msgid "could not find multirange type for data type %s"
 msgstr "无法为数据类型 %s 找到多范围类型"
 
-#: utils/fmgr/funcapi.c:1951 utils/fmgr/funcapi.c:1983
+#: utils/fmgr/funcapi.c:1955 utils/fmgr/funcapi.c:1987
 #, c-format
 msgid "number of aliases does not match number of columns"
 msgstr "别名数量与列数量不匹配"
 
-#: utils/fmgr/funcapi.c:1977
+#: utils/fmgr/funcapi.c:1981
 #, c-format
 msgid "no column alias was provided"
 msgstr "未提供列别名"
 
-#: utils/fmgr/funcapi.c:2001
+#: utils/fmgr/funcapi.c:2005
 #, c-format
 msgid "could not determine row description for function returning record"
 msgstr "无法确定返回 record 的函数的行描述"

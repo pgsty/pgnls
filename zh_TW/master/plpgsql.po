@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plpgsql (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-11 19:39+0000\n"
-"PO-Revision-Date: 2026-11-04 08:45+0800\n"
+"POT-Creation-Date: 2026-11-12 23:09+0000\n"
+"PO-Revision-Date: 2026-11-12 07:19+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
@@ -495,10 +495,9 @@ msgid "record \"%s\" has no field \"%s\""
 msgstr "記錄 \"%s\" 沒有欄位 \"%s\""
 
 #: pl_exec.c:5406
-#, fuzzy, c-format
-#| msgid "record \"%s\" is not assigned yet"
+#, c-format
 msgid "record \"%s\" field \"%s\" changed type during assignment"
-msgstr "尚未指派記錄 \"%s\""
+msgstr "記錄 \"%s\" 的欄位 \"%s\" 在指派期間變更了型別"
 
 # parser/parse_target.c:268 parser/parse_target.c:501
 #: pl_exec.c:5414
@@ -556,15 +555,14 @@ msgstr "確保查詢傳回確切的欄位清單。"
 
 # access/transam/xlog.c:3284 access/transam/xlog.c:3291
 #: pl_exec.c:7767
-#, fuzzy, c-format
-#| msgid "database locale is incompatible with operating system"
+#, c-format
 msgid "assigned value is incompatible with the variable's type"
-msgstr "資料庫區域與作業系統不相容"
+msgstr "指派給變數的值與其型別不相容"
 
 #: pl_exec.c:7768
 #, c-format
 msgid "A variable can retain the type definition established when it was first used."
-msgstr ""
+msgstr "變數可以保留首次使用時建立的型別定義。"
 
 #: pl_exec.c:8034
 #, c-format
