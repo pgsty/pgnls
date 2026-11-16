@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 18\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-12 23:34+0000\n"
-"PO-Revision-Date: 2026-11-04 08:45+0800\n"
+"POT-Creation-Date: 2026-11-16 13:18+0000\n"
+"PO-Revision-Date: 2026-11-10 09:59+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
 "Language: zh_CN\n"
@@ -1056,10 +1056,9 @@ msgstr "类型 %2$s 的属性 \"%1$s\" 在类型 %3$s 中不存在。"
 
 #: access/common/heaptuple.c:309 access/common/heaptuple.c:966
 #: executor/execTuples.c:217
-#, fuzzy, c-format
-#| msgid "tsquery is too large"
+#, c-format
 msgid "tuple is too big"
-msgstr "tsquery 查询过大"
+msgstr "元组过大"
 
 #: access/common/heaptuple.c:1197 access/common/heaptuple.c:2199
 #, c-format
@@ -1069,28 +1068,27 @@ msgstr "列数（%d）超出上限（%d）"
 #: access/common/heaptuple.c:1526
 #, c-format
 msgid "tuple descriptor has fewer (%d) attributes than tuple (%d)"
-msgstr ""
+msgstr "元组描述符的属性数（%d）少于元组的属性数（%d）"
 
 #: access/common/heaptuple.c:1646
 #, c-format
 msgid "tuple descriptor for type %s (OID %u), version %X/%X is incompatible with tuple type %s (OID %u), version %X/%X"
-msgstr ""
+msgstr "类型 %s（OID %u）的元组描述符（版本 %X/%X）与元组类型 %s（OID %u）（版本 %X/%X）不兼容"
 
 #: access/common/heaptuple.c:1656
 #, c-format
 msgid "row type of datum tuple was altered after the datum's creation"
-msgstr ""
+msgstr "Datum 元组的行类型在创建 Datum 后发生了更改"
 
 #: access/common/heaptuple.c:1658
 #, c-format
 msgid "using outdated tuple descriptor when deforming row type"
-msgstr ""
+msgstr "拆解行类型时使用了过时的元组描述符"
 
 #: access/common/heaptuple.c:1659
-#, fuzzy, c-format
-#| msgid "See server log for query details."
+#, c-format
 msgid "See server log for additional details."
-msgstr "查询详情请查阅服务器日志。"
+msgstr "更多详情请参阅服务器日志。"
 
 #: access/common/indextuple.c:89
 #, c-format
@@ -4890,10 +4888,9 @@ msgid "column \"%s\" has pseudo-type %s"
 msgstr "列 \"%s\" 具有伪类型 %s"
 
 #: catalog/heap.c:599
-#, fuzzy, c-format
-#| msgid "variable \"%s\" has pseudo-type %s"
+#, c-format
 msgid "expression has pseudo-type %s"
-msgstr "变量 \"%s\" 具有伪类型 %s"
+msgstr "表达式具有伪类型 %s"
 
 #: catalog/heap.c:614
 #, c-format
@@ -4927,33 +4924,29 @@ msgid "no collation was derived for column \"%s\" with collatable type %s"
 msgstr "列 \"%s\" 的类型 %s 支持排序规则，但未能为该列推导出排序规则"
 
 #: catalog/heap.c:732
-#, fuzzy, c-format
-#| msgid "no collation was derived for column \"%s\" with collatable type %s"
+#, c-format
 msgid "no collation was derived for expression with collatable type %s"
-msgstr "列 \"%s\" 的类型 %s 支持排序规则，但未能为该列推导出排序规则"
+msgstr "无法为类型 %s 支持排序规则的表达式推导出排序规则"
 
 #: catalog/heap.c:1015
-#, fuzzy, c-format
-#| msgid "relfilenumber value not set when in binary upgrade mode"
+#, c-format
 msgid "attribute version values not set for \"%s\" when in binary upgrade mode"
-msgstr "二进制升级模式下未设置 relfilenumber 值"
+msgstr "二进制升级模式下未设置 \"%s\" 的属性版本值"
 
 #: catalog/heap.c:1020
-#, fuzzy, c-format
-#| msgid "heap relfilenumber value not set when in binary upgrade mode"
+#, c-format
 msgid "expected %d attribute version values for \"%s\" when in binary upgrade mode, got %d"
-msgstr "二进制升级模式下未设置堆的 relfilenumber 值"
+msgstr "二进制升级模式下，\"%2$s\" 应有 %1$d 个属性版本值，但实际得到 %3$d 个"
 
 #: catalog/heap.c:1181
-#, fuzzy, c-format
-#| msgid "attribute \"%s\" of relation \"%s\" does not match parent's collation"
+#, c-format
 msgid "attribute versions of relation \"%s\" are non-monotonic"
-msgstr "关系 \"%2$s\" 的属性 \"%1$s\" 的排序规则与父关系中对应属性的排序规则不匹配"
+msgstr "关系 \"%s\" 的属性版本不是单调递增的"
 
 #: catalog/heap.c:1183
 #, c-format
 msgid "Version %X/%X of attribute \"%s\" at position %d is lower than version %X/%X of attribute \"%s\" at position %d."
-msgstr ""
+msgstr "位置 %4$d 的属性 \"%3$s\" 的版本 %1$X/%2$X 低于位置 %8$d 的属性 \"%7$s\" 的版本 %5$X/%6$X。"
 
 #: catalog/heap.c:1490 catalog/index.c:908 commands/createas.c:408
 #: commands/tablecmds.c:4328
@@ -6283,10 +6276,9 @@ msgid "commutator operator %s is already the commutator of operator %s"
 msgstr "交换操作符 %s 已是操作符 %s 的交换操作符"
 
 #: catalog/pg_operator.c:502
-#, fuzzy, c-format
-#| msgid "commutator operator %s is already the commutator of operator %s"
+#, c-format
 msgid "commutator operator %u is already the commutator of operator %s"
-msgstr "交换操作符 %s 已是操作符 %s 的交换操作符"
+msgstr "交换操作符 %u 已是操作符 %s 的交换操作符"
 
 #: catalog/pg_operator.c:523 catalog/pg_operator.c:923
 #, c-format
@@ -6294,10 +6286,9 @@ msgid "negator operator %s is already the negator of operator %s"
 msgstr "否定操作符 %s 已是操作符 %s 的否定操作符"
 
 #: catalog/pg_operator.c:528
-#, fuzzy, c-format
-#| msgid "negator operator %s is already the negator of operator %s"
+#, c-format
 msgid "negator operator %u is already the negator of operator %s"
-msgstr "否定操作符 %s 已是操作符 %s 的否定操作符"
+msgstr "否定操作符 %u 已是操作符 %s 的否定操作符"
 
 #: catalog/pg_operator.c:663
 #, c-format
@@ -6350,10 +6341,9 @@ msgid "commutator operator %s is already the commutator of operator %u"
 msgstr "交换操作符 %s 已是操作符 %u 的交换操作符"
 
 #: catalog/pg_operator.c:865
-#, fuzzy, c-format
-#| msgid "commutator operator %s is already the commutator of operator %s"
+#, c-format
 msgid "commutator operator %s does not return the same data type as operator %s"
-msgstr "交换操作符 %s 已是操作符 %s 的交换操作符"
+msgstr "交换操作符 %s 返回的数据类型与操作符 %s 不同"
 
 #: catalog/pg_operator.c:928
 #, c-format
@@ -6361,10 +6351,9 @@ msgid "negator operator %s is already the negator of operator %u"
 msgstr "否定操作符 %s 已是操作符 %u 的否定操作符"
 
 #: catalog/pg_operator.c:949
-#, fuzzy, c-format
-#| msgid "negator operator %s is already the negator of operator %s"
+#, c-format
 msgid "negator operator %s does not return the same data type as operator %s"
-msgstr "否定操作符 %s 已是操作符 %s 的否定操作符"
+msgstr "否定操作符 %s 返回的数据类型与操作符 %s 不同"
 
 #: catalog/pg_parameter_acl.c:50
 #, c-format
@@ -8643,10 +8632,9 @@ msgid "transaction control statements are not allowed within an extension script
 msgstr "扩展脚本中不允许出现事务控制语句"
 
 #: commands/extension.c:1224
-#, fuzzy, c-format
-#| msgid "unacceptable schema name \"%s\""
+#, c-format
 msgid "unacceptable extension schema name \"%s\""
-msgstr "模式名称 \"%s\" 不合法"
+msgstr "扩展的模式名称 \"%s\" 不合法"
 
 #: commands/extension.c:1248
 #, c-format
@@ -8659,28 +8647,24 @@ msgid "invalid character in extension owner: must not contain any of \"%s\""
 msgstr "扩展所有者名称中有无效字符: 不得包含 \"%s\" 中的任何字符"
 
 #: commands/extension.c:1265
-#, fuzzy, c-format
-#| msgid "invalid character in extension \"%s\" schema: must not contain any of \"%s\""
+#, c-format
 msgid "invalid string in extension \"%s\" schema: must not contain newline, carriage return, \"--\", \"/*\", or \"*/\""
-msgstr "扩展 \"%s\" 的模式名称中有无效字符: 不得包含 \"%s\" 中的任何字符"
+msgstr "扩展 \"%s\" 的模式名称字符串无效：不得包含换行符、回车符、\"--\"、\"/*\" 或 \"*/\""
 
 #: commands/extension.c:1270
-#, fuzzy, c-format
-#| msgid "invalid character in extension owner: must not contain any of \"%s\""
+#, c-format
 msgid "invalid string in extension owner: must not contain newline, carriage return, \"--\", \"/*\", or \"*/\""
-msgstr "扩展所有者名称中有无效字符: 不得包含 \"%s\" 中的任何字符"
+msgstr "扩展所有者字符串无效：不得包含换行符、回车符、\"--\"、\"/*\" 或 \"*/\""
 
 #: commands/extension.c:1280
-#, fuzzy, c-format
-#| msgid "invalid character in extension \"%s\" schema: must not contain any of \"%s\""
+#, c-format
 msgid "invalid string in extension \"%s\" schema: must not contain \"@extowner@\", \"@extschema\", or \"MODULE_PATHNAME\""
-msgstr "扩展 \"%s\" 的模式名称中有无效字符: 不得包含 \"%s\" 中的任何字符"
+msgstr "扩展 \"%s\" 的模式名称字符串无效：不得包含 \"@extowner@\"、\"@extschema\" 或 \"MODULE_PATHNAME\""
 
 #: commands/extension.c:1285
-#, fuzzy, c-format
-#| msgid "invalid character in extension owner: must not contain any of \"%s\""
+#, c-format
 msgid "invalid string in extension owner: must not contain \"@extowner@\", \"@extschema\", or \"MODULE_PATHNAME\""
-msgstr "扩展所有者名称中有无效字符: 不得包含 \"%s\" 中的任何字符"
+msgstr "扩展所有者字符串无效：不得包含 \"@extowner@\"、\"@extschema\" 或 \"MODULE_PATHNAME\""
 
 #: commands/extension.c:1325
 #, c-format
@@ -10036,10 +10020,9 @@ msgid "All roles are members of the PUBLIC role."
 msgstr "所有角色都是 PUBLIC 角色的成员。"
 
 #: commands/policy.c:467
-#, fuzzy, c-format
-#| msgid "role \"%s\" could not be removed from policy \"%s\" on \"%s\""
+#, c-format
 msgid "role \"%s\" could not be removed from policy \"%s\" for table \"%s\""
-msgstr "不能从 \"%3$s\" 上的策略 \"%2$s\" 中移除角色 \"%1$s\""
+msgstr "无法从表 \"%3$s\" 的策略 \"%2$s\" 中移除角色 \"%1$s\""
 
 #: commands/policy.c:624
 #, c-format
@@ -11323,22 +11306,19 @@ msgid "cannot alter table \"%s\" because column \"%s.%s\" uses its row type"
 msgstr "不能修改表 \"%s\"，因为列 \"%s.%s\" 使用它的行类型"
 
 #: commands/tablecmds.c:7504 commands/tablecmds.c:7510
-#, fuzzy, c-format
-#| msgid "cannot alter type \"%s\" because column \"%s.%s\" uses it"
+#, c-format
 msgid "cannot alter type \"%s\" because %s uses it"
-msgstr "不能修改类型 \"%s\"，因为列 \"%s.%s\" 使用它"
+msgstr "无法修改类型 \"%s\"，因为 %s 使用该类型"
 
 #: commands/tablecmds.c:7516
-#, fuzzy, c-format
-#| msgid "cannot alter foreign table \"%s\" because column \"%s.%s\" uses its row type"
+#, c-format
 msgid "cannot alter foreign table \"%s\" because %s uses its row type"
-msgstr "不能修改外部表 \"%s\"，因为列 \"%s.%s\" 使用它的行类型"
+msgstr "无法修改外部表 \"%s\"，因为 %s 使用其行类型"
 
 #: commands/tablecmds.c:7521
-#, fuzzy, c-format
-#| msgid "cannot alter table \"%s\" because column \"%s.%s\" uses its row type"
+#, c-format
 msgid "cannot alter table \"%s\" because %s uses its row type"
-msgstr "不能修改表 \"%s\"，因为列 \"%s.%s\" 使用它的行类型"
+msgstr "无法修改表 \"%s\"，因为 %s 使用其行类型"
 
 #: commands/tablecmds.c:7694
 #, c-format
@@ -11576,10 +11556,9 @@ msgid "Alter statistics on table column instead."
 msgstr "改为修改表列的统计信息。"
 
 #: commands/tablecmds.c:9715
-#, fuzzy, c-format
-#| msgid "installing required extension \"%s\""
+#, c-format
 msgid "ignoring reserved attribute option \"%s\""
-msgstr "正在安装所需的扩展 \"%s\""
+msgstr "忽略保留的属性选项 \"%s\""
 
 #: commands/tablecmds.c:9899
 #, c-format
@@ -13059,10 +13038,9 @@ msgstr "没有下标操作函数时，不能指定元素类型"
 
 #: commands/typecmds.c:751 commands/typecmds.c:1219 commands/typecmds.c:1445
 #: commands/typecmds.c:1528
-#, fuzzy, c-format
-#| msgid "cannot create temporary table within security-restricted operation"
+#, c-format
 msgid "cannot create a type in a temporary schema within security-restricted operation"
-msgstr "不能在安全受限操作中创建临时表"
+msgstr "安全受限操作中无法在临时模式中创建类型"
 
 #: commands/typecmds.c:792
 #, c-format
@@ -14113,10 +14091,9 @@ msgid "attribute %d of type %s has wrong type"
 msgstr "类型 %2$s 的属性 %1$d 的类型错误"
 
 #: executor/execExpr.c:1559
-#, fuzzy, c-format
-#| msgid "Table has type %s, but query expects %s."
+#, c-format
 msgid "Attribute has type %s, but query expects %s."
-msgstr "表中该属性的类型为 %s，但查询预期为 %s。"
+msgstr "属性的类型为 %s，但查询预期为 %s。"
 
 #: executor/execExpr.c:1696
 #, c-format
@@ -14406,7 +14383,7 @@ msgstr "新行违反视图 \"%s\" 的检查选项"
 #: executor/execMain.c:2348
 #, c-format
 msgid "conflicting row is not visible through view \"%s\""
-msgstr ""
+msgstr "冲突行无法通过视图 \"%s\" 查看"
 
 #: executor/execMain.c:2356
 #, c-format
@@ -17644,7 +17621,7 @@ msgid "cannot execute MERGE on relation \"%s\""
 msgstr "不能对关系 \"%s\" 执行 MERGE"
 
 #. translator: %s is a SQL row locking clause such as FOR UPDATE
-#: optimizer/plan/initsplan.c:1797
+#: optimizer/plan/initsplan.c:1805
 #, c-format
 msgid "%s cannot be applied to the nullable side of an outer join"
 msgstr "%s 不能应用于外连接中可能为 NULL 的一侧"
@@ -23783,7 +23760,7 @@ msgstr "无法解析 \"%s\": 元素数量不正确（必须与 \"%s\" 相同）"
 #: statistics/attribute_stats.c:567
 #, c-format
 msgid "could not restore statistics for column \"%s\": it was dropped during the import"
-msgstr ""
+msgstr "无法恢复列 \"%s\" 的统计信息：该列在导入期间已被删除"
 
 #: statistics/attribute_stats.c:817
 #, c-format
@@ -23814,13 +23791,12 @@ msgstr "无法为关系 \"%3$s.%4$s\" 计算统计对象 \"%1$s.%2$s\""
 #: utils/adt/ruleutils.c:1900 utils/adt/selfuncs.c:5611
 #, c-format
 msgid "The extended statistics object should be dropped."
-msgstr ""
+msgstr "应删除扩展统计对象。"
 
 #: statistics/mcv.c:1111 utils/adt/ruleutils.c:1898 utils/adt/selfuncs.c:5609
-#, fuzzy, c-format
-#| msgid "cannot alter statistics on non-expression column \"%s\" of index \"%s\""
+#, c-format
 msgid "cannot interpret statistics on an expression of pseudo-type %s"
-msgstr "不能修改索引 \"%2$s\" 的非表达式列 \"%1$s\" 的统计信息"
+msgstr "无法解释具有伪类型 %s 的表达式的统计信息"
 
 #: statistics/mcv.c:1385
 #, c-format
@@ -26020,10 +25996,9 @@ msgid "Arrays with differing dimensions are not compatible for concatenation."
 msgstr "带有不同维度的数组对于串联操作不兼容。"
 
 #: utils/adt/array_userfuncs.c:521
-#, fuzzy, c-format
-#| msgid "result is out of range"
+#, c-format
 msgid "result array is too big"
-msgstr "结果超出范围"
+msgstr "结果数组过大"
 
 #: utils/adt/array_userfuncs.c:1059 utils/adt/array_userfuncs.c:1067
 #: utils/adt/arrayfuncs.c:5671 utils/adt/arrayfuncs.c:5677
@@ -27899,7 +27874,7 @@ msgstr "应为逗号或多范围的结束。"
 #: utils/adt/multirangetypes.c:595
 #, c-format
 msgid "multirange is too big"
-msgstr ""
+msgstr "多范围过大"
 
 #: utils/adt/multirangetypes.c:990
 #, c-format
@@ -32583,11 +32558,11 @@ msgstr "每个级别都包括其后的所有级别。级别越靠后，发送的
 
 #: utils/misc/guc_tables.c:5060
 msgid "Sets how version mismatches of composite values are handled."
-msgstr ""
+msgstr "设置复合值版本不匹配的处理方式。"
 
 #: utils/misc/guc_tables.c:5061
 msgid "Reading a composite value whose row type was altered incompatibly after the value was created normally causes PostgreSQL to report an error. This parameter controls that behavior. Anything other than \"error\", i.e. \"warn\" or \"disabled\", is not safe."
-msgstr ""
+msgstr "读取复合值时，如果其行类型在值创建后发生不兼容的更改，PostgreSQL 通常会报告错误。此参数控制该行为。除 \"error\" 之外的任何设置（即 \"warn\" 或 \"disabled\"）都不安全。"
 
 #: utils/misc/guc_tables.c:5071
 msgid "Enables in-core computation of query identifiers."
@@ -32923,10 +32898,9 @@ msgid "cannot drop pinned portal \"%s\""
 msgstr "不能删除已钉住的 portal \"%s\""
 
 #: utils/mmgr/portalmem.c:487
-#, fuzzy, c-format
-#| msgid "cannot drop extension \"%s\" because it is being modified"
+#, c-format
 msgid "cannot drop portal \"%s\" while it is being set up"
-msgstr "不能删除扩展 \"%s\"，因为它正在被修改"
+msgstr "无法在设置 portal \"%s\" 时将其删除"
 
 #: utils/mmgr/portalmem.c:497
 #, c-format
@@ -33546,10 +33520,6 @@ msgstr "不能导入来自不同数据库的快照"
 #, c-format
 #~ msgid "Online backup started with pg_start_backup() must be ended with pg_stop_backup(), and all WAL up to that point must be available at recovery."
 #~ msgstr "由pg_start_backup()发起的联机备份必须通过调用pg_stop_backup()来终止, 并且到那一刻为止所有的WAL日志在恢复时必须存在."
-
-#, c-format
-#~ msgid "Only roles with privileges of role \"%s\" may reassign objects to it."
-#~ msgstr "只有拥有角色 \"%s\" 权限的角色，才能将对象重新分配给该角色。"
 
 #, c-format
 #~ msgid "Only tables can be added to publications."
@@ -35034,6 +35004,10 @@ msgstr "不能导入来自不同数据库的快照"
 #, c-format
 #~ msgid "rewriting table \"%s\""
 #~ msgstr "重写表 \"%s\""
+
+#, c-format
+#~ msgid "role \"%s\" could not be removed from policy \"%s\" on \"%s\""
+#~ msgstr "不能从 \"%3$s\" 上的策略 \"%2$s\" 中移除角色 \"%1$s\""
 
 #, c-format
 #~ msgid "select() failed in postmaster: %m"

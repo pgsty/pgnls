@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plpgsql (PostgreSQL) 17\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-12 23:44+0000\n"
-"PO-Revision-Date: 2026-11-04 08:45+0800\n"
+"POT-Creation-Date: 2026-11-16 13:28+0000\n"
+"PO-Revision-Date: 2026-11-10 09:59+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
 "Language: zh_CN\n"
@@ -466,10 +466,9 @@ msgid "cannot assign non-composite value to a record variable"
 msgstr "不能向 record 变量赋非复合类型的值"
 
 #: pl_exec.c:5299
-#, fuzzy, c-format
-#| msgid "record \"%s\" is not assigned yet"
+#, c-format
 msgid "record \"%s\" field \"%s\" changed type during assignment"
-msgstr "记录 \"%s\" 尚未赋值"
+msgstr "记录 \"%s\" 的字段 \"%s\" 在赋值期间更改了类型"
 
 #: pl_exec.c:5307
 #, c-format
@@ -524,15 +523,14 @@ msgid "Make sure the query returns the exact list of columns."
 msgstr "确保查询返回准确的列列表。"
 
 #: pl_exec.c:7492
-#, fuzzy, c-format
-#| msgid "database locale is incompatible with operating system"
+#, c-format
 msgid "assigned value is incompatible with the variable's type"
-msgstr "数据库所使用的区域设置与操作系统不兼容"
+msgstr "赋给变量的值与其类型不兼容"
 
 #: pl_exec.c:7493
 #, c-format
 msgid "A variable can retain the type definition established when it was first used."
-msgstr ""
+msgstr "变量可以保留首次使用时建立的类型定义。"
 
 #: pl_exec.c:7759
 #, c-format

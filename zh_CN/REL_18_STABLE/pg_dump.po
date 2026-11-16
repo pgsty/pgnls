@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_dump (PostgreSQL) 18\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-12 23:38+0000\n"
-"PO-Revision-Date: 2026-11-04 08:45+0800\n"
+"POT-Creation-Date: 2026-11-16 13:22+0000\n"
+"PO-Revision-Date: 2026-11-10 09:59+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
 "Language: zh_CN\n"
@@ -537,8 +537,7 @@ msgid "could not read from input file: end of file"
 msgstr "无法读取输入文件: 已到达文件末尾"
 
 #: compress_io.c:279 compress_io.c:297
-#, fuzzy, c-format
-#| msgid "file \"%s\" is not a regular file"
+#, c-format
 msgid "\"%s\" is not a regular file"
 msgstr "文件 \"%s\" 不是常规文件"
 
@@ -1126,10 +1125,9 @@ msgid "restoring tables WITH OIDS is not supported anymore"
 msgstr "不再支持恢复带有 WITH OIDS 的表"
 
 #: pg_backup_archiver.c:2844
-#, fuzzy, c-format
-#| msgid "entry ID %d out of range -- perhaps a corrupt TOC"
+#, c-format
 msgid "dependency ID \"%s\" out of range -- perhaps a corrupt TOC"
-msgstr "条目 ID %d 超出范围；可能是 TOC 已损坏"
+msgstr "依赖项 ID \"%s\" 超出范围；可能是 TOC 已损坏"
 
 #: pg_backup_archiver.c:2909
 #, c-format
@@ -1197,10 +1195,9 @@ msgid "could not alter table access method: %s"
 msgstr "无法修改表访问方法: %s"
 
 #: pg_backup_archiver.c:3896
-#, fuzzy, c-format
-#| msgid "entry ID %d out of range -- perhaps a corrupt TOC"
+#, c-format
 msgid "unexpected DROP statement for object type \"%s\" -- perhaps a corrupt TOC"
-msgstr "条目 ID %d 超出范围；可能是 TOC 已损坏"
+msgstr "对象类型 \"%s\" 出现意外的 DROP 语句；可能是 TOC 已损坏"
 
 #: pg_backup_archiver.c:3932
 #, c-format
@@ -1407,10 +1404,9 @@ msgid "could not commit database transaction"
 msgstr "无法提交数据库事务"
 
 #: pg_backup_db.c:587
-#, fuzzy, c-format
-#| msgid "entry ID %d out of range -- perhaps a corrupt TOC"
+#, c-format
 msgid "missing large object OID in ACL entry -- perhaps a corrupt TOC"
-msgstr "条目 ID %d 超出范围；可能是 TOC 已损坏"
+msgstr "ACL 条目中缺少大对象 OID；可能是 TOC 已损坏"
 
 #: pg_backup_directory.c:154
 #, c-format
@@ -1418,10 +1414,9 @@ msgid "no output directory specified"
 msgstr "未指定输出目录"
 
 #: pg_backup_directory.c:266 pg_backup_directory.c:438
-#, fuzzy, c-format
-#| msgid "invalid time zone name: \"%s\""
+#, c-format
 msgid "invalid file name in archive: \"%s\""
-msgstr "无效时区名字: \"%s\""
+msgstr "归档中的文件名无效：\"%s\""
 
 #: pg_backup_directory.c:339
 #, c-format
@@ -1537,7 +1532,7 @@ msgstr "无法在 tar 归档中找到文件 \"%s\" 的头部"
 #: pg_backup_tar.c:1096
 #, c-format
 msgid "tar member \"%s\" precedes \"%s\" -- perhaps a corrupt archive"
-msgstr ""
+msgstr "tar 成员 \"%s\" 位于 \"%s\" 之前；可能是归档文件已损坏"
 
 #: pg_backup_tar.c:1101
 #, c-format
@@ -1556,10 +1551,9 @@ msgid "corrupt tar header found in %s (expected %d, computed %d) file position %
 msgstr "发现 %1$s 的 tar 头部损坏（预期为 %2$d, 计算结果为 %3$d），归档文件位置为 %4$llu"
 
 #: pg_backup_tar.c:1196
-#, fuzzy, c-format
-#| msgid "corrupt tar header found in %s (expected %d, computed %d) file position %llu"
+#, c-format
 msgid "corrupt tar header found in %s (invalid file length) file position %lld"
-msgstr "发现 %1$s 的 tar 头部损坏（预期为 %2$d, 计算结果为 %3$d），归档文件位置为 %4$llu"
+msgstr "在 %s 中发现损坏的 tar 头部（文件长度无效），归档文件位置为 %lld"
 
 #: pg_backup_utils.c:56
 #, c-format
@@ -1621,10 +1615,9 @@ msgid "invalid restrict key"
 msgstr "无效的限制模式密钥"
 
 #: pg_dump.c:923
-#, fuzzy, c-format
-#| msgid "option %s can only be used with %s"
+#, c-format
 msgid "option %s can only be used with %s or %s"
-msgstr "选项 %s 只能与 %s 一起使用"
+msgstr "选项 %s 只能与 %s 或 %s 一起使用"
 
 #: pg_dump.c:946
 #, c-format

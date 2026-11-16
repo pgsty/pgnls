@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-12 23:17+0000\n"
+"POT-Creation-Date: 2026-11-16 12:18+0000\n"
 "PO-Revision-Date: 2026-11-12 07:19+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
@@ -4165,7 +4165,7 @@ msgstr "未記錄索引 \"%s\" 對頁面 %u 所在範圍的 BRIN 摘要產生請
 #: access/transam/xlogfuncs.c:419 access/transam/xlogfuncs.c:478
 #: commands/wait.c:178 statistics/attribute_stats.c:154
 #: statistics/attribute_stats.c:665 statistics/extended_stats_funcs.c:372
-#: statistics/extended_stats_funcs.c:1798 statistics/relation_stats.c:86
+#: statistics/extended_stats_funcs.c:1804 statistics/relation_stats.c:86
 #: utils/adt/multixactfuncs.c:110
 #, c-format
 msgid "recovery is in progress"
@@ -4834,184 +4834,184 @@ msgid "could not write to file \"%s\": %m"
 msgstr "無法寫入檔案 \"%s\": %m"
 
 # commands/vacuum.c:1160 commands/vacuumlazy.c:205
-#: access/heap/vacuumlazy.c:837
+#: access/heap/vacuumlazy.c:839
 #, c-format
 msgid "aggressively vacuuming \"%s.%s.%s\""
 msgstr "正在對 \"%s.%s.%s\" 執行積極清理"
 
 # commands/vacuum.c:1160 commands/vacuumlazy.c:205
-#: access/heap/vacuumlazy.c:842
+#: access/heap/vacuumlazy.c:844
 #, c-format
 msgid "vacuuming \"%s.%s.%s\""
 msgstr "正在清理 \"%s.%s.%s\""
 
-#: access/heap/vacuumlazy.c:1027
+#: access/heap/vacuumlazy.c:1029
 #, c-format
 msgid "finished vacuuming \"%s.%s.%s\": index scans: %d\n"
 msgstr "已完成對 \"%s.%s.%s\" 的清理: 索引掃描次數: %d\n"
 
-#: access/heap/vacuumlazy.c:1038
+#: access/heap/vacuumlazy.c:1040
 #, c-format
 msgid "automatic aggressive vacuum to prevent wraparound of table \"%s.%s.%s\": index scans: %d\n"
 msgstr "為防止 ID 回繞而對資料表 \"%s.%s.%s\" 執行的自動積極清理: 索引掃描次數: %d\n"
 
-#: access/heap/vacuumlazy.c:1040
+#: access/heap/vacuumlazy.c:1042
 #, c-format
 msgid "automatic vacuum to prevent wraparound of table \"%s.%s.%s\": index scans: %d\n"
 msgstr "為防止 ID 回繞而對資料表 \"%s.%s.%s\" 執行的自動清理: 索引掃描次數: %d\n"
 
-#: access/heap/vacuumlazy.c:1045
+#: access/heap/vacuumlazy.c:1047
 #, c-format
 msgid "automatic aggressive vacuum of table \"%s.%s.%s\": index scans: %d\n"
 msgstr "對資料表 \"%s.%s.%s\" 執行的自動積極清理: 索引掃描次數: %d\n"
 
-#: access/heap/vacuumlazy.c:1047
+#: access/heap/vacuumlazy.c:1049
 #, c-format
 msgid "automatic vacuum of table \"%s.%s.%s\": index scans: %d\n"
 msgstr "對資料表 \"%s.%s.%s\" 執行的自動清理: 索引掃描次數: %d\n"
 
-#: access/heap/vacuumlazy.c:1054
+#: access/heap/vacuumlazy.c:1056
 #, c-format
 msgid "pages: %u removed, %u remain, %u scanned (%.2f%% of total), %u eagerly scanned\n"
 msgstr "頁面: 已移除 %u, 剩餘 %u, 已掃描 %u (佔總數的 %.2f%%), 積極掃描 %u\n"
 
-#: access/heap/vacuumlazy.c:1063
+#: access/heap/vacuumlazy.c:1065
 #, c-format
 msgid "tuples: %<PRId64> removed, %<PRId64> remain, %<PRId64> are dead but not yet removable\n"
 msgstr "元組: 已移除 %<PRId64>, 剩餘 %<PRId64>, 已死但尚不可移除 %<PRId64>\n"
 
-#: access/heap/vacuumlazy.c:1069
+#: access/heap/vacuumlazy.c:1071
 #, c-format
 msgid "tuples missed: %<PRId64> dead from %u pages not removed due to cleanup lock contention\n"
 msgstr "遺漏的元組: %<PRId64> 個死元組因清理鎖定爭用未被移除，涉及 %u 個頁面\n"
 
-#: access/heap/vacuumlazy.c:1075
+#: access/heap/vacuumlazy.c:1077
 #, c-format
 msgid "removable cutoff: %u, which was %d XIDs old when operation ended\n"
 msgstr "可移除截止點: %u，操作結束時其年齡為 %d 個 XID\n"
 
-#: access/heap/vacuumlazy.c:1082
+#: access/heap/vacuumlazy.c:1084
 #, c-format
 msgid "new relfrozenxid: %u, which is %d XIDs ahead of previous value\n"
 msgstr "新的 relfrozenxid: %u，比先前值前進 %d 個 XID\n"
 
-#: access/heap/vacuumlazy.c:1090
+#: access/heap/vacuumlazy.c:1092
 #, c-format
 msgid "new relminmxid: %u, which is %d MXIDs ahead of previous value\n"
 msgstr "新的 relminmxid: %u，比先前值前進 %d 個 MXID\n"
 
-#: access/heap/vacuumlazy.c:1093
+#: access/heap/vacuumlazy.c:1095
 #, c-format
 msgid "frozen: %u pages from table (%.2f%% of total) had %<PRId64> tuples frozen\n"
 msgstr "凍結: 資料表中 %u 個頁面 (佔總數的 %.2f%%) 中的 %<PRId64> 個元組被凍結\n"
 
-#: access/heap/vacuumlazy.c:1101
+#: access/heap/vacuumlazy.c:1103
 #, c-format
 msgid "visibility map: %u pages set all-visible, %u pages set all-frozen (%u were all-visible)\n"
 msgstr "可見性對應: %u 個頁面設為全可見, %u 個頁面設為全凍結 (其中 %u 個頁面原為全可見)\n"
 
 # utils/adt/date.c:2510 utils/adt/timestamp.c:3793 utils/adt/timestamp.c:3942
-#: access/heap/vacuumlazy.c:1109
+#: access/heap/vacuumlazy.c:1111
 msgid "index scan not needed: "
 msgstr "無需索引掃描: "
 
-#: access/heap/vacuumlazy.c:1111
+#: access/heap/vacuumlazy.c:1113
 msgid "index scan needed: "
 msgstr "需要索引掃描: "
 
-#: access/heap/vacuumlazy.c:1113
+#: access/heap/vacuumlazy.c:1115
 #, c-format
 msgid "%u pages from table (%.2f%% of total) had %<PRId64> dead item identifiers removed\n"
 msgstr "資料表中 %u 個頁面 (佔總數的 %.2f%%) 中的 %<PRId64> 個死項目識別字已移除\n"
 
-#: access/heap/vacuumlazy.c:1118
+#: access/heap/vacuumlazy.c:1120
 msgid "index scan bypassed: "
 msgstr "已跳過索引掃描: "
 
-#: access/heap/vacuumlazy.c:1120
+#: access/heap/vacuumlazy.c:1122
 msgid "index scan bypassed by failsafe: "
 msgstr "安全保護機制已跳過索引掃描: "
 
-#: access/heap/vacuumlazy.c:1122
+#: access/heap/vacuumlazy.c:1124
 #, c-format
 msgid "%u pages from table (%.2f%% of total) have %<PRId64> dead item identifiers\n"
 msgstr "資料表中 %u 個頁面 (佔總數的 %.2f%%) 含有 %<PRId64> 個死項目識別字\n"
 
-#: access/heap/vacuumlazy.c:1132
+#: access/heap/vacuumlazy.c:1134
 #, c-format
 msgid "parallel workers: index vacuum: %d planned, %d launched in total\n"
 msgstr "並行工作行程: 索引清理: 計畫 %d 個, 共啟動 %d 個\n"
 
-#: access/heap/vacuumlazy.c:1138
+#: access/heap/vacuumlazy.c:1140
 #, c-format
 msgid "parallel workers: index cleanup: %d planned, %d launched\n"
 msgstr "並行工作行程: 索引收尾清理: 計畫 %d 個, 已啟動 %d 個\n"
 
-#: access/heap/vacuumlazy.c:1150
+#: access/heap/vacuumlazy.c:1152
 #, c-format
 msgid "index \"%s\": pages: %u in total, %u newly deleted, %u currently deleted, %u reusable\n"
 msgstr "索引 \"%s\": 頁面: 總計 %u, 新刪除 %u, 目前已刪除 %u, 可重複使用 %u\n"
 
 # common.c:930
-#: access/heap/vacuumlazy.c:1165 commands/analyze.c:851
+#: access/heap/vacuumlazy.c:1167 commands/analyze.c:851
 #, c-format
 msgid "delay time: %.3f ms\n"
 msgstr "延遲時間: %.3f ms\n"
 
-#: access/heap/vacuumlazy.c:1182 commands/analyze.c:859
+#: access/heap/vacuumlazy.c:1184 commands/analyze.c:859
 #, c-format
 msgid "I/O timings: read: %.3f ms, write: %.3f ms\n"
 msgstr "I/O 計時: 讀取: %.3f ms, 寫入: %.3f ms\n"
 
-#: access/heap/vacuumlazy.c:1192 commands/analyze.c:862
+#: access/heap/vacuumlazy.c:1194 commands/analyze.c:862
 #, c-format
 msgid "avg read rate: %.3f MB/s, avg write rate: %.3f MB/s\n"
 msgstr "平均讀取率: %.3f MB/s, 平均寫入率: %.3f MB/s\n"
 
-#: access/heap/vacuumlazy.c:1195 commands/analyze.c:864
+#: access/heap/vacuumlazy.c:1197 commands/analyze.c:864
 #, c-format
 msgid "buffer usage: %<PRId64> hits, %<PRId64> reads, %<PRId64> dirtied\n"
 msgstr "緩衝區使用: 命中 %<PRId64>, 讀取 %<PRId64>, 置髒 %<PRId64>\n"
 
-#: access/heap/vacuumlazy.c:1200 commands/analyze.c:869
+#: access/heap/vacuumlazy.c:1202 commands/analyze.c:869
 #, c-format
 msgid "WAL usage: %<PRId64> records, %<PRId64> full page images, %<PRIu64> bytes, %<PRIu64> full page image bytes, %<PRId64> buffers full\n"
 msgstr "WAL 使用: %<PRId64> 條記錄, %<PRId64> 個整頁映像, %<PRIu64> 位元組, 整頁映像 %<PRIu64> 位元組, 緩衝區寫滿 %<PRId64> 次\n"
 
-#: access/heap/vacuumlazy.c:1216
+#: access/heap/vacuumlazy.c:1218
 #, c-format
 msgid "memory usage: dead item storage %.2f MB accumulated across %d reset (limit %.2f MB each)\n"
 msgid_plural "memory usage: dead item storage %.2f MB accumulated across %d resets (limit %.2f MB each)\n"
 msgstr[0] "記憶體使用: 死項目儲存跨 %2$d 次重設累計 %1$.2f MB (每次上限 %3$.2f MB)\n"
 
 # tcop/postgres.c:468 tcop/postgres.c:503 tcop/postgres.c:514
-#: access/heap/vacuumlazy.c:1222 commands/analyze.c:875
+#: access/heap/vacuumlazy.c:1224 commands/analyze.c:875
 #, c-format
 msgid "system usage: %s"
 msgstr "系統資源使用: %s"
 
-#: access/heap/vacuumlazy.c:1521
+#: access/heap/vacuumlazy.c:1523
 #, c-format
 msgid "disabling eager scanning after freezing %u eagerly scanned blocks of relation \"%s.%s.%s\""
 msgstr "在凍結關聯 \"%2$s.%3$s.%4$s\" 中積極掃描的 %1$u 個區塊後，停用積極掃描"
 
 # commands/vacuumlazy.c:486
-#: access/heap/vacuumlazy.c:2754
+#: access/heap/vacuumlazy.c:2760
 #, c-format
 msgid "table \"%s\": removed %<PRId64> dead item identifiers in %u pages"
 msgstr "資料表 \"%s\": 已移除 %<PRId64> 個死項目識別字，涉及 %u 個頁面"
 
-#: access/heap/vacuumlazy.c:2946
+#: access/heap/vacuumlazy.c:2952
 #, c-format
 msgid "bypassing nonessential maintenance of table \"%s.%s.%s\" as a failsafe after %d index scans"
 msgstr "在 %4$d 次索引掃描後，作為安全保護措施跳過資料表 \"%1$s.%2$s.%3$s\" 的非必要維護"
 
-#: access/heap/vacuumlazy.c:2949
+#: access/heap/vacuumlazy.c:2955
 #, c-format
 msgid "The table's relfrozenxid or relminmxid is too far in the past."
 msgstr "該資料表的 relfrozenxid 或 relminmxid 已過於陳舊。"
 
-#: access/heap/vacuumlazy.c:2950
+#: access/heap/vacuumlazy.c:2956
 #, c-format
 msgid ""
 "Consider increasing configuration parameter \"maintenance_work_mem\" or \"autovacuum_work_mem\".\n"
@@ -5020,75 +5020,75 @@ msgstr ""
 "考慮增大組態參數 \"maintenance_work_mem\" 或 \"autovacuum_work_mem\"。\n"
 "您可能還需要考慮其他方法，使 VACUUM 能跟上交易 ID 的配置速度。"
 
-#: access/heap/vacuumlazy.c:3215
+#: access/heap/vacuumlazy.c:3221
 #, c-format
 msgid "\"%s\": stopping truncate due to conflicting lock request"
 msgstr "\"%s\": 由於存在衝突的鎖定請求，正在停止截斷"
 
 # commands/vacuum.c:2770 commands/vacuumlazy.c:767
-#: access/heap/vacuumlazy.c:3285
+#: access/heap/vacuumlazy.c:3291
 #, c-format
 msgid "table \"%s\": truncated %u to %u pages"
 msgstr "資料表 \"%s\": 已從 %u 個頁面截斷為 %u 個頁面"
 
-#: access/heap/vacuumlazy.c:3348
+#: access/heap/vacuumlazy.c:3354
 #, c-format
 msgid "table \"%s\": suspending truncate due to conflicting lock request"
 msgstr "資料表 \"%s\": 由於存在衝突的鎖定請求，正在暫停截斷"
 
-#: access/heap/vacuumlazy.c:3467
+#: access/heap/vacuumlazy.c:3473
 #, c-format
 msgid "disabling parallel option of vacuum on \"%s\" --- cannot vacuum temporary tables in parallel"
 msgstr "正在停用 \"%s\" 的並行清理選項，因為不能並行清理暫存資料表"
 
 # catalog/aclchk.c:1288
-#: access/heap/vacuumlazy.c:3829
+#: access/heap/vacuumlazy.c:3835
 #, c-format
 msgid "while scanning block %u offset %u of relation \"%s.%s\""
 msgstr "掃描關聯 \"%3$s.%4$s\" 區塊 %1$u 位移 %2$u 處時"
 
 # catalog/aclchk.c:1288
-#: access/heap/vacuumlazy.c:3832
+#: access/heap/vacuumlazy.c:3838
 #, c-format
 msgid "while scanning block %u of relation \"%s.%s\""
 msgstr "掃描關聯 \"%2$s.%3$s\" 區塊 %1$u 時"
 
 # describe.c:875
-#: access/heap/vacuumlazy.c:3836
+#: access/heap/vacuumlazy.c:3842
 #, c-format
 msgid "while scanning relation \"%s.%s\""
 msgstr "掃描關聯 \"%s.%s\" 時"
 
 # catalog/aclchk.c:1288
-#: access/heap/vacuumlazy.c:3844
+#: access/heap/vacuumlazy.c:3850
 #, c-format
 msgid "while vacuuming block %u offset %u of relation \"%s.%s\""
 msgstr "清理關聯 \"%3$s.%4$s\" 區塊 %1$u 位移 %2$u 處時"
 
 # catalog/aclchk.c:1288
-#: access/heap/vacuumlazy.c:3847
+#: access/heap/vacuumlazy.c:3853
 #, c-format
 msgid "while vacuuming block %u of relation \"%s.%s\""
 msgstr "清理關聯 \"%2$s.%3$s\" 區塊 %1$u 時"
 
 # describe.c:875
-#: access/heap/vacuumlazy.c:3851
+#: access/heap/vacuumlazy.c:3857
 #, c-format
 msgid "while vacuuming relation \"%s.%s\""
 msgstr "清理關聯 \"%s.%s\" 時"
 
-#: access/heap/vacuumlazy.c:3856 commands/vacuumparallel.c:1408
+#: access/heap/vacuumlazy.c:3862 commands/vacuumparallel.c:1408
 #, c-format
 msgid "while vacuuming index \"%s\" of relation \"%s.%s\""
 msgstr "清理關聯 \"%2$s.%3$s\" 的索引 \"%1$s\" 時"
 
 # commands/tablecmds.c:3455
-#: access/heap/vacuumlazy.c:3861 commands/vacuumparallel.c:1414
+#: access/heap/vacuumlazy.c:3867 commands/vacuumparallel.c:1414
 #, c-format
 msgid "while cleaning up index \"%s\" of relation \"%s.%s\""
 msgstr "收尾清理關聯 \"%2$s.%3$s\" 的索引 \"%1$s\" 時"
 
-#: access/heap/vacuumlazy.c:3867
+#: access/heap/vacuumlazy.c:3873
 #, c-format
 msgid "while truncating relation \"%s.%s\" to %u blocks"
 msgstr "將關聯 \"%1$s.%2$s\" 截斷為 %3$u 個區塊時"
@@ -19839,35 +19839,35 @@ msgstr ""
 "可能還需要提交或回復舊的預備交易。"
 
 # commands/vacuum.c:804
-#: commands/vacuum.c:1952
+#: commands/vacuum.c:1964
 #, c-format
 msgid "some databases have not been vacuumed in over 2 billion transactions"
 msgstr "有些資料庫已逾 20 億次交易未清理"
 
-#: commands/vacuum.c:1953
+#: commands/vacuum.c:1965
 #, c-format
 msgid "You might have already suffered transaction-wraparound data loss."
 msgstr "可能已經發生交易回繞造成的資料遺失。"
 
 # commands/vacuum.c:937
-#: commands/vacuum.c:2143
+#: commands/vacuum.c:2155
 #, c-format
 msgid "skipping \"%s\" --- cannot vacuum non-tables or special system tables"
 msgstr "跳過 \"%s\": 不能清理非資料表物件或特殊系統資料表"
 
-#: commands/vacuum.c:2707
+#: commands/vacuum.c:2719
 #, c-format
 msgid "scanned index \"%s\" to remove %<PRId64> row versions"
 msgstr "已掃描索引 \"%s\" 以刪除 %<PRId64> 筆資料列版本"
 
 # commands/vacuum.c:2860 commands/vacuum.c:2927 commands/vacuumlazy.c:597
 # commands/vacuumlazy.c:657
-#: commands/vacuum.c:2726
+#: commands/vacuum.c:2738
 #, c-format
 msgid "index \"%s\" now contains %.0f row versions in %u pages"
 msgstr "索引 \"%s\" 現在包含 %.0f 筆資料列版本 (在 %u 個頁面中)"
 
-#: commands/vacuum.c:2730
+#: commands/vacuum.c:2742
 #, c-format
 msgid ""
 "%.0f index row versions were removed.\n"
@@ -24338,7 +24338,7 @@ msgid "cannot execute MERGE on relation \"%s\""
 msgstr "不能對關聯 \"%s\" 執行 MERGE"
 
 #. translator: %s is a SQL row locking clause such as FOR UPDATE
-#: optimizer/plan/initsplan.c:2081
+#: optimizer/plan/initsplan.c:2089
 #, c-format
 msgid "%s cannot be applied to the nullable side of an outer join"
 msgstr "%s 不能套用到外部聯結中可能為 NULL 的一側"
@@ -31483,7 +31483,7 @@ msgid "missing Language parameter"
 msgstr "缺少 Language 參數"
 
 #: statistics/attribute_stats.c:155 statistics/attribute_stats.c:666
-#: statistics/extended_stats_funcs.c:373 statistics/extended_stats_funcs.c:1799
+#: statistics/extended_stats_funcs.c:373 statistics/extended_stats_funcs.c:1805
 #: statistics/relation_stats.c:87
 #, c-format
 msgid "Statistics cannot be modified during recovery."
@@ -31531,7 +31531,7 @@ msgstr "無法確定欄位 \"%s\" 的小於運算子"
 msgid "column \"%s\" is not a range type"
 msgstr "欄位 \"%s\" 不屬於範圍型別"
 
-#: statistics/attribute_stats.c:415 statistics/extended_stats_funcs.c:1385
+#: statistics/attribute_stats.c:415 statistics/extended_stats_funcs.c:1391
 #, c-format
 msgid "could not parse \"%s\": incorrect number of elements (same as \"%s\" required)"
 msgstr "無法解析 \"%s\": 元素數量不正確 (必須與 \"%s\" 相同)"
@@ -31557,13 +31557,13 @@ msgstr "無法驗證 \"%s\" 物件: 發現無效屬性編號 %d"
 msgid "statistics object \"%s.%s\" could not be computed for relation \"%s.%s\""
 msgstr "無法為關聯 \"%3$s.%4$s\" 計算統計資訊物件 \"%1$s.%2$s\""
 
-#: statistics/extended_stats_funcs.c:416 statistics/extended_stats_funcs.c:1819
+#: statistics/extended_stats_funcs.c:416 statistics/extended_stats_funcs.c:1825
 #, c-format
 msgid "could not find schema \"%s\""
 msgstr "無法找到 schema \"%s\""
 
 # postmaster/pgstat.c:297
-#: statistics/extended_stats_funcs.c:428 statistics/extended_stats_funcs.c:1831
+#: statistics/extended_stats_funcs.c:428 statistics/extended_stats_funcs.c:1837
 #, c-format
 msgid "could not find extended statistics object \"%s.%s\""
 msgstr "無法找到延伸統計資訊物件 \"%s.%s\""
@@ -31633,69 +31633,71 @@ msgstr "無法解析陣列 \"%s\": 項目數 (%d) 超過上限 (%d)"
 msgid "could not import element in expression %d: invalid key name"
 msgstr "無法匯入運算式 %d 中的元素: 鍵名無效"
 
-#: statistics/extended_stats_funcs.c:1103
+#: statistics/extended_stats_funcs.c:1110
+#, fuzzy, c-format
+#| msgid "could not import element \"%s\" in expression %d: must be a one-dimensional array"
+msgid "could not import element \"%s\" in expression %d: must be an empty or one-dimensional array"
+msgstr "無法匯入運算式 %2$d 中的元素 \"%1$s\": 必須是一維陣列"
+
+#: statistics/extended_stats_funcs.c:1115
 #, c-format
 msgid "could not import element \"%s\" in expression %d: must be a one-dimensional array"
 msgstr "無法匯入運算式 %2$d 中的元素 \"%1$s\": 必須是一維陣列"
 
-#: statistics/extended_stats_funcs.c:1112
+#: statistics/extended_stats_funcs.c:1124
 #, c-format
 msgid "could not import element \"%s\" in expression %d: null value found"
 msgstr "無法匯入運算式 %2$d 中的元素 \"%1$s\": 發現 NULL 值"
 
-#: statistics/extended_stats_funcs.c:1158
-#: statistics/extended_stats_funcs.c:1188
-#: statistics/extended_stats_funcs.c:1208
-#: statistics/extended_stats_funcs.c:1219
-#: statistics/extended_stats_funcs.c:1236
-#: statistics/extended_stats_funcs.c:1679
+#: statistics/extended_stats_funcs.c:1170
+#: statistics/extended_stats_funcs.c:1200
+#: statistics/extended_stats_funcs.c:1220
+#: statistics/extended_stats_funcs.c:1231
+#: statistics/extended_stats_funcs.c:1243
+#: statistics/extended_stats_funcs.c:1685
 #, c-format
 msgid "could not parse \"%s\": invalid element in expression %d"
 msgstr "無法解析 \"%s\": 運算式 %d 中的元素無效"
 
 # commands/define.c:233
-#: statistics/extended_stats_funcs.c:1189
+#: statistics/extended_stats_funcs.c:1201
 #, c-format
 msgid "Value of element \"%s\" must be a null or a string."
 msgstr "元素 \"%s\" 的值必須為 null 或字串。"
 
-#: statistics/extended_stats_funcs.c:1210
-#: statistics/extended_stats_funcs.c:1221
+#: statistics/extended_stats_funcs.c:1222
+#: statistics/extended_stats_funcs.c:1233
+#: statistics/extended_stats_funcs.c:1245
 #, c-format
 msgid "\"%s\" and \"%s\" must be both either strings or nulls."
 msgstr "\"%s\" 和 \"%s\" 必須同時為字串，或同時為 null。"
 
-#: statistics/extended_stats_funcs.c:1238
-#, c-format
-msgid "\"%s\", \"%s\", and \"%s\" must be all either strings or all nulls."
-msgstr "\"%s\", \"%s\" 和 \"%s\" 必須全部為字串，或全部為 null。"
-
-#: statistics/extended_stats_funcs.c:1275
+#: statistics/extended_stats_funcs.c:1281
 #, c-format
 msgid "could not parse \"%s\": invalid element type in expression %d"
 msgstr "無法解析 \"%s\": 運算式 %d 中的元素型別無效"
 
-#: statistics/extended_stats_funcs.c:1293
+#: statistics/extended_stats_funcs.c:1299
 #, c-format
 msgid "could not parse \"%s\": invalid data in expression %d"
 msgstr "無法解析 \"%s\": 運算式 %d 中的資料無效"
 
-#: statistics/extended_stats_funcs.c:1295
+#: statistics/extended_stats_funcs.c:1301
 #, c-format
 msgid "\"%s\", \"%s\", and \"%s\" can only be set for a range type."
 msgstr "\"%s\", \"%s\" 和 \"%s\" 只能為範圍型別設定。"
 
-#: statistics/extended_stats_funcs.c:1604
+#: statistics/extended_stats_funcs.c:1610
 #, c-format
 msgid "could not parse \"%s\": root-level array required"
 msgstr "無法解析 \"%s\": 需要頂層陣列"
 
-#: statistics/extended_stats_funcs.c:1619
+#: statistics/extended_stats_funcs.c:1625
 #, c-format
 msgid "could not parse \"%s\": incorrect number of elements (%d required)"
 msgstr "無法解析 \"%s\": 元素數量不正確 (需要 %d 個)"
 
-#: statistics/extended_stats_funcs.c:1848
+#: statistics/extended_stats_funcs.c:1854
 #, c-format
 msgid "could not clear extended statistics object \"%s.%s\": incorrect relation \"%s.%s\" specified"
 msgstr "無法清除延伸統計資訊物件 \"%s.%s\": 指定的關聯 \"%s.%s\" 不正確"
@@ -40650,6 +40652,10 @@ msgstr "不能匯入來自不同資料庫的快照"
 #, c-format
 #~ msgid "\"%s\" is of the wrong type"
 #~ msgstr "\"%s\" 是錯誤資料型別"
+
+#, c-format
+#~ msgid "\"%s\", \"%s\", and \"%s\" must be all either strings or all nulls."
+#~ msgstr "\"%s\", \"%s\" 和 \"%s\" 必須全部為字串，或全部為 null。"
 
 #, c-format
 #~ msgid "\"%s\": found %.0f removable, %.0f nonremovable row versions in %u out of %u pages"

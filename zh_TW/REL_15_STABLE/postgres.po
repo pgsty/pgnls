@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 15\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-13 00:23+0000\n"
-"PO-Revision-Date: 2026-10-08 16:06+0800\n"
+"POT-Creation-Date: 2026-11-16 14:07+0000\n"
+"PO-Revision-Date: 2026-11-10 09:59+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
@@ -967,10 +967,9 @@ msgstr "型別 %2$s 的屬性 \"%1$s\" 在型別 %3$s 中不存在。"
 # storage/freespace/freespace.c:341
 #: access/common/heaptuple.c:306 access/common/heaptuple.c:965
 #: executor/execTuples.c:200
-#, fuzzy, c-format
-#| msgid "tsquery is too large"
+#, c-format
 msgid "tuple is too big"
-msgstr "tsquery 查詢過大"
+msgstr "元組過大"
 
 # access/common/heaptuple.c:580
 #: access/common/heaptuple.c:1197 access/common/heaptuple.c:2195
@@ -981,37 +980,35 @@ msgstr "欄位數 (%d) 超過限制 (%d)"
 #: access/common/heaptuple.c:1526
 #, c-format
 msgid "tuple descriptor has fewer (%d) attributes than tuple (%d)"
-msgstr ""
+msgstr "元組描述符的屬性數（%d）少於元組的屬性數（%d）"
 
 #: access/common/heaptuple.c:1646
 #, c-format
 msgid "tuple descriptor for type %s (OID %u), version %X/%X is incompatible with tuple type %s (OID %u), version %X/%X"
-msgstr ""
+msgstr "型別 %s（OID %u）的元組描述符（版本 %X/%X）與元組型別 %s（OID %u）（版本 %X/%X）不相容"
 
 #: access/common/heaptuple.c:1656
 #, c-format
 msgid "row type of datum tuple was altered after the datum's creation"
-msgstr ""
+msgstr "Datum 元組的資料列型別在建立 Datum 後已變更"
 
 #: access/common/heaptuple.c:1658
 #, c-format
 msgid "using outdated tuple descriptor when deforming row type"
-msgstr ""
+msgstr "拆解資料列型別時使用了過時的元組描述符"
 
 # libpq/auth.c:421
 #: access/common/heaptuple.c:1659
-#, fuzzy, c-format
-#| msgid "See server log for details."
+#, c-format
 msgid "See server log for additional details."
-msgstr "查看伺服器記錄檔以獲得詳細資料。"
+msgstr "更多詳細資訊請參閱伺服器日誌。"
 
 # commands/portalcmds.c:54 commands/portalcmds.c:174
 # commands/portalcmds.c:219
 #: access/common/heaptuple.c:1899
-#, fuzzy, c-format
-#| msgid "Extension names must not be empty."
+#, c-format
 msgid "An extension may need to be updated."
-msgstr "擴充模組名稱不能是空的。"
+msgstr "擴充模組可能需要更新。"
 
 # access/common/indextuple.c:57
 #: access/common/indextuple.c:89
@@ -1139,7 +1136,7 @@ msgstr "此功能需要在建置伺服器時啟用 lz4 支援。"
 #: access/common/tupdesc.c:425
 #, c-format
 msgid "Use TupleDescCopySized() instead."
-msgstr ""
+msgstr "改用 TupleDescCopySized()。"
 
 # access/common/tupdesc.c:511
 #: access/common/tupdesc.c:1048 parser/parse_clause.c:773
@@ -5306,10 +5303,9 @@ msgid "column \"%s\" has pseudo-type %s"
 msgstr "欄位 \"%s\" 有虛擬型別 %s"
 
 #: catalog/heap.c:603
-#, fuzzy, c-format
-#| msgid "variable \"%s\" has pseudo-type %s"
+#, c-format
 msgid "expression has pseudo-type %s"
-msgstr "變數 \"%s\" 具有虛擬型別 %s"
+msgstr "運算式具有虛擬型別 %s"
 
 # commands/typecmds.c:1112
 #: catalog/heap.c:634
@@ -5329,35 +5325,31 @@ msgid "no collation was derived for column \"%s\" with collatable type %s"
 msgstr "欄位 \"%s\" 的型別 %s 支援定序，但未能為該欄位推導出定序"
 
 #: catalog/heap.c:716
-#, fuzzy, c-format
-#| msgid "no collation was derived for column \"%s\" with collatable type %s"
+#, c-format
 msgid "no collation was derived for expression with collatable type %s"
-msgstr "欄位 \"%s\" 的型別 %s 支援定序，但未能為該欄位推導出定序"
+msgstr "無法為型別 %s 支援定序的運算式推導出定序"
 
 # commands/dbcommands.c:201
 #: catalog/heap.c:984
-#, fuzzy, c-format
-#| msgid "relfilenode value not set when in binary upgrade mode"
+#, c-format
 msgid "attribute version values not set for \"%s\" when in binary upgrade mode"
-msgstr "二進位升級模式下未設定 relfilenode 值"
+msgstr "二進位升級模式下未設定 \"%s\" 的屬性版本值"
 
 # commands/dbcommands.c:201
 #: catalog/heap.c:989
-#, fuzzy, c-format
-#| msgid "heap relfilenode value not set when in binary upgrade mode"
+#, c-format
 msgid "expected %d attribute version values for \"%s\" when in binary upgrade mode, got %d"
-msgstr "二進位升級模式下未設定堆積的 relfilenode 值"
+msgstr "二進位升級模式下，\"%2$s\" 應有 %1$d 個屬性版本值，但實際得到 %3$d 個"
 
 #: catalog/heap.c:1150
-#, fuzzy, c-format
-#| msgid "no partition of relation \"%s\" found for row"
+#, c-format
 msgid "attribute versions of relation \"%s\" are non-monotonic"
-msgstr "在關聯 \"%s\" 中未找到可容納該資料列的分割"
+msgstr "關聯 \"%s\" 的屬性版本不是單調遞增的"
 
 #: catalog/heap.c:1152
 #, c-format
 msgid "Version %X/%X of attribute \"%s\" at position %d is lower than version %X/%X of attribute \"%s\" at position %d."
-msgstr ""
+msgstr "位置 %4$d 的屬性 \"%3$s\" 的版本 %1$X/%2$X 低於位置 %8$d 的屬性 \"%7$s\" 的版本 %5$X/%6$X。"
 
 # catalog/heap.c:747 catalog/index.c:527 commands/tablecmds.c:1471
 #: catalog/heap.c:1456 catalog/index.c:882 commands/createas.c:408
@@ -6764,39 +6756,35 @@ msgstr "運算子 %s 已經存在"
 
 # catalog/pg_operator.c:726
 #: catalog/pg_operator.c:491
-#, fuzzy, c-format
-#| msgid "operator cannot be its own negator or sort operator"
+#, c-format
 msgid "operator cannot be its own negator"
-msgstr "運算子不能作為其自身的否定運算子或排序運算子"
+msgstr "運算子不能作為其自身的否定運算子"
 
 # parser/parse_oper.c:84 parser/parse_oper.c:785 utils/adt/regproc.c:467
 # utils/adt/regproc.c:487 utils/adt/regproc.c:665
 #: catalog/pg_operator.c:512 catalog/pg_operator.c:850
-#, fuzzy, c-format
-#| msgid "operator %s is not a member of operator family \"%s\""
+#, c-format
 msgid "commutator operator %s is already the commutator of operator %s"
-msgstr "運算子 %s 不存在於運算子家族 \"%s\""
+msgstr "交換運算子 %s 已是運算子 %s 的交換運算子"
 
 #: catalog/pg_operator.c:517
 #, c-format
 msgid "commutator operator %u is already the commutator of operator %s"
-msgstr ""
+msgstr "交換運算子 %u 已是運算子 %s 的交換運算子"
 
 # parser/parse_oper.c:84 parser/parse_oper.c:785 utils/adt/regproc.c:467
 # utils/adt/regproc.c:487 utils/adt/regproc.c:665
 #: catalog/pg_operator.c:538 catalog/pg_operator.c:934
-#, fuzzy, c-format
-#| msgid "operator %s is not a member of operator family \"%s\""
+#, c-format
 msgid "negator operator %s is already the negator of operator %s"
-msgstr "運算子 %s 不存在於運算子家族 \"%s\""
+msgstr "否定運算子 %s 已是運算子 %s 的否定運算子"
 
 # parser/parse_oper.c:84 parser/parse_oper.c:785 utils/adt/regproc.c:467
 # utils/adt/regproc.c:487 utils/adt/regproc.c:665
 #: catalog/pg_operator.c:543
-#, fuzzy, c-format
-#| msgid "operator %s is not a member of operator family \"%s\""
+#, c-format
 msgid "negator operator %u is already the negator of operator %s"
-msgstr "運算子 %s 不存在於運算子家族 \"%s\""
+msgstr "否定運算子 %u 已是運算子 %s 的否定運算子"
 
 # catalog/pg_operator.c:420
 #: catalog/pg_operator.c:674
@@ -6851,29 +6839,26 @@ msgstr "只有布林運算子才能用於雜湊聯結"
 #: catalog/pg_operator.c:855
 #, c-format
 msgid "commutator operator %s is already the commutator of operator %u"
-msgstr ""
+msgstr "交換運算子 %s 已是運算子 %u 的交換運算子"
 
 # commands/indexcmds.c:623
 #: catalog/pg_operator.c:876
-#, fuzzy, c-format
-#| msgid "operator class \"%s\" does not accept data type %s"
+#, c-format
 msgid "commutator operator %s does not return the same data type as operator %s"
-msgstr "運算子類別 \"%s\" 不接受資料型別 %s"
+msgstr "交換運算子 %s 傳回的資料型別與運算子 %s 不同"
 
 # parser/parse_oper.c:84 parser/parse_oper.c:785 utils/adt/regproc.c:467
 # utils/adt/regproc.c:487 utils/adt/regproc.c:665
 #: catalog/pg_operator.c:939
-#, fuzzy, c-format
-#| msgid "operator %s is not a member of operator family \"%s\""
+#, c-format
 msgid "negator operator %s is already the negator of operator %u"
-msgstr "運算子 %s 不存在於運算子家族 \"%s\""
+msgstr "否定運算子 %s 已是運算子 %u 的否定運算子"
 
 # commands/indexcmds.c:623
 #: catalog/pg_operator.c:960
-#, fuzzy, c-format
-#| msgid "operator class \"%s\" does not accept data type %s"
+#, c-format
 msgid "negator operator %s does not return the same data type as operator %s"
-msgstr "運算子類別 \"%s\" 不接受資料型別 %s"
+msgstr "否定運算子 %s 傳回的資料型別與運算子 %s 不同"
 
 # commands/user.c:899 commands/user.c:1012 commands/user.c:1104
 # commands/user.c:1233 commands/variable.c:664 utils/cache/lsyscache.c:2064
@@ -9441,10 +9426,9 @@ msgstr "擴充模組腳本不能有交易控制陳述式"
 
 # commands/schemacmds.c:102 commands/schemacmds.c:297
 #: commands/extension.c:1008
-#, fuzzy, c-format
-#| msgid "unacceptable schema name \"%s\""
+#, c-format
 msgid "unacceptable extension schema name \"%s\""
-msgstr "無法接受的 schema 名稱 \"%s\""
+msgstr "擴充模組的 schema 名稱 \"%s\" 無法接受"
 
 # utils/adt/acl.c:259
 #: commands/extension.c:1032
@@ -9460,31 +9444,27 @@ msgstr "擴充模組擁有者名稱中有無效字元: 不得包含 \"%s\" 中�
 
 # utils/adt/acl.c:259
 #: commands/extension.c:1049
-#, fuzzy, c-format
-#| msgid "invalid character in extension \"%s\" schema: must not contain any of \"%s\""
+#, c-format
 msgid "invalid string in extension \"%s\" schema: must not contain newline, carriage return, \"--\", \"/*\", or \"*/\""
-msgstr "擴充模組 \"%s\" 的 schema 名稱中有無效字元: 不得包含 \"%s\" 中的任何字元"
+msgstr "擴充模組 \"%s\" 的 schema 名稱字串無效：不得包含換行字元、歸位字元、\"--\"、\"/*\" 或 \"*/\""
 
 # utils/adt/acl.c:259
 #: commands/extension.c:1054
-#, fuzzy, c-format
-#| msgid "invalid character in extension owner: must not contain any of \"%s\""
+#, c-format
 msgid "invalid string in extension owner: must not contain newline, carriage return, \"--\", \"/*\", or \"*/\""
-msgstr "擴充模組擁有者名稱中有無效字元: 不得包含 \"%s\" 中的任何字元"
+msgstr "擴充模組擁有者字串無效：不得包含換行字元、歸位字元、\"--\"、\"/*\" 或 \"*/\""
 
 # utils/adt/acl.c:259
 #: commands/extension.c:1064
-#, fuzzy, c-format
-#| msgid "invalid character in extension \"%s\" schema: must not contain any of \"%s\""
+#, c-format
 msgid "invalid string in extension \"%s\" schema: must not contain \"@extowner@\", \"@extschema\", or \"MODULE_PATHNAME\""
-msgstr "擴充模組 \"%s\" 的 schema 名稱中有無效字元: 不得包含 \"%s\" 中的任何字元"
+msgstr "擴充模組 \"%s\" 的 schema 名稱字串無效：不得包含 \"@extowner@\"、\"@extschema\" 或 \"MODULE_PATHNAME\""
 
 # utils/adt/acl.c:259
 #: commands/extension.c:1069
-#, fuzzy, c-format
-#| msgid "invalid character in extension owner: must not contain any of \"%s\""
+#, c-format
 msgid "invalid string in extension owner: must not contain \"@extowner@\", \"@extschema\", or \"MODULE_PATHNAME\""
-msgstr "擴充模組擁有者名稱中有無效字元: 不得包含 \"%s\" 中的任何字元"
+msgstr "擴充模組擁有者字串無效：不得包含 \"@extowner@\"、\"@extschema\" 或 \"MODULE_PATHNAME\""
 
 # commands/tablespace.c:227
 #: commands/extension.c:1105
@@ -10961,10 +10941,9 @@ msgstr "所有角色都是 PUBLIC 角色的成員。"
 
 # commands/indexcmds.c:363
 #: commands/policy.c:470
-#, fuzzy, c-format
-#| msgid "new row violates row-level security policy \"%s\" for table \"%s\""
+#, c-format
 msgid "role \"%s\" could not be removed from policy \"%s\" for table \"%s\""
-msgstr "新資料列違反資料表 \"%2$s\" 的資料列層級安全性原則 \"%1$s\""
+msgstr "無法從資料表 \"%3$s\" 的原則 \"%2$s\" 中移除角色 \"%1$s\""
 
 #: commands/policy.c:628
 #, c-format
@@ -12330,24 +12309,21 @@ msgstr "不能修改資料表 \"%s\"，因為欄位 \"%s.%s\" 使用它的資料
 
 # commands/tablecmds.c:4711
 #: commands/tablecmds.c:7071 commands/tablecmds.c:7077
-#, fuzzy, c-format
-#| msgid "cannot alter type \"%s\" because column \"%s.%s\" uses it"
+#, c-format
 msgid "cannot alter type \"%s\" because %s uses it"
-msgstr "不能修改型別 \"%s\"，因為欄位 \"%s.%s\" 使用它"
+msgstr "無法修改型別 \"%s\"，因為 %s 使用該型別"
 
 # commands/tablecmds.c:2741
 #: commands/tablecmds.c:7083
-#, fuzzy, c-format
-#| msgid "cannot alter foreign table \"%s\" because column \"%s.%s\" uses its row type"
+#, c-format
 msgid "cannot alter foreign table \"%s\" because %s uses its row type"
-msgstr "不能修改外部資料表 \"%s\"，因為欄位 \"%s.%s\" 使用它的資料列型別"
+msgstr "無法修改外部資料表 \"%s\"，因為 %s 使用其資料列型別"
 
 # commands/tablecmds.c:2741
 #: commands/tablecmds.c:7088
-#, fuzzy, c-format
-#| msgid "cannot alter table \"%s\" because column \"%s.%s\" uses its row type"
+#, c-format
 msgid "cannot alter table \"%s\" because %s uses its row type"
-msgstr "不能修改資料表 \"%s\"，因為欄位 \"%s.%s\" 使用它的資料列型別"
+msgstr "無法修改資料表 \"%s\"，因為 %s 使用其資料列型別"
 
 # commands/tablecmds.c:2741
 #: commands/tablecmds.c:7267
@@ -12622,10 +12598,9 @@ msgstr "改為修改資料表欄位的統計資訊。"
 
 # utils/adt/nabstime.c:244
 #: commands/tablecmds.c:8961
-#, fuzzy, c-format
-#| msgid "installing required extension \"%s\""
+#, c-format
 msgid "ignoring reserved attribute option \"%s\""
-msgstr "正在安裝所需的擴充模組 \"%s\""
+msgstr "忽略保留的屬性選項 \"%s\""
 
 # commands/tablecmds.c:3360
 #: commands/tablecmds.c:9100
@@ -14239,10 +14214,9 @@ msgstr "沒有下標操作函式時，不能指定元素型別"
 # commands/tablecmds.c:2199
 #: commands/typecmds.c:747 commands/typecmds.c:1175 commands/typecmds.c:1401
 #: commands/typecmds.c:1484
-#, fuzzy, c-format
-#| msgid "cannot create temporary table within security-restricted operation"
+#, c-format
 msgid "cannot create a type in a temporary schema within security-restricted operation"
-msgstr "安全性限制作業中不可建立暫存資料表"
+msgstr "安全性限制作業中無法在暫存 schema 建立型別"
 
 # commands/typecmds.c:557
 #: commands/typecmds.c:788
@@ -15319,10 +15293,9 @@ msgid "attribute %d of type %s has wrong type"
 msgstr "型別 %2$s 的屬性 %1$d 型別錯誤"
 
 #: executor/execExpr.c:1500
-#, fuzzy, c-format
-#| msgid "Table has type %s, but query expects %s."
+#, c-format
 msgid "Attribute has type %s, but query expects %s."
-msgstr "資料表中該屬性的型別為 %s，但查詢預期為 %s。"
+msgstr "屬性的型別為 %s，但查詢預期為 %s。"
 
 # utils/adt/arrayfuncs.c:3136
 #: executor/execExpr.c:1632
@@ -15670,7 +15643,7 @@ msgstr "新資料列違反檢視表 \"%s\" 的檢查選項"
 #: executor/execMain.c:2209
 #, c-format
 msgid "conflicting row is not visible through view \"%s\""
-msgstr ""
+msgstr "衝突的資料列無法透過檢視 \"%s\" 看見"
 
 # commands/indexcmds.c:363
 #: executor/execMain.c:2217
@@ -25243,14 +25216,13 @@ msgstr "無法為關聯 \"%3$s.%4$s\" 計算統計資訊物件 \"%1$s.%2$s\""
 #: utils/adt/ruleutils.c:1868 utils/adt/selfuncs.c:5234
 #, c-format
 msgid "The extended statistics object should be dropped."
-msgstr ""
+msgstr "應刪除延伸統計資訊物件。"
 
 # commands/tablecmds.c:4711
 #: statistics/mcv.c:1115 utils/adt/ruleutils.c:1866 utils/adt/selfuncs.c:5232
-#, fuzzy, c-format
-#| msgid "cannot alter statistics on non-expression column \"%s\" of index \"%s\""
+#, c-format
 msgid "cannot interpret statistics on an expression of pseudo-type %s"
-msgstr "不能修改索引 \"%2$s\" 的非運算式欄位 \"%1$s\" 的統計資訊"
+msgstr "無法解讀具有虛擬型別 %s 的運算式統計資訊"
 
 #: statistics/mcv.c:1389
 #, c-format
@@ -27202,10 +27174,9 @@ msgstr "對串聯而言，不同維度的陣列不相容。"
 
 # utils/adt/float.c:1508 utils/adt/float.c:1538
 #: utils/adt/array_userfuncs.c:423
-#, fuzzy, c-format
-#| msgid "result is out of range"
+#, c-format
 msgid "result array is too big"
-msgstr "結果超過範圍"
+msgstr "結果陣列過大"
 
 #: utils/adt/array_userfuncs.c:668 utils/adt/array_userfuncs.c:822
 #, c-format
@@ -29364,7 +29335,7 @@ msgstr "應為逗號或多範圍的結束。"
 #: utils/adt/multirangetypes.c:590
 #, c-format
 msgid "multirange is too big"
-msgstr ""
+msgstr "多範圍過大"
 
 #: utils/adt/multirangetypes.c:985
 #, c-format
@@ -33880,11 +33851,11 @@ msgstr "每個等級包含所有後面的等級。等級越後面，傳送的訊
 
 #: utils/misc/guc.c:4789
 msgid "Sets how version mismatches of composite values are handled."
-msgstr ""
+msgstr "設定複合值版本不符的處理方式。"
 
 #: utils/misc/guc.c:4790
 msgid "Reading a composite value whose row type was altered incompatibly after the value was created normally causes PostgreSQL to report an error. This parameter controls that behavior. Anything other than \"error\", i.e. \"warn\" or \"disabled\", is not safe."
-msgstr ""
+msgstr "讀取複合值時，如果其資料列型別在建立該值後發生不相容的變更，PostgreSQL 通常會回報錯誤。此參數控制該行為。除了 \"error\" 之外的任何設定（即 \"warn\" 或 \"disabled\"）都不安全。"
 
 #: utils/misc/guc.c:4800
 msgid "Enables in-core computation of query identifiers."
@@ -34510,10 +34481,9 @@ msgstr "不能刪除已釘選的 portal \"%s\""
 
 # catalog/dependency.c:312 catalog/dependency.c:717
 #: utils/mmgr/portalmem.c:488
-#, fuzzy, c-format
-#| msgid "cannot drop extension \"%s\" because it is being modified"
+#, c-format
 msgid "cannot drop portal \"%s\" while it is being set up"
-msgstr "不能刪除擴充模組 \"%s\"，因為它正在被修改"
+msgstr "無法在設定 portal \"%s\" 時捨棄它"
 
 # commands/tablecmds.c:3448
 #: utils/mmgr/portalmem.c:498
@@ -35313,6 +35283,10 @@ msgstr "不能匯入來自不同資料庫的快照"
 
 #~ msgid "SSPI is not supported in protocol version 2"
 #~ msgstr "通訊協定第 2 版不支援 SSPI"
+
+# libpq/auth.c:421
+#~ msgid "See server log for details."
+#~ msgstr "查看伺服器記錄檔以獲得詳細資料。"
 
 #~ msgid "Sets immediate fsync at commit."
 #~ msgstr "在認可時設定立即 fsync。"
