@@ -27,18 +27,27 @@ The bilingual review corpus is browsable at **<https://pgsql.cc/nls>** — the E
 
 | Upstream branch | PG | Catalogs | Messages | Initial upstream | Here | Workbench | Issue | Downloads |
 |:---|:---:|---:|---:|---:|:---:|:---:|:---:|:---:|
-| [`master`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/master) | 19 | 28 | 12,708 | 65.3% | **100%** | [browse](https://pgsql.cc/nls/?v=19) | [#8123](https://redmine.postgresql.org/issues/8123) | [zh_CN](https://github.com/pgsty/pgnls/releases/download/20261112/pg-messages-zh_CN-master-20261112.tar.gz) / [zh_TW](https://github.com/pgsty/pgnls/releases/download/20261112/pg-messages-zh_TW-master-20261112.tar.gz) |
-| [`REL_18_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_18_STABLE) | 18 | 28 | 12,149 | 69.9% | **100%** | [browse](https://pgsql.cc/nls/?v=18) | [#8118](https://redmine.postgresql.org/issues/8118) | [zh_CN](https://github.com/pgsty/pgnls/releases/download/20261112/pg-messages-zh_CN-REL_18_STABLE-20261112.tar.gz) / [zh_TW](https://github.com/pgsty/pgnls/releases/download/20261112/pg-messages-zh_TW-REL_18_STABLE-20261112.tar.gz) |
-| [`REL_17_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_17_STABLE) | 17 | 28 | 11,560 | 74.9% | **100%** | [browse](https://pgsql.cc/nls/?v=17) | [#8119](https://redmine.postgresql.org/issues/8119) | [zh_CN](https://github.com/pgsty/pgnls/releases/download/20261112/pg-messages-zh_CN-REL_17_STABLE-20261112.tar.gz) / [zh_TW](https://github.com/pgsty/pgnls/releases/download/20261112/pg-messages-zh_TW-REL_17_STABLE-20261112.tar.gz) |
-| [`REL_16_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_16_STABLE) | 16 | 26 | 10,707 | 79.0% | **100%** | [browse](https://pgsql.cc/nls/?v=16) | [#8120](https://redmine.postgresql.org/issues/8120) | [zh_CN](https://github.com/pgsty/pgnls/releases/download/20261112/pg-messages-zh_CN-REL_16_STABLE-20261112.tar.gz) / [zh_TW](https://github.com/pgsty/pgnls/releases/download/20261112/pg-messages-zh_TW-REL_16_STABLE-20261112.tar.gz) |
-| [`REL_15_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_15_STABLE) | 15 | 26 | 10,514 | 85.7% | **100%** | [browse](https://pgsql.cc/nls/?v=15) | [#8121](https://redmine.postgresql.org/issues/8121) | [zh_CN](https://github.com/pgsty/pgnls/releases/download/20261112/pg-messages-zh_CN-REL_15_STABLE-20261112.tar.gz) / [zh_TW](https://github.com/pgsty/pgnls/releases/download/20261112/pg-messages-zh_TW-REL_15_STABLE-20261112.tar.gz) |
-| [`REL_14_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_14_STABLE) | 14 | 26 | 10,178 | 91.8% | **100%** | [browse](https://pgsql.cc/nls/?v=14) | [#8122](https://redmine.postgresql.org/issues/8122) | [zh_CN](https://github.com/pgsty/pgnls/releases/download/20261112/pg-messages-zh_CN-REL_14_STABLE-20261112.tar.gz) / [zh_TW](https://github.com/pgsty/pgnls/releases/download/20261112/pg-messages-zh_TW-REL_14_STABLE-20261112.tar.gz) |
+| [`master`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/master) | 19 | 28 | 12,708 | 65.3% | **100%** | [browse](https://pgsql.cc/nls/?v=19) | [#8123](https://redmine.postgresql.org/issues/8123) | [zh_CN](https://github.com/pgsty/pgnls/releases/download/20261116/pg-messages-zh_CN-master-20261116.tar.gz) / [zh_TW](https://github.com/pgsty/pgnls/releases/download/20261116/pg-messages-zh_TW-master-20261116.tar.gz) |
+| [`REL_18_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_18_STABLE) | 18 | 28 | 12,149 | 69.9% | **100%** | [browse](https://pgsql.cc/nls/?v=18) | [#8118](https://redmine.postgresql.org/issues/8118) | [zh_CN](https://github.com/pgsty/pgnls/releases/download/20261116/pg-messages-zh_CN-REL_18_STABLE-20261116.tar.gz) / [zh_TW](https://github.com/pgsty/pgnls/releases/download/20261116/pg-messages-zh_TW-REL_18_STABLE-20261116.tar.gz) |
+| [`REL_17_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_17_STABLE) | 17 | 28 | 11,560 | 74.9% | **100%** | [browse](https://pgsql.cc/nls/?v=17) | [#8119](https://redmine.postgresql.org/issues/8119) | [zh_CN](https://github.com/pgsty/pgnls/releases/download/20261116/pg-messages-zh_CN-REL_17_STABLE-20261116.tar.gz) / [zh_TW](https://github.com/pgsty/pgnls/releases/download/20261116/pg-messages-zh_TW-REL_17_STABLE-20261116.tar.gz) |
+| [`REL_16_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_16_STABLE) | 16 | 26 | 10,707 | 79.0% | **100%** | [browse](https://pgsql.cc/nls/?v=16) | [#8120](https://redmine.postgresql.org/issues/8120) | [zh_CN](https://github.com/pgsty/pgnls/releases/download/20261116/pg-messages-zh_CN-REL_16_STABLE-20261116.tar.gz) / [zh_TW](https://github.com/pgsty/pgnls/releases/download/20261116/pg-messages-zh_TW-REL_16_STABLE-20261116.tar.gz) |
+| [`REL_15_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_15_STABLE) | 15 | 26 | 10,514 | 85.7% | **100%** | [browse](https://pgsql.cc/nls/?v=15) | [#8121](https://redmine.postgresql.org/issues/8121) | [zh_CN](https://github.com/pgsty/pgnls/releases/download/20261116/pg-messages-zh_CN-REL_15_STABLE-20261116.tar.gz) / [zh_TW](https://github.com/pgsty/pgnls/releases/download/20261116/pg-messages-zh_TW-REL_15_STABLE-20261116.tar.gz) |
+| [`REL_14_STABLE`](https://git.postgresql.org/gitweb/?p=pgtranslation/messages.git;a=tree;f=zh_CN;hb=refs/heads/REL_14_STABLE) | 14 | 26 | 10,178 | 91.8% | **100%** | [browse](https://pgsql.cc/nls/?v=14) | [#8122](https://redmine.postgresql.org/issues/8122) | [zh_CN](https://github.com/pgsty/pgnls/releases/download/20261116/pg-messages-zh_CN-REL_14_STABLE-20261116.tar.gz) / [zh_TW](https://github.com/pgsty/pgnls/releases/download/20261116/pg-messages-zh_TW-REL_14_STABLE-20261116.tar.gz) |
 
 </div>
 
 Catalog and message counts are per language and describe the current `main` branch.
-Download links point to the latest published release, 20261112.
+Download links point to the latest published release, 20261116.
 The upstream percentages describe the initial `zh_CN` baseline.
+
+The 2026-11-16 release adds three distinct PG19 array-validation messages in
+both languages since 20261112: six translated instances replace four retired
+instances. Only the two PG19 `postgres.po` files have message changes; PG14–18
+message sets and translations are unchanged. All 135,626 retained translations
+remain unchanged. Source references, format flags and template dates match the
+November 16 Babel snapshot, and all 324 translation revision dates record the
+final release calibration. Newly retired entries are removed; existing obsolete
+history is preserved.
 
 The 2026-11-13 update translates two PG19 array-validation messages in both
 languages: one requires a non-empty one-dimensional array, and the other permits
@@ -108,37 +117,36 @@ PostgreSQL 19 lives on `master` there; there is no `REL_19_STABLE`. From PG17 on
 
 ## Download
 
-Release [`20261112`](https://github.com/pgsty/pgnls/releases/tag/20261112) provides
+Release [`20261116`](https://github.com/pgsty/pgnls/releases/tag/20261116) provides
 complete Simplified and Traditional Chinese catalogs for PostgreSQL 14–19:
-**324 PO files and 135,630 translated messages**. Each language has 162 files
-and 67,815 messages, with zero active fuzzy or untranslated entries.
+**324 PO files and 135,632 translated messages**. Each language has 162 files
+and 67,816 messages, with zero active fuzzy or untranslated entries.
 
-Compared with 20261104, this edition adds 612 translated language/version
-instances across 59 distinct English messages and removes 38 superseded
-instances. Changes cover `pg_dump`, `plperl`, `plpgsql`, and `postgres`; PG19
-`pg_basebackup` also receives an upstream `c-format` flag correction.
-All 135,018 retained translations remain unchanged. Template dates and source
-references match the November 12 Babel snapshot; every PO revision date records
-the final release calibration time.
+Compared with 20261112, this edition adds six translated language/version
+instances across three distinct English messages and removes four instances
+across two retired messages. Semantic changes are limited to PG19
+`postgres.po` in both languages. All 135,626 retained translations remain
+unchanged. Template dates and source references match the November 16 Babel
+snapshot; every PO revision date records the final release calibration time.
 
 | Archive | Covers | Catalogs | Messages |
 |:---|:---|---:|---:|
-| [`pg-messages-zh_CN-zh_TW-20261112.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20261112/pg-messages-zh_CN-zh_TW-20261112.tar.gz) | Both languages, all six branches | 324 | 135,630 |
-| [`pg-messages-zh_CN-20261112.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20261112/pg-messages-zh_CN-20261112.tar.gz) | Simplified Chinese, all six branches | 162 | 67,815 |
-| [`pg-messages-zh_TW-20261112.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20261112/pg-messages-zh_TW-20261112.tar.gz) | Traditional Chinese, all six branches | 162 | 67,815 |
+| [`pg-messages-zh_CN-zh_TW-20261116.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20261116/pg-messages-zh_CN-zh_TW-20261116.tar.gz) | Both languages, all six branches | 324 | 135,632 |
+| [`pg-messages-zh_CN-20261116.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20261116/pg-messages-zh_CN-20261116.tar.gz) | Simplified Chinese, all six branches | 162 | 67,816 |
+| [`pg-messages-zh_TW-20261116.tar.gz`](https://github.com/pgsty/pgnls/releases/download/20261116/pg-messages-zh_TW-20261116.tar.gz) | Traditional Chinese, all six branches | 162 | 67,816 |
 
 The version table above links to the twelve individual language/branch archives.
 Every archive contains only complete PO files under
 `<language>/<branch>/<catalog>.po`. To use one language and branch:
 
 ```bash
-curl -LO https://github.com/pgsty/pgnls/releases/download/20261112/pg-messages-zh_CN-REL_18_STABLE-20261112.tar.gz
-tar -xzf pg-messages-zh_CN-REL_18_STABLE-20261112.tar.gz
+curl -LO https://github.com/pgsty/pgnls/releases/download/20261116/pg-messages-zh_CN-REL_18_STABLE-20261116.tar.gz
+tar -xzf pg-messages-zh_CN-REL_18_STABLE-20261116.tar.gz
 cp zh_CN/REL_18_STABLE/*.po /path/to/messages/zh_CN/
 ```
 
 Checksums for all fifteen archives are in
-[`SHA256SUMS`](https://github.com/pgsty/pgnls/releases/download/20261112/SHA256SUMS).
+[`SHA256SUMS`](https://github.com/pgsty/pgnls/releases/download/20261116/SHA256SUMS).
 Earlier editions remain available in the [release history](https://github.com/pgsty/pgnls/releases).
 
 ## Layout
@@ -193,9 +201,9 @@ for local use.
 Set `STAMP` to choose the release label and `DIST` to choose the output directory:
 
 ```bash
-STAMP=20261112 make dist
+STAMP=20261116 make dist
 # Or build another copy in a fresh directory:
-STAMP=20261112 DIST=/tmp/pgnls-20261112 make dist
+STAMP=20261116 DIST=/tmp/pgnls-20261116 make dist
 ```
 
 The default output directory is `dist/<STAMP>/`. Existing release files are
@@ -268,7 +276,7 @@ the long version; [`ref/errata.md`](ref/errata.md) has the known defects.
 
 ## File handling
 
-- **Templates** — all 324 babel `po-{14..19}-branch` catalogs were rechecked on 2026-11-13 against the builds from 2026-11-10–13 UTC. Both languages carry the snapshot's per-file `POT-Creation-Date`, active-message source references (`#:`), and format flags. `make fetch-upstream && make diff` tells you at any time whether `zh_CN/` still matches the current upstream POT entry for entry.
+- **Templates** — all 324 babel `po-{14..19}-branch` catalogs were rechecked on 2026-11-16 against the builds from 2026-11-16 UTC. Both languages carry the snapshot's per-file `POT-Creation-Date`, active-message source references (`#:`), and format flags. `make fetch-upstream && make diff` tells you at any time whether `zh_CN/` still matches the current upstream POT entry for entry.
 - **Only what should change** — translation edits affect `msgstr` values, `fuzzy` flags, and `#|` previous-message comments. Explicit template refreshes synchronize `POT-Creation-Date`, source references (`#:`), format flags, and template order while preserving reviewed translations. Metadata-only refreshes preserve `PO-Revision-Date`; a full calibration records the actual revision time. Retained entries preserve their English text, translation formatting and translator comments.
 - **Removed messages** — when a template refresh removes an active message, delete the entire old entry from `main`, including any `#~` copy created during the refresh. Compare the corresponding language, PostgreSQL branch, and catalog; a message still used elsewhere remains there. Git records superseded translations. The raw `babel` and `message` branches mirror their respective upstream sources verbatim, including any obsolete entries those sources contain.
 - **Plurals** — normalised to the Chinese standard `nplurals=1; plural=0;`. The existing headers disagree: `postgres` and `psql` declared 1, nine directories declared 2, and `libpq` and `initdb` carried plural entries with no `Plural-Forms` header at all. `pg_dump`'s circular foreign-key warning uses the number-neutral wording `以下表涉及循环外键约束:` so the single Chinese plural form covers both self-references within one table and cycles among multiple tables.
@@ -335,8 +343,8 @@ The translations follow PostgreSQL itself and are available under the [PostgreSQ
 
 Ruohang Feng &lt;rh@vonng.com&gt; · 2026-10
 
-Catalogs last updated: 2026-11-13 08:56+0800 · zh_CN / zh_TW · PostgreSQL 14–19
+Catalogs last updated: 2026-11-16 22:43+0800 · zh_CN / zh_TW · PostgreSQL 14–19
 
-Latest translation calibration: 2026-11-13 08:56+0800 · latest published release: 20261112
+Latest translation calibration: 2026-11-16 22:43+0800 · latest published release: 20261116
 
 </div>
