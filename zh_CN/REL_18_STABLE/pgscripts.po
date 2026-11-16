@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pgscripts (PostgreSQL) 18\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-03 14:51+0000\n"
-"PO-Revision-Date: 2026-11-04 08:45+0800\n"
+"POT-Creation-Date: 2026-11-09 21:08+0000\n"
+"PO-Revision-Date: 2026-11-10 09:59+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
 "Language: zh_CN\n"
@@ -271,18 +271,18 @@ msgstr ""
 "\n"
 
 #: clusterdb.c:274 createdb.c:300 createuser.c:417 dropdb.c:171 dropuser.c:171
-#: pg_isready.c:226 reindexdb.c:901 vacuumdb.c:1337
+#: pg_isready.c:226 reindexdb.c:914 vacuumdb.c:1343
 #, c-format
 msgid "Usage:\n"
 msgstr "用法:\n"
 
-#: clusterdb.c:275 reindexdb.c:902 vacuumdb.c:1338
+#: clusterdb.c:275 reindexdb.c:915 vacuumdb.c:1344
 #, c-format
 msgid "  %s [OPTION]... [DBNAME]\n"
 msgstr "  %s [选项]... [数据库名]\n"
 
 #: clusterdb.c:276 createdb.c:302 createuser.c:419 dropdb.c:173 dropuser.c:173
-#: pg_isready.c:229 reindexdb.c:903 vacuumdb.c:1339
+#: pg_isready.c:229 reindexdb.c:916 vacuumdb.c:1345
 #, c-format
 msgid ""
 "\n"
@@ -333,7 +333,7 @@ msgid "  -?, --help                show this help, then exit\n"
 msgstr "  -?, --help                显示此帮助，然后退出\n"
 
 #: clusterdb.c:285 createdb.c:319 createuser.c:450 dropdb.c:180 dropuser.c:180
-#: pg_isready.c:235 reindexdb.c:918 vacuumdb.c:1369
+#: pg_isready.c:235 reindexdb.c:931 vacuumdb.c:1375
 #, c-format
 msgid ""
 "\n"
@@ -342,32 +342,32 @@ msgstr ""
 "\n"
 "连接选项:\n"
 
-#: clusterdb.c:286 createuser.c:451 dropdb.c:181 dropuser.c:181 vacuumdb.c:1370
+#: clusterdb.c:286 createuser.c:451 dropdb.c:181 dropuser.c:181 vacuumdb.c:1376
 #, c-format
 msgid "  -h, --host=HOSTNAME       database server host or socket directory\n"
 msgstr "  -h, --host=HOSTNAME       数据库服务器主机或套接字目录\n"
 
-#: clusterdb.c:287 createuser.c:452 dropdb.c:182 dropuser.c:182 vacuumdb.c:1371
+#: clusterdb.c:287 createuser.c:452 dropdb.c:182 dropuser.c:182 vacuumdb.c:1377
 #, c-format
 msgid "  -p, --port=PORT           database server port\n"
 msgstr "  -p, --port=PORT           数据库服务器端口\n"
 
-#: clusterdb.c:288 dropdb.c:183 vacuumdb.c:1372
+#: clusterdb.c:288 dropdb.c:183 vacuumdb.c:1378
 #, c-format
 msgid "  -U, --username=USERNAME   user name to connect as\n"
 msgstr "  -U, --username=USERNAME   连接所用的用户名\n"
 
-#: clusterdb.c:289 createuser.c:454 dropdb.c:184 dropuser.c:184 vacuumdb.c:1373
+#: clusterdb.c:289 createuser.c:454 dropdb.c:184 dropuser.c:184 vacuumdb.c:1379
 #, c-format
 msgid "  -w, --no-password         never prompt for password\n"
 msgstr "  -w, --no-password         永远不提示输入密码\n"
 
-#: clusterdb.c:290 createuser.c:455 dropdb.c:185 dropuser.c:185 vacuumdb.c:1374
+#: clusterdb.c:290 createuser.c:455 dropdb.c:185 dropuser.c:185 vacuumdb.c:1380
 #, c-format
 msgid "  -W, --password            force password prompt\n"
 msgstr "  -W, --password            强制提示输入密码\n"
 
-#: clusterdb.c:291 dropdb.c:186 vacuumdb.c:1375
+#: clusterdb.c:291 dropdb.c:186 vacuumdb.c:1381
 #, c-format
 msgid "  --maintenance-db=DBNAME   alternate maintenance database\n"
 msgstr "  --maintenance-db=DBNAME   指定另一个维护数据库\n"
@@ -382,7 +382,7 @@ msgstr ""
 "阅读 SQL 命令 CLUSTER 的描述信息以获得详情。\n"
 
 #: clusterdb.c:293 createdb.c:327 createuser.c:456 dropdb.c:187 dropuser.c:186
-#: pg_isready.c:240 reindexdb.c:926 vacuumdb.c:1377
+#: pg_isready.c:240 reindexdb.c:939 vacuumdb.c:1383
 #, c-format
 msgid ""
 "\n"
@@ -392,35 +392,35 @@ msgstr ""
 "请向 <%s> 报告缺陷。\n"
 
 #: clusterdb.c:294 createdb.c:328 createuser.c:457 dropdb.c:188 dropuser.c:187
-#: pg_isready.c:241 reindexdb.c:927 vacuumdb.c:1378
+#: pg_isready.c:241 reindexdb.c:940 vacuumdb.c:1384
 #, c-format
 msgid "%s home page: <%s>\n"
 msgstr "%s 主页: <%s>\n"
 
-#: common.c:106
+#: common.c:111
 #, c-format
 msgid "query returned %d row instead of one: %s"
 msgid_plural "query returned %d rows instead of one: %s"
 msgstr[0] "查询返回 %d 行，而不是一行: %s"
 
 #. translator: abbreviation for "yes"
-#: common.c:131
+#: common.c:136
 msgid "y"
 msgstr "y"
 
 #. translator: abbreviation for "no"
-#: common.c:133
+#: common.c:138
 msgid "n"
 msgstr "n"
 
 #. translator: This is a question followed by the translated options for
 #. "yes" and "no".
-#: common.c:143
+#: common.c:148
 #, c-format
 msgid "%s (%s/%s) "
 msgstr "%s（%s/%s） "
 
-#: common.c:164
+#: common.c:169
 #, c-format
 msgid "Please answer \"%s\" or \"%s\".\n"
 msgstr "请回答 \"%s\" 或 \"%s\"。\n"
@@ -459,7 +459,7 @@ msgstr "  %s [选项]... [数据库名] [描述]\n"
 msgid "  -D, --tablespace=TABLESPACE  default tablespace for the database\n"
 msgstr "  -D, --tablespace=TABLESPACE  数据库默认表空间\n"
 
-#: createdb.c:304 reindexdb.c:907
+#: createdb.c:304 reindexdb.c:920
 #, c-format
 msgid ""
 "  -e, --echo                   show the commands being sent to the server\n"
@@ -528,43 +528,43 @@ msgstr "  -S, --strategy=STRATEGY      数据库创建策略: wal_log 或 file_c
 msgid "  -T, --template=TEMPLATE      template database to copy\n"
 msgstr "  -T, --template=TEMPLATE      要复制的模板数据库\n"
 
-#: createdb.c:317 reindexdb.c:916
+#: createdb.c:317 reindexdb.c:929
 #, c-format
 msgid "  -V, --version                output version information, then exit\n"
 msgstr "  -V, --version                输出版本信息，然后退出\n"
 
-#: createdb.c:318 reindexdb.c:917
+#: createdb.c:318 reindexdb.c:930
 #, c-format
 msgid "  -?, --help                   show this help, then exit\n"
 msgstr "  -?, --help                   显示此帮助，然后退出\n"
 
-#: createdb.c:320 reindexdb.c:919
+#: createdb.c:320 reindexdb.c:932
 #, c-format
 msgid ""
 "  -h, --host=HOSTNAME          database server host or socket directory\n"
 msgstr "  -h, --host=HOSTNAME          数据库服务器主机或套接字目录\n"
 
-#: createdb.c:321 reindexdb.c:920
+#: createdb.c:321 reindexdb.c:933
 #, c-format
 msgid "  -p, --port=PORT              database server port\n"
 msgstr "  -p, --port=PORT              数据库服务器端口\n"
 
-#: createdb.c:322 reindexdb.c:921
+#: createdb.c:322 reindexdb.c:934
 #, c-format
 msgid "  -U, --username=USERNAME      user name to connect as\n"
 msgstr "  -U, --username=USERNAME      连接所用的用户名\n"
 
-#: createdb.c:323 reindexdb.c:922
+#: createdb.c:323 reindexdb.c:935
 #, c-format
 msgid "  -w, --no-password            never prompt for password\n"
 msgstr "  -w, --no-password            永远不提示输入密码\n"
 
-#: createdb.c:324 reindexdb.c:923
+#: createdb.c:324 reindexdb.c:936
 #, c-format
 msgid "  -W, --password               force password prompt\n"
 msgstr "  -W, --password               强制提示输入密码\n"
 
-#: createdb.c:325 reindexdb.c:924
+#: createdb.c:325 reindexdb.c:937
 #, c-format
 msgid "  --maintenance-db=DBNAME      alternate maintenance database\n"
 msgstr "  --maintenance-db=DBNAME      指定另一个维护数据库\n"
@@ -1006,12 +1006,12 @@ msgstr "重建数据库 \"%s\" 中系统目录的索引失败: %s"
 msgid "reindexing of table \"%s\" in database \"%s\" failed: %s"
 msgstr "重建数据库 \"%2$s\" 中表 \"%1$s\" 的索引失败: %3$s"
 
-#: reindexdb.c:857
+#: reindexdb.c:870
 #, c-format
 msgid "%s: reindexing database \"%s\"\n"
 msgstr "%s: 正在重建数据库 \"%s\" 的索引\n"
 
-#: reindexdb.c:900
+#: reindexdb.c:913
 #, c-format
 msgid ""
 "%s reindexes a PostgreSQL database.\n"
@@ -1020,64 +1020,64 @@ msgstr ""
 "%s 重建 PostgreSQL 数据库的索引。\n"
 "\n"
 
-#: reindexdb.c:904
+#: reindexdb.c:917
 #, c-format
 msgid "  -a, --all                    reindex all databases\n"
 msgstr "  -a, --all                    对所有数据库重建索引\n"
 
-#: reindexdb.c:905
+#: reindexdb.c:918
 #, c-format
 msgid "      --concurrently           reindex concurrently\n"
 msgstr "      --concurrently           并发重建索引\n"
 
-#: reindexdb.c:906
+#: reindexdb.c:919
 #, c-format
 msgid "  -d, --dbname=DBNAME          database to reindex\n"
 msgstr "  -d, --dbname=DBNAME          要重建索引的数据库\n"
 
-#: reindexdb.c:908
+#: reindexdb.c:921
 #, c-format
 msgid "  -i, --index=INDEX            recreate specific index(es) only\n"
 msgstr "  -i, --index=INDEX            仅重新创建指定的索引\n"
 
-#: reindexdb.c:909
+#: reindexdb.c:922
 #, c-format
 msgid ""
 "  -j, --jobs=NUM               use this many concurrent connections to "
 "reindex\n"
 msgstr "  -j, --jobs=NUM               使用指定数量的并发连接重建索引\n"
 
-#: reindexdb.c:910
+#: reindexdb.c:923
 #, c-format
 msgid "  -q, --quiet                  don't write any messages\n"
 msgstr "  -q, --quiet                  不输出任何消息\n"
 
-#: reindexdb.c:911
+#: reindexdb.c:924
 #, c-format
 msgid "  -s, --system                 reindex system catalogs only\n"
 msgstr "  -s, --system                 仅重建系统目录的索引\n"
 
-#: reindexdb.c:912
+#: reindexdb.c:925
 #, c-format
 msgid "  -S, --schema=SCHEMA          reindex specific schema(s) only\n"
 msgstr "  -S, --schema=SCHEMA          仅对指定的模式重建索引\n"
 
-#: reindexdb.c:913
+#: reindexdb.c:926
 #, c-format
 msgid "  -t, --table=TABLE            reindex specific table(s) only\n"
 msgstr "  -t, --table=TABLE            仅对指定的表重建索引\n"
 
-#: reindexdb.c:914
+#: reindexdb.c:927
 #, c-format
 msgid "      --tablespace=TABLESPACE  tablespace where indexes are rebuilt\n"
 msgstr "      --tablespace=TABLESPACE  重建索引的表空间\n"
 
-#: reindexdb.c:915
+#: reindexdb.c:928
 #, c-format
 msgid "  -v, --verbose                write a lot of output\n"
 msgstr "  -v, --verbose                输出详细信息\n"
 
-#: reindexdb.c:925
+#: reindexdb.c:938
 #, c-format
 msgid ""
 "\n"
@@ -1156,17 +1156,17 @@ msgstr "%s: 正在处理数据库 \"%s\": %s\n"
 msgid "%s: vacuuming database \"%s\"\n"
 msgstr "%s: 正在清理数据库 \"%s\"\n"
 
-#: vacuumdb.c:1325
+#: vacuumdb.c:1331
 #, c-format
 msgid "vacuuming of table \"%s\" in database \"%s\" failed: %s"
 msgstr "清理数据库 \"%2$s\" 中的表 \"%1$s\" 失败: %3$s"
 
-#: vacuumdb.c:1328
+#: vacuumdb.c:1334
 #, c-format
 msgid "vacuuming of database \"%s\" failed: %s"
 msgstr "清理数据库 \"%s\" 失败: %s"
 
-#: vacuumdb.c:1336
+#: vacuumdb.c:1342
 #, c-format
 msgid ""
 "%s cleans and analyzes a PostgreSQL database.\n"
@@ -1175,119 +1175,119 @@ msgstr ""
 "%s 清理并分析 PostgreSQL 数据库。\n"
 "\n"
 
-#: vacuumdb.c:1340
+#: vacuumdb.c:1346
 #, c-format
 msgid "  -a, --all                       vacuum all databases\n"
 msgstr "  -a, --all                       清理所有数据库\n"
 
-#: vacuumdb.c:1341
+#: vacuumdb.c:1347
 #, c-format
 msgid "      --buffer-usage-limit=SIZE   size of ring buffer used for vacuum\n"
 msgstr "      --buffer-usage-limit=SIZE   清理所用环形缓冲区的大小\n"
 
-#: vacuumdb.c:1342
+#: vacuumdb.c:1348
 #, c-format
 msgid "  -d, --dbname=DBNAME             database to vacuum\n"
 msgstr "  -d, --dbname=DBNAME             要清理的数据库\n"
 
-#: vacuumdb.c:1343
+#: vacuumdb.c:1349
 #, c-format
 msgid "      --disable-page-skipping     disable all page-skipping behavior\n"
 msgstr "      --disable-page-skipping     禁用所有页面跳过行为\n"
 
-#: vacuumdb.c:1344
+#: vacuumdb.c:1350
 #, c-format
 msgid ""
 "  -e, --echo                      show the commands being sent to the "
 "server\n"
 msgstr "  -e, --echo                      显示发送到服务器的命令\n"
 
-#: vacuumdb.c:1345
+#: vacuumdb.c:1351
 #, c-format
 msgid "  -f, --full                      do full vacuuming\n"
 msgstr "  -f, --full                      完全清理\n"
 
-#: vacuumdb.c:1346
+#: vacuumdb.c:1352
 #, c-format
 msgid "  -F, --freeze                    freeze row transaction information\n"
 msgstr "  -F, --freeze                    冻结行的事务信息\n"
 
-#: vacuumdb.c:1347
+#: vacuumdb.c:1353
 #, c-format
 msgid ""
 "      --force-index-cleanup       always remove index entries that point to "
 "dead tuples\n"
 msgstr "      --force-index-cleanup       始终删除指向死元组的索引项\n"
 
-#: vacuumdb.c:1348
+#: vacuumdb.c:1354
 #, c-format
 msgid ""
 "  -j, --jobs=NUM                  use this many concurrent connections to "
 "vacuum\n"
 msgstr "  -j, --jobs=NUM                  使用指定数量的并发连接进行清理\n"
 
-#: vacuumdb.c:1349
+#: vacuumdb.c:1355
 #, c-format
 msgid ""
 "      --min-mxid-age=MXID_AGE     minimum multixact ID age of tables to "
 "vacuum\n"
 msgstr "      --min-mxid-age=MXID_AGE     待清理表的最小多事务 ID 年龄\n"
 
-#: vacuumdb.c:1350
+#: vacuumdb.c:1356
 #, c-format
 msgid ""
 "      --min-xid-age=XID_AGE       minimum transaction ID age of tables to "
 "vacuum\n"
 msgstr "      --min-xid-age=XID_AGE       待清理表的最小事务 ID 年龄\n"
 
-#: vacuumdb.c:1351
+#: vacuumdb.c:1357
 #, c-format
 msgid ""
 "      --missing-stats-only        only analyze relations with missing "
 "statistics\n"
 msgstr "      --missing-stats-only        仅分析缺少统计信息的关系\n"
 
-#: vacuumdb.c:1352
+#: vacuumdb.c:1358
 #, c-format
 msgid ""
 "      --no-index-cleanup          don't remove index entries that point to "
 "dead tuples\n"
 msgstr "      --no-index-cleanup          不删除指向死元组的索引项\n"
 
-#: vacuumdb.c:1353
+#: vacuumdb.c:1359
 #, c-format
 msgid "      --no-process-main           skip the main relation\n"
 msgstr "      --no-process-main           跳过主关系\n"
 
-#: vacuumdb.c:1354
+#: vacuumdb.c:1360
 #, c-format
 msgid ""
 "      --no-process-toast          skip the TOAST table associated with the "
 "table to vacuum\n"
 msgstr "      --no-process-toast          跳过待清理表所关联的 TOAST 表\n"
 
-#: vacuumdb.c:1355
+#: vacuumdb.c:1361
 #, c-format
 msgid ""
 "      --no-truncate               don't truncate empty pages at the end of "
 "the table\n"
 msgstr "      --no-truncate               不截断表末尾的空页\n"
 
-#: vacuumdb.c:1356
+#: vacuumdb.c:1362
 #, c-format
 msgid ""
 "  -n, --schema=SCHEMA             vacuum tables in the specified schema(s) "
 "only\n"
 msgstr "  -n, --schema=SCHEMA             仅清理指定模式中的表\n"
 
-#: vacuumdb.c:1357
+#: vacuumdb.c:1363
 #, c-format
 msgid ""
 "  -N, --exclude-schema=SCHEMA     do not vacuum tables in the specified "
 "schema(s)\n"
 msgstr "  -N, --exclude-schema=SCHEMA     不清理指定模式中的表\n"
 
-#: vacuumdb.c:1358
+#: vacuumdb.c:1364
 #, c-format
 msgid ""
 "  -P, --parallel=PARALLEL_WORKERS use this many background workers for "
@@ -1295,47 +1295,47 @@ msgid ""
 msgstr ""
 "  -P, --parallel=PARALLEL_WORKERS 可用时使用指定数量的后台工作进程进行清理\n"
 
-#: vacuumdb.c:1359
+#: vacuumdb.c:1365
 #, c-format
 msgid "  -q, --quiet                     don't write any messages\n"
 msgstr "  -q, --quiet                     不输出任何消息\n"
 
-#: vacuumdb.c:1360
+#: vacuumdb.c:1366
 #, c-format
 msgid ""
 "      --skip-locked               skip relations that cannot be immediately "
 "locked\n"
 msgstr "      --skip-locked               跳过无法立即锁定的关系\n"
 
-#: vacuumdb.c:1361
+#: vacuumdb.c:1367
 #, c-format
 msgid "  -t, --table='TABLE[(COLUMNS)]'  vacuum specific table(s) only\n"
 msgstr "  -t, --table='TABLE[(COLUMNS)]'  仅清理指定的表\n"
 
-#: vacuumdb.c:1362
+#: vacuumdb.c:1368
 #, c-format
 msgid "  -v, --verbose                   write a lot of output\n"
 msgstr "  -v, --verbose                   输出详细信息\n"
 
-#: vacuumdb.c:1363
+#: vacuumdb.c:1369
 #, c-format
 msgid ""
 "  -V, --version                   output version information, then exit\n"
 msgstr "  -V, --version                   输出版本信息，然后退出\n"
 
-#: vacuumdb.c:1364
+#: vacuumdb.c:1370
 #, c-format
 msgid "  -z, --analyze                   update optimizer statistics\n"
 msgstr "  -z, --analyze                   更新优化器统计信息\n"
 
-#: vacuumdb.c:1365
+#: vacuumdb.c:1371
 #, c-format
 msgid ""
 "  -Z, --analyze-only              only update optimizer statistics; no "
 "vacuum\n"
 msgstr "  -Z, --analyze-only              只更新优化器统计信息，但不做清理\n"
 
-#: vacuumdb.c:1366
+#: vacuumdb.c:1372
 #, c-format
 msgid ""
 "      --analyze-in-stages         only update optimizer statistics, in "
@@ -1345,12 +1345,12 @@ msgstr ""
 "      --analyze-in-stages         仅更新优化器统计信息，分多个阶段\n"
 "                                  以更快获得结果；不执行清理\n"
 
-#: vacuumdb.c:1368
+#: vacuumdb.c:1374
 #, c-format
 msgid "  -?, --help                      show this help, then exit\n"
 msgstr "  -?, --help                      显示此帮助，然后退出\n"
 
-#: vacuumdb.c:1376
+#: vacuumdb.c:1382
 #, c-format
 msgid ""
 "\n"
