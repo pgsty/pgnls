@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 17\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-16 13:35+0000\n"
+"POT-Creation-Date: 2026-11-19 23:23+0000\n"
 "PO-Revision-Date: 2026-11-10 09:59+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
@@ -91,9 +91,9 @@ msgstr "无法打开文件 \"%s\" 进行读取: %m"
 #: ../common/controldata_utils.c:108 ../common/controldata_utils.c:110
 #: access/transam/timeline.c:143 access/transam/timeline.c:362
 #: access/transam/twophase.c:1355 access/transam/xlog.c:3454
-#: access/transam/xlog.c:4318 access/transam/xlogrecovery.c:1254
-#: access/transam/xlogrecovery.c:1352 access/transam/xlogrecovery.c:1389
-#: access/transam/xlogrecovery.c:1456 backup/basebackup.c:2150
+#: access/transam/xlog.c:4318 access/transam/xlogrecovery.c:1253
+#: access/transam/xlogrecovery.c:1351 access/transam/xlogrecovery.c:1388
+#: access/transam/xlogrecovery.c:1455 backup/basebackup.c:2150
 #: backup/walsummary.c:283 commands/extension.c:3832 libpq/hba.c:764
 #: replication/logical/origin.c:745 replication/logical/origin.c:781
 #: replication/logical/reorderbuffer.c:5375
@@ -161,7 +161,7 @@ msgstr ""
 #: access/transam/twophase.c:1311 access/transam/xlog.c:3207
 #: access/transam/xlog.c:3370 access/transam/xlog.c:3409
 #: access/transam/xlog.c:3602 access/transam/xlog.c:4308
-#: access/transam/xlogrecovery.c:4297 access/transam/xlogrecovery.c:4400
+#: access/transam/xlogrecovery.c:4296 access/transam/xlogrecovery.c:4399
 #: access/transam/xlogutils.c:860 backup/basebackup.c:561
 #: backup/basebackup.c:1614 backup/walsummary.c:220 libpq/hba.c:624
 #: postmaster/syslogger.c:1511 postmaster/walsummarizer.c:1629
@@ -184,7 +184,7 @@ msgstr "无法打开文件 \"%s\": %m"
 #: access/transam/twophase.c:1763 access/transam/twophase.c:1772
 #: access/transam/xlog.c:9338 access/transam/xlogfuncs.c:698
 #: backup/basebackup_server.c:173 backup/basebackup_server.c:266
-#: backup/walsummary.c:304 postmaster/postmaster.c:4112
+#: backup/walsummary.c:304 postmaster/postmaster.c:4113
 #: postmaster/syslogger.c:1522 postmaster/syslogger.c:1535
 #: postmaster/syslogger.c:1548 utils/cache/relmapper.c:947
 #, c-format
@@ -199,7 +199,7 @@ msgstr "无法写入文件 \"%s\": %m"
 #: access/transam/xlog.c:3293 access/transam/xlog.c:3488
 #: access/transam/xlog.c:4281 access/transam/xlog.c:8713
 #: access/transam/xlog.c:8758 backup/basebackup_server.c:207
-#: commands/dbcommands.c:514 replication/logical/snapbuild.c:1899
+#: commands/dbcommands.c:531 replication/logical/snapbuild.c:1899
 #: replication/slot.c:2163 replication/slot.c:2273 storage/file/fd.c:823
 #: storage/file/fd.c:3854 storage/smgr/md.c:1345 storage/smgr/md.c:1390
 #: storage/sync/sync.c:446 utils/misc/guc.c:4530
@@ -215,11 +215,11 @@ msgstr "无法对文件 \"%s\" 执行 fsync: %m"
 #: ../common/parse_manifest.c:852 ../common/psprintf.c:140
 #: ../common/scram-common.c:268 ../common/stringinfo.c:311 ../port/path.c:845
 #: ../port/path.c:882 ../port/path.c:899 access/transam/twophase.c:1420
-#: access/transam/xlogrecovery.c:570 lib/dshash.c:253 libpq/auth.c:1360
+#: access/transam/xlogrecovery.c:569 lib/dshash.c:253 libpq/auth.c:1360
 #: libpq/auth.c:1404 libpq/auth.c:1961 libpq/be-secure-gssapi.c:534
 #: libpq/be-secure-gssapi.c:714 postmaster/bgworker.c:355
-#: postmaster/bgworker.c:945 postmaster/postmaster.c:3545
-#: postmaster/postmaster.c:4006 postmaster/postmaster.c:4368
+#: postmaster/bgworker.c:945 postmaster/postmaster.c:3546
+#: postmaster/postmaster.c:4007 postmaster/postmaster.c:4369
 #: postmaster/walsummarizer.c:1035
 #: replication/libpqwalreceiver/libpqwalreceiver.c:434
 #: replication/logical/logical.c:305 replication/walsender.c:856
@@ -1394,39 +1394,39 @@ msgstr "访问方法 %2$s 的操作符族 \"%1$s\" 缺少操作符 %3$s 的支�
 msgid "operator family \"%s\" of access method %s is missing cross-type operator(s)"
 msgstr "访问方法 %2$s 的操作符族 \"%1$s\" 缺少跨类型操作符"
 
-#: access/heap/heapam.c:2337
+#: access/heap/heapam.c:2349
 #, c-format
 msgid "cannot insert tuples in a parallel worker"
 msgstr "不能在并行工作进程中插入元组"
 
-#: access/heap/heapam.c:2891
+#: access/heap/heapam.c:2903
 #, c-format
 msgid "cannot delete tuples during a parallel operation"
 msgstr "并行操作期间不能删除元组"
 
-#: access/heap/heapam.c:2938
+#: access/heap/heapam.c:2950
 #, c-format
 msgid "attempted to delete invisible tuple"
 msgstr "试图删除不可见元组"
 
-#: access/heap/heapam.c:3416 access/heap/heapam.c:6965 access/index/genam.c:818
+#: access/heap/heapam.c:3428 access/heap/heapam.c:6977 access/index/genam.c:818
 #, c-format
 msgid "cannot update tuples during a parallel operation"
 msgstr "并行操作期间不能更新元组"
 
-#: access/heap/heapam.c:3593
+#: access/heap/heapam.c:3605
 #, c-format
 msgid "attempted to update invisible tuple"
 msgstr "试图更新不可见元组"
 
-#: access/heap/heapam.c:5237 access/heap/heapam.c:5275
-#: access/heap/heapam.c:5565 access/heap/heapam_handler.c:468
+#: access/heap/heapam.c:5249 access/heap/heapam.c:5287
+#: access/heap/heapam.c:5577 access/heap/heapam_handler.c:468
 #, c-format
 msgid "could not obtain lock on row in relation \"%s\""
 msgstr "无法获取关系 \"%s\" 中行的锁"
 
-#: access/heap/heapam.c:6719 commands/trigger.c:3441
-#: executor/nodeModifyTable.c:2407 executor/nodeModifyTable.c:2498
+#: access/heap/heapam.c:6731 commands/trigger.c:3441
+#: executor/nodeModifyTable.c:2406 executor/nodeModifyTable.c:2497
 #, c-format
 msgid "tuple to be updated was already modified by an operation triggered by the current command"
 msgstr "待更新的元组已被当前命令触发的操作修改"
@@ -1451,8 +1451,8 @@ msgstr "无法写入文件 \"%1$s\"，应写入 %3$d，实际写入 %2$d: %m"
 #: access/transam/xlog.c:3232 access/transam/xlog.c:3423
 #: access/transam/xlog.c:4260 access/transam/xlog.c:9327
 #: access/transam/xlogfuncs.c:692 backup/basebackup_server.c:149
-#: backup/basebackup_server.c:242 commands/dbcommands.c:494
-#: postmaster/launch_backend.c:340 postmaster/postmaster.c:4099
+#: backup/basebackup_server.c:242 commands/dbcommands.c:511
+#: postmaster/launch_backend.c:340 postmaster/postmaster.c:4100
 #: postmaster/walsummarizer.c:1312 replication/logical/origin.c:603
 #: replication/slot.c:2107 storage/file/copydir.c:157 storage/smgr/md.c:230
 #: utils/time/snapmgr.c:1274
@@ -1468,7 +1468,7 @@ msgstr "无法把文件 \"%s\" 截断为 %u: %m"
 #: access/heap/rewriteheap.c:1132 access/transam/timeline.c:384
 #: access/transam/timeline.c:424 access/transam/timeline.c:498
 #: access/transam/xlog.c:3282 access/transam/xlog.c:3479
-#: access/transam/xlog.c:4272 commands/dbcommands.c:506
+#: access/transam/xlog.c:4272 commands/dbcommands.c:523
 #: postmaster/launch_backend.c:351 postmaster/launch_backend.c:363
 #: replication/logical/origin.c:615 replication/logical/origin.c:657
 #: replication/logical/origin.c:676 replication/logical/snapbuild.c:1875
@@ -1824,7 +1824,7 @@ msgstr "tid (%u, %u) 对关系 \"%s\" 无效"
 msgid "\"%s\" cannot be empty."
 msgstr "\"%s\" 不能为空。"
 
-#: access/table/tableamapi.c:116 access/transam/xlogrecovery.c:4929
+#: access/table/tableamapi.c:116 access/transam/xlogrecovery.c:4928
 #, c-format
 msgid "\"%s\" is too long (maximum %d characters)."
 msgstr "\"%s\" 太长（最多 %d 个字符）。"
@@ -2266,7 +2266,7 @@ msgstr "文件 \"%s\" 中存储的大小无效"
 msgid "calculated CRC checksum does not match value stored in file \"%s\""
 msgstr "计算得到的 CRC 校验和与文件 \"%s\" 中存储的值不匹配"
 
-#: access/transam/twophase.c:1421 access/transam/xlogrecovery.c:571
+#: access/transam/twophase.c:1421 access/transam/xlogrecovery.c:570
 #: postmaster/walsummarizer.c:1036 replication/logical/logical.c:306
 #: replication/walsender.c:857
 #, c-format
@@ -2560,7 +2560,7 @@ msgid "creating missing WAL directory \"%s\""
 msgstr "正在创建缺少的 WAL 目录 \"%s\""
 
 #: access/transam/xlog.c:4102 access/transam/xlog.c:4122
-#: commands/dbcommands.c:3262
+#: commands/dbcommands.c:3279
 #, c-format
 msgid "could not create missing directory \"%s\": %m"
 msgstr "无法创建缺少的目录 \"%s\": %m"
@@ -3110,7 +3110,7 @@ msgid "server did not promote within %d second"
 msgid_plural "server did not promote within %d seconds"
 msgstr[0] "服务器未在 %d 秒内完成提升"
 
-#: access/transam/xlogprefetcher.c:1088
+#: access/transam/xlogprefetcher.c:1091
 #, c-format
 msgid "\"recovery_prefetch\" is not supported on platforms that lack posix_fadvise()."
 msgstr "缺少 posix_fadvise() 的平台不支持 \"recovery_prefetch\"。"
@@ -3270,17 +3270,17 @@ msgstr "无法恢复 %X/%X 处使用未知方法压缩的镜像, 块 %d"
 msgid "could not decompress image at %X/%X, block %d"
 msgstr "无法解压缩 %X/%X 处的镜像, 块 %d"
 
-#: access/transam/xlogrecovery.c:623
+#: access/transam/xlogrecovery.c:622
 #, c-format
 msgid "starting backup recovery with redo LSN %X/%X, checkpoint LSN %X/%X, on timeline ID %u"
 msgstr "开始备份恢复，redo LSN 为 %X/%X, 检查点 LSN 为 %X/%X, 时间线 ID 为 %u"
 
-#: access/transam/xlogrecovery.c:655
+#: access/transam/xlogrecovery.c:654
 #, c-format
 msgid "could not find redo location %X/%X referenced by checkpoint record at %X/%X"
 msgstr "无法找到检查点记录 %3$X/%4$X 所引用的重做位置 %1$X/%2$X"
 
-#: access/transam/xlogrecovery.c:657 access/transam/xlogrecovery.c:668
+#: access/transam/xlogrecovery.c:656 access/transam/xlogrecovery.c:667
 #, c-format
 msgid ""
 "If you are restoring from a backup, touch \"%s/recovery.signal\" or \"%s/standby.signal\" and add required recovery options.\n"
@@ -3291,441 +3291,441 @@ msgstr ""
 "如果不是从备份恢复，尝试删除文件 \"%s/backup_label\"。\n"
 "注意: 从备份恢复时，删除 \"%s/backup_label\" 会导致集簇损坏。"
 
-#: access/transam/xlogrecovery.c:666
+#: access/transam/xlogrecovery.c:665
 #, c-format
 msgid "could not locate required checkpoint record at %X/%X"
 msgstr "无法在 %X/%X 处找到所需的检查点记录"
 
-#: access/transam/xlogrecovery.c:696 commands/tablespace.c:671
+#: access/transam/xlogrecovery.c:695 commands/tablespace.c:671
 #, c-format
 msgid "could not create symbolic link \"%s\": %m"
 msgstr "无法创建符号链接 \"%s\": %m"
 
-#: access/transam/xlogrecovery.c:729 access/transam/xlogrecovery.c:735
+#: access/transam/xlogrecovery.c:728 access/transam/xlogrecovery.c:734
 #, c-format
 msgid "ignoring file \"%s\" because no file \"%s\" exists"
 msgstr "忽略文件 \"%s\"，因为不存在文件 \"%s\""
 
-#: access/transam/xlogrecovery.c:731
+#: access/transam/xlogrecovery.c:730
 #, c-format
 msgid "File \"%s\" was renamed to \"%s\"."
 msgstr "文件 \"%s\" 已重命名为 \"%s\"。"
 
-#: access/transam/xlogrecovery.c:737
+#: access/transam/xlogrecovery.c:736
 #, c-format
 msgid "Could not rename file \"%s\" to \"%s\": %m."
 msgstr "无法把文件 \"%s\" 重命名为 \"%s\": %m。"
 
-#: access/transam/xlogrecovery.c:776
+#: access/transam/xlogrecovery.c:775
 #, c-format
 msgid "restarting backup recovery with redo LSN %X/%X"
 msgstr "正在以 redo LSN %X/%X 重新开始备份恢复"
 
-#: access/transam/xlogrecovery.c:801
+#: access/transam/xlogrecovery.c:800
 #, c-format
 msgid "could not locate a valid checkpoint record at %X/%X"
 msgstr "无法在 %X/%X 处找到有效的检查点记录"
 
-#: access/transam/xlogrecovery.c:813
+#: access/transam/xlogrecovery.c:812
 #, c-format
 msgid "could not find redo location %X/%08X referenced by checkpoint record at %X/%08X"
 msgstr "无法找到检查点记录 %3$X/%4$08X 所引用的重做位置 %1$X/%2$08X"
 
-#: access/transam/xlogrecovery.c:822
+#: access/transam/xlogrecovery.c:821
 #, c-format
 msgid "entering standby mode"
 msgstr "正在进入备库模式"
 
-#: access/transam/xlogrecovery.c:825
+#: access/transam/xlogrecovery.c:824
 #, c-format
 msgid "starting point-in-time recovery to XID %u"
 msgstr "开始执行到 XID %u 的基于时间点恢复"
 
-#: access/transam/xlogrecovery.c:829
+#: access/transam/xlogrecovery.c:828
 #, c-format
 msgid "starting point-in-time recovery to %s"
 msgstr "开始执行到 %s 的基于时间点恢复"
 
-#: access/transam/xlogrecovery.c:833
+#: access/transam/xlogrecovery.c:832
 #, c-format
 msgid "starting point-in-time recovery to \"%s\""
 msgstr "开始执行到 \"%s\" 的基于时间点恢复"
 
-#: access/transam/xlogrecovery.c:837
+#: access/transam/xlogrecovery.c:836
 #, c-format
 msgid "starting point-in-time recovery to WAL location (LSN) \"%X/%X\""
 msgstr "开始执行到 WAL 位置（LSN）\"%X/%X\" 的基于时间点恢复"
 
-#: access/transam/xlogrecovery.c:841
+#: access/transam/xlogrecovery.c:840
 #, c-format
 msgid "starting point-in-time recovery to earliest consistent point"
 msgstr "开始执行到最早一致点的基于时间点恢复"
 
-#: access/transam/xlogrecovery.c:844
+#: access/transam/xlogrecovery.c:843
 #, c-format
 msgid "starting archive recovery"
 msgstr "开始归档恢复"
 
-#: access/transam/xlogrecovery.c:865
+#: access/transam/xlogrecovery.c:864
 #, c-format
 msgid "requested timeline %u is not a child of this server's history"
 msgstr "请求的时间线 %u 不是此服务器历史的后继时间线"
 
-#: access/transam/xlogrecovery.c:867
+#: access/transam/xlogrecovery.c:866
 #, c-format
 msgid "Latest checkpoint is at %X/%X on timeline %u, but in the history of the requested timeline, the server forked off from that timeline at %X/%X."
 msgstr "最新检查点位于时间线 %3$u 的 %1$X/%2$X 处，但在所请求时间线的历史中，服务器于 %4$X/%5$X 处从该时间线分叉。"
 
-#: access/transam/xlogrecovery.c:881
+#: access/transam/xlogrecovery.c:880
 #, c-format
 msgid "requested timeline %u does not contain minimum recovery point %X/%X on timeline %u"
 msgstr "请求的时间线 %1$u 不包含时间线 %4$u 上的最小恢复点 %2$X/%3$X"
 
-#: access/transam/xlogrecovery.c:909
+#: access/transam/xlogrecovery.c:908
 #, c-format
 msgid "invalid next transaction ID"
 msgstr "无效的下一个事务 ID"
 
-#: access/transam/xlogrecovery.c:914
+#: access/transam/xlogrecovery.c:913
 #, c-format
 msgid "invalid redo in checkpoint record"
 msgstr "检查点记录中的 redo 无效"
 
-#: access/transam/xlogrecovery.c:925
+#: access/transam/xlogrecovery.c:924
 #, c-format
 msgid "invalid redo record in shutdown checkpoint"
 msgstr "关闭检查点中的重做记录无效"
 
-#: access/transam/xlogrecovery.c:954
+#: access/transam/xlogrecovery.c:953
 #, c-format
 msgid "database system was not properly shut down; automatic recovery in progress"
 msgstr "数据库系统未正常关闭；正在自动恢复"
 
-#: access/transam/xlogrecovery.c:958
+#: access/transam/xlogrecovery.c:957
 #, c-format
 msgid "crash recovery starts in timeline %u and has target timeline %u"
 msgstr "崩溃恢复开始于时间线 %u，目标时间线是 %u"
 
-#: access/transam/xlogrecovery.c:1001
+#: access/transam/xlogrecovery.c:1000
 #, c-format
 msgid "backup_label contains data inconsistent with control file"
 msgstr "backup_label 包含与控制文件不一致的数据"
 
-#: access/transam/xlogrecovery.c:1002
+#: access/transam/xlogrecovery.c:1001
 #, c-format
 msgid "This means that the backup is corrupted and you will have to use another backup for recovery."
 msgstr "这意味着备份已损坏，必须使用其他备份进行恢复。"
 
-#: access/transam/xlogrecovery.c:1056
+#: access/transam/xlogrecovery.c:1055
 #, c-format
 msgid "using recovery command file \"%s\" is not supported"
 msgstr "不支持使用恢复命令文件 \"%s\""
 
-#: access/transam/xlogrecovery.c:1121
+#: access/transam/xlogrecovery.c:1120
 #, c-format
 msgid "standby mode is not supported by single-user servers"
 msgstr "单用户服务器不支持备库模式"
 
-#: access/transam/xlogrecovery.c:1138
+#: access/transam/xlogrecovery.c:1137
 #, c-format
 msgid "specified neither \"primary_conninfo\" nor \"restore_command\""
 msgstr "既未指定 \"primary_conninfo\"，也未指定 \"restore_command\""
 
-#: access/transam/xlogrecovery.c:1139
+#: access/transam/xlogrecovery.c:1138
 #, c-format
 msgid "The database server will regularly poll the pg_wal subdirectory to check for files placed there."
 msgstr "数据库服务器将定期轮询 pg_wal 子目录，检查放入其中的文件。"
 
-#: access/transam/xlogrecovery.c:1147
+#: access/transam/xlogrecovery.c:1146
 #, c-format
 msgid "must specify \"restore_command\" when standby mode is not enabled"
 msgstr "未启用备库模式时必须指定 \"restore_command\""
 
-#: access/transam/xlogrecovery.c:1185
+#: access/transam/xlogrecovery.c:1184
 #, c-format
 msgid "recovery target timeline %u does not exist"
 msgstr "恢复目标的时间线 %u 不存在"
 
-#: access/transam/xlogrecovery.c:1268 access/transam/xlogrecovery.c:1275
-#: access/transam/xlogrecovery.c:1334 access/transam/xlogrecovery.c:1422
-#: access/transam/xlogrecovery.c:1431 access/transam/xlogrecovery.c:1451
+#: access/transam/xlogrecovery.c:1267 access/transam/xlogrecovery.c:1274
+#: access/transam/xlogrecovery.c:1333 access/transam/xlogrecovery.c:1421
+#: access/transam/xlogrecovery.c:1430 access/transam/xlogrecovery.c:1450
 #, c-format
 msgid "invalid data in file \"%s\""
 msgstr "文件 \"%s\" 中存在无效数据"
 
-#: access/transam/xlogrecovery.c:1335
+#: access/transam/xlogrecovery.c:1334
 #, c-format
 msgid "Timeline ID parsed is %u, but expected %u."
 msgstr "解析出的时间线 ID 为 %u，但预期为 %u。"
 
-#: access/transam/xlogrecovery.c:1346
+#: access/transam/xlogrecovery.c:1345
 #, c-format
 msgid "this is an incremental backup, not a data directory"
 msgstr "这是增量备份，而不是数据目录"
 
-#: access/transam/xlogrecovery.c:1347
+#: access/transam/xlogrecovery.c:1346
 #, c-format
 msgid "Use pg_combinebackup to reconstruct a valid data directory."
 msgstr "使用 pg_combinebackup 重建有效的数据目录。"
 
-#: access/transam/xlogrecovery.c:1733
+#: access/transam/xlogrecovery.c:1732
 #, c-format
 msgid "unexpected record type found at redo point %X/%X"
 msgstr "在重做点 %X/%X 处发现意外的记录类型"
 
-#: access/transam/xlogrecovery.c:1756
+#: access/transam/xlogrecovery.c:1755
 #, c-format
 msgid "redo starts at %X/%X"
 msgstr "重做从 %X/%X 开始"
 
-#: access/transam/xlogrecovery.c:1769
+#: access/transam/xlogrecovery.c:1768
 #, c-format
 msgid "redo in progress, elapsed time: %ld.%02d s, current LSN: %X/%X"
 msgstr "重做正在进行，已用时间: %ld.%02d s, 当前 LSN: %X/%X"
 
-#: access/transam/xlogrecovery.c:1859
+#: access/transam/xlogrecovery.c:1858
 #, c-format
 msgid "requested recovery stop point is before consistent recovery point"
 msgstr "请求的恢复停止点在一致恢复点之前"
 
-#: access/transam/xlogrecovery.c:1891
+#: access/transam/xlogrecovery.c:1890
 #, c-format
 msgid "redo done at %X/%X system usage: %s"
 msgstr "重做在 %X/%X 处完成，系统资源使用: %s"
 
-#: access/transam/xlogrecovery.c:1897
+#: access/transam/xlogrecovery.c:1896
 #, c-format
 msgid "last completed transaction was at log time %s"
 msgstr "最后一个已完成事务对应的日志时间为 %s"
 
-#: access/transam/xlogrecovery.c:1906
+#: access/transam/xlogrecovery.c:1905
 #, c-format
 msgid "redo is not required"
 msgstr "无需重做"
 
-#: access/transam/xlogrecovery.c:1917
+#: access/transam/xlogrecovery.c:1916
 #, c-format
 msgid "recovery ended before configured recovery target was reached"
 msgstr "尚未达到配置的恢复目标，恢复就已结束"
 
-#: access/transam/xlogrecovery.c:2111
+#: access/transam/xlogrecovery.c:2110
 #, c-format
 msgid "successfully skipped missing contrecord at %X/%X, overwritten at %s"
 msgstr "已成功跳过 %X/%X 处缺少的续接记录，覆盖时间为 %s"
 
-#: access/transam/xlogrecovery.c:2178
+#: access/transam/xlogrecovery.c:2177
 #, c-format
 msgid "unexpected directory entry \"%s\" found in %s"
 msgstr "在 %2$s 中发现意外的目录项 \"%1$s\""
 
-#: access/transam/xlogrecovery.c:2180
+#: access/transam/xlogrecovery.c:2179
 #, c-format
 msgid "All directory entries in pg_tblspc/ should be symbolic links."
 msgstr "pg_tblspc/ 中的所有目录项都应是符号链接。"
 
-#: access/transam/xlogrecovery.c:2181
+#: access/transam/xlogrecovery.c:2180
 #, c-format
 msgid "Remove those directories, or set \"allow_in_place_tablespaces\" to ON transiently to let recovery complete."
 msgstr "删除这些目录，或临时将 \"allow_in_place_tablespaces\" 设为 ON，以使恢复完成。"
 
-#: access/transam/xlogrecovery.c:2234
+#: access/transam/xlogrecovery.c:2233
 #, c-format
 msgid "completed backup recovery with redo LSN %X/%X and end LSN %X/%X"
 msgstr "备份恢复已完成，redo LSN 为 %X/%X，结束 LSN 为 %X/%X"
 
-#: access/transam/xlogrecovery.c:2264
+#: access/transam/xlogrecovery.c:2263
 #, c-format
 msgid "consistent recovery state reached at %X/%X"
 msgstr "在 %X/%X 处达到一致的恢复状态"
 
 #. translator: %s is a WAL record description
-#: access/transam/xlogrecovery.c:2302
+#: access/transam/xlogrecovery.c:2301
 #, c-format
 msgid "WAL redo at %X/%X for %s"
 msgstr "在 %X/%X 处重做 WAL: %s"
 
-#: access/transam/xlogrecovery.c:2400
+#: access/transam/xlogrecovery.c:2399
 #, c-format
 msgid "unexpected previous timeline ID %u (current timeline ID %u) in checkpoint record"
 msgstr "检查点记录中出现意外的前一时间线 ID %u（当前时间线 ID 为 %u）"
 
-#: access/transam/xlogrecovery.c:2409
+#: access/transam/xlogrecovery.c:2408
 #, c-format
 msgid "unexpected timeline ID %u (after %u) in checkpoint record"
 msgstr "检查点记录中出现意外的时间线 ID %u（在 %u 之后）"
 
-#: access/transam/xlogrecovery.c:2425
+#: access/transam/xlogrecovery.c:2424
 #, c-format
 msgid "unexpected timeline ID %u in checkpoint record, before reaching minimum recovery point %X/%X on timeline %u"
 msgstr "尚未达到时间线 %4$u 上的最小恢复点 %2$X/%3$X，检查点记录中却出现意外的时间线 ID %1$u"
 
-#: access/transam/xlogrecovery.c:2614 access/transam/xlogrecovery.c:2890
+#: access/transam/xlogrecovery.c:2613 access/transam/xlogrecovery.c:2889
 #, c-format
 msgid "recovery stopping after reaching consistency"
 msgstr "达到一致性后停止恢复"
 
-#: access/transam/xlogrecovery.c:2635
+#: access/transam/xlogrecovery.c:2634
 #, c-format
 msgid "recovery stopping before WAL location (LSN) \"%X/%X\""
 msgstr "恢复在 WAL 位置（LSN）\"%X/%X\" 之前停止"
 
-#: access/transam/xlogrecovery.c:2725
+#: access/transam/xlogrecovery.c:2724
 #, c-format
 msgid "recovery stopping before commit of transaction %u, time %s"
 msgstr "正在事务 %u 提交之前停止恢复, 时间为 %s"
 
-#: access/transam/xlogrecovery.c:2732
+#: access/transam/xlogrecovery.c:2731
 #, c-format
 msgid "recovery stopping before abort of transaction %u, time %s"
 msgstr "正在事务 %u 中止之前停止恢复, 时间为 %s"
 
-#: access/transam/xlogrecovery.c:2785
+#: access/transam/xlogrecovery.c:2784
 #, c-format
 msgid "recovery stopping at restore point \"%s\", time %s"
 msgstr "正在恢复点 \"%s\" 停止恢复, 时间为 %s"
 
-#: access/transam/xlogrecovery.c:2803
+#: access/transam/xlogrecovery.c:2802
 #, c-format
 msgid "recovery stopping after WAL location (LSN) \"%X/%X\""
 msgstr "恢复在 WAL 位置（LSN）\"%X/%X\" 之后停止"
 
-#: access/transam/xlogrecovery.c:2870
+#: access/transam/xlogrecovery.c:2869
 #, c-format
 msgid "recovery stopping after commit of transaction %u, time %s"
 msgstr "正在事务 %u 提交之后停止恢复, 时间为 %s"
 
-#: access/transam/xlogrecovery.c:2878
+#: access/transam/xlogrecovery.c:2877
 #, c-format
 msgid "recovery stopping after abort of transaction %u, time %s"
 msgstr "正在事务 %u 中止之后停止恢复, 时间为 %s"
 
-#: access/transam/xlogrecovery.c:2959
+#: access/transam/xlogrecovery.c:2958
 #, c-format
 msgid "pausing at the end of recovery"
 msgstr "在恢复结束处暂停"
 
-#: access/transam/xlogrecovery.c:2960
+#: access/transam/xlogrecovery.c:2959
 #, c-format
 msgid "Execute pg_wal_replay_resume() to promote."
 msgstr "执行 pg_wal_replay_resume() 以进行提升。"
 
-#: access/transam/xlogrecovery.c:2963 access/transam/xlogrecovery.c:4738
+#: access/transam/xlogrecovery.c:2962 access/transam/xlogrecovery.c:4737
 #, c-format
 msgid "recovery has paused"
 msgstr "恢复操作已暂停"
 
-#: access/transam/xlogrecovery.c:2964
+#: access/transam/xlogrecovery.c:2963
 #, c-format
 msgid "Execute pg_wal_replay_resume() to continue."
 msgstr "执行 pg_wal_replay_resume() 以继续。"
 
-#: access/transam/xlogrecovery.c:3227
+#: access/transam/xlogrecovery.c:3226
 #, c-format
 msgid "unexpected timeline ID %u in WAL segment %s, LSN %X/%X, offset %u"
 msgstr "WAL 段 %2$s 中出现意外的时间线 ID %1$u, LSN %3$X/%4$X, 偏移量 %5$u"
 
-#: access/transam/xlogrecovery.c:3435
+#: access/transam/xlogrecovery.c:3434
 #, c-format
 msgid "could not read from WAL segment %s, LSN %X/%X, offset %u: %m"
 msgstr "无法从 WAL 段 %s 读取, LSN %X/%X, 偏移量 %u: %m"
 
-#: access/transam/xlogrecovery.c:3442
+#: access/transam/xlogrecovery.c:3441
 #, c-format
 msgid "could not read from WAL segment %s, LSN %X/%X, offset %u: read %d of %zu"
 msgstr "无法从 WAL 段 %1$s 读取, LSN %2$X/%3$X, 偏移量 %4$u: 应读取 %6$zu，实际读取 %5$d"
 
-#: access/transam/xlogrecovery.c:4094
+#: access/transam/xlogrecovery.c:4093
 #, c-format
 msgid "invalid checkpoint location"
 msgstr "无效的检查点位置"
 
-#: access/transam/xlogrecovery.c:4104
+#: access/transam/xlogrecovery.c:4103
 #, c-format
 msgid "invalid checkpoint record"
 msgstr "无效的检查点记录"
 
-#: access/transam/xlogrecovery.c:4110
+#: access/transam/xlogrecovery.c:4109
 #, c-format
 msgid "invalid resource manager ID in checkpoint record"
 msgstr "检查点记录中的资源管理器 ID 无效"
 
-#: access/transam/xlogrecovery.c:4118
+#: access/transam/xlogrecovery.c:4117
 #, c-format
 msgid "invalid xl_info in checkpoint record"
 msgstr "检查点记录中的 xl_info 无效"
 
-#: access/transam/xlogrecovery.c:4124
+#: access/transam/xlogrecovery.c:4123
 #, c-format
 msgid "invalid length of checkpoint record"
 msgstr "检查点记录长度无效"
 
-#: access/transam/xlogrecovery.c:4178
+#: access/transam/xlogrecovery.c:4177
 #, c-format
 msgid "new timeline %u is not a child of database system timeline %u"
 msgstr "新时间线 %u 不是数据库系统时间线 %u 的后继时间线"
 
-#: access/transam/xlogrecovery.c:4192
+#: access/transam/xlogrecovery.c:4191
 #, c-format
 msgid "new timeline %u forked off current database system timeline %u before current recovery point %X/%X"
 msgstr "新时间线 %1$u 在当前恢复点 %3$X/%4$X 之前就从当前数据库系统的时间线 %2$u 分叉"
 
-#: access/transam/xlogrecovery.c:4211
+#: access/transam/xlogrecovery.c:4210
 #, c-format
 msgid "new target timeline is %u"
 msgstr "新的目标时间线为 %u"
 
-#: access/transam/xlogrecovery.c:4414
+#: access/transam/xlogrecovery.c:4413
 #, c-format
 msgid "WAL receiver process shutdown requested"
 msgstr "已请求关闭 WAL 接收进程"
 
-#: access/transam/xlogrecovery.c:4474
+#: access/transam/xlogrecovery.c:4473
 #, c-format
 msgid "received promote request"
 msgstr "已收到提升请求"
 
-#: access/transam/xlogrecovery.c:4729
+#: access/transam/xlogrecovery.c:4728
 #, c-format
 msgid "hot standby is not possible because of insufficient parameter settings"
 msgstr "参数设置不足，无法使用热备功能"
 
-#: access/transam/xlogrecovery.c:4730 access/transam/xlogrecovery.c:4757
-#: access/transam/xlogrecovery.c:4787
+#: access/transam/xlogrecovery.c:4729 access/transam/xlogrecovery.c:4756
+#: access/transam/xlogrecovery.c:4786
 #, c-format
 msgid "%s = %d is a lower setting than on the primary server, where its value was %d."
 msgstr "%s = %d 的设置低于主库当时使用的值 %d。"
 
-#: access/transam/xlogrecovery.c:4739
+#: access/transam/xlogrecovery.c:4738
 #, c-format
 msgid "If recovery is unpaused, the server will shut down."
 msgstr "如果取消恢复暂停，服务器将关闭。"
 
-#: access/transam/xlogrecovery.c:4740
+#: access/transam/xlogrecovery.c:4739
 #, c-format
 msgid "You can then restart the server after making the necessary configuration changes."
 msgstr "之后，您可以在完成必要的配置更改后重启服务器。"
 
-#: access/transam/xlogrecovery.c:4751
+#: access/transam/xlogrecovery.c:4750
 #, c-format
 msgid "promotion is not possible because of insufficient parameter settings"
 msgstr "参数设置不足，无法提升"
 
-#: access/transam/xlogrecovery.c:4761
+#: access/transam/xlogrecovery.c:4760
 #, c-format
 msgid "Restart the server after making the necessary configuration changes."
 msgstr "在完成必要的配置更改后重启服务器。"
 
-#: access/transam/xlogrecovery.c:4785
+#: access/transam/xlogrecovery.c:4784
 #, c-format
 msgid "recovery aborted because of insufficient parameter settings"
 msgstr "参数设置不足，恢复已中止"
 
-#: access/transam/xlogrecovery.c:4791
+#: access/transam/xlogrecovery.c:4790
 #, c-format
 msgid "You can restart the server after making the necessary configuration changes."
 msgstr "您可以在完成必要的配置更改后重启服务器。"
 
-#: access/transam/xlogrecovery.c:4811 access/transam/xlogrecovery.c:4813
+#: access/transam/xlogrecovery.c:4810 access/transam/xlogrecovery.c:4812
 #: catalog/dependency.c:1153 catalog/dependency.c:1160
 #: catalog/dependency.c:1171 commands/tablecmds.c:1482
 #: commands/tablecmds.c:15856 commands/tablespace.c:467 commands/user.c:1302
@@ -3741,28 +3741,28 @@ msgstr "您可以在完成必要的配置更改后重启服务器。"
 msgid "%s"
 msgstr "%s"
 
-#: access/transam/xlogrecovery.c:4844
+#: access/transam/xlogrecovery.c:4843
 #, c-format
 msgid "multiple recovery targets specified"
 msgstr "已指定多个恢复目标"
 
-#: access/transam/xlogrecovery.c:4845
+#: access/transam/xlogrecovery.c:4844
 #, c-format
 msgid "At most one of \"recovery_target\", \"recovery_target_lsn\", \"recovery_target_name\", \"recovery_target_time\", \"recovery_target_xid\" may be set."
 msgstr "\"recovery_target\", \"recovery_target_lsn\", \"recovery_target_name\", \"recovery_target_time\", \"recovery_target_xid\" 最多只能设置一个。"
 
-#: access/transam/xlogrecovery.c:4856
+#: access/transam/xlogrecovery.c:4855
 #, c-format
 msgid "The only allowed value is \"immediate\"."
 msgstr "唯一允许的值是 \"immediate\"。"
 
-#: access/transam/xlogrecovery.c:5008 utils/adt/timestamp.c:202
+#: access/transam/xlogrecovery.c:5007 utils/adt/timestamp.c:202
 #: utils/adt/timestamp.c:455
 #, c-format
 msgid "timestamp out of range: \"%s\""
 msgstr "timestamp 超出范围: \"%s\""
 
-#: access/transam/xlogrecovery.c:5053
+#: access/transam/xlogrecovery.c:5052
 #, c-format
 msgid "\"recovery_target_timeline\" is not a valid number."
 msgstr "参数 \"recovery_target_timeline\" 的值不是有效数字。"
@@ -3793,7 +3793,7 @@ msgstr "执行失败的归档命令为: %s"
 msgid "archive command was terminated by exception 0x%X"
 msgstr "归档命令被异常 0x%X 终止"
 
-#: archive/shell_archive.c:109 postmaster/postmaster.c:3080
+#: archive/shell_archive.c:109 postmaster/postmaster.c:3081
 #, c-format
 msgid "See C include file \"ntstatus.h\" for a description of the hexadecimal value."
 msgstr "有关此十六进制值的说明，参阅 C 头文件 \"ntstatus.h\"。"
@@ -4071,7 +4071,7 @@ msgstr "只有具有 \"%s\" 角色权限的角色才能创建存储在服务器�
 msgid "relative path not allowed for backup stored on server"
 msgstr "存储在服务器上的备份不允许使用相对路径"
 
-#: backup/basebackup_server.c:102 commands/dbcommands.c:477
+#: backup/basebackup_server.c:102 commands/dbcommands.c:494
 #: commands/tablespace.c:160 commands/tablespace.c:176
 #: commands/tablespace.c:600 commands/tablespace.c:645 replication/slot.c:2034
 #: storage/file/copydir.c:47
@@ -5387,7 +5387,7 @@ msgstr "列名必须加以限定"
 msgid "default value for column \"%s\" of relation \"%s\" does not exist"
 msgstr "关系 \"%2$s\" 的列 \"%1$s\" 的默认值不存在"
 
-#: catalog/objectaddress.c:1618 commands/functioncmds.c:141
+#: catalog/objectaddress.c:1618 commands/functioncmds.c:142
 #: commands/tablecmds.c:289 commands/typecmds.c:279 commands/typecmds.c:3901
 #: parser/parse_type.c:243 parser/parse_type.c:272 parser/parse_type.c:801
 #: utils/adt/acl.c:4577
@@ -5485,7 +5485,7 @@ msgstr "参数列表的长度必须正好为 %d"
 msgid "must be owner of large object %u"
 msgstr "必须是大对象 %u 的所有者"
 
-#: catalog/objectaddress.c:2485 commands/functioncmds.c:1573
+#: catalog/objectaddress.c:2485 commands/functioncmds.c:1574
 #, c-format
 msgid "must be owner of type %s or type %s"
 msgstr "必须是类型 %s 或类型 %s 的所有者"
@@ -5948,13 +5948,13 @@ msgstr "\"%s\" 是假想集聚合函数。"
 msgid "cannot change number of direct arguments of an aggregate function"
 msgstr "不能更改聚合函数的直接参数数量"
 
-#: catalog/pg_aggregate.c:858 commands/functioncmds.c:698
+#: catalog/pg_aggregate.c:858 commands/functioncmds.c:699
 #: commands/typecmds.c:2028 commands/typecmds.c:2074 commands/typecmds.c:2126
 #: commands/typecmds.c:2163 commands/typecmds.c:2197 commands/typecmds.c:2231
 #: commands/typecmds.c:2265 commands/typecmds.c:2294 commands/typecmds.c:2381
 #: commands/typecmds.c:2423 parser/parse_func.c:417 parser/parse_func.c:448
 #: parser/parse_func.c:475 parser/parse_func.c:489 parser/parse_func.c:611
-#: parser/parse_func.c:631 parser/parse_func.c:2227 parser/parse_func.c:2500
+#: parser/parse_func.c:631 parser/parse_func.c:2226 parser/parse_func.c:2499
 #, c-format
 msgid "function %s does not exist"
 msgstr "函数 %s 不存在"
@@ -6280,7 +6280,7 @@ msgstr "否定操作符 %s 返回的数据类型与操作符 %s 不同"
 msgid "parameter ACL \"%s\" does not exist"
 msgstr "参数 ACL \"%s\" 不存在"
 
-#: catalog/pg_proc.c:131 parser/parse_func.c:2289
+#: catalog/pg_proc.c:131 parser/parse_func.c:2288
 #, c-format
 msgid "functions cannot have more than %d argument"
 msgid_plural "functions cannot have more than %d arguments"
@@ -6501,7 +6501,7 @@ msgstr "不能删除 %s 所拥有的对象，因为数据库系统需要这些�
 msgid "cannot reassign ownership of objects owned by %s because they are required by the database system"
 msgstr "不能重新分配 %s 所拥有对象的所有权，因为数据库系统需要这些对象"
 
-#: catalog/pg_shdepend.c:1704 commands/dbcommands.c:2690
+#: catalog/pg_shdepend.c:1704 commands/dbcommands.c:2707
 #, c-format
 msgid "permission denied to change owner of database"
 msgstr "权限不足，无法更改数据库所有者"
@@ -6565,7 +6565,7 @@ msgstr "为类型 \"%s\" 创建多范围类型时失败。"
 msgid "You can manually specify a multirange type name using the \"multirange_type_name\" attribute."
 msgstr "您可以使用 \"multirange_type_name\" 属性手动指定多范围类型名称。"
 
-#: catalog/storage.c:533 storage/buffer/bufmgr.c:1556
+#: catalog/storage.c:533 storage/buffer/bufmgr.c:1558
 #, c-format
 msgid "invalid page in block %u of relation %s"
 msgstr "关系 %2$s 的块 %1$u 中有无效页"
@@ -6650,7 +6650,7 @@ msgstr "只有聚合函数的状态数据类型为 %s 时，才能指定序列�
 msgid "must specify both or neither of serialization and deserialization functions"
 msgstr "必须同时指定序列化和反序列化函数或两者都不指定"
 
-#: commands/aggregatecmds.c:434 commands/functioncmds.c:646
+#: commands/aggregatecmds.c:434 commands/functioncmds.c:647
 #, c-format
 msgid "parameter \"parallel\" must be SAFE, RESTRICTED, or UNSAFE"
 msgstr "参数 \"parallel\" 必须为 SAFE, RESTRICTED 或者 UNSAFE"
@@ -6994,7 +6994,7 @@ msgstr "无法识别的排序规则提供者: %s"
 msgid "parameter \"%s\" must be specified"
 msgstr "必须指定参数 \"%s\""
 
-#: commands/collationcmds.c:293 commands/dbcommands.c:1134
+#: commands/collationcmds.c:293 commands/dbcommands.c:1151
 #, c-format
 msgid "using standard form \"%s\" for ICU locale \"%s\""
 msgstr "正在对 ICU 区域设置 \"%2$s\" 使用标准形式 \"%1$s\""
@@ -7004,7 +7004,7 @@ msgstr "正在对 ICU 区域设置 \"%2$s\" 使用标准形式 \"%1$s\""
 msgid "nondeterministic collations not supported with this provider"
 msgstr "此提供者不支持非确定性排序规则"
 
-#: commands/collationcmds.c:317 commands/dbcommands.c:1087
+#: commands/collationcmds.c:317 commands/dbcommands.c:1104
 #, c-format
 msgid "ICU rules cannot be specified unless locale provider is ICU"
 msgstr "区域设置提供者不为 ICU 时，不能指定 ICU 规则"
@@ -7040,17 +7040,17 @@ msgstr "不能刷新默认排序规则的版本"
 msgid "Use %s instead."
 msgstr "改用 %s。"
 
-#: commands/collationcmds.c:480 commands/dbcommands.c:2566
+#: commands/collationcmds.c:480 commands/dbcommands.c:2583
 #, c-format
 msgid "changing version from %s to %s"
 msgstr "正在将版本从 %s 更改为 %s"
 
-#: commands/collationcmds.c:495 commands/dbcommands.c:2579
+#: commands/collationcmds.c:495 commands/dbcommands.c:2596
 #, c-format
 msgid "version has not changed"
 msgstr "版本未更改"
 
-#: commands/collationcmds.c:528 commands/dbcommands.c:2749
+#: commands/collationcmds.c:528 commands/dbcommands.c:2766
 #, c-format
 msgid "database with OID %u does not exist"
 msgstr "OID 为 %u 的数据库不存在"
@@ -7070,10 +7070,10 @@ msgstr "必须是超级用户才能导入系统排序规则"
 msgid "no usable system locales were found"
 msgstr "未找到可用的系统区域设置"
 
-#: commands/comment.c:61 commands/dbcommands.c:1665 commands/dbcommands.c:1883
-#: commands/dbcommands.c:1995 commands/dbcommands.c:2193
-#: commands/dbcommands.c:2433 commands/dbcommands.c:2526
-#: commands/dbcommands.c:2650 commands/dbcommands.c:3161
+#: commands/comment.c:61 commands/dbcommands.c:1682 commands/dbcommands.c:1900
+#: commands/dbcommands.c:2012 commands/dbcommands.c:2210
+#: commands/dbcommands.c:2450 commands/dbcommands.c:2543
+#: commands/dbcommands.c:2667 commands/dbcommands.c:3178
 #: utils/init/postinit.c:1034 utils/init/postinit.c:1098
 #: utils/init/postinit.c:1171
 #, c-format
@@ -7222,7 +7222,7 @@ msgstr "选项 \"%s\" 的参数必须是列名列表"
 msgid "argument to option \"%s\" must be a valid encoding name"
 msgstr "选项 \"%s\" 的参数必须是有效的编码名"
 
-#: commands/copy.c:682 commands/dbcommands.c:866 commands/dbcommands.c:2381
+#: commands/copy.c:682 commands/dbcommands.c:883 commands/dbcommands.c:2398
 #, c-format
 msgid "option \"%s\" not recognized"
 msgstr "无法识别的选项 \"%s\""
@@ -7730,371 +7730,371 @@ msgstr "指定的列名过多"
 msgid "policies not yet implemented for this command"
 msgstr "尚未为该命令实现行级安全策略"
 
-#: commands/dbcommands.c:829
+#: commands/dbcommands.c:846
 #, c-format
 msgid "LOCATION is not supported anymore"
 msgstr "不再支持 LOCATION"
 
-#: commands/dbcommands.c:830
+#: commands/dbcommands.c:847
 #, c-format
 msgid "Consider using tablespaces instead."
 msgstr "考虑使用表空间代替。"
 
-#: commands/dbcommands.c:855
+#: commands/dbcommands.c:872
 #, c-format
 msgid "OIDs less than %u are reserved for system objects"
 msgstr "小于 %u 的 OID 预留给系统对象"
 
-#: commands/dbcommands.c:886 utils/adt/ascii.c:146
+#: commands/dbcommands.c:903 utils/adt/ascii.c:146
 #, c-format
 msgid "%d is not a valid encoding code"
 msgstr "%d 不是有效的编码代码"
 
-#: commands/dbcommands.c:897 utils/adt/ascii.c:128
+#: commands/dbcommands.c:914 utils/adt/ascii.c:128
 #, c-format
 msgid "%s is not a valid encoding name"
 msgstr "%s 不是有效的编码名称"
 
-#: commands/dbcommands.c:931
+#: commands/dbcommands.c:948
 #, c-format
 msgid "unrecognized locale provider: %s"
 msgstr "无法识别的区域设置提供者: %s"
 
-#: commands/dbcommands.c:944 commands/dbcommands.c:2414 commands/user.c:299
+#: commands/dbcommands.c:961 commands/dbcommands.c:2431 commands/user.c:299
 #: commands/user.c:739
 #, c-format
 msgid "invalid connection limit: %d"
 msgstr "无效的连接限制: %d"
 
-#: commands/dbcommands.c:965
+#: commands/dbcommands.c:982
 #, c-format
 msgid "permission denied to create database"
 msgstr "权限不足，无法创建数据库"
 
-#: commands/dbcommands.c:989
+#: commands/dbcommands.c:1006
 #, c-format
 msgid "template database \"%s\" does not exist"
 msgstr "模板数据库 \"%s\" 不存在"
 
-#: commands/dbcommands.c:999
+#: commands/dbcommands.c:1016
 #, c-format
 msgid "cannot use invalid database \"%s\" as template"
 msgstr "不能将无效数据库 \"%s\" 用作模板"
 
-#: commands/dbcommands.c:1000 commands/dbcommands.c:2444
+#: commands/dbcommands.c:1017 commands/dbcommands.c:2461
 #: utils/init/postinit.c:1113
 #, c-format
 msgid "Use DROP DATABASE to drop invalid databases."
 msgstr "使用 DROP DATABASE 删除无效数据库。"
 
-#: commands/dbcommands.c:1011
+#: commands/dbcommands.c:1028
 #, c-format
 msgid "permission denied to copy database \"%s\""
 msgstr "权限不足，无法复制数据库 \"%s\""
 
-#: commands/dbcommands.c:1028
+#: commands/dbcommands.c:1045
 #, c-format
 msgid "invalid create database strategy \"%s\""
 msgstr "无效的创建数据库策略 \"%s\""
 
-#: commands/dbcommands.c:1029
+#: commands/dbcommands.c:1046
 #, c-format
 msgid "Valid strategies are \"wal_log\" and \"file_copy\"."
 msgstr "有效策略为 \"wal_log\" 和 \"file_copy\"。"
 
-#: commands/dbcommands.c:1050
+#: commands/dbcommands.c:1067
 #, c-format
 msgid "invalid server encoding %d"
 msgstr "无效的服务器编码 %d"
 
-#: commands/dbcommands.c:1056
+#: commands/dbcommands.c:1073
 #, c-format
 msgid "invalid LC_COLLATE locale name: \"%s\""
 msgstr "无效的 LC_COLLATE 区域设置名称: \"%s\""
 
-#: commands/dbcommands.c:1057 commands/dbcommands.c:1063
+#: commands/dbcommands.c:1074 commands/dbcommands.c:1080
 #, c-format
 msgid "If the locale name is specific to ICU, use ICU_LOCALE."
 msgstr "如果区域设置名称是 ICU 专用的，使用 ICU_LOCALE。"
 
-#: commands/dbcommands.c:1062
+#: commands/dbcommands.c:1079
 #, c-format
 msgid "invalid LC_CTYPE locale name: \"%s\""
 msgstr "无效的 LC_CTYPE 区域设置名称: \"%s\""
 
-#: commands/dbcommands.c:1074
+#: commands/dbcommands.c:1091
 #, c-format
 msgid "BUILTIN_LOCALE cannot be specified unless locale provider is builtin"
 msgstr "区域设置提供者不为 builtin 时，不能指定 BUILTIN_LOCALE"
 
-#: commands/dbcommands.c:1082
+#: commands/dbcommands.c:1099
 #, c-format
 msgid "ICU locale cannot be specified unless locale provider is ICU"
 msgstr "区域设置提供者不为 ICU 时，不能指定 ICU 区域设置"
 
-#: commands/dbcommands.c:1100
+#: commands/dbcommands.c:1117
 #, c-format
 msgid "LOCALE or BUILTIN_LOCALE must be specified"
 msgstr "必须指定 LOCALE 或 BUILTIN_LOCALE"
 
-#: commands/dbcommands.c:1109
+#: commands/dbcommands.c:1126
 #, c-format
 msgid "encoding \"%s\" is not supported with ICU provider"
 msgstr "ICU 提供者不支持编码 \"%s\""
 
-#: commands/dbcommands.c:1119
+#: commands/dbcommands.c:1136
 #, c-format
 msgid "LOCALE or ICU_LOCALE must be specified"
 msgstr "必须指定 LOCALE 或 ICU_LOCALE"
 
-#: commands/dbcommands.c:1163
+#: commands/dbcommands.c:1180
 #, c-format
 msgid "new encoding (%s) is incompatible with the encoding of the template database (%s)"
 msgstr "新编码（%s）与模板数据库的编码（%s）不兼容"
 
-#: commands/dbcommands.c:1166
+#: commands/dbcommands.c:1183
 #, c-format
 msgid "Use the same encoding as in the template database, or use template0 as template."
 msgstr "使用与模板数据库相同的编码，或使用 template0 作为模板。"
 
-#: commands/dbcommands.c:1171
+#: commands/dbcommands.c:1188
 #, c-format
 msgid "new collation (%s) is incompatible with the collation of the template database (%s)"
 msgstr "新排序规则（%s）与模板数据库的排序规则（%s）不兼容"
 
-#: commands/dbcommands.c:1173
+#: commands/dbcommands.c:1190
 #, c-format
 msgid "Use the same collation as in the template database, or use template0 as template."
 msgstr "使用与模板数据库相同的排序规则，或使用 template0 作为模板。"
 
-#: commands/dbcommands.c:1178
+#: commands/dbcommands.c:1195
 #, c-format
 msgid "new LC_CTYPE (%s) is incompatible with the LC_CTYPE of the template database (%s)"
 msgstr "新 LC_CTYPE（%s）与模板数据库的 LC_CTYPE（%s）不兼容"
 
-#: commands/dbcommands.c:1180
+#: commands/dbcommands.c:1197
 #, c-format
 msgid "Use the same LC_CTYPE as in the template database, or use template0 as template."
 msgstr "使用与模板数据库相同的 LC_CTYPE，或使用 template0 作为模板。"
 
-#: commands/dbcommands.c:1185
+#: commands/dbcommands.c:1202
 #, c-format
 msgid "new locale provider (%s) does not match locale provider of the template database (%s)"
 msgstr "新区域设置提供者（%s）与模板数据库的区域设置提供者（%s）不匹配"
 
-#: commands/dbcommands.c:1187
+#: commands/dbcommands.c:1204
 #, c-format
 msgid "Use the same locale provider as in the template database, or use template0 as template."
 msgstr "使用与模板数据库相同的区域设置提供者，或使用 template0 作为模板。"
 
-#: commands/dbcommands.c:1199
+#: commands/dbcommands.c:1216
 #, c-format
 msgid "new ICU locale (%s) is incompatible with the ICU locale of the template database (%s)"
 msgstr "新 ICU 区域设置（%s）与模板数据库的 ICU 区域设置（%s）不兼容"
 
-#: commands/dbcommands.c:1201
+#: commands/dbcommands.c:1218
 #, c-format
 msgid "Use the same ICU locale as in the template database, or use template0 as template."
 msgstr "使用与模板数据库相同的 ICU 区域设置，或使用 template0 作为模板。"
 
-#: commands/dbcommands.c:1212
+#: commands/dbcommands.c:1229
 #, c-format
 msgid "new ICU collation rules (%s) are incompatible with the ICU collation rules of the template database (%s)"
 msgstr "新 ICU 排序规则（%s）与模板数据库的 ICU 排序规则（%s）不兼容"
 
-#: commands/dbcommands.c:1214
+#: commands/dbcommands.c:1231
 #, c-format
 msgid "Use the same ICU collation rules as in the template database, or use template0 as template."
 msgstr "使用与模板数据库相同的 ICU 排序规则，或使用 template0 作为模板。"
 
-#: commands/dbcommands.c:1243
+#: commands/dbcommands.c:1260
 #, c-format
 msgid "template database \"%s\" has a collation version, but no actual collation version could be determined"
 msgstr "模板数据库 \"%s\" 有排序规则版本，但无法确定实际排序规则版本"
 
-#: commands/dbcommands.c:1248
+#: commands/dbcommands.c:1265
 #, c-format
 msgid "template database \"%s\" has a collation version mismatch"
 msgstr "模板数据库 \"%s\" 的排序规则版本不匹配"
 
-#: commands/dbcommands.c:1250
+#: commands/dbcommands.c:1267
 #, c-format
 msgid "The template database was created using collation version %s, but the operating system provides version %s."
 msgstr "创建模板数据库时使用的排序规则版本为 %s，而操作系统提供的版本为 %s。"
 
-#: commands/dbcommands.c:1253
+#: commands/dbcommands.c:1270
 #, c-format
 msgid "Rebuild all objects in the template database that use the default collation and run ALTER DATABASE %s REFRESH COLLATION VERSION, or build PostgreSQL with the right library version."
 msgstr "重建模板数据库中所有使用默认排序规则的对象，并运行 ALTER DATABASE %s REFRESH COLLATION VERSION，或使用正确的库版本构建 PostgreSQL。"
 
-#: commands/dbcommands.c:1298 commands/dbcommands.c:2041
+#: commands/dbcommands.c:1315 commands/dbcommands.c:2058
 #, c-format
 msgid "pg_global cannot be used as default tablespace"
 msgstr "pg_global 不能作为默认表空间使用"
 
-#: commands/dbcommands.c:1324
+#: commands/dbcommands.c:1341
 #, c-format
 msgid "cannot assign new default tablespace \"%s\""
 msgstr "不能指定新的默认表空间 \"%s\""
 
-#: commands/dbcommands.c:1326
+#: commands/dbcommands.c:1343
 #, c-format
 msgid "There is a conflict because database \"%s\" already has some tables in this tablespace."
 msgstr "此处有冲突，因为数据库 \"%s\" 已经有一些表在此表空间中。"
 
-#: commands/dbcommands.c:1356 commands/dbcommands.c:1912
+#: commands/dbcommands.c:1373 commands/dbcommands.c:1929
 #, c-format
 msgid "database \"%s\" already exists"
 msgstr "数据库 \"%s\" 已存在"
 
-#: commands/dbcommands.c:1370
+#: commands/dbcommands.c:1387
 #, c-format
 msgid "source database \"%s\" is being accessed by other users"
 msgstr "其他用户正在使用源数据库 \"%s\""
 
-#: commands/dbcommands.c:1392
+#: commands/dbcommands.c:1409
 #, c-format
 msgid "database OID %u is already in use by database \"%s\""
 msgstr "数据库 OID %u 已被数据库 \"%s\" 使用"
 
-#: commands/dbcommands.c:1398
+#: commands/dbcommands.c:1415
 #, c-format
 msgid "data directory with the specified OID %u already exists"
 msgstr "指定 OID %u 对应的数据目录已存在"
 
-#: commands/dbcommands.c:1571 commands/dbcommands.c:1586
+#: commands/dbcommands.c:1588 commands/dbcommands.c:1603
 #: utils/adt/pg_locale.c:2622
 #, c-format
 msgid "encoding \"%s\" does not match locale \"%s\""
 msgstr "编码 \"%s\" 与区域设置 \"%s\" 不匹配"
 
-#: commands/dbcommands.c:1574
+#: commands/dbcommands.c:1591
 #, c-format
 msgid "The chosen LC_CTYPE setting requires encoding \"%s\"."
 msgstr "所选择的 LC_CTYPE 设置需要编码 \"%s\"。"
 
-#: commands/dbcommands.c:1589
+#: commands/dbcommands.c:1606
 #, c-format
 msgid "The chosen LC_COLLATE setting requires encoding \"%s\"."
 msgstr "所选择的 LC_COLLATE 设置需要编码 \"%s\"。"
 
-#: commands/dbcommands.c:1672
+#: commands/dbcommands.c:1689
 #, c-format
 msgid "database \"%s\" does not exist, skipping"
 msgstr "数据库 \"%s\" 不存在，跳过"
 
-#: commands/dbcommands.c:1696
+#: commands/dbcommands.c:1713
 #, c-format
 msgid "cannot drop a template database"
 msgstr "不能删除模板数据库"
 
-#: commands/dbcommands.c:1702
+#: commands/dbcommands.c:1719
 #, c-format
 msgid "cannot drop the currently open database"
 msgstr "不能删除当前使用的数据库"
 
-#: commands/dbcommands.c:1715
+#: commands/dbcommands.c:1732
 #, c-format
 msgid "database \"%s\" is used by an active logical replication slot"
 msgstr "活动的逻辑复制槽正在使用数据库 \"%s\""
 
-#: commands/dbcommands.c:1717
+#: commands/dbcommands.c:1734
 #, c-format
 msgid "There is %d active slot."
 msgid_plural "There are %d active slots."
 msgstr[0] "有 %d 个活动复制槽。"
 
-#: commands/dbcommands.c:1731
+#: commands/dbcommands.c:1748
 #, c-format
 msgid "database \"%s\" is being used by logical replication subscription"
 msgstr "逻辑复制订阅正在使用数据库 \"%s\""
 
-#: commands/dbcommands.c:1733
+#: commands/dbcommands.c:1750
 #, c-format
 msgid "There is %d subscription."
 msgid_plural "There are %d subscriptions."
 msgstr[0] "有 %d 个订阅。"
 
-#: commands/dbcommands.c:1754 commands/dbcommands.c:1934
-#: commands/dbcommands.c:2063
+#: commands/dbcommands.c:1771 commands/dbcommands.c:1951
+#: commands/dbcommands.c:2080
 #, c-format
 msgid "database \"%s\" is being accessed by other users"
 msgstr "其他用户正在使用数据库 \"%s\""
 
-#: commands/dbcommands.c:1894
+#: commands/dbcommands.c:1911
 #, c-format
 msgid "permission denied to rename database"
 msgstr "权限不足，无法重命名数据库"
 
-#: commands/dbcommands.c:1923
+#: commands/dbcommands.c:1940
 #, c-format
 msgid "current database cannot be renamed"
 msgstr "不能重命名当前数据库"
 
-#: commands/dbcommands.c:2019
+#: commands/dbcommands.c:2036
 #, c-format
 msgid "cannot change the tablespace of the currently open database"
 msgstr "不能更改当前数据库的表空间"
 
-#: commands/dbcommands.c:2125
+#: commands/dbcommands.c:2142
 #, c-format
 msgid "some relations of database \"%s\" are already in tablespace \"%s\""
 msgstr "数据库 \"%s\" 的一些关系已在表空间 \"%s\" 中"
 
-#: commands/dbcommands.c:2127
+#: commands/dbcommands.c:2144
 #, c-format
 msgid "You must move them back to the database's default tablespace before using this command."
 msgstr "在使用这条命令前，您必须把它们移动回数据库的默认表空间。"
 
-#: commands/dbcommands.c:2256 commands/dbcommands.c:2999
-#: commands/dbcommands.c:3299 commands/dbcommands.c:3413
+#: commands/dbcommands.c:2273 commands/dbcommands.c:3016
+#: commands/dbcommands.c:3316 commands/dbcommands.c:3430
 #, c-format
 msgid "some useless files may be left behind in old database directory \"%s\""
 msgstr "原先的数据库目录 \"%s\" 中可能留下一些无用的文件"
 
-#: commands/dbcommands.c:2317
+#: commands/dbcommands.c:2334
 #, c-format
 msgid "unrecognized DROP DATABASE option \"%s\""
 msgstr "无法识别的 DROP DATABASE 选项 \"%s\""
 
-#: commands/dbcommands.c:2395
+#: commands/dbcommands.c:2412
 #, c-format
 msgid "option \"%s\" cannot be specified with other options"
 msgstr "选项 \"%s\" 不能与其他选项同时指定"
 
-#: commands/dbcommands.c:2443
+#: commands/dbcommands.c:2460
 #, c-format
 msgid "cannot alter invalid database \"%s\""
 msgstr "不能修改无效数据库 \"%s\""
 
-#: commands/dbcommands.c:2460
+#: commands/dbcommands.c:2477
 #, c-format
 msgid "cannot disallow connections for current database"
 msgstr "不能禁止连接到当前数据库"
 
-#: commands/dbcommands.c:3105
+#: commands/dbcommands.c:3122
 #, c-format
 msgid "There are %d other session(s) and %d prepared transaction(s) using the database."
 msgstr "有 %d 个其他会话和 %d 个预备事务正在使用该数据库。"
 
-#: commands/dbcommands.c:3108
+#: commands/dbcommands.c:3125
 #, c-format
 msgid "There is %d other session using the database."
 msgid_plural "There are %d other sessions using the database."
 msgstr[0] "有 %d 个其他会话正在使用该数据库。"
 
-#: commands/dbcommands.c:3113 storage/ipc/procarray.c:3872
+#: commands/dbcommands.c:3130 storage/ipc/procarray.c:3872
 #, c-format
 msgid "There is %d prepared transaction using the database."
 msgid_plural "There are %d prepared transactions using the database."
 msgstr[0] "有 %d 个预备事务正在使用该数据库。"
 
-#: commands/dbcommands.c:3255
+#: commands/dbcommands.c:3272
 #, c-format
 msgid "missing directory \"%s\""
 msgstr "缺少目录 \"%s\""
 
-#: commands/dbcommands.c:3313 commands/tablespace.c:187
+#: commands/dbcommands.c:3330 commands/tablespace.c:187
 #: commands/tablespace.c:640
 #, c-format
 msgid "could not stat directory \"%s\": %m"
@@ -8137,7 +8137,7 @@ msgstr "%s 的参数必须是类型名"
 msgid "invalid argument for %s: \"%s\""
 msgstr "%s 的参数无效: \"%s\""
 
-#: commands/dropcmds.c:96 commands/functioncmds.c:1395
+#: commands/dropcmds.c:96 commands/functioncmds.c:1396
 #: utils/adt/ruleutils.c:2926
 #, c-format
 msgid "\"%s\" is an aggregate function"
@@ -8820,363 +8820,363 @@ msgstr "外部数据包装器 \"%s\" 不支持 IMPORT FOREIGN SCHEMA"
 msgid "importing foreign table \"%s\""
 msgstr "正在导入外部表 \"%s\""
 
-#: commands/functioncmds.c:125
+#: commands/functioncmds.c:126
 #, c-format
 msgid "SQL function cannot return shell type %s"
 msgstr "SQL 函数不能返回 shell 类型 %s"
 
-#: commands/functioncmds.c:130
+#: commands/functioncmds.c:131
 #, c-format
 msgid "return type %s is only a shell"
 msgstr "返回类型 %s 只是 shell 类型"
 
-#: commands/functioncmds.c:153
+#: commands/functioncmds.c:154
 #, c-format
 msgid "type \"%s\" is not yet defined"
 msgstr "类型 \"%s\" 尚未定义"
 
-#: commands/functioncmds.c:155
+#: commands/functioncmds.c:156
 #, c-format
 msgid "Creating a shell type definition."
 msgstr "正在创建 shell 类型定义。"
 
-#: commands/functioncmds.c:256
+#: commands/functioncmds.c:257
 #, c-format
 msgid "SQL function cannot accept shell type %s"
 msgstr "SQL 函数不能接受 shell 类型 %s"
 
-#: commands/functioncmds.c:262
+#: commands/functioncmds.c:263
 #, c-format
 msgid "aggregate cannot accept shell type %s"
 msgstr "聚合函数不能接受 shell 类型 %s"
 
-#: commands/functioncmds.c:267
+#: commands/functioncmds.c:268
 #, c-format
 msgid "argument type %s is only a shell"
 msgstr "参数类型 %s 只是 shell 类型"
 
-#: commands/functioncmds.c:277
+#: commands/functioncmds.c:278
 #, c-format
 msgid "type %s does not exist"
 msgstr "类型 %s 不存在"
 
-#: commands/functioncmds.c:291
+#: commands/functioncmds.c:292
 #, c-format
 msgid "aggregates cannot accept set arguments"
 msgstr "聚合函数不能接受集合参数"
 
-#: commands/functioncmds.c:295
+#: commands/functioncmds.c:296
 #, c-format
 msgid "procedures cannot accept set arguments"
 msgstr "过程不能接受集合参数"
 
-#: commands/functioncmds.c:299
+#: commands/functioncmds.c:300
 #, c-format
 msgid "functions cannot accept set arguments"
 msgstr "函数不能接受集合参数"
 
-#: commands/functioncmds.c:309
+#: commands/functioncmds.c:310
 #, c-format
 msgid "VARIADIC parameter must be the last input parameter"
 msgstr "VARIADIC 参数必须是最后一个输入参数"
 
-#: commands/functioncmds.c:332
+#: commands/functioncmds.c:333
 #, c-format
 msgid "VARIADIC parameter must be the last parameter"
 msgstr "VARIADIC 参数必须是最后一个参数"
 
-#: commands/functioncmds.c:357
+#: commands/functioncmds.c:358
 #, c-format
 msgid "VARIADIC parameter must be an array"
 msgstr "VARIADIC 参数必须是数组"
 
-#: commands/functioncmds.c:402
+#: commands/functioncmds.c:403
 #, c-format
 msgid "parameter name \"%s\" used more than once"
 msgstr "多次使用参数名 \"%s\""
 
-#: commands/functioncmds.c:417
+#: commands/functioncmds.c:418
 #, c-format
 msgid "only input parameters can have default values"
 msgstr "只有输入参数才能有默认值"
 
-#: commands/functioncmds.c:432
+#: commands/functioncmds.c:433
 #, c-format
 msgid "cannot use table references in parameter default value"
 msgstr "参数默认值中不能使用表引用"
 
-#: commands/functioncmds.c:456
+#: commands/functioncmds.c:457
 #, c-format
 msgid "input parameters after one with a default value must also have defaults"
 msgstr "位于带默认值的参数之后的输入参数也必须带有默认值"
 
-#: commands/functioncmds.c:466
+#: commands/functioncmds.c:467
 #, c-format
 msgid "procedure OUT parameters cannot appear after one with a default value"
 msgstr "过程的 OUT 参数不能出现在具有默认值的参数之后"
 
-#: commands/functioncmds.c:608 commands/functioncmds.c:787
+#: commands/functioncmds.c:609 commands/functioncmds.c:788
 #, c-format
 msgid "invalid attribute in procedure definition"
 msgstr "过程定义中的属性无效"
 
-#: commands/functioncmds.c:704
+#: commands/functioncmds.c:705
 #, c-format
 msgid "support function %s must return type %s"
 msgstr "支持函数 %s 必须返回类型 %s"
 
-#: commands/functioncmds.c:715
+#: commands/functioncmds.c:716
 #, c-format
 msgid "must be superuser to specify a support function"
 msgstr "必须是超级用户才能指定支持函数"
 
-#: commands/functioncmds.c:836 commands/functioncmds.c:1440
+#: commands/functioncmds.c:837 commands/functioncmds.c:1441
 #, c-format
 msgid "COST must be positive"
 msgstr "COST 必须为正数"
 
-#: commands/functioncmds.c:844 commands/functioncmds.c:1448
+#: commands/functioncmds.c:845 commands/functioncmds.c:1449
 #, c-format
 msgid "ROWS must be positive"
 msgstr "ROWS 必须为正数"
 
-#: commands/functioncmds.c:873
+#: commands/functioncmds.c:874
 #, c-format
 msgid "no function body specified"
 msgstr "没有指定函数体"
 
-#: commands/functioncmds.c:878
+#: commands/functioncmds.c:879
 #, c-format
 msgid "duplicate function body specified"
 msgstr "重复指定函数体"
 
-#: commands/functioncmds.c:883
+#: commands/functioncmds.c:884
 #, c-format
 msgid "inline SQL function body only valid for language SQL"
 msgstr "内联 SQL 函数体仅对 SQL 语言有效"
 
-#: commands/functioncmds.c:926
+#: commands/functioncmds.c:927
 #, c-format
 msgid "SQL function with unquoted function body cannot have polymorphic arguments"
 msgstr "函数体不带引号的 SQL 函数不能有多态参数"
 
-#: commands/functioncmds.c:952 commands/functioncmds.c:971
+#: commands/functioncmds.c:953 commands/functioncmds.c:972
 #, c-format
 msgid "%s is not yet supported in unquoted SQL function body"
 msgstr "不带引号的 SQL 函数体尚不支持 %s"
 
-#: commands/functioncmds.c:999
+#: commands/functioncmds.c:1000
 #, c-format
 msgid "only one AS item needed for language \"%s\""
 msgstr "语言 \"%s\" 只需要一个 AS 项"
 
-#: commands/functioncmds.c:1104
+#: commands/functioncmds.c:1105
 #, c-format
 msgid "no language specified"
 msgstr "没有指定语言"
 
-#: commands/functioncmds.c:1112 commands/functioncmds.c:2130
+#: commands/functioncmds.c:1113 commands/functioncmds.c:2131
 #: commands/proclang.c:235
 #, c-format
 msgid "language \"%s\" does not exist"
 msgstr "语言 \"%s\" 不存在"
 
-#: commands/functioncmds.c:1114 commands/functioncmds.c:2132
+#: commands/functioncmds.c:1115 commands/functioncmds.c:2133
 #, c-format
 msgid "Use CREATE EXTENSION to load the language into the database."
 msgstr "使用 CREATE EXTENSION 向数据库加载语言。"
 
-#: commands/functioncmds.c:1147 commands/functioncmds.c:1432
+#: commands/functioncmds.c:1148 commands/functioncmds.c:1433
 #, c-format
 msgid "only superuser can define a leakproof function"
 msgstr "只有超级用户才能定义 LEAKPROOF 函数"
 
-#: commands/functioncmds.c:1198
+#: commands/functioncmds.c:1199
 #, c-format
 msgid "function result type must be %s because of OUT parameters"
 msgstr "因为 OUT 参数，函数的结果类型必须是 %s"
 
-#: commands/functioncmds.c:1211
+#: commands/functioncmds.c:1212
 #, c-format
 msgid "function result type must be specified"
 msgstr "必须指定函数返回结果的类型"
 
-#: commands/functioncmds.c:1264 commands/functioncmds.c:1452
+#: commands/functioncmds.c:1265 commands/functioncmds.c:1453
 #, c-format
 msgid "ROWS is not applicable when function does not return a set"
 msgstr "函数不返回集合时，ROWS 不适用"
 
-#: commands/functioncmds.c:1559
+#: commands/functioncmds.c:1560
 #, c-format
 msgid "source data type %s is a pseudo-type"
 msgstr "源数据类型 %s 是伪类型"
 
-#: commands/functioncmds.c:1565
+#: commands/functioncmds.c:1566
 #, c-format
 msgid "target data type %s is a pseudo-type"
 msgstr "目标数据类型 %s 是伪类型"
 
-#: commands/functioncmds.c:1589
+#: commands/functioncmds.c:1590
 #, c-format
 msgid "cast will be ignored because the source data type is a domain"
 msgstr "类型转换将被忽略，因为源数据类型是域"
 
-#: commands/functioncmds.c:1594
+#: commands/functioncmds.c:1595
 #, c-format
 msgid "cast will be ignored because the target data type is a domain"
 msgstr "类型转换将被忽略，因为目标数据类型是域"
 
-#: commands/functioncmds.c:1619
+#: commands/functioncmds.c:1620
 #, c-format
 msgid "cast function must take one to three arguments"
 msgstr "类型转换函数必须带一到三个参数"
 
-#: commands/functioncmds.c:1625
+#: commands/functioncmds.c:1626
 #, c-format
 msgid "argument of cast function must match or be binary-coercible from source data type"
 msgstr "类型转换函数的参数类型必须与源数据类型相同，或允许从源数据类型进行二进制强制转换"
 
-#: commands/functioncmds.c:1629
+#: commands/functioncmds.c:1630
 #, c-format
 msgid "second argument of cast function must be type %s"
 msgstr "类型转换函数的第二个参数必须为类型 %s"
 
-#: commands/functioncmds.c:1634
+#: commands/functioncmds.c:1635
 #, c-format
 msgid "third argument of cast function must be type %s"
 msgstr "类型转换函数的第三个参数必须为类型 %s"
 
-#: commands/functioncmds.c:1641
+#: commands/functioncmds.c:1642
 #, c-format
 msgid "return data type of cast function must match or be binary-coercible to target data type"
 msgstr "类型转换函数的返回数据类型必须与目标数据类型相同，或能以二进制方式强制转换为目标数据类型"
 
-#: commands/functioncmds.c:1652
+#: commands/functioncmds.c:1653
 #, c-format
 msgid "cast function must not be volatile"
 msgstr "类型转换函数不得为 VOLATILE"
 
-#: commands/functioncmds.c:1657
+#: commands/functioncmds.c:1658
 #, c-format
 msgid "cast function must be a normal function"
 msgstr "类型转换函数必须是普通函数"
 
-#: commands/functioncmds.c:1661
+#: commands/functioncmds.c:1662
 #, c-format
 msgid "cast function must not return a set"
 msgstr "类型转换函数不得返回集合"
 
-#: commands/functioncmds.c:1687
+#: commands/functioncmds.c:1688
 #, c-format
 msgid "must be superuser to create a cast WITHOUT FUNCTION"
 msgstr "必须是超级用户才能创建 WITHOUT FUNCTION 类型转换"
 
-#: commands/functioncmds.c:1702
+#: commands/functioncmds.c:1703
 #, c-format
 msgid "source and target data types are not physically compatible"
 msgstr "源数据类型与目标数据类型的物理表示不兼容"
 
-#: commands/functioncmds.c:1722
+#: commands/functioncmds.c:1723
 #, c-format
 msgid "composite data types are not binary-compatible"
 msgstr "复合数据类型不具备二进制兼容性"
 
-#: commands/functioncmds.c:1728
+#: commands/functioncmds.c:1729
 #, c-format
 msgid "array data types are not binary-compatible"
 msgstr "数组数据类型不具备二进制兼容性"
 
-#: commands/functioncmds.c:1736
+#: commands/functioncmds.c:1737
 #, c-format
 msgid "range data types are not binary-compatible"
 msgstr "范围数据类型不具备二进制兼容性"
 
-#: commands/functioncmds.c:1742
+#: commands/functioncmds.c:1743
 #, c-format
 msgid "enum data types are not binary-compatible"
 msgstr "枚举数据类型不具备二进制兼容性"
 
-#: commands/functioncmds.c:1759
+#: commands/functioncmds.c:1760
 #, c-format
 msgid "domain data types must not be marked binary-compatible"
 msgstr "域数据类型不得标为二进制兼容"
 
-#: commands/functioncmds.c:1769
+#: commands/functioncmds.c:1770
 #, c-format
 msgid "source data type and target data type are the same"
 msgstr "源数据类型和目标数据类型相同"
 
-#: commands/functioncmds.c:1802
+#: commands/functioncmds.c:1803
 #, c-format
 msgid "transform function must not be volatile"
 msgstr "转换函数不得为 VOLATILE"
 
-#: commands/functioncmds.c:1806
+#: commands/functioncmds.c:1807
 #, c-format
 msgid "transform function must be a normal function"
 msgstr "转换函数必须是普通函数"
 
-#: commands/functioncmds.c:1810
+#: commands/functioncmds.c:1811
 #, c-format
 msgid "transform function must not return a set"
 msgstr "转换函数不得返回集合"
 
-#: commands/functioncmds.c:1814
+#: commands/functioncmds.c:1815
 #, c-format
 msgid "transform function must take one argument"
 msgstr "转换函数必须带一个参数"
 
-#: commands/functioncmds.c:1818
+#: commands/functioncmds.c:1819
 #, c-format
 msgid "first argument of transform function must be type %s"
 msgstr "转换函数的第一个参数必须为类型 %s"
 
-#: commands/functioncmds.c:1857
+#: commands/functioncmds.c:1858
 #, c-format
 msgid "data type %s is a pseudo-type"
 msgstr "数据类型 %s 是伪类型"
 
-#: commands/functioncmds.c:1863
+#: commands/functioncmds.c:1864
 #, c-format
 msgid "data type %s is a domain"
 msgstr "数据类型 %s 是域"
 
-#: commands/functioncmds.c:1903
+#: commands/functioncmds.c:1904
 #, c-format
 msgid "return data type of FROM SQL function must be %s"
 msgstr "FROM SQL 函数的返回数据类型必须是 %s"
 
-#: commands/functioncmds.c:1929
+#: commands/functioncmds.c:1930
 #, c-format
 msgid "return data type of TO SQL function must be the transform data type"
 msgstr "TO SQL 函数的返回数据类型必须与该转换的数据类型相同"
 
-#: commands/functioncmds.c:1956
+#: commands/functioncmds.c:1957
 #, c-format
 msgid "transform for type %s language \"%s\" already exists"
 msgstr "类型 %s 在语言 \"%s\" 中的转换已存在"
 
-#: commands/functioncmds.c:2042
+#: commands/functioncmds.c:2043
 #, c-format
 msgid "transform for type %s language \"%s\" does not exist"
 msgstr "类型 %s 在语言 \"%s\" 中的转换不存在"
 
-#: commands/functioncmds.c:2066
+#: commands/functioncmds.c:2067
 #, c-format
 msgid "function %s already exists in schema \"%s\""
 msgstr "模式 \"%2$s\" 中已存在函数 %1$s"
 
-#: commands/functioncmds.c:2117
+#: commands/functioncmds.c:2118
 #, c-format
 msgid "no inline code specified"
 msgstr "没有指定内联代码"
 
-#: commands/functioncmds.c:2163
+#: commands/functioncmds.c:2164
 #, c-format
 msgid "language \"%s\" does not support inline code execution"
 msgstr "语言 \"%s\" 不支持执行内联代码"
 
-#: commands/functioncmds.c:2258
+#: commands/functioncmds.c:2259
 #, c-format
 msgid "cannot pass more than %d argument to a procedure"
 msgid_plural "cannot pass more than %d arguments to a procedure"
@@ -10878,11 +10878,11 @@ msgstr "列 \"%s\" 存在类型冲突"
 #: commands/tablecmds.c:3173 commands/tablecmds.c:3207
 #: commands/tablecmds.c:3223 commands/tablecmds.c:3330
 #: commands/tablecmds.c:3363 commands/tablecmds.c:3379
-#: parser/parse_coerce.c:2196 parser/parse_coerce.c:2216
-#: parser/parse_coerce.c:2236 parser/parse_coerce.c:2257
-#: parser/parse_coerce.c:2312 parser/parse_coerce.c:2346
-#: parser/parse_coerce.c:2422 parser/parse_coerce.c:2453
-#: parser/parse_coerce.c:2492 parser/parse_coerce.c:2559
+#: parser/parse_coerce.c:2209 parser/parse_coerce.c:2229
+#: parser/parse_coerce.c:2249 parser/parse_coerce.c:2270
+#: parser/parse_coerce.c:2325 parser/parse_coerce.c:2359
+#: parser/parse_coerce.c:2435 parser/parse_coerce.c:2466
+#: parser/parse_coerce.c:2505 parser/parse_coerce.c:2572
 #: parser/parse_param.c:223
 #, c-format
 msgid "%s versus %s"
@@ -10894,7 +10894,7 @@ msgid "column \"%s\" has a collation conflict"
 msgstr "列 \"%s\" 存在排序规则冲突"
 
 #: commands/tablecmds.c:3187 commands/tablecmds.c:3349
-#: commands/tablecmds.c:7647 parser/parse_expr.c:4781
+#: commands/tablecmds.c:7647 parser/parse_expr.c:4779
 #, c-format
 msgid "\"%s\" versus \"%s\""
 msgstr "\"%s\" 对 \"%s\""
@@ -12472,25 +12472,25 @@ msgstr "执行触发器 \"%s\" 之前，该行原本应位于分区 \"%s.%s\"。
 msgid "cannot collect transition tuples from child foreign tables"
 msgstr "不能从外部子表收集过渡元组"
 
-#: commands/trigger.c:3442 executor/nodeModifyTable.c:1578
-#: executor/nodeModifyTable.c:1652 executor/nodeModifyTable.c:2408
-#: executor/nodeModifyTable.c:2499 executor/nodeModifyTable.c:3170
-#: executor/nodeModifyTable.c:3381
+#: commands/trigger.c:3442 executor/nodeModifyTable.c:1577
+#: executor/nodeModifyTable.c:1651 executor/nodeModifyTable.c:2407
+#: executor/nodeModifyTable.c:2498 executor/nodeModifyTable.c:3169
+#: executor/nodeModifyTable.c:3380
 #, c-format
 msgid "Consider using an AFTER trigger instead of a BEFORE trigger to propagate changes to other rows."
 msgstr "考虑使用 AFTER 触发器代替 BEFORE 触发器，将更改传播到其他行。"
 
 #: commands/trigger.c:3484 executor/nodeLockRows.c:228
 #: executor/nodeLockRows.c:237 executor/nodeModifyTable.c:336
-#: executor/nodeModifyTable.c:1594 executor/nodeModifyTable.c:2425
-#: executor/nodeModifyTable.c:2649 executor/nodeModifyTable.c:3214
+#: executor/nodeModifyTable.c:1593 executor/nodeModifyTable.c:2424
+#: executor/nodeModifyTable.c:2648 executor/nodeModifyTable.c:3213
 #, c-format
 msgid "could not serialize access due to concurrent update"
 msgstr "由于并发更新，无法串行化访问"
 
-#: commands/trigger.c:3492 executor/nodeModifyTable.c:1684
-#: executor/nodeModifyTable.c:2516 executor/nodeModifyTable.c:2665
-#: executor/nodeModifyTable.c:3188
+#: commands/trigger.c:3492 executor/nodeModifyTable.c:1683
+#: executor/nodeModifyTable.c:2515 executor/nodeModifyTable.c:2664
+#: executor/nodeModifyTable.c:3187
 #, c-format
 msgid "could not serialize access due to concurrent delete"
 msgstr "由于并发删除，无法串行化访问"
@@ -14310,59 +14310,59 @@ msgstr "查询为序号为 %d 的生成列提供值。"
 msgid "Query has too few columns."
 msgstr "查询列数过少。"
 
-#: executor/nodeModifyTable.c:1577 executor/nodeModifyTable.c:1651
+#: executor/nodeModifyTable.c:1576 executor/nodeModifyTable.c:1650
 #, c-format
 msgid "tuple to be deleted was already modified by an operation triggered by the current command"
 msgstr "待删除的元组已被当前命令触发的操作修改"
 
-#: executor/nodeModifyTable.c:1806
+#: executor/nodeModifyTable.c:1805
 #, c-format
 msgid "invalid ON UPDATE specification"
 msgstr "ON UPDATE 的更新设置无效"
 
-#: executor/nodeModifyTable.c:1807
+#: executor/nodeModifyTable.c:1806
 #, c-format
 msgid "The result tuple would appear in a different partition than the original tuple."
 msgstr "结果元组将出现在与原始元组不同的分区中。"
 
-#: executor/nodeModifyTable.c:2257
+#: executor/nodeModifyTable.c:2256
 #, c-format
 msgid "cannot move tuple across partitions when a non-root ancestor of the source partition is directly referenced in a foreign key"
 msgstr "源分区的非根祖先被外键直接引用时，不能跨分区移动元组"
 
-#: executor/nodeModifyTable.c:2258
+#: executor/nodeModifyTable.c:2257
 #, c-format
 msgid "A foreign key points to ancestor \"%s\" but not the root ancestor \"%s\"."
 msgstr "外键指向祖先 \"%s\"，而不是根祖先 \"%s\"。"
 
-#: executor/nodeModifyTable.c:2261
+#: executor/nodeModifyTable.c:2260
 #, c-format
 msgid "Consider defining the foreign key on table \"%s\"."
 msgstr "可以考虑在表 \"%s\" 上定义外键。"
 
 #. translator: %s is a SQL command name
-#: executor/nodeModifyTable.c:2627 executor/nodeModifyTable.c:3176
-#: executor/nodeModifyTable.c:3387
+#: executor/nodeModifyTable.c:2626 executor/nodeModifyTable.c:3175
+#: executor/nodeModifyTable.c:3386
 #, c-format
 msgid "%s command cannot affect row a second time"
 msgstr "%s 命令不能再次影响同一行"
 
-#: executor/nodeModifyTable.c:2629
+#: executor/nodeModifyTable.c:2628
 #, c-format
 msgid "Ensure that no rows proposed for insertion within the same command have duplicate constrained values."
 msgstr "确保同一命令中待插入的行，其受约束的值没有重复。"
 
-#: executor/nodeModifyTable.c:3169 executor/nodeModifyTable.c:3380
+#: executor/nodeModifyTable.c:3168 executor/nodeModifyTable.c:3379
 #, c-format
 msgid "tuple to be updated or deleted was already modified by an operation triggered by the current command"
 msgstr "待更新或删除的元组已被当前命令触发的操作修改"
 
-#: executor/nodeModifyTable.c:3178 executor/nodeModifyTable.c:3389
+#: executor/nodeModifyTable.c:3177 executor/nodeModifyTable.c:3388
 #, c-format
 msgid "Ensure that not more than one source row matches any one target row."
 msgstr "确保每个目标行最多匹配一个源行。"
 
-#: executor/nodeModifyTable.c:3258
+#: executor/nodeModifyTable.c:3257
 #, c-format
 msgid "tuple to be merged was already moved to another partition due to concurrent update"
 msgstr "待合并的元组已因并发更新而移动到另一分区"
@@ -16996,8 +16996,8 @@ msgstr "ExtensibleNodeMethods \"%s\" 未注册"
 msgid "relation \"%s\" does not have a composite type"
 msgstr "关系 \"%s\" 没有复合类型"
 
-#: nodes/nodeFuncs.c:118 nodes/nodeFuncs.c:149 parser/parse_coerce.c:2608
-#: parser/parse_coerce.c:2746 parser/parse_coerce.c:2793
+#: nodes/nodeFuncs.c:118 nodes/nodeFuncs.c:149 parser/parse_coerce.c:2621
+#: parser/parse_coerce.c:2759 parser/parse_coerce.c:2806
 #: parser/parse_expr.c:2121 parser/parse_func.c:736 parser/parse_oper.c:891
 #: utils/fmgr/funcapi.c:669
 #, c-format
@@ -17038,38 +17038,40 @@ msgstr "%s 不能应用于外连接中可能为 NULL 的一侧"
 msgid "%s is not allowed with UNION/INTERSECT/EXCEPT"
 msgstr "%s 不允许与 UNION/INTERSECT/EXCEPT 一起使用"
 
-#: optimizer/plan/planner.c:2248 optimizer/plan/planner.c:4278
+#: optimizer/plan/planner.c:2248 optimizer/plan/planner.c:3995
+#: optimizer/plan/planner.c:4290
 #, c-format
 msgid "could not implement GROUP BY"
 msgstr "无法实现 GROUP BY"
 
-#: optimizer/plan/planner.c:2249 optimizer/plan/planner.c:4279
-#: optimizer/plan/planner.c:4960 optimizer/prep/prepunion.c:1320
+#: optimizer/plan/planner.c:2249 optimizer/plan/planner.c:3996
+#: optimizer/plan/planner.c:4291 optimizer/plan/planner.c:4972
+#: optimizer/prep/prepunion.c:905 optimizer/prep/prepunion.c:1333
 #, c-format
 msgid "Some of the datatypes only support hashing, while others only support sorting."
 msgstr "部分数据类型只支持哈希，另一些数据类型只支持排序。"
 
-#: optimizer/plan/planner.c:4959
+#: optimizer/plan/planner.c:4971
 #, c-format
 msgid "could not implement DISTINCT"
 msgstr "无法实现 DISTINCT"
 
-#: optimizer/plan/planner.c:6339
+#: optimizer/plan/planner.c:6353
 #, c-format
 msgid "could not implement window PARTITION BY"
 msgstr "无法实现窗口 PARTITION BY"
 
-#: optimizer/plan/planner.c:6340
+#: optimizer/plan/planner.c:6354
 #, c-format
 msgid "Window partitioning columns must be of sortable datatypes."
 msgstr "窗口分区列必须属于可排序的数据类型。"
 
-#: optimizer/plan/planner.c:6344
+#: optimizer/plan/planner.c:6358
 #, c-format
 msgid "could not implement window ORDER BY"
 msgstr "无法实现窗口 ORDER BY"
 
-#: optimizer/plan/planner.c:6345
+#: optimizer/plan/planner.c:6359
 #, c-format
 msgid "Window ordering columns must be of sortable datatypes."
 msgstr "窗口排序列必须属于可排序的数据类型。"
@@ -17084,13 +17086,14 @@ msgstr "无法实现递归 UNION 操作"
 msgid "All column datatypes must be hashable."
 msgstr "所有列的数据类型必须可进行哈希计算。"
 
+#. translator: %s is UNION
 #. translator: %s is UNION, INTERSECT, or EXCEPT
-#: optimizer/prep/prepunion.c:1319
+#: optimizer/prep/prepunion.c:904 optimizer/prep/prepunion.c:1332
 #, c-format
 msgid "could not implement %s"
 msgstr "无法实现 %s"
 
-#: optimizer/util/clauses.c:5019
+#: optimizer/util/clauses.c:5216
 #, c-format
 msgid "SQL function \"%s\" during inlining"
 msgstr "SQL 函数 \"%s\" 在内联期间"
@@ -17678,7 +17681,7 @@ msgstr "GROUPING 的参数必须是相关查询层次的分组表达式"
 msgid "relation \"%s\" cannot be the target of a modifying statement"
 msgstr "关系 \"%s\" 不能作为修改语句的目标"
 
-#: parser/parse_clause.c:569 parser/parse_clause.c:597 parser/parse_func.c:2608
+#: parser/parse_clause.c:569 parser/parse_clause.c:597 parser/parse_func.c:2607
 #, c-format
 msgid "set-returning functions must appear at top level of FROM"
 msgstr "返回集合的函数必须出现在 FROM 的顶层"
@@ -17943,159 +17946,166 @@ msgstr "对于列类型 %s 和偏移量类型 %s，带有 PRECEDING/FOLLOWING �
 msgid "Cast the offset value to the exact intended type."
 msgstr "将偏移量值强制转换为准确的预期类型。"
 
-#: parser/parse_coerce.c:1054 parser/parse_coerce.c:1092
-#: parser/parse_coerce.c:1110 parser/parse_coerce.c:1125
-#: parser/parse_expr.c:2155 parser/parse_expr.c:2763 parser/parse_expr.c:3414
-#: parser/parse_expr.c:3643 parser/parse_expr.c:4079 parser/parse_target.c:998
+#: parser/parse_coerce.c:1062 parser/parse_coerce.c:1070
+#: parser/parse_coerce.c:1108 parser/parse_coerce.c:1126
+#: parser/parse_coerce.c:1141 parser/parse_expr.c:2155 parser/parse_expr.c:2763
+#: parser/parse_expr.c:3412 parser/parse_expr.c:3641 parser/parse_expr.c:4077
+#: parser/parse_target.c:998
 #, c-format
 msgid "cannot cast type %s to %s"
 msgstr "不能把类型 %s 转换为 %s"
 
-#: parser/parse_coerce.c:1095
+#: parser/parse_coerce.c:1065
+#, fuzzy, c-format
+#| msgid "Cast the offset value to the exact intended type."
+msgid "Cast the whole-row variable to the desired type explicitly."
+msgstr "将偏移量值强制转换为准确的预期类型。"
+
+#: parser/parse_coerce.c:1111
 #, c-format
 msgid "Input has too few columns."
 msgstr "输入列数过少。"
 
-#: parser/parse_coerce.c:1113
+#: parser/parse_coerce.c:1129
 #, c-format
 msgid "Cannot cast type %s to %s in column %d."
 msgstr "不能把第 %3$d 列的类型 %1$s 转换为 %2$s。"
 
-#: parser/parse_coerce.c:1128
+#: parser/parse_coerce.c:1144
 #, c-format
 msgid "Input has too many columns."
 msgstr "输入列数过多。"
 
 #. translator: first %s is name of a SQL construct, eg WHERE
 #. translator: first %s is name of a SQL construct, eg LIMIT
-#: parser/parse_coerce.c:1183 parser/parse_coerce.c:1231
+#: parser/parse_coerce.c:1198 parser/parse_coerce.c:1245
 #, c-format
 msgid "argument of %s must be type %s, not type %s"
 msgstr "%s 的参数必须是类型 %s，而不是类型 %s"
 
 #. translator: %s is name of a SQL construct, eg WHERE
 #. translator: %s is name of a SQL construct, eg LIMIT
-#: parser/parse_coerce.c:1194 parser/parse_coerce.c:1243
+#: parser/parse_coerce.c:1209 parser/parse_coerce.c:1257
 #, c-format
 msgid "argument of %s must not return a set"
 msgstr "%s 的参数不得返回集合"
 
 #. translator: first %s is name of a SQL construct, eg CASE
-#: parser/parse_coerce.c:1424
+#: parser/parse_coerce.c:1438
 #, c-format
 msgid "%s types %s and %s cannot be matched"
 msgstr "%s 的类型 %s 和 %s 不能匹配"
 
-#: parser/parse_coerce.c:1540
+#: parser/parse_coerce.c:1554
 #, c-format
 msgid "argument types %s and %s cannot be matched"
 msgstr "参数类型 %s 和 %s 不能匹配"
 
 #. translator: first %s is name of a SQL construct, eg CASE
-#: parser/parse_coerce.c:1592
+#: parser/parse_coerce.c:1605
 #, c-format
 msgid "%s could not convert type %s to %s"
 msgstr "%s 无法把类型 %s 转换为 %s"
 
-#: parser/parse_coerce.c:2195 parser/parse_coerce.c:2215
-#: parser/parse_coerce.c:2235 parser/parse_coerce.c:2256
-#: parser/parse_coerce.c:2311 parser/parse_coerce.c:2345
+#: parser/parse_coerce.c:2208 parser/parse_coerce.c:2228
+#: parser/parse_coerce.c:2248 parser/parse_coerce.c:2269
+#: parser/parse_coerce.c:2324 parser/parse_coerce.c:2358
 #, c-format
 msgid "arguments declared \"%s\" are not all alike"
 msgstr "声明为 \"%s\" 的参数类型并不全都相同"
 
-#: parser/parse_coerce.c:2290 parser/parse_coerce.c:2403
+#: parser/parse_coerce.c:2303 parser/parse_coerce.c:2416
 #: utils/fmgr/funcapi.c:600
 #, c-format
 msgid "argument declared %s is not an array but type %s"
 msgstr "声明为 %s 的参数不是数组，而是类型 %s"
 
-#: parser/parse_coerce.c:2323 parser/parse_coerce.c:2473
+#: parser/parse_coerce.c:2336 parser/parse_coerce.c:2486
 #: utils/fmgr/funcapi.c:614
 #, c-format
 msgid "argument declared %s is not a range type but type %s"
 msgstr "声明为 %s 的参数不是范围类型，而是类型 %s"
 
-#: parser/parse_coerce.c:2357 parser/parse_coerce.c:2437
-#: parser/parse_coerce.c:2570 utils/fmgr/funcapi.c:632 utils/fmgr/funcapi.c:697
+#: parser/parse_coerce.c:2370 parser/parse_coerce.c:2450
+#: parser/parse_coerce.c:2583 utils/fmgr/funcapi.c:632 utils/fmgr/funcapi.c:697
 #, c-format
 msgid "argument declared %s is not a multirange type but type %s"
 msgstr "声明为 %s 的参数不是多范围类型，而是类型 %s"
 
-#: parser/parse_coerce.c:2394
+#: parser/parse_coerce.c:2407
 #, c-format
 msgid "cannot determine element type of \"anyarray\" argument"
 msgstr "不能确定 \"anyarray\" 参数的元素类型"
 
-#: parser/parse_coerce.c:2420 parser/parse_coerce.c:2451
-#: parser/parse_coerce.c:2490 parser/parse_coerce.c:2556
+#: parser/parse_coerce.c:2433 parser/parse_coerce.c:2464
+#: parser/parse_coerce.c:2503 parser/parse_coerce.c:2569
 #, c-format
 msgid "argument declared %s is not consistent with argument declared %s"
 msgstr "声明为 %s 的参数与声明为 %s 的参数不一致"
 
-#: parser/parse_coerce.c:2515
+#: parser/parse_coerce.c:2528
 #, c-format
 msgid "could not determine polymorphic type because input has type %s"
 msgstr "无法确定多态类型，因为输入类型为 %s"
 
-#: parser/parse_coerce.c:2529
+#: parser/parse_coerce.c:2542
 #, c-format
 msgid "type matched to anynonarray is an array type: %s"
 msgstr "与 anynonarray 匹配的类型是数组类型: %s"
 
-#: parser/parse_coerce.c:2539
+#: parser/parse_coerce.c:2552
 #, c-format
 msgid "type matched to anyenum is not an enum type: %s"
 msgstr "与 anyenum 匹配的类型不是枚举类型: %s"
 
-#: parser/parse_coerce.c:2600
+#: parser/parse_coerce.c:2613
 #, c-format
 msgid "arguments of anycompatible family cannot be cast to a common type"
 msgstr "anycompatible 类型族的参数不能转换为共同类型"
 
-#: parser/parse_coerce.c:2618 parser/parse_coerce.c:2639
-#: parser/parse_coerce.c:2689 parser/parse_coerce.c:2694
-#: parser/parse_coerce.c:2758 parser/parse_coerce.c:2770
+#: parser/parse_coerce.c:2631 parser/parse_coerce.c:2652
+#: parser/parse_coerce.c:2702 parser/parse_coerce.c:2707
+#: parser/parse_coerce.c:2771 parser/parse_coerce.c:2783
 #, c-format
 msgid "could not determine polymorphic type %s because input has type %s"
 msgstr "无法确定多态类型 %s，因为输入类型为 %s"
 
-#: parser/parse_coerce.c:2628
+#: parser/parse_coerce.c:2641
 #, c-format
 msgid "anycompatiblerange type %s does not match anycompatible type %s"
 msgstr "anycompatiblerange 类型 %s 与 anycompatible 类型 %s 不匹配"
 
-#: parser/parse_coerce.c:2649
+#: parser/parse_coerce.c:2662
 #, c-format
 msgid "anycompatiblemultirange type %s does not match anycompatible type %s"
 msgstr "anycompatiblemultirange 类型 %s 与 anycompatible 类型 %s 不匹配"
 
-#: parser/parse_coerce.c:2663
+#: parser/parse_coerce.c:2676
 #, c-format
 msgid "type matched to anycompatiblenonarray is an array type: %s"
 msgstr "与 anycompatiblenonarray 匹配的类型是数组类型: %s"
 
-#: parser/parse_coerce.c:2898
+#: parser/parse_coerce.c:2911
 #, c-format
 msgid "A result of type %s requires at least one input of type anyrange or anymultirange."
 msgstr "类型为 %s 的结果需要至少有一个 anyrange 或 anymultirange 类型的输入。"
 
-#: parser/parse_coerce.c:2915
+#: parser/parse_coerce.c:2928
 #, c-format
 msgid "A result of type %s requires at least one input of type anycompatiblerange or anycompatiblemultirange."
 msgstr "类型为 %s 的结果需要至少有一个 anycompatiblerange 或 anycompatiblemultirange 类型的输入。"
 
-#: parser/parse_coerce.c:2927
+#: parser/parse_coerce.c:2940
 #, c-format
 msgid "A result of type %s requires at least one input of type anyelement, anyarray, anynonarray, anyenum, anyrange, or anymultirange."
 msgstr "类型为 %s 的结果需要至少有一个 anyelement, anyarray, anynonarray, anyenum, anyrange 或 anymultirange 类型的输入。"
 
-#: parser/parse_coerce.c:2939
+#: parser/parse_coerce.c:2952
 #, c-format
 msgid "A result of type %s requires at least one input of type anycompatible, anycompatiblearray, anycompatiblenonarray, anycompatiblerange, or anycompatiblemultirange."
 msgstr "类型为 %s 的结果需要至少有一个 anycompatible, anycompatiblearray, anycompatiblenonarray, anycompatiblerange 或 anycompatiblemultirange 类型的输入。"
 
-#: parser/parse_coerce.c:2969
+#: parser/parse_coerce.c:2982
 msgid "A result of type internal requires at least one input of type internal."
 msgstr "internal 类型的结果需要至少有一个 internal 类型的输入。"
 
@@ -18339,13 +18349,13 @@ msgid "there is no parameter $%d"
 msgstr "没有参数 $%d"
 
 #. translator: %s is name of a SQL construct, eg NULLIF
-#: parser/parse_expr.c:1104 parser/parse_expr.c:3074
+#: parser/parse_expr.c:1104 parser/parse_expr.c:3072
 #, c-format
 msgid "%s requires = operator to yield boolean"
 msgstr "%s 需要 = 操作符返回布尔值"
 
 #. translator: %s is name of a SQL construct, eg NULLIF
-#: parser/parse_expr.c:1110 parser/parse_expr.c:3081
+#: parser/parse_expr.c:1110 parser/parse_expr.c:3079
 #, c-format
 msgid "%s must not return a set"
 msgstr "%s 不得返回集合"
@@ -18366,7 +18376,7 @@ msgid "source for a multiple-column UPDATE item must be a sub-SELECT or ROW() ex
 msgstr "多列 UPDATE 项的来源必须是子 SELECT 或 ROW() 表达式"
 
 #. translator: %s is name of a SQL construct, eg GROUP BY
-#: parser/parse_expr.c:1761 parser/parse_expr.c:2252 parser/parse_func.c:2734
+#: parser/parse_expr.c:1761 parser/parse_expr.c:2252 parser/parse_func.c:2733
 #, c-format
 msgid "set-returning functions are not allowed in %s"
 msgstr "%s 中不允许使用返回集合的函数"
@@ -18423,7 +18433,7 @@ msgstr "COPY FROM WHERE 条件中不能使用子查询"
 msgid "cannot use subquery in column generation expression"
 msgstr "列生成表达式中不能使用子查询"
 
-#: parser/parse_expr.c:1915 parser/parse_expr.c:3773
+#: parser/parse_expr.c:1915 parser/parse_expr.c:3771
 #, c-format
 msgid "subquery must return only one column"
 msgstr "子查询必须只能返回一列"
@@ -18478,134 +18488,134 @@ msgstr "XML 属性名称 \"%s\" 出现多次"
 msgid "cannot cast XMLSERIALIZE result to %s"
 msgstr "不能把 XMLSERIALIZE 的结果转换为 %s"
 
-#: parser/parse_expr.c:2836 parser/parse_expr.c:3032
+#: parser/parse_expr.c:2834 parser/parse_expr.c:3030
 #, c-format
 msgid "unequal number of entries in row expressions"
 msgstr "行表达式中的元素数量不相等"
 
-#: parser/parse_expr.c:2846
+#: parser/parse_expr.c:2844
 #, c-format
 msgid "cannot compare rows of zero length"
 msgstr "不能比较长度为零的行"
 
-#: parser/parse_expr.c:2871
+#: parser/parse_expr.c:2869
 #, c-format
 msgid "row comparison operator must yield type boolean, not type %s"
 msgstr "行比较操作符必须返回 boolean 类型，而不是类型 %s"
 
-#: parser/parse_expr.c:2878
+#: parser/parse_expr.c:2876
 #, c-format
 msgid "row comparison operator must not return a set"
 msgstr "行比较操作符不得返回集合"
 
-#: parser/parse_expr.c:2937 parser/parse_expr.c:2978
+#: parser/parse_expr.c:2935 parser/parse_expr.c:2976
 #, c-format
 msgid "could not determine interpretation of row comparison operator %s"
 msgstr "无法确定行比较操作符 %s 的解释"
 
-#: parser/parse_expr.c:2939
+#: parser/parse_expr.c:2937
 #, c-format
 msgid "Row comparison operators must be associated with btree operator families."
 msgstr "行比较操作符必须与 btree 操作符族关联。"
 
-#: parser/parse_expr.c:2980
+#: parser/parse_expr.c:2978
 #, c-format
 msgid "There are multiple equally-plausible candidates."
 msgstr "存在多个同样合理的候选项。"
 
-#: parser/parse_expr.c:3315
+#: parser/parse_expr.c:3313
 #, c-format
 msgid "JSON ENCODING clause is only allowed for bytea input type"
 msgstr "只有 bytea 输入类型才允许使用 JSON ENCODING 子句"
 
-#: parser/parse_expr.c:3379
+#: parser/parse_expr.c:3377
 #, c-format
 msgid "cannot use non-string types with implicit FORMAT JSON clause"
 msgstr "非字符串类型不能使用隐式 FORMAT JSON 子句"
 
-#: parser/parse_expr.c:3380
+#: parser/parse_expr.c:3378
 #, c-format
 msgid "cannot use non-string types with explicit FORMAT JSON clause"
 msgstr "非字符串类型不能使用显式 FORMAT JSON 子句"
 
-#: parser/parse_expr.c:3469
+#: parser/parse_expr.c:3467
 #, c-format
 msgid "cannot use JSON format with non-string output types"
 msgstr "非字符串输出类型不能使用 JSON 格式"
 
-#: parser/parse_expr.c:3482
+#: parser/parse_expr.c:3480
 #, c-format
 msgid "cannot set JSON encoding for non-bytea output types"
 msgstr "不能为非 bytea 输出类型设置 JSON 编码"
 
-#: parser/parse_expr.c:3487
+#: parser/parse_expr.c:3485
 #, c-format
 msgid "unsupported JSON encoding"
 msgstr "不支持的 JSON 编码"
 
-#: parser/parse_expr.c:3488
+#: parser/parse_expr.c:3486
 #, c-format
 msgid "Only UTF8 JSON encoding is supported."
 msgstr "仅支持 UTF8 JSON 编码。"
 
-#: parser/parse_expr.c:3525
+#: parser/parse_expr.c:3523
 #, c-format
 msgid "returning SETOF types is not supported in SQL/JSON functions"
 msgstr "SQL/JSON 函数不支持返回 SETOF 类型"
 
-#: parser/parse_expr.c:3530
+#: parser/parse_expr.c:3528
 #, c-format
 msgid "returning pseudo-types is not supported in SQL/JSON functions"
 msgstr "SQL/JSON 函数不支持返回伪类型"
 
-#: parser/parse_expr.c:3858 parser/parse_func.c:921
+#: parser/parse_expr.c:3856 parser/parse_func.c:921
 #, c-format
 msgid "aggregate ORDER BY is not implemented for window functions"
 msgstr "尚未实现窗口函数中的聚合 ORDER BY"
 
-#: parser/parse_expr.c:4091
+#: parser/parse_expr.c:4089
 #, c-format
 msgid "cannot use JSON FORMAT ENCODING clause for non-bytea input types"
 msgstr "非 bytea 输入类型不能使用 JSON FORMAT ENCODING 子句"
 
-#: parser/parse_expr.c:4111
+#: parser/parse_expr.c:4109
 #, c-format
 msgid "cannot use type %s in IS JSON predicate"
 msgstr "IS JSON 谓词中不能使用类型 %s"
 
-#: parser/parse_expr.c:4137 parser/parse_expr.c:4258
+#: parser/parse_expr.c:4135 parser/parse_expr.c:4256
 #, c-format
 msgid "cannot use type %s in RETURNING clause of %s"
 msgstr "%2$s 的 RETURNING 子句中不能使用类型 %1$s"
 
-#: parser/parse_expr.c:4139
+#: parser/parse_expr.c:4137
 #, c-format
 msgid "Try returning json or jsonb."
 msgstr "尝试返回 json 或 jsonb。"
 
-#: parser/parse_expr.c:4187
+#: parser/parse_expr.c:4185
 #, c-format
 msgid "cannot use non-string types with WITH UNIQUE KEYS clause"
 msgstr "非字符串类型不能使用 WITH UNIQUE KEYS 子句"
 
-#: parser/parse_expr.c:4261
+#: parser/parse_expr.c:4259
 #, c-format
 msgid "Try returning a string type or bytea."
 msgstr "尝试返回字符串类型或 bytea。"
 
-#: parser/parse_expr.c:4329
+#: parser/parse_expr.c:4327
 #, c-format
 msgid "cannot specify FORMAT JSON in RETURNING clause of %s()"
 msgstr "%s() 的 RETURNING 子句中不能指定 FORMAT JSON"
 
-#: parser/parse_expr.c:4342
+#: parser/parse_expr.c:4340
 #, c-format
 msgid "SQL/JSON QUOTES behavior must not be specified when WITH WRAPPER is used"
 msgstr "使用 WITH WRAPPER 时，不得指定 SQL/JSON QUOTES 行为"
 
 #. translator: %s is name of a SQL/JSON clause (eg. ON EMPTY)
-#: parser/parse_expr.c:4356 parser/parse_expr.c:4385 parser/parse_expr.c:4416
-#: parser/parse_expr.c:4442 parser/parse_expr.c:4468
+#: parser/parse_expr.c:4354 parser/parse_expr.c:4383 parser/parse_expr.c:4414
+#: parser/parse_expr.c:4440 parser/parse_expr.c:4466
 #: parser/parse_jsontable.c:94
 #, c-format
 msgid "invalid %s behavior"
@@ -18613,7 +18623,7 @@ msgstr "%s 行为无效"
 
 #. translator: first %s is name of a SQL/JSON clause (eg. ON EMPTY),
 #. second %s is a SQL/JSON function name (e.g. JSON_QUERY)
-#: parser/parse_expr.c:4359 parser/parse_expr.c:4388
+#: parser/parse_expr.c:4357 parser/parse_expr.c:4386
 #, c-format
 msgid "Only ERROR, NULL, EMPTY ARRAY, EMPTY OBJECT, or DEFAULT expression is allowed in %s for %s."
 msgstr "%2$s 的 %1$s 中只允许使用 ERROR, NULL, EMPTY ARRAY, EMPTY OBJECT 或 DEFAULT 表达式。"
@@ -18621,73 +18631,73 @@ msgstr "%2$s 的 %1$s 中只允许使用 ERROR, NULL, EMPTY ARRAY, EMPTY OBJECT 
 #. translator: first %s is name of a SQL/JSON clause (eg. ON EMPTY)
 #. translator: first %s is name a SQL/JSON clause (eg. ON EMPTY)
 #. translator: first %s is name of a SQL/JSON clause (eg. ON EMPTY)
-#: parser/parse_expr.c:4366 parser/parse_expr.c:4395 parser/parse_expr.c:4424
-#: parser/parse_expr.c:4452 parser/parse_expr.c:4478
+#: parser/parse_expr.c:4364 parser/parse_expr.c:4393 parser/parse_expr.c:4422
+#: parser/parse_expr.c:4450 parser/parse_expr.c:4476
 #, c-format
 msgid "invalid %s behavior for column \"%s\""
 msgstr "列 \"%2$s\" 的 %1$s 行为无效"
 
 #. translator: %s is name of a SQL/JSON clause (eg. ON EMPTY)
-#: parser/parse_expr.c:4369 parser/parse_expr.c:4398
+#: parser/parse_expr.c:4367 parser/parse_expr.c:4396
 #, c-format
 msgid "Only ERROR, NULL, EMPTY ARRAY, EMPTY OBJECT, or DEFAULT expression is allowed in %s for formatted columns."
 msgstr "格式化列的 %s 中只允许使用 ERROR, NULL, EMPTY ARRAY, EMPTY OBJECT 或 DEFAULT 表达式。"
 
-#: parser/parse_expr.c:4417
+#: parser/parse_expr.c:4415
 #, c-format
 msgid "Only ERROR, TRUE, FALSE, or UNKNOWN is allowed in %s for %s."
 msgstr "%2$s 的 %1$s 中只允许使用 ERROR, TRUE, FALSE 或 UNKNOWN。"
 
 #. translator: %s is name of a SQL/JSON clause (eg. ON EMPTY)
-#: parser/parse_expr.c:4427
+#: parser/parse_expr.c:4425
 #, c-format
 msgid "Only ERROR, TRUE, FALSE, or UNKNOWN is allowed in %s for EXISTS columns."
 msgstr "EXISTS 列的 %s 中只允许使用 ERROR, TRUE, FALSE 或 UNKNOWN。"
 
 #. translator: first %s is name of a SQL/JSON clause (eg. ON EMPTY),
 #. second %s is a SQL/JSON function name (e.g. JSON_QUERY)
-#: parser/parse_expr.c:4445 parser/parse_expr.c:4471
+#: parser/parse_expr.c:4443 parser/parse_expr.c:4469
 #, c-format
 msgid "Only ERROR, NULL, or DEFAULT expression is allowed in %s for %s."
 msgstr "%2$s 的 %1$s 中只允许使用 ERROR, NULL 或 DEFAULT 表达式。"
 
 #. translator: %s is name of a SQL/JSON clause (eg. ON EMPTY)
-#: parser/parse_expr.c:4455 parser/parse_expr.c:4481
+#: parser/parse_expr.c:4453 parser/parse_expr.c:4479
 #, c-format
 msgid "Only ERROR, NULL, or DEFAULT expression is allowed in %s for scalar columns."
 msgstr "标量列的 %s 中只允许使用 ERROR, NULL 或 DEFAULT 表达式。"
 
-#: parser/parse_expr.c:4515
+#: parser/parse_expr.c:4513
 #, c-format
 msgid "JSON path expression must be of type %s, not of type %s"
 msgstr "JSON 路径表达式必须是类型 %s，而不是类型 %s"
 
-#: parser/parse_expr.c:4755
+#: parser/parse_expr.c:4753
 #, c-format
 msgid "can only specify a constant, non-aggregate function, or operator expression for DEFAULT"
 msgstr "DEFAULT 只能指定常量、非聚合函数或操作符表达式"
 
-#: parser/parse_expr.c:4760
+#: parser/parse_expr.c:4758
 #, c-format
 msgid "DEFAULT expression must not contain column references"
 msgstr "DEFAULT 表达式不得包含列引用"
 
-#: parser/parse_expr.c:4765
+#: parser/parse_expr.c:4763
 #, c-format
 msgid "DEFAULT expression must not return a set"
 msgstr "DEFAULT 表达式不得返回集合"
 
-#: parser/parse_expr.c:4780
+#: parser/parse_expr.c:4778
 #, c-format
 msgid "collation of DEFAULT expression conflicts with RETURNING clause"
 msgstr "DEFAULT 表达式的排序规则与 RETURNING 子句冲突"
 
-#: parser/parse_expr.c:4868 parser/parse_expr.c:4877
+#: parser/parse_expr.c:4866 parser/parse_expr.c:4875
 #, c-format
 msgid "cannot cast behavior expression of type %s to %s"
 msgstr "不能将类型为 %s 的行为表达式转换为 %s"
 
-#: parser/parse_expr.c:4871
+#: parser/parse_expr.c:4869
 #, c-format
 msgid "You will need to explicitly cast the expression to type %s."
 msgstr "需要将表达式显式转换为类型 %s。"
@@ -18702,7 +18712,7 @@ msgstr "多次使用参数名 \"%s\""
 msgid "positional argument cannot follow named argument"
 msgstr "位置参数不能位于命名参数之后"
 
-#: parser/parse_func.c:287 parser/parse_func.c:2423
+#: parser/parse_func.c:287 parser/parse_func.c:2422
 #, c-format
 msgid "%s is not a procedure"
 msgstr "%s 不是过程"
@@ -18819,7 +18829,7 @@ msgstr "无法选出最佳候选函数。可能需要添加显式类型转换。
 msgid "No aggregate function matches the given name and argument types. Perhaps you misplaced ORDER BY; ORDER BY must appear after all regular arguments of the aggregate."
 msgstr "没有聚合函数与指定名称及参数类型匹配。可能放错了 ORDER BY 的位置；ORDER BY 必须位于聚合函数的所有常规参数之后。"
 
-#: parser/parse_func.c:622 parser/parse_func.c:2466
+#: parser/parse_func.c:622 parser/parse_func.c:2465
 #, c-format
 msgid "procedure %s does not exist"
 msgstr "过程 %s 不存在"
@@ -18884,152 +18894,152 @@ msgstr "窗口函数调用中不能包含返回集合的函数调用"
 msgid "window functions cannot return sets"
 msgstr "窗口函数不能返回集合"
 
-#: parser/parse_func.c:2222 parser/parse_func.c:2495
+#: parser/parse_func.c:2221 parser/parse_func.c:2494
 #, c-format
 msgid "could not find a function named \"%s\""
 msgstr "无法找到名为 \"%s\" 的函数"
 
-#: parser/parse_func.c:2236 parser/parse_func.c:2513
+#: parser/parse_func.c:2235 parser/parse_func.c:2512
 #, c-format
 msgid "function name \"%s\" is not unique"
 msgstr "函数名 \"%s\" 不唯一"
 
-#: parser/parse_func.c:2238 parser/parse_func.c:2516
+#: parser/parse_func.c:2237 parser/parse_func.c:2515
 #, c-format
 msgid "Specify the argument list to select the function unambiguously."
 msgstr "指定参数列表以明确选择函数。"
 
-#: parser/parse_func.c:2282
+#: parser/parse_func.c:2281
 #, c-format
 msgid "procedures cannot have more than %d argument"
 msgid_plural "procedures cannot have more than %d arguments"
 msgstr[0] "过程的参数数量不能超过 %d 个"
 
-#: parser/parse_func.c:2413
+#: parser/parse_func.c:2412
 #, c-format
 msgid "%s is not a function"
 msgstr "%s 不是函数"
 
-#: parser/parse_func.c:2433
+#: parser/parse_func.c:2432
 #, c-format
 msgid "function %s is not an aggregate"
 msgstr "函数 %s 不是聚合函数"
 
-#: parser/parse_func.c:2461
+#: parser/parse_func.c:2460
 #, c-format
 msgid "could not find a procedure named \"%s\""
 msgstr "无法找到名为 \"%s\" 的过程"
 
-#: parser/parse_func.c:2475
+#: parser/parse_func.c:2474
 #, c-format
 msgid "could not find an aggregate named \"%s\""
 msgstr "无法找到名为 \"%s\" 的聚合函数"
 
-#: parser/parse_func.c:2480
+#: parser/parse_func.c:2479
 #, c-format
 msgid "aggregate %s(*) does not exist"
 msgstr "聚合函数 %s(*) 不存在"
 
-#: parser/parse_func.c:2485
+#: parser/parse_func.c:2484
 #, c-format
 msgid "aggregate %s does not exist"
 msgstr "聚合函数 %s 不存在"
 
-#: parser/parse_func.c:2521
+#: parser/parse_func.c:2520
 #, c-format
 msgid "procedure name \"%s\" is not unique"
 msgstr "过程名 \"%s\" 不唯一"
 
-#: parser/parse_func.c:2524
+#: parser/parse_func.c:2523
 #, c-format
 msgid "Specify the argument list to select the procedure unambiguously."
 msgstr "指定参数列表以明确选择过程。"
 
-#: parser/parse_func.c:2529
+#: parser/parse_func.c:2528
 #, c-format
 msgid "aggregate name \"%s\" is not unique"
 msgstr "聚合函数名 \"%s\" 不唯一"
 
-#: parser/parse_func.c:2532
+#: parser/parse_func.c:2531
 #, c-format
 msgid "Specify the argument list to select the aggregate unambiguously."
 msgstr "指定参数列表以明确选择聚合函数。"
 
-#: parser/parse_func.c:2537
+#: parser/parse_func.c:2536
 #, c-format
 msgid "routine name \"%s\" is not unique"
 msgstr "例程名 \"%s\" 不唯一"
 
-#: parser/parse_func.c:2540
+#: parser/parse_func.c:2539
 #, c-format
 msgid "Specify the argument list to select the routine unambiguously."
 msgstr "指定参数列表以明确选择例程。"
 
-#: parser/parse_func.c:2595
+#: parser/parse_func.c:2594
 msgid "set-returning functions are not allowed in JOIN conditions"
 msgstr "JOIN 条件中不允许使用返回集合的函数"
 
-#: parser/parse_func.c:2616
+#: parser/parse_func.c:2615
 msgid "set-returning functions are not allowed in policy expressions"
 msgstr "策略表达式中不允许使用返回集合的函数"
 
-#: parser/parse_func.c:2632
+#: parser/parse_func.c:2631
 msgid "set-returning functions are not allowed in window definitions"
 msgstr "窗口定义中不允许使用返回集合的函数"
 
-#: parser/parse_func.c:2670
+#: parser/parse_func.c:2669
 msgid "set-returning functions are not allowed in MERGE WHEN conditions"
 msgstr "MERGE WHEN 条件中不允许使用返回集合的函数"
 
-#: parser/parse_func.c:2674
+#: parser/parse_func.c:2673
 msgid "set-returning functions are not allowed in check constraints"
 msgstr "检查约束中不允许使用返回集合的函数"
 
-#: parser/parse_func.c:2678
+#: parser/parse_func.c:2677
 msgid "set-returning functions are not allowed in DEFAULT expressions"
 msgstr "DEFAULT 表达式中不允许使用返回集合的函数"
 
-#: parser/parse_func.c:2681
+#: parser/parse_func.c:2680
 msgid "set-returning functions are not allowed in index expressions"
 msgstr "索引表达式中不允许使用返回集合的函数"
 
-#: parser/parse_func.c:2684
+#: parser/parse_func.c:2683
 msgid "set-returning functions are not allowed in index predicates"
 msgstr "索引谓词中不允许使用返回集合的函数"
 
-#: parser/parse_func.c:2687
+#: parser/parse_func.c:2686
 msgid "set-returning functions are not allowed in statistics expressions"
 msgstr "统计信息表达式中不允许使用返回集合的函数"
 
-#: parser/parse_func.c:2690
+#: parser/parse_func.c:2689
 msgid "set-returning functions are not allowed in transform expressions"
 msgstr "转换表达式中不允许使用返回集合的函数"
 
-#: parser/parse_func.c:2693
+#: parser/parse_func.c:2692
 msgid "set-returning functions are not allowed in EXECUTE parameters"
 msgstr "EXECUTE 参数中不允许使用返回集合的函数"
 
-#: parser/parse_func.c:2696
+#: parser/parse_func.c:2695
 msgid "set-returning functions are not allowed in trigger WHEN conditions"
 msgstr "触发器 WHEN 条件中不允许使用返回集合的函数"
 
-#: parser/parse_func.c:2699
+#: parser/parse_func.c:2698
 msgid "set-returning functions are not allowed in partition bound"
 msgstr "分区边界中不允许使用返回集合的函数"
 
-#: parser/parse_func.c:2702
+#: parser/parse_func.c:2701
 msgid "set-returning functions are not allowed in partition key expressions"
 msgstr "分区键表达式中不允许使用返回集合的函数"
 
-#: parser/parse_func.c:2705
+#: parser/parse_func.c:2704
 msgid "set-returning functions are not allowed in CALL arguments"
 msgstr "CALL 参数中不允许使用返回集合的函数"
 
-#: parser/parse_func.c:2708
+#: parser/parse_func.c:2707
 msgid "set-returning functions are not allowed in COPY FROM WHERE conditions"
 msgstr "COPY FROM WHERE 条件中不允许使用返回集合的函数"
 
-#: parser/parse_func.c:2711
+#: parser/parse_func.c:2710
 msgid "set-returning functions are not allowed in column generation expressions"
 msgstr "列生成表达式中不允许使用返回集合的函数"
 
@@ -20384,7 +20394,7 @@ msgstr "无法加载 %s"
 msgid "postmaster became multithreaded during startup"
 msgstr "postmaster 在启动期间变为多线程"
 
-#: postmaster/postmaster.c:1344 postmaster/postmaster.c:3669
+#: postmaster/postmaster.c:1344 postmaster/postmaster.c:3670
 #, c-format
 msgid "Set the LC_ALL environment variable to a valid locale."
 msgstr "将 LC_ALL 环境变量设为有效的区域设置。"
@@ -20477,176 +20487,176 @@ msgstr "收到立即关闭请求"
 msgid "shutdown at recovery target"
 msgstr "在恢复目标处关闭"
 
-#: postmaster/postmaster.c:2428
+#: postmaster/postmaster.c:2429
 msgid "startup process"
 msgstr "启动进程"
 
-#: postmaster/postmaster.c:2469
+#: postmaster/postmaster.c:2470
 #, c-format
 msgid "database system is ready to accept connections"
 msgstr "数据库系统已准备好接受连接"
 
-#: postmaster/postmaster.c:2490
+#: postmaster/postmaster.c:2491
 msgid "background writer process"
 msgstr "后台写入器进程"
 
-#: postmaster/postmaster.c:2537
+#: postmaster/postmaster.c:2538
 msgid "checkpointer process"
 msgstr "检查点进程"
 
-#: postmaster/postmaster.c:2553
+#: postmaster/postmaster.c:2554
 msgid "WAL writer process"
 msgstr "WAL 写入进程"
 
-#: postmaster/postmaster.c:2568
+#: postmaster/postmaster.c:2569
 msgid "WAL receiver process"
 msgstr "WAL 接收进程"
 
-#: postmaster/postmaster.c:2582
+#: postmaster/postmaster.c:2583
 msgid "WAL summarizer process"
 msgstr "WAL 摘要生成进程"
 
-#: postmaster/postmaster.c:2597
+#: postmaster/postmaster.c:2598
 msgid "autovacuum launcher process"
 msgstr "自动清理启动进程"
 
-#: postmaster/postmaster.c:2615
+#: postmaster/postmaster.c:2616
 msgid "archiver process"
 msgstr "归档进程"
 
-#: postmaster/postmaster.c:2628
+#: postmaster/postmaster.c:2629
 msgid "system logger process"
 msgstr "系统日志进程"
 
-#: postmaster/postmaster.c:2645
+#: postmaster/postmaster.c:2646
 msgid "slot sync worker process"
 msgstr "槽同步工作进程"
 
-#: postmaster/postmaster.c:2701
+#: postmaster/postmaster.c:2702
 #, c-format
 msgid "background worker \"%s\""
 msgstr "后台工作进程 \"%s\""
 
-#: postmaster/postmaster.c:2780 postmaster/postmaster.c:2800
-#: postmaster/postmaster.c:2807 postmaster/postmaster.c:2825
+#: postmaster/postmaster.c:2781 postmaster/postmaster.c:2801
+#: postmaster/postmaster.c:2808 postmaster/postmaster.c:2826
 msgid "server process"
 msgstr "服务器进程"
 
-#: postmaster/postmaster.c:2879
+#: postmaster/postmaster.c:2880
 #, c-format
 msgid "terminating any other active server processes"
 msgstr "正在终止其他所有活动的服务器进程"
 
 #. translator: %s is a noun phrase describing a child process, such as
 #. "server process"
-#: postmaster/postmaster.c:3067
+#: postmaster/postmaster.c:3068
 #, c-format
 msgid "%s (PID %d) exited with exit code %d"
 msgstr "%s（PID %d）已退出，退出码为 %d"
 
-#: postmaster/postmaster.c:3069 postmaster/postmaster.c:3081
-#: postmaster/postmaster.c:3091 postmaster/postmaster.c:3102
+#: postmaster/postmaster.c:3070 postmaster/postmaster.c:3082
+#: postmaster/postmaster.c:3092 postmaster/postmaster.c:3103
 #, c-format
 msgid "Failed process was running: %s"
 msgstr "出错进程当时正在运行: %s"
 
 #. translator: %s is a noun phrase describing a child process, such as
 #. "server process"
-#: postmaster/postmaster.c:3078
+#: postmaster/postmaster.c:3079
 #, c-format
 msgid "%s (PID %d) was terminated by exception 0x%X"
 msgstr "%s（PID %d）被异常 0x%X 终止"
 
 #. translator: %s is a noun phrase describing a child process, such as
 #. "server process"
-#: postmaster/postmaster.c:3088
+#: postmaster/postmaster.c:3089
 #, c-format
 msgid "%s (PID %d) was terminated by signal %d: %s"
 msgstr "%s（PID %d）被信号 %d 终止: %s"
 
 #. translator: %s is a noun phrase describing a child process, such as
 #. "server process"
-#: postmaster/postmaster.c:3100
+#: postmaster/postmaster.c:3101
 #, c-format
 msgid "%s (PID %d) exited with unrecognized status %d"
 msgstr "%s（PID %d）已退出，状态 %d 无法识别"
 
-#: postmaster/postmaster.c:3316
+#: postmaster/postmaster.c:3317
 #, c-format
 msgid "abnormal database system shutdown"
 msgstr "数据库系统异常关闭"
 
-#: postmaster/postmaster.c:3342
+#: postmaster/postmaster.c:3343
 #, c-format
 msgid "shutting down due to startup process failure"
 msgstr "因启动进程失败而关闭"
 
-#: postmaster/postmaster.c:3348
+#: postmaster/postmaster.c:3349
 #, c-format
 msgid "shutting down because \"restart_after_crash\" is off"
 msgstr "因 \"restart_after_crash\" 为 off 而关闭"
 
-#: postmaster/postmaster.c:3360
+#: postmaster/postmaster.c:3361
 #, c-format
 msgid "all server processes terminated; reinitializing"
 msgstr "所有服务器进程已终止；正在重新初始化"
 
-#: postmaster/postmaster.c:3559 postmaster/postmaster.c:3970
-#: postmaster/postmaster.c:4359
+#: postmaster/postmaster.c:3560 postmaster/postmaster.c:3971
+#: postmaster/postmaster.c:4360
 #, c-format
 msgid "could not generate random cancel key"
 msgstr "无法生成随机取消密钥"
 
-#: postmaster/postmaster.c:3592
+#: postmaster/postmaster.c:3593
 #, c-format
 msgid "could not fork new process for connection: %m"
 msgstr "无法为连接创建新进程: %m"
 
-#: postmaster/postmaster.c:3634
+#: postmaster/postmaster.c:3635
 msgid "could not fork new process for connection: "
 msgstr "无法为连接创建新进程: "
 
-#: postmaster/postmaster.c:3668
+#: postmaster/postmaster.c:3669
 #, c-format
 msgid "postmaster became multithreaded"
 msgstr "postmaster 已变为多线程进程"
 
-#: postmaster/postmaster.c:3737
+#: postmaster/postmaster.c:3738
 #, c-format
 msgid "database system is ready to accept read-only connections"
 msgstr "数据库系统已准备好接受只读连接"
 
-#: postmaster/postmaster.c:3920
+#: postmaster/postmaster.c:3921
 #, c-format
 msgid "could not fork \"%s\" process: %m"
 msgstr "无法创建 \"%s\" 进程: %m"
 
-#: postmaster/postmaster.c:4158 postmaster/postmaster.c:4192
+#: postmaster/postmaster.c:4159 postmaster/postmaster.c:4193
 #, c-format
 msgid "database connection requirement not indicated during registration"
 msgstr "注册时未声明需要数据库连接"
 
-#: postmaster/postmaster.c:4168 postmaster/postmaster.c:4202
+#: postmaster/postmaster.c:4169 postmaster/postmaster.c:4203
 #, c-format
 msgid "invalid processing mode in background worker"
 msgstr "后台工作进程中的无效处理模式"
 
-#: postmaster/postmaster.c:4262
+#: postmaster/postmaster.c:4263
 #, c-format
 msgid "could not fork background worker process: %m"
 msgstr "无法创建后台工作进程: %m"
 
-#: postmaster/postmaster.c:4345
+#: postmaster/postmaster.c:4346
 #, c-format
 msgid "no slot available for new background worker process"
 msgstr "没有可用于新后台工作进程的槽位"
 
-#: postmaster/postmaster.c:4608
+#: postmaster/postmaster.c:4609
 #, c-format
 msgid "could not read exit code for process\n"
 msgstr "无法读取进程的退出码\n"
 
-#: postmaster/postmaster.c:4650
+#: postmaster/postmaster.c:4651
 #, c-format
 msgid "could not post child completion status\n"
 msgstr "无法传递子进程的完成状态\n"
@@ -22139,37 +22149,37 @@ msgstr "已重新开始 WAL 流式传输，起点为 %X/%X，时间线为 %u"
 msgid "cannot continue WAL streaming, recovery has already ended"
 msgstr "不能继续进行 WAL 流传输，恢复已结束"
 
-#: replication/walreceiver.c:588
+#: replication/walreceiver.c:590
 #, c-format
 msgid "replication terminated by primary server"
 msgstr "复制由主库终止"
 
-#: replication/walreceiver.c:589
+#: replication/walreceiver.c:591
 #, c-format
 msgid "End of WAL reached on timeline %u at %X/%X."
 msgstr "在时间线 %u 的 %X/%X 处到达 WAL 末尾。"
 
-#: replication/walreceiver.c:679
+#: replication/walreceiver.c:681
 #, c-format
 msgid "terminating walreceiver due to timeout"
 msgstr "由于超时，正在终止 walreceiver"
 
-#: replication/walreceiver.c:711
+#: replication/walreceiver.c:713
 #, c-format
 msgid "primary server contains no more WAL on requested timeline %u"
 msgstr "主库在请求的时间线 %u 上已没有更多 WAL"
 
-#: replication/walreceiver.c:727 replication/walreceiver.c:1157
+#: replication/walreceiver.c:729 replication/walreceiver.c:1159
 #, c-format
 msgid "could not close WAL segment %s: %m"
 msgstr "无法关闭 WAL 段 %s: %m"
 
-#: replication/walreceiver.c:846
+#: replication/walreceiver.c:848
 #, c-format
 msgid "fetching timeline history file for timeline %u from primary server"
 msgstr "正在从主库获取时间线 %u 的历史文件"
 
-#: replication/walreceiver.c:1045
+#: replication/walreceiver.c:1047
 #, c-format
 msgid "could not write to WAL segment %s at offset %d, length %lu: %m"
 msgstr "无法向 WAL 段 %s 的偏移量 %d 处写入长度为 %lu 的数据: %m"
@@ -22924,44 +22934,44 @@ msgstr "无法解释具有伪类型 %s 的表达式的统计信息"
 msgid "function returning record called in context that cannot accept type record"
 msgstr "在不能接受 record 类型的上下文中调用返回 record 类型的函数"
 
-#: storage/aio/read_stream.c:417 storage/buffer/bufmgr.c:656
-#: storage/buffer/bufmgr.c:1215 storage/buffer/bufmgr.c:1283
-#: storage/buffer/bufmgr.c:2181
+#: storage/aio/read_stream.c:417 storage/buffer/bufmgr.c:658
+#: storage/buffer/bufmgr.c:1217 storage/buffer/bufmgr.c:1285
+#: storage/buffer/bufmgr.c:2183
 #, c-format
 msgid "cannot access temporary tables of other sessions"
 msgstr "不能访问其他会话的临时表"
 
-#: storage/buffer/bufmgr.c:1548
+#: storage/buffer/bufmgr.c:1550
 #, c-format
 msgid "invalid page in block %u of relation %s; zeroing out page"
 msgstr "关系 %2$s 的块 %1$u 中存在无效页；正在将该页清零"
 
-#: storage/buffer/bufmgr.c:2307 storage/buffer/localbuf.c:361
+#: storage/buffer/bufmgr.c:2309 storage/buffer/localbuf.c:361
 #, c-format
 msgid "cannot extend relation %s beyond %u blocks"
 msgstr "不能将关系 %s 扩展到超过 %u 块"
 
-#: storage/buffer/bufmgr.c:2378
+#: storage/buffer/bufmgr.c:2380
 #, c-format
 msgid "unexpected data beyond EOF in block %u of relation %s"
 msgstr "在关系 %2$s 的块 %1$u 处发现 EOF 之后的意外数据"
 
-#: storage/buffer/bufmgr.c:2380
+#: storage/buffer/bufmgr.c:2382
 #, c-format
 msgid "This has been seen to occur with buggy kernels; consider updating your system."
 msgstr "曾在有缺陷的内核上观察到这种情况；请考虑更新系统。"
 
-#: storage/buffer/bufmgr.c:5744
+#: storage/buffer/bufmgr.c:5780
 #, c-format
 msgid "could not write block %u of %s"
 msgstr "无法写入 %2$s 的块 %1$u"
 
-#: storage/buffer/bufmgr.c:5746
+#: storage/buffer/bufmgr.c:5782
 #, c-format
 msgid "Multiple failures --- write error might be permanent."
 msgstr "多次失败 --- 写入错误可能是永久性的。"
 
-#: storage/buffer/bufmgr.c:5768 storage/buffer/bufmgr.c:5788
+#: storage/buffer/bufmgr.c:5804 storage/buffer/bufmgr.c:5824
 #, c-format
 msgid "writing block %u of relation %s"
 msgstr "正在写入关系 %2$s 的块 %1$u"
@@ -25150,7 +25160,7 @@ msgstr "不支持从 %s 到 ASCII 的编码转换"
 #: utils/adt/geo_ops.c:4672 utils/adt/int.c:198 utils/adt/int.c:210
 #: utils/adt/jsonpath.c:185 utils/adt/mac.c:94 utils/adt/mac8.c:226
 #: utils/adt/network.c:99 utils/adt/numeric.c:803 utils/adt/numeric.c:7260
-#: utils/adt/numeric.c:7463 utils/adt/numeric.c:8410 utils/adt/numutils.c:356
+#: utils/adt/numeric.c:7463 utils/adt/numeric.c:8426 utils/adt/numutils.c:356
 #: utils/adt/numutils.c:618 utils/adt/numutils.c:880 utils/adt/numutils.c:919
 #: utils/adt/numutils.c:941 utils/adt/numutils.c:1005 utils/adt/numutils.c:1027
 #: utils/adt/pg_lsn.c:73 utils/adt/tid.c:73 utils/adt/tid.c:81
@@ -25172,9 +25182,9 @@ msgstr "money 超出范围"
 #: utils/adt/int8.c:514 utils/adt/int8.c:572 utils/adt/int8.c:972
 #: utils/adt/int8.c:1052 utils/adt/int8.c:1114 utils/adt/int8.c:1194
 #: utils/adt/numeric.c:3198 utils/adt/numeric.c:3221 utils/adt/numeric.c:3306
-#: utils/adt/numeric.c:3324 utils/adt/numeric.c:3420 utils/adt/numeric.c:8959
-#: utils/adt/numeric.c:9272 utils/adt/numeric.c:9620 utils/adt/numeric.c:9736
-#: utils/adt/numeric.c:11247 utils/adt/timestamp.c:3717
+#: utils/adt/numeric.c:3324 utils/adt/numeric.c:3420 utils/adt/numeric.c:8975
+#: utils/adt/numeric.c:9288 utils/adt/numeric.c:9636 utils/adt/numeric.c:9752
+#: utils/adt/numeric.c:11263 utils/adt/timestamp.c:3717
 #, c-format
 msgid "division by zero"
 msgstr "除以零"
@@ -25511,7 +25521,7 @@ msgstr "\"%s\" 超出类型 double precision 的范围"
 msgid "smallint out of range"
 msgstr "smallint 超出范围"
 
-#: utils/adt/float.c:1447 utils/adt/numeric.c:3716 utils/adt/numeric.c:10151
+#: utils/adt/float.c:1447 utils/adt/numeric.c:3716 utils/adt/numeric.c:10167
 #, c-format
 msgid "cannot take square root of a negative number"
 msgstr "不能取负数的平方根"
@@ -25521,19 +25531,19 @@ msgstr "不能取负数的平方根"
 msgid "zero raised to a negative power is undefined"
 msgstr "零的负数次幂未定义"
 
-#: utils/adt/float.c:1519 utils/adt/numeric.c:4008 utils/adt/numeric.c:11042
+#: utils/adt/float.c:1519 utils/adt/numeric.c:4008 utils/adt/numeric.c:11058
 #, c-format
 msgid "a negative number raised to a non-integer power yields a complex result"
 msgstr "负数的非整数次幂会产生复数结果"
 
 #: utils/adt/float.c:1695 utils/adt/float.c:1728 utils/adt/numeric.c:3916
-#: utils/adt/numeric.c:10822
+#: utils/adt/numeric.c:10838
 #, c-format
 msgid "cannot take logarithm of zero"
 msgstr "不能取零的对数"
 
 #: utils/adt/float.c:1699 utils/adt/float.c:1732 utils/adt/numeric.c:3854
-#: utils/adt/numeric.c:3911 utils/adt/numeric.c:10826
+#: utils/adt/numeric.c:3911 utils/adt/numeric.c:10842
 #, c-format
 msgid "cannot take logarithm of a negative number"
 msgstr "不能取负数的对数"
@@ -26787,9 +26797,9 @@ msgid "cannot subtract inet values of different sizes"
 msgstr "不能对长度不同的 inet 值执行减法运算"
 
 #: utils/adt/numeric.c:793 utils/adt/numeric.c:3666 utils/adt/numeric.c:7255
-#: utils/adt/numeric.c:7458 utils/adt/numeric.c:7930 utils/adt/numeric.c:10625
-#: utils/adt/numeric.c:11100 utils/adt/numeric.c:11194
-#: utils/adt/numeric.c:11329
+#: utils/adt/numeric.c:7458 utils/adt/numeric.c:7946 utils/adt/numeric.c:10641
+#: utils/adt/numeric.c:11116 utils/adt/numeric.c:11210
+#: utils/adt/numeric.c:11345
 #, c-format
 msgid "value overflows numeric format"
 msgstr "值超出 numeric 格式范围"
@@ -26896,22 +26906,22 @@ msgstr "不能将无穷值转换为 %s"
 msgid "pg_lsn out of range"
 msgstr "pg_lsn 超出范围"
 
-#: utils/adt/numeric.c:8020 utils/adt/numeric.c:8071
+#: utils/adt/numeric.c:8036 utils/adt/numeric.c:8087
 #, c-format
 msgid "numeric field overflow"
 msgstr "numeric 字段溢出"
 
-#: utils/adt/numeric.c:8021
+#: utils/adt/numeric.c:8037
 #, c-format
 msgid "A field with precision %d, scale %d must round to an absolute value less than %s%d."
 msgstr "精度为 %d, 标度为 %d 的字段，其值舍入后的绝对值必须小于 %s%d。"
 
-#: utils/adt/numeric.c:8072
+#: utils/adt/numeric.c:8088
 #, c-format
 msgid "A field with precision %d, scale %d cannot hold an infinite value."
 msgstr "精度为 %d, 标度为 %d 的字段不能存储无穷值。"
 
-#: utils/adt/numeric.c:11398 utils/adt/pseudorandomfuncs.c:135
+#: utils/adt/numeric.c:11414 utils/adt/pseudorandomfuncs.c:135
 #: utils/adt/pseudorandomfuncs.c:159
 #, c-format
 msgid "lower bound must be less than or equal to upper bound"
@@ -31393,7 +31403,7 @@ msgstr "共享的元组存储临时文件中的意外块"
 msgid "could not seek to block %u in shared tuplestore temporary file"
 msgstr "无法定位到共享元组存储临时文件中的块 %u"
 
-#: utils/sort/tuplesort.c:2372
+#: utils/sort/tuplesort.c:2388
 #, c-format
 msgid "cannot have more than %d runs for an external sort"
 msgstr "外部排序的有序段数量不能超过 %d"

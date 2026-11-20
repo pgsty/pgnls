@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_combinebackup (PostgreSQL) 17\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-16 13:39+0000\n"
+"POT-Creation-Date: 2026-11-19 23:28+0000\n"
 "PO-Revision-Date: 2026-11-10 09:59+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
@@ -44,7 +44,7 @@ msgid "could not open file \"%s\" for reading: %m"
 msgstr "无法打开文件 \"%s\" 进行读取: %m"
 
 #: ../../common/controldata_utils.c:110 copy_file.c:150 load_manifest.c:161
-#: load_manifest.c:199 pg_combinebackup.c:1400 reconstruct.c:548
+#: load_manifest.c:199 pg_combinebackup.c:1400 reconstruct.c:563
 #, c-format
 msgid "could not read file \"%s\": %m"
 msgstr "无法读取文件 \"%s\": %m"
@@ -56,7 +56,7 @@ msgstr "无法读取文件 \"%1$s\": 应读取 %3$zu，实际读取 %2$d"
 
 #: ../../common/controldata_utils.c:132 ../../common/controldata_utils.c:280
 #: backup_label.c:174 copy_file.c:68 pg_combinebackup.c:538
-#: pg_combinebackup.c:1175 reconstruct.c:369 reconstruct.c:751
+#: pg_combinebackup.c:1175 reconstruct.c:384 reconstruct.c:766
 #: write_manifest.c:187
 #, c-format
 msgid "could not close file \"%s\": %m"
@@ -84,13 +84,13 @@ msgstr ""
 #: ../../common/file_utils.c:480 backup_label.c:143 copy_file.c:66
 #: copy_file.c:139 copy_file.c:171 copy_file.c:175 copy_file.c:225
 #: copy_file.c:268 load_manifest.c:128 pg_combinebackup.c:523
-#: pg_combinebackup.c:1167 reconstruct.c:531 reconstruct.c:646
+#: pg_combinebackup.c:1167 reconstruct.c:546 reconstruct.c:661
 #: write_manifest.c:250
 #, c-format
 msgid "could not open file \"%s\": %m"
 msgstr "无法打开文件 \"%s\": %m"
 
-#: ../../common/controldata_utils.c:249 backup_label.c:160 reconstruct.c:770
+#: ../../common/controldata_utils.c:249 backup_label.c:160 reconstruct.c:785
 #: write_manifest.c:260
 #, c-format
 msgid "could not write file \"%s\": %m"
@@ -149,8 +149,8 @@ msgstr "无法同步文件 \"%s\" 所在的文件系统: %m"
 
 #: ../../common/file_utils.c:120 ../../common/file_utils.c:566
 #: backup_label.c:187 load_manifest.c:133 pg_combinebackup.c:676
-#: pg_combinebackup.c:1131 pg_combinebackup.c:1383 reconstruct.c:204
-#: reconstruct.c:422
+#: pg_combinebackup.c:1131 pg_combinebackup.c:1383 reconstruct.c:206
+#: reconstruct.c:437
 #, c-format
 msgid "could not stat file \"%s\": %m"
 msgstr "无法获取文件 \"%s\" 的状态: %m"
@@ -475,13 +475,13 @@ msgstr "%s: 无法找到 %s"
 msgid "%s: %s requires %s"
 msgstr "%s: %s 需要 %s"
 
-#: backup_label.c:162 reconstruct.c:772 write_manifest.c:262
+#: backup_label.c:162 reconstruct.c:787 write_manifest.c:262
 #, c-format
 msgid "could not write file \"%s\": wrote %d of %d"
 msgstr "无法写入文件 \"%1$s\": 应写入 %3$d，实际写入 %2$d"
 
-#: backup_label.c:166 copy_file.c:146 copy_file.c:193 reconstruct.c:732
-#: reconstruct.c:778 write_manifest.c:270
+#: backup_label.c:166 copy_file.c:146 copy_file.c:193 reconstruct.c:747
+#: reconstruct.c:793 write_manifest.c:270
 #, c-format
 msgid "could not update checksum of file \"%s\""
 msgstr "无法更新文件 \"%s\" 的校验和"
@@ -496,7 +496,7 @@ msgstr "无法写入文件 \"%s\": %m"
 msgid "could not write to file \"%s\", offset %u: wrote %d of %d"
 msgstr "无法在文件 \"%1$s\" 的偏移量 %2$u 处写入: 应写入 %4$d，实际写入 %3$d"
 
-#: copy_file.c:199 reconstruct.c:795
+#: copy_file.c:199 reconstruct.c:810
 #, c-format
 msgid "could not read from file \"%s\": %m"
 msgstr "无法读取文件 \"%s\": %m"
@@ -521,12 +521,12 @@ msgstr "将文件 \"%s\" 克隆到 \"%s\" 时出错: %s"
 msgid "file cloning not supported on this platform"
 msgstr "此平台不支持文件克隆"
 
-#: copy_file.c:278 reconstruct.c:712
+#: copy_file.c:278 reconstruct.c:727
 #, c-format
 msgid "error while copying file range from \"%s\" to \"%s\": %m"
 msgstr "将文件范围从 \"%s\" 复制到 \"%s\" 时出错: %m"
 
-#: copy_file.c:285 pg_combinebackup.c:264 reconstruct.c:735
+#: copy_file.c:285 pg_combinebackup.c:264 reconstruct.c:750
 #, c-format
 msgid "copy_file_range not supported on this platform"
 msgstr "此平台不支持 copy_file_range"
@@ -821,7 +821,7 @@ msgstr "正在跳过符号链接 \"%s\""
 msgid "skipping special file \"%s\""
 msgstr "正在跳过特殊文件 \"%s\""
 
-#: pg_combinebackup.c:1073 reconstruct.c:305
+#: pg_combinebackup.c:1073 reconstruct.c:320
 #, c-format
 msgid "manifest file \"%s\" contains no entry for file \"%s\""
 msgstr "清单文件 \"%s\" 中没有文件 \"%s\" 的条目"
@@ -876,47 +876,47 @@ msgstr "文件 \"%s\" 过大"
 msgid "could not read file \"%s\": read %zd of %lld"
 msgstr "无法读取文件 \"%1$s\": 应读取 %3$lld，实际读取 %2$zd"
 
-#: reconstruct.c:339
+#: reconstruct.c:354
 #, c-format
 msgid "full backup contains unexpected incremental file \"%s\""
 msgstr "完整备份包含意外的增量文件 \"%s\""
 
-#: reconstruct.c:424
+#: reconstruct.c:439
 #, c-format
 msgid "file \"%s\" is too short: expected %llu, found %llu"
 msgstr "文件 \"%s\" 过短: 预期为 %llu，实际为 %llu"
 
-#: reconstruct.c:466
+#: reconstruct.c:481
 #, c-format
 msgid "file \"%s\" has bad incremental magic number (0x%x, expected 0x%x)"
 msgstr "文件 \"%s\" 的增量魔数不正确（0x%x，预期为 0x%x）"
 
-#: reconstruct.c:472
+#: reconstruct.c:487
 #, c-format
 msgid "file \"%s\" has block count %u in excess of segment size %u"
 msgstr "文件 \"%s\" 的块数 %u 超过段大小 %u"
 
-#: reconstruct.c:479
+#: reconstruct.c:494
 #, c-format
 msgid "file \"%s\" has truncation block length %u in excess of segment size %u"
 msgstr "文件 \"%s\" 的截断长度为 %u 块，超过段大小 %u"
 
-#: reconstruct.c:492
+#: reconstruct.c:507
 #, c-format
 msgid "file \"%s\" has block number %u in excess of segment size %u"
 msgstr "文件 \"%s\" 的块号 %u 超过段大小 %u"
 
-#: reconstruct.c:550
+#: reconstruct.c:565
 #, c-format
 msgid "could not read file \"%s\": read %d of %u"
 msgstr "无法读取文件 \"%1$s\": 应读取 %3$u，实际读取 %2$d"
 
-#: reconstruct.c:715
+#: reconstruct.c:730
 #, c-format
 msgid "unexpected end of file while copying file range from \"%s\" to \"%s\""
 msgstr "将文件范围从 \"%s\" 复制到 \"%s\" 时意外到达文件末尾"
 
-#: reconstruct.c:797
+#: reconstruct.c:812
 #, c-format
 msgid "could not read from file \"%s\", offset %llu: read %d of %d"
 msgstr "无法读取文件 \"%1$s\" 的偏移量 %2$llu 处的数据: 应读取 %4$d，实际读取 %3$d"
