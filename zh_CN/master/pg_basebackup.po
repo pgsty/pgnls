@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_basebackup (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-16 12:20+0000\n"
+"POT-Creation-Date: 2026-11-19 23:50+0000\n"
 "PO-Revision-Date: 2026-11-16 22:43+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
@@ -972,7 +972,7 @@ msgid "could not get COPY data stream: %s"
 msgstr "无法获取 COPY 数据流: %s"
 
 #: pg_basebackup.c:1041 pg_recvlogical.c:455 pg_recvlogical.c:631
-#: receivelog.c:987
+#: receivelog.c:992
 #, c-format
 msgid "could not read COPY data: %s"
 msgstr "无法读取 COPY 数据: %s"
@@ -1061,7 +1061,7 @@ msgid "server does not support incremental backup"
 msgstr "服务器不支持增量备份"
 
 #: pg_basebackup.c:1838 pg_basebackup.c:1996 pg_recvlogical.c:282
-#: receivelog.c:542 receivelog.c:588 streamutil.c:296 streamutil.c:370
+#: receivelog.c:542 receivelog.c:593 streamutil.c:296 streamutil.c:370
 #: streamutil.c:422 streamutil.c:511 streamutil.c:672 streamutil.c:717
 #, c-format
 msgid "could not send replication command \"%s\": %s"
@@ -2555,28 +2555,28 @@ msgstr "开始在 %X/%08X 处进行日志流传输（槽 %s）"
 msgid "streaming initiated"
 msgstr "流传输已启动"
 
-#: pg_recvlogical.c:381 receivelog.c:896
+#: pg_recvlogical.c:381 receivelog.c:901
 #, c-format
 msgid "invalid socket: %s"
 msgstr "无效的套接字: %s"
 
-#: pg_recvlogical.c:434 receivelog.c:924
+#: pg_recvlogical.c:434 receivelog.c:929
 #, c-format
 msgid "%s() failed: %m"
 msgstr "%s() 失败: %m"
 
-#: pg_recvlogical.c:441 receivelog.c:973
+#: pg_recvlogical.c:441 receivelog.c:978
 #, c-format
 msgid "could not receive data from WAL stream: %s"
 msgstr "无法从 WAL 流接收数据: %s"
 
-#: pg_recvlogical.c:483 pg_recvlogical.c:534 receivelog.c:1017
-#: receivelog.c:1080
+#: pg_recvlogical.c:483 pg_recvlogical.c:534 receivelog.c:1022
+#: receivelog.c:1085
 #, c-format
 msgid "streaming header too small: %d"
 msgstr "流传输头部过小: %d"
 
-#: pg_recvlogical.c:518 receivelog.c:853
+#: pg_recvlogical.c:518 receivelog.c:858
 #, c-format
 msgid "unrecognized streaming header: \"%c\""
 msgstr "无法识别的流传输头部: \"%c\""
@@ -2586,7 +2586,7 @@ msgstr "无法识别的流传输头部: \"%c\""
 msgid "could not write %d bytes to log file \"%s\": %m"
 msgstr "无法将 %d 字节写入日志文件 \"%s\": %m"
 
-#: pg_recvlogical.c:642 receivelog.c:648 receivelog.c:685
+#: pg_recvlogical.c:642 receivelog.c:653 receivelog.c:690
 #, c-format
 msgid "unexpected termination of replication stream: %s"
 msgstr "复制流意外终止: %s"
@@ -2692,7 +2692,7 @@ msgstr "无法打开预写日志文件 \"%s\": %s"
 msgid "not renaming \"%s\", segment is not complete"
 msgstr "不重命名 \"%s\"，因为段不完整"
 
-#: receivelog.c:227 receivelog.c:317 receivelog.c:694
+#: receivelog.c:227 receivelog.c:317 receivelog.c:699
 #, c-format
 msgid "could not close file \"%s\": %s"
 msgstr "无法关闭文件 \"%s\": %s"
@@ -2746,12 +2746,12 @@ msgstr ""
 "对 TIMELINE_HISTORY 命令返回意外的响应: 实际为 %d 行和 %d 个字段，预期为 %d "
 "行和 %d 个字段"
 
-#: receivelog.c:632
+#: receivelog.c:637
 #, c-format
 msgid "server reported unexpected next timeline %u, following timeline %u"
 msgstr "服务器报告的下一条时间线 %u 出现意外值，当前时间线为 %u"
 
-#: receivelog.c:638
+#: receivelog.c:643
 #, c-format
 msgid ""
 "server stopped streaming timeline %u at %X/%08X, but reported next timeline "
@@ -2760,12 +2760,12 @@ msgstr ""
 "服务器在 %2$X/%3$08X 处停止传输时间线 %1$u，但报告下一条时间线 %4$u 始于 "
 "%5$X/%6$08X"
 
-#: receivelog.c:678
+#: receivelog.c:683
 #, c-format
 msgid "replication stream was terminated before stop point"
 msgstr "复制流在停止点之前终止"
 
-#: receivelog.c:724
+#: receivelog.c:729
 #, c-format
 msgid ""
 "unexpected result set after end-of-timeline: got %d rows and %d fields, "
@@ -2774,32 +2774,32 @@ msgstr ""
 "时间线结束后收到意外的结果集: 实际为 %d 行和 %d 个字段，预期为 %d 行和 %d 个"
 "字段"
 
-#: receivelog.c:733
+#: receivelog.c:738
 #, c-format
 msgid "could not parse next timeline's starting point \"%s\""
 msgstr "无法解析下一条时间线的起始位置 \"%s\""
 
-#: receivelog.c:781 receivelog.c:1036 walmethods.c:1206
+#: receivelog.c:786 receivelog.c:1041 walmethods.c:1206
 #, c-format
 msgid "could not fsync file \"%s\": %s"
 msgstr "无法对文件 \"%s\" 执行 fsync: %s"
 
-#: receivelog.c:1097
+#: receivelog.c:1102
 #, c-format
 msgid "received write-ahead log record for offset %u with no file open"
 msgstr "收到偏移量为 %u 的预写日志记录，但没有打开的文件"
 
-#: receivelog.c:1107
+#: receivelog.c:1112
 #, c-format
 msgid "got WAL data offset %08x, expected %08x"
 msgstr "WAL 数据偏移量为 %08x，预期为 %08x"
 
-#: receivelog.c:1142
+#: receivelog.c:1147
 #, c-format
 msgid "could not write %d bytes to WAL file \"%s\": %s"
 msgstr "无法将 %d 字节写入 WAL 文件 \"%s\": %s"
 
-#: receivelog.c:1167 receivelog.c:1207 receivelog.c:1235
+#: receivelog.c:1172 receivelog.c:1212 receivelog.c:1240
 #, c-format
 msgid "could not send copy-end packet: %s"
 msgstr "无法发送 COPY 结束包: %s"

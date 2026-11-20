@@ -18,8 +18,8 @@ import poio
 
 BRANCHES = [('master', 19), ('REL_18_STABLE', 18), ('REL_17_STABLE', 17),
             ('REL_16_STABLE', 16), ('REL_15_STABLE', 15), ('REL_14_STABLE', 14)]
-EXPECTED = {'master': (28, 12708), 'REL_18_STABLE': (28, 12149), 'REL_17_STABLE': (28, 11560),
-            'REL_16_STABLE': (26, 10707), 'REL_15_STABLE': (26, 10514), 'REL_14_STABLE': (26, 10178)}
+EXPECTED = {'master': (28, 12709), 'REL_18_STABLE': (28, 12150), 'REL_17_STABLE': (28, 11561),
+            'REL_16_STABLE': (26, 10708), 'REL_15_STABLE': (26, 10515), 'REL_14_STABLE': (26, 10178)}
 HEADER = {
     'Report-Msgid-Bugs-To': 'pgsql-bugs@lists.postgresql.org',
     'MIME-Version': '1.0',
