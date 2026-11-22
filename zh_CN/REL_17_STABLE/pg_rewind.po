@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_rewind (PostgreSQL) 17\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-19 23:28+0000\n"
+"POT-Creation-Date: 2026-11-21 20:28+0000\n"
 "PO-Revision-Date: 2026-11-10 09:59+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
@@ -427,8 +427,9 @@ msgid "error running query (%s) in source server: %s"
 msgstr "在源服务器上执行查询（%s）时出错: %s"
 
 #: libpq_source.c:220
-#, c-format
-msgid "unrecognized result \"%s\" for current WAL insert location"
+#, fuzzy, c-format
+#| msgid "unrecognized result \"%s\" for current WAL insert location"
+msgid "unrecognized result \"%s\" for current WAL flush location"
 msgstr "当前 WAL 插入位置的结果 \"%s\" 无法识别"
 
 #: libpq_source.c:271
@@ -818,103 +819,103 @@ msgstr "pg_rewind 运行期间，源系统被修改"
 msgid "creating backup label and updating control file"
 msgstr "正在创建备份标签并且更新控制文件"
 
-#: pg_rewind.c:707
+#: pg_rewind.c:713
 #, c-format
 msgid "source system was in unexpected state at end of rewind"
 msgstr "回退结束时，源系统处于意外状态"
 
-#: pg_rewind.c:739
+#: pg_rewind.c:745
 #, c-format
 msgid "source and target clusters are from different systems"
 msgstr "源集簇和目标集簇来自不同的系统"
 
-#: pg_rewind.c:747
+#: pg_rewind.c:753
 #, c-format
 msgid "clusters are not compatible with this version of pg_rewind"
 msgstr "集簇与此版本的 pg_rewind 不兼容"
 
-#: pg_rewind.c:757
+#: pg_rewind.c:763
 #, c-format
 msgid "target server needs to use either data checksums or \"wal_log_hints = on\""
 msgstr "目标服务器需要启用数据校验和或设置 \"wal_log_hints = on\""
 
-#: pg_rewind.c:768
+#: pg_rewind.c:774
 #, c-format
 msgid "target server must be shut down cleanly"
 msgstr "目标服务器必须已正常关闭"
 
-#: pg_rewind.c:778
+#: pg_rewind.c:784
 #, c-format
 msgid "source data directory must be shut down cleanly"
 msgstr "源数据目录对应的服务器必须已正常关闭"
 
-#: pg_rewind.c:825
+#: pg_rewind.c:831
 #, c-format
 msgid "%*s/%s kB (%d%%) copied"
 msgstr "已复制 %*s/%s kB（%d%%）"
 
-#: pg_rewind.c:951
+#: pg_rewind.c:957
 #, c-format
 msgid "could not find common ancestor of the source and target cluster's timelines"
 msgstr "无法找到源集簇和目标集簇时间线的共同祖先"
 
-#: pg_rewind.c:992
+#: pg_rewind.c:998
 #, c-format
 msgid "backup label buffer too small"
 msgstr "备份标签缓冲区过小"
 
-#: pg_rewind.c:1015
+#: pg_rewind.c:1021
 #, c-format
 msgid "unexpected control file CRC"
 msgstr "意外的控制文件 CRC"
 
-#: pg_rewind.c:1027
+#: pg_rewind.c:1033
 #, c-format
 msgid "unexpected control file size %d, expected %d"
 msgstr "控制文件大小异常: %d，预期为 %d"
 
-#: pg_rewind.c:1037
+#: pg_rewind.c:1043
 #, c-format
 msgid "invalid WAL segment size in control file (%d byte)"
 msgid_plural "invalid WAL segment size in control file (%d bytes)"
 msgstr[0] "控制文件中的 WAL 段大小无效（%d 字节）"
 
-#: pg_rewind.c:1041
+#: pg_rewind.c:1047
 #, c-format
 msgid "The WAL segment size must be a power of two between 1 MB and 1 GB."
 msgstr "WAL 段大小必须是 1 MB 到 1 GB 之间的二的幂。"
 
-#: pg_rewind.c:1078 pg_rewind.c:1146
+#: pg_rewind.c:1084 pg_rewind.c:1152
 #, c-format
 msgid "program \"%s\" is needed by %s but was not found in the same directory as \"%s\""
 msgstr "%2$s 需要程序 \"%1$s\"，但在与 \"%3$s\" 相同的目录中找不到该程序"
 
-#: pg_rewind.c:1081 pg_rewind.c:1149
+#: pg_rewind.c:1087 pg_rewind.c:1155
 #, c-format
 msgid "program \"%s\" was found by \"%s\" but was not the same version as %s"
 msgstr "程序 \"%s\" 已由 \"%s\" 找到，但与 %s 版本不一致"
 
-#: pg_rewind.c:1110
+#: pg_rewind.c:1116
 #, c-format
 msgid "could not read restore_command from target cluster"
 msgstr "无法从目标集簇读取 restore_command"
 
-#: pg_rewind.c:1115
+#: pg_rewind.c:1121
 #, c-format
 msgid "\"restore_command\" is not set in the target cluster"
 msgstr "目标集簇未设置 \"restore_command\""
 
-#: pg_rewind.c:1153
+#: pg_rewind.c:1159
 #, c-format
 msgid "executing \"%s\" for target server to complete crash recovery"
 msgstr "正在对目标服务器执行 \"%s\" 以完成崩溃恢复"
 
-#: pg_rewind.c:1191
+#: pg_rewind.c:1197
 #, c-format
 msgid "postgres single-user mode in target cluster failed"
 msgstr "目标集簇中的 postgres 单用户模式执行失败"
 
-#: pg_rewind.c:1192
+#: pg_rewind.c:1198
 #, c-format
 msgid "Command was: %s"
 msgstr "命令为: %s"
