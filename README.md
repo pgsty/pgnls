@@ -7,7 +7,7 @@
 [![Review Workbench](https://img.shields.io/badge/Review_Workbench-pgsql.cc%2Fnls-2f6fa3?style=for-the-badge&logo=postgresql&logoColor=white)](https://pgsql.cc/nls)
 
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14--19-336791?logo=postgresql&logoColor=white)](https://www.postgresql.org/)
-[![Messages](https://img.shields.io/badge/messages-67%2C816-informational)](https://pgsql.cc/nls)
+[![Messages](https://img.shields.io/badge/messages-67%2C821-informational)](https://pgsql.cc/nls)
 [![Translated](https://img.shields.io/badge/translated-100%25-brightgreen)](https://pgsql.cc/nls)
 [![Fuzzy](https://img.shields.io/badge/fuzzy-0-brightgreen)](https://pgsql.cc/nls)
 [![msgfmt](https://img.shields.io/badge/msgfmt-clean-brightgreen)](https://www.gnu.org/software/gettext/)
@@ -39,6 +39,16 @@ The bilingual review corpus is browsable at **<https://pgsql.cc/nls>** — the E
 Catalog and message counts are per language and describe the current `main` branch.
 Download links point to the latest published release, 20261116.
 The upstream percentages describe the initial `zh_CN` baseline.
+
+The 2026-11-22 update translates four revised diagnostics in PG15–19:
+three `pg_basebackup` result-shape errors and the `pg_rewind` WAL flush-location
+error. Forty bilingual version instances replace forty superseded instances
+across twenty catalogs; all 135,602 retained translations and the existing
+obsolete history remain unchanged. Template dates and source references match
+the November 22 Babel snapshot. Only the twenty revised catalogs receive new
+translation revision dates. Traditional Chinese phrasebook rule P56 now uses
+`預寫式日誌`, matching the glossary and the approved wording. These changes are
+on `main`; the published release remains 20261116.
 
 The 2026-11-20 update translates the hint “Cast the whole-row variable to the
 desired type explicitly.” in PG15–19, adding ten language/version instances
@@ -284,7 +294,7 @@ the long version; [`ref/errata.md`](ref/errata.md) has the known defects.
 
 ## File handling
 
-- **Templates** — all 324 babel `po-{14..19}-branch` catalogs were rechecked on 2026-11-20 against the builds from November 19 UTC (PG15–19) and November 16 UTC (PG14). Both languages carry the snapshot's per-file `POT-Creation-Date`, active-message source references (`#:`), and format flags. `make fetch-upstream && make diff` tells you at any time whether `zh_CN/` still matches the current upstream POT entry for entry.
+- **Templates** — all 324 babel `po-{14..19}-branch` catalogs were rechecked on 2026-11-22 against the builds from November 21 UTC (PG15–19) and November 16 UTC (PG14). Both languages carry the snapshot's per-file `POT-Creation-Date`, active-message source references (`#:`), and format flags. `make fetch-upstream && make diff` tells you at any time whether `zh_CN/` still matches the current upstream POT entry for entry.
 - **Only what should change** — translation edits affect `msgstr` values, `fuzzy` flags, and `#|` previous-message comments. Explicit template refreshes synchronize `POT-Creation-Date`, source references (`#:`), format flags, and template order while preserving reviewed translations. Metadata-only refreshes preserve `PO-Revision-Date`; a full calibration records the actual revision time. Retained entries preserve their English text, translation formatting and translator comments.
 - **Removed messages** — when a template refresh removes an active message, delete the entire old entry from `main`, including any `#~` copy created during the refresh. Compare the corresponding language, PostgreSQL branch, and catalog; a message still used elsewhere remains there. Git records superseded translations. The raw `babel` and `message` branches mirror their respective upstream sources verbatim, including any obsolete entries those sources contain.
 - **Plurals** — normalised to the Chinese standard `nplurals=1; plural=0;`. The existing headers disagree: `postgres` and `psql` declared 1, nine directories declared 2, and `libpq` and `initdb` carried plural entries with no `Plural-Forms` header at all. `pg_dump`'s circular foreign-key warning uses the number-neutral wording `以下表涉及循环外键约束:` so the single Chinese plural form covers both self-references within one table and cycles among multiple tables.
@@ -351,7 +361,7 @@ The translations follow PostgreSQL itself and are available under the [PostgreSQ
 
 Ruohang Feng &lt;rh@vonng.com&gt; · 2026-10
 
-Catalogs last updated: 2026-11-20 08:41+0800 · zh_CN / zh_TW · PostgreSQL 14–19
+Catalogs last updated: 2026-11-22 08:13+0800 · zh_CN / zh_TW · PostgreSQL 14–19
 
 Latest full translation calibration: 2026-11-16 22:43+0800 · latest published release: 20261116
 

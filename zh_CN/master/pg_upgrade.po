@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_upgrade (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-19 23:50+0000\n"
+"POT-Creation-Date: 2026-11-21 19:50+0000\n"
 "PO-Revision-Date: 2026-11-16 22:43+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
@@ -946,8 +946,8 @@ msgstr "源集簇缺少集簇状态信息:"
 msgid "The target cluster lacks cluster state information:"
 msgstr "目标集簇缺少集簇状态信息:"
 
-#: controldata.c:217 dump.c:54 exec.c:119 pg_upgrade.c:630 pg_upgrade.c:670
-#: pg_upgrade.c:1048 relfilenumber.c:605 server.c:34 util.c:337
+#: controldata.c:217 dump.c:54 exec.c:119 pg_upgrade.c:617 pg_upgrade.c:657
+#: pg_upgrade.c:1035 relfilenumber.c:605 server.c:35 util.c:356
 #, c-format
 msgid "%s"
 msgstr "%s"
@@ -1521,27 +1521,27 @@ msgstr ""
 "\n"
 "目标数据库:"
 
-#: info.c:364
+#: info.c:375
 #, c-format
 msgid "template0 not found"
 msgstr "找不到 template0"
 
-#: info.c:911
+#: info.c:927
 #, c-format
 msgid "Database: \"%s\""
 msgstr "数据库: \"%s\""
 
-#: info.c:924
+#: info.c:940
 #, c-format
 msgid "relname: \"%s.%s\", reloid: %u, reltblspace: \"%s\""
 msgstr "relname: \"%s.%s\", reloid: %u, reltblspace: \"%s\""
 
-#: info.c:938
+#: info.c:954
 #, c-format
 msgid "Logical replication slots in the database:"
 msgstr "数据库中的逻辑复制槽:"
 
-#: info.c:944
+#: info.c:960
 #, c-format
 msgid "slot name: \"%s\", output plugin: \"%s\", two_phase: %s"
 msgstr "槽名: \"%s\", 输出插件: \"%s\", two_phase: %s"
@@ -2035,87 +2035,87 @@ msgstr ""
 msgid "Setting the default char signedness for new cluster"
 msgstr "正在为新集簇设置默认 char 符号属性"
 
-#: pg_upgrade.c:473
+#: pg_upgrade.c:474
 #, c-format
 msgid "Setting locale and encoding for new cluster"
 msgstr "正在为新集簇设置区域设置和编码"
 
-#: pg_upgrade.c:551
+#: pg_upgrade.c:538
 #, c-format
 msgid "Analyzing all rows in the new cluster"
 msgstr "正在分析新集簇中的所有行"
 
-#: pg_upgrade.c:564
+#: pg_upgrade.c:551
 #, c-format
 msgid "Freezing all rows in the new cluster"
 msgstr "正在冻结新集簇中的所有行"
 
-#: pg_upgrade.c:584
+#: pg_upgrade.c:571
 #, c-format
 msgid "Restoring global objects in the new cluster"
 msgstr "正在新集簇中恢复全局对象"
 
-#: pg_upgrade.c:601
+#: pg_upgrade.c:588
 #, c-format
 msgid "Restoring database schemas in the new cluster"
 msgstr "正在新集簇中恢复数据库模式定义"
 
-#: pg_upgrade.c:736
+#: pg_upgrade.c:723
 #, c-format
 msgid "Deleting files from new %s"
 msgstr "正在从新 %s 中删除文件"
 
-#: pg_upgrade.c:740
+#: pg_upgrade.c:727
 #, c-format
 msgid "could not delete directory \"%s\""
 msgstr "无法删除目录 \"%s\""
 
-#: pg_upgrade.c:759
+#: pg_upgrade.c:746
 #, c-format
 msgid "Copying old %s to new server"
 msgstr "正在将旧 %s 复制到新服务器"
 
-#: pg_upgrade.c:785
+#: pg_upgrade.c:772
 #, c-format
 msgid "Setting oldest XID for new cluster"
 msgstr "正在为新集簇设置最早的 XID"
 
-#: pg_upgrade.c:793
+#: pg_upgrade.c:780
 #, c-format
 msgid "Setting next transaction ID and epoch for new cluster"
 msgstr "正在为新集簇设置下一个事务 ID 和纪元"
 
-#: pg_upgrade.c:823 pg_upgrade.c:886
+#: pg_upgrade.c:810 pg_upgrade.c:873
 #, c-format
 msgid "Setting next multixact ID and offset for new cluster"
 msgstr "正在为新集簇设置下一个多事务 ID 和偏移量"
 
-#: pg_upgrade.c:882
+#: pg_upgrade.c:869
 #, c-format
 msgid "Converting pg_multixact files"
 msgstr "正在转换 pg_multixact 文件"
 
-#: pg_upgrade.c:896
+#: pg_upgrade.c:883
 #, c-format
 msgid "Resetting WAL archives"
 msgstr "正在重置 WAL 归档"
 
-#: pg_upgrade.c:939
+#: pg_upgrade.c:926
 #, c-format
 msgid "Setting frozenxid and minmxid counters in new cluster"
 msgstr "正在新集簇中设置 frozenxid 和 minmxid 计数器"
 
-#: pg_upgrade.c:941
+#: pg_upgrade.c:928
 #, c-format
 msgid "Setting minmxid counter in new cluster"
 msgstr "正在新集簇中设置 minmxid 计数器"
 
-#: pg_upgrade.c:1032
+#: pg_upgrade.c:1019
 #, c-format
 msgid "Restoring logical replication slots in the new cluster"
 msgstr "正在新集簇中恢复逻辑复制槽"
 
-#: pg_upgrade.c:1094
+#: pg_upgrade.c:1081
 #, c-format
 msgid "Creating the replication conflict detection slot"
 msgstr "正在创建复制冲突检测槽"
@@ -2216,17 +2216,17 @@ msgstr "正在将 \"%s\" 链接到 \"%s\""
 msgid "should never happen"
 msgstr "绝不应发生此情况"
 
-#: server.c:39 server.c:145 util.c:248 util.c:278
+#: server.c:40 server.c:157 util.c:266 util.c:297
 #, c-format
 msgid "Failure, exiting\n"
 msgstr "失败，正在退出\n"
 
-#: server.c:135
+#: server.c:147
 #, c-format
 msgid "executing: %s"
 msgstr "正在执行: %s"
 
-#: server.c:141
+#: server.c:153
 #, c-format
 msgid ""
 "SQL command failed\n"
@@ -2237,7 +2237,7 @@ msgstr ""
 "%s\n"
 "%s"
 
-#: server.c:262
+#: server.c:274
 #, c-format
 msgid ""
 "\n"
@@ -2246,7 +2246,7 @@ msgstr ""
 "\n"
 "%s"
 
-#: server.c:266
+#: server.c:278
 #, c-format
 msgid ""
 "could not connect to source postmaster started with the command:\n"
@@ -2255,7 +2255,7 @@ msgstr ""
 "无法连接到使用以下命令启动的源 postmaster:\n"
 "%s"
 
-#: server.c:270
+#: server.c:282
 #, c-format
 msgid ""
 "could not connect to target postmaster started with the command:\n"
@@ -2264,22 +2264,22 @@ msgstr ""
 "无法连接到使用以下命令启动的目标 postmaster:\n"
 "%s"
 
-#: server.c:284
+#: server.c:296
 #, c-format
 msgid "pg_ctl failed to start the source server, or connection failed"
 msgstr "pg_ctl 启动源服务器失败，或连接失败"
 
-#: server.c:286
+#: server.c:298
 #, c-format
 msgid "pg_ctl failed to start the target server, or connection failed"
 msgstr "pg_ctl 启动目标服务器失败，或连接失败"
 
-#: server.c:331 task.c:197
+#: server.c:343 task.c:197
 #, c-format
 msgid "out of memory"
 msgstr "内存不足"
 
-#: server.c:344
+#: server.c:356
 #, c-format
 msgid "libpq environment variable %s has a non-local server value: %s"
 msgstr "libpq 环境变量 %s 的值指向非本地服务器: %s"
@@ -2333,17 +2333,17 @@ msgstr "连接失败: %s"
 msgid "invalid socket"
 msgstr "无效的套接字"
 
-#: util.c:53 util.c:56 util.c:139 util.c:170 util.c:172
+#: util.c:54 util.c:57 util.c:140 util.c:171 util.c:173
 #, c-format
 msgid "%-*s"
 msgstr "%-*s"
 
-#: util.c:107
+#: util.c:108
 #, c-format
 msgid "could not access directory \"%s\": %m"
 msgstr "无法访问目录 \"%s\": %m"
 
-#: util.c:287
+#: util.c:306
 #, c-format
 msgid "ok"
 msgstr "成功"

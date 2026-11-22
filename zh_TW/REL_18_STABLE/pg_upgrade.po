@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_upgrade (PostgreSQL) 18\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-19 23:08+0000\n"
+"POT-Creation-Date: 2026-11-21 20:08+0000\n"
 "PO-Revision-Date: 2026-11-16 22:43+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
@@ -730,8 +730,8 @@ msgstr "目標叢集缺少叢集狀態資訊:"
 
 # commands/vacuum.c:2258 commands/vacuumlazy.c:489 commands/vacuumlazy.c:770
 # nodes/print.c:86 storage/lmgr/deadlock.c:888 tcop/postgres.c:3285
-#: controldata.c:217 dump.c:54 exec.c:118 pg_upgrade.c:606 pg_upgrade.c:646
-#: pg_upgrade.c:995 relfilenumber.c:610 server.c:34 util.c:337
+#: controldata.c:217 dump.c:54 exec.c:118 pg_upgrade.c:593 pg_upgrade.c:633
+#: pg_upgrade.c:982 relfilenumber.c:610 server.c:35 util.c:356
 #, c-format
 msgid "%s"
 msgstr "%s"
@@ -1266,27 +1266,27 @@ msgstr ""
 "\n"
 "目標資料庫:"
 
-#: info.c:371
+#: info.c:382
 #, c-format
 msgid "template0 not found"
 msgstr "找不到 template0"
 
-#: info.c:817
+#: info.c:833
 #, c-format
 msgid "Database: \"%s\""
 msgstr "資料庫: \"%s\""
 
-#: info.c:830
+#: info.c:846
 #, c-format
 msgid "relname: \"%s.%s\", reloid: %u, reltblspace: \"%s\""
 msgstr "relname: \"%s.%s\", reloid: %u, reltblspace: \"%s\""
 
-#: info.c:844
+#: info.c:860
 #, c-format
 msgid "Logical replication slots in the database:"
 msgstr "資料庫中的邏輯複寫槽:"
 
-#: info.c:850
+#: info.c:866
 #, c-format
 msgid "slot name: \"%s\", output plugin: \"%s\", two_phase: %s"
 msgstr "槽名: \"%s\", 輸出外掛程式: \"%s\", two_phase: %s"
@@ -1734,82 +1734,82 @@ msgstr ""
 msgid "Setting the default char signedness for new cluster"
 msgstr "正在為新叢集設定預設 char 符號屬性"
 
-#: pg_upgrade.c:449
+#: pg_upgrade.c:450
 #, c-format
 msgid "Setting locale and encoding for new cluster"
 msgstr "設定新叢集的區域設定和編碼"
 
-#: pg_upgrade.c:527
+#: pg_upgrade.c:514
 #, c-format
 msgid "Analyzing all rows in the new cluster"
 msgstr "分析新叢集中的所有資料列"
 
-#: pg_upgrade.c:540
+#: pg_upgrade.c:527
 #, c-format
 msgid "Freezing all rows in the new cluster"
 msgstr "凍結新叢集中的所有資料列"
 
-#: pg_upgrade.c:560
+#: pg_upgrade.c:547
 #, c-format
 msgid "Restoring global objects in the new cluster"
 msgstr "還原新叢集中的全域物件"
 
-#: pg_upgrade.c:577
+#: pg_upgrade.c:564
 #, c-format
 msgid "Restoring database schemas in the new cluster"
 msgstr "還原新叢集中的資料庫 schema"
 
-#: pg_upgrade.c:712
+#: pg_upgrade.c:699
 #, c-format
 msgid "Deleting files from new %s"
 msgstr "從新的 %s 刪除檔案"
 
-#: pg_upgrade.c:716
+#: pg_upgrade.c:703
 #, c-format
 msgid "could not delete directory \"%s\""
 msgstr "無法刪除目錄 \"%s\""
 
-#: pg_upgrade.c:735
+#: pg_upgrade.c:722
 #, c-format
 msgid "Copying old %s to new server"
 msgstr "將舊的 %s 複製到新伺服器"
 
-#: pg_upgrade.c:761
+#: pg_upgrade.c:748
 #, c-format
 msgid "Setting oldest XID for new cluster"
 msgstr "為新叢集設定最早的 XID"
 
-#: pg_upgrade.c:769
+#: pg_upgrade.c:756
 #, c-format
 msgid "Setting next transaction ID and epoch for new cluster"
 msgstr "為新叢集設定下一個交易 ID 和紀元"
 
-#: pg_upgrade.c:799
+#: pg_upgrade.c:786
 #, c-format
 msgid "Setting next multixact ID and offset for new cluster"
 msgstr "為新叢集設定下一個多重交易 ID 和位移"
 
-#: pg_upgrade.c:823
+#: pg_upgrade.c:810
 #, c-format
 msgid "Setting oldest multixact ID in new cluster"
 msgstr "為新叢集設定最早的 multixact ID"
 
-#: pg_upgrade.c:843
+#: pg_upgrade.c:830
 #, c-format
 msgid "Resetting WAL archives"
 msgstr "重設 WAL 封存檔"
 
-#: pg_upgrade.c:886
+#: pg_upgrade.c:873
 #, c-format
 msgid "Setting frozenxid and minmxid counters in new cluster"
 msgstr "在新叢集中設定 frozenxid 和 minmxid 計數器"
 
-#: pg_upgrade.c:888
+#: pg_upgrade.c:875
 #, c-format
 msgid "Setting minmxid counter in new cluster"
 msgstr "在新叢集中設定 minmxid 計數器"
 
-#: pg_upgrade.c:979
+#: pg_upgrade.c:966
 #, c-format
 msgid "Restoring logical replication slots in the new cluster"
 msgstr "正在還原新叢集中的邏輯複寫槽"
@@ -1929,17 +1929,17 @@ msgstr "連結 \"%s\" 至 \"%s\""
 msgid "should never happen"
 msgstr "絕不應發生此情況"
 
-#: server.c:39 server.c:145 util.c:248 util.c:278
+#: server.c:40 server.c:157 util.c:266 util.c:297
 #, c-format
 msgid "Failure, exiting\n"
 msgstr "失敗，結束\n"
 
-#: server.c:135
+#: server.c:147
 #, c-format
 msgid "executing: %s"
 msgstr "執行: %s"
 
-#: server.c:141
+#: server.c:153
 #, c-format
 msgid ""
 "SQL command failed\n"
@@ -1950,17 +1950,17 @@ msgstr ""
 "%s\n"
 "%s"
 
-#: server.c:171
+#: server.c:183
 #, c-format
 msgid "could not open version file \"%s\": %m"
 msgstr "無法開啟版本檔 \"%s\": %m"
 
-#: server.c:175
+#: server.c:187
 #, c-format
 msgid "could not parse version file \"%s\""
 msgstr "無法解析版本檔 \"%s\""
 
-#: server.c:301
+#: server.c:313
 #, c-format
 msgid ""
 "\n"
@@ -1969,7 +1969,7 @@ msgstr ""
 "\n"
 "%s"
 
-#: server.c:305
+#: server.c:317
 #, c-format
 msgid ""
 "could not connect to source postmaster started with the command:\n"
@@ -1978,7 +1978,7 @@ msgstr ""
 "無法連線到用以下命令啟動的來源 postmaster:\n"
 "%s"
 
-#: server.c:309
+#: server.c:321
 #, c-format
 msgid ""
 "could not connect to target postmaster started with the command:\n"
@@ -1987,12 +1987,12 @@ msgstr ""
 "無法連線到用以下命令啟動的目標 postmaster:\n"
 "%s"
 
-#: server.c:323
+#: server.c:335
 #, c-format
 msgid "pg_ctl failed to start the source server, or connection failed"
 msgstr "pg_ctl 啟動來源伺服器失敗或連線失敗"
 
-#: server.c:325
+#: server.c:337
 #, c-format
 msgid "pg_ctl failed to start the target server, or connection failed"
 msgstr "pg_ctl 啟動目標伺服器失敗或連線失敗"
@@ -2017,12 +2017,12 @@ msgstr "pg_ctl 啟動目標伺服器失敗或連線失敗"
 # utils/init/miscinit.c:244 utils/misc/guc.c:1898 utils/misc/guc.c:1911
 # utils/misc/guc.c:1924 utils/mmgr/aset.c:337 utils/mmgr/aset.c:503
 # utils/mmgr/aset.c:700 utils/mmgr/aset.c:893 utils/mmgr/portalmem.c:75
-#: server.c:370 task.c:197
+#: server.c:382 task.c:197
 #, c-format
 msgid "out of memory"
 msgstr "記憶體不足"
 
-#: server.c:383
+#: server.c:395
 #, c-format
 msgid "libpq environment variable %s has a non-local server value: %s"
 msgstr "libpq 環境變數 %s 具有非本地伺服器值: %s"
@@ -2061,18 +2061,18 @@ msgstr "連線失敗: %s"
 msgid "invalid socket"
 msgstr "無效的 socket"
 
-#: util.c:53 util.c:56 util.c:139 util.c:170 util.c:172
+#: util.c:54 util.c:57 util.c:140 util.c:171 util.c:173
 #, c-format
 msgid "%-*s"
 msgstr "%-*s"
 
 # utils/init/postinit.c:283
-#: util.c:107
+#: util.c:108
 #, c-format
 msgid "could not access directory \"%s\": %m"
 msgstr "無法存取目錄 \"%s\": %m"
 
-#: util.c:287
+#: util.c:306
 #, c-format
 msgid "ok"
 msgstr "成功"

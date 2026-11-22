@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_rewind (PostgreSQL) 15\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-19 22:28+0000\n"
-"PO-Revision-Date: 2026-11-16 22:43+0800\n"
+"POT-Creation-Date: 2026-11-21 20:59+0000\n"
+"PO-Revision-Date: 2026-11-22 08:13+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
 "Language: zh_TW\n"
@@ -431,8 +431,8 @@ msgstr "來源伺服器執行查詢(%s)時發生錯誤: %s"
 
 #: libpq_source.c:219
 #, c-format
-msgid "unrecognized result \"%s\" for current WAL insert location"
-msgstr "無法識別目前 WAL 插入位置的結果 \"%s\""
+msgid "unrecognized result \"%s\" for current WAL flush location"
+msgstr "無法識別目前 WAL 排清位置的結果 \"%s\""
 
 #: libpq_source.c:270
 #, c-format
@@ -823,98 +823,98 @@ msgstr "來源系統在 pg_rewind 執行期間被修改"
 msgid "creating backup label and updating control file"
 msgstr "建立備份標籤並更新控制檔"
 
-#: pg_rewind.c:657
+#: pg_rewind.c:663
 #, c-format
 msgid "source system was in unexpected state at end of rewind"
 msgstr "來源系統在回溯結束時處於非預期的狀態"
 
-#: pg_rewind.c:688
+#: pg_rewind.c:694
 #, c-format
 msgid "source and target clusters are from different systems"
 msgstr "來源和目標叢集來自不同的系統"
 
-#: pg_rewind.c:696
+#: pg_rewind.c:702
 #, c-format
 msgid "clusters are not compatible with this version of pg_rewind"
 msgstr "叢集與此版本的 pg_rewind 不相容"
 
-#: pg_rewind.c:706
+#: pg_rewind.c:712
 #, c-format
 msgid "target server needs to use either data checksums or \"wal_log_hints = on\""
 msgstr "目標伺服器需要使用資料檢查碼或 \"wal_log_hints = on\""
 
-#: pg_rewind.c:717
+#: pg_rewind.c:723
 #, c-format
 msgid "target server must be shut down cleanly"
 msgstr "目標伺服器必須已正常關閉"
 
-#: pg_rewind.c:727
+#: pg_rewind.c:733
 #, c-format
 msgid "source data directory must be shut down cleanly"
 msgstr "來源資料目錄對應的伺服器必須已正常關閉"
 
-#: pg_rewind.c:774
+#: pg_rewind.c:780
 #, c-format
 msgid "%*s/%s kB (%d%%) copied"
 msgstr "%*s/%s kB (%d%%) 已被複製"
 
-#: pg_rewind.c:837
+#: pg_rewind.c:843
 #, c-format
 msgid "invalid control file"
 msgstr "無效的控制檔案"
 
-#: pg_rewind.c:919
+#: pg_rewind.c:925
 #, c-format
 msgid "could not find common ancestor of the source and target cluster's timelines"
 msgstr "找不到來源叢集和目標叢集時間軸的共同祖先"
 
-#: pg_rewind.c:960
+#: pg_rewind.c:966
 #, c-format
 msgid "backup label buffer too small"
 msgstr "備份標籤緩衝區過小"
 
-#: pg_rewind.c:983
+#: pg_rewind.c:989
 #, c-format
 msgid "unexpected control file CRC"
 msgstr "非預期的控制檔 CRC"
 
-#: pg_rewind.c:995
+#: pg_rewind.c:1001
 #, c-format
 msgid "unexpected control file size %d, expected %d"
 msgstr "非預期的控制檔大小 %d，預期為 %d"
 
-#: pg_rewind.c:1004
+#: pg_rewind.c:1010
 #, c-format
 msgid "WAL segment size must be a power of two between 1 MB and 1 GB, but the control file specifies %d byte"
 msgid_plural "WAL segment size must be a power of two between 1 MB and 1 GB, but the control file specifies %d bytes"
 msgstr[0] "WAL 片段大小必須是 1 MB 到 1 GB 之間的二的冪，但控制檔案指定了 %d 位元組"
 
-#: pg_rewind.c:1043 pg_rewind.c:1113
+#: pg_rewind.c:1049 pg_rewind.c:1119
 #, c-format
 msgid "program \"%s\" is needed by %s but was not found in the same directory as \"%s\""
 msgstr "%2$s 需要程式 \"%1$s\"，但在與 \"%3$s\" 相同的目錄中找不到該程式"
 
-#: pg_rewind.c:1046 pg_rewind.c:1116
+#: pg_rewind.c:1052 pg_rewind.c:1122
 #, c-format
 msgid "program \"%s\" was found by \"%s\" but was not the same version as %s"
 msgstr "程式 \"%s\" 被 \"%s\" 找到，但版本不同於 %s"
 
-#: pg_rewind.c:1079
+#: pg_rewind.c:1085
 #, c-format
 msgid "restore_command is not set in the target cluster"
 msgstr "目標叢集未設定 restore_command"
 
-#: pg_rewind.c:1120
+#: pg_rewind.c:1126
 #, c-format
 msgid "executing \"%s\" for target server to complete crash recovery"
 msgstr "執行 \"%s\" 以完成目標伺服器的崩潰復原"
 
-#: pg_rewind.c:1157
+#: pg_rewind.c:1163
 #, c-format
 msgid "postgres single-user mode in target cluster failed"
 msgstr "目標叢集中的 postgres 單使用者模式失敗"
 
-#: pg_rewind.c:1158
+#: pg_rewind.c:1164
 #, c-format
 msgid "Command was: %s"
 msgstr "命令是: %s"

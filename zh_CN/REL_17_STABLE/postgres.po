@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 17\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-19 23:23+0000\n"
+"POT-Creation-Date: 2026-11-21 20:23+0000\n"
 "PO-Revision-Date: 2026-11-20 08:41+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
@@ -1950,7 +1950,7 @@ msgstr "确保已在主库上启用配置参数 \"%s\"。"
 msgid "Make sure the configuration parameter \"%s\" is set."
 msgstr "确保已启用配置参数 \"%s\"。"
 
-#: access/transam/multixact.c:1272
+#: access/transam/multixact.c:1287
 #, c-format
 msgid ""
 "database is not accepting commands that assign new MultiXactIds to avoid "
@@ -1958,8 +1958,8 @@ msgid ""
 msgstr ""
 "数据库不再接受分配新 MultiXactId 的命令，以避免数据库 \"%s\" 因回卷而丢失数据"
 
-#: access/transam/multixact.c:1274 access/transam/multixact.c:1281
-#: access/transam/multixact.c:1305 access/transam/multixact.c:1314
+#: access/transam/multixact.c:1289 access/transam/multixact.c:1296
+#: access/transam/multixact.c:1320 access/transam/multixact.c:1329
 #, c-format
 msgid ""
 "Execute a database-wide VACUUM in that database.\n"
@@ -1968,7 +1968,7 @@ msgstr ""
 "在该数据库中执行全库 VACUUM。\n"
 "您可能还需要提交或回滚旧的预备事务。"
 
-#: access/transam/multixact.c:1279
+#: access/transam/multixact.c:1294
 #, c-format
 msgid ""
 "database is not accepting commands that assign new MultiXactIds to avoid "
@@ -1977,14 +1977,14 @@ msgstr ""
 "数据库不再接受分配新 MultiXactId 的命令，以避免 OID 为 %u 的数据库因回卷而丢"
 "失数据"
 
-#: access/transam/multixact.c:1300 access/transam/multixact.c:2656
+#: access/transam/multixact.c:1315 access/transam/multixact.c:2671
 #, c-format
 msgid "database \"%s\" must be vacuumed before %u more MultiXactId is used"
 msgid_plural ""
 "database \"%s\" must be vacuumed before %u more MultiXactIds are used"
 msgstr[0] "必须在再使用 %2$u 个 MultiXactId 之前清理数据库 \"%1$s\""
 
-#: access/transam/multixact.c:1309 access/transam/multixact.c:2665
+#: access/transam/multixact.c:1324 access/transam/multixact.c:2680
 #, c-format
 msgid ""
 "database with OID %u must be vacuumed before %u more MultiXactId is used"
@@ -1992,12 +1992,12 @@ msgid_plural ""
 "database with OID %u must be vacuumed before %u more MultiXactIds are used"
 msgstr[0] "必须在再使用 %2$u 个 MultiXactId 之前清理 OID 为 %1$u 的数据库"
 
-#: access/transam/multixact.c:1373
+#: access/transam/multixact.c:1388
 #, c-format
 msgid "multixact \"members\" limit exceeded"
 msgstr "多事务 \"成员\" 超过限制"
 
-#: access/transam/multixact.c:1374
+#: access/transam/multixact.c:1389
 #, c-format
 msgid ""
 "This command would create a multixact with %u members, but the remaining "
@@ -2007,7 +2007,7 @@ msgid_plural ""
 "space is only enough for %u members."
 msgstr[0] "此命令将创建包含 %u 个成员的多事务，但剩余空间仅够容纳 %u 个成员。"
 
-#: access/transam/multixact.c:1379
+#: access/transam/multixact.c:1394
 #, c-format
 msgid ""
 "Execute a database-wide VACUUM in database with OID %u with reduced "
@@ -2017,7 +2017,7 @@ msgstr ""
 "在 OID 为 %u 的数据库中，使用调低的 \"vacuum_multixact_freeze_min_age\" 和 "
 "\"vacuum_multixact_freeze_table_age\" 设置执行全库 VACUUM。"
 
-#: access/transam/multixact.c:1410
+#: access/transam/multixact.c:1425
 #, c-format
 msgid ""
 "database with OID %u must be vacuumed before %d more multixact member is used"
@@ -2026,7 +2026,7 @@ msgid_plural ""
 "used"
 msgstr[0] "必须在再使用 %2$d 个多事务成员之前清理 OID 为 %1$u 的数据库"
 
-#: access/transam/multixact.c:1415
+#: access/transam/multixact.c:1430
 #, c-format
 msgid ""
 "Execute a database-wide VACUUM in that database with reduced "
@@ -2036,22 +2036,22 @@ msgstr ""
 "在该数据库中，使用调低的 \"vacuum_multixact_freeze_min_age\" 和 "
 "\"vacuum_multixact_freeze_table_age\" 设置执行全库 VACUUM。"
 
-#: access/transam/multixact.c:1554
+#: access/transam/multixact.c:1569
 #, c-format
 msgid "MultiXactId %u does no longer exist -- apparent wraparound"
 msgstr "MultiXactId %u 已不存在，似乎已发生回卷"
 
-#: access/transam/multixact.c:1560
+#: access/transam/multixact.c:1575
 #, c-format
 msgid "MultiXactId %u has not been created yet -- apparent wraparound"
 msgstr "MultiXactId %u 尚未创建，似乎已发生回卷"
 
-#: access/transam/multixact.c:1653
+#: access/transam/multixact.c:1668
 #, c-format
 msgid "MultiXact %u has invalid next offset"
 msgstr "MultiXact %u 的下一个偏移量无效"
 
-#: access/transam/multixact.c:2661 access/transam/multixact.c:2670
+#: access/transam/multixact.c:2676 access/transam/multixact.c:2685
 #, c-format
 msgid ""
 "To avoid MultiXactId assignment failures, execute a database-wide VACUUM in "
@@ -2061,7 +2061,7 @@ msgstr ""
 "为避免 MultiXactId 分配失败，在该数据库中执行全库 VACUUM。\n"
 "您可能还需要提交或回滚旧的预备事务。"
 
-#: access/transam/multixact.c:2953
+#: access/transam/multixact.c:2968
 #, c-format
 msgid ""
 "MultiXact member wraparound protections are disabled because oldest "
@@ -2070,32 +2070,32 @@ msgstr ""
 "已禁用 MultiXact 成员回卷保护，因为检查点中记录的最早 MultiXact %u 在磁盘上不"
 "存在"
 
-#: access/transam/multixact.c:2975
+#: access/transam/multixact.c:2990
 #, c-format
 msgid "MultiXact member wraparound protections are now enabled"
 msgstr "MultiXact 成员回卷保护现已启用"
 
-#: access/transam/multixact.c:3366
+#: access/transam/multixact.c:3381
 #, c-format
 msgid ""
 "oldest MultiXact %u not found, earliest MultiXact %u, skipping truncation"
 msgstr "未找到最旧的 MultiXact %u，最早的 MultiXact 为 %u，跳过截断"
 
-#: access/transam/multixact.c:3384
+#: access/transam/multixact.c:3399
 #, c-format
 msgid ""
 "cannot truncate up to MultiXact %u because it does not exist on disk, "
 "skipping truncation"
 msgstr "不能截断至 MultiXact %u，因为它在磁盘上不存在；跳过截断"
 
-#: access/transam/multixact.c:3401
+#: access/transam/multixact.c:3416
 #, c-format
 msgid ""
 "cannot truncate up to MultiXact %u because it has invalid offset, skipping "
 "truncation"
 msgstr "不能截断至 MultiXact %u，因为其偏移量无效；跳过截断"
 
-#: access/transam/multixact.c:3738
+#: access/transam/multixact.c:3753
 #, c-format
 msgid "invalid MultiXactId: %u"
 msgstr "无效的 MultiXactId: %u"
@@ -5563,12 +5563,12 @@ msgstr "DROP INDEX CONCURRENTLY 必须是事务中的第一个操作"
 msgid "cannot reindex temporary tables of other sessions"
 msgstr "不能重建其他会话的临时表的索引"
 
-#: catalog/index.c:3715 commands/indexcmds.c:3720
+#: catalog/index.c:3715 commands/indexcmds.c:3729
 #, c-format
 msgid "cannot reindex invalid index on TOAST table"
 msgstr "不能重建 TOAST 表上的无效索引"
 
-#: catalog/index.c:3731 commands/indexcmds.c:3598 commands/indexcmds.c:3744
+#: catalog/index.c:3731 commands/indexcmds.c:3599 commands/indexcmds.c:3753
 #: commands/tablecmds.c:3604
 #, c-format
 msgid "cannot move system relation \"%s\""
@@ -9933,8 +9933,8 @@ msgstr "表 \"%s\" 没有可并发重建的索引"
 msgid "table \"%s\" has no indexes to reindex"
 msgstr "表 \"%s\" 没有要重建的索引"
 
-#: commands/indexcmds.c:3027 commands/indexcmds.c:3579
-#: commands/indexcmds.c:3709
+#: commands/indexcmds.c:3027 commands/indexcmds.c:3580
+#: commands/indexcmds.c:3718
 #, c-format
 msgid "cannot reindex system catalogs concurrently"
 msgstr "不能并发重建系统目录的索引"
@@ -9964,43 +9964,43 @@ msgstr "重建分区表 \"%s.%s\" 的索引时"
 msgid "while reindexing partitioned index \"%s.%s\""
 msgstr "重建分区索引 \"%s.%s\" 时"
 
-#: commands/indexcmds.c:3418 commands/indexcmds.c:4363
+#: commands/indexcmds.c:3418 commands/indexcmds.c:4381
 #, c-format
 msgid "table \"%s.%s\" was reindexed"
 msgstr "表 \"%s.%s\" 的索引已重建"
 
-#: commands/indexcmds.c:3611 commands/indexcmds.c:3664
+#: commands/indexcmds.c:3612 commands/indexcmds.c:3669
 #, c-format
 msgid "skipping reindex of invalid index \"%s.%s\""
 msgstr "跳过无效索引 \"%s.%s\" 的重建"
 
-#: commands/indexcmds.c:3614 commands/indexcmds.c:3667
+#: commands/indexcmds.c:3615 commands/indexcmds.c:3672
 #, c-format
 msgid "Use DROP INDEX or REINDEX INDEX."
 msgstr "使用 DROP INDEX 或 REINDEX INDEX。"
 
-#: commands/indexcmds.c:3618
+#: commands/indexcmds.c:3619
 #, c-format
 msgid ""
 "cannot reindex exclusion constraint index \"%s.%s\" concurrently, skipping"
 msgstr "不能并发重建排他约束索引 \"%s.%s\"，跳过"
 
-#: commands/indexcmds.c:3774
+#: commands/indexcmds.c:3783
 #, c-format
 msgid "cannot reindex this type of relation concurrently"
 msgstr "不能并发重建此类关系的索引"
 
-#: commands/indexcmds.c:3792
+#: commands/indexcmds.c:3801
 #, c-format
 msgid "cannot move non-shared relation to tablespace \"%s\""
 msgstr "不能将非共享关系移动到表空间 \"%s\""
 
-#: commands/indexcmds.c:4344 commands/indexcmds.c:4356
+#: commands/indexcmds.c:4362 commands/indexcmds.c:4374
 #, c-format
 msgid "index \"%s.%s\" was reindexed"
 msgstr "索引 \"%s.%s\" 已重建"
 
-#: commands/indexcmds.c:4346 commands/indexcmds.c:4365
+#: commands/indexcmds.c:4364 commands/indexcmds.c:4383
 #, c-format
 msgid "%s."
 msgstr "%s。"
@@ -13143,8 +13143,8 @@ msgstr "不能从外部子表收集过渡元组"
 
 #: commands/trigger.c:3442 executor/nodeModifyTable.c:1577
 #: executor/nodeModifyTable.c:1651 executor/nodeModifyTable.c:2407
-#: executor/nodeModifyTable.c:2498 executor/nodeModifyTable.c:3169
-#: executor/nodeModifyTable.c:3380
+#: executor/nodeModifyTable.c:2498 executor/nodeModifyTable.c:3170
+#: executor/nodeModifyTable.c:3403
 #, c-format
 msgid ""
 "Consider using an AFTER trigger instead of a BEFORE trigger to propagate "
@@ -13154,14 +13154,14 @@ msgstr "考虑使用 AFTER 触发器代替 BEFORE 触发器，将更改传播到
 #: commands/trigger.c:3484 executor/nodeLockRows.c:228
 #: executor/nodeLockRows.c:237 executor/nodeModifyTable.c:336
 #: executor/nodeModifyTable.c:1593 executor/nodeModifyTable.c:2424
-#: executor/nodeModifyTable.c:2648 executor/nodeModifyTable.c:3213
+#: executor/nodeModifyTable.c:2648 executor/nodeModifyTable.c:3214
 #, c-format
 msgid "could not serialize access due to concurrent update"
 msgstr "由于并发更新，无法串行化访问"
 
 #: commands/trigger.c:3492 executor/nodeModifyTable.c:1683
 #: executor/nodeModifyTable.c:2515 executor/nodeModifyTable.c:2664
-#: executor/nodeModifyTable.c:3187
+#: executor/nodeModifyTable.c:3188
 #, c-format
 msgid "could not serialize access due to concurrent delete"
 msgstr "由于并发删除，无法串行化访问"
@@ -15097,8 +15097,8 @@ msgid "Consider defining the foreign key on table \"%s\"."
 msgstr "可以考虑在表 \"%s\" 上定义外键。"
 
 #. translator: %s is a SQL command name
-#: executor/nodeModifyTable.c:2626 executor/nodeModifyTable.c:3175
-#: executor/nodeModifyTable.c:3386
+#: executor/nodeModifyTable.c:2626 executor/nodeModifyTable.c:3176
+#: executor/nodeModifyTable.c:3409
 #, c-format
 msgid "%s command cannot affect row a second time"
 msgstr "%s 命令不能再次影响同一行"
@@ -15110,19 +15110,19 @@ msgid ""
 "duplicate constrained values."
 msgstr "确保同一命令中待插入的行，其受约束的值没有重复。"
 
-#: executor/nodeModifyTable.c:3168 executor/nodeModifyTable.c:3379
+#: executor/nodeModifyTable.c:3169 executor/nodeModifyTable.c:3402
 #, c-format
 msgid ""
 "tuple to be updated or deleted was already modified by an operation "
 "triggered by the current command"
 msgstr "待更新或删除的元组已被当前命令触发的操作修改"
 
-#: executor/nodeModifyTable.c:3177 executor/nodeModifyTable.c:3388
+#: executor/nodeModifyTable.c:3178 executor/nodeModifyTable.c:3411
 #, c-format
 msgid "Ensure that not more than one source row matches any one target row."
 msgstr "确保每个目标行最多匹配一个源行。"
 
-#: executor/nodeModifyTable.c:3257
+#: executor/nodeModifyTable.c:3258
 #, c-format
 msgid ""
 "tuple to be merged was already moved to another partition due to concurrent "
@@ -24094,7 +24094,7 @@ msgid ""
 "multiple assignment in the subject UPDATE command"
 msgstr "ON UPDATE 规则中的 NEW 变量不能引用主 UPDATE 命令中参与多重赋值的列"
 
-#: rewrite/rewriteSearchCycle.c:410
+#: rewrite/rewriteSearchCycle.c:416
 #, c-format
 msgid ""
 "with a SEARCH or CYCLE clause, the recursive reference to WITH query \"%s\" "
@@ -26654,9 +26654,9 @@ msgstr "TIME(%d)%s 的精度不得为负数"
 msgid "TIME(%d)%s precision reduced to maximum allowed, %d"
 msgstr "TIME(%d)%s 的精度已降低到最大允许值 %d"
 
-#: utils/adt/date.c:167 utils/adt/date.c:175 utils/adt/formatting.c:4550
-#: utils/adt/formatting.c:4559 utils/adt/formatting.c:4664
-#: utils/adt/formatting.c:4674
+#: utils/adt/date.c:167 utils/adt/date.c:175 utils/adt/formatting.c:4551
+#: utils/adt/formatting.c:4560 utils/adt/formatting.c:4665
+#: utils/adt/formatting.c:4675
 #, c-format
 msgid "date out of range: \"%s\""
 msgstr "date 超出范围: \"%s\""
@@ -26711,8 +26711,8 @@ msgstr "类型 %2$s 无法识别单位 \"%1$s\""
 #: utils/adt/date.c:1314 utils/adt/date.c:1360 utils/adt/date.c:1919
 #: utils/adt/date.c:1950 utils/adt/date.c:1979 utils/adt/date.c:2869
 #: utils/adt/date.c:3101 utils/adt/datetime.c:422 utils/adt/datetime.c:1807
-#: utils/adt/formatting.c:4395 utils/adt/formatting.c:4431
-#: utils/adt/formatting.c:4518 utils/adt/formatting.c:4640 utils/adt/json.c:375
+#: utils/adt/formatting.c:4396 utils/adt/formatting.c:4432
+#: utils/adt/formatting.c:4519 utils/adt/formatting.c:4641 utils/adt/json.c:375
 #: utils/adt/json.c:414 utils/adt/timestamp.c:248 utils/adt/timestamp.c:280
 #: utils/adt/timestamp.c:716 utils/adt/timestamp.c:725
 #: utils/adt/timestamp.c:803 utils/adt/timestamp.c:836
@@ -26742,7 +26742,7 @@ msgstr "类型 %2$s 无法识别单位 \"%1$s\""
 msgid "timestamp out of range"
 msgstr "timestamp 超出范围"
 
-#: utils/adt/date.c:1536 utils/adt/date.c:2352 utils/adt/formatting.c:4723
+#: utils/adt/date.c:1536 utils/adt/date.c:2352 utils/adt/formatting.c:4724
 #, c-format
 msgid "time out of range"
 msgstr "time 超出范围"
@@ -27227,57 +27227,57 @@ msgstr "输入字符串对于日期时间格式过短"
 msgid "trailing characters remain in input string after datetime format"
 msgstr "按日期时间格式解析后，输入字符串末尾仍有剩余字符"
 
-#: utils/adt/formatting.c:4620
+#: utils/adt/formatting.c:4621
 #, c-format
 msgid "missing time zone in input string for type timestamptz"
 msgstr "timestamptz 类型的输入字符串中缺少时区"
 
-#: utils/adt/formatting.c:4626
+#: utils/adt/formatting.c:4627
 #, c-format
 msgid "timestamptz out of range"
 msgstr "timestamptz 超出范围"
 
-#: utils/adt/formatting.c:4654
+#: utils/adt/formatting.c:4655
 #, c-format
 msgid "datetime format is zoned but not timed"
 msgstr "日期时间格式包含时区，但不包含时间"
 
-#: utils/adt/formatting.c:4703
+#: utils/adt/formatting.c:4704
 #, c-format
 msgid "missing time zone in input string for type timetz"
 msgstr "timetz 类型的输入字符串中缺少时区"
 
-#: utils/adt/formatting.c:4709
+#: utils/adt/formatting.c:4710
 #, c-format
 msgid "timetz out of range"
 msgstr "timetz 超出范围"
 
-#: utils/adt/formatting.c:4735
+#: utils/adt/formatting.c:4736
 #, c-format
 msgid "datetime format is not dated and not timed"
 msgstr "日期时间格式既不包含日期，也不包含时间"
 
-#: utils/adt/formatting.c:4912
+#: utils/adt/formatting.c:4913
 #, c-format
 msgid "hour \"%d\" is invalid for the 12-hour clock"
 msgstr "12 小时制的小时数 \"%d\" 无效"
 
-#: utils/adt/formatting.c:4914
+#: utils/adt/formatting.c:4915
 #, c-format
 msgid "Use the 24-hour clock, or give an hour between 1 and 12."
 msgstr "使用 24 小时制，或将小时数指定为 1 到 12 之间的值。"
 
-#: utils/adt/formatting.c:5026
+#: utils/adt/formatting.c:5027
 #, c-format
 msgid "cannot calculate day of year without year information"
 msgstr "没有年份信息，不能计算一年中的第几天"
 
-#: utils/adt/formatting.c:5991
+#: utils/adt/formatting.c:5992
 #, c-format
 msgid "\"EEEE\" not supported for input"
 msgstr "不支持在输入中使用 \"EEEE\""
 
-#: utils/adt/formatting.c:6003
+#: utils/adt/formatting.c:6004
 #, c-format
 msgid "\"RN\" not supported for input"
 msgstr "不支持在输入中使用 \"RN\""

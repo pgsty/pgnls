@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_basebackup (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-19 23:50+0000\n"
-"PO-Revision-Date: 2026-11-16 22:43+0800\n"
+"POT-Creation-Date: 2026-11-21 19:50+0000\n"
+"PO-Revision-Date: 2026-11-22 08:13+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
 "Language: zh_CN\n"
@@ -203,7 +203,7 @@ msgstr "无法打开目录 \"%s\": %m"
 msgid "could not read directory \"%s\": %m"
 msgstr "无法读取目录 \"%s\": %m"
 
-#: ../../common/file_utils.c:520 pg_basebackup.c:2332 walmethods.c:462
+#: ../../common/file_utils.c:520 pg_basebackup.c:2334 walmethods.c:464
 #, c-format
 msgid "could not rename file \"%s\" to \"%s\": %m"
 msgstr "无法把文件 \"%s\" 重命名为 \"%s\": %m"
@@ -317,7 +317,7 @@ msgstr "无法写入压缩文件 \"%s\": %s"
 msgid "could not close compressed file \"%s\": %m"
 msgstr "无法关闭压缩文件 \"%s\": %m"
 
-#: ../../fe_utils/astreamer_gzip.c:272 walmethods.c:880
+#: ../../fe_utils/astreamer_gzip.c:272 walmethods.c:883
 #, c-format
 msgid "could not initialize compression library"
 msgstr "无法初始化压缩库"
@@ -328,7 +328,7 @@ msgstr "无法初始化压缩库"
 msgid "could not decompress data: %s"
 msgstr "无法解压缩数据: %s"
 
-#: ../../fe_utils/astreamer_gzip.c:349 walmethods.c:755
+#: ../../fe_utils/astreamer_gzip.c:349 walmethods.c:758
 #, c-format
 msgid "could not reset compression stream"
 msgstr "无法重置压缩流"
@@ -449,7 +449,7 @@ msgstr "选项 %s 和 %s 不能同时使用"
 msgid "out of memory"
 msgstr "内存不足"
 
-#: ../../fe_utils/recovery_gen.c:215 pg_basebackup.c:2236 streamutil.c:89
+#: ../../fe_utils/recovery_gen.c:215 pg_basebackup.c:2238 streamutil.c:89
 #: streamutil.c:204
 #, c-format
 msgid "%s"
@@ -872,7 +872,7 @@ msgstr "%s 主页: <%s>\n"
 msgid "could not read from ready pipe: %m"
 msgstr "无法从已就绪的管道读取: %m"
 
-#: pg_basebackup.c:492 pg_basebackup.c:634 pg_basebackup.c:2246
+#: pg_basebackup.c:492 pg_basebackup.c:634 pg_basebackup.c:2248
 #: streamutil.c:450
 #, c-format
 msgid "could not parse write-ahead log location \"%s\""
@@ -972,7 +972,7 @@ msgid "could not get COPY data stream: %s"
 msgstr "无法获取 COPY 数据流: %s"
 
 #: pg_basebackup.c:1041 pg_recvlogical.c:455 pg_recvlogical.c:631
-#: receivelog.c:992
+#: receivelog.c:1001
 #, c-format
 msgid "could not read COPY data: %s"
 msgstr "无法读取 COPY 数据: %s"
@@ -1061,7 +1061,7 @@ msgid "server does not support incremental backup"
 msgstr "服务器不支持增量备份"
 
 #: pg_basebackup.c:1838 pg_basebackup.c:1996 pg_recvlogical.c:282
-#: receivelog.c:542 receivelog.c:593 streamutil.c:296 streamutil.c:370
+#: receivelog.c:542 receivelog.c:595 streamutil.c:296 streamutil.c:370
 #: streamutil.c:422 streamutil.c:511 streamutil.c:672 streamutil.c:717
 #, c-format
 msgid "could not send replication command \"%s\": %s"
@@ -1124,12 +1124,8 @@ msgstr "无法发起基础备份: %s"
 
 #: pg_basebackup.c:2007
 #, c-format
-msgid ""
-"server returned unexpected response to BASE_BACKUP command; got %d rows and "
-"%d fields, expected %d rows and %d fields"
-msgstr ""
-"服务器对 BASE_BACKUP 命令返回意外的响应；实际为 %d 行和 %d 个字段，预期为 %d "
-"行和 %d 个字段"
+msgid "server returned unexpected response to BASE_BACKUP command; got %d rows and %d fields, expected %d rows and %d or more fields"
+msgstr "服务器对 BASE_BACKUP 命令返回意外的响应；实际为 %d 行和 %d 个字段，预期为 %d 行和至少 %d 个字段"
 
 #: pg_basebackup.c:2013
 #, c-format
@@ -1148,117 +1144,117 @@ msgstr "无法获取备份头部: %s"
 
 #: pg_basebackup.c:2038
 #, c-format
-msgid "no data returned from server"
-msgstr "服务器未返回数据"
+msgid "could not get backup header: got %d rows and %d fields, expected %d or more rows and %d or more fields"
+msgstr "无法获取备份头部：实际为 %d 行和 %d 个字段，预期为至少 %d 行和至少 %d 个字段"
 
-#: pg_basebackup.c:2081
+#: pg_basebackup.c:2082
 #, c-format
 msgid "can only write single tablespace to stdout, database has %d"
 msgstr "只能将单个表空间写入标准输出，但数据库有 %d 个表空间"
 
-#: pg_basebackup.c:2094
+#: pg_basebackup.c:2095
 #, c-format
 msgid "starting background WAL receiver"
 msgstr "正在启动后台 WAL 接收器"
 
-#: pg_basebackup.c:2177
+#: pg_basebackup.c:2178
 #, c-format
 msgid "backup failed: %s"
 msgstr "备份失败: %s"
 
-#: pg_basebackup.c:2180
+#: pg_basebackup.c:2181
 #, c-format
-msgid "no write-ahead log end position returned from server"
-msgstr "服务器端没有返回预写日志的结束位置"
+msgid "could not get write-ahead log end position: got %d rows and %d fields, expected %d rows and %d or more fields"
+msgstr "无法获取预写日志的结束位置：实际为 %d 行和 %d 个字段，预期为 %d 行和至少 %d 个字段"
 
-#: pg_basebackup.c:2183
+#: pg_basebackup.c:2185
 #, c-format
 msgid "write-ahead log end point: %s"
 msgstr "预写日志结束位置: %s"
 
-#: pg_basebackup.c:2194
+#: pg_basebackup.c:2196
 #, c-format
 msgid "checksum error occurred"
 msgstr "发生校验和错误"
 
-#: pg_basebackup.c:2199
+#: pg_basebackup.c:2201
 #, c-format
 msgid "final receive failed: %s"
 msgstr "最终接收失败: %s"
 
-#: pg_basebackup.c:2223
+#: pg_basebackup.c:2225
 #, c-format
 msgid "waiting for background process to finish streaming ..."
 msgstr "正在等待后台进程完成流传输 ..."
 
-#: pg_basebackup.c:2227
+#: pg_basebackup.c:2229
 #, c-format
 msgid "could not send command to background pipe: %m"
 msgstr "无法发送命令到后台管道: %m"
 
-#: pg_basebackup.c:2232
+#: pg_basebackup.c:2234
 #, c-format
 msgid "could not wait for child process: %m"
 msgstr "无法等待子进程: %m"
 
-#: pg_basebackup.c:2234
+#: pg_basebackup.c:2236
 #, c-format
 msgid "child %d died, expected %d"
 msgstr "已终止的子进程为 %d，预期为 %d"
 
-#: pg_basebackup.c:2256
+#: pg_basebackup.c:2258
 #, c-format
 msgid "could not wait for child thread: %m"
 msgstr "无法等待子线程: %m"
 
-#: pg_basebackup.c:2261
+#: pg_basebackup.c:2263
 #, c-format
 msgid "could not get child thread exit status: %m"
 msgstr "无法获取子线程退出状态: %m"
 
-#: pg_basebackup.c:2264
+#: pg_basebackup.c:2266
 #, c-format
 msgid "child thread exited with error %u"
 msgstr "子线程退出，错误码 %u"
 
-#: pg_basebackup.c:2293
+#: pg_basebackup.c:2295
 #, c-format
 msgid "syncing data to disk ..."
 msgstr "正在将数据同步到磁盘 ..."
 
-#: pg_basebackup.c:2318
+#: pg_basebackup.c:2320
 #, c-format
 msgid "renaming backup_manifest.tmp to backup_manifest"
 msgstr "正在将 backup_manifest.tmp 重命名为 backup_manifest"
 
-#: pg_basebackup.c:2338
+#: pg_basebackup.c:2340
 #, c-format
 msgid "base backup completed"
 msgstr "基础备份已完成"
 
-#: pg_basebackup.c:2424
+#: pg_basebackup.c:2426
 #, c-format
 msgid "invalid checkpoint argument \"%s\", must be \"fast\" or \"spread\""
 msgstr "检查点参数 \"%s\" 无效，必须为 \"fast\" 或 \"spread\""
 
-#: pg_basebackup.c:2442
+#: pg_basebackup.c:2444
 #, c-format
 msgid "invalid output format \"%s\", must be \"plain\" or \"tar\""
 msgstr "输出格式 \"%s\" 无效，必须为 \"plain\" 或 \"tar\""
 
-#: pg_basebackup.c:2523
+#: pg_basebackup.c:2525
 #, c-format
 msgid ""
 "invalid wal-method option \"%s\", must be \"fetch\", \"stream\", or \"none\""
 msgstr "wal-method 选项 \"%s\" 无效，必须为 \"fetch\", \"stream\" 或 \"none\""
 
-#: pg_basebackup.c:2562 pg_basebackup.c:2574 pg_basebackup.c:2596
-#: pg_basebackup.c:2608 pg_basebackup.c:2614 pg_basebackup.c:2666
-#: pg_basebackup.c:2677 pg_basebackup.c:2687 pg_basebackup.c:2693
-#: pg_basebackup.c:2700 pg_basebackup.c:2712 pg_basebackup.c:2724
-#: pg_basebackup.c:2732 pg_basebackup.c:2745 pg_basebackup.c:2751
-#: pg_basebackup.c:2760 pg_basebackup.c:2772 pg_basebackup.c:2783
-#: pg_basebackup.c:2791 pg_createsubscriber.c:2413 pg_createsubscriber.c:2436
+#: pg_basebackup.c:2564 pg_basebackup.c:2576 pg_basebackup.c:2598
+#: pg_basebackup.c:2610 pg_basebackup.c:2616 pg_basebackup.c:2668
+#: pg_basebackup.c:2679 pg_basebackup.c:2689 pg_basebackup.c:2695
+#: pg_basebackup.c:2702 pg_basebackup.c:2714 pg_basebackup.c:2726
+#: pg_basebackup.c:2734 pg_basebackup.c:2747 pg_basebackup.c:2753
+#: pg_basebackup.c:2762 pg_basebackup.c:2774 pg_basebackup.c:2785
+#: pg_basebackup.c:2793 pg_createsubscriber.c:2413 pg_createsubscriber.c:2436
 #: pg_createsubscriber.c:2446 pg_createsubscriber.c:2454
 #: pg_createsubscriber.c:2482 pg_createsubscriber.c:2562 pg_receivewal.c:748
 #: pg_receivewal.c:760 pg_receivewal.c:767 pg_receivewal.c:776
@@ -1271,96 +1267,96 @@ msgstr "wal-method 选项 \"%s\" 无效，必须为 \"fetch\", \"stream\" 或 \"
 msgid "Try \"%s --help\" for more information."
 msgstr "运行 \"%s --help\" 获取更多信息。"
 
-#: pg_basebackup.c:2572 pg_createsubscriber.c:2444 pg_receivewal.c:758
+#: pg_basebackup.c:2574 pg_createsubscriber.c:2444 pg_receivewal.c:758
 #: pg_recvlogical.c:873
 #, c-format
 msgid "too many command-line arguments (first is \"%s\")"
 msgstr "命令行参数过多（第一个多余参数是 \"%s\"）"
 
-#: pg_basebackup.c:2595
+#: pg_basebackup.c:2597
 #, c-format
 msgid "cannot specify both format and backup target"
 msgstr "不能同时指定格式和备份目标"
 
-#: pg_basebackup.c:2607
+#: pg_basebackup.c:2609
 #, c-format
 msgid "must specify output directory or backup target"
 msgstr "必须指定输出目录或备份目标"
 
-#: pg_basebackup.c:2613
+#: pg_basebackup.c:2615
 #, c-format
 msgid "cannot specify both output directory and backup target"
 msgstr "不能同时指定输出目录和备份目标"
 
-#: pg_basebackup.c:2643 pg_receivewal.c:802
+#: pg_basebackup.c:2645 pg_receivewal.c:802
 #, c-format
 msgid "unrecognized compression algorithm: \"%s\""
 msgstr "无法识别的压缩算法: \"%s\""
 
-#: pg_basebackup.c:2649 pg_receivewal.c:809
+#: pg_basebackup.c:2651 pg_receivewal.c:809
 #, c-format
 msgid "invalid compression specification: %s"
 msgstr "压缩设置无效: %s"
 
-#: pg_basebackup.c:2665
+#: pg_basebackup.c:2667
 #, c-format
 msgid ""
 "client-side compression is not possible when a backup target is specified"
 msgstr "指定备份目标时不能进行客户端压缩"
 
-#: pg_basebackup.c:2676
+#: pg_basebackup.c:2678
 #, c-format
 msgid "only tar mode backups can be compressed"
 msgstr "只有 tar 模式备份才能进行压缩"
 
-#: pg_basebackup.c:2686
+#: pg_basebackup.c:2688
 #, c-format
 msgid "WAL cannot be streamed when a backup target is specified"
 msgstr "指定备份目标时不能流式传输 WAL"
 
-#: pg_basebackup.c:2692
+#: pg_basebackup.c:2694
 #, c-format
 msgid "cannot stream write-ahead logs in tar mode to stdout"
 msgstr "不能以 tar 格式将预写日志流式传输到标准输出"
 
-#: pg_basebackup.c:2699
+#: pg_basebackup.c:2701
 #, c-format
 msgid "replication slots can only be used with WAL streaming"
 msgstr "复制槽只能和 WAL 流传输一起使用"
 
-#: pg_basebackup.c:2711
+#: pg_basebackup.c:2713
 #, c-format
 msgid "--no-slot cannot be used with slot name"
 msgstr "--no-slot 不能与槽名称一起使用"
 
 #. translator: %s is an option name
-#: pg_basebackup.c:2722 pg_receivewal.c:774
+#: pg_basebackup.c:2724 pg_receivewal.c:774
 #, c-format
 msgid "%s needs a slot to be specified using --slot"
 msgstr "%s 需要通过 --slot 指定复制槽"
 
-#: pg_basebackup.c:2730 pg_basebackup.c:2770 pg_basebackup.c:2781
-#: pg_basebackup.c:2789
+#: pg_basebackup.c:2732 pg_basebackup.c:2772 pg_basebackup.c:2783
+#: pg_basebackup.c:2791
 #, c-format
 msgid "%s and %s are incompatible options"
 msgstr "%s 和 %s 是互不兼容的选项"
 
-#: pg_basebackup.c:2744
+#: pg_basebackup.c:2746
 #, c-format
 msgid "WAL directory location cannot be specified along with a backup target"
 msgstr "不能同时指定 WAL 目录位置和备份目标"
 
-#: pg_basebackup.c:2750
+#: pg_basebackup.c:2752
 #, c-format
 msgid "WAL directory location can only be specified in plain mode"
 msgstr "只有在 plain 模式下才能指定 WAL 目录位置"
 
-#: pg_basebackup.c:2759
+#: pg_basebackup.c:2761
 #, c-format
 msgid "WAL directory location must be an absolute path"
 msgstr "WAL 目录位置必须为绝对路径"
 
-#: pg_basebackup.c:2859
+#: pg_basebackup.c:2861
 #, c-format
 msgid "could not create symbolic link \"%s\": %m"
 msgstr "无法创建符号链接 \"%s\": %m"
@@ -2555,28 +2551,28 @@ msgstr "开始在 %X/%08X 处进行日志流传输（槽 %s）"
 msgid "streaming initiated"
 msgstr "流传输已启动"
 
-#: pg_recvlogical.c:381 receivelog.c:901
+#: pg_recvlogical.c:381 receivelog.c:910
 #, c-format
 msgid "invalid socket: %s"
 msgstr "无效的套接字: %s"
 
-#: pg_recvlogical.c:434 receivelog.c:929
+#: pg_recvlogical.c:434 receivelog.c:938
 #, c-format
 msgid "%s() failed: %m"
 msgstr "%s() 失败: %m"
 
-#: pg_recvlogical.c:441 receivelog.c:978
+#: pg_recvlogical.c:441 receivelog.c:987
 #, c-format
 msgid "could not receive data from WAL stream: %s"
 msgstr "无法从 WAL 流接收数据: %s"
 
-#: pg_recvlogical.c:483 pg_recvlogical.c:534 receivelog.c:1022
-#: receivelog.c:1085
+#: pg_recvlogical.c:483 pg_recvlogical.c:534 receivelog.c:1031
+#: receivelog.c:1094
 #, c-format
 msgid "streaming header too small: %d"
 msgstr "流传输头部过小: %d"
 
-#: pg_recvlogical.c:518 receivelog.c:858
+#: pg_recvlogical.c:518 receivelog.c:867
 #, c-format
 msgid "unrecognized streaming header: \"%c\""
 msgstr "无法识别的流传输头部: \"%c\""
@@ -2586,7 +2582,7 @@ msgstr "无法识别的流传输头部: \"%c\""
 msgid "could not write %d bytes to log file \"%s\": %m"
 msgstr "无法将 %d 字节写入日志文件 \"%s\": %m"
 
-#: pg_recvlogical.c:642 receivelog.c:653 receivelog.c:690
+#: pg_recvlogical.c:642 receivelog.c:655 receivelog.c:692
 #, c-format
 msgid "unexpected termination of replication stream: %s"
 msgstr "复制流意外终止: %s"
@@ -2692,7 +2688,7 @@ msgstr "无法打开预写日志文件 \"%s\": %s"
 msgid "not renaming \"%s\", segment is not complete"
 msgstr "不重命名 \"%s\"，因为段不完整"
 
-#: receivelog.c:227 receivelog.c:317 receivelog.c:699
+#: receivelog.c:227 receivelog.c:317 receivelog.c:707
 #, c-format
 msgid "could not close file \"%s\": %s"
 msgstr "无法关闭文件 \"%s\": %s"
@@ -2746,12 +2742,12 @@ msgstr ""
 "对 TIMELINE_HISTORY 命令返回意外的响应: 实际为 %d 行和 %d 个字段，预期为 %d "
 "行和 %d 个字段"
 
-#: receivelog.c:637
+#: receivelog.c:639
 #, c-format
 msgid "server reported unexpected next timeline %u, following timeline %u"
 msgstr "服务器报告的下一条时间线 %u 出现意外值，当前时间线为 %u"
 
-#: receivelog.c:643
+#: receivelog.c:645
 #, c-format
 msgid ""
 "server stopped streaming timeline %u at %X/%08X, but reported next timeline "
@@ -2760,12 +2756,12 @@ msgstr ""
 "服务器在 %2$X/%3$08X 处停止传输时间线 %1$u，但报告下一条时间线 %4$u 始于 "
 "%5$X/%6$08X"
 
-#: receivelog.c:683
+#: receivelog.c:685
 #, c-format
 msgid "replication stream was terminated before stop point"
 msgstr "复制流在停止点之前终止"
 
-#: receivelog.c:729
+#: receivelog.c:738
 #, c-format
 msgid ""
 "unexpected result set after end-of-timeline: got %d rows and %d fields, "
@@ -2774,32 +2770,32 @@ msgstr ""
 "时间线结束后收到意外的结果集: 实际为 %d 行和 %d 个字段，预期为 %d 行和 %d 个"
 "字段"
 
-#: receivelog.c:738
+#: receivelog.c:747
 #, c-format
 msgid "could not parse next timeline's starting point \"%s\""
 msgstr "无法解析下一条时间线的起始位置 \"%s\""
 
-#: receivelog.c:786 receivelog.c:1041 walmethods.c:1206
+#: receivelog.c:795 receivelog.c:1050 walmethods.c:1209
 #, c-format
 msgid "could not fsync file \"%s\": %s"
 msgstr "无法对文件 \"%s\" 执行 fsync: %s"
 
-#: receivelog.c:1102
+#: receivelog.c:1111
 #, c-format
 msgid "received write-ahead log record for offset %u with no file open"
 msgstr "收到偏移量为 %u 的预写日志记录，但没有打开的文件"
 
-#: receivelog.c:1112
+#: receivelog.c:1121
 #, c-format
 msgid "got WAL data offset %08x, expected %08x"
 msgstr "WAL 数据偏移量为 %08x，预期为 %08x"
 
-#: receivelog.c:1147
+#: receivelog.c:1156
 #, c-format
 msgid "could not write %d bytes to WAL file \"%s\": %s"
 msgstr "无法将 %d 字节写入 WAL 文件 \"%s\": %s"
 
-#: receivelog.c:1172 receivelog.c:1212 receivelog.c:1240
+#: receivelog.c:1181 receivelog.c:1221 receivelog.c:1249
 #, c-format
 msgid "could not send copy-end packet: %s"
 msgstr "无法发送 COPY 结束包: %s"
@@ -2906,27 +2902,27 @@ msgid ""
 msgstr ""
 "无法删除复制槽 \"%s\": 实际为 %d 行和 %d 个字段，预期为 %d 行和 %d 个字段"
 
-#: walmethods.c:726 walmethods.c:1269
+#: walmethods.c:729 walmethods.c:1272
 msgid "could not compress data"
 msgstr "无法压缩数据"
 
-#: walmethods.c:892
+#: walmethods.c:895
 msgid "implementation error: tar files can't have more than one open file"
 msgstr "实现错误: tar 文件不能有多个打开的文件"
 
-#: walmethods.c:907
+#: walmethods.c:910
 msgid "could not create tar header"
 msgstr "无法创建 tar 头部"
 
-#: walmethods.c:924 walmethods.c:965 walmethods.c:1171 walmethods.c:1184
+#: walmethods.c:927 walmethods.c:968 walmethods.c:1174 walmethods.c:1187
 msgid "could not change compression parameters"
 msgstr "无法更改压缩参数"
 
-#: walmethods.c:1056
+#: walmethods.c:1059
 msgid "unlink not supported with compression"
 msgstr "压缩模式下不支持 unlink"
 
-#: walmethods.c:1293
+#: walmethods.c:1296
 msgid "could not close compression stream"
 msgstr "无法关闭压缩流"
 
