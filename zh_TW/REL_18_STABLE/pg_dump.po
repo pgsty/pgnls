@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_dump (PostgreSQL) 18\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-21 20:10+0000\n"
+"POT-Creation-Date: 2026-11-23 23:40+0000\n"
 "PO-Revision-Date: 2026-11-10 09:59+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
@@ -589,7 +589,7 @@ msgstr "無法從輸入檔讀取: %m"
 
 # input.c:210
 #: compress_gzip.c:325 compress_lz4.c:635 compress_none.c:137
-#: compress_zstd.c:400 pg_backup_custom.c:648 pg_backup_directory.c:519
+#: compress_zstd.c:400 pg_backup_custom.c:648 pg_backup_directory.c:527
 #: pg_backup_tar.c:740 pg_backup_tar.c:763
 #, c-format
 msgid "could not read from input file: end of file"
@@ -1055,14 +1055,14 @@ msgid "could not find entry for ID %d"
 msgstr "找不到 ID 為 %d 的項目"
 
 #: pg_backup_archiver.c:1640 pg_backup_directory.c:187
-#: pg_backup_directory.c:567
+#: pg_backup_directory.c:575
 #, c-format
 msgid "could not close TOC file: %m"
 msgstr "無法關閉 TOC 檔: %m"
 
 #: pg_backup_archiver.c:1727 pg_backup_custom.c:151 pg_backup_directory.c:303
-#: pg_backup_directory.c:554 pg_backup_directory.c:620
-#: pg_backup_directory.c:638 pg_dumpall.c:554
+#: pg_backup_directory.c:562 pg_backup_directory.c:628
+#: pg_backup_directory.c:646 pg_dumpall.c:554
 #, c-format
 msgid "could not open output file \"%s\": %m"
 msgstr "無法開啟輸出檔 \"%s\": %m"
@@ -1518,7 +1518,7 @@ msgid "no output directory specified"
 msgstr "未指定輸出目錄"
 
 # utils/adt/nabstime.c:244
-#: pg_backup_directory.c:266 pg_backup_directory.c:438
+#: pg_backup_directory.c:266 pg_backup_directory.c:446
 #, c-format
 msgid "invalid file name in archive: \"%s\""
 msgstr "封存檔中的檔案名稱無效：\"%s\""
@@ -1535,38 +1535,38 @@ msgstr "無法關閉資料檔: %m"
 msgid "could not close data file \"%s\": %m"
 msgstr "無法關閉資料檔 \"%s\": %m"
 
-#: pg_backup_directory.c:424
+#: pg_backup_directory.c:432
 #, c-format
 msgid "could not open large object TOC file \"%s\" for input: %m"
 msgstr "無法開啟大物件 TOC 檔 \"%s\" 進行輸入: %m"
 
-#: pg_backup_directory.c:435
+#: pg_backup_directory.c:443
 #, c-format
 msgid "invalid line in large object TOC file \"%s\": \"%s\""
 msgstr "大物件 TOC 檔 \"%s\" 中有無效的行: \"%s\""
 
-#: pg_backup_directory.c:446
+#: pg_backup_directory.c:454
 #, c-format
 msgid "error reading large object TOC file \"%s\""
 msgstr "無法讀取大物件 TOC 檔 \"%s\""
 
-#: pg_backup_directory.c:450
+#: pg_backup_directory.c:458
 #, c-format
 msgid "could not close large object TOC file \"%s\": %m"
 msgstr "無法關閉大物件 TOC 檔 \"%s\": %m"
 
-#: pg_backup_directory.c:656
+#: pg_backup_directory.c:664
 #, c-format
 msgid "could not close LO data file: %m"
 msgstr "無法關閉 LO 資料檔: %m"
 
-#: pg_backup_directory.c:675
+#: pg_backup_directory.c:683
 #, c-format
 msgid "could not close LOs TOC file: %m"
 msgstr "無法關閉 LO TOC 檔: %m"
 
 # utils/mb/encnames.c:445
-#: pg_backup_directory.c:694
+#: pg_backup_directory.c:702
 #, c-format
 msgid "file name too long: \"%s\""
 msgstr "檔案名稱過長: \"%s\""

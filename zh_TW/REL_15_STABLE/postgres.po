@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 15\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-21 20:54+0000\n"
+"POT-Creation-Date: 2026-11-24 00:24+0000\n"
 "PO-Revision-Date: 2026-11-10 09:59+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Traditional) <pgsql-translators@postgresql.org>\n"
@@ -983,8 +983,9 @@ msgid "tuple descriptor has fewer (%d) attributes than tuple (%d)"
 msgstr "元組描述符的屬性數（%d）少於元組的屬性數（%d）"
 
 #: access/common/heaptuple.c:1646
-#, c-format
-msgid "tuple descriptor for type %s (OID %u), version %X/%X is incompatible with tuple type %s (OID %u), version %X/%X"
+#, fuzzy, c-format
+#| msgid "tuple descriptor for type %s (OID %u), version %X/%X is incompatible with tuple type %s (OID %u), version %X/%X"
+msgid "tuple descriptor for type %s (OID %u), version %X/%08X is incompatible with tuple type %s (OID %u), version %X/%08X"
 msgstr "型別 %s（OID %u）的元組描述符（版本 %X/%X）與元組型別 %s（OID %u）（版本 %X/%X）不相容"
 
 #: access/common/heaptuple.c:1656
@@ -5159,36 +5160,36 @@ msgid "index \"%s\" is not the index for column \"%s\""
 msgstr "索引 \"%s\" 不是欄位 \"%s\" 的索引"
 
 # catalog/dependency.c:312 catalog/dependency.c:717
-#: catalog/dependency.c:545 catalog/pg_shdepend.c:657
+#: catalog/dependency.c:547 catalog/pg_shdepend.c:657
 #, c-format
 msgid "cannot drop %s because it is required by the database system"
 msgstr "不能刪除 %s，因為資料庫系統需要它"
 
 # catalog/dependency.c:451
-#: catalog/dependency.c:837 catalog/dependency.c:1064
+#: catalog/dependency.c:839 catalog/dependency.c:1066
 #, c-format
 msgid "cannot drop %s because %s requires it"
 msgstr "不能刪除 %s，因為 %s 需要它"
 
 # catalog/dependency.c:453
-#: catalog/dependency.c:839 catalog/dependency.c:1066
+#: catalog/dependency.c:841 catalog/dependency.c:1068
 #, c-format
 msgid "You can drop %s instead."
 msgstr "您可以改為捨棄 %s。"
 
 # catalog/dependency.c:526 catalog/dependency.c:679
-#: catalog/dependency.c:1145 catalog/dependency.c:1154
+#: catalog/dependency.c:1147 catalog/dependency.c:1156
 #, c-format
 msgid "%s depends on %s"
 msgstr "%s 依存於 %s"
 
 # catalog/dependency.c:533 catalog/dependency.c:686
-#: catalog/dependency.c:1169 catalog/dependency.c:1178
+#: catalog/dependency.c:1171 catalog/dependency.c:1180
 #, c-format
 msgid "drop cascades to %s"
 msgstr "捨棄串聯至 %s"
 
-#: catalog/dependency.c:1186 catalog/pg_shdepend.c:822
+#: catalog/dependency.c:1188 catalog/pg_shdepend.c:822
 #, c-format
 msgid ""
 "\n"
@@ -5201,15 +5202,15 @@ msgstr[0] ""
 "還有 %d 個其他物件 (清單見伺服器日誌)"
 
 # catalog/dependency.c:152
-#: catalog/dependency.c:1198
+#: catalog/dependency.c:1200
 #, c-format
 msgid "cannot drop %s because other objects depend on it"
 msgstr "不能刪除 %s，因為有其他物件依存於它"
 
 # commands/vacuum.c:2258 commands/vacuumlazy.c:489 commands/vacuumlazy.c:770
 # nodes/print.c:86 storage/lmgr/deadlock.c:888 tcop/postgres.c:3285
-#: catalog/dependency.c:1201 catalog/dependency.c:1208
-#: catalog/dependency.c:1219 commands/tablecmds.c:1369
+#: catalog/dependency.c:1203 catalog/dependency.c:1210
+#: catalog/dependency.c:1221 commands/tablecmds.c:1369
 #: commands/tablecmds.c:15366 commands/tablespace.c:482 commands/user.c:1008
 #: commands/view.c:522 libpq/auth.c:337 replication/slot.c:206
 #: replication/syncrep.c:1110 storage/lmgr/deadlock.c:1151
@@ -5222,25 +5223,25 @@ msgid "%s"
 msgstr "%s"
 
 # catalog/dependency.c:154
-#: catalog/dependency.c:1202 catalog/dependency.c:1209
+#: catalog/dependency.c:1204 catalog/dependency.c:1211
 #, c-format
 msgid "Use DROP ... CASCADE to drop the dependent objects too."
 msgstr "使用 DROP ... CASCADE 一併刪除依存物件。"
 
 # catalog/dependency.c:152
-#: catalog/dependency.c:1206
+#: catalog/dependency.c:1208
 #, c-format
 msgid "cannot drop desired object(s) because other objects depend on them"
 msgstr "不能捨棄指定的物件，因為其他物件依賴它們"
 
-#: catalog/dependency.c:1214
+#: catalog/dependency.c:1216
 #, c-format
 msgid "drop cascades to %d other object"
 msgid_plural "drop cascades to %d other objects"
 msgstr[0] "刪除會串聯至 %d 個其他物件"
 
 # commands/typecmds.c:1112
-#: catalog/dependency.c:2088
+#: catalog/dependency.c:2111
 #, c-format
 msgid "constant of the type %s cannot be used here"
 msgstr "此處不能使用型別為 %s 的常數"
@@ -5252,7 +5253,7 @@ msgstr "此處不能使用型別為 %s 的常數"
 # parser/parse_relation.c:1647 parser/parse_relation.c:1705
 # parser/parse_relation.c:1919 parser/parse_type.c:94
 # utils/adt/ruleutils.c:1300
-#: catalog/dependency.c:2613 parser/parse_relation.c:3383
+#: catalog/dependency.c:2645 parser/parse_relation.c:3383
 #: parser/parse_relation.c:3393
 #, c-format
 msgid "column %d of relation \"%s\" does not exist"
@@ -5347,8 +5348,9 @@ msgid "attribute versions of relation \"%s\" are non-monotonic"
 msgstr "關聯 \"%s\" 的屬性版本不是單調遞增的"
 
 #: catalog/heap.c:1152
-#, c-format
-msgid "Version %X/%X of attribute \"%s\" at position %d is lower than version %X/%X of attribute \"%s\" at position %d."
+#, fuzzy, c-format
+#| msgid "Version %X/%X of attribute \"%s\" at position %d is lower than version %X/%X of attribute \"%s\" at position %d."
+msgid "Version %X/%08X of attribute \"%s\" at position %d is lower than version %X/%08X of attribute \"%s\" at position %d."
 msgstr "位置 %4$d 的屬性 \"%3$s\" 的版本 %1$X/%2$X 低於位置 %8$d 的屬性 \"%7$s\" 的版本 %5$X/%6$X。"
 
 # catalog/heap.c:747 catalog/index.c:527 commands/tablecmds.c:1471

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 16\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-21 20:39+0000\n"
+"POT-Creation-Date: 2026-11-24 00:09+0000\n"
 "PO-Revision-Date: 2026-11-10 09:59+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
@@ -864,8 +864,9 @@ msgid "tuple descriptor has fewer (%d) attributes than tuple (%d)"
 msgstr "元组描述符的属性数（%d）少于元组的属性数（%d）"
 
 #: access/common/heaptuple.c:1646
-#, c-format
-msgid "tuple descriptor for type %s (OID %u), version %X/%X is incompatible with tuple type %s (OID %u), version %X/%X"
+#, fuzzy, c-format
+#| msgid "tuple descriptor for type %s (OID %u), version %X/%X is incompatible with tuple type %s (OID %u), version %X/%X"
+msgid "tuple descriptor for type %s (OID %u), version %X/%08X is incompatible with tuple type %s (OID %u), version %X/%08X"
 msgstr "类型 %s（OID %u）的元组描述符（版本 %X/%X）与元组类型 %s（OID %u）（版本 %X/%X）不兼容"
 
 #: access/common/heaptuple.c:1656
@@ -3472,8 +3473,8 @@ msgid "You can restart the server after making the necessary configuration chang
 msgstr "您可以在完成必要的配置更改后重启服务器。"
 
 #: access/transam/xlogrecovery.c:4755 access/transam/xlogrecovery.c:4757
-#: catalog/dependency.c:1209 catalog/dependency.c:1216
-#: catalog/dependency.c:1227 commands/tablecmds.c:1376
+#: catalog/dependency.c:1211 catalog/dependency.c:1218
+#: catalog/dependency.c:1229 commands/tablecmds.c:1376
 #: commands/tablecmds.c:15393 commands/tablespace.c:472 commands/user.c:1303
 #: commands/vacuum.c:212 commands/view.c:446 libpq/auth.c:334
 #: replication/logical/applyparallelworker.c:1060 replication/slot.c:208
@@ -4476,32 +4477,32 @@ msgstr "列 \"%s\" 不是 oid 类型"
 msgid "index \"%s\" is not the index for column \"%s\""
 msgstr "索引 \"%s\" 不是列 \"%s\" 的索引"
 
-#: catalog/dependency.c:553 catalog/pg_shdepend.c:658
+#: catalog/dependency.c:555 catalog/pg_shdepend.c:658
 #, c-format
 msgid "cannot drop %s because it is required by the database system"
 msgstr "不能删除 %s，因为它是数据库系统所需要的"
 
-#: catalog/dependency.c:845 catalog/dependency.c:1072
+#: catalog/dependency.c:847 catalog/dependency.c:1074
 #, c-format
 msgid "cannot drop %s because %s requires it"
 msgstr "不能删除 %s，因为 %s 需要它"
 
-#: catalog/dependency.c:847 catalog/dependency.c:1074
+#: catalog/dependency.c:849 catalog/dependency.c:1076
 #, c-format
 msgid "You can drop %s instead."
 msgstr "可以改为删除 %s。"
 
-#: catalog/dependency.c:1153 catalog/dependency.c:1162
+#: catalog/dependency.c:1155 catalog/dependency.c:1164
 #, c-format
 msgid "%s depends on %s"
 msgstr "%s 依赖于 %s"
 
-#: catalog/dependency.c:1177 catalog/dependency.c:1186
+#: catalog/dependency.c:1179 catalog/dependency.c:1188
 #, c-format
 msgid "drop cascades to %s"
 msgstr "级联删除 %s"
 
-#: catalog/dependency.c:1194 catalog/pg_shdepend.c:823
+#: catalog/dependency.c:1196 catalog/pg_shdepend.c:823
 #, c-format
 msgid ""
 "\n"
@@ -4513,33 +4514,33 @@ msgstr[0] ""
 "\n"
 "以及其他 %d 个对象（列表见服务器日志）"
 
-#: catalog/dependency.c:1206
+#: catalog/dependency.c:1208
 #, c-format
 msgid "cannot drop %s because other objects depend on it"
 msgstr "不能删除 %s，因为其他对象依赖于它"
 
-#: catalog/dependency.c:1210 catalog/dependency.c:1217
+#: catalog/dependency.c:1212 catalog/dependency.c:1219
 #, c-format
 msgid "Use DROP ... CASCADE to drop the dependent objects too."
 msgstr "使用 DROP ... CASCADE 一并删除依赖对象。"
 
-#: catalog/dependency.c:1214
+#: catalog/dependency.c:1216
 #, c-format
 msgid "cannot drop desired object(s) because other objects depend on them"
 msgstr "不能删除指定对象，因为其他对象依赖于它们"
 
-#: catalog/dependency.c:1222
+#: catalog/dependency.c:1224
 #, c-format
 msgid "drop cascades to %d other object"
 msgid_plural "drop cascades to %d other objects"
 msgstr[0] "级联删除 %d 个其他对象"
 
-#: catalog/dependency.c:2101
+#: catalog/dependency.c:2124
 #, c-format
 msgid "constant of the type %s cannot be used here"
 msgstr "此处不能使用类型为 %s 的常量"
 
-#: catalog/dependency.c:2626 parser/parse_relation.c:3413
+#: catalog/dependency.c:2658 parser/parse_relation.c:3413
 #: parser/parse_relation.c:3423
 #, c-format
 msgid "column %d of relation \"%s\" does not exist"
@@ -4624,8 +4625,9 @@ msgid "attribute versions of relation \"%s\" are non-monotonic"
 msgstr "关系 \"%s\" 的属性版本不是单调递增的"
 
 #: catalog/heap.c:1152
-#, c-format
-msgid "Version %X/%X of attribute \"%s\" at position %d is lower than version %X/%X of attribute \"%s\" at position %d."
+#, fuzzy, c-format
+#| msgid "Version %X/%X of attribute \"%s\" at position %d is lower than version %X/%X of attribute \"%s\" at position %d."
+msgid "Version %X/%08X of attribute \"%s\" at position %d is lower than version %X/%08X of attribute \"%s\" at position %d."
 msgstr "位置 %4$d 的属性 \"%3$s\" 的版本 %1$X/%2$X 低于位置 %8$d 的属性 \"%7$s\" 的版本 %5$X/%6$X。"
 
 #: catalog/heap.c:1456 catalog/index.c:894 commands/createas.c:408
