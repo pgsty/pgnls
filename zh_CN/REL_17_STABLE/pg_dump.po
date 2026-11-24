@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pg_dump (PostgreSQL) 17\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-21 20:27+0000\n"
+"POT-Creation-Date: 2026-11-23 23:57+0000\n"
 "PO-Revision-Date: 2026-11-16 22:43+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
@@ -533,7 +533,7 @@ msgid "could not read from input file: %m"
 msgstr "无法读取输入文件: %m"
 
 #: compress_gzip.c:325 compress_lz4.c:635 compress_none.c:137
-#: compress_zstd.c:399 pg_backup_custom.c:649 pg_backup_directory.c:551
+#: compress_zstd.c:399 pg_backup_custom.c:649 pg_backup_directory.c:559
 #: pg_backup_tar.c:740 pg_backup_tar.c:763
 #, c-format
 msgid "could not read from input file: end of file"
@@ -906,14 +906,14 @@ msgid "could not find entry for ID %d"
 msgstr "无法为 ID %d 找到条目"
 
 #: pg_backup_archiver.c:1619 pg_backup_directory.c:219
-#: pg_backup_directory.c:599
+#: pg_backup_directory.c:607
 #, c-format
 msgid "could not close TOC file: %m"
 msgstr "无法关闭 TOC 文件: %m"
 
 #: pg_backup_archiver.c:1706 pg_backup_custom.c:152 pg_backup_directory.c:335
-#: pg_backup_directory.c:586 pg_backup_directory.c:652
-#: pg_backup_directory.c:670 pg_dumpall.c:525
+#: pg_backup_directory.c:594 pg_backup_directory.c:660
+#: pg_backup_directory.c:678 pg_dumpall.c:525
 #, c-format
 msgid "could not open output file \"%s\": %m"
 msgstr "无法打开输出文件 \"%s\": %m"
@@ -1405,7 +1405,7 @@ msgstr "无法关闭目录 \"%s\": %m"
 msgid "could not create directory \"%s\": %m"
 msgstr "无法创建目录 \"%s\": %m"
 
-#: pg_backup_directory.c:298 pg_backup_directory.c:470
+#: pg_backup_directory.c:298 pg_backup_directory.c:478
 #, c-format
 msgid "invalid file name in archive: \"%s\""
 msgstr "归档中的文件名无效：\"%s\""
@@ -1420,37 +1420,37 @@ msgstr "无法关闭数据文件: %m"
 msgid "could not close data file \"%s\": %m"
 msgstr "无法关闭数据文件 \"%s\": %m"
 
-#: pg_backup_directory.c:456
+#: pg_backup_directory.c:464
 #, c-format
 msgid "could not open large object TOC file \"%s\" for input: %m"
 msgstr "无法为输入打开大对象 TOC 文件 \"%s\": %m"
 
-#: pg_backup_directory.c:467
+#: pg_backup_directory.c:475
 #, c-format
 msgid "invalid line in large object TOC file \"%s\": \"%s\""
 msgstr "大对象 TOC 文件 \"%s\" 中的行无效: \"%s\""
 
-#: pg_backup_directory.c:478
+#: pg_backup_directory.c:486
 #, c-format
 msgid "error reading large object TOC file \"%s\""
 msgstr "读取大对象 TOC 文件 \"%s\" 时出错"
 
-#: pg_backup_directory.c:482
+#: pg_backup_directory.c:490
 #, c-format
 msgid "could not close large object TOC file \"%s\": %m"
 msgstr "无法关闭大对象 TOC 文件 \"%s\": %m"
 
-#: pg_backup_directory.c:688
+#: pg_backup_directory.c:696
 #, c-format
 msgid "could not close LO data file: %m"
 msgstr "无法关闭大对象数据文件: %m"
 
-#: pg_backup_directory.c:707
+#: pg_backup_directory.c:715
 #, c-format
 msgid "could not close LOs TOC file: %m"
 msgstr "无法关闭大对象 TOC 文件: %m"
 
-#: pg_backup_directory.c:726
+#: pg_backup_directory.c:734
 #, c-format
 msgid "file name too long: \"%s\""
 msgstr "文件名过长: \"%s\""

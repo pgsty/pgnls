@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: postgres (PostgreSQL) 19\n"
 "Report-Msgid-Bugs-To: pgsql-bugs@lists.postgresql.org\n"
-"POT-Creation-Date: 2026-11-21 19:48+0000\n"
-"PO-Revision-Date: 2026-11-20 08:41+0800\n"
+"POT-Creation-Date: 2026-11-23 23:18+0000\n"
+"PO-Revision-Date: 2026-11-24 10:11+0800\n"
 "Last-Translator: Ruohang Feng <rh@vonng.com>\n"
 "Language-Team: Chinese (Simplified) <pgsql-translators@postgresql.org>\n"
 "Language: zh_CN\n"
@@ -4392,8 +4392,8 @@ msgstr "元组描述符的属性数（%d）少于元组的属性数（%d）"
 
 #: access/common/heaptuple.c:1554
 #, c-format
-msgid "tuple descriptor for type %s (OID %u), version %X/%X is incompatible with tuple type %s (OID %u), version %X/%X"
-msgstr "类型 %s（OID %u）的元组描述符（版本 %X/%X）与元组类型 %s（OID %u）（版本 %X/%X）不兼容"
+msgid "tuple descriptor for type %s (OID %u), version %X/%08X is incompatible with tuple type %s (OID %u), version %X/%08X"
+msgstr "类型 %s（OID %u）的元组描述符（版本 %X/%08X）与元组类型 %s（OID %u）（版本 %X/%08X）不兼容"
 
 #: access/common/heaptuple.c:1564
 #, c-format
@@ -7295,8 +7295,8 @@ msgid ""
 msgstr "您可以在完成必要的配置更改后重启服务器。"
 
 #: access/transam/xlogrecovery.c:4802 access/transam/xlogrecovery.c:4804
-#: catalog/dependency.c:1169 catalog/dependency.c:1176
-#: catalog/dependency.c:1187 commands/tablecmds.c:1573
+#: catalog/dependency.c:1171 catalog/dependency.c:1178
+#: catalog/dependency.c:1189 commands/tablecmds.c:1573
 #: commands/tablecmds.c:18055 commands/tablespace.c:473 commands/user.c:1309
 #: commands/view.c:441 commands/wait.c:140 executor/execExprInterp.c:5325
 #: executor/execExprInterp.c:5333 libpq/auth-oauth.c:714 libpq/auth.c:316
@@ -8436,42 +8436,42 @@ msgstr "列 \"%s\" 不是 oid 类型"
 msgid "index \"%s\" is not the index for column \"%s\""
 msgstr "索引 \"%s\" 不是列 \"%s\" 的索引"
 
-#: catalog/dependency.c:498 catalog/pg_shdepend.c:705
+#: catalog/dependency.c:500 catalog/pg_shdepend.c:705
 #, c-format
 msgid "cannot drop %s because it is required by the database system"
 msgstr "不能删除 %s，因为它是数据库系统所需要的"
 
-#: catalog/dependency.c:790 catalog/dependency.c:1032
+#: catalog/dependency.c:792 catalog/dependency.c:1034
 #, c-format
 msgid "cannot drop %s because %s requires it"
 msgstr "不能删除 %s，因为 %s 需要它"
 
-#: catalog/dependency.c:792 catalog/dependency.c:1034
+#: catalog/dependency.c:794 catalog/dependency.c:1036
 #, c-format
 msgid "You can drop %s instead."
 msgstr "可以改为删除 %s。"
 
-#: catalog/dependency.c:879
+#: catalog/dependency.c:881
 #, c-format
 msgid "cannot drop %s because %s depends on it"
 msgstr "不能删除 %s，因为 %s 依赖于它"
 
-#: catalog/dependency.c:881
+#: catalog/dependency.c:883
 #, c-format
 msgid "Drop %s first."
 msgstr "先删除 %s。"
 
-#: catalog/dependency.c:1113 catalog/dependency.c:1122
+#: catalog/dependency.c:1115 catalog/dependency.c:1124
 #, c-format
 msgid "%s depends on %s"
 msgstr "%s 依赖于 %s"
 
-#: catalog/dependency.c:1137 catalog/dependency.c:1146
+#: catalog/dependency.c:1139 catalog/dependency.c:1148
 #, c-format
 msgid "drop cascades to %s"
 msgstr "级联删除 %s"
 
-#: catalog/dependency.c:1154 catalog/pg_shdepend.c:870
+#: catalog/dependency.c:1156 catalog/pg_shdepend.c:870
 #, c-format
 msgid ""
 "\n"
@@ -8483,38 +8483,38 @@ msgstr[0] ""
 "\n"
 "以及其他 %d 个对象（列表见服务器日志）"
 
-#: catalog/dependency.c:1166
+#: catalog/dependency.c:1168
 #, c-format
 msgid "cannot drop %s because other objects depend on it"
 msgstr "不能删除 %s，因为其他对象依赖于它"
 
-#: catalog/dependency.c:1170 catalog/dependency.c:1177
+#: catalog/dependency.c:1172 catalog/dependency.c:1179
 #, c-format
 msgid "Use DROP ... CASCADE to drop the dependent objects too."
 msgstr "使用 DROP ... CASCADE 一并删除依赖对象。"
 
-#: catalog/dependency.c:1174
+#: catalog/dependency.c:1176
 #, c-format
 msgid "cannot drop desired object(s) because other objects depend on them"
 msgstr "不能删除指定对象，因为其他对象依赖于它们"
 
-#: catalog/dependency.c:1182
+#: catalog/dependency.c:1184
 #, c-format
 msgid "drop cascades to %d other object"
 msgid_plural "drop cascades to %d other objects"
 msgstr[0] "级联删除 %d 个其他对象"
 
-#: catalog/dependency.c:2051 catalog/dependency.c:2062
+#: catalog/dependency.c:2070 catalog/dependency.c:2081
 #, c-format
 msgid "constant of the type %s cannot be used here"
 msgstr "此处不能使用类型为 %s 的常量"
 
-#: catalog/dependency.c:2417
+#: catalog/dependency.c:2436
 #, c-format
 msgid "transition table \"%s\" cannot be referenced in a persistent object"
 msgstr "持久对象中不能引用过渡表 \"%s\""
 
-#: catalog/dependency.c:2602 parser/parse_relation.c:3535
+#: catalog/dependency.c:2628 parser/parse_relation.c:3535
 #: parser/parse_relation.c:3545 statistics/attribute_stats.c:187
 #: statistics/attribute_stats.c:786 statistics/stat_utils.c:462
 #: statistics/stat_utils.c:470
@@ -8620,8 +8620,8 @@ msgstr "关系 \"%s\" 的属性版本不是单调递增的"
 
 #: catalog/heap.c:1184
 #, c-format
-msgid "Version %X/%X of attribute \"%s\" at position %d is lower than version %X/%X of attribute \"%s\" at position %d."
-msgstr "位置 %4$d 的属性 \"%3$s\" 的版本 %1$X/%2$X 低于位置 %8$d 的属性 \"%7$s\" 的版本 %5$X/%6$X。"
+msgid "Version %X/%08X of attribute \"%s\" at position %d is lower than version %X/%08X of attribute \"%s\" at position %d."
+msgstr "位置 %4$d 的属性 \"%3$s\" 的版本 %1$X/%2$08X 低于位置 %8$d 的属性 \"%7$s\" 的版本 %5$X/%6$08X。"
 
 #: catalog/heap.c:1491 catalog/index.c:912 commands/createas.c:408
 #: commands/tablecmds.c:4352
@@ -17478,7 +17478,7 @@ msgstr "不能从外部子表收集过渡元组"
 #: commands/trigger.c:3417 executor/nodeModifyTable.c:1736
 #: executor/nodeModifyTable.c:1810 executor/nodeModifyTable.c:2635
 #: executor/nodeModifyTable.c:2725 executor/nodeModifyTable.c:3577
-#: executor/nodeModifyTable.c:3810
+#: executor/nodeModifyTable.c:3808
 #, c-format
 msgid ""
 "Consider using an AFTER trigger instead of a BEFORE trigger to propagate "
@@ -19551,7 +19551,7 @@ msgstr "可以考虑在表 \"%s\" 上定义外键。"
 
 #. translator: %s is a SQL command name
 #: executor/nodeModifyTable.c:2835 executor/nodeModifyTable.c:3583
-#: executor/nodeModifyTable.c:3816
+#: executor/nodeModifyTable.c:3814
 #, c-format
 msgid "%s command cannot affect row a second time"
 msgstr "%s 命令不能再次影响同一行"
@@ -19563,14 +19563,14 @@ msgid ""
 "duplicate constrained values."
 msgstr "确保同一命令中待插入的行，其受约束的值没有重复。"
 
-#: executor/nodeModifyTable.c:3576 executor/nodeModifyTable.c:3809
+#: executor/nodeModifyTable.c:3576 executor/nodeModifyTable.c:3807
 #, c-format
 msgid ""
 "tuple to be updated or deleted was already modified by an operation "
 "triggered by the current command"
 msgstr "待更新或删除的元组已被当前命令触发的操作修改"
 
-#: executor/nodeModifyTable.c:3585 executor/nodeModifyTable.c:3818
+#: executor/nodeModifyTable.c:3585 executor/nodeModifyTable.c:3816
 #, c-format
 msgid "Ensure that not more than one source row matches any one target row."
 msgstr "确保每个目标行最多匹配一个源行。"
@@ -27740,9 +27740,8 @@ msgstr "无法从主库获取故障切换逻辑槽信息: %s"
 
 #: replication/logical/slotsync.c:1190
 #, c-format
-msgid ""
-"could not fetch primary slot name \"%s\" info from the primary server: %s"
-msgstr "无法从主库获取主库上的槽 \"%s\" 的信息: %s"
+msgid "could not fetch information on primary slot (name \"%s\") from the primary server: %s"
+msgstr "无法从主库获取槽（名称 \"%s\"）的信息：%s"
 
 #: replication/logical/slotsync.c:1192
 #, c-format
@@ -27814,9 +27813,8 @@ msgstr "复制槽同步工作进程将因参数更改而重启"
 
 #: replication/logical/slotsync.c:1404
 #, c-format
-msgid ""
-"replication slot synchronization will stop because of a parameter change"
-msgstr "复制槽同步将因参数更改而停止"
+msgid "aborting replication slot synchronization because of a parameter change"
+msgstr "因参数更改而中止复制槽同步"
 
 #: replication/logical/slotsync.c:1440
 #, c-format
